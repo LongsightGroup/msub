@@ -1,0 +1,1 @@
+Custom gradebook mappings in gradebook-service/sakai-pack/src/webapp/WEB-INF/components.xml

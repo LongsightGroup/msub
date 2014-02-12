@@ -1,0 +1,12 @@
+#Customizations from branch:
+SAM-756 Character limit of 4000 => expand to 60k
+LS-4 Samigo Test Description need to be 60k
+SAM-948 'Minimum value' option for questions
+SAM-894 Reduce confusion over core, published, inactive by using Javascript tabbed display
+SAM-921 Improvement: No Assessment Templates/Types
+  -- SAM-1238  With showAssessmentTypes=false, Assessment Types link still shows when adding a new multiple choice question
+SEMS-46 Grammatical Error in samigo
+SAM-1252 Code Review: Stack trace when null value in Section Author Type
+
+#client specific customizations:
+SAM-1299 Use the new kernel API to participate in Reference Migration during Site Import

@@ -1,0 +1,1 @@
+FDU-185075 - Modified quartz properties to limit number of threads

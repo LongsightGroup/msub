@@ -1,0 +1,16 @@
+This directory contains patches for running/building Assignments 2
+against various versions and configurations of Sakai.
+
+assignment2.patch - This patches changes the current trunk version to 
+  SAKAI_VERSION so that it can be adjusted for the version of Sakai.
+
+remove-taggable-functionality-stub-false.patch.txt - This patches several
+  *.java files so that the taggable signatures match those of previous
+  versions of Sakai, all stubbed out methods return false so it also 
+  disables OSP/taggable integration for this version. Institutions wishing
+  to use the OSP integration with those versions can manually upgrade 
+  their taggable versions and remove this patch.
+
+taggable.patch - This patches the taggable module in situation when we may
+  want to download and compile a version of taggable to pre-populate the 
+  maven repo.

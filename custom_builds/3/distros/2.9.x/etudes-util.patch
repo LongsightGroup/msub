@@ -1,0 +1,27 @@
+Index: etudes-util/etudes-util/util/pom.xml
+===================================================================
+--- etudes-util/etudes-util/util/pom.xml	(revision 128897)
++++ etudes-util/etudes-util/util/pom.xml	(working copy)
+@@ -61,8 +61,7 @@
+ 
+ 		<dependency>
+ 			<groupId>org.etudes</groupId>
+-			<artifactId>etudes-util-api</artifactId>
+-			<version>1.0.17</version>
++			<artifactId>etudes-util-api</artifactId><version>${etudes.util.version}</version><scope>provided</scope>
+ 		</dependency>
+ 
+ 		<dependency>
+Index: etudes-util/pom.xml
+===================================================================
+--- etudes-util/pom.xml	(revision 128897)
++++ etudes-util/pom.xml	(working copy)
+@@ -26,7 +26,7 @@
+ 	<modelVersion>4.0.0</modelVersion>
+ 
+ 	<parent>
+-		<artifactId>base</artifactId>
++		<artifactId>master</artifactId>
+ 		<groupId>org.sakaiproject</groupId>
+ 		<version>2.9-SNAPSHOT</version>
+ 	</parent>

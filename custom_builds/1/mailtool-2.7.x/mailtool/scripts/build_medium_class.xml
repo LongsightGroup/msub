@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sakaiscript>	
+
+		<addNewSite siteid="Med101"
+					title="Medium Class"
+					description="I am a medium class with a prof, ta's and some students"
+					shortdesc="Medium Class 101"
+					iconurl=""
+					infourl=""
+					joinable="true"
+					joinerrole="student"
+					published="true"
+					publicview="true"
+					skin=""
+					type="class" /> 
+					
+	<addNewPageToSite siteid="Med101" pagetitle="Welcome" pagelayout="0"/> 				
+	<addNewToolToPage siteid="Med101" pagetitle="Welcome"
+							tooltitle="welcome"  toolid="sakai.announcements" 
+							layouthints="" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Welcome"
+	tooltitle="welcome"  propname="channel"	 propvalue="/announcement/channel/!site/motd" />
+	
+	<!-- Instructor View -->
+	<addNewPageToSite siteid="Med101" pagetitle="Instructor View" pagelayout="0" />
+	<addNewToolToPage siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="recipview" propvalue="sidebyside" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role1id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role1singular" propvalue="Small Student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role1plural" propvalue="Small Students" />
+
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role2id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role2singular" propvalue="Medium Student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role2plural" propvalue="Medium Students" />
+	
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role3id" propvalue="ta" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role3singular" propvalue="Medium TA" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role3plural" propvalue="Medium TAs" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role1realmid" propvalue="/site/Small101" />
+
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role2realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Instructor View" tooltitle="Instructor View" propname="role3realmid" propvalue="/site/Med101" />
+	
+	<!-- Mail By Role -->				 
+	<addNewPageToSite siteid="Med101" pagetitle="Email By Role" pagelayout="0" />
+	<addNewToolToPage siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="recipview" propvalue="role" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2id" propvalue="ta" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2singular" propvalue="Teaching Assistant" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2plural" propvalue="Teaching Assistants" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3realmid" propvalue="/site/Med101" />
+	
+	
+	<!-- Mail By Individial -->
+	<addNewPageToSite siteid="Med101" pagetitle="Email By User" pagelayout="0" />
+	<addNewToolToPage siteid="Med101" pagetitle="Email By User" tooltitle="Email By User"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="recipview" propvalue="user" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role2id" propvalue="ta" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role2singular" propvalue="Teaching Assistant" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role2plural" propvalue="Teaching Assistants" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role3id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role3singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role3plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role1realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role2realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By User" tooltitle="Email By User" propname="role3realmid" propvalue="/site/Med101" />
+
+
+	<!-- Mail By Tree -->
+	<addNewPageToSite siteid="Med101" pagetitle="Email By Tree" pagelayout="0" />
+	<addNewToolToPage siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="recipview" propvalue="tree" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2id" propvalue="ta" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2singular" propvalue="Teaching Assistant" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2plural" propvalue="Teaching Assistants" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3realmid" propvalue="/site/Med101" />		
+
+	<!-- Mail Side By Side -->
+	<addNewPageToSite siteid="Med101" pagetitle="Side By Side" pagelayout="0" />
+	<addNewToolToPage siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="recipview" propvalue="sidebyside" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role2id" propvalue="ta" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role2singular" propvalue="Teaching Assistant" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role2plural" propvalue="Teaching Assistants" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role3id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role3singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role3plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role1realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role2realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role3realmid" propvalue="/site/Med101" />		
+	
+	<!-- Mail By Foothill -->
+	<addNewPageToSite siteid="Med101" pagetitle="Email By Foothill" pagelayout="0" />
+	<addNewToolToPage siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="recipview" propvalue="foothill" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role2id" propvalue="ta" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role2singular" propvalue="Teaching Assistant" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role2plural" propvalue="Teaching Assistants" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role3id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role3singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role3plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role1realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role2realmid" propvalue="/site/Med101" />
+	<addConfigPropertyToTool siteid="Med101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role3realmid" propvalue="/site/Med101" />		
+	
+							 
+	<addNewRoleToRealm realmid="/site/Med101" roleid="instructor" description="Instructor"/>
+	<addNewRoleToRealm realmid="/site/Med101" roleid="ta" description="Teaching Assistant" />
+	<addNewRoleToRealm realmid="/site/Med101" roleid="student" description="Student" />
+	
+	<!-- Instructor Locks -->
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="site.visit" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="annc.delete.any" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="annc.delete.own" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="annc.new" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="annc.read" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="annc.read.drafts" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="annc.revise.any" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="annc.revise.own" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="asn.delete" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="asn.new" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="asn.read" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="asn.revise" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="calendar.delete" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="calendar.new" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="calendar.read" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="calendar.revise" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="chat.delete.any" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="chat.delete.own" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="chat.new" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="chat.read" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="chat.revise.any" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="chat.revise.own" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="content.delete" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="content.new" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="content.read" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="content.revise" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="gradebook.maintain" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="mail.delete.any" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="mail.delete.own" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="mail.new" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="mail.read" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="mail.revise.any" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="mail.revise.own" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="realm.del" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="realm.upd" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="site.del" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="site.upd" />
+	<addLockToRole realmid="/site/Med101" roleid="instructor" lock="site.visit.unp" />
+	
+	
+	<addLockToRole realmid="/site/Med101" roleid="ta" lock="site.visit" />
+	
+	<!-- Student Locks -->
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="site.visit" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="annc.read" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="asn.read" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="asn.submit" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="calendar.read" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="chat.new" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="chat.read" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="content.read" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="dropbox.own" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="gradebook.access" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="mail.read" />
+	<addLockToRole realmid="/site/Med101" roleid="student" lock="site.visit" />
+	
+
+	<addUserToRealmWithRole userid="mpo005" realmid="/site/Med101" roleid="instructor" />
+	<addUserToRealmWithRole userid="bmc005" realmid="/site/Med101" roleid="instructor" />
+	
+	<addUserToRealmWithRole userid="eho005" realmid="/site/Med101" roleid="ta" />
+	<addUserToRealmWithRole userid="awa005" realmid="/site/Med101" roleid="ta" />
+	<addUserToRealmWithRole userid="wcr005" realmid="/site/Med101" roleid="ta" />
+	<addUserToRealmWithRole userid="dhi005" realmid="/site/Med101" roleid="ta" />
+	
+	<addUserToRealmWithRole userid="agr001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="jkl001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="tbl001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="asu001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="ggi001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="amo001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="rat001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="jre001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="ial001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="mar001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="bcl001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="mss001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="mma002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="lki001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="hre001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="jbo001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="mca001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="pba001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="cth001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="dmi001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="cfe001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="jle001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="fro001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="pje001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="mab001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="gbr001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="gbu001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="hch001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="csh001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="bfr002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="ahi001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="jho001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="hji001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="kjo001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="mbr001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="msh001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="tmb001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="bob001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="ash001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="msi001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="asi003" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="rab001" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="jbo002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="bco002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="ado002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="nfo002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="rha002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="sjo002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="lto002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="ala002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="lhe002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="rmu002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="cne002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="rzh002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="lsc002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="mso002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="mst002" realmid="/site/Med101" roleid="student" />
+	<addUserToRealmWithRole userid="hst002" realmid="/site/Med101" roleid="student" />
+	
+	<addNewPageToSite pagetitle="Announcements" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="Announcements" siteid="Med101" layouthints=""
+							tooltitle="Announcements"  toolid="sakai.announcements" />
+							
+	<addNewPageToSite pagetitle="Assignments" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="Assignments" siteid="Med101" layouthints=""
+							tooltitle="Assignments"  toolid="sakai.assignment" />		
+							
+	<addNewPageToSite pagetitle="AssignmentsWG" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="AssignmentsWG" siteid="Med101" layouthints=""
+							tooltitle="AssignmentsWG"  toolid="sakai.assignment.grades" />
+							
+	<addNewPageToSite pagetitle="DropBox" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="DropBox" siteid="Med101" layouthints=""
+							tooltitle="DropBox"  toolid="sakai.dropbox" />
+							
+	<addNewPageToSite pagetitle="Gradebook" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="Gradebook" siteid="Med101" layouthints=""
+							tooltitle="Gradebook"  toolid="sakai.gradebook.tool" />	
+							
+	<addNewPageToSite pagetitle="EmailArchive" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="EmailArchive" siteid="Med101" layouthints=""
+							tooltitle="EmailArchive"  toolid="sakai.mailbox" />	
+							
+	<addNewPageToSite pagetitle="Resources" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="Resources" siteid="Med101" layouthints=""
+							tooltitle="Resources"  toolid="sakai.resources" />	
+							
+	<addNewPageToSite pagetitle="Samigo" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="Samigo" siteid="Med101" layouthints=""
+							tooltitle="Samigo"  toolid="sakai.samigo" />	
+							
+	<addNewPageToSite pagetitle="Schedule" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="Schedule" siteid="Med101" layouthints=""
+							tooltitle="Schedule"  toolid="sakai.schedule" />	
+							
+	<addNewPageToSite pagetitle="Syllabus" siteid="Med101" pagelayout="0"/> 
+	<addNewToolToPage pagetitle="Syllabus" siteid="Med101" layouthints=""
+							tooltitle="Syllabus"  toolid="sakai.syllabus" />	
+					
+</sakaiscript>

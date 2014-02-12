@@ -1,0 +1,31 @@
+<projectDescription>
+  <name>samigo</name>
+  <comment/>
+  <projects>
+    <project>entitybroker-api</project>
+    <project>sakai-depend-jsf-widgets-sun</project>
+    <project>sakai-gradebook-service-api</project>
+    <project>sakai-jsf-app</project>
+    <project>sakai-jsf-spreadsheet</project>
+    <project>sakai-jsf-tool</project>
+    <project>sakai-jsf-widgets</project>
+    <project>sakai-jsf-widgets-sun</project>
+    <project>sakai-samigo-api</project>
+    <project>sakai-samigo-audio</project>
+    <project>sakai-samigo-cp</project>
+    <project>sakai-samigo-hibernate</project>
+    <project>sakai-samigo-qti</project>
+    <project>sakai-samigo-services</project>
+    <project>sakai-sections-api</project>
+    <project>sakai-sections-impl</project>
+    <project>sakai-sections-impl-standalone</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

@@ -1,0 +1,2 @@
+Custom tool names, Assignments = Submissions, Modules = Course Materials
+Custom mime type for webm

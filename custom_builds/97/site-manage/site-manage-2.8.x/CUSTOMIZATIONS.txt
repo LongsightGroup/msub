@@ -1,0 +1,16 @@
+SAK-19866 Auto-groups - ability to assign users randomly
+SAK-20923 Option to disable requirement for 'authorizer' when creating new site
+LS-41 Increase course field to 4 in worksite setup
+SAK-20666 Allow project site creators to select skin from a drop-down during site creation or in site info like they can with course sites
+SAK-21038 Use quiet reference notation to suppress velocity code if $sectionObject.getCategoryDescription() is null
+SAK-20413 Creating a course with example data and clicking on the 'Save and add another section' fails silently
+SAK-20799 PageOrder: Add Ability to Hide a Tool without Disabling a Tool
+Delegated Access patch @r113860 site-manage/trunk
+SAK-21323 Allow LessonBuilder to use Import from Site -> Merge by rewriting fake tool ids with real ones
+SAK-22437 Add Site Information Display (site description) to site import options list
+SAK-22510 Add site id column to worksite setup
+SAK-22513 Worksite Setup Filter by term
+
+#Custom
+LS-151 Custom wording for Site-Info->Add Partipants 
+

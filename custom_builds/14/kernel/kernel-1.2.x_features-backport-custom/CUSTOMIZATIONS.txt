@@ -1,0 +1,7 @@
+Branched at r116342
+SAK-15296: Drop Box ability to download all files in a single zip file
+
+https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-1.2.x_features-backport/
+---------------------------------
+KNL-629 Allow content from CHS to be filtered when served
+KNL-273 Outstanding issues with SAK-800

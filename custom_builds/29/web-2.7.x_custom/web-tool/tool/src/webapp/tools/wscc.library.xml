@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<registration>
+
+	<tool
+			id="wscc.library"
+			title="WSCC Library"
+			description="WSCC Library">
+
+		<configuration name="sakai.properties.url.key" value="wscc.library.url" />
+		<configuration name="height" value="800px" />
+
+		<configuration name="reset.button" value="false" type="final" />
+
+		<category name="course" />
+		<category name="project" />
+      <category name="portfolio" />
+		<category name="myworkspace" />
+
+		<!-- Allow this to be set -->
+		<configuration name="functions.require" /> 
+		
+		<!-- Allow multiple instances of this tool within one site -->
+		<configuration name="allowMultipleInstances" value="false" /> 
+		
+	</tool>
+
+</registration>

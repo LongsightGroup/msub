@@ -1,0 +1,1 @@
+SAK-23443 merge of r126225 The  Add New Site in neo upper right corner should not display to users lacking permissions to add a new site

@@ -1,0 +1,52 @@
+Branched from https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.8.x-tabbed-interface
+r97502, which includes:
+
+SAM-894 Reduce confusion over core, published, inactive by using Javascript tabbed display
+SAM-1238  With showAssessmentTypes=false, Assessment Types link still shows when adding a new multiple choice question
+SAM-1239 Properties wording change for data_discrepancy_1
+SAM-1252 Code Review: Stack trace when null value in Section Author Type
+SAM-904 Option to set all remaining students who have not yet submitted an assessment to zero (or some other grade)
+SEMS-39 Turn off warning to users of Edited Quiz
+SAM-1330 (patch not in trunk as of 8/24/2011) Allow disabling of browser-based data discrepancy errors
+SAM-1313 (patch not in trunk as pf 8/24/2011) Settings: Description/Intro not displayed to assessment takers
+SAM-1286 Samigo/score is not correct for timed assessment with average score option and linked to gradebook.
+SAM-1181 Linear assessment does not allow more than 1 submission
+SAM-1399 Thursday is misspelled
+
+SAM-1379 Statistics Only shows First Part of tests for Students (no dropdown for other parts)
+SAM-1383 Imported Samigo Tests with Groups crashes tool
+SAM-1376 Samigo no longer works when creating an assessment through markup text
+SAM-1388 Issues taking assessment via URL; reversion of SAM-1003
+SAM-1208 timed assessment with no due date but has retraction date problems
+SAM-1475 Published Test Can Change Settings to Save to GB Item that already exists
+Actual cusomitzations:
+SEMS-48 Custom Samigo Mods
+SAM-1362 Expand instructions for Average Grading Submissions page
+SAM-1117 Option to Not Display how many points question worth in assessments
+SAM-1532 Can't update published tests settings when tied to Gradebook
+SAM-1541 MarkupText assessment creation doesn't use default (or selected) template
+SAM-1552 Question Statistics Links go missing when a section doesn't have metadata
+SAM-1431 Duplicating Tests crashes sites on publish
+SAM-1398 Default the "Release to" to Site if the imported assessment release to group
+SAM-1393 Timer starts even if the username and password is not correct
+SAM-1535 Mutliple Choice Partial Credit: Checkmark and cross marks show up when it shouldn't
+SAM-1401 "Delivery Date is not of correct format" is seen even if the date is in correct format
+SAM-1751 Add Honor Pledge Option like the Assignments Tool has
+SAM-1121 Samigo(Test& Quizzes) to send events to the Schedule (includes sub-tasks: SAK-1324, SAK-1318, SAK-1319, SAK-1316, SAK-1315, SAK-1322)
+SAM-1591 Timed assessments delivered via URL allow students to "begin" after due date 
+SEMS-67 Samigo automaticSubmission_isInstructorEditable should always be false
+SAM-925 NPE occurs in DeliveryBean.timeExpired
+SAM-1643 Show / Hide Rich Text adds visible HTML paragraph tags <p>
+SAM-1755 Rounded corners because of -moz- prefix retired on Firefox 13+
+SAM-1251 print to PDF fails
+SAM-1307: Previously entered text in description field still appears in Print page after leaving the same description field empty in Settings page.
+SAM-1308: Leaving Model Short Answer blank in Short Answer/Essay generates Null in print page.
+SAM-1326: Restart of question numbering within parts not maintained in Print view of Assignments
+SAM-1249 Email feature in Submission Status sends feedback to wrong address 
+SAM-2041 better defaults for XML parsing
+SAM-2074 Auto Submit job can be broken by a runtime exception from ItemService.getItemTextId
+SEMS-69 Auto Submit job changes (batches of 100 at a time)
+SAM-1648 Using & in an assessment title will display as &amp; in some situations
+SAM-1493 The published assessment name should get unescaped.
+
+

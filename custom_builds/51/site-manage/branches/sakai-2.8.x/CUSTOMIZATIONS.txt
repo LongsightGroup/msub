@@ -1,0 +1,3 @@
+LS-35: Various text changes and customizations to site creation
+2011-09-28: Merging r94384 through r98676 from parent branch
+Merge r100176 SAK-21323 from trunk allow LessonBuilder to use Import from Site -> Merge

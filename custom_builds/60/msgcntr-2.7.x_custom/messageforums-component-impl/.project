@@ -1,0 +1,16 @@
+<projectDescription>
+  <name>messageforums-component-impl</name>
+  <comment/>
+  <projects>
+    <project>messageforums-api</project>
+    <project>messageforums-hbm</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

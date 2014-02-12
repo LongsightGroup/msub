@@ -1,0 +1,3 @@
+LS-40: limit user selection to dropdown
+LS-63: change isSuperUser calls to allowAddUser calls
+SAK-19498 Suppress created by /modified by info for provided users on Modify Account screen (BXK-924219)

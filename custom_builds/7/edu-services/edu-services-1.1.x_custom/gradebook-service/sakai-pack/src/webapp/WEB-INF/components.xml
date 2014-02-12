@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- Hibernate mappings -->
+   <bean id="org.sakaiproject.service.gradebook.hibernateMappings"
+      class="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl">
+		<property name="mappingResources">
+		    <list>
+  				<value>org/sakaiproject/tool/gradebook/Gradebook.hbm.xml</value>
+	  			<value>org/sakaiproject/tool/gradebook/GradableObject.hbm.xml</value>
+		  		<value>org/sakaiproject/tool/gradebook/GradeRecord.hbm.xml</value>
+			  	<value>org/sakaiproject/tool/gradebook/GradingEvent.hbm.xml</value>
+				  <value>org/sakaiproject/tool/gradebook/GradingScale.hbm.xml</value>
+  				<value>org/sakaiproject/tool/gradebook/GradebookProperty.hbm.xml</value>
+	  			<value>org/sakaiproject/tool/gradebook/GradeMapping.hbm.xml</value>
+          <value>org/sakaiproject/tool/gradebook/Spreadsheet.hbm.xml</value>
+          <value>org/sakaiproject/tool/gradebook/Comment.hbm.xml</value>
+          <value>org/sakaiproject/tool/gradebook/Category.hbm.xml</value>
+          <value>org/sakaiproject/tool/gradebook/LetterGradePercenteMapping.hbm.xml</value>
+          <value>org/sakaiproject/tool/gradebook/Permission.hbm.xml</value>
+        </list>
+		</property>
+   </bean>
+
+
+  <!-- This is the actual bean to execute (with an optional parameter that is consumed by the job)
+  Things to note:
+    - the 'id' is arbitrary but must be the same for this bean definition AND the following one
+    - the 'class' is the fully qualified package name of your Java class
+    - you can inject any properties or services into your job in this bean.
+    -->
+  <bean id="gradebookAutoReleaseJob"
+          class="org.sakaiproject.job.gradebook.AutoReleaseJob" init-method="init">
+
+    <property name="configMessage">
+      <value></value>
+    </property>
+
+    <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
+		<property name="gradebookService" ref="org_sakaiproject_service_gradebook_GradebookService" />
+		<property name="schedulerManager" ref="org.sakaiproject.api.app.scheduler.SchedulerManager" />
+    <!--  example of injecting some Sakai API's into your job if you needed them
+    <property name="sessionManager">
+      <ref bean="org.sakaiproject.tool.api.SessionManager" />
+    </property>
+    
+    <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager" />
+    <property name="userDirectoryService" ref="org.sakaiproject.user.api.UserDirectoryService" />
+    <property name="contentHostingService" ref="org.sakaiproject.content.api.ContentHostingService" />
+    <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
+    <property name="entityManager" ref="org.sakaiproject.entity.api.EntityManager" />
+    <property name="sakaiPersonManager" ref="org.sakaiproject.api.common.edu.person.SakaiPersonManager" />
+    <property name="siteAdvisor" ref="org.sakaiproject.contentreview.service.ContentReviewSiteAdvisor" />
+    <property name="sqlService" ref="org.sakaiproject.db.api.SqlService" />
+    
+        -->
+  </bean>
+
+  <!-- This is the helper that will register the above bean with the ScheduleManager
+    Things to note:
+      - id must end with the same bean id from above
+      - class must be the class of the SpringJobBeanWrapper, ie don't change it.
+      - the beanId property must match the bean id from above
+      - the jobName property is the text that will be rendered in the list of jobs in Sakai
+  -->
+  <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.autoReleaseJob"
+   class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
+    singleton="true" init-method="init">
+
+    <property name="beanId">
+      <value>gradebookAutoReleaseJob</value>
+    </property>
+
+    <property name="jobName">
+      <value>Auto Release Grades Job</value>
+    </property>
+
+        <property name="schedulerManager">
+      <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager" />
+    </property>
+
+   </bean>
+
+
+   <!--  if you have multiple jobs you can wire them in here, simply copy the above example blocks and modify as needed -->
+
+
+
+	<!-- Required facade definitions -->
+	<!-- <import resource="spring-facades.xml" /> -->
+
+    <bean id="org_sakaiproject_tool_gradebook_facades_Authn"
+          class="org.sakaiproject.tool.gradebook.facades.sakai2impl.AuthnSakai2Impl">
+    </bean>
+
+    <bean id="org_sakaiproject_tool_gradebook_facades_Authz"
+          class="org.sakaiproject.tool.gradebook.facades.sakai2impl.AuthzSakai2Impl"
+          init-method="init">
+        <property name="sectionAwareness"><ref bean="org.sakaiproject.section.api.SectionAwareness"/></property>
+        <property name="authn"><ref bean="org_sakaiproject_tool_gradebook_facades_Authn"/></property>
+        <property name="gradebookPermissionService"><ref bean="org_sakaiproject_service_gradebook_GradebookPermissionService"/></property>
+    </bean>
+
+    <bean id="org_sakaiproject_tool_gradebook_facades_EventTrackingService"
+          class="org.sakaiproject.tool.gradebook.facades.sakai2impl.EventTrackingServiceSakai2Impl">
+        <property name="eventTrackingService"><ref bean="org.sakaiproject.event.api.EventTrackingService"/></property>
+    </bean>
+
+    <!-- Service implementation hook-up with Sakai DB -->
+
+    <bean id="org_sakaiproject_service_gradebook_GradebookFrameworkServiceTarget"
+          class="org.sakaiproject.component.gradebook.GradebookFrameworkServiceImpl"
+          name="org.sakaiproject.service.gradebook.GradebookFrameworkServiceTarget">
+        <property name="sessionFactory"><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/></property>
+		<property name="authn">
+			<ref bean="org_sakaiproject_tool_gradebook_facades_Authn" />
+		</property>
+	</bean>
+
+	<bean id="org_sakaiproject_service_gradebook_GradebookExternalAssessmentServiceTarget"
+		class="org.sakaiproject.component.gradebook.GradebookExternalAssessmentServiceImpl"
+		name="org.sakaiproject.service.gradebook.GradebookExternalAssessmentServiceTarget">
+		<property name="sessionFactory"><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/></property>
+		<property name="authn">
+			<ref bean="org_sakaiproject_tool_gradebook_facades_Authn" />
+		</property>
+		<property name="eventTrackingService" ref="org_sakaiproject_tool_gradebook_facades_EventTrackingService" />
+	</bean>
+
+	<bean id="org_sakaiproject_service_gradebook_GradebookServiceTarget"
+		class="org.sakaiproject.component.gradebook.GradebookServiceHibernateImpl"
+        name="org.sakaiproject.service.gradebook.GradebookServiceTarget">
+        <property name="sessionFactory"><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/></property>
+        <property name="sectionAwareness">
+            <ref bean="org.sakaiproject.section.api.SectionAwareness" />
+        </property>
+        <property name="authn">
+            <ref bean="org_sakaiproject_tool_gradebook_facades_Authn" />
+        </property>
+        <property name="authz">
+            <ref bean="org_sakaiproject_tool_gradebook_facades_Authz" />
+        </property>
+        <property name="eventTrackingService">
+            <ref bean="org_sakaiproject_tool_gradebook_facades_EventTrackingService"/>
+        </property>
+        <property name="gradebookPermissionService">
+        	<ref bean="org_sakaiproject_service_gradebook_GradebookPermissionService"/>
+        </property>
+
+        <!-- Temporary support for deprecated methods. -->
+        <property name="frameworkService">
+            <ref bean="org_sakaiproject_service_gradebook_GradebookFrameworkService" />
+        </property>
+        <property name="externalAssessmentService">
+            <ref bean="org_sakaiproject_service_gradebook_GradebookExternalAssessmentService" />
+        </property>
+	</bean>
+	<bean id="org_sakaiproject_service_gradebook_GradebookPermissionServiceTarget"
+          class="org.sakaiproject.component.gradebook.GradebookPermissionServiceImpl"
+          name="org.sakaiproject.service.gradebook.GradebookPermissionServiceTarget">
+        <property name="sessionFactory"><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/></property>
+        <property name="sectionAwareness"><ref bean="org.sakaiproject.section.api.SectionAwareness"/></property>
+	</bean>
+	
+
+	<bean id="gradebookServiceTemplate"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+		abstract="true">
+		<property name="transactionManager">
+			<ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly,+org.sakaiproject.service.gradebook.shared.GradebookException</prop>
+				<prop key="is*">PROPAGATION_REQUIRED,readOnly,+org.sakaiproject.service.gradebook.shared.GradebookException</prop>
+				<prop key="*">PROPAGATION_REQUIRED,+org.sakaiproject.service.gradebook.shared.GradebookException</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="org_sakaiproject_service_gradebook_GradebookService"
+		name="org.sakaiproject.service.gradebook.GradebookService"
+		parent="gradebookServiceTemplate"
+		singleton="true">
+		<property name="target">
+			<ref bean="org_sakaiproject_service_gradebook_GradebookServiceTarget"/>
+		</property>
+	</bean>
+	<bean id="org_sakaiproject_service_gradebook_GradebookFrameworkService"
+		name="org.sakaiproject.service.gradebook.GradebookFrameworkService"
+		parent="gradebookServiceTemplate"
+		singleton="true">
+		<property name="target">
+			<ref bean="org_sakaiproject_service_gradebook_GradebookFrameworkServiceTarget"/>
+		</property>
+	</bean>
+	<bean id="org_sakaiproject_service_gradebook_GradebookExternalAssessmentService"
+		name="org.sakaiproject.service.gradebook.GradebookExternalAssessmentService"
+		parent="gradebookServiceTemplate"
+		singleton="true">
+		<property name="target">
+			<ref bean="org_sakaiproject_service_gradebook_GradebookExternalAssessmentServiceTarget"/>
+		</property>
+	</bean>
+
+	<!-- ContextObserver to take action when the Gradebook is added to or removed from a site -->
+	<bean id="org_sakaiproject_service_gradebook_EntityProducer"
+		class="org.sakaiproject.tool.gradebook.facades.sakai2impl.GradebookEntityProducer"
+		init-method="init">
+		<property name="label" value="gradebook"/>
+		<property name="gradebookFrameworkService">
+			<ref bean="org_sakaiproject_service_gradebook_GradebookFrameworkService" />
+		</property>
+		<property name="gradebookService">
+			<ref bean="org_sakaiproject_service_gradebook_GradebookService" />
+		</property>
+		<property name="toolIds">
+		    <list>
+				<value>sakai.gradebook.tool</value>
+			</list>
+		</property>
+        <property name="entityManager">
+            <ref bean="org.sakaiproject.entity.api.EntityManager" />
+        </property>
+	</bean>
+
+	<bean id="org_sakaiproject_service_gradebook_ConditionsProvider"
+		class="org.sakaiproject.tool.gradebook.facades.sakai2impl.GradebookConditionsProvider"
+		init-method="init">
+		<property name="conditionService" ref="org.sakaiproject.conditions.api.ConditionService" />
+		<property name="gradebookService" ref="org_sakaiproject_service_gradebook_GradebookService" />
+	</bean>
+
+	<!-- Gradebook Permission Service -->
+	<bean id="org_sakaiproject_service_gradebook_GradebookPermissionService"
+		name="org.sakaiproject.service.gradebook.GradebookPermissionService"
+		parent="gradebookServiceTemplate"
+		singleton="true">
+		<property name="target">
+			<ref bean="org_sakaiproject_service_gradebook_GradebookPermissionServiceTarget"/>
+		</property>
+	</bean>
+
+	<!-- Simple configuration handler. -->
+	<bean id="org_sakaiproject_service_gradebook_GradebookConfiguration"
+		class="org.sakaiproject.tool.gradebook.facades.sakai2impl.GradebookConfigurationSakai"
+		init-method="init">
+
+		<property name="autoDdl" value="${auto.ddl}"/>
+		<property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
+
+		<property name="gradebookFrameworkService" ref="org.sakaiproject.service.gradebook.GradebookFrameworkService"/>
+
+		<!-- Set up default system-wide grading scales. -->
+
+		<property name="availableGradingScales">
+			<list>
+				<bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+					<property name="uid" value="LetterGradePlusMinusMapping"/>
+					<property name="name" value="Letter Grades with +/-"/>
+					<property name="grades">
+						<list>
+							<value>A+</value>
+							<value>A</value>
+							<value>A-</value>
+							<value>B+</value>
+							<value>B</value>
+							<value>B-</value>
+							<value>C+</value>
+							<value>C</value>
+							<value>C-</value>
+							<value>D+</value>
+							<value>D</value>
+							<value>D-</value>
+							<value>F</value>
+						</list>
+					</property>
+					<property name="defaultBottomPercents">
+						<list>
+							<value>100.0</value>
+							<value>95.0</value>
+							<value>90.0</value>
+							<value>87.0</value>
+							<value>83.0</value>
+							<value>80.0</value>
+							<value>77.0</value>
+							<value>73.0</value>
+							<value>70.0</value>
+							<value>67.0</value>
+							<value>63.0</value>
+							<value>60.0</value>
+							<value>00.0</value>
+						</list>
+					</property>
+				</bean>
+				<bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+					<property name="uid" value="LetterGradeMapping"/>
+					<property name="name" value="Letter Grades"/>
+					<property name="grades">
+						<list>
+							<value>A</value>
+							<value>B</value>
+							<value>C</value>
+							<value>D</value>
+							<value>F</value>
+						</list>
+					</property>
+					<property name="defaultBottomPercents">
+						<list>
+							<value>90.0</value>
+							<value>80.0</value>
+							<value>70.0</value>
+							<value>60.0</value>
+							<value>00.0</value>
+						</list>
+					</property>
+				</bean>
+				<bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+					<property name="uid" value="PassNotPassMapping"/>
+					<property name="name" value="Pass / Not Pass"/>
+					<property name="grades">
+						<list>
+							<value>P</value>
+							<value>NP</value>
+						</list>
+					</property>
+					<property name="defaultBottomPercents">
+						<list>
+							<value>75.0</value>
+							<value>0.0</value>
+						</list>
+					</property>
+				</bean>
+                <bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+                    <property name="uid" value="UndergradNursingMapping" />
+                    <property name="name" value="Undergraduate Nursing" />
+                    <property name="grades">
+                        <list>
+                            <value>A</value>
+                            <value>A-</value>
+                            <value>B+</value>
+                            <value>B</value>
+                            <value>B-</value>
+                            <value>C+</value>
+                            <value>C</value>
+                            <value>C-</value>
+                            <value>D+</value>
+                            <value>D</value>
+                            <value>D-</value>
+                            <value>F</value>
+                        </list>
+                     </property>
+                     <property name="defaultBottomPercents">
+                        <list>
+                            <value>95.0</value>
+                            <value>93.0</value>
+                            <value>90.0</value>
+                            <value>87.0</value>
+                            <value>85.0</value>
+                            <value>81.0</value>
+                            <value>77.0</value>
+                            <value>75.0</value>
+                            <value>73.0</value>
+                            <value>71.0</value>
+                            <value>69.0</value>
+                            <value>0.0</value>
+                         </list>
+                     </property>
+                </bean>
+                <bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+                     <property name="uid" value="UndergradEdMapping" />
+                     <property name="name" value="Undergraduate Education" />
+                     <property name="grades">
+                         <list>
+                             <value>A</value>
+                             <value>A-</value>
+                             <value>B+</value>
+                             <value>B</value>
+                             <value>B-</value>
+                             <value>C+</value>
+                             <value>C</value>
+                             <value>C-</value>
+                             <value>D+</value>
+                             <value>D</value>
+                             <value>D-</value>
+                             <value>F</value>
+                          </list>
+                      </property>
+                      <property name="defaultBottomPercents">
+                         <list>
+                             <value>96.0</value>
+                             <value>93.0</value>
+                             <value>91.0</value>
+                             <value>87.0</value>
+                             <value>85.0</value>
+                             <value>83.0</value>
+                             <value>78.0</value>
+                             <value>75.0</value>
+                             <value>73.0</value>
+                             <value>71.0</value>
+                             <value>68.0</value>
+                             <value>0.0</value>
+                          </list>
+                      </property>
+                 </bean>
+                 <bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+                    <property name="uid" value="GradNursingMapping" />
+                    <property name="name" value="Graduate Nursing" />
+                    <property name="grades">
+                        <list>
+                            <value>A</value>
+                            <value>A-</value>
+                            <value>B+</value>
+                            <value>B</value>
+                            <value>B-</value>
+                            <value>F</value>
+                        </list>
+                     </property>
+                     <property name="defaultBottomPercents">
+                        <list>
+                            <value>94.0</value>
+                            <value>90.0</value>
+                            <value>87.0</value>
+                            <value>83.0</value>
+                            <value>80.0</value>
+                            <value>0.0</value>
+                         </list>
+                     </property>
+                </bean>
+                <bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+                    <property name="uid" value="PhysicalTherapyMapping" />
+                    <property name="name" value="Physical Therapy" />
+                    <property name="grades">
+                        <list>
+                            <value>A</value>
+                            <value>A-</value>
+                            <value>B+</value>
+                            <value>B</value>
+                            <value>B-</value>
+                            <value>C</value>
+                            <value>F</value>
+                        </list>
+                     </property>
+                     <property name="defaultBottomPercents">
+                        <list>
+                            <value>93.6</value>
+                            <value>89.5</value>
+                            <value>86.5</value>
+                            <value>81.5</value>
+                            <value>79.5</value>
+                            <value>69.5</value>
+                            <value>0.0</value>
+                         </list>
+                     </property>
+                </bean>
+                <bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+                    <property name="uid" value="MBAMapping" />
+                    <property name="name" value="MBA" />
+                    <property name="grades">
+                        <list>
+                            <value>A</value>
+                            <value>A-</value>
+                            <value>B+</value>
+                            <value>B</value>
+                            <value>B-</value>
+                            <value>C+</value>
+                            <value>C</value>
+                            <value>C-</value>
+                            <value>D+</value>
+                            <value>D</value>
+                            <value>D-</value>
+                            <value>F</value>
+                        </list>
+                     </property>
+                     <property name="defaultBottomPercents">
+                        <list>
+                            <value>93.0</value>
+                            <value>90.0</value>
+                            <value>87.0</value>
+                            <value>83.0</value>
+                            <value>80.0</value>
+                            <value>77.0</value>
+                            <value>73.0</value>
+                            <value>70.0</value>
+                            <value>67.0</value>
+                            <value>63.0</value>
+                            <value>60.0</value>
+                            <value>0.0</value>
+                         </list>
+                     </property>
+                </bean>
+                <bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+                    <property name="uid" value="HumanDevMapping" />
+                    <property name="name" value="Counseling and Human Development" />
+                    <property name="grades">
+                        <list>
+                            <value>A</value>
+                            <value>A-</value>
+                            <value>B+</value>
+                            <value>B</value>
+                            <value>B-</value>
+                            <value>C</value>
+                            <value>F</value>
+                        </list>
+                     </property>
+                     <property name="defaultBottomPercents">
+                        <list>
+                            <value>94.0</value>
+                            <value>90.0</value>
+                            <value>86.0</value>
+                            <value>81.0</value>
+                            <value>76.0</value>
+                            <value>75.0</value>
+                            <value>0.0</value>
+                         </list>
+                     </property>
+                </bean>
+                <bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+                    <property name="uid" value="GovForeignAffairsMapping" />
+                    <property name="name" value="Government and Foreign Affairs" />
+                    <property name="grades">
+                        <list>
+                            <value>A</value>
+                            <value>A-</value>
+                            <value>B+</value>
+                            <value>B</value>
+                            <value>B-</value>
+                            <value>C+</value>
+                            <value>C</value>
+                            <value>C-</value>
+                            <value>D+</value>
+                            <value>D</value>
+                            <value>D-</value>
+                            <value>F</value>
+                        </list>
+                     </property>
+                     <property name="defaultBottomPercents">
+                        <list>
+                            <value>93.0</value>
+                            <value>90.0</value>
+                            <value>87.0</value>
+                            <value>83.0</value>
+                            <value>80.0</value>
+                            <value>77.0</value>
+                            <value>73.0</value>
+                            <value>70.0</value>
+                            <value>67.0</value>
+                            <value>63.0</value>
+                            <value>60.0</value>
+                            <value>0.0</value>
+                         </list>
+                     </property>
+                </bean>
+                <bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+                    <property name="uid" value="PsychologySociologyMapping" />
+                    <property name="name" value="BSC - Psychology - Sociology" />
+                    <property name="grades">
+                        <list>
+                            <value>A</value>
+                            <value>A-</value>
+                            <value>B+</value>
+                            <value>B</value>
+                            <value>B-</value>
+                            <value>C+</value>
+                            <value>C</value>
+                            <value>C-</value>
+                            <value>D+</value>
+                            <value>D</value>
+                            <value>D-</value>
+                            <value>F</value>
+                        </list>
+                     </property>
+                     <property name="defaultBottomPercents">
+                        <list>
+                            <value>96.0</value>
+                            <value>92.0</value>
+                            <value>89.0</value>
+                            <value>86.0</value>
+                            <value>83.0</value>
+                            <value>80.0</value>
+                            <value>77.0</value>
+                            <value>74.0</value>
+                            <value>71.0</value>
+                            <value>68.0</value>
+                            <value>65.0</value>
+                            <value>0.0</value>
+                         </list>
+                     </property>
+                </bean>
+			</list>
+		</property>
+
+		<property name="defaultGradingScale" value="LetterGradePlusMinusMapping"/>
+
+
+		<!--
+			You could use a configuration like this to disable the plus-minus scale,
+			add a new scale, change the name displayed for "Letter Grades" and their
+			default values, and add manual-only non-percentage mapped grades to the
+			"Pass / Not Pass" scale to allow for "I"ncompletes.
+		-->
+<!--
+		<property name="availableGradingScales">
+			<list>
+				<bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+					<property name="uid" value="LetterGradeQuestionableMapping"/>
+					<property name="name" value="Letter Grades with !?"/>
+					<property name="grades">
+						<list>
+							<value>A!</value>
+							<value>A?</value>
+							<value>B!</value>
+							<value>B?</value>
+							<value>C!</value>
+							<value>C?</value>
+							<value>D!</value>
+							<value>D?</value>
+							<value>F!?</value>
+						</list>
+					</property>
+					<property name="defaultBottomPercents">
+						<list>
+							<value>100.0</value>
+							<value>90.0</value>
+							<value>87.0</value>
+							<value>80.0</value>
+							<value>77.0</value>
+							<value>70.0</value>
+							<value>67.0</value>
+							<value>60.0</value>
+							<value>00.0</value>
+						</list>
+					</property>
+				</bean>
+				<bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+					<property name="uid" value="LetterGradeMapping"/>
+					<property name="name" value="Better Grades"/>
+					<property name="grades">
+						<list>
+							<value>A</value>
+							<value>B</value>
+							<value>C</value>
+							<value>D</value>
+							<value>F</value>
+						</list>
+					</property>
+					<property name="defaultBottomPercents">
+						<list>
+							<value>50.0</value>
+							<value>30.0</value>
+							<value>20.0</value>
+							<value>10.0</value>
+							<value>00.0</value>
+						</list>
+					</property>
+				</bean>
+				<bean class="org.sakaiproject.service.gradebook.shared.GradingScaleDefinition">
+					<property name="uid" value="PassNotPassMapping"/>
+					<property name="name" value="Pass / Not Pass"/>
+					<property name="grades">
+						<list>
+							<value>P</value>
+							<value>NP</value>
+							<value>I</value>
+						</list>
+					</property>
+					<property name="defaultBottomPercents">
+						<list>
+							<value>75.0</value>
+							<value>0.0</value>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+
+		<property name="defaultGradingScale" value="LetterGradeMapping"/>
+-->
+	</bean>
+
+</beans>

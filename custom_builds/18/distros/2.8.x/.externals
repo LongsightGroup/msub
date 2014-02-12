@@ -1,0 +1,11 @@
+#Customizations
+blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/18/config/config-2.8.x_custom
+evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.3.x_features-backport
+melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_features-backport/
+mneme https://source.sakaiproject.org/contrib/etudes/mneme/tags/2.1.2/
+msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-2.8.x-features-backport/
+portal-velocity-content-combined ???
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.8.x-tabbed-interface/
+signup https://source.sakaiproject.org/contrib/signup/branches/2-8-x
+

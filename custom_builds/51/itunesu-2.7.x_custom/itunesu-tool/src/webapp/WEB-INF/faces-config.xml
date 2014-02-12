@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE faces-config PUBLIC "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.0//EN" "http://java.sun.com/dtd/web-facesconfig_1_0.dtd">
+<faces-config>
+        <!-- NAVIGATION -->
+        <navigation-rule>
+                <from-view-id>*</from-view-id>
+                <!--<navigation-case>
+                        <from-outcome>index</from-outcome>
+                        <to-view-id>/index.jsf</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>itunes</from-outcome>
+                        <to-view-id>/itunes.jsf</to-view-id>
+                </navigation-case>-->
+                
+        </navigation-rule>
+</faces-config>

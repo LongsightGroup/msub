@@ -1,0 +1,16 @@
+ZNB-378894 (server20 customizations)
+EVALSYS-870 Editing certain types of email template though the UI will break them
+EVALSYS-1063 When Instructors view results they should only see responses to their own instructor item questions
+EVALSYS-1141 Nullpointer When Creating Ad Hoc Groups
+EVALSYS-1176 instructorViewAllResults property of EvalEvaluation should be false by default
+EVALSYS-903 Set default TA/Lecturer selections to Multiple and not ALL
+EVALSYS-1038 - NPE when viewing reports
+EVALSYS-967 When attempting to add course sites (aka 'evalgroups') to a hierarchy node, you can only select from a list of sites the 'admin' user is enrolled in
+EVALSYS-1146 When attempting to add course sites (aka 'evalgroups') to a hierarchy node, you won't see sites added to that node unless the admin user is an instructor in them
+EVALSYS-1180 Duplicate nodes are displayed on screen which lists hierarchy nodes that evaluation is deployed to
+EVALSYS-1254 Cannot open comments box
+EVALSYS-991 Hide Instructor/TA selection when no corresponding category items exist
+EVALSYS-1356 - Add option to increase item limit on scales for evaluation
+  -- Important note requires conversion for EVAL 1.3
+  INSERT INTO EVAL_CONFIG (LAST_MODIFIED,NAME,VALUE) VALUES (now(),'EVAL_MIN_LIST_LENGTH',2);
+  INSERT INTO EVAL_CONFIG (LAST_MODIFIED,NAME,VALUE) VALUES (now(),'EVAL_MAX_LIST_LENGTH',40);

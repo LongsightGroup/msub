@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<registration>
+
+<tool
+      id="sakai.tegritylink"
+      title="Tegrity Link"
+      description="For creating and accessing Tegrity course recordings">
+
+    <configuration name="urlProp" value="sakai.tegritylink.url" />
+    <configuration name="trustedService" value="true" />
+    <configuration name="height" value="1000px" />
+
+    <keyword name="linktool" />
+
+    <category name="portfolio"/>
+    <category name="course"/>
+    <category name="project"/>
+ 
+    <configuration name="functions.require" />
+    <configuration name="allowMultipleInstances" value="false" />
+</tool>
+</registration>

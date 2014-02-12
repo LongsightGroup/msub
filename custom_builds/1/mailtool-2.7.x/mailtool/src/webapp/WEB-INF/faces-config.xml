@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+
+<!-- =========== FACES CONFIGURATION FILE ================================== -->
+
+<faces-config>
+
+ <application>
+    <message-bundle>org.sakaiproject.tool.mailtool.Messages</message-bundle>
+    <locale-config>
+      <default-locale>en</default-locale>
+      <supported-locale>ko</supported-locale>
+      <!-- 
+      <supported-locale>de</supported-locale>
+      <supported-locale>fr</supported-locale>
+      <supported-locale>es</supported-locale>
+      -->
+    </locale-config>
+  </application>
+
+	<managed-bean>
+		<description>Mailtool</description>
+		<managed-bean-name>Mailtool</managed-bean-name>
+		<managed-bean-class>org.sakaiproject.tool.mailtool.Mailtool</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>authzGroupService</description>
+			<property-name>authzGroupService</property-name>
+			<value>#{Components["org.sakaiproject.authz.api.AuthzGroupService"]}</value>
+		</managed-property>
+		<managed-property>
+			<description>userDirectoryService</description>
+			<property-name>userDirectoryService</property-name>
+			<value>#{Components["org.sakaiproject.user.api.UserDirectoryService"]}</value>
+		</managed-property>
+		<managed-property>
+			<description>Signals completion of managed property assignment</description>
+			<property-name>configured</property-name>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<description>Option</description>
+		<managed-bean-name>Option</managed-bean-name>
+		<managed-bean-class>org.sakaiproject.tool.mailtool.OptionsBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+<managed-bean>
+      <description>
+         Dynamic Resource Bundle Loader
+      </description>
+      <managed-bean-name>msgs</managed-bean-name>
+      <managed-bean-class>org.sakaiproject.util.ResourceLoader</managed-bean-class>
+      <managed-bean-scope>session</managed-bean-scope>
+      <managed-property>
+         <description>Bundle baseName</description>
+         <property-name>baseName</property-name>
+         <value>org.sakaiproject.tool.mailtool.Messages</value>
+      </managed-property>
+</managed-bean>
+
+	<navigation-rule>
+		<from-view-id>/mailtool/main_onepage.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>results</from-outcome>
+			<to-view-id>/mailtool/results.jsp</to-view-id>
+      	<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>cancel</from-outcome>
+			<to-view-id>/mailtool/main_onepage.jsp</to-view-id>
+      	<redirect/>
+		</navigation-case>		
+		<navigation-case>
+			<from-outcome>configure</from-outcome>
+			<to-view-id>/mailtool/config_refactor.jsp</to-view-id>
+      	<redirect/>
+		</navigation-case>	
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/mailtool/results.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>main_onepage</from-outcome>
+			<to-view-id>/mailtool/main_onepage.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/mailtool/config_refactor.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>compose</from-outcome>
+			<to-view-id>/mailtool/main_onepage.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>			
+	</navigation-rule>	
+
+	<component>
+		<component-type>MailtoolSelector</component-type>
+		<component-class>org.sakaiproject.tool.mailtool.SelectorComponent</component-class>
+	</component>
+
+</faces-config>

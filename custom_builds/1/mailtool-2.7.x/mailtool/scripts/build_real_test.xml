@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+/site/Small101
+
+-->
+<sakaiscript>	
+
+	<addNewUser userid="rtest01" firstname="Chem" lastname="Help1" email="chemhelp@northwestern.edu" type="" password="password" />
+	<addNewUser userid="rtest02" firstname="Chem" lastname="Help2" email="chemhelp@northwestern.edu" type="" password="password" />
+	<addNewUser userid="rtest03" firstname="Steven" lastname="Githens1" email="s-githens@northwestern.edu" type="" password="password" />
+	<addNewUser userid="rtest04" firstname="Steven" lastname="Githens2" email="s-githens@northwestern.edu" type="" password="password" />
+	<addNewUser userid="rtest05" firstname="Steve" lastname="Yahoo1" email="sgithens@yahoo.com" type="" password="password" />
+	<addNewUser userid="rtest06" firstname="Steve" lastname="Yahoo2" email="sgithens@yahoo.com" type="" password="password" />
+	
+	<addNewUser userid="rtest07" firstname="No" lastname="Address1" email="" type="" password="password" />
+	<addNewUser userid="rtest08" firstname="No" lastname="Address2" email="" type="" password="password" />
+	<addNewUser userid="rtest09" firstname="No" lastname="Address3" email="" type="" password="password" />
+	
+
+	<addNewSite siteid="livetest"
+					title="Other Things"
+					description=""
+					shortdesc="Live Test"
+					iconurl=""
+					infourl=""
+					joinable="true"
+					joinerrole="student"
+					published="true"
+					publicview="true"
+					skin=""
+					type="class" /> 
+					
+	<addNewPageToSite siteid="livetest" pagetitle="Welcome" pagelayout="0"/> 				
+	<addNewToolToPage siteid="livetest" pagetitle="Welcome"
+							tooltitle="welcome"  toolid="sakai.announcements" 
+							layouthints="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Welcome"
+	tooltitle="welcome"  propname="channel"	 propvalue="/announcement/channel/!site/motd" />
+	
+	<!-- Mail By Role -->				 
+	<addNewPageToSite siteid="livetest" pagetitle="Email By Role" pagelayout="0" />
+	<addNewToolToPage siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="recipview" propvalue="role" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1realmid" propvalue="/site/livetest" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2realmid" propvalue="/site/livetest" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2id" propvalue="student" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3realmid" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3id" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3singular" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3plural" propvalue="" />
+	
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="displayinvalidemailaddrs" propvalue="yes" />
+	
+<!--	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Role" tooltitle="Email By Role" propname="realm" propvalue="/site/livetest" /> -->
+	
+	<!-- Mail By Individial -->
+	<addNewPageToSite siteid="livetest" pagetitle="Email By User" pagelayout="0" />
+	<addNewToolToPage siteid="livetest" pagetitle="Email By User" tooltitle="Email By User"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="recipview" propvalue="user" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role2id" propvalue="student" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role2singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role2plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role3id" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role3singular" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role3plural" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role1realmid" propvalue="/site/livetest" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role2realmid" propvalue="/site/livetest" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="role3realmid" propvalue="" />
+
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By User" tooltitle="Email By User" propname="displayinvalidemailaddrs" propvalue="yes" />
+
+	<!-- Mail By Tree -->
+	<addNewPageToSite siteid="livetest" pagetitle="Email By Tree" pagelayout="0" />
+	<addNewToolToPage siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="recipview" propvalue="tree" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2id" propvalue="student" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3id" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3singular" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3plural" propvalue="" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1realmid" propvalue="/site/livetest" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2realmid" propvalue="/site/livetest" />
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3realmid" propvalue="" />
+
+	<addConfigPropertyToTool siteid="livetest" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="displayinvalidemailaddrs" propvalue="yes" />
+		
+									 
+	<addNewRoleToRealm realmid="/site/livetest" roleid="instructor" description="Instructor"/>
+	<addNewRoleToRealm realmid="/site/livetest" roleid="student" description="Student" />
+	
+	<addLockToRole realmid="/site/livetest" roleid="instructor" lock="site.visit" />
+	<addLockToRole realmid="/site/livetest" roleid="student" lock="site.visit" />
+
+
+	<addUserToRealmWithRole userid="rtest01" realmid="/site/livetest" roleid="instructor" />
+	<addUserToRealmWithRole userid="rtest07" realmid="/site/livetest" roleid="instructor" />
+	
+	<addUserToRealmWithRole userid="rtest02" realmid="/site/livetest" roleid="student" />
+	<addUserToRealmWithRole userid="rtest03" realmid="/site/livetest" roleid="student" />
+	<addUserToRealmWithRole userid="rtest04" realmid="/site/livetest" roleid="student" />
+	<addUserToRealmWithRole userid="rtest05" realmid="/site/livetest" roleid="student" />
+	<addUserToRealmWithRole userid="rtest06" realmid="/site/livetest" roleid="student" />
+	<addUserToRealmWithRole userid="rtest08" realmid="/site/livetest" roleid="student" />
+	<addUserToRealmWithRole userid="rtest09" realmid="/site/livetest" roleid="student" />
+	
+</sakaiscript>

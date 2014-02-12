@@ -1,0 +1,6 @@
+SAK 19964 Gradebook drop highest and/or lowest or keep highest score for a student
+SAK 20370 Show total points in All Grades view for instructor
+SAK-19731 Add ability to hide columns in All Grades View for instructors
+SAK-21008 Points GB with Categories: Calculations are off
+Custom grade scale
+SAK-21225 Extra Credit in Gradebook

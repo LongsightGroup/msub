@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="mailtoolContent1" class="org.sakaiproject.component.app.help.model.ResourceBean">
+      <property name="docId"><value>mailtool_overview_zh_TW</value></property>
+      <property name="name"><value>郵件工具：概述</value></property>
+      <property name="location"><value>/sakai_mailtool/overview_zh_TW.htm</value></property>
+      <property name="defaultForTool"><value>sakai.mailtool</value></property>
+  </bean>
+  <bean id="mailtoolContent2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId"><value>mailtool_content2_zh_TW</value></property>
+    <property name="name"><value>撰寫</value></property>
+    <property name="location"><value>/sakai_mailtool/compose_zh_TW.htm</value></property>
+      <property name="defaultForTool"><value>sakai.mailtool</value></property>
+  </bean>
+  <bean id="mailtoolContent3" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId"><value>mailtool_content3_zh_TW</value></property>
+    <property name="name"><value>選項</value></property>
+    <property name="location"><value>/sakai_mailtool/options_zh_TW.htm</value></property>
+    <property name="defaultForTool"><value>sakai.mailtool</value></property>
+  </bean>
+  <bean id="org.sakaiproject.api.app.help.TableOfContents" 
+        class="org.sakaiproject.component.app.help.model.TableOfContentsBean">
+      <property name="name"><value>root</value></property>
+      <property name="categories">
+         <list>
+            <bean id="mailtoolCategory" class="org.sakaiproject.component.app.help.model.CategoryBean">
+               <property name="name"><value>郵件工具</value></property>
+               <property name="resources">
+                  <list>
+                    <ref bean="mailtoolContent1"/>
+					<ref bean="mailtoolContent2"/>
+					<ref bean="mailtoolContent3"/>
+                  </list>
+               </property>
+            </bean>
+           </list>
+         </property>
+       </bean>
+</beans>

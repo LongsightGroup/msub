@@ -1,0 +1,2 @@
+LS-47 custom roster branch for photo integration
+SAK-22558 - User's role in roster can be null causing NPE

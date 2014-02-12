@@ -1,0 +1,2 @@
+PRFL-831 Make filesystem storage of profile images more flexible
+PRFL-834 Make filesystem storage of profile images (even) more flexible

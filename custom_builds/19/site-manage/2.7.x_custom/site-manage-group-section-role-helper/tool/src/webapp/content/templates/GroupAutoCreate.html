@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:rsf="http://ponder.org.uk" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Site Page Order</title>
+        <link href="/library/skin/tool_base.css" rsf:id="scr=portal-matter" type="text/css" rel="stylesheet" media="all"/>
+        <link href="/library/skin/default/tool.css" rsf:id="scr=portal-matter" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../css/GroupList.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" rsf:id="resize"/>
+        <script type="text/javascript" language="JavaScript" src="/library/js/headscripts.js">
+        </script>
+        <script type="text/javascript" src="../js/selectbox.js" rsf:id="scr=rewrite-url">
+        </script>
+        <script type="text/javascript" src="../js/optionTransfer.js" rsf:id="scr=rewrite-url">
+        </script>
+        <script type="text/javascript" src="../js/util.js" rsf:id="scr=rewrite-url">
+        </script>
+        <script type="text/javascript" language="JavaScript" src="/sakai-site-manage-group-section-role-helper/content/js/jquery/jquery.js">
+        </script>
+    </head>
+    <body>
+        <div class="portletBody">
+            <div rsf:id="error-row:">
+                <div class="alertMessage" rsf:id="error">
+                    We Have Errors!
+                </div>
+            </div>
+            <form rsf:id="groups-form">
+                <h3 rsf:id="prompt"></h3>
+                <div rsf:id="roster_options:">
+                    <p rsf:id="instruction-roster" class="instruction">Select a course roster to create a separate group for that roster.</p>
+                    <table width="80%" border="0" cellspacing="0" cellpadding="0" class="listHier lines nolines centerLines" summary="placeholder summary">
+                        <thead>
+                            <tr>
+                                <th class="attach">
+                                    <input id="rosterSelectAllNone" type="checkbox" /><span rsf:id="roster-select-header" class="skip">Select</span>
+                                </th>
+                                <th rsf:id="roster-title-header">
+                                    Course Roster
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr rsf:id="roster-row:">
+                                <td class="attach">
+                                    <input class="rostercheckbox "rsf:id="roster-checkbox" type="checkbox" />
+                                </td>
+                                <td>
+                                    <label rsf:id="roster-title">
+                                        Provider Title
+                                    </label>
+                                    <label rsf:id="exist-group-roster">
+                                        A site with this roster already exist
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div rsf:id="role_options:">
+                <fieldset class="fieldsetVis">
+                	<fieldset class="fieldsetVis">
+                		<legend>
+                    		<span rsf:id="instruction-role" class="instruction">Select roles</span>
+                    	</legend>
+	                    <table width="80%" border="0" cellspacing="0" cellpadding="0" class="listHier lines nolines centerLines" summary="placeholder summary">
+	                        <thead>
+	                            <tr>
+	                                <th class="attach">
+	                                    <input id="roleSelectAllNone" type="checkbox" /><span rsf:id="role-select-header" class="skip">Select</span>
+	                                </th>
+	                                <th rsf:id="role-title-header">
+	                                    Role
+	                                </th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                            <tr rsf:id="role-row:">
+	                                <td class="attach">
+	                                    <input class="rolecheckbox "rsf:id="role-checkbox" type="checkbox"/>
+	                                </td>
+	                                <td>
+	                                    <label rsf:id="role-title">
+	                                        Role Title
+	                                    </label>
+	                                    <label rsf:id="exist-group-role">
+	                                        A group with this role already exist
+	                                    </label>
+	                                </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+                    </fieldset>
+                
+	                <fieldset class="fieldsetVis">
+	                	<legend><span rsf:id="randomGroupsLegend">Options</span></legend>
+	                	<span rsf:id="option-radios" />
+	                	<input rsf:id="roleOption" id="roleOption" type="radio" name="optionRadio" value="1"/><label for="roleOption" rsf:id="roleOptionLabel">Create a separate group for each role.</label><br/>
+	                	<input rsf:id="randomOption" id="randomOption" type="radio" name="optionRadio" value="2"/><label for="randomOption" rsf:id="randomOptionLabel">Randomly create groups by number of groups or number of users per group.</label><br/>                	     
+	                	                	
+	                	<div id="randomGroupCreateDiv" class="indnt2" style="display: none">
+	                		<span rsf:id="graded-radios" />
+		                	<input rsf:id="groupSplit" id="groupSplit" type="radio" name="groupSplitRadio" value="1"/><label rsf:id="splitByGroupsLabel" for="groupSplit">Split by number of groups</label><br/>
+		                	<span id="groupFields">
+			                	<span class="reqStar indnt2">*</span><label rsf:id="group-title-group">Group Title</label>:&nbsp;<input rsf:id="groupTitle-group" id="groupTitle-group" type="text"/><br/>
+		                		<span class="reqStar indnt2">*</span><label rsf:id="group-unit" id="group-unit">Number of groups</label>:&nbsp;<input rsf:id="numToSplit-group" id="numToSplit-group" type="text" size="3"/>
+		                		<br/>
+	                		</span>
+	                		
+		                	<input rsf:id="userSplit" id="userSplit" type="radio" name="groupSplitRadio" value="2"/><label rsf:id="splitByUsersLabel" for="userSplit">Split by number of users per group</label><br/>
+		                	<span style="display:none" id="userFields">     
+			                	<span class="reqStar indnt2">*</span><label rsf:id="group-title-user">Group Title</label>:&nbsp;<input rsf:id="groupTitle-user" id="groupTitle-user" type="text"/><br/>
+		                		<span class="reqStar indnt2">*</span><label rsf:id="user-unit">Number of users in a group</label>:&nbsp;<input rsf:id="numToSplit-user" id="numToSplit-user" type="text" size="3"/>
+	                		</span>     				                	           		
+	                	</div>
+	
+						
+	
+	                </fieldset>
+                </fieldset>
+                </div>
+                <p class="act">
+                    <input accesskey ="s" rsf:id="save" class="active" value="Save" type="submit" id="save"/><input accesskey ="x" rsf:id="cancel" value="Cancel" type="submit"/>
+                </p>
+            </form>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#save').attr('disabled', 'disabled');
+				 $('tbody :checkbox').each(function(){
+				   if (this.checked) {
+				   	$(this).parents("tr").addClass('selectedSelected');
+				   }     
+				 	});
+                $('tbody :checkbox').click(function(){
+                    $('tr').removeClass('selectedSelected');
+                    var checkedCount = 0;
+                    $('tbody :checkbox').each(function(){
+                        if (this.checked) {
+                            checkedCount++
+                            $(this).parents("tr").addClass('selectedSelected');
+                            $('#save').attr('disabled', '')
+                        }
+                        else {
+                            $('#save').attr('disabled', 'disabled')
+                        }
+                        
+                    });
+                    if (checkedCount > 0) {
+                        $('#save').attr('disabled', '')
+                    }
+                    else {
+                        $('#save').attr('disabled', 'disabled')
+                    }
+                    if (checkedCount == $('tbody :checkbox').length) {
+                        $('thead :checkbox').attr('checked', 'checked')
+                    }
+                    else {
+                        $('thead :checkbox').attr('checked', '')
+                    }
+                });
+                $('thead th :checkbox').click(function(){
+                    if (this.checked) {
+                    	$(this).parent().parent().parent().parent().find('tbody tr td :checkbox').attr('checked', 'checked');
+                        $(this).parent().parent().parent().parent().find('tbody tr').addClass('selectedSelected');
+                        $('#save').attr('disabled', '')
+                        $('#save').removeClass('disabled')                        
+
+                    }
+                    else {
+                        $(this).parent().parent().parent().parent().find('tbody tr td :checkbox').attr('checked', '')
+                        $(this).parent().parent().parent().parent().find('tbody tr').removeClass('selectedSelected')
+                        $('#save').attr('disabled', 'disabled')
+                        $('#save').addClass('disabled')                        
+                    }
+                    
+                });
+                
+                $('#roleOption').click(function(){
+                	if (this.checked) {
+                		$("#randomGroupCreateDiv").fadeOut();
+                	}else{
+                		$("#randomGroupCreateDiv").fadeIn();
+                	}
+                	resetFrame();
+                });
+                
+                $('#randomOption').click(function(){
+                	if (this.checked) {
+                		$("#randomGroupCreateDiv").fadeIn();
+                	}else{
+                		$("#randomGroupCreateDiv").fadeOut();
+                	}
+                	resetFrame();
+                });
+                $('#groupSplit').click(function(){
+                	if(this.checked){
+                		$('#userFields').attr('style','display:none');
+                		$('#groupFields').attr('style','');
+                	}
+                });
+                $('#userSplit').click(function(){
+                	if(this.checked){
+                		$('#userFields').attr('style','');
+                		$('#groupFields').attr('style','display:none');
+                	}
+                });
+                
+            });
+        </script>
+    </body>
+</html>

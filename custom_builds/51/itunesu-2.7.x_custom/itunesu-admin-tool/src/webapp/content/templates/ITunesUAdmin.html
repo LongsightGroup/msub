@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:rsf="http://ponder.org.uk" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>ITunesU Admin tool</title>
+	<link href="/library/skin/tool_base.css" rsf:id="scr=portal-matter" type="text/css" rel="stylesheet" media="all"/>
+	<link href="/library/skin/default/tool.css" rsf:id="scr=portal-matter" type="text/css" rel="stylesheet" media="all"/>
+	<script type="text/javascript" rsf:id="resize"/>
+	<script type="text/javascript" language="JavaScript" src="/library/js/headscripts.js"></script>
+</head>
+<body>
+<div class="portletBody">
+	<div rsf:id="error-row:">
+		<div class="alertMessage" rsf:id="error">We Have Errors!</div>
+	</div>
+	<form rsf:id="lookup-form">
+		<h4 rsf:id="lookup_instruction" class="instruction"></h4>
+		<table>
+			<tr>
+				<td><span class="reqStarInline">*</span> <label
+					rsf:id="lookup_site_id_label">Title</label></td>
+				<td><input name="lookupSiteId" type="text" size="50"
+					rsf:id="lookup_site_id" /></td>
+			</tr>
+		</table>
+		<p class="act">
+			<input accesskey ="s" rsf:id="lookup" class="active" value="Lookup" type="submit"/>
+		</p>
+		<table>
+			<tr>
+				<td colspan="2"><span rsf:id="lookup_handle_label_1">Site id </span><span rsf:id="lookup_site_id_2"></span><span rsf:id="lookup_handle_label_2">ITunesU Handle</span><span rsf:id="lookup_handle"></span></td>
+			</tr>
+		</table>			
+	</form>
+	<hr />
+	<!-- form for delete iTunesU page -->
+	<form rsf:id="delete-form" >
+		<!-- delete site ids -->
+		<h4 class="instruction" rsf:id="deleteInstruction"></h4>
+		<label rsf:id="deleteSiteIdsLabel" for ="deleteSiteIds">
+           Site Ids
+        </label>
+        <br/>
+        <textarea rsf:id="deleteSiteIds" name="deleteSiteIds" cols="35" rows="4" id="deleteSiteIds"></textarea>
+		<h5 class="instruction textPanelFooter" rsf:id="msg=delete.multiple"></h5>
+		
+		<p class="act">
+			<input accesskey ="s" rsf:id="delete" class="active" value="Delete" type="submit"/>
+		</p>
+	</form>
+	<hr />
+	<!-- form to find the orphaned iTunesU handles: iTunesU page exists without corresponding Sakai site -->
+	<form rsf:id="orphanedPageForm" >
+		<h4 class="instruction" rsf:id="findOrphanedPageInstruction"></h4>
+		<p class="act">
+			<input accesskey ="s" rsf:id="lookupOrphanedPage" class="active" value="Lookup" type="submit"/>
+		</p>
+		<pre rsf:id="orphanedPageIds">Orphaned Sites
+		</pre>
+	</form>
+	<hr />
+	<!-- form to add feed group to a course site -->
+	<form rsf:id="addFeedGroupForm" >
+		<h4 class="instruction" rsf:id="addFeedGroupInstruction"></h4>
+		<table>
+			<tr>
+				<td><span class="reqStarInline">*</span> <label
+					rsf:id="addFeedGroup_siteId_label">Site Id</label></td>
+				<td><input name="addFeedGroup_siteId" type="text" size="50" rsf:id="addFeedGroup_siteId" /></td>
+			</tr>
+			<tr>
+				<td><span class="reqStarInline">*</span> <label
+					rsf:id="addFeedGroup_name_label">Name</label></td>
+				<td><input name="addFeedGroup_name" type="text" size="50" maxsize="99" rsf:id="addFeedGroup_name" /></td>
+			</tr>
+			<tr>
+				<td><span class="reqStarInline">*</span> <label
+					rsf:id="addFeedGroup_url_label">Feed URL</label></td>
+				<td><input name="addFeedGroup_url" type="text" size="100" rsf:id="addFeedGroup_url" /></td>
+			</tr>
+			<tr>
+				<td>
+				<label
+					rsf:id="addFeedGroup_ownerEmail_label">Name</label></td>
+				<td><input name="addFeedGroup_ownerEmail" type="text" size="50" rsf:id="addFeedGroup_ownerEmail" /></td>
+			</tr>
+		</table>
+		<p class="act">
+			<input accesskey ="s" rsf:id="addFeedGroup" class="active" value="Lookup" type="submit"/>
+		</p>
+	</form>
+	<hr />
+	<!-- Merge -->
+	<h4>Merge function is still under construction now. </h4>
+	<form rsf:id="merge-form">
+		<p rsf:id="merge_instruction" class="instruction">
+		</p>
+		<table>
+			<tr>
+				<td><span class="reqStarInline">*</span> <label
+					rsf:id="source_site_id_label">Title</label></td>
+				<td><input name="sourceSiteId" type="text" size="50"
+					rsf:id="source_site_id" /></td>
+			</tr>
+		 	<tr>
+				<td><span class="reqStarInline">*</span> <label
+					rsf:id="target_site_id_label">Title</label></td>
+				<td><input name="targetSiteId" type="text" size="50"
+					rsf:id="target_site_id" /></td>
+			</tr>
+		</table>
+		<p class="act">
+			<input accesskey ="s" rsf:id="merge" class="active" value="Merge" type="submit"/>
+		</p>			
+	</form>
+</div>
+</body>
+</html>

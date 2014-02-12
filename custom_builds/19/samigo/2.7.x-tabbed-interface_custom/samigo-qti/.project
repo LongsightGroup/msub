@@ -1,0 +1,17 @@
+<projectDescription>
+  <name>sakai-samigo-qti</name>
+  <comment/>
+  <projects>
+    <project>sakai-samigo-api</project>
+    <project>sakai-samigo-hibernate</project>
+    <project>sakai-samigo-services</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

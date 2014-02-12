@@ -1,0 +1,8 @@
+#customizations from branched branch
+MSGCNTR-523 Add ability for user to customize size of the WYSIWYG Editor (requires jsf custom SAK-20546 and prop msgcntr.editor.rows)
+MSGCNTR-527 Synoptic Job: Allow updating of synoptic counts even when unread counts are 0
+MSGCNTR-551 Null Pointer Exception for getTopicById in MessageForumsForumManagerImpl.java
+
+#additional client customizations:
+SAK-16568 Entity picker link points to original site when 'Import from Site' option is used
+MSGCNTR-607 Option to Import Start & End Dates for Forums

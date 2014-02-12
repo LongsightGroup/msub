@@ -1,0 +1,4 @@
+r86724 custom portal look and feel changes
+  https://source.sakaiproject.org/viewsvn?view=revision&revision=86724
+LS-16 link to custom faculty.html login screen
+r100324,r100325 modify the text to Are you Faculty or Staff?  Please follow this link to login.

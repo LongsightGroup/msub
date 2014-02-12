@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl.syllabus"
+		class="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl">
+		<property name="mappingResources">
+			<list>
+				<value>
+					org/sakaiproject/component/app/syllabus/SyllabusItemImpl.hbm.xml
+				</value>
+				<value>
+					org/sakaiproject/component/app/syllabus/SyllabusDataImpl.hbm.xml
+				</value>
+				<value>
+					org/sakaiproject/component/app/syllabus/SyllabusAttachment.hbm.xml
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="org.sakaiproject.api.app.syllabus.SyllabusManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager" />
+		</property>
+		<property name="target">
+			<bean
+				class="org.sakaiproject.component.app.syllabus.SyllabusManagerImpl"
+				singleton="true">
+				<property name="sessionFactory">
+					<ref
+						bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory" />
+				</property>
+				<property name="contentHostingService">
+					<ref bean="org.sakaiproject.content.api.ContentHostingService" />
+				</property>
+			</bean>
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="org.sakaiproject.api.app.syllabus.SyllabusService"
+		class="org.sakaiproject.component.app.syllabus.SyllabusServiceImpl"
+		singleton="true" init-method="init" destroy-method="destroy">
+<!-- 		<property name="logger">
+			<ref bean="org.sakaiproject.service.framework.log.Logger" />
+		</property>-->
+ 		<property name="syllabusManager">
+			<ref
+				bean="org.sakaiproject.api.app.syllabus.SyllabusManager" />
+		</property>
+ 		<property name="notificationService">
+<!-- 			<ref bean="org.sakaiproject.service.legacy.notification.NotificationService" />-->
+ 			<ref bean="org.sakaiproject.event.api.NotificationService" />
+		</property>
+		<property name="contentHostingService">
+			<ref bean="org.sakaiproject.content.api.ContentHostingService" />
+		</property>
+	</bean>
+
+	<bean id="FixPublicSyllabusAttachmentsJob"
+		  class="org.sakaiproject.component.app.syllabus.FixPublicSyllabusAttachmentsJob">
+ 		<property name="syllabusManager">
+			<ref bean="org.sakaiproject.api.app.syllabus.SyllabusManager" />
+		</property>
+		<!-- This is the userId the job will run under.  This user must have
+		the appropriate permissions to create new permissions/realms for any site in the system -->
+		<property name="userId" value="admin" />
+	</bean>
+
+	<bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.helloWorld"
+		class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
+		singleton="true" init-method="init">
+		
+		<property name="beanId">
+			<value>FixPublicSyllabusAttachmentsJob</value>
+		</property>
+      
+		<property name="jobName">
+			<value>Fix Public Syllabus Attachments Job</value>
+		</property>
+		
+      	<property name="schedulerManager">
+			<ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager" />
+		</property>
+   </bean>
+
+</beans>

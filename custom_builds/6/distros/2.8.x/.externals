@@ -1,0 +1,64 @@
+access https://source.sakaiproject.org/svn/access/branches/sakai-2.8.x
+alias https://source.sakaiproject.org/svn/alias/branches/sakai-2.8.x
+announcement https://source.sakaiproject.org/svn/announcement/branches/sakai-2.8.x
+archive https://source.sakaiproject.org/svn/archive/branches/sakai-2.8.x
+assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-2.8.x
+authz https://source.sakaiproject.org/svn/authz/branches/sakai-2.8.x
+calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-2.8.x
+chat https://source.sakaiproject.org/svn/chat/branches/sakai-2.8.x
+citations https://source.sakaiproject.org/svn/citations/branches/sakai-2.8.x
+config https://source.sakaiproject.org/svn/config/branches/sakai-2.8.x
+content https://source.sakaiproject.org/svn/content/branches/sakai-2.8.x
+courier https://source.sakaiproject.org/svn/courier/branches/sakai-2.8.x
+dav https://source.sakaiproject.org/svn/dav/branches/sakai-2.8.x
+#gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-2.8.x
+help https://source.sakaiproject.org/svn/help/branches/sakai-2.8.x
+linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-2.8.x
+login https://source.sakaiproject.org/svn/login/branches/sakai-2.8.x
+mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-2.8.x
+master https://source.sakaiproject.org/svn/master/branches/sakai-2.8.x
+memory https://source.sakaiproject.org/svn/memory/branches/sakai-2.8.x
+message https://source.sakaiproject.org/svn/message/branches/sakai-2.8.x
+metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-2.8.x
+pack https://source.sakaiproject.org/svn/pack/branches/pack-2.8.x/
+osp https://source.sakaiproject.org/svn/osp/branches/sakai-2.8.x
+podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-2.8.x
+postem https://source.sakaiproject.org/svn/postem/branches/sakai-2.8.x
+presence https://source.sakaiproject.org/svn/presence/branches/sakai-2.8.x
+reference https://source.sakaiproject.org/svn/reference/branches/sakai-2.8.x
+rights https://source.sakaiproject.org/svn/rights/branches/sakai-2.8.x
+roster https://source.sakaiproject.org/svn/roster/branches/sakai-2.8.x
+rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-2.8.x
+sections https://source.sakaiproject.org/svn/sections/branches/sakai-2.8.x
+site https://source.sakaiproject.org/svn/site/branches/sakai-2.8.x
+#site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-2.8.x
+syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-2.8.x
+taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-2.8.x
+textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-2.8.x
+tool https://source.sakaiproject.org/svn/tool/branches/sakai-2.8.x
+usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-2.8.x
+velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-2.8.x
+warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-2.8.x
+was https://source.sakaiproject.org/svn/was/branches/sakai-2.8.x
+web https://source.sakaiproject.org/svn/web/branches/sakai-2.8.x
+
+#customizations
+bigbluebutton https://source.sakaiproject.org/contrib/bigbluebutton/trunk
+blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+content-review https://source.sakaiproject.org/svn/content-review/branches/contentreview-2.8.x/
+contentreview-impl https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl
+edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.1.x_features-backport/
+evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
+gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.8.x_features-backport/
+lessons https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/lessonbuilder-1.4.x_feature-backport
+melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_features-backport
+msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
+portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.8.x_features-backport/
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.8.x-tabbed-interface
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.8.x_features-backport/
+turningtech ?
+user  https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/user/user-2.8.x_custom
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.8.x_jldap-auth-caching
+
+#Additional tars - need to be converted to 2.8:
+#lamp-login-links.tar.gz

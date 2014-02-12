@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_9" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <display-name>sakai-mailtool</display-name>
+    <description>Sakai Mail Tool</description>
+
+    <context-param>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>server</param-value>
+    </context-param>
+    
+<!--sakai2-->
+    <context-param>
+        <param-name>com.sun.faces.validateXml</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.sun.faces.verifyObjects</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/local.xml</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup> 2 </load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.jsf</url-pattern>
+    </servlet-mapping>
+
+<!-- MyFaces extension (aka tomahawk) 
+
+    <filter>
+        <filter-name>ExtensionsFilter</filter-name>
+        <filter-class>
+            org.apache.myfaces.component.html.util.ExtensionsFilter
+        </filter-class>
+        <init-param>
+            <param-name>uploadMaxFileSize</param-name>
+            <param-value>5m</param-value>
+        </init-param>
+        <init-param>
+            <param-name>uploadThresholdSize</param-name>
+            <param-value>100k</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ExtensionsFilter</filter-name>
+        <servlet-name>FacesServlet</servlet-name>
+    </filter-mapping>
+-->
+<!--sakai2: take out dispatch and components servlet.-->
+<!--sakai2: add new servlet and listeners-->
+
+
+    <filter>
+        <filter-name>sakai.request</filter-name>
+        <filter-class>org.sakaiproject.util.RequestFilter</filter-class>
+          <init-param>
+        	<param-name>upload.enabled</param-name>
+        	<param-value>true</param-value>
+        </init-param>
+<!-- This will override the setting "content.upload.max" in sakai.properties -->
+		<init-param>
+			<param-name>upload.max</param-name>
+			<param-value>5</param-value>
+		</init-param>
+		
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>sakai.request</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>org.sakaiproject.util.ContextLoaderListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.sakaiproject.util.ToolListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>sakai.mailtool</servlet-name>
+        <servlet-class>org.sakaiproject.jsf.util.JsfTool</servlet-class>
+        <init-param>
+            <param-name>default</param-name>
+            <param-value>main_onepage</param-value>
+        </init-param>
+        <init-param>
+            <param-name>path</param-name>
+            <param-value>/mailtool</param-value>
+        </init-param>
+         <init-param>
+            <param-name>default.last.view</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup> 1 </load-on-startup>
+    </servlet>
+
+  	<welcome-file-list>
+	    <welcome-file>index.html</welcome-file>
+  	</welcome-file-list>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>prelude.jspf</include-prelude>
+			<!-- <include-coda>/inc/codaEmbedded.jspf</include-coda> -->
+		</jsp-property-group>
+	</jsp-config>
+
+</web-app>

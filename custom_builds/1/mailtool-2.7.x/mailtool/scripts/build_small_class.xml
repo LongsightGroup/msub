@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+/site/Small101
+
+-->
+<sakaiscript>	
+
+	<addNewSite siteid="Small101"
+					title="Small Class"
+					description="I am a small class with a prof and some students"
+					shortdesc="Small Class 101"
+					iconurl=""
+					infourl=""
+					joinable="true"
+					joinerrole="student"
+					published="true"
+					publicview="true"
+					skin=""
+					type="class" /> 
+					
+	<addNewPageToSite siteid="Small101" pagetitle="Welcome" pagelayout="0"/> 				
+	<addNewToolToPage siteid="Small101" pagetitle="Welcome"
+							tooltitle="welcome"  toolid="sakai.announcements" 
+							layouthints="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Welcome"
+	tooltitle="welcome"  propname="channel"	 propvalue="/announcement/channel/!site/motd" />
+	
+	<!-- Mail By Role -->				 
+	<addNewPageToSite siteid="Small101" pagetitle="Email By Role" pagelayout="0" />
+	<addNewToolToPage siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role"
+		toolid="sakai.mailtool" layouthints="" />
+	
+	<!--	
+	<configuration name="role1realmid" value="" />
+	<configuration name="role1id" value="" />
+	<configuration name="role1singular" value="" />
+	<configuration name="role1plural" value="" />
+	-->	
+		
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="recipview" propvalue="role" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role2plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3realmid" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3id" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" title="Email By Role" tooltitle="Email By Role" propname="role3singular" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="role3plural" propvalue="" />
+<!--	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Role" tooltitle="Email By Role" propname="realm" propvalue="/site/Small101" /> -->
+	
+	<!-- Mail By Individial -->
+	<addNewPageToSite siteid="Small101" pagetitle="Email By User" pagelayout="0" />
+	<addNewToolToPage siteid="Small101" pagetitle="Email By User" tooltitle="Email By User"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="recipview" propvalue="user" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role2id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role2singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role2plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role3id" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role3singular" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role3plural" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role1realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role2realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By User" tooltitle="Email By User" propname="role3realmid" propvalue="" />
+
+	<!-- Mail By Tree -->
+	<addNewPageToSite siteid="Small101" pagetitle="Email By Tree" pagelayout="0" />
+	<addNewToolToPage siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="recipview" propvalue="tree" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3id" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3singular" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3plural" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role1realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role2realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Tree" tooltitle="Email By Tree" propname="role3realmid" propvalue="" />
+
+	<!-- Mail Side By Side -->
+	<addNewPageToSite siteid="Small101" pagetitle="Side By Side" pagelayout="0" />
+	<addNewToolToPage siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="recipview" propvalue="sidebyside" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role2id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role2singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role2plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role3id" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role3singular" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role3plural" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role1realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role2realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Side By Side" tooltitle="Side By Side" propname="role3realmid" propvalue="" />
+
+	<!-- Mail By Foothill -->
+	<addNewPageToSite siteid="Small101" pagetitle="Email By Foothill" pagelayout="0" />
+	<addNewToolToPage siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill"
+		toolid="sakai.mailtool" layouthints="" />
+		
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="subjectprefix" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="recipview" propvalue="foothill" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role1id" propvalue="instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role1singular" propvalue="Instructor" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role1plural" propvalue="Instructors" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role2id" propvalue="student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role2singular" propvalue="Student" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role2plural" propvalue="Students" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role3id" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role3singular" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role3plural" propvalue="" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role1realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role2realmid" propvalue="/site/Small101" />
+	<addConfigPropertyToTool siteid="Small101" pagetitle="Email By Foothill" tooltitle="Email By Foothill" propname="role3realmid" propvalue="" />
+
+									 
+	<addNewRoleToRealm realmid="/site/Small101" roleid="instructor" description="Instructor"/>
+	<addNewRoleToRealm realmid="/site/Small101" roleid="student" description="Student" />
+	
+	<addLockToRole realmid="/site/Small101" roleid="instructor" lock="site.visit" />
+	<addLockToRole realmid="/site/Small101" roleid="student" lock="site.visit" />
+
+	<addUserToRealmWithRole userid="mpo005" realmid="/site/Small101" roleid="instructor" />
+	
+	<addUserToRealmWithRole userid="agr001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="jkl001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="tbl001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="asu001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="ggi001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="amo001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="rat001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="jre001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="ial001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="mar001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="bcl001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="mss001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="mma002" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="lki001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="hre001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="jbo001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="mca001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="pba001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="cth001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="dmi001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="cfe001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="jle001" realmid="/site/Small101" roleid="student" />
+	<addUserToRealmWithRole userid="fro001" realmid="/site/Small101" roleid="student" />
+	
+</sakaiscript>

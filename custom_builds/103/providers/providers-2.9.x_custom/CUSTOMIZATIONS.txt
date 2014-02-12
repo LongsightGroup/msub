@@ -1,0 +1,6 @@
+CMCC-10 allow use of student number in JLDAP provider
+  -- Reverted ability to search on user id because no ability to reset user's eid without modifying kernel
+Two trunk commits SAK-23689, SAK-23719
+  * svn merge -c125712,125941 https://source.sakaiproject.org/svn/providers/trunk
+NPE issue found on launch day
+  * SAK-23362 lowercase the eid in getUsers method (r121256)

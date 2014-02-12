@@ -1,0 +1,1 @@
+SAK-16568 Entity picker link points to original site when 'Import from Site' option is used

@@ -1,0 +1,9 @@
+Branch Customizations:
+----
+SAM-948 'Minimum value' option for questions
+SEMS-46 Grammatical Error in samigo
+
+Local Customizations:
+----
+diff1.txt (remove timer warning and db check)
+

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>providers-base</artifactId>
+    <groupId>org.sakaiproject</groupId>
+    <version>2.7-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <name>sakai-provider-pack</name>
+  <groupId>org.sakaiproject</groupId>
+  <artifactId>sakai-provider-pack</artifactId>
+  <organization>
+    <name>University of Michigan</name>
+    <url>http://sakaiproject.org/</url>
+  </organization>
+  <inceptionYear>2003</inceptionYear>
+  <packaging>sakai-component</packaging>
+  <properties>
+    <deploy.target>components</deploy.target>
+  </properties>
+  <dependencies>
+<!-- Needed for the custom iMIS provider
+		-->
+    <dependency>
+      <groupId>org.sakaiproject</groupId>
+      <artifactId>sakai-imis-provider</artifactId>
+      <version>2.7-SNAPSHOT</version>
+    </dependency>
+<!-- -->
+<!-- Needed for the JLDAP Provider
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-jldap-provider</artifactId>
+			
+		</dependency>
+
+		<dependency>
+			<groupId>openldap</groupId>
+			<artifactId>ldap</artifactId>
+ 			<version>2005.03.29</version>
+		</dependency>
+	-->
+<!-- Needed for the Kerberos Provider
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-kerberos-provider</artifactId>
+			
+		</dependency>
+	 	-->
+<!-- Needed for the IMS Enterprise Provider
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-imsent-provider</artifactId>
+			
+		</dependency>
+	 	-->
+<!--
+			Needed for the (new as of Sakai 2.3) CM-based
+			AuthzGroupProvider and legacy CourseManagementProvider
+		-->
+    <dependency>
+      <groupId>org.sakaiproject</groupId>
+      <artifactId>sakai-coursemanagement-authz-provider-impl</artifactId>
+    </dependency>
+<!-- Needed for the Federated provider
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-federating-provider</artifactId>
+			
+		</dependency>
+		-->
+<!-- Needed for the All Hands Provider
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-allhands-provider</artifactId>
+			
+		</dependency>
+	 	-->
+  </dependencies>
+  <build>
+    <resources/>
+  </build>
+</project>

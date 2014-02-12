@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+  <bean id="ITunesUAdminProducer"
+      class="org.sakaiproject.tool.itunesuadmin.ITunesUAdminProducer">
+    <property name="handler" ref="ITunesUAdminHandler" />
+    <property name="messageLocator" ref="messageLocator"/>
+    <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
+    <property name="frameAdjustingProducer" ref="frameAdjustingProducer"/>
+    <property name="targettedMessageList" ref="targettedMessageList" />
+  </bean>
+  
+  <bean id="ITunesUAdminHandler" init-method="init"
+      class="org.sakaiproject.tool.itunesuadmin.ITunesUAdminHandler">
+    <property name="siteService" ref="org.sakaiproject.site.api.SiteService" />
+    <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager" />
+    <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager" />
+    <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
+    <property name="authzGroupService" ref="org.sakaiproject.authz.api.AuthzGroupService" />
+    <property name="itunesuService" ref="org.sakaiproject.tool.itunesu.api.ITunesUService" />
+    <property name="messages" ref="targettedMessageList" />
+  </bean>
+</beans>

@@ -1,0 +1,2 @@
+LS-16: return to custom url on unsuccessful login
+LS-16 (ARY-382063) Add instructions to xlogin.vm

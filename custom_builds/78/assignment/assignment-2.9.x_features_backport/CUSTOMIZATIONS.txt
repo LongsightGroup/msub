@@ -1,0 +1,3 @@
+SAK-23904 - Update assignment to add group filter and search result to additional pages
+MSF-500726 - Feature for hiding due date and automatically increasing accept until
+SAK-25435 Methods assignmentsForContextAndUser and allowAddAnySubmissionUsers are not thread-safe 

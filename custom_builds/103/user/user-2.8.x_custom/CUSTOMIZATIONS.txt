@@ -1,0 +1,4 @@
+LS-40 - Permissions (is Super User) change removal
+LS-63 - Allow coordinators to update user accounts 
+LS-142 - Prevent non super users from changing super user passwords
+

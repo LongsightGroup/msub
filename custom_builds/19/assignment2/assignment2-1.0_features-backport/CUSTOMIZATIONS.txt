@@ -1,0 +1,3 @@
+ASNN-746 Sync TurnItIn Sakai.Property Options with Assignments1
+ASNN-752 Import should continue if assignment save throws Content Review exception
+ASNN-761 Resubmit Doesn't respect an assignments due or close date if no extension is set

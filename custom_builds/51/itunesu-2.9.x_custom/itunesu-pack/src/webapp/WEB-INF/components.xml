@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+  "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+        <bean id="org.sakaiproject.tool.itunesu.api.ITunesUService"
+        class="org.sakaiproject.tool.itunesu.impl.ITunesUServiceImpl" 
+        init-method="init" destroy-method="destroy">
+            <property name="sqlService">
+            	<ref
+            		bean="org.sakaiproject.db.api.SqlService" />
+            </property>
+            <property name="saveHandleInTool"><value>true</value></property>
+            <property name="matchIdentifier"><value>true</value></property>
+            <property name="customItunesPermissionsPerSite"><value>true</value></property>
+        	<property name="itunesHandleProducer">
+         		<ref
+        			bean="org.sakaiproject.tool.itunesu.api.ITunesHandleProducer" />
+        	</property>
+        </bean>
+
+ <!--  Expose one of the following beans:
+ 		SimpleITunesHandleProducerImpl  - pulls a single iTunes U Section handle from sakai.properties
+ 		MappingITunesHandleProducerImpl - allows multiple iTunes U Sections to be used
+ 		
+ 		<bean
+        	id="org.sakaiproject.tool.itunesu.api.ITunesHandleProducer"
+        	class="org.sakaiproject.tool.itunesu.impl.MappingITunesHandleProducerImpl"
+        	init-method="init" destroy-method="destroy">
+        </bean> -->
+        
+         <bean
+        	id="org.sakaiproject.tool.itunesu.api.ITunesHandleProducer"
+        	class="org.sakaiproject.tool.itunesu.impl.SimpleITunesHandleProducerImpl">
+        </bean>
+
+</beans>
+
+
+
+

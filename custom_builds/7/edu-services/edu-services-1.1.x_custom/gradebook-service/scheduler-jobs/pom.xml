@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <name>Gradebook Quartz Scheduler Jobs</name>
+
+	<parent>
+			<artifactId>edu-services</artifactId>
+			<groupId>org.sakaiproject.edu-services</groupId>
+			<version>1.1.x-LONGSIGHT</version>
+	</parent>
+
+	<groupId>org.sakaiproject.edu-services.gradebook</groupId>
+	<artifactId>gradebook-scheduler-jobs</artifactId>
+
+  <packaging>jar</packaging>
+    <properties>
+      <deploy.target>shared</deploy.target>
+    </properties>
+
+  <dependencies>
+			<dependency>
+					<groupId>org.sakaiproject.scheduler</groupId>
+					<artifactId>scheduler-api</artifactId>
+			</dependency>
+			<dependency>
+					<groupId>org.sakaiproject.scheduler</groupId>
+					<artifactId>scheduler-component-shared</artifactId>
+					<!--
+					<version>${sakai.scheduler.version}</version>
+					-->
+			</dependency>
+			<dependency>
+					<groupId>org.sakaiproject.kernel</groupId>
+					<artifactId>sakai-component-manager</artifactId>
+			</dependency>
+			<dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opensymphony.quartz</groupId>
+			<!--
+      <groupId>quartz</groupId>
+			-->
+      <artifactId>quartz</artifactId>
+			<version>${sakai.quartz.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.edu-services.gradebook</groupId>
+      <artifactId>gradebook-service-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.edu-services.gradebook</groupId>
+      <artifactId>gradebook-service-hibernate</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- 
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-api</artifactId>
+    </dependency>
+    -->
+  </dependencies>
+</project>
+

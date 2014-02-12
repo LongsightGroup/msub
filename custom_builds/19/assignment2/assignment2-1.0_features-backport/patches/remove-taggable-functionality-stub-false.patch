@@ -1,0 +1,145 @@
+Index: impl/src/java/org/sakaiproject/assignment2/taggable/impl/AssignmentActivityProducerImpl.java
+===================================================================
+--- impl/src/java/org/sakaiproject/assignment2/taggable/impl/AssignmentActivityProducerImpl.java	(revision 74816)
++++ impl/src/java/org/sakaiproject/assignment2/taggable/impl/AssignmentActivityProducerImpl.java	(working copy)
+@@ -84,6 +84,16 @@
+         Assignment2 assignment = (Assignment2) activity.getObject();
+         return assignmentPermissionLogic.isUserAllowedToManageSubmissionsForAssignment(null, assignment);
+     }
++    
++    // Sakai 2.7.x hack
++    public boolean allowGetItems(TaggableActivity one, TaggingProvider two, boolean three) {
++    	return false;
++    }
++    
++    // Sakai 2.7.x hack
++    //public boolean allowGetItems(String one, String[] two, String three, String four) {
++    //	return false;
++    //}
+ 
+     public boolean allowRemoveTags(TaggableActivity activity) {
+         Assignment2 assignment = (Assignment2) activity.getObject();
+@@ -150,6 +160,10 @@
+                 new AssignmentActivityImpl(
+                         assignmentSubmission.getAssignment(), this));
+     }
++    
++    public TaggableItem getItem(String one, TaggingProvider two, boolean three) {
++    	return null;
++    }
+ 
+     public String getName() {
+         return assignmentBundleLogic.getString("service_name");
+@@ -214,6 +228,11 @@
+         Assignment2 assignment = (Assignment2) activity.getObject();
+         return assignmentPermissionLogic.isUserAllowedToManageSubmissionsForAssignment(null, assignment);
+     }
++    
++    // 2.7.x build hack
++    public boolean allowGetItems(String one, String[] two, String three, String four) {
++    	return false;
++    }
+ 
+     public TaggableItem getItem(String itemRef, TaggingProvider provider, boolean getMyItemsOnly, String taggedItem)
+     {
+@@ -259,7 +278,17 @@
+     {
+        return getItems(activity, provider, getMyItemsOnly, taggedItem, true);
+     }
++    
++    // Sakai 2.7.x hack
++    public List<TaggableItem> getItems(TaggableActivity one, String two, TaggingProvider four, boolean five) {
++    	return null;
++    }
+ 
++    // Sakai 2.7.x hack
++    public List<TaggableItem> getItems(TaggableActivity one, TaggingProvider two, boolean three) {
++    	return null;
++    }
++    
+     private List<TaggableItem> getItems(TaggableActivity activity, TaggingProvider provider,
+             boolean getMyItemsOnly, String taggedItem, boolean checkPerms)
+     {
+@@ -273,7 +302,7 @@
+          */
+         boolean allowed = false;
+         if (checkPerms) {
+-           allowed = provider.allowGetItems(activity.getReference(), new String[]{}, externalLogic.getCurrentUserId(), taggedItem);
++// Sakai 2.7.x hack           allowed = provider.allowGetItems(activity.getReference(), new String[]{}, externalLogic.getCurrentUserId(), taggedItem);
+         }
+         else {
+            allowed = true;
+@@ -307,7 +336,7 @@
+         
+         boolean allowed = false;
+         if (checkPerms) {
+-           allowed =provider.allowGetItems(activity.getReference(), new String[]{}, externalLogic.getCurrentUserId(), taggedItem);
++// SWG 2.7.x compile           allowed =provider.allowGetItems(activity.getReference(), new String[]{}, externalLogic.getCurrentUserId(), taggedItem);
+         }
+         else {
+            allowed = true;
+@@ -345,6 +374,18 @@
+     {
+     	return hasSubmissions(activity);
+     }
++    
++    // Sakai 2.7.x hack
++    public boolean hasSubmissions(TaggableActivity one, String two, TaggingProvider three, boolean four) {
++    	return false;
++    }
++    
++    // Sakai 2.7.x hack
++    public boolean hasSubmissions(TaggableActivity one, TaggingProvider two, boolean three) {
++    	return false;
++    }
++    
++    
+ 
+     public boolean hasSubmissions(TaggableActivity activity, String userId,
+     		TaggingProvider provider, boolean getMyItemsOnly, String taggedItem)
+Index: impl/src/java/org/sakaiproject/assignment2/logic/impl/ExternalTaggableLogicImpl.java
+===================================================================
+--- impl/src/java/org/sakaiproject/assignment2/logic/impl/ExternalTaggableLogicImpl.java	(revision 74816)
++++ impl/src/java/org/sakaiproject/assignment2/logic/impl/ExternalTaggableLogicImpl.java	(working copy)
+@@ -77,7 +77,7 @@
+ 		Map<String, List<TaggingHelperInfo>> returnMap = new HashMap<String, List<TaggingHelperInfo>>();
+ 		for (TaggingProvider provider : getProviders()) {
+ 			Map<String, TaggingHelperInfo> providerMap = new HashMap<String, TaggingHelperInfo>();
+-			providerMap = provider.getActivityHelperInfo(siteId, activityRefs);
++// SWG 2.7.x hack			providerMap = provider.getActivityHelperInfo(siteId, activityRefs);
+ 			for (String key : providerMap.keySet()) {
+ 				returnMap.get(key).add(providerMap.get(key));
+ 			}			
+@@ -99,7 +99,7 @@
+ 		
+ 		List<TaggingProvider> providers = getProviders();
+ 		for (TaggingProvider provider : providers) {
+-			canGetActivity = provider.allowGetActivity(activityRef, currentUser, taggedItem);
++// SWG 2.7.x hack			canGetActivity = provider.allowGetActivity(activityRef, currentUser, taggedItem);
+ 			if (canGetActivity) 
+ 				break;
+ 		}
+@@ -111,7 +111,7 @@
+ 		boolean canGetItem = false;
+ 		List<TaggingProvider> providers = getProviders();
+ 		for (TaggingProvider provider : providers) {
+-			canGetItem = provider.allowGetItem(activityRef, itemRef, currentUser, taggedItem);
++// SWG 2.7.x			canGetItem = provider.allowGetItem(activityRef, itemRef, currentUser, taggedItem);
+ 			if (canGetItem) 
+ 				break;
+ 		}
+Index: tool/src/java/org/sakaiproject/assignment2/tool/producers/renderers/AsnnTagsRenderer.java
+===================================================================
+--- tool/src/java/org/sakaiproject/assignment2/tool/producers/renderers/AsnnTagsRenderer.java	(revision 74816)
++++ tool/src/java/org/sakaiproject/assignment2/tool/producers/renderers/AsnnTagsRenderer.java	(working copy)
+@@ -103,8 +103,8 @@
+                         UIOutput.make(providerContainer, "tag_header");
+                         UIOutput.make(providerContainer, "provider-heading", provider.getName());
+                         UIOutput.make(providerContainer, "provider-instruction", provider.getSimpleTextLabel());
+-                        UIOutput description = UIOutput.make(providerContainer, "provider-description", provider.getHelpLabel());
+-                        description.decorate(new UIFreeAttributeDecorator("title", provider.getHelpDescription()));
++                        UIOutput description = UIOutput.make(providerContainer, "provider-description", ""); // Hack 2.7.x compile provider.getHelpLabel());
++                        description.decorate(new UIFreeAttributeDecorator("title", "")); // Hack 2.7.x compile provider.getHelpDescription()));
+                     }
+                     
+                     

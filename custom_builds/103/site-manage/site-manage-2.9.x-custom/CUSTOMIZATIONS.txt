@@ -1,0 +1,2 @@
+FIG-157151 - Add myworkspace to siteinfo registration
+

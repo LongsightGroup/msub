@@ -1,0 +1,5 @@
+SAM-1696 l2 cache for item grading data
+SAM-1701 could only get some of these changes due to conflicts. Only change lazy loading on attachment table
+SAM-2107 speed up app delivery
+SAM-2128 Modify the auto submit job to handle errors and continue
+

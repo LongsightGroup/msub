@@ -1,0 +1,8 @@
+Custom fckeditor templates
+Blockquote button added
+changing default handling of paste from word
+"remove style defs" checked by default
+change "cleanwordskeepsstructure" to true
+SpellerPages on by default
+JForum toolset for fckeditor
+add the skin

@@ -1,0 +1,14 @@
+SAK 19964 Gradebook drop highest and/or lowest or keep highest score for a student
+SAK 20370 Show total points in All Grades view for instructor
+SAK-20118 Generate a pdf from the gradebook for printing
+SAK-19731 Add ability to hide columns in All Grades View for instructors
+SAK-18588 Allow students to see total number of points in gradebook
+LS-14 iRubric integration
+SAK-21037 GB Export Doesn't indicate Dropped Scores
+SAK-21008 Points GB with Categories: Calculations are off
+LS-51 Gradebook w/IRubric will break without sakai properties even if you dont want to use it
+SAK-21225 Extra Credit in Gradebook
+SAK-19461 Gradebook: a long name effects row alignment
+SAK-22164 Override grades should be clearer in All Grades view
+LS-14 & LS-51 removed in preparation for new iRubric patch
+LS-121 - Set dates for grades to release on set date

@@ -1,0 +1,21 @@
+<projectDescription>
+  <name>sakai-samigo-hibernate</name>
+  <comment/>
+  <projects>
+    <project>sakai-gradebook-service-api</project>
+    <project>sakai-jsf-app</project>
+    <project>sakai-jsf-tool</project>
+    <project>sakai-samigo-api</project>
+    <project>sakai-sections-api</project>
+    <project>sakai-sections-impl</project>
+    <project>sakai-sections-impl-standalone</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

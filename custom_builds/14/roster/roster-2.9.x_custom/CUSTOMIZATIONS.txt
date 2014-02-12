@@ -1,0 +1,2 @@
+PEPDEV-19 custom roster with photo service
+  * Merging r96832 through r128443 from https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/roster/roster-2.8.x_custom

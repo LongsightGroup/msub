@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sakaiscript>
+	
+	<!-- Instructors -->
+	<addNewUser userid="mpo005" firstname="Michael" lastname="Pollan" email="" type="" password="password" />
+	<addNewUser userid="bmc005" firstname="Bill" lastname="McKibben" email="" type="" password="password" />
+	<addNewUser userid="eho005" firstname="Edward" lastname="Hoagland" email="" type="" password="password" />
+	<addNewUser userid="awa005" firstname="Alice" lastname="Waters" email="" type="" password="password" />
+	<addNewUser userid="wcr005" firstname="William" lastname="Cronon" email="" type="" password="password" />
+	<addNewUser userid="dhi005" firstname="Daniel" lastname="Hinkley" email="" type="" password="password" />
+		
+	<!-- Students And TA's -->
+	<addNewUser userid="agr001" firstname="Alan" lastname="Greenspan" email="" type="" password="password" />
+	<addNewUser userid="jkl001" firstname="Joe" lastname="Klein" email="" type="" password="password" />
+	<addNewUser userid="tbl001" firstname="Tony" lastname="Blair" email="" type="" password="password" />
+	<addNewUser userid="asu001" firstname="Andrew" lastname="Sullivan" email="" type="" password="password" />
+	<addNewUser userid="ggi001" firstname="Gianni" lastname="Giansanti" email="" type="" password="password" />
+	<addNewUser userid="amo001" firstname="Ann" lastname="Moore" email="" type="" password="password" />
+	<addNewUser userid="rat001" firstname="Richard" lastname="Atkinson" email="" type="" password="password" />
+	<addNewUser userid="jre001" firstname="John" lastname="Redpath" email="" type="" password="password" />
+	<addNewUser userid="ial001" firstname="Ibrahim" lastname="Al-Jaafari" email="" type="" password="password" />
+	<addNewUser userid="mar001" firstname="Mel" lastname="Martinez" email="" type="" password="password" />
+	<addNewUser userid="bcl001" firstname="Bill" lastname="Clinton" email="" type="" password="password" />
+	<addNewUser userid="mss001" firstname="Maria" lastname="Shriver" email="" type="" password="password" />
+	<addNewUser userid="mma002" firstname="Mary" lastname="Mapes" email="" type="" password="password" />
+	<addNewUser userid="lki001" firstname="Larry" lastname="King" email="" type="" password="password" />
+	<addNewUser userid="hre001" firstname="Harry" lastname="Reid" email="" type="" password="password" />
+	<addNewUser userid="jbo001" firstname="John" lastname="Bolton" email="" type="" password="password" />
+	<addNewUser userid="mca001" firstname="Massimo" lastname="Calabresi" email="" type="" password="password" />
+	<addNewUser userid="pba001" firstname="Perry" lastname="Bacon" email="" type="" password="password" />
+	<addNewUser userid="cth001" firstname="Cathy" lastname="Thomas" email="" type="" password="password" />
+	<addNewUser userid="dmi001" firstname="Dennis" lastname="Miller" email="" type="" password="password" />
+	<addNewUser userid="cfe001" firstname="Craig" lastname="Ferguson" email="" type="" password="password" />
+	<addNewUser userid="jle001" firstname="Jay" lastname="Leno" email="" type="" password="password" />
+	<addNewUser userid="fro001" firstname="Frank" lastname="Robinson" email="" type="" password="password" />
+	<addNewUser userid="pje001" firstname="Peter" lastname="Jennings" email="" type="" password="password" />
+	<addNewUser userid="mab001" firstname="Mahmoud" lastname="Abbas" email="" type="" password="password" />
+	<addNewUser userid="gbr001" firstname="Gordon" lastname="Brown" email="" type="" password="password" />
+	<addNewUser userid="gbu001" firstname="George" lastname="Bush" email="" type="" password="password" />
+	<addNewUser userid="hch001" firstname="Hugo" lastname="Chavez" email="" type="" password="password" />
+	<addNewUser userid="csh001" firstname="Chen" lastname="Shui-bian" email="" type="" password="password" />
+	<addNewUser userid="bfr002" firstname="Bill" lastname="Frist" email="" type="" password="password" />
+	<addNewUser userid="ahi001" firstname="Ayaan" lastname="Hirsi Ali" email="" type="" password="password" />
+	<addNewUser userid="jho001" firstname="John" lastname="Howard" email="" type="" password="password" />
+	<addNewUser userid="hji001" firstname="Hu" lastname="Jintao" email="" type="" password="password" />
+	<addNewUser userid="kjo001" firstname="Kim" lastname="Jong" email="" type="" password="password" />
+	<addNewUser userid="mbr001" firstname="Mark" lastname="Brown" email="" type="" password="password" />
+	<addNewUser userid="msh001" firstname="Mark" lastname="Shuttleworth" email="" type="" password="password" />
+	<addNewUser userid="tmb001" firstname="Thabo" lastname="Mbeki" email="" type="" password="password" />
+	<addNewUser userid="bob001" firstname="Barack" lastname="Obama" email="" type="" password="password" />
+	<addNewUser userid="ash001" firstname="Ariel" lastname="Sharon" email="" type="" password="password" />
+	<addNewUser userid="msi001" firstname="Manmohan" lastname="Singh" email="" type="" password="password" />
+	<addNewUser userid="asi003" firstname="Ali" lastname="Husaini Sistani" email="" type="" password="password" />
+	<addNewUser userid="rab001" firstname="Roman" lastname="Abramovich" email="" type="" password="password" />
+	<addNewUser userid="jbo002" firstname="John" lastname="Bond" email="" type="" password="password" />
+	<addNewUser userid="bco002" firstname="Bram" lastname="Cohen" email="" type="" password="password" />
+	<addNewUser userid="ado002" firstname="Amy" lastname="Domini" email="" type="" password="password" />
+	<addNewUser userid="nfo002" firstname="Noel" lastname="Forgeard" email="" type="" password="password" />
+	<addNewUser userid="rha002" firstname="Reed" lastname="Hastings" email="" type="" password="password" />
+	<addNewUser userid="sjo002" firstname="Steve" lastname="Jobs" email="" type="" password="password" />
+	<addNewUser userid="lto002" firstname="Linus" lastname="Torvalds" email="" type="" password="password" />
+	<addNewUser userid="ala002" firstname="Anne" lastname="Lauvergeon" email="" type="" password="password" />
+	<addNewUser userid="lhe002" firstname="Lee" lastname="Hee" email="" type="" password="password" />
+	<addNewUser userid="rmu002" firstname="Rupert" lastname="Murdoch" email="" type="" password="password" />
+	<addNewUser userid="cne002" firstname="Craig" lastname="Newmark" email="" type="" password="password" />
+	<addNewUser userid="rzh002" firstname="Ren" lastname="Zhengfei" email="" type="" password="password" />
+	<addNewUser userid="lsc002" firstname="Lee" lastname="Scott" email="" type="" password="password" />
+	<addNewUser userid="mso002" firstname="Martin" lastname="Sorrell" email="" type="" password="password" />
+	<addNewUser userid="mst002" firstname="Martha" lastname="Stewart" email="" type="" password="password" />
+	<addNewUser userid="hst002" firstname="Howard" lastname="Stringer" email="" type="" password="password" />
+	<addNewUser userid="kwa002" firstname="Katsuaki" lastname="Watanabe" email="" type="" password="password" />
+	<addNewUser userid="mwh002" firstname="Meg" lastname="Whitman" email="" type="" password="password" />
+	<addNewUser userid="das002" firstname="Dina" lastname="Astita" email="" type="" password="password" />
+	<addNewUser userid="dla002" firstname="Dalai" lastname="Lama" email="" type="" password="password" />
+	<addNewUser userid="met002" firstname="Melissa" lastname="Etheridge" email="" type="" password="password" />
+	<addNewUser userid="bga002" firstname="Bill" lastname="Gates" email="" type="" password="password" />
+	<addNewUser userid="lja002" firstname="LeBron" lastname="James" email="" type="" password="password" />
+	<addNewUser userid="sle002" firstname="Stephen" lastname="Lewis" email="" type="" password="password" />
+	<addNewUser userid="wma002" firstname="Wangari" lastname="Maathai" email="" type="" password="password" />
+	<addNewUser userid="ema002" firstname="Ellen" lastname="MacArthur" email="" type="" password="password" />
+	<addNewUser userid="nma002" firstname="Nelson" lastname="Mandela" email="" type="" password="password" />
+	<addNewUser userid="hmu002" firstname="Hania" lastname="Mufti" email="" type="" password="password" />
+	<addNewUser userid="lol002" firstname="Lubna" lastname="Olayan" email="" type="" password="password" />
+	<addNewUser userid="mro002" firstname="Mary" lastname="Robinson" email="" type="" password="password" />
+	<addNewUser userid="msc002" firstname="Michael" lastname="Schumacher" email="" type="" password="password" />
+	<addNewUser userid="esp002" firstname="Eliot" lastname="Spitzer" email="" type="" password="password" />
+	<addNewUser userid="jst002" firstname="John" lastname="Stott" email="" type="" password="password" />
+	<addNewUser userid="owi002" firstname="Oprah" lastname="Winfrey" email="" type="" password="password" />
+	<addNewUser userid="vyu002" firstname="Viktor" lastname="Yushchenko" email="" type="" password="password" />
+	<addNewUser userid="bat003" firstname="Brian" lastname="Atwater" email="" type="" password="password" />
+	<addNewUser userid="mba003" firstname="Mitchell" lastname="Baker" email="" type="" password="password" />
+	<addNewUser userid="tga003" firstname="Timothy" lastname="Ash" email="" type="" password="password" />
+	<addNewUser userid="mgl003" firstname="Malcolm" lastname="Gladwell" email="" type="" password="password" />
+	<addNewUser userid="rkl003" firstname="Robert" lastname="Klein" email="" type="" password="password" />
+	<addNewUser userid="lky003" firstname="Lee Kuan" lastname="Yew" email="" type="" password="password" />
+	<addNewUser userid="rpo003" firstname="Richard" lastname="Pound" email="" type="" password="password" />
+	<!--
+	<addNewUser userid="" firstname="" lastname="" email="" type="" password="password" />
+	<addNewUser userid="" firstname="" lastname="" email="" type="" password="password" />
+	-->
+
+	
+	
+		
+</sakaiscript>

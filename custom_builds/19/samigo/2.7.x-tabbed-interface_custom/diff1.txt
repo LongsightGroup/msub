@@ -1,0 +1,30 @@
+Index: samigo-app/src/java/org/sakaiproject/tool/assessment/ui/bean/delivery/DeliveryBean.java
+===================================================================
+--- samigo-app/src/java/org/sakaiproject/tool/assessment/ui/bean/delivery/DeliveryBean.java	(revision 91314)
++++ samigo-app/src/java/org/sakaiproject/tool/assessment/ui/bean/delivery/DeliveryBean.java	(working copy)
+@@ -2848,7 +2848,11 @@
+       log.debug("last modified date in DB="+DBdate);
+       log.debug("last modified date in browser="+browserDate);
+       log.debug("date is equal="+(DBdate==browserDate));
+-      return (DBdate==browserDate);
++			if (DBdate != browserDate) {
++				System.out.println("SEMINOLE DATA DISCREPENACY; last modified date in DB="+DBdate+";last modified date in browser="+browserDate);
++			}
++      //return (DBdate==browserDate);
++			return true;
+     }
+     else return true;
+   }
+Index: samigo-app/src/webapp/jsf/delivery/deliverAssessment.jsp
+===================================================================
+--- samigo-app/src/webapp/jsf/delivery/deliverAssessment.jsp	(revision 91314)
++++ samigo-app/src/webapp/jsf/delivery/deliverAssessment.jsp	(working copy)
+@@ -51,7 +51,7 @@
+ 		});
+ 
+ 		function showTimerWarning() {
+-			$('#timer-warning').dialog('open');
++			//$('#timer-warning').dialog('open');
+ 			return false;
+ 		}
+

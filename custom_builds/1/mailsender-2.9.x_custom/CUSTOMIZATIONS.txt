@@ -1,0 +1,2 @@
+HZL-107059 - Applying previously applied OHSU patches from John and updating RSF version for CK
+SAK-25535 "All" Recipients checkbox stays checked when other recipients de-selected

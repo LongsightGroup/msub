@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sakaiscript>
+
+	<removeSite siteid="Small101" />
+	<removeSite siteid="Med101" /> 
+
+</sakaiscript>

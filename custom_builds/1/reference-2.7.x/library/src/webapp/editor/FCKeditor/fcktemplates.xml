@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2008 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This is the sample templates definitions file. It makes the "templates"
+ * command completely customizable.
+ *
+ * See FCKConfig.TemplatesXmlPath in the configuration file.
+-->
+<Templates imagesBasePath="fck_template/images/">
+	
+	<Template title="Course Materials w/ Icons" image="ohsu_template.gif">
+		<Description>OHSU's default template for Course materials organization.</Description>
+		<Html>
+			<![CDATA[
+				<table width="100%" cellspacing="5" cellpadding="5" border="0">
+    <tbody>
+        <tr>
+            <td valign="top" colspan="2">
+            <p><font color="#339966"><strong>Enter Topic Description and/or Learning Objectives</strong></font></p>
+            <p>Enter Description Text</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="7%" valign="top"><img width="50" height="49" src="/access/content/public/icons/read.jpg" alt="Read" /></td>
+            <td width="93%" valign="top">
+            <p><strong>Read:</strong></p>
+            <ul>
+                <li>&nbsp;</li>
+            </ul>
+            </td>
+
+        </tr>
+        <tr>
+            <td width="7%" valign="top"><img src="/access/content/public/icons/view.jpg" alt="View" /></td>
+            <td width="93%" valign="top">
+            <p><strong>View/Review:</strong></p>
+            <ul>
+                <li>&nbsp;</li>
+            </ul>
+
+            </td>
+        </tr>
+        <tr>
+            <td valign="top"><img width="55" height="46" src="/access/content/public/icons/discuss.jpg" alt="Discuss" /></td>
+            <td valign="top">
+            <p><strong>Post to Forums:</strong></p>
+            <ul>
+                <li>&nbsp;</li>
+
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top"><img width="62" height="49" src="/access/content/public/09ICONS/Post2Submissions.gif" alt="Submission" /></td>
+            <td valign="top">
+            <p><strong>Post to Submissions:</strong></p>
+            <ul>
+
+                <li>&nbsp;</li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td width="7%" valign="top"><img width="55" height="54" src="/access/content/public/09ICONS/in_sakai.jpg" alt="Tests and Quizzes" /></td>
+            <td width="93%" valign="top">
+            <p><strong>Tests and Quizzes:</strong></p>
+
+            <ul>
+                <li>&nbsp;</li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top"><img width="48" height="47" src="/access/content/public/09ICONS/chklist.gif" alt="Checklist" /></td>
+            <td valign="top">
+            <p><strong>Checklist:</strong></p>
+
+            <ul>
+                <li>&nbsp;</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="OHSU Syllabus" image="ohsu-syllabus.gif">
+		<Description>OHSU's default syllabus template.</Description>
+		<Html>
+			<![CDATA[
+				<p align="center"><strong>Oregon Health &amp; Science University</strong><br />
+<strong>School or Department Name</strong><br />
+<strong>Course Number and Name</strong><br />
+<strong>Term/Year</strong></p>
+<p><strong>Course  Description</strong>:&nbsp;<br />
+[Taken  from the course catalog]</p>
+<p><strong>Credit  Hours</strong>:&nbsp;</p>
+
+<p><strong>Prerequisites  or Concurrent Enrollment Requirements</strong>:&nbsp;</p>
+<p><strong>Faculty  Information</strong>:&nbsp;</p>
+<blockquote>
+<p>Name:&nbsp;&nbsp; <br />
+E-mail:&nbsp; <br />
+Phone:&nbsp;&nbsp; <br />
+Address: <br />
+
+Office Hours:</p>
+</blockquote>
+<p><strong>General  Course Meeting Day and Time</strong>:&nbsp;</p>
+<p><strong>Course  Objectives, Competencies or Outcomes: </strong><br />
+Upon  successful completion of this course, the student will be able to:</p>
+<ol>
+    <li>X</li>
+    <li>X</li>
+
+    <li>X</li>
+    <li>X</li>
+    <li>X</li>
+</ol>
+<p><strong>Required  Texts or Readings</strong>:&nbsp;</p>
+<ul>
+    <li><strong>&nbsp;</strong></li>
+    <li>&nbsp;</li>
+
+</ul>
+<p><strong>Attendance  Requirements:</strong>&nbsp;</p>
+<p><strong>Grading  Criteria, Academic Standards, and Release of&nbsp; Final Grades</strong><br />
+School/Department final course grades will  be posted with the OHSU Registrar [date here].  The grading system for official grade reports is <span style="color: rgb(128, 0, 0);">[change if school or department uses +/-]</span>:</p>
+<blockquote>
+<table width="250" cellspacing="1" cellpadding="4" border="1">
+    <tbody>
+        <tr>
+
+            <td width="40" bgcolor="#ccccb0" align="right">4.0   =</td>
+            <td>Exceptional</td>
+            <td>90-100%</td>
+        </tr>
+        <tr>
+            <td bgcolor="#ccccb0" align="right">3.0 =</td>
+            <td>Superior</td>
+
+            <td>80-89%</td>
+        </tr>
+        <tr>
+            <td bgcolor="#ccccb0" align="right">2.0 =</td>
+            <td>Average</td>
+            <td>70-79%</td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#ccccb0" align="right">0.0 =</td>
+            <td>Failure</td>
+            <td>&lt;70%</td>
+        </tr>
+    </tbody>
+</table>
+</blockquote>
+
+<p><strong>Inclement  Weather Procedures:</strong>&nbsp;</p>
+<p><strong>Copyright  Information</strong>:&nbsp;<br />
+Every  reasonable effort has been made to protect the copyright requirements of  materials used in this course.&nbsp; Class participants are warned not to copy,  audio, or videotape in violation of copyright laws. Journal articles will be  kept on reserve at the library or online for student access. Copyright law does  allow for making one personal copy of each article from the original article.  This limit also applies to electronic sources.&nbsp;</p>
+<p><strong>Syllabus  Changes and Retention</strong>:<br />
+It  is recognized that changes may be made as the need arises. Students are  responsible for keeping a copy of the course syllabus for their records.</p>
+<p><strong>Accommodations</strong>:<br />
+
+Our  program is committed to all students achieving their potential. If you have a  disability or think you may have a disability (physical, learning, hearing,  vision, psychological) which may need a reasonable accommodation, please  contact Sue Orchard, Coordinator for Student Access at&nbsp; 503-494-0082 or  e-mail at <a href="mailto:orchards@ohsu.edu">orchards@ohsu.edu</a>, to discuss  your needs. Because accommodations can take time to implement, it is important  to have this discussion as soon as possible. All information regarding a  student&rsquo;s disability is kept in accordance with relevant state and federal  laws. You may also visit <a href="http://www.ohsu.edu/xd/education/student-services/education-diversity/student-access/index.cfm">http://www.ohsu.edu/xd/education/student-services/education-diversity/student-access/index.cfm</a> to identify your Program Accommodation Liaison  (PAL).&nbsp;</p>
+<p><strong>Academic  Honesty:</strong><br />
+Students  are responsible for their own academic work. Students are expected to  practice principles of academic honesty. OHSU has established a code of conduct to communicate the university's expectations for appropriate    behavior and compliance with OHSU policies. You are subject to the code of    conduct and are expected to follow it at all times. You can download a copy  at <a href="http://onprc.ohsu.edu/xd/about/services/integrity/upload/rolesresonsibliies02-09-10-2.pdf" target="_blank">http://onprc.ohsu.edu/xd/about/services/integrity/upload/rolesresonsibliies02-09-10-2.pdf</a>.</p>
+			]]>
+		</Html>
+	</Template>
+</Templates>

@@ -1,0 +1,51 @@
+Index: ambrosia/pom.xml
+===================================================================
+--- ambrosia/pom.xml	(revision 84513)
++++ ambrosia/pom.xml	(working copy)
+@@ -27,9 +27,9 @@
+ 	<modelVersion>4.0.0</modelVersion>
+ 
+ 	<parent>
+-		<artifactId>base</artifactId>
++		<artifactId>master</artifactId>
+ 		<groupId>org.sakaiproject</groupId>
+-		<version>2.7.1</version>
++		<version>2.9-SNAPSHOT</version>
+ 	</parent>
+ 
+ 	<name>etudes-ambrosia-base</name>
+@@ -46,5 +46,34 @@
+ 		<module>ambrosia-impl/pack</module>
+ 		<module>ambrosia-library/lib</module>
+ 	</modules>
++	<dependencyManagement>
++               <dependencies>
++                       <!--Etudes-->
++                       <dependency>
++                               <groupId>org.etudes</groupId>
++                               <artifactId>etudes-util-api</artifactId>
++                               <version>${etudes.util.version}</version>
++                               <scope>provided</scope>
++                       </dependency>
+ 
++                       <dependency>
++                               <groupId>org.etudes</groupId>
++                               <artifactId>etudes-util-util</artifactId>
++                               <version>${etudes.util.version}</version>
++                       </dependency>
++			<dependency>
++                        	<groupId>org.etudes</groupId>
++                       		<artifactId>etudes-ambrosia-api</artifactId>
++				<version>${ambrosia.version}</version>
++				<scope>provided</scope>
++                	</dependency>
++ 			<dependency>
++                        	<groupId>org.etudes</groupId>
++	                       	<artifactId>etudes-ambrosia-util</artifactId>
++				<version>${ambrosia.version}</version>
++                	</dependency>
++               </dependencies>
++	</dependencyManagement>
++
++
+ </project>

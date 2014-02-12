@@ -1,0 +1,1 @@
+DHB-271079 : Add additional attributes for kaltura

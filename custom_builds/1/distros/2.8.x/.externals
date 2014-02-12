@@ -1,0 +1,70 @@
+access https://source.sakaiproject.org/svn/access/branches/sakai-2.8.x
+alias https://source.sakaiproject.org/svn/alias/branches/sakai-2.8.x
+announcement https://source.sakaiproject.org/svn/announcement/branches/sakai-2.8.x
+archive https://source.sakaiproject.org/svn/archive/branches/sakai-2.8.x
+#SAK-21869  - 03/03/2012
+assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-2.8.x_features_backport/
+#assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-2.8.x
+authz https://source.sakaiproject.org/svn/authz/branches/sakai-2.8.x
+calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-2.8.x
+chat https://source.sakaiproject.org/svn/chat/branches/sakai-2.8.x
+citations https://source.sakaiproject.org/svn/citations/branches/sakai-2.8.x
+#config https://source.sakaiproject.org/svn/config/branches/sakai-2.8.x
+content https://source.sakaiproject.org/svn/content/branches/sakai-2.8.x
+courier https://source.sakaiproject.org/svn/courier/branches/sakai-2.8.x
+dav https://source.sakaiproject.org/svn/dav/branches/sakai-2.8.x
+gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-2.8.x
+help https://source.sakaiproject.org/svn/help/branches/sakai-2.8.x
+linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-2.8.x
+login https://source.sakaiproject.org/svn/login/branches/sakai-2.8.x
+mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-2.8.x
+master https://source.sakaiproject.org/svn/master/branches/sakai-2.8.x
+memory https://source.sakaiproject.org/svn/memory/branches/sakai-2.8.x
+message https://source.sakaiproject.org/svn/message/branches/sakai-2.8.x
+metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-2.8.x
+pack https://source.sakaiproject.org/svn/pack/branches/pack-2.8.x/
+osp https://source.sakaiproject.org/svn/osp/branches/sakai-2.8.x
+podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-2.8.x
+portal https://source.sakaiproject.org/svn/portal/branches/sakai-2.8.x
+postem https://source.sakaiproject.org/svn/postem/branches/sakai-2.8.x
+presence https://source.sakaiproject.org/svn/presence/branches/sakai-2.8.x
+providers https://source.sakaiproject.org/svn/providers/branches/sakai-2.8.x
+reference https://source.sakaiproject.org/svn/reference/branches/sakai-2.8.x
+rights https://source.sakaiproject.org/svn/rights/branches/sakai-2.8.x
+rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-2.8.x
+sections https://source.sakaiproject.org/svn/sections/branches/sakai-2.8.x
+site https://source.sakaiproject.org/svn/site/branches/sakai-2.8.x
+site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-2.8.x
+syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-2.8.x
+taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-2.8.x
+textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-2.8.x
+tool https://source.sakaiproject.org/svn/tool/branches/sakai-2.8.x
+user https://source.sakaiproject.org/svn/user/branches/sakai-2.8.x
+usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-2.8.x
+velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-2.8.x
+warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-2.8.x
+was https://source.sakaiproject.org/svn/was/branches/sakai-2.8.x
+web https://source.sakaiproject.org/svn/web/branches/sakai-2.8.x
+
+# CUSTOM TOOLS
+config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/1/config-2.8.x_custom
+#JQT-179503 - 03/25/2012
+evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.3.x_features-backport/
+#NMR-544655 
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.8.x-tabbed-interface/
+jforum https://source.sakaiproject.org/contrib/etudes/sakai-jforum/tags/2.8.1
+lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/lessonbuilder-1.3.x/
+mailsender https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/1/mailsender-2.8.x_custom
+melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_features-backport
+#reference https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/1/reference-2.8.x_custom
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x/
+
+#01/31/2012
+jsf https://source.sakaiproject.org/svn/msub/longsight.com/jsf/jsf-2.8.x_features-backport/
+signup https://source.sakaiproject.org/contrib//signup/branches/2-8-x/
+skin-manager https://source.sakaiproject.org/contrib/edia/skin-manager/trunk
+roster https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/1/roster-2.8.x
+
+#01/17/201
+msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-2.8.x-features-backport/
+

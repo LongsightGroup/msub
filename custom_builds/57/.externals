@@ -1,0 +1,6 @@
+trunk-2.7.x https://source.sakaiproject.org/svn/msub/duke.edu/distros/sakai-2.7.x/trunk/
+test-2.7.x https://source.sakaiproject.org/svn/msub/duke.edu/distros/sakai-2.7.x/test/
+prod-2.7.x https://source.sakaiproject.org/svn/msub/duke.edu/distros/sakai-2.7.x/prod/
+*dev-2.9.x https://source.sakaiproject.org/svn/msub/duke.edu/distros/sakai-2.9.x/dev/
+*test-2.9.x https://source.sakaiproject.org/svn/msub/duke.edu/distros/sakai-2.9.x/test/
+*prod-2.9.x https://source.sakaiproject.org/svn/msub/duke.edu/distros/sakai-2.9.x/prod/

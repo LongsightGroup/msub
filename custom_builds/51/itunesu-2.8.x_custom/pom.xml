@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <artifactId>base</artifactId>
+    <groupId>org.sakaiproject</groupId>
+    <version>2.8-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+  
+  <name>Sakai iTunes U Project</name>
+  <groupId>org.sakaiproject</groupId>
+  <artifactId>itunesu-base</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <modules>
+    <module>itunesu-api</module>
+    <module>itunesu-impl</module>
+    <module>itunesu-pack</module>
+    <module>itunesu-tool</module>
+    <module>itunesu-admin-tool</module>
+  </modules>
+  <properties>
+        <itunesu.version>1.0-SNAPSHOT</itunesu.version>
+  </properties>
+</project>

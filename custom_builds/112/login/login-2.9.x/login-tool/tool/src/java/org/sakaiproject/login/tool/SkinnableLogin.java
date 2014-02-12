@@ -1,0 +1,570 @@
+/**********************************************************************************
+ * $URL:  $
+ * $Id:  $
+ ***********************************************************************************
+ *
+ * Copyright (c) 2008 The Sakai Foundation.
+ * 
+ * Licensed under the Educational Community License, Version 1.0 (the "License"); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.opensource.org/licenses/ecl1.php
+ * 
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an "AS IS" BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License.
+ *
+ **********************************************************************************/
+package org.sakaiproject.login.tool;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.security.auth.login.LoginException;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.sakaiproject.component.cover.ServerConfigurationService;
+import org.sakaiproject.event.cover.UsageSessionService;
+import org.sakaiproject.login.api.Login;
+import org.sakaiproject.login.api.LoginCredentials;
+import org.sakaiproject.login.api.LoginRenderContext;
+import org.sakaiproject.login.api.LoginRenderEngine;
+import org.sakaiproject.login.api.LoginService;
+import org.sakaiproject.tool.api.Session;
+import org.sakaiproject.tool.api.Tool;
+import org.sakaiproject.tool.cover.SessionManager;
+import org.sakaiproject.user.api.Authentication;
+import org.sakaiproject.user.api.AuthenticationException;
+import org.sakaiproject.user.api.Evidence;
+import org.sakaiproject.user.cover.AuthenticationManager;
+import org.sakaiproject.util.IdPwEvidence;
+import org.sakaiproject.util.StringUtil;
+import org.sakaiproject.util.ResourceLoader;
+import org.sakaiproject.util.Web;
+
+import edu.umd.cs.findbugs.annotations.SuppressWarnings;
+
+public class SkinnableLogin extends HttpServlet implements Login {
+
+	private static final long serialVersionUID = 1L;
+
+	/** Our log (commons). */
+	private static Log log = LogFactory.getLog(SkinnableLogin.class);
+
+	/** Session attribute used to store a message between steps. */
+	protected static final String ATTR_MSG = "notify";
+
+	/** Session attribute set and shared with ContainerLoginTool: URL for redirecting back here. */
+	public static final String ATTR_RETURN_URL = "sakai.login.return.url";
+
+	/** Session attribute set and shared with ContainerLoginTool: if set we have failed container and need to check internal. */
+	public static final String ATTR_CONTAINER_CHECKED = "sakai.login.container.checked";
+
+	/** Marker to indicate we are logging in the PDA Portal and should put out abbreviated HTML */
+	public static final String PDA_PORTAL_SUFFIX = "/pda/";
+
+	private static ResourceLoader rb = new ResourceLoader("auth");
+	
+	private transient LoginService loginService;
+	
+	private String loginContext;
+	
+	public void init(ServletConfig config) throws ServletException
+	{
+		super.init(config);
+		loginContext = config.getInitParameter("login.context");
+		if (loginContext == null || loginContext.length() == 0)
+		{
+			loginContext = DEFAULT_LOGIN_CONTEXT;
+		}
+		
+		loginService = org.sakaiproject.login.cover.LoginService.getInstance();
+		
+		log.info("init()");
+	}
+	
+	public void destroy()
+	{
+		log.info("destroy()");
+
+		super.destroy();
+	}
+	
+	/**
+	 * Access the Servlet's information display.
+	 *
+	 * @return servlet information.
+	 */
+	public String getServletInfo()
+	{
+		return "Sakai Login";
+	}
+	
+	@SuppressWarnings(value = "HRS_REQUEST_PARAMETER_TO_HTTP_HEADER", justification = "Looks like the data is already URL encoded")
+	protected void doGet(HttpServletRequest req, HttpServletResponse res)
+		throws ServletException, IOException 
+	{
+		// get the session
+		Session session = SessionManager.getCurrentSession();
+
+		// get my tool registration
+		Tool tool = (Tool) req.getAttribute(Tool.TOOL);
+		
+		// recognize what to do from the path
+		String option = req.getPathInfo();
+
+		// maybe we don't want to do the container this time
+		boolean skipContainer = false;
+
+		// if missing, set it to "/login"
+		if ((option == null) || ("/".equals(option)))
+		{
+			option = "/login";
+		}
+
+		// look for the extreme login (i.e. to skip container checks)
+		else if ("/xlogin".equals(option))
+		{
+			option = "/login";
+			skipContainer = true;
+		}
+
+		// get the parts (the first will be "", second will be "login" or "logout")
+		String[] parts = option.split("/");
+
+		if (parts[1].equals("logout"))
+		{
+			// get the session info complete needs, since the logout will invalidate and clear the session
+			String returnUrl = (String) session.getAttribute(Tool.HELPER_DONE_URL);
+
+			// logout the user
+			UsageSessionService.logout();
+
+			complete(returnUrl, null, tool, res);
+			return;
+		}
+
+		// see if we need to check container
+		boolean checkContainer = ServerConfigurationService.getBoolean("container.login", false);
+		if (checkContainer && !skipContainer)
+		{
+			// if we have not checked the container yet, check it now
+			if (session.getAttribute(ATTR_CONTAINER_CHECKED) == null)
+			{
+				// save our return path
+				session.setAttribute(ATTR_RETURN_URL, Web.returnUrl(req, null));
+
+				String containerCheckPath = this.getServletConfig().getInitParameter("container");
+				String containerCheckUrl = Web.serverUrl(req) + containerCheckPath;
+
+				// support query parms in url for container auth
+				String queryString = req.getQueryString();
+				if (queryString != null) containerCheckUrl = containerCheckUrl + "?" + queryString;
+
+				/*
+				 * FindBugs: HRS_REQUEST_PARAMETER_TO_HTTP_HEADER Looks like the
+				 * data is already URL encoded. Had to @SuppressWarnings
+				 * the entire method.
+				 */
+				res.sendRedirect(res.encodeRedirectURL(containerCheckUrl));
+				return;
+			}
+		}
+		
+		// PDA or not?
+		String portalUrl = (String) session.getAttribute(Tool.HELPER_DONE_URL);
+		boolean isPDA = false;
+		if ( portalUrl != null ) {
+			isPDA = (portalUrl.indexOf (PDA_PORTAL_SUFFIX) > -1);
+		}
+		log.debug("isPDA: " + isPDA);
+
+		// Present the xlogin template
+		LoginRenderContext rcontext = startPageContext("", req, res);
+		
+		rcontext.put("isPDA", isPDA);
+
+		// Decide whether or not to put up the Cancel
+		String actualPortal = ServerConfigurationService.getPortalUrl();
+                if ( portalUrl != null && portalUrl.indexOf("/site/") < 1 && portalUrl.startsWith(actualPortal) ) {
+			rcontext.put("doCancel", Boolean.TRUE);
+		}
+		
+		sendResponse(rcontext, res, "xlogin", null);
+	}
+	
+	/**
+	 * Respond to data posting requests.
+	 *
+	 * @param req
+	 *        The servlet request.
+	 * @param res
+	 *        The servlet response.
+	 * @throws ServletException.
+	 * @throws IOException.
+	 */
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
+	{
+		// Present the xlogin template
+		LoginRenderContext rcontext = startPageContext(null, req, res);
+		
+		// Get the Sakai session
+		Session session = SessionManager.getCurrentSession();
+
+		// Get my tool registration
+		Tool tool = (Tool) req.getAttribute(Tool.TOOL);
+
+		// Determine if the user canceled this request
+		String cancel = req.getParameter("cancel");
+
+		// cancel
+		if (cancel != null)
+		{
+			rcontext.put(ATTR_MSG, rb.getString("log.canceled"));
+
+			// get the session info complete needs, since the logout will invalidate and clear the session
+			String returnUrl = (String) session.getAttribute(Tool.HELPER_DONE_URL);
+
+			// Trim off the force.login parameter from return URL if present
+			if ( returnUrl != null )
+			{
+				int where = returnUrl.indexOf("?force.login");
+				if ( where > 0 ) returnUrl = returnUrl.substring(0,where);
+			}
+
+			// TODO: send to the cancel URL, cleanup session
+			complete(returnUrl, session, tool, res);
+		}
+
+		// submit
+		else
+		{
+			LoginCredentials credentials = new LoginCredentials(req);
+			credentials.setSessionId(session.getId());
+			
+			try {
+				String eid = credentials.getIdentifier();
+				String pw = credentials.getPassword();
+				//If the user is authenticated, must it change its password?
+				if (loginUtils.userMustChangePassword(eid)) {
+					String pwNew = req.getParameter("newpass");
+					String pwNewConfirm = req.getParameter("newpassconfirm");
+
+					session.setAttribute("user_eid", eid);
+					session.setAttribute("renewpass", "true");
+
+					//Check if the new password field exists.
+					if (pwNew != null && pwNewConfirm != null) {
+
+						//Check if the new password fields are empty
+						//Show error if empty
+						if ((pwNew.equals("") && pwNewConfirm.equals(""))
+								|| (pwNew.equals("") || pwNewConfirm.equals(""))) {
+							session.setAttribute(ATTR_MSG,
+									rb.getString("renewpass.empty"));
+							res.sendRedirect(res.encodeRedirectURL(Web
+									.returnUrl(req, null)));
+
+							//Check if the new password meets the password requirements
+						}else if (!loginUtils.passwordMeetsRequirements(pwNew)){
+							session.setAttribute(ATTR_MSG,
+									rb.getString("renewpass.notvalid"));
+							res.sendRedirect(res.encodeRedirectURL(Web
+									.returnUrl(req, null)));
+
+							//Check if the new password field and the confirm field are different.
+							//Display error if they are different, should be equal
+						} else if (StringUtil.different(pwNew, pwNewConfirm)) {
+							session.setAttribute(ATTR_MSG,
+									rb.getString("renewpass.notequal"));
+							res.sendRedirect(res.encodeRedirectURL(Web
+									.returnUrl(req, null)));
+
+							//Check if the new password if equal to the old password
+							//Show error if they are equal
+						}else if (pwNew.equals(pw)){
+							session.setAttribute(ATTR_MSG,
+									rb.getString("renewpass.notnew"));
+							res.sendRedirect(res.encodeRedirectURL(Web
+									.returnUrl(req, null)));
+
+							//Everything is OK. Password can be changed.
+						} else {
+							try {
+								//check if old password was correct:
+								Evidence e = new IdPwEvidence(eid, pw);
+								Authentication a = AuthenticationManager.authenticate(e);
+								//password checks out, new password is correct format, let's change it and log the user in
+								loginUtils.setNewPasswordUser(eid, pwNew);
+								credentials.setPassword(pwNew);
+								loginService.authenticate(credentials);
+								String returnUrl = (String) session.getAttribute(Tool.HELPER_DONE_URL);
+								complete(returnUrl, session, tool, res);
+							} catch (AuthenticationException e1) {
+								session.setAttribute(ATTR_MSG,
+										rb.getString("pass.requirements.oldnotvalid"));
+								res.sendRedirect(res.encodeRedirectURL(Web
+										.returnUrl(req, null)));
+							}
+						}
+
+						//It's the first time this page is visited, show message.
+					} else {
+						session.setAttribute(ATTR_MSG,
+								rb.getString("log.renewpass"));
+						res.sendRedirect(res.encodeRedirectURL(Web.returnUrl(
+								req, null)));
+					}
+				}else{
+
+					loginService.authenticate(credentials);
+					String returnUrl = (String) session.getAttribute(Tool.HELPER_DONE_URL);
+					complete(returnUrl, session, tool, res);
+				}
+				
+			} catch (LoginException le) {
+				
+				String message = le.getMessage();
+				
+				log.debug("LoginException: " + message);
+				
+				boolean showAdvice = false;
+				
+				if (message.equals(EXCEPTION_INVALID_CREDENTIALS)) {
+					rcontext.put(ATTR_MSG, rb.getString("log.invalid.credentials"));
+					showAdvice = true;
+					logFailedAttempt(credentials);
+				} else if (message.equals(EXCEPTION_INVALID_WITH_PENALTY)) {
+					rcontext.put(ATTR_MSG, rb.getString("log.invalid.with.penalty"));
+					showAdvice = true;
+					logFailedAttempt(credentials);
+				} else if (message.equals(EXCEPTION_MISSING_CREDENTIALS)) {
+					rcontext.put(ATTR_MSG, rb.getString("log.tryagain"));
+					//Do we need to log this one? You can't really brute force with empty credentials...
+				} else {
+					rcontext.put(ATTR_MSG, rb.getString("log.invalid"));
+					logFailedAttempt(credentials);
+				}
+
+				if (showAdvice) {
+					String loginAdvice = loginService.getLoginAdvice(credentials);
+					if (loginAdvice != null && !loginAdvice.equals("")) {
+						log.debug("Returning login advice");
+						rcontext.put("loginAdvice", loginAdvice);
+					}
+				}
+
+				// Decide whether or not to put up the Cancel
+				String portalUrl = (String) session.getAttribute(Tool.HELPER_DONE_URL);
+				String actualPortal = ServerConfigurationService.getPortalUrl();
+                		if ( portalUrl != null && portalUrl.indexOf("/site/") < 1 && portalUrl.startsWith(actualPortal) ) {
+					rcontext.put("doCancel", Boolean.TRUE);
+				}
+				
+				sendResponse(rcontext, res, "xlogin", null);
+			}
+		}
+	}
+	
+	/*****************************************************************************
+	 * Addition: Force a user to change its password if it has expired
+	 * Cooperates with: User Tool (For updating password change date)
+	 * Author: Lex de Ruijter
+	 * Company: Samoo
+	 *****************************************************************************/
+
+	private LoginUtils loginUtils = LoginUtils.getInstance(); 
+
+	/**
+	 * Get the localised information text for the password requirements. 
+	 * @return
+	 */
+	private String getPasswordRequirementsText(){
+		String text = "";
+		if(loginUtils.getPasswordMinimumLength() > 0){
+			text += "<br />";
+			text += rb.getFormattedMessage("pass.requirements.length", new String[]{String.valueOf(loginUtils.getPasswordMinimumLength())});
+		}
+		if(loginUtils.getPasswordMinimumAmountOfNumbers() > 0){
+			text += "<br />";
+			text += rb.getFormattedMessage("pass.requirements.length_numbers", new String[]{String.valueOf(loginUtils.getPasswordMinimumAmountOfNumbers())});
+		}if (loginUtils.getPasswordMinimumAmountOfLowerCaseLetters() > 0){
+			text += "<br />";
+			text += rb.getFormattedMessage("pass.requirements.length_letters_lower", new String[]{String.valueOf(loginUtils.getPasswordMinimumAmountOfLowerCaseLetters())});		
+
+		}if (loginUtils.getPasswordMinimumAmountOfUpperCaseLetters() > 0){
+			text += "<br />";
+			text += rb.getFormattedMessage("pass.requirements.length_letters_upper", new String[]{String.valueOf(loginUtils.getPasswordMinimumAmountOfUpperCaseLetters())});		
+
+		}
+
+		return text;
+	}
+	
+	public void sendResponse(LoginRenderContext rcontext, HttpServletResponse res,
+			String template, String contentType) throws IOException
+	{
+		// headers
+		if (contentType == null)
+		{
+			res.setContentType("text/html; charset=UTF-8");
+		}
+		else
+		{
+			res.setContentType(contentType);
+		}
+		res.addDateHeader("Expires", System.currentTimeMillis()
+				- (1000L * 60L * 60L * 24L * 365L));
+		res.addDateHeader("Last-Modified", System.currentTimeMillis());
+		res.addHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		res.addHeader("Pragma", "no-cache");
+
+		// get the writer
+		PrintWriter out = res.getWriter();
+
+		try
+		{
+			LoginRenderEngine rengine = rcontext.getRenderEngine();
+			rengine.render(template, rcontext, out);
+		}
+		catch (Exception e)
+		{
+			throw new RuntimeException("Failed to render template ", e);
+		}
+
+	}
+	
+	public LoginRenderContext startPageContext(String skin, HttpServletRequest request, HttpServletResponse response)
+	{
+		LoginRenderEngine rengine = loginService.getRenderEngine(loginContext, request);
+		LoginRenderContext rcontext = rengine.newRenderContext(request);
+		
+		// get the session
+		Session session = SessionManager.getCurrentSession();
+		boolean changePass = "true".equals((String) session.getAttribute("renewpass")) ? true : false;
+
+		if (skin == null || skin.trim().length() == 0)
+		{
+			skin = ServerConfigurationService.getString("skin.default");
+		}
+
+        String templates = ServerConfigurationService.getString("portal.templates", "neoskin");
+        String prefix = ServerConfigurationService.getString("portal.neoprefix", "neo-");
+        // Don't add the prefix twice
+        if ( "neoskin".equals(templates) && ! skin.startsWith(prefix) ) skin = prefix + skin;
+
+		String skinRepo = ServerConfigurationService.getString("skin.repo");
+		String uiService = ServerConfigurationService.getString("ui.service");
+		
+		String eidWording = rb.getString("userid");
+		String loginWording = rb.getString("log.login");
+		String cancelWording = rb.getString("log.cancel");
+		String pwWording = changePass ? rb.getString("log.oldpass") : rb
+				.getString("log.pass");
+		String loginRequired = changePass ? rb.getString("log.pwchangereq")
+				: rb.getString("log.logreq");
+		
+		String pwNewConfirmWording = rb.getString("log.newpassconfirm");
+		String pwNewWording = rb.getString("log.newpass");
+		
+		rcontext.put("action", response.encodeURL(Web.returnUrl(request, null)));
+		rcontext.put("pageSkinRepo", skinRepo);
+		rcontext.put("pageSkin", skin);
+		rcontext.put("uiService", uiService);
+		rcontext.put("pageScriptPath", getScriptPath());
+		rcontext.put("loginEidWording", eidWording);
+		rcontext.put("loginPwWording", pwWording);
+		rcontext.put("loginRequired", loginRequired);
+		rcontext.put("loginWording", loginWording);
+		rcontext.put("cancelWording", cancelWording);
+		rcontext.put("pwNewConfirmWording", pwNewConfirmWording);
+		rcontext.put("pwNewWording", pwNewWording);
+		rcontext.put("changePass", changePass);
+		String passwordRequirements = getPasswordRequirementsText();
+		if(!"".equals(passwordRequirements)){
+			passwordRequirements = rb.getString("pass.requirements.info") + passwordRequirements;
+			passwordRequirements = "<div class=\"alertMessage\">" + passwordRequirements + "</div>";
+		}
+		rcontext.put("passwordRequirements", passwordRequirements);
+		rcontext.put(ATTR_MSG, session.getAttribute(ATTR_MSG));
+		
+		String eid = StringEscapeUtils.escapeHtml(request.getParameter("eid"));
+		String pw = StringEscapeUtils.escapeHtml(request.getParameter("pw"));
+		
+		if (eid == null)
+			eid = "";
+		if (pw == null)
+			pw = "";
+		
+		rcontext.put("eid", eid);
+		rcontext.put("password", pw);
+		
+		return rcontext;
+	}
+
+	public String getLoginContext() {
+		return loginContext;
+	}
+	
+	// Helper methods
+	
+	/**
+	 * Cleanup and redirect when we have a successful login / logout
+	 *
+	 * @param session
+	 * @param tool
+	 * @param res
+	 * @throws IOException
+	 */
+	protected void complete(String returnUrl, Session session, Tool tool, HttpServletResponse res) throws IOException
+	{
+		// cleanup session
+		if (session != null)
+		{
+			session.removeAttribute(Tool.HELPER_MESSAGE);
+			session.removeAttribute(Tool.HELPER_DONE_URL);
+			session.removeAttribute(ATTR_MSG);
+			session.removeAttribute(ATTR_RETURN_URL);
+			session.removeAttribute(ATTR_CONTAINER_CHECKED);
+			session.removeAttribute("user_eid");
+			session.removeAttribute("renewpass");
+		}
+
+		// if we end up with nowhere to go, go to the portal
+		if (returnUrl == null)
+		{
+			returnUrl = ServerConfigurationService.getPortalUrl();
+			log.info("complete: nowhere set to go, going to portal");
+		}
+
+		// redirect to the done URL
+		res.sendRedirect(res.encodeRedirectURL(returnUrl));
+	}
+	
+	protected String getScriptPath()
+	{
+		return "/library/js/";
+	}
+	
+	/**
+	 * Helper to log failed login attempts (SAK-22430)
+	 * @param credentials the credentials supplied
+	 * 
+	 * Note that this could easily be extedned to track login attempts per session and report on it here
+	 */
+	private void logFailedAttempt(LoginCredentials credentials) {
+		if(ServerConfigurationService.getBoolean("login.log-failed", true)) {
+			log.warn("Login attempt failed. ID=" + credentials.getIdentifier() + ", IP Address=" + credentials.getRemoteAddr());
+		}
+	}
+}

@@ -1,0 +1,40 @@
+Branched from:  https://source.sakaiproject.org/svn/sam/trunk
+Revisions: 1-93686
+
+SAM-894 Reduce confusion over core, published, inactive by using Javascript tabbed display
+SAM-1238  With showAssessmentTypes=false, Assessment Types link still shows when adding a new multiple choice question
+SAM-1239 Properties wording change for data_discrepancy_1
+SAM-1252 Code Review: Stack trace when null value in Section Author Type
+SAM-904 Option to set all remaining students who have not yet submitted an assessment to zero (or some other grade)
+SEMS-39 Turn off warning to users of Edited Quiz
+SAM-1330 (patch not in trunk as of 8/24/2011) Allow disabling of browser-based data discrepancy errors
+SAM-1313 (patch not in trunk as pf 8/24/2011) Settings: Description/Intro not displayed to assessment takers
+SAM-1286 Samigo/score is not correct for timed assessment with average score option and linked to gradebook. 
+SAM-1379 Statistics Only shows First Part of tests for Students (no dropdown for other parts)
+SAM-1383 Imported Samigo Tests with Groups crashes tool
+SAM-1376 Samigo no longer works when creating an assessment through markup text
+SAM-1181 Linear assessment does not allow more than 1 submission
+SAM-1399 Thursday is misspelled
+SAM-1388 Issues taking assessment via URL; reversion of SAM-1003
+SAM-1208 timed assessment with no due date but has retraction date problems
+SAM-1402 Mutliple Choice: All or Nothing option
+LS-66 Samigo 5-min warning needs better color constrast; comment provided on SAM-822
+SAM-1431 Duplicating Tests crashes sites on publish
+LS-67 Spell quizes correctly
+SAM-1475 Published Test Can Change Settings to Save to GB Item that already exists
+SAM-1535 Mutliple Choice Partial Credit: Checkmark and cross marks show up when it shouldn't
+LS-4 Test Description 60k limit; patch submitted but not committed on SAM-1200
+SAM-1532 Can't update published tests settings when tied to Gradebook
+SAM-1541 MarkupText assessment creation doesn't use default (or selected) template
+SAM-1552 Question Statistics Links go missing when a section doesn't have metadata
+SAM-1398 Default the "Release to" to Site if the imported assessment release to group
+SAM-948 'Minimum value' option for questions
+SEMS-46 Grammatical Error in samigo
+SAM-1299 Use the new kernel API to participate in Reference Migration during Site Import
+SAM-1232 Accessibility: Many Question Types Marked-Up Entirely As a Level 5 Heading
+SAM-1205 SAMigo integration with Respondus LockDown Browser
+SAM-1251 LS-111: print to pdf failing
+LS-112: Allow 60k chars instead of 4k chars for Part Information textarea
+SAM-1393 Timer starts even if the username and password is not correct
+SAM-1677 to longsight branch of samigo
+LS-127 Make samigo aware of special scorm player window values to prevent standard 'Continue' redirect behavior

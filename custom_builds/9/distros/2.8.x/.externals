@@ -1,0 +1,20 @@
+#Customizations
+blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.1.x_features-backport/
+evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.3.x_features-backport
+gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.8.x_features-backport/
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-1.2.x_features-backport/
+mailtool https://source.sakaiproject.org/svn/mailtool/branches/sakai-2.8.x
+melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_features-backport/
+msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-2.8.x-features-backport/
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.8.x-tabbed-interface/
+lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/lessonbuilder-1.4.x_feature-backport/
+turnitin https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl
+web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/9/web/web-2.8.x
+
+#FCKEditor Prefs:
+entity-browser
+mathedit
+
+#additional jars
+jldap-resurce-rdn-28

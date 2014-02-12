@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<registration>
+
+	<tool
+			id="sakai.iTunesU"
+			title="iTunes U"
+			description="For podcasting">
+
+		<configuration name="source" value="" />
+		<configuration name="height" value="600px" />
+
+		<category name="course" />
+		<category name="project" />
+		<category name="portfolio" />
+		
+		<!-- only shown when editing the tool from Admin's Workspace -->
+		<configuration name="target_site_id" value="" />
+		<configuration name="admin_role" value="" />
+		
+		<!-- credential related setting, varied among universities -->
+		<configuration name="credentialString" value="@urn:mace:itunesu.com:sites:" />
+		
+		<!-- store the handle value with the tool instance for faster retrieval -->
+		<configuration name="iTunesUHandle" value="" />
+
+	</tool>
+
+</registration>

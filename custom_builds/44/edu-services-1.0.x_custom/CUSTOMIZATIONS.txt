@@ -1,0 +1,3 @@
+Drop lowest functionality
+Custom grading scale - no A+, also HSU and SU scales
+SAK-21528 Gradebook Service ignores dropped scores

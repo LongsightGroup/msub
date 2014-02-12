@@ -1,0 +1,2 @@
+LS-62 Add Times and New as good attributes for formattedtext
+

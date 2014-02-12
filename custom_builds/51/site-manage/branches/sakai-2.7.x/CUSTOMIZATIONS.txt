@@ -1,0 +1,6 @@
+Various text changes
+SAK-688 Better UI for site access options in worksite setup
+SAK-18387 confused users leading to security problems
+SAK-18462 Ability to restrict joiner role selection to non-maintainer roles
+SAK-20457 When removing roster from a site, Instructors can unintentionally remove themselves
+SAK-19302 Create sites to be 'Private' by default

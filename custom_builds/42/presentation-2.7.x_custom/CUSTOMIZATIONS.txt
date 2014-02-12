@@ -1,0 +1,1 @@
+Text Changes at tool/src/bundle/org/theospi/portfolio/presentation/bundle/Messages.properties

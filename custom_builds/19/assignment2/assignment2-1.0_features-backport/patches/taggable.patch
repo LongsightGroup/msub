@@ -1,0 +1,37 @@
+diff -urB taggable-2.9.x/pom.xml taggable-2.9.x_2.8.x/pom.xml
+--- taggable-2.9.x/pom.xml	2011-04-06 15:00:13.552794133 -0400
++++ taggable-2.9.x_2.8.x/pom.xml	2011-04-06 15:00:13.552794133 -0400
+@@ -4,12 +4,13 @@
+   <parent>
+     <artifactId>base</artifactId>
+     <groupId>org.sakaiproject</groupId>
+-    <version>2.9-SNAPSHOT</version>
+-    <relativePath>../pom.xml</relativePath>
++    <version>{SAKAI_VERSION}</version>
++    <relativePath>../../../pom.xml</relativePath>
+   </parent>
+   <name>Sakai Taggable Project</name>
+   <groupId>org.sakaiproject</groupId>
+   <artifactId>taggable-base</artifactId>
++  <version>2.9-SNAPSHOT</version>
+   <packaging>pom</packaging>
+   <scm>
+     <connection>scm:svn:https://source.sakaiproject.org/contrib/syracuse/taggable/trunk</connection>
+@@ -26,6 +27,17 @@
+     <dependencies>
+       <dependency>
+         <groupId>org.sakaiproject</groupId>
++        <artifactId>sakai-taggable-api</artifactId>
++        <version>2.9-SNAPSHOT</version>
++        <scope>provided</scope>
++      </dependency>
++      <dependency>
++        <groupId>org.sakaiproject</groupId>
++        <artifactId>sakai-taggable-pack</artifactId>
++        <version>2.9-SNAPSHOT</version>
++      </dependency>
++      <dependency>
++        <groupId>org.sakaiproject</groupId>
+         <artifactId>sakai-taggable-hbm</artifactId>
+         <version>2.9-SNAPSHOT</version>
+         <scope>provided</scope>

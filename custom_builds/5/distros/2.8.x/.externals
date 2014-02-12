@@ -1,0 +1,8 @@
+#Customizations
+content https://source.sakaiproject.org/svn/msub/longsight.com/content/content-2.8.x_features-backport/
+edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.1.x_features-backport/
+gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.8.x_features-backport/
+jsf https://source.sakaiproject.org/svn/msub/longsight.com/jsf/jsf-2.8.x_features-backport/
+msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-2.8.x-features-backport/
+samigo  https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.8.x-tabbed-interface
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.8.x_features-backport/

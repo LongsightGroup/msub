@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>sam-base</artifactId>
+    <groupId>org.sakaiproject</groupId>
+    <version>2.6-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <name>Sakai Samigo Audio Recorder</name>
+  <groupId>org.sakaiproject</groupId>
+  <artifactId>sakai-samigo-audio</artifactId>
+  <organization>
+    <name>Sakai Project</name>
+    <url>http://sakaiproject.org/</url>
+  </organization>
+  <inceptionYear>2005</inceptionYear>
+  <packaging>jar</packaging>
+  <properties>
+    <deploy.target/>
+  </properties>
+
+  <dependencies>
+	  <dependency>
+		  <groupId>liveconnect</groupId>
+		  <artifactId>plugin</artifactId>
+      <version>1.5</version>
+	  </dependency>
+  </dependencies>
+
+  <build>
+<!--
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+           <execution>
+              <goals>
+                 <goal>sign</goal>
+              </goals>
+           </execution>
+        </executions>
+        <configuration>
+           <keystore>C:/tmp/.keystore</keystore>
+           <alias>audioApplet</alias>
+           <storepass>mypassword</storepass>
+           <verify>true</verify>
+        </configuration>
+      </plugin>
+    </plugins>
+-->
+    <resources>
+      <resource>
+        <directory>${basedir}/src/java</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+  </build>
+</project>

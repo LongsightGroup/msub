@@ -1,0 +1,12 @@
+SAK-23597 - (Feature) Show short description of site near title
+SAK-23596 - The variable siteId was added by the neoportal/portal chat in the vm but not the context
+SAK-19464 - portal.use.dhtml.more=true has a strange default sort order (i.e. no portal.term.order has been defined)
+SAK-23783 - View ll link on dropdowns should indicate actual action
+SAK-23673 - Portal more site view incorrect display
+SAK-23718 - Portal Navigation Menu: Static Categorization of Tools
+SAK-23858 - Change label of select row to view site as to save space
+
+#client customizaitons
+LS-160 Custom portal rendering
+
+
