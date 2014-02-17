@@ -81,7 +81,7 @@ blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+hierarchy -r 84082 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/122/site-manage/site-manage-2.9.x
