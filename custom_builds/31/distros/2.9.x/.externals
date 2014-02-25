@@ -77,7 +77,7 @@ blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches
 EntityBrowser https://source.sakaiproject.org/contrib/asu/EntityBrowser/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.8_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6
+hierarchy -r 84082 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport
 # don't want the latest features or their conversions
