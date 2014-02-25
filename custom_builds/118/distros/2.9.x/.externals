@@ -83,7 +83,7 @@ delegatedaccess https://source.sakaiproject.org/contrib/delegatedaccess/trunk/
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6/
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
