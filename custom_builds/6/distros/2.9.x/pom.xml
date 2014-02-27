@@ -132,7 +132,6 @@
                 <module>evaluation</module>
                 <module>da_evalprovider</module>
                 <module>signup</module>
-                <module>formbuilder</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
                 <module>content-review/contentreview-impl</module>
         	<module>etudes-util</module>
