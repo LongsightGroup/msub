@@ -130,7 +130,6 @@
                 <module>blogwow</module>
                 <module>hierarchy</module>
                 <module>evaluation</module>
-                <module>delegatedaccess</module>
                 <module>da_evalprovider</module>
                 <module>signup</module>
                 <module>formbuilder</module>
