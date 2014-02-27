@@ -76,7 +76,7 @@
                 <module>profile2</module>
                 <module>reset-pass</module>
                 <module>samigo</module>
-                <module>search</module>
+                <!--module>search</module-->
                 <module>shortenedurl</module>
                 <module>sitestats</module>
                 
