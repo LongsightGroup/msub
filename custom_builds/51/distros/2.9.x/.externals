@@ -78,7 +78,7 @@ edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services
 etudes-util https://source.sakaiproject.org/contrib/etudes/etudes-util/tags/1.0.8
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_iRubric
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6
 itunesu-tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/itunesu-2.9.x_custom
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
