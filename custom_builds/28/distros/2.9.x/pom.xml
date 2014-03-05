@@ -135,7 +135,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>signup</module>
-                <module>formbuilder</module>
+                <!--module>formbuilder</module-->
             </modules>
         </profile>
         <profile>
