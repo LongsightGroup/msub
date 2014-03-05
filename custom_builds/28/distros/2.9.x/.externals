@@ -84,7 +84,7 @@ etudes-util https://source.sakaiproject.org/contrib/etudes/etudes-util/tags/1.0.
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 formbuilder https://source.sakaiproject.org/contrib/ucf/formbuilder/trunk/
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+hierarchy -r 84082 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
