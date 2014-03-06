@@ -129,11 +129,9 @@
                 <module>web</module>
                 <module>blogwow</module>
                 <module>hierarchy</module>
-                <module>delegatedaccess</module>
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>evaluation</module>
-                <module>da_evalprovider</module>
             </modules>
         </profile>
         <profile>
