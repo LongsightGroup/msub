@@ -85,7 +85,7 @@ blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches
 #entity browser
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.8_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6
+hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6
 #LB: https://jira.longsight.com/browse/LS-122 may be able to fix via css
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/78/providers/sakai-2.9.x
