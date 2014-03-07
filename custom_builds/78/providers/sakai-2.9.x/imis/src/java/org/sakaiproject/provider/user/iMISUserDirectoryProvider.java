@@ -231,7 +231,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
                        edit.setLastName(userId);
                        edit.setEmail(userId);
                        edit.setPassword(userId);
-                       edit.setType("registered");
+                       edit.setType("member");
                }
                else
                {                   
@@ -273,7 +273,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
                      edit.setLastName(lastStr);
                      edit.setEmail(emailStr);
                      edit.setPassword(""); //TODO - does this have to be set correctly? Does it matter since authenticateUser will be consulted anyway?
-                     edit.setType("student");
+                     edit.setType("member");
                      
                    } catch (Exception e) {
                        e.printStackTrace();
@@ -513,7 +513,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
                      user.setLastName(lastStr);
                      user.setEmail(emailStr);
                      user.setPassword("ffdsfsgsjhdfvdsfvhdsvc"); //TODO - does this have to be set correctly? 
-                     user.setType("student");
+                     user.setType("member");
                      
                      users.add(user);
                      
