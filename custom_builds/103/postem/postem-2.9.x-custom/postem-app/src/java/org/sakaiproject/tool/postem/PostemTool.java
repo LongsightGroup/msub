@@ -30,7 +30,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import java.util.logging.Logger;
+
 import java.util.zip.DataFormatException;
 
 import javax.faces.FactoryFinder;
@@ -58,13 +58,14 @@ import org.sakaiproject.tool.cover.SessionManager;
 import org.sakaiproject.tool.cover.ToolManager;
 import org.sakaiproject.util.ResourceLoader;
 
+import org.sakaiproject.user.api.User;
+
 import org.sakaiproject.user.cover.UserDirectoryService;
 import org.sakaiproject.user.api.UserNotDefinedException;
 
 public class PostemTool {
+
 	protected GradebookManager gradebookManager;
-	
-	// protected Logger logger = Logger.getLogger(PostemTool.class);
 
 	protected ArrayList gradebooks;
 
@@ -111,8 +112,6 @@ public class PostemTool {
 	private static final String COMMA_DELIM_STR = "comma";
 	private static final String TAB_DELIM_STR = "tab";
 
-	protected Logger logger = null;
-	
 	protected StudentGrades currentStudent;
 
 	// protected String release = "yes";
@@ -128,10 +127,6 @@ public class PostemTool {
 
 	private static final Log LOG = LogFactory.getLog(PostemTool.class);
 	
-	public void setLogger(Logger logger) {
-		this.logger = logger;
-	}
-
 	public int getColumn() {
 		return column;
 	}
@@ -996,10 +991,13 @@ public class PostemTool {
 			row++;
 			String usr = (String) studentIter.next();
 			
+			LOG.info("usernamesValid : username=" + usr);
+            LOG.info("usernamesValid : siteMembers" + siteMembers);
 			if (usr == null || usr.equals("")) {
+
 				usersAreValid = false;
 				blankRows.add(new Integer(row));
-			} else if(siteMembers == null || (siteMembers != null && !siteMembers.contains(getUserId(usr)))) {
+			} else if(siteMembers == null || (siteMembers != null && !siteMembers.contains(getUserDefined(usr)))) {
 				  usersAreValid = false;
 				  invalidUsernames.add(usr);
 			}	
@@ -1066,15 +1064,31 @@ public class PostemTool {
 		return placement.getContext();
 	}
 	
-	private String getUserId(String usr)
-	{
-		try	{
-			return UserDirectoryService.getUserId(usr);
-		} 
-		catch (UserNotDefinedException e) {
-			return usr;
-		}
-	}
+    private String getUserDefined(String usr)
+    {
+        String userId = usr;
+        User userinfo;
+        try	{
+            //String ret = UserDirectoryService.getUserId(usr);
+            userinfo = UserDirectoryService.getUser(usr);
+            userId = userinfo.getId();
+            LOG.info("getUserId: username for " + usr + " is " + userId);
+            return userId;
+        } 
+        catch (UserNotDefinedException e) {
+            try
+            {
+                // try with the user eid
+                userinfo = UserDirectoryService.getUserByEid(usr);
+                userId = userinfo.getId();
+            }
+            catch (UserNotDefinedException ee)
+            {
+                LOG.info("User Not Defined" + userId);
+            }
+        }
+        return userId;
+    }
 	
 	private List getSiteMembers() {
 		List siteMembers = new ArrayList();
