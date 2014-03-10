@@ -1,0 +1,48 @@
+SAM-1239 Properties wording change for data_discrepancy_1
+SAM-1330 Allow disabling of browser-based data discrepancy errors
+SAM-1402 Mutliple Choice: All or Nothing option
+SAM-948 'Minimum value' option for questions
+SEMS-39 Turn off warning to users of Edited Quiz
+LS-66 Samigo 5-min warning needs better color constrast; comment provided on SAM-822
+LS-67 Spell quizes correctly
+LS-4 Test Description 60k limit; patch submitted but not committed on SAM-1200
+LS-112 Allow 60k chars instead of 4k chars for Part Information textarea
+SAM-1256 Add classes to metadata tables to make it easy to hide them in question pools add/edit screens
+SAM-1755 Firefox 13 deprecated use of -moz-border prefix
+SAM-1257 Move action labels to CommonMessages bundles
+r110699: Merging r106906 through r110698 into sam backport
+SAM-1733 use jquery ui accordion for settings pages
+LS-136 fill in the blank plus question type comming from a bb import 
+LS-145 Set Samigo Feedback Text field limit to 60k 
+SAK-22283 iSyllabus linking and link migration
+SAM-1604 Edit random draw questions in published assessments
+SAM-1544 Remove Submit button from all question pages except last page in non-anonymous URL delivery
+SAM-2128 Modify the auto submit job to handle errors and continue
+SAM-2147 Do not allow instructors to edit or remove a published test after any activity
+SAM-2139 IMS QTI hitting an NPE
+SAM-1117 Option to Not Display how many points question worth in assessments
+SAM-1751 Add Honor Pledge Option like the Assignments Tool has
+SAM-1362 Expand instructions for Average Grading Submissions page
+SAM-2188 Expand Collapse All for samigo settings
+SAM-1806 Samigo script error IE9
+SAM-2066 Multiple-choice answers using CKeditor cause unwanted line break
+SAM-2126 Alignment issue when viewing submissions which contain Survey or Multiple choice questions
+SAM-2210 getEntities of assessment entity provider NPE if no permissions
+LS-164 Answer feedback is wrong b/c of rounding error *not needed for 2.10
+SAM-1298 Multiple question types do not show up under Item Analysis
+SAM-2192 Change a sub-query to two separate queries
+SAM-2247 Minor change to hibernate template to not do a subquery retrieve
+SAM-2199 More batch retrieval code
+SAM-2056 Better usability in jquery ui
+SEMS-72 Fix author settings issues with expand-all and groups
+SAK-25677 store JSF session data on client not server
+SAM-2281 NPE for ResourceLoader
+SAM-2273 Update poi, joda-time versions
+SAM-2220 Cannot set incorrect feedback after assessment has been published
+----------------------
+Removed from backport
+----------------------
+SAM-2185 Mark For Review Doesn't Save Answer
+  * Merged into 2.9.x in r128449
+SAM-1994 - FIB shows green checkmark on incorrect answers after pressing update
+  * Superceded by SAM-973
