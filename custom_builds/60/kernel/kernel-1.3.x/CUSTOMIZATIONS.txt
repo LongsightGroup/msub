@@ -1,0 +1,1 @@
+KNL-999 Ability to hide a folder while allowing access to files inside it
