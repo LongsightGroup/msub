@@ -490,7 +490,7 @@ public class PublishedItemData
   */
    public String getText() {
      String text = "";
-     if (getTypeId().equals(TypeIfc.MATCHING) || getTypeId().equals(TypeIfc.MATRIX_CHOICES_SURVEY))
+     if (getTypeId().equals(TypeIfc.MATCHING) || getTypeId().equals(TypeIfc.MATRIX_CHOICES_SURVEY) || getTypeId().equals(TypeIfc.IMAGEMAP_QUESTION))
        return instruction;
      Set set = this.getItemTextSet();
      Iterator iter = set.iterator();
@@ -788,4 +788,8 @@ public class PublishedItemData
  public void setMinScore(Float minScore) {
          this.minScore = minScore;
  }
+  
+  public String getImageMapSrc() {
+    return getItemMetaDataByLabel(ItemMetaDataIfc.IMAGE_MAP_SRC);
+  }
 }

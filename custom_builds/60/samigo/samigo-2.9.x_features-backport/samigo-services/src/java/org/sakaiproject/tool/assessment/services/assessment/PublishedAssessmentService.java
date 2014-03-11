@@ -47,6 +47,7 @@ import org.sakaiproject.tool.assessment.data.ifc.assessment.ItemTextIfc;
 import org.sakaiproject.tool.assessment.data.ifc.assessment.PublishedAssessmentIfc;
 import org.sakaiproject.tool.assessment.data.ifc.assessment.SectionAttachmentIfc;
 import org.sakaiproject.tool.assessment.data.ifc.assessment.SectionDataIfc;
+import org.sakaiproject.tool.assessment.data.ifc.shared.TypeIfc;
 import org.sakaiproject.tool.assessment.facade.AgentFacade;
 import org.sakaiproject.tool.assessment.facade.AssessmentFacade;
 import org.sakaiproject.tool.assessment.facade.AssessmentFacadeQueriesAPI;
@@ -508,6 +509,28 @@ public class PublishedAssessmentService extends AssessmentService{
 	      }
 	    }
 	    return map;
+  }
+  
+  /**
+   * IMAGEMAP_QUESTION
+   * @param publishedAssessment
+   * @return the map of item id -> item for image map questions in this map
+   */
+  public HashMap prepareImagQuestionItemHash(PublishedAssessmentIfc publishedAssessment){
+      // CALCULATED_QUESTION
+      HashMap map = new HashMap();
+      ArrayList sectionArray = publishedAssessment.getSectionArray();
+      for (int i=0;i<sectionArray.size(); i++) {
+          SectionDataIfc section = (SectionDataIfc) sectionArray.get(i);
+          List<ItemDataIfc> itemArray = section.getItemArray();
+          for (int j=0;j<itemArray.size(); j++) {
+              ItemDataIfc item = itemArray.get(j);
+              if (item.getTypeId().equals(TypeIfc.IMAGEMAP_QUESTION)) { // IMAGEMAP_QUESTION
+                  map.put(item.getItemId(), item);
+              }
+          }
+      }
+      return map;
   }
   
   public HashMap prepareMCMRItemHash(PublishedAssessmentIfc publishedAssessment){

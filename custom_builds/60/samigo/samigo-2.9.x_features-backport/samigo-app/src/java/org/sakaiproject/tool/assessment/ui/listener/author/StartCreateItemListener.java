@@ -38,6 +38,7 @@ import org.sakaiproject.tool.assessment.facade.AssessmentFacade;
 import org.sakaiproject.tool.assessment.facade.TypeFacade;
 import org.sakaiproject.tool.assessment.services.assessment.AssessmentService;
 import org.sakaiproject.tool.assessment.ui.bean.author.AssessmentBean;
+import org.sakaiproject.tool.assessment.ui.bean.author.ImageMapItemBean;
 import org.sakaiproject.tool.assessment.ui.bean.author.ItemAuthorBean;
 import org.sakaiproject.tool.assessment.ui.bean.author.ItemBean;
 import org.sakaiproject.tool.assessment.ui.bean.author.MatchItemBean;
@@ -216,6 +217,11 @@ log.debug("after getting item.getItemType() ");
       			item.setMatchItemBeanList(new ArrayList());
                         nextpage = "matchingItem";
                         break;
+                case 16: // IMAGEMAP_QUESTION
+                    ImageMapItemBean imgbean = new ImageMapItemBean();
+          			item.setImageMapItemBeanList(new ArrayList());
+                            nextpage = "imageMapItem";
+                            break;
                 case 10:
     			QuestionPoolBean qpoolBean= (QuestionPoolBean) ContextUtil.lookupBean("questionpool");
 			qpoolBean.setImportToAuthoring(true);

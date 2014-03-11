@@ -132,7 +132,8 @@ table.checkall td {padding-top:0px;padding-bottom:0px;margin-top:0px;margin-bott
      <h:outputText rendered="#{question.typeId== 11}" value="#{authorMessages.fill_in_numeric}"/>
      <h:outputText rendered="#{question.typeId== 12}" value="#{authorMessages.multiple_choice_type}"/>
      <h:outputText rendered="#{question.typeId== 13}" value="#{authorMessages.matrix_choice_surv}"/>
-
+	 <h:outputText rendered="#{question.typeId== 16}" value="#{authorMessages.image_map_question}"/><!-- // IMAGEMAP_QUESTION -->
+	
     </h:column>
 
     <h:column id="colimport" rendered="#{questionpool.importToAuthoring == 'true'}" >

@@ -75,6 +75,8 @@ import org.sakaiproject.tool.assessment.services.assessment.PublishedAssessmentS
 import org.sakaiproject.tool.assessment.ui.bean.author.AnswerBean;
 import org.sakaiproject.tool.assessment.ui.bean.author.AssessmentBean;
 import org.sakaiproject.tool.assessment.ui.bean.author.AuthorBean;
+import org.sakaiproject.tool.assessment.ui.bean.author.ImageMapItemBean;
+import org.sakaiproject.tool.assessment.ui.bean.author.ImageMapQuestionAnswerIfc;
 import org.sakaiproject.tool.assessment.ui.bean.author.ItemAuthorBean;
 import org.sakaiproject.tool.assessment.ui.bean.author.ItemBean;
 import org.sakaiproject.tool.assessment.ui.bean.author.MatchItemBean;
@@ -109,7 +111,6 @@ public class ItemAddListener
    * @throws AbortProcessingException
    */
   public void processAction(ActionEvent ae) throws AbortProcessingException {
-
     //boolean correct=false;
 
     log.debug("ItemAdd LISTENER.");
@@ -124,13 +125,15 @@ public class ItemAddListener
    
     // SAK-6050
     // if((!iType.equals(TypeFacade.MATCHING.toString())&&((iText==null)||(iText.replaceAll("<.*?>", "").trim().equals(""))))|| (iType.equals(TypeFacade.MATCHING.toString()) && ((iInstruction==null)||(iInstruction.replaceAll("<.*?>", "").trim().equals(""))))){
-    if((!iType.equals(TypeFacade.MATCHING.toString())&&((iText==null)||(iText.toLowerCase().replaceAll("<^[^(img)]*?>", "").trim().equals(""))))|| (iType.equals(TypeFacade.MATCHING.toString()) && ((iInstruction==null)||(iInstruction.toLowerCase().replaceAll("<^[^(img)]*?>", "").trim().equals(""))))){ 
-	
- 
-	String emptyText_err = ContextUtil.getLocalizedString("org.sakaiproject.tool.assessment.bundle.AuthorMessages","emptyText_error");     
-	context.addMessage(null,new FacesMessage(emptyText_err));
-	return;
 
+    if((!iType.equals(TypeFacade.MATCHING.toString())&&((iText==null)||(iText.toLowerCase().replaceAll("<^[^(img)]*?>", "").trim().equals(""))))|| (iType.equals(TypeFacade.MATCHING.toString()) && ((iInstruction==null)||(iInstruction.toLowerCase().replaceAll("<^[^(img)]*?>", "").trim().equals(""))))){ 
+ 
+    	// Like Matching CaculatedQuestion will also use Instruction instead of itemText
+    	if ( !iType.equals(TypeFacade.IMAGEMAP_QUESTION.toString()) ) {
+			String emptyText_err = ContextUtil.getLocalizedString("org.sakaiproject.tool.assessment.bundle.AuthorMessages","emptyText_error");     
+			context.addMessage(null,new FacesMessage(emptyText_err));
+			return;
+    	}
     }   
    
     if(iType.equals(TypeFacade.MULTIPLE_CHOICE.toString()))
@@ -235,6 +238,19 @@ public class ItemAddListener
     	}
     } 
 
+    if (iType.equals(TypeFacade.IMAGEMAP_QUESTION.toString())) {
+    	   
+        ArrayList l=item.getImageMapItemBeanList();
+   	    if (l==null || l.size()==0){
+   		String noPairImageMap_err=ContextUtil.getLocalizedString("org.sakaiproject.tool.assessment.bundle.AuthorMessages","noImageMapPair_error");
+   		context.addMessage(null,new FacesMessage(noPairImageMap_err));
+   		error=true;
+   	    
+    	}
+   	 if(error)
+   		return;
+    }
+    
 	try {
 		saveItem(itemauthorbean);
 	}
@@ -621,14 +637,18 @@ public class ItemAddListener
               }
       }
       else {
-    	  //prepare itemText, including answers
+    	  
+       	  //prepare itemText, including answers
     	  if (item.getTypeId().equals(TypeFacade.MATCHING)) {
-    		  item.setItemTextSet(prepareTextForMatching(item, bean, itemauthor));
-    	  }
+                item.setItemTextSet(prepareTextForMatching(item, bean, itemauthor));
+          }
     	  else if(item.getTypeId().equals(TypeFacade.MATRIX_CHOICES_SURVEY)) {
     		  item.setItemTextSet(prepareTextForMatrixChoice(item, bean, itemauthor));
     	  }
-    	  else {
+    	  else if(item.getTypeId().equals(TypeFacade.IMAGEMAP_QUESTION)) {
+	          item.setItemTextSet(prepareTextForImageMapQuestion(item, bean, itemauthor));
+	  	  }
+    	  else {  //Other Types
     		  item.setItemTextSet(prepareText(item, bean, itemauthor));
     	  }
     	  
@@ -704,7 +724,6 @@ public class ItemAddListener
       }
       else {
         // Came from Assessment Authoring
-
         AssessmentService assessdelegate;
         if (isEditPendingAssessmentFlow) {
         	assessdelegate = new AssessmentService();
@@ -1174,6 +1193,50 @@ public class ItemAddListener
 		return textSet;
 	} 
 
+	  
+	  /**
+	   * prepareTextForImageMapQestion 
+	   * @param item
+	   * @param bean
+	   * @param itemauthor
+	   * @return
+	   */
+	private Set<ItemText> prepareTextForImageMapQuestion(ItemFacade item, ItemBean bean, ItemAuthorBean itemauthor) {
+		ArrayList<ImageMapItemBean>imageMapItemBeanList = bean.getImageMapItemBeanList();
+		HashSet<ItemText> textSet = new HashSet<ItemText>();
+
+		for(ImageMapItemBean choicebean : imageMapItemBeanList)
+		{
+			ItemText choicetext = new ItemText();
+			choicetext.setItem(item.getData()); // all set to the same
+			choicetext.setSequence(choicebean.getSequence());
+			choicetext.setText(stripPtags(choicebean.getChoice()));
+
+			HashSet<Answer> answerSet = new HashSet<Answer>();
+
+			// correct answer
+			Answer  answer = new Answer((ItemTextIfc) choicetext, 
+						stripPtags(choicebean.getMatch()), 
+						choicebean.getSequence(), 
+					        AnswerBean.getChoiceLabels(choicebean.getSequence().intValue() - 1)[choicebean.getSequence().intValue() - 1], 
+						Boolean.TRUE, 
+						null, 
+					        Float.valueOf(bean.getItemScore()), 
+						Float.valueOf(0.0f), 
+						Float.valueOf(bean.getItemDiscount()));
+			HashSet<AnswerFeedback> answerFeedbackSet = new HashSet<AnswerFeedback>();
+			answerFeedbackSet.add(new AnswerFeedback(answer, AnswerFeedbackIfc.CORRECT_FEEDBACK, stripPtags(choicebean.getCorrImageMapFeedback())));
+			answerFeedbackSet.add(new AnswerFeedback(answer, AnswerFeedbackIfc.INCORRECT_FEEDBACK, stripPtags(choicebean.getIncorrImageMapFeedback())));
+			answer.setAnswerFeedbackSet(answerFeedbackSet);
+			answerSet.add(answer);
+			choicetext.setAnswerSet((HashSet)answerSet);
+			textSet.add(choicetext);
+		}
+		return textSet;
+	}
+	   
+	  
+	  
   private Set preparePublishedText(ItemFacade item, ItemBean bean, ItemService delegate) throws FinFormatException{
 
 	  if (item.getTypeId().equals(TypeFacade.TRUE_FALSE)) {
@@ -1198,6 +1261,9 @@ public class ItemAddListener
 	  }
 	  else if (item.getTypeId().equals(TypeFacade.MATCHING)) {
 		  preparePublishedTextForMatching(item, bean, delegate);
+	  }
+	  else if (item.getTypeId().equals(TypeFacade.IMAGEMAP_QUESTION)) {
+	      preparePublishedTextForImageMapQuestion(item, bean, delegate);
 	  }
 	  else if(item.getTypeId().equals(TypeFacade.MATRIX_CHOICES_SURVEY)) {
 		  preparePublishedTextForMatrixSurvey(item,bean,delegate);
@@ -1421,6 +1487,132 @@ public class ItemAddListener
 		}
   }
   
+  private void preparePublishedTextForImageMapQuestion(ItemFacade item, ItemBean bean, ItemService delegate) {
+		Set textSet = item.getItemTextSet();
+		Iterator textIter = textSet.iterator();
+		HashMap itemTextMap = new HashMap();
+		while (textIter.hasNext()) {
+			ItemTextIfc itemText = (ItemTextIfc) textIter.next();
+			itemTextMap.put(itemText.getSequence(), itemText);
+		}
+		
+		ArrayList<ImageMapItemBean>imageMapItemBeanList = bean.getImageMapItemBeanList();
+		
+		Set answerSet = null;
+		ItemTextIfc choicetext = null;
+		AnswerIfc answer = null;
+		Long choiceSequence = null;
+		Long matchSequence = null;
+
+		for(ImageMapItemBean choicebean : imageMapItemBeanList)
+		{
+			choiceSequence = choicebean.getSequence();
+			if (itemTextMap.get(choiceSequence) == null) {
+				// new - add it in
+				choicetext = new PublishedItemText();
+				choicetext.setItem(item.getData()); // all set to the same
+				choicetext.setSequence(choicebean.getSequence());
+				choicetext.setText(stripPtags(choicebean.getChoice()));
+			} else {
+				choicetext = (ItemTextIfc) itemTextMap.get(choiceSequence);
+				choicetext.setText(choicebean.getChoice());
+			}
+			HashMap answerMap = new HashMap();
+			answerSet = choicetext.getAnswerSet();
+			if (answerSet != null) {
+				Iterator answerIter = answerSet.iterator();
+				while (answerIter.hasNext()) {
+					answer = (AnswerIfc) answerIter.next();
+					answerMap.put(answer.getSequence(), answer);
+				}
+			}
+			else {
+				answerSet = new HashSet();
+				choicetext.setAnswerSet(answerSet);
+				textSet.add(choicetext);
+			}
+			
+			matchSequence = choicebean.getSequence();
+			if (answerMap.get(matchSequence) == null) {
+				// new - add it in
+
+				// correct answer
+				answer = new PublishedAnswer( (ItemTextIfc) choicetext, 
+						stripPtags(choicebean.getMatch()), 
+						choicebean.getSequence(), 
+						AnswerBean.getChoiceLabels()[choicebean.getSequence().intValue() - 1], 
+						Boolean.TRUE, 
+						null, 
+						Float.valueOf(bean.getItemScore()), 
+						Float.valueOf(0.0f), 
+						Float.valueOf(bean.getItemDiscount()));
+				
+				Set<AnswerFeedbackIfc> answerFeedbackSet = new HashSet<AnswerFeedbackIfc>();
+				answerFeedbackSet.add(new PublishedAnswerFeedback(answer, AnswerFeedbackIfc.CORRECT_FEEDBACK, stripPtags(choicebean.getCorrImageMapFeedback())));
+				answerFeedbackSet.add(new PublishedAnswerFeedback(answer, AnswerFeedbackIfc.INCORRECT_FEEDBACK, stripPtags(choicebean.getIncorrImageMapFeedback())));
+				answer.setAnswerFeedbackSet(answerFeedbackSet);
+				answerSet.add(answer);
+				
+			} else {
+				answer = (AnswerIfc) answerMap.get(matchSequence);
+				answer.setScore(Float.valueOf(bean.getItemScore()));
+				String oneAnswer = stripPtags(choicebean.getMatch());
+				String oneLabel = AnswerBean.getChoiceLabels()[matchSequence
+					.intValue() - 1];
+				log.debug("oneAnswer = " + oneAnswer);
+				log.debug("oneLabel = " + oneLabel);
+				answer.setText(oneAnswer);
+				answer.setLabel(oneLabel);
+				// for new answers above, the default is true, not clear if we need to do something fancier here.
+				answer.setIsCorrect(Boolean.TRUE);
+				Set answerFeedbackSet = answer.getAnswerFeedbackSet();
+				Iterator answerFeedbackIter = answerFeedbackSet.iterator();
+				String feedback = "";
+				while (answerFeedbackIter.hasNext()) {
+					AnswerFeedbackIfc answerFeedback = (AnswerFeedbackIfc) answerFeedbackIter
+						.next();
+					if (answerFeedback.getTypeId().equals(AnswerFeedbackIfc.CORRECT_FEEDBACK)) {
+						answerFeedback.setText(stripPtags(choicebean.getCorrImageMapFeedback()));
+					}
+					else if (answerFeedback.getTypeId().equals(AnswerFeedbackIfc.INCORRECT_FEEDBACK)) {
+						answerFeedback.setText(stripPtags(choicebean.getIncorrImageMapFeedback()));
+					}
+				}
+			}
+		}
+		
+		int oldSize = textSet.size();
+		int newSize = imageMapItemBeanList.size();
+		if (oldSize > newSize) {
+			HashSet toBeRemovedTextSet = new HashSet();
+			HashSet toBeRemovedAnswerSet = new HashSet();
+			// Need to remove from answer too
+			for (int i = 1; i < newSize + 1; i++) {
+				ItemTextIfc text = (ItemTextIfc) itemTextMap.get(Long.valueOf(i));
+				answerSet = text.getAnswerSet();
+				if (answerSet != null) {
+					Iterator answerIter = answerSet.iterator();
+					while (answerIter.hasNext()) {
+						answer = (AnswerIfc) answerIter.next();
+						for (int j = newSize + 1; j < oldSize + 1; j++) {
+							if (answer.getSequence().intValue() == j) {
+								toBeRemovedAnswerSet.add(answer);
+							}
+						}
+					}
+					answerSet.removeAll(toBeRemovedAnswerSet);
+					delegate.deleteSet(toBeRemovedAnswerSet);
+				}
+			}
+			for (int i = newSize + 1; i < oldSize + 1; i++) {
+				ItemTextIfc text = (ItemTextIfc) itemTextMap.get(Long.valueOf(i));
+				toBeRemovedTextSet.add(text);
+			}
+			textSet.removeAll(toBeRemovedTextSet);
+			delegate.deleteSet(toBeRemovedTextSet);
+		}
+}
+  
   private void preparePublishedTextForMatching(ItemFacade item,
 			ItemBean bean, ItemService delegate) {
 		Set textSet = item.getItemTextSet();
@@ -1600,6 +1792,19 @@ public class ItemAddListener
 		set.add(new ItemMetaData(item.getData(),
 					ItemMetaDataIfc.RANDOMIZE, bean.getRandomized()));
 		}
+		
+		// Required all ok for Image MAP property got left out, added in metadata
+				if (bean.getRequireAllOk() != null) {
+				set.add(new ItemMetaData(item.getData(),
+							ItemMetaDataIfc.REQUIRE_ALL_OK, bean.getRequireAllOk()));
+				}
+		
+		// The imageMap Image URL added in Metadata
+		if (bean.getImageMapSrc() != null) {
+		set.add(new ItemMetaData(item.getData(),
+					ItemMetaDataIfc.IMAGE_MAP_SRC, bean.getImageMapSrc()));
+		}
+				
 		// MSMC property got left out, added in metadata
 		if (bean.getMcmsPartialCredit() != null) {
 		set.add(new ItemMetaData(item.getData(),
@@ -1697,6 +1902,12 @@ public class ItemAddListener
 		  }
 		  else if (itemMetaData.getLabel().equals(ItemMetaDataIfc.RANDOMIZE)){
 			  itemMetaData.setEntry(bean.getRandomized());
+		  }
+		  else if (itemMetaData.getLabel().equals(ItemMetaDataIfc.REQUIRE_ALL_OK)){
+			  itemMetaData.setEntry(bean.getRequireAllOk());
+		  }
+		  else if (itemMetaData.getLabel().equals(ItemMetaDataIfc.IMAGE_MAP_SRC)){
+			  itemMetaData.setEntry(bean.getImageMapSrc());
 		  }
 		  else if (itemMetaData.getLabel().equals(ItemMetaDataIfc.PREDEFINED_SCALE)){
 			  itemMetaData.setEntry(bean.getScaleName());

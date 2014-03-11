@@ -52,6 +52,7 @@ public interface ItemHelperIfc
   public static final long ITEM_TF = TypeIfc.TRUE_FALSE.longValue();
   public static final long ITEM_MATCHING = TypeIfc.MATCHING.longValue();
   public static final long ITEM_MXSURVEY = TypeIfc.MATRIX_CHOICES_SURVEY.longValue();
+  public static final long ITEM_IMAGMQ = TypeIfc.IMAGEMAP_QUESTION.longValue(); // IMAGEMAP_QUESTION
 
   public String[] itemTypes =
     {
@@ -67,6 +68,7 @@ public interface ItemHelperIfc
     "Numeric Response",
     "Matching",
     "Matrix Choices Survey",
+    "Image Map Question",  // IMAGEMAP_QUESTION
   };
 
   /**

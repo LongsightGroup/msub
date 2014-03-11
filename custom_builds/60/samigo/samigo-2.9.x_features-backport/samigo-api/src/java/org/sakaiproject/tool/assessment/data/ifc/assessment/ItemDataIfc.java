@@ -178,4 +178,6 @@ public interface ItemDataIfc extends java.io.Serializable {
   Boolean getScoreDisplayFlag();
   
   void setScoreDisplayFlag(Boolean scoreDisplayFlag);
+  
+  String getImageMapSrc();
 }

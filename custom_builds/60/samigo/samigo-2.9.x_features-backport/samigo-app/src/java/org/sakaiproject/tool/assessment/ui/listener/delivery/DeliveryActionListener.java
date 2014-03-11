@@ -77,6 +77,7 @@ import org.sakaiproject.tool.assessment.ui.bean.delivery.DeliveryBean;
 import org.sakaiproject.tool.assessment.ui.bean.delivery.FeedbackComponent;
 import org.sakaiproject.tool.assessment.ui.bean.delivery.FibBean;
 import org.sakaiproject.tool.assessment.ui.bean.delivery.FinBean;
+import org.sakaiproject.tool.assessment.ui.bean.delivery.ImageMapQuestionBean;
 import org.sakaiproject.tool.assessment.ui.bean.delivery.ItemContentsBean;
 import org.sakaiproject.tool.assessment.ui.bean.delivery.MatchingBean;
 import org.sakaiproject.tool.assessment.ui.bean.delivery.SectionContentsBean;
@@ -1248,6 +1249,7 @@ public class DeliveryActionListener
       if (randomize && !(item.getTypeId().equals(TypeIfc.FILL_IN_BLANK)||
     		  item.getTypeId().equals(TypeIfc.FILL_IN_NUMERIC) || 
     		  item.getTypeId().equals(TypeIfc.MATRIX_CHOICES_SURVEY)) ||
+    		  item.getTypeId().equals(TypeIfc.IMAGEMAP_QUESTION) || // IMAGEMAP_QUESTION
     		  item.getTypeId().equals(TypeIfc.MATCHING))
       {
             ArrayList shuffled = new ArrayList();
@@ -1313,7 +1315,8 @@ public class DeliveryActionListener
           if ((!item.getPartialCreditFlag() && item.getTypeId().equals(TypeIfc.MULTIPLE_CHOICE)) ||
               item.getTypeId().equals(TypeIfc.MULTIPLE_CORRECT) ||
               item.getTypeId().equals(TypeIfc.MULTIPLE_CORRECT_SINGLE_SELECTION) ||
-              item.getTypeId().equals(TypeIfc.MATCHING))
+              item.getTypeId().equals(TypeIfc.MATCHING) ||
+              item.getTypeId().equals(TypeIfc.IMAGEMAP_QUESTION))
           {
             answer.setLabel(Character.toString(alphabet.charAt(k++)));
             if (answer.getIsCorrect() != null &&
@@ -1536,6 +1539,10 @@ public class DeliveryActionListener
     else if (item.getTypeId().equals(TypeIfc.MATRIX_CHOICES_SURVEY))
     {
     	populateMatrixChoices(item, itemBean, publishedAnswerHash);
+    }
+    else if (item.getTypeId().equals(TypeIfc.IMAGEMAP_QUESTION))
+    {
+        populateImageMapQuestion(item, itemBean, publishedAnswerHash);
     }
     
     return itemBean;
@@ -2005,8 +2012,64 @@ public class DeliveryActionListener
 
   }
 */
+
+  public void populateImageMapQuestion(ItemDataIfc item, ItemContentsBean bean, HashMap publishedAnswerHash)
+  {	
+	bean.setImageSrc(item.getImageMapSrc());
+	
+	Iterator iter = item.getItemTextArraySorted().iterator();
+    int j = 1;
+    ArrayList beans = new ArrayList();
+    ArrayList newAnswers = new ArrayList();
+    while (iter.hasNext())
+    {
+      
+      ItemTextIfc text = (ItemTextIfc) iter.next();
+      ImageMapQuestionBean mbean = new  ImageMapQuestionBean();
+      mbean.setText(Integer.toString(j++) + ". " + text.getText());
+      mbean.setItemText(text);
+      mbean.setItemContentsBean(bean);
+
+      Iterator iter2 = text.getAnswerArraySorted().iterator();
+      
+      ResourceLoader rb = null;
+      if (rb == null) { 	 
+  		rb = new ResourceLoader("org.sakaiproject.tool.assessment.bundle.DeliveryMessages");
+  	  }
+      
+      while (iter2.hasNext())
+      {
+
+        AnswerIfc answer = (AnswerIfc) iter2.next();
+        newAnswers.add(answer.getText());
+      }
+      
+      GradingService gs = new GradingService();
+      
+      iter2 = bean.getItemGradingDataArray().iterator();
+      while (iter2.hasNext())
+      {
+        ItemGradingData data = (ItemGradingData) iter2.next();
+        if (data.getPublishedItemTextId().equals(text.getId()))
+        {
+          mbean.setItemGradingData(data);
+		  mbean.setIsCorrect(data.getIsCorrect());
+          if (data.getAnswerText() != null)
+          {
+            mbean.setResponse(data.getAnswerText());
+          }
+          break;
+        }
+      }
+
+      beans.add(mbean);
+    }
+    bean.setMatchingArray(beans);
+    bean.setAnswers(newAnswers); // Change the answers to just text
   
-  
+  }
+
+
   public String getAgentString(){
     PersonBean person = (PersonBean) ContextUtil.lookupBean("person");
     String agentString = person.getId();

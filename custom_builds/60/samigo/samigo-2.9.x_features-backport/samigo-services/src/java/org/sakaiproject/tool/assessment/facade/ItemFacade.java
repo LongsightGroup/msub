@@ -1061,7 +1061,11 @@ public class ItemFacade implements Serializable, ItemDataIfc, Comparable {
 	  }
 	  return this.data.getPartialCreditFlag();
   }
-
+  
+  public String getImageMapSrc() {
+    return getItemMetaDataByLabel(ItemMetaDataIfc.IMAGE_MAP_SRC);
+  }
+  
   public Float getMinScore() {
 	  try {
 		  this.data = (ItemDataIfc) item.getData();

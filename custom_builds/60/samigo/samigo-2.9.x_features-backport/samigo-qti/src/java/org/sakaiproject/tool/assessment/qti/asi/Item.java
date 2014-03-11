@@ -216,7 +216,7 @@ public class Item extends ASIBaseClass
     }
     
     String instruction = item.getInstruction();
-    if (this.isMatching() || this.isFIB() || this.isFIN() || this.isMXSURVEY())
+    if (this.isMatching() || this.isFIB() || this.isFIN() || this.isMXSURVEY() || this.isImageMapQuestion())
     {
       if ( instruction != null)
         {
@@ -395,6 +395,12 @@ public class Item extends ASIBaseClass
   }
 
 
+  
+  //IMAGEMAP_QUESTION
+  public boolean isImageMapQuestion()
+  {
+	return AuthoringConstantStrings.IMAGMQ.equals(this.getItemType()) ? true : false;
+  }
 
   /**
    * Set the answer texts for item.

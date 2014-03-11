@@ -306,6 +306,7 @@ public class Section extends ASIBaseClass
         ItemDataIfc item = (ItemDataIfc) items.get(i);
         //TypeIfc type = item.getType();
         Long type = item.getTypeId();
+        if ( !(TypeIfc.IMAGEMAP_QUESTION).equals(type)){ //Image Map question is not exported.
         Item itemXml;
         if ( (TypeIfc.MULTIPLE_CHOICE_SURVEY).equals(type))
         {
@@ -321,7 +322,7 @@ public class Section extends ASIBaseClass
         {
           itemXml = itemHelper.readTypeXMLItem(type);
         }
-
+	
         // update item data
         itemXml.setIdent(item.getItemIdString());
         itemXml.update(item);
@@ -331,6 +332,7 @@ public class Section extends ASIBaseClass
           "Item ident is: " + itemElement.getAttribute("ident"));
         this.addElement(xpath, itemElement);
       }
+    }
     }
     catch (Exception e)
     {

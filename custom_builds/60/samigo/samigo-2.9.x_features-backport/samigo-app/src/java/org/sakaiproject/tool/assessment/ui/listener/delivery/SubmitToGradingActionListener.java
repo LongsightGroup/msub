@@ -46,6 +46,8 @@ import org.sakaiproject.tool.assessment.data.dao.grading.ItemGradingData;
 import org.sakaiproject.tool.assessment.data.ifc.assessment.AssessmentAccessControlIfc;
 import org.sakaiproject.tool.assessment.data.ifc.assessment.PublishedAssessmentIfc;
 import org.sakaiproject.tool.assessment.data.ifc.assessment.SectionDataIfc;
+import org.sakaiproject.tool.assessment.data.ifc.assessment.ItemDataIfc;
+import org.sakaiproject.tool.assessment.data.ifc.assessment.ItemDataIfc;
 import org.sakaiproject.tool.assessment.data.ifc.grading.AssessmentGradingIfc;
 import org.sakaiproject.tool.assessment.data.ifc.grading.ItemGradingIfc;
 import org.sakaiproject.tool.assessment.facade.AgentFacade;
@@ -365,6 +367,7 @@ public class SubmitToGradingActionListener implements ActionListener {
 
 			HashMap fibMap = getFIBMap(publishedAssessment);
 			HashMap finMap = getFINMap(publishedAssessment);
+                        HashMap imagQuestionMap = getImagQuestionMap(publishedAssessment); // IMAGEMAP_QUESTION
 			HashMap mcmrMap = getMCMRMap(publishedAssessment);
 			Set itemGradingSet = adata.getItemGradingSet();
 			log.debug("*** 2a. before removal & addition " + (new Date()));
@@ -396,7 +399,7 @@ public class SubmitToGradingActionListener implements ActionListener {
 						+ adds.size());
 
 				HashSet updateItemGradingSet = getUpdateItemGradingSet(
-						itemGradingSet, adds, fibMap, finMap, mcmrMap, adata);
+						itemGradingSet, adds, fibMap, finMap, imagQuestionMap, mcmrMap, adata);
 				adata.setItemGradingSet(updateItemGradingSet);
 			}
 		}
@@ -455,6 +458,17 @@ public class SubmitToGradingActionListener implements ActionListener {
 	    return s.prepareFINItemHash(publishedAssessment);
 	}
   
+  	/**
+  	 * IMAGEMAP_QUESTION
+  	 * @param publishedAssessment
+  	 * @return map of image items
+  	 */
+  	private HashMap<Long, ItemDataIfc> getImagQuestionMap(PublishedAssessmentIfc publishedAssessment){
+            PublishedAssessmentService s = new PublishedAssessmentService();
+	    return (HashMap<Long, ItemDataIfc>) s.prepareImagQuestionItemHash(publishedAssessment);
+	}
+  
+  
 
 	private HashMap getMCMRMap(PublishedAssessmentIfc publishedAssessment) {
 		PublishedAssessmentService s = new PublishedAssessmentService();
@@ -462,8 +476,9 @@ public class SubmitToGradingActionListener implements ActionListener {
 	}
 
 	private HashSet getUpdateItemGradingSet(Set oldItemGradingSet,
-			Set newItemGradingSet, HashMap fibMap, HashMap finMap, HashMap mcmrMap,
+			Set newItemGradingSet, HashMap fibMap, HashMap finMap, HashMap imagQuestionMap, HashMap mcmrMap,
 			AssessmentGradingData adata) {
+
 		log.debug("Submitforgrading: oldItemGradingSet.size = "
 				+ oldItemGradingSet.size());
 		log.debug("Submitforgrading: newItemGradingSet.size = "
@@ -510,6 +525,7 @@ public class SubmitToGradingActionListener implements ActionListener {
 								.equals(oldAnswerText))
 						|| fibMap.get(oldItem.getPublishedItemId()) != null
 						|| finMap.get(oldItem.getPublishedItemId())!=null
+						|| imagQuestionMap.get(oldItem.getPublishedItemId())!=null
 						|| mcmrMap.get(oldItem.getPublishedItemId()) != null) {
 					oldItem.setReview(newItem.getReview());
 					oldItem.setPublishedAnswerId(newItem.getPublishedAnswerId());
@@ -681,6 +697,7 @@ public class SubmitToGradingActionListener implements ActionListener {
 			}
 			break;			
 		case 8: // FIB
+		case 16: //IMAGEMAP_QUESTION 	
 		case 11: // FIN
 			boolean addedToAdds = false;
 			for (int m = 0; m < grading.size(); m++) {

@@ -565,7 +565,7 @@ public class ItemData
    */
    public String getText() {
      String text = "";
-     if (getTypeId().equals(TypeIfc.MATCHING) || getTypeId().equals(TypeIfc.MATRIX_CHOICES_SURVEY))
+     if (getTypeId().equals(TypeIfc.MATCHING) || getTypeId().equals(TypeIfc.MATRIX_CHOICES_SURVEY) || getTypeId().equals(TypeIfc.IMAGEMAP_QUESTION))
        return instruction;
      Set set = this.getItemTextSet();
      Iterator iter = set.iterator();
@@ -649,7 +649,7 @@ public class ItemData
 		   AnswerIfc a = (AnswerIfc)answers.get(j);
 		   if (!this.getPartialCreditFlag() && (Boolean.TRUE).equals(a.getIsCorrect())){
 			   String pair = (String)h.get(a.getLabel());
-			   if(!this.getTypeId().equals(TypeD.MATCHING))
+			   if((!this.getTypeId().equals(TypeD.MATCHING))&&(!this.getTypeId().equals(TypeD.IMAGEMAP_QUESTION)))
 			   {
 				   if(this.getTypeId().equals(TypeD.TRUE_FALSE))
 				   {
@@ -667,7 +667,7 @@ public class ItemData
 					   }
 				   }
 			   }
-			   else{
+			   else if (this.getTypeId().equals(TypeD.MATCHING)){
 				   if (pair==null)
 				   {
 					   String s = a.getLabel() + ":" + text.getSequence();
@@ -706,15 +706,15 @@ public class ItemData
 		   //if answer is not a match to any text, just print answer label
 		   if (pair == null)
 		       pair = a.getLabel()+": ";
-
+	
 		   if (k!=0)
 		       answerKey = answerKey+",  "+pair;
 		   else
-
+	
 		       answerKey = pair;
 	       }
        }
-
+   
 
 
    return answerKey;
@@ -867,5 +867,9 @@ public class ItemData
 	  	 
   public void setMinScore(Float minScore) {
         this.minScore = minScore;
+  }
+  
+  public String getImageMapSrc() {
+    return getItemMetaDataByLabel(ItemMetaDataIfc.IMAGE_MAP_SRC);
   }
 }

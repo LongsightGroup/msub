@@ -61,6 +61,7 @@ public abstract class ItemHelperBase
   protected static final long ITEM_TF = TypeIfc.TRUE_FALSE.longValue();
   protected static final long ITEM_MATCHING = TypeIfc.MATCHING.longValue();
   protected static final long ITEM_MXSURVEY = TypeIfc.MATRIX_CHOICES_SURVEY.longValue();
+  protected static final long ITEM_IMAGMQ = TypeIfc.IMAGEMAP_QUESTION.longValue(); // IMAGEMAP_QUESTION
 
   /**
    * We will have a versioned AuthoringXml in subclasses.
@@ -263,6 +264,11 @@ public abstract class ItemHelperBase
     else if (ITEM_MXSURVEY == typeId)
     {
       template = AuthoringXml.ITEM_MXSURVEY;
+    }
+    // IMAGEMAP_QUESTION
+    else if (ITEM_IMAGMQ == typeId)
+    {
+    	template = AuthoringXml.ITEM_IMAGMQ; //For future use
     }
 
     log.debug("typeId: " + typeId);

@@ -39,6 +39,7 @@ public class TypeD implements TypeIfc{
   public static final Long FILL_IN_BLANK = Long.valueOf(8);
   public static final Long FILL_IN_NUMERIC = Long.valueOf(11);
   public static final Long MATRIX_CHOICES_SURVEY = Long.valueOf(13);
+  public static final Long IMAGEMAP_QUESTION = Long.valueOf(16); // IMAGEMAP_QUESTION
   
   public static final Long MATCHING = Long.valueOf(9);
   // these are section type available in this site,
