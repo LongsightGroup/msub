@@ -103,3 +103,5 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
 #shell_command sed -i 's/10.0-SNAPSHOT/2.9-SNAPSHOT/g' delegatedaccess/pom.xml
+#shell_command sed -i 's/portfolioAdmin/portfolioAdmin" \/><category name="course" \/><category name="project/g' osp/glossary/tool/src/webapp/tools/osp.glossary.xml 
+
