@@ -140,8 +140,8 @@
 		<module>melete</module>
 		<module>roster2</module>
 		<module>signup</module>
-                <module>scorm-wicket</module>
-                <module>scorm</module>
+                <!--module>scorm-wicket</module>
+                <module>scorm</module-->
 	    </modules>
         </profile>
         <profile>
