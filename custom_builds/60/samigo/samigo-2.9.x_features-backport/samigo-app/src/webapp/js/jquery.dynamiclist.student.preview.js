@@ -30,7 +30,7 @@ function DynamicList(baseId_, templateId_, className_, anchor_)
 						
 						if(tokens.length == 3)
 						{
-							var coords = jQuery.parseJSON(tokens[2]);
+							var coords = JSON.parse(tokens[2]);
 							newSelection.setCoords(coords);
 						}
 					}catch(err){}					

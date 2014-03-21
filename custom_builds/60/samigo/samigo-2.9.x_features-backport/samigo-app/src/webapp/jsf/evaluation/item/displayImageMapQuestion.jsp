@@ -44,7 +44,7 @@ include file for displaying fill in the numeric questions
 			
 			var sel = new selectionAuthor({selectionClass: 'selectiondiv', textClass: 'textContainer'}, 'imageMapContainer');
 			try {
-				sel.setCoords(jQuery.parseJSON(this.value));
+				sel.setCoords(JSON.parse(this.value));
 				sel.setText(label);
 			}catch(err){}
 			
@@ -68,7 +68,7 @@ include file for displaying fill in the numeric questions
 				var label = tokens[i].substring(0, tokens[i].indexOf(':'));
 				var coords = tokens[i].substring(tokens[i].indexOf(':')+1);
 				var newSelection = new selectionStudent('pointerClass', 'imageMapContainer');
-				newSelection.setCoords(jQuery.parseJSON(coords));
+				newSelection.setCoords(JSON.parse(coords));
 				newSelection.setText(label);
 				selectionList.push(newSelection);
 			}catch(err){}

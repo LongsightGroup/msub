@@ -36,7 +36,7 @@
 			
 			var sel = new selectionAuthor({selectionClass: 'selectiondiv', textClass: 'textContainer'}, 'answerImageMapContainer_'+sequence);
 			try {
-				sel.setCoords(jQuery.parseJSON(this.value));
+				sel.setCoords(JSON.parse(this.value));
 				sel.setText(label);
 			}catch(err){}
 			

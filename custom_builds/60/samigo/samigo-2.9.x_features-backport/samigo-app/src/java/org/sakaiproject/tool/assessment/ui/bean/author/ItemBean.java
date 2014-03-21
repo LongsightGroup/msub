@@ -769,6 +769,10 @@ public class ItemBean
 
 
   public String getInstruction() {
+    if ((TypeFacade.IMAGEMAP_QUESTION.toString().equals(this.itemType))&&(!(instruction != null && !instruction.isEmpty()))){
+            ResourceLoader rb = new ResourceLoader("org.sakaiproject.tool.assessment.bundle.AuthorMessages");
+            instruction=rb.getString("image_map_default_instruction");
+    }
     return instruction;
   }
   public void setInstruction(String param) {
