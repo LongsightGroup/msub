@@ -71,6 +71,7 @@ taggable https://source.sakaiproject.org/svn/taggable/branches/taggable-2.9.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
 #customizations
+adobeconnect https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/2.9.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x/
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/config/branches/sakai-2.9.x/
 content-review/contentreview-impl https://source.sakaiproject.org/contrib//turnitin/trunk/contentreview-impl/
