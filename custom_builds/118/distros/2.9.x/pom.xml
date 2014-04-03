@@ -131,6 +131,7 @@
                 <module>blogwow</module>
                 <module>hierarchy</module>
                 <module>evaluation</module>
+                <module>da_evalprovider</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
         </profile>
