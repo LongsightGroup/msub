@@ -108,6 +108,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #shell_command sed -i 's/2.8.2/2.9-SNAPSHOT/g' kaltura/pom.xml
 #shell_command sed -i 's/Media Gallery/Kaltura/g' src/main/webapp/tools/sakai.kaltura.xml
 #shell_command sed -i "s/<sakai\.common\.version>.*<\/sakai\.common\.version>/<sakai\.common\.version>1.2-SNAPSHOT<\/sakai\.common\.version>/g" master/pom.xml
+#shell_command sed -i "s/sakai.version/sakai.calendar.version/g" melete/melete-impl/pom.xml
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
