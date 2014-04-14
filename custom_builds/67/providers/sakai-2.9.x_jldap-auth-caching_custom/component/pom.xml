@@ -40,6 +40,13 @@
 			<artifactId>sakai-federating-provider</artifactId>
 			
 		</dependency>
+	<!-- Needed for the All Hands Provider
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-allhands-provider</artifactId>
+			
+		</dependency>
+	 	-->
   </dependencies>
   <build>
     <resources />
