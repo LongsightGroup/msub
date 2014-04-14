@@ -44,6 +44,7 @@ import uk.org.ponder.rsf.components.UISelect;
 import uk.org.ponder.rsf.components.UISelectChoice;
 import uk.org.ponder.rsf.components.UISelectLabel;
 import uk.org.ponder.rsf.components.UIVerbatim;
+import uk.org.ponder.rsf.components.UIDeletionBinding;
 import uk.org.ponder.rsf.components.decorators.UIFreeAttributeDecorator;
 import uk.org.ponder.rsf.components.decorators.UILabelTargetDecorator;
 import uk.org.ponder.rsf.components.decorators.UITooltipDecorator;
@@ -142,7 +143,7 @@ public class GroupAutoCreateProducer implements ViewComponentProducer, ActionRes
 			 UIMessage.make(arg0, "instruction-roster", "instruction.roster");
 			 for (String roster: siteRosters) {
 				 UIBranchContainer tablerow = UIBranchContainer.make(rosterOptions, "roster-row:");
-				 UIBoundBoolean checkbox = UIBoundBoolean.make(tablerow, "roster-checkbox", "#{SiteManageGroupSectionRoleHandler.selectedRosters." + roster + "}");
+				 UIBoundBoolean checkbox = UIBoundBoolean.make(tablerow, "roster-checkbox", "#{SiteManageGroupSectionRoleHandler.selectedRosters." + roster.replaceAll("\\.", "-_p_-") + "}");
 				 UILabelTargetDecorator.targetLabel(UIOutput.make(tablerow, "roster-title", roster), checkbox);
 				 
 				 // check whether there is already a group with this roster
@@ -227,7 +228,8 @@ public class GroupAutoCreateProducer implements ViewComponentProducer, ActionRes
 		 
     	 UICommand.make(groupForm, "save", messageLocator.getMessage("update"), "#{SiteManageGroupSectionRoleHandler.processAutoCreateGroup}");
 
-         UICommand.make(groupForm, "cancel", messageLocator.getMessage("cancel"), "#{SiteManageGroupSectionRoleHandler.processBack}");
+         UICommand cancel = UICommand.make(groupForm, "cancel", messageLocator.getMessage("cancel"), "#{SiteManageGroupSectionRoleHandler.processBack}");
+         cancel.parameters.add(new UIDeletionBinding("#{destroyScope.resultScope}"));
          
          int i = 0;
          //process any messages

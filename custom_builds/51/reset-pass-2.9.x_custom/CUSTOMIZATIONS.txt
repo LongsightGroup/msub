@@ -1,1 +1,4 @@
 Client-specific changes to  Messages.properties - mainTitle
+Updating reset-pass on 04/14/2014
+--- Merging r120849 through r308183 into '.':
+
