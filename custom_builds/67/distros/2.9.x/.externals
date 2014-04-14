@@ -1,4 +1,4 @@
-# Core Sakai capabilities
+#/ Core Sakai capabilities
 access https://source.sakaiproject.org/svn/access/branches/sakai-2.9.x
 alias https://source.sakaiproject.org/svn/alias/branches/sakai-2.9.x
 archive https://source.sakaiproject.org/svn/archive/branches/sakai-2.9.x
@@ -66,7 +66,7 @@ calendar https://source.sakaiproject.org/svn/calendar/branches/calendar-2.9.x
 courier https://source.sakaiproject.org/svn/courier/branches/courier-2.9.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/mailarchive-2.9.x
 message https://source.sakaiproject.org/svn/message/branches/message-2.9.x
-portal https://source.sakaiproject.org/svn/portal/branches/portal-2.9.x
+#portal https://source.sakaiproject.org/svn/portal/branches/portal-2.9.x
 presence https://source.sakaiproject.org/svn/presence/branches/presence-2.9.x
 site https://source.sakaiproject.org/svn/site/branches/site-2.9.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/taggable-2.9.x
@@ -87,6 +87,7 @@ itunesu-tool -r84276 https://source.sakaiproject.org/contrib/itunesu/trunk/itune
 kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20130509/
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
+portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/portal/portal-2.9.x_custom
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/site-manage/site-manage-2.9.x_custom
