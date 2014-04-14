@@ -81,7 +81,7 @@ edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.8_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport/
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/@84082
+-r84082 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/@84082 hierarchy
 iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.1
 itunesu-tool -r84276 https://source.sakaiproject.org/contrib/itunesu/trunk/itunesu-tool/
 kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20130509/
