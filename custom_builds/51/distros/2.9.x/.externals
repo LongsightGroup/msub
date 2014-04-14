@@ -102,6 +102,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' etudes-util/pom.xml
 #shell_command sed -i 's/<artifactId>etudes-util-api<\/artifactId>/<artifactId>etudes-util-api<\/artifactId><version>2\.9-SNAPSHOT<\/version>/g' etudes-util/etudes-util/util/pom.xml
 #shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' lessonbuilder/pom.xml
+#shell_command sed -i "s/sakai.version/sakai.calendar.version/g" melete/melete-impl/pom.xml
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
