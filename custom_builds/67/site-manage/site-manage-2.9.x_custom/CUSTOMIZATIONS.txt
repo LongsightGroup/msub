@@ -1,2 +1,8 @@
 SAK-23897 Site Info -> Import from site needs to run in a seperate thread and email user when finished
 
+Updated to latest branch on 04/14/2014
+--- Merging r129334 through r308177 into '.':
+
+SAK-22384 - Support MathJax Rendering Across Sakai
+
+

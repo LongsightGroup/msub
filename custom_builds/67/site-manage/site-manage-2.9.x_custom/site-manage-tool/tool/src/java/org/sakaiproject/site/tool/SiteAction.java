@@ -1568,6 +1568,7 @@ public class SiteAction extends PagedResourceActionII {
 			
 			if (site != null)
 			{
+                MathJaxEnabler.addMathJaxSettingsToEditToolsContext(context, site, state);  // SAK-22384
 				context.put("SiteTitle", site.getTitle());
 				context.put("existSite", Boolean.TRUE);
 				context.put("backIndex", "12");	// back to site info list page
@@ -2102,6 +2103,9 @@ public class SiteAction extends PagedResourceActionII {
                     M_log.warn(this + "  IdUnusedException " + realmId);
             }
             
+            // SAK-22384 mathjax support
+            MathJaxEnabler.addMathJaxSettingsToSiteInfoContext(context, site, state);
+            
 			return (String) getContext(data).get("template") + TEMPLATE[12];
 
 		case 13:
@@ -2254,7 +2258,10 @@ public class SiteAction extends PagedResourceActionII {
 
 			// available languages in sakai.properties
 			List locales = getPrefLocales();	
-			context.put("locales",locales);			
+			context.put("locales",locales);
+            
+            // SAK-22384 mathjax support
+            MathJaxEnabler.addMathJaxSettingsToSiteInfoContext(context, site, state);
 						
 			return (String) getContext(data).get("template") + TEMPLATE[13];
 		case 14:
@@ -2317,6 +2324,10 @@ public class SiteAction extends PagedResourceActionII {
 			context.put("oEmail", siteProperties.getProperty(Site.PROP_SITE_CONTACT_EMAIL));
 			context.put("siteUrls",  getSiteUrlsForAliasIds(siteInfo.siteRefAliases));
 			context.put("oSiteUrls", getSiteUrlsForSite(site));
+            
+            // SAK-22384 mathjax support
+            MathJaxEnabler.addMathJaxSettingsToSiteInfoContext(context, site, state);
+            
 			return (String) getContext(data).get("template") + TEMPLATE[14];
 		case 15:
 			/*
@@ -2365,6 +2376,8 @@ public class SiteAction extends PagedResourceActionII {
 			multipleToolIntoContext(context, state);
 		
 			context.put("homeToolId", TOOL_ID_HOME);
+			
+			MathJaxEnabler.addMathJaxSettingsToEditToolsConfirmationContext(context, site, state, STATE_TOOL_REGISTRATION_TITLE_LIST);  // SAK-22384
 
 			return (String) getContext(data).get("template") + TEMPLATE[15];
 		case 18:
@@ -5891,7 +5904,9 @@ public class SiteAction extends PagedResourceActionII {
 			state.removeAttribute(STATE_TOOL_EMAIL_ADDRESS);
 			state.removeAttribute(STATE_MESSAGE);
 			removeEditToolState(state);
-		} else if (getStateSite(state) != null && ("13".equals(currentIndex) || "14".equals(currentIndex))) {
+		} else if (getStateSite(state) != null && ("13".equals(currentIndex) || "14".equals(currentIndex)))
+        {
+            MathJaxEnabler.removeMathJaxAllowedAttributeFromState(state);  // SAK-22384
 			state.setAttribute(STATE_TEMPLATE_INDEX, "12");
 		} else if ("15".equals(currentIndex)) {
 			params = data.getParameters();
@@ -6256,6 +6271,12 @@ public class SiteAction extends PagedResourceActionII {
 		Site site = getStateSite(state);
 		
 		saveFeatures(params, state, site);
+        
+        // SAK-22384
+        if (MathJaxEnabler.prepareMathJaxToolSettingsForSave(site, state))
+        {
+            commitSite(site);
+        }
 		
 		if (state.getAttribute(STATE_MESSAGE) == null) {
 			// clean state variables
@@ -6596,6 +6617,9 @@ public class SiteAction extends PagedResourceActionII {
 				
 		siteProperties.removeProperty(PROP_SITE_LANGUAGE);		
 		siteProperties.addProperty(PROP_SITE_LANGUAGE, locale_string);
+        
+        // SAK-22384 mathjax support
+        MathJaxEnabler.prepareMathJaxAllowedSettingsForSave(Site, state);
 				
 		if (state.getAttribute(STATE_MESSAGE) == null) {
 			try {
@@ -10104,6 +10128,7 @@ public class SiteAction extends PagedResourceActionII {
 		state.removeAttribute(STATE_TOOL_REGISTRATION_LIST);
 		state.removeAttribute(STATE_TOOL_REGISTRATION_TITLE_LIST);
 		state.removeAttribute(STATE_TOOL_REGISTRATION_SELECTED_LIST);
+        MathJaxEnabler.removeMathJaxToolsAttributeFromState(state);  // SAK-22384
 	}
 
 	private List orderToolIds(SessionState state, String type, List<String> toolIdList, boolean synoptic) {
@@ -10311,6 +10336,9 @@ public class SiteAction extends PagedResourceActionII {
 			doContinue(data);
 		} else if (option.equalsIgnoreCase("continue")) {
 			// continue
+            
+            MathJaxEnabler.applyToolSettingsToState(state, site, params);  // SAK-22384
+            
 			doContinue(data);
 		} else if (option.equalsIgnoreCase("back")) {
 			// back
@@ -12168,6 +12196,10 @@ public class SiteAction extends PagedResourceActionII {
 					addRequestedSection(state);
 				}
 				if (state.getAttribute(STATE_MESSAGE) == null) {
+					// no manual add
+					state.removeAttribute(STATE_MANUAL_ADD_COURSE_NUMBER);
+					state.removeAttribute(STATE_MANUAL_ADD_COURSE_FIELDS);
+
 					if (getStateSite(state) == null) {
 						if (state.getAttribute(STATE_TEMPLATE_SITE) != null)
 						{
@@ -12675,6 +12707,9 @@ public class SiteAction extends PagedResourceActionII {
 		else if ("continue".equals(option))
 		{
 			// continue with site information edit
+            
+            MathJaxEnabler.applyAllowedSettingsToState(state, params);  // SAK-22384
+            
 			doContinue(data);
 		}
 		else if ("back".equals(option))

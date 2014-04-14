@@ -2,15 +2,28 @@
 <script type="text/javascript" language="JavaScript" src="/library/js/jquery.js"></script>
 <script type="text/javascript">
       $(document).ready(function() {
-          $(".listHier :checked").parents("tr").addClass("selectedSelected");
-					$(".listHier :checkbox").click(function(){
-			            if (this.checked) {
-										$(this).parents("tr").addClass("selectedSelected");
-			            }
-									else{
-										$(this).parents("tr").removeClass("selectedSelected");
-									}
-			        });
+          $(".toolSelectionCheckbox :checked").parents("tr").addClass("selectedSelected");
+            $(".toolSelectionCheckbox").click(function()
+            {
+                if (this.checked)
+                {
+                    $(this).parents("tr").addClass("selectedSelected");
+                    var jaxBoxId = this.id + "$mathJaxToolIdSuffix";
+                    var jaxBox = document.getElementById(jaxBoxId);
+                    jaxBox.disabled = false;
+                }
+                else
+                {
+                    $(this).parents("tr").removeClass("selectedSelected");
+                    var jaxBoxId = this.id + "$mathJaxToolIdSuffix";
+                    var jaxBox = document.getElementById(jaxBoxId);
+                    if (jaxBox.className.indexOf("instanceToolMaster") === -1)
+                    {
+                        jaxBox.checked = false;
+                        jaxBox.disabled = true;
+                    } 
+                }
+            });
         $('input[name="import"]').click (function(e){
             if ($(e.target).attr('id') === 'import_yes') {
                 $('#importSitesReq').show();
@@ -43,10 +56,28 @@
 	<p class="step">
 		$tlang.getString("feat.choose")
 	</p>
+    ## SAK-22384
+    #if ($!isMathJaxInstalled)
+    <p class="step">
+    $tlang.getFormattedMessage("sinfo.enableMathJax.instr1",$!sakaiService)
+    <a href="$!mathJaxWebsite" target="_blank"> $tlang.getString("sinfo.enableMathJax.website")</a>
+    $tlang.getString("sinfo.enableMathJax.instr2")
+    </p>
+    #end
 	<form name="featuresForm" action="#toolForm("$action")" method="post">
 		<input type="hidden" name="option" value="add" />
 		<input type="hidden" name="eventSubmit_doAdd_features" value="x" />                                     
 			<table class="listHier lines nolines" cellspacing="0" summary="$tlang.getString("feat.tools.list.summary")"  style="width:auto">
+                ## SAK-22384
+                #if ($!isMathJaxInstalled) 
+                <tr id="toolTableHeaderRow">
+                        <th></th>
+                        ## these still need to be localized
+                        <th>Tool</th>
+                        <th>Description</th>
+                        <th>Enable MathJax</th>
+                </tr> 
+                #end
 				#if ($!defaultTools.indexOf($!homeToolId) != -1)
 					<tr style="display:none">
 						<td>
@@ -80,6 +111,10 @@
 					<td>
 						$tlang.getString("feat.forv")
 					</td>
+                    ## SAK-22384 empty td for Home since MathJax doesn't work on synoptic tools anyway (iframe issues)
+                    #if ($!isMathJaxInstalled) 
+                    <td></td>
+                    #end
 				</tr>
 				## list those extra tools (added outside Site Info tool with tool id not listed as the allowed tool for current site type) as hidded input
 				#foreach($tool in $!extraSelectedToolList)
@@ -99,7 +134,7 @@
 					#end
 					<tr	id="row-$rowCount">
 						<td>
-							<input type="checkbox" name="selectedTools" value="$toolId" id="$toolId"
+							<input type="checkbox" name="selectedTools" value="$toolId" id="$toolId" class="toolSelectionCheckbox"
 								#if ($!defaultTools.indexOf($toolId) != -1)
 									checked="checked" disabled="disabled"
 								#else
@@ -143,6 +178,30 @@
 									#end
 								#end
 						</td>
+                        ## SAK-22384
+                        #if ($!isMathJaxInstalled)
+                        <td>
+                            #if (!$!multipleToolIdTitleMap.containsKey($toolId))
+                            <input type="checkbox" name="mathJaxEnabledTools" value="$toolId" id="$toolId$mathJaxToolIdSuffix"
+                                #if ($!toolRegistrationMathJaxEnabledList)
+                                    #foreach ($tId in $toolRegistrationMathJaxEnabledList)
+                                        #if ($tId == $toolId)
+                                            checked="checked"
+                                        #end
+                                    #end
+                                    #if (!$!toolRegistrationSelectedList.contains($toolId) && !$!multipleToolConfiguration.containsKey($toolId))
+                                        disabled="disabled"
+                                    #end
+                                    #if ($!multipleToolConfiguration.containsKey($toolId))
+                                        class="mathJaxSelectionCheckbox instanceToolMaster"
+                                    #else
+                                        class="mathJaxSelectionCheckbox"
+                                    #end
+                                #end
+                            />
+                            #end
+                        </td>
+                        #end 
 					</tr>	
 				#end
 			</table>

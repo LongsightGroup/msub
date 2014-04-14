@@ -259,7 +259,21 @@ function printPreview(target){
 				</tr>	
 			#end
 		#end
-		#end			
+		#end
+            #if ($isMathJaxInstalled)
+            <tr>
+                <th>
+                $tlang.getString("sinfo.mathjax.name")
+                </th>
+                <td>
+                #if ($isMathJaxAllowedInSite)
+                    $tlang.getString("sinfo.mathjax.allowed")
+                #else
+                    $tlang.getString("sinfo.mathjax.notAllowed")
+                #end
+                </td>
+            </tr>
+            #end			
 		</table>
 
 		#set ($desc = $siteDescription) 
@@ -474,9 +488,8 @@ function printPreview(target){
 							</th>
 						#end
 						<th id="remove" class="screenOnly attach" align="center" >
-							
-							<input type="checkbox" name="toggleAllSelected" value="" id="toggleAllSelected" onclick="javascript:toggleSelectAll(this, 'selectedUser')" title="$tlang.getString('check.all.part')"/>
-							<label for="toggleAllSelected" class="skip">$tlang.getString('check.all.part')</label>
+							<label for="toggleAllSelected">$tlang.getString('sitegen.siteinfolist.remove')</label>
+							<input type="checkbox" name="toggleAllSelected" value="" id="toggleAllSelected" onclick="javascript:toggleSelectAll(this, 'selectedUser')" title="$tlang.getString('sitegen.siteinfolist.remove')"/>
 						</th>
 					#end
 				</tr>
