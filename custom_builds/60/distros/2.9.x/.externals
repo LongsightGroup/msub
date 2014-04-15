@@ -88,7 +88,7 @@ hierarchy -r 84082 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak29x
 msgcntr https://source.sakaiproject.org/svn//msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
-samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/60/samigo/samigo-2.9.x_features-backport
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
