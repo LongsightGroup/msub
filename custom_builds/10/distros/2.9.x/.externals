@@ -78,10 +78,11 @@ hybrid https://source.sakaiproject.org/svn/hybrid/branches/hybrid-1.2.x
 
 
 #customizations
+ambrosia https://source.sakaiproject.org/contrib//umich/etudes/ambrosia/branches/2.1.8/
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x/
 delegatedaccess https://source.sakaiproject.org/contrib/delegatedaccess/trunk/
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
-etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
+etudes-util https://source.sakaiproject.org/contrib/umich/PATCHED/etudes-util/branches/CTools-2.9.0/
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
 -r84082 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6@84082 hierarchy
@@ -97,12 +98,22 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 
 #Patcher options: "mavenoptions: <options>"
 #Evaluation needs -Psakai2.9
-#mavenoptions:-Psakai2.9 -Detudes.util.version=1.0.17
+#mavenoptions:-Psakai2.9 -Detudes.util.version=1.0.13 -Dambrosia.version=2.1.8 -Dmneme.version=2.1.9
  
 #POM Changes
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
 #shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' delegatedaccess/pom.xml
+#shell_command sed -i 's/<artifactId>etudes-util-api<\/artifactId>/<artifactId>etudes-util-api<\/artifactId><version>\${etudes.util.version}<\/version><scope>provided<\/scope>/g' etudes-util/etudes-util/util/pom.xml mneme/mneme-impl/impl/pom.xml mneme/mneme-api/api/pom.xml mneme/mneme-tool/tool/pom.xml
+#shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' ambrosia/pom.xml
+#shell_command sed -i 's/<artifactId>etudes-ambrosia-api<\/artifactId>/<artifactId>etudes-ambrosia-api<\/artifactId><version>\${ambrosia.version}<\/version><scope>provided<\/scope>/g' ambrosia/ambrosia-util/util/pom.xml ambrosia/ambrosia-impl/impl/pom.xml mneme/mneme-test/test-tool/pom.xml mneme/mneme-impl/impl/pom.xml mneme/mneme-api/api/pom.xml mneme/mneme-tool/tool/pom.xml
+#shell_command sed -i 's/<artifactId>etudes-ambrosia-util<\/artifactId>/<artifactId>etudes-ambrosia-util<\/artifactId><version>\${ambrosia.version}<\/version>/g' ambrosia/ambrosia-impl/pack/pom.xml ambrosia/ambrosia-impl/impl/pom.xml  mneme/mneme-test/test-tool/pom.xml mneme/mneme-impl/impl/pom.xml mneme/mneme-impl/pack/pom.xml mneme/mneme-tool/tool/pom.xml
+#shell_command sed -i 's/<artifactId>etudes-util-util<\/artifactId>/<artifactId>etudes-util-util<\/artifactId><version>\${etudes.util.version}<\/version>/g' ambrosia/ambrosia-impl/impl/pom.xml mneme/mneme-impl/impl/pom.xml
+#shell_command sed -i 's/<artifactId>etudes-mneme-api<\/artifactId>/<artifactId>etudes-mneme-api<\/artifactId><version>\${mneme.version}<\/version><scope>provided<\/scope>/g' mneme/mneme-test/test-tool/pom.xml mneme/mneme-impl/impl/pom.xml mneme/mneme-tool/tool/pom.xml
+
+# tiny_mce.war for mneme http://source.sakaiproject.org/maven2/tiny_mce/tiny_mce-war/3.4.1/tiny_mce-war-3.4.1.war
+#
+
 #Update calendar version for melete, luckily only one sakai version in this file
 #shell_command sed -i "s/sakai.version/sakai.calendar.version/g" melete/melete-impl/pom.xml
 
