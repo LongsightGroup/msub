@@ -84,7 +84,7 @@ edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+-r84082 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6@84082 hierarchy
 linktool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/10/linktool-2.9.x_custom
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
 mneme  https://source.sakaiproject.org/contrib/longsight/mneme/CTools-2.9.0-patched
@@ -103,7 +103,9 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
 #shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' delegatedaccess/pom.xml
-#
+#Update calendar version for melete, luckily only one sakai version in this file
+#shell_command sed -i "s/sakai.version/sakai.calendar.version/g" melete/melete-impl/pom.xml
+
 ##Big Blue Button:
 ##shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
 ##shell_command cd bigbluebutton-sakai/bbb-tool
