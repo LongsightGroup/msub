@@ -130,7 +130,6 @@
                 <module>blogwow</module>
                 <module>content-review/contentreview-impl</module>
                 <module>etudes-util</module>
-                <module>melete</module>
                 <module>hierarchy</module>
                 <module>evaluation</module>
                 <module>kaltura</module>
