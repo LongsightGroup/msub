@@ -87,6 +87,7 @@ gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/grade
 hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
 linktool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/10/linktool-2.9.x_custom
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
+mneme  https://source.sakaiproject.org/contrib/longsight/mneme/CTools-2.9.0-patched
 msgcntr https://source.sakaiproject.org/svn//msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
