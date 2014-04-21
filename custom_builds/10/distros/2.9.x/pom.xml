@@ -134,6 +134,9 @@
                 <module>evaluation</module>
                 <module>melete</module>
                 <module>signup</module>
+                <module>mneme</module>
+                <module>ambrosia</module>
+                <module>etudes-util</module>
             </modules>
         </profile>
         <profile>
