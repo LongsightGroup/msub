@@ -256,6 +256,9 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
                         else if (emailStr.equals("") && entries.item(j).getNodeName().equals("email")) {
                             emailStr = entries.item(j).getTextContent();
                         }
+						else if (emailStr.equals("") && entries.item(j).getNodeName().equals("Email")) {
+							emailStr = entries.item(j).getTextContent();
+						}
                     }
                 }
                 
