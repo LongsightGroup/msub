@@ -83,11 +83,11 @@
 	 	-->
     <!-- Needed for the K2 Hybrid Provider
     -->
-    		<dependency>
+    <!--		<dependency>
     			<groupId>org.sakaiproject.provider</groupId>
     			<artifactId>sakai-hybrid-provider</artifactId>
     			<version>2.9-SNAPSHOT</version>
-    		</dependency>
+    		</dependency> -->
   </dependencies>
   <build>
     <resources />
