@@ -29,7 +29,7 @@
     <module>kerberos</module>
     <module>openldap</module>
     <module>sample</module>
-    <module>hybrid</module>
+    <!-- module>hybrid</module -->
     <module>imis</module>
   </modules>
   <dependencyManagement>
