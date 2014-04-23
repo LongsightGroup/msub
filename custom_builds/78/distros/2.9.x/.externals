@@ -95,6 +95,7 @@ site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/s
 #Pom Changes
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
+#shell_command sed -i 's/2.1.3-SNAPSHOT/2.0.2-SNAPSHOT/g' master/pom.xml
 
 #Patcher options: "mavenoptions: <options>"
 #Evaluation needs -Psakai2.9
