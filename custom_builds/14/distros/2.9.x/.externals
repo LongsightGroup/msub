@@ -82,7 +82,7 @@ blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/config/config-2.9.x_custom
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl
 #Older version prior to 10 changes for now
-delegatedaccess -r 85183 https://source.sakaiproject.org/contrib/delegatedaccess/trunk/
+delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/trunk
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
@@ -109,7 +109,7 @@ web https://source.sakaiproject.org/svn/msub/longsight.com/web/web-2.9.x_feature
 #POM Changes
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
-#shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' delegatedaccess/pom.xml
+#shell_command sed -i 's/11-SNAPSHOT/2.9-SNAPSHOT/g' delegatedaccess/pom.xml
 
 
 #Also have  elluminate bridge, cas
