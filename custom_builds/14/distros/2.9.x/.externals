@@ -109,7 +109,8 @@ web https://source.sakaiproject.org/svn/msub/longsight.com/web/web-2.9.x_feature
 #POM Changes
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
-#shell_command sed -i 's/11-SNAPSHOT/2.9-SNAPSHOT/g' delegatedaccess/pom.xml
+#Only replace the first instance of 11-SNAPSHOT, which is master version
+#shell_command sed -i '0,/11-SNAPSHOT/{s/11-SNAPSHOT/2.9-SNAPSHOT/}' delegatedaccess/pom.xml
 
 
 #Also have  elluminate bridge, cas
