@@ -1,2 +1,5 @@
 RES-46 Add redirect links for validated and expired token urls
 PEPDEV-21 Add custom message for expired and validated tokens in Reset Password tool
+Updated merge on 04/30/2014
+--- Merging r126009 through r309067 into '.':
+
