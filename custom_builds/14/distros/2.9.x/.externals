@@ -98,7 +98,7 @@ roster https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/r
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
 sitestats https://source.sakaiproject.org/svn/msub/longsight.com/sitestats/sitestats-2.3.x_features-backport/
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
+site-manage -r309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 web https://source.sakaiproject.org/svn/msub/longsight.com/web/web-2.9.x_features-backport/
 
