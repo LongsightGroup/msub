@@ -90,7 +90,7 @@ hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/78/providers/sakai-2.9.x
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
+site-manage -r 307958 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
 
 #Pom Changes
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
