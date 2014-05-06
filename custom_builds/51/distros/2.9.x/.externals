@@ -1,7 +1,7 @@
 # Core Sakai capabilities
 access https://source.sakaiproject.org/svn/access/branches/sakai-2.9.x
 alias https://source.sakaiproject.org/svn/alias/branches/sakai-2.9.x
-archive https://source.sakaiproject.org/svn/archive/branches/sakai-2.9.x
+#archive https://source.sakaiproject.org/svn/archive/branches/sakai-2.9.x
 authz https://source.sakaiproject.org/svn/authz/branches/sakai-2.9.x
 chat https://source.sakaiproject.org/svn/chat/branches/sakai-2.9.x
 citations https://source.sakaiproject.org/svn/citations/branches/sakai-2.9.x
@@ -34,13 +34,13 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-2.9.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-2.9.x
 
 # Indie services
-kernel https://source.sakaiproject.org/svn/kernel/branches/kernel-1.3.x
-common https://source.sakaiproject.org/svn/common/branches/common-1.2.x
+#kernel https://source.sakaiproject.org/svn/kernel/branches/kernel-1.3.x
+#common https://source.sakaiproject.org/svn/common/branches/common-1.2.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/contentreview-2.9.x
 #edu-services https://source.sakaiproject.org/svn/edu-services/branches/edu-services-1.2.x
 emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/branches/emailtemplateservice-0.6.x
 entitybroker https://source.sakaiproject.org/svn/entitybroker/branches/entitybroker-1.5.x
-sakai-mock https://source.sakaiproject.org/svn/sakai-mock/branches/sakai-mock-2.9.x
+#sakai-mock https://source.sakaiproject.org/svn/sakai-mock/branches/sakai-mock-2.9.x
 #webservices https://source.sakaiproject.org/svn/webservices/branches/webservices-1.1.x
 
 # Indie tools
@@ -71,8 +71,10 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
 #customizations
 adobeconnect https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/2.9.x
+archive https://source.sakaiproject.org/svn/msub/longsight.com/archive/archive-2.9.x-backport
 jsf https://source.sakaiproject.org/svn/msub/longsight.com/jsf/jsf-2.9.x_features-backport
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x/
+common https://source.sakaiproject.org/svn/msub/longsight.com/common/common-1.2.x-backport
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/config/branches/sakai-2.9.x/
 content-review/contentreview-impl https://source.sakaiproject.org/contrib//turnitin/trunk/contentreview-impl/
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
@@ -81,9 +83,11 @@ evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/eva
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_iRubric
 hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6
 itunesu-tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/itunesu-2.9.x_custom
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-1.3.x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 reset-pass https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/reset-pass-2.9.x_custom
+sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-2.9.x-backport
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/site-manage/branches/sakai-2.9.x/
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
