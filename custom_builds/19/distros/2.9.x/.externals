@@ -102,7 +102,7 @@ scorm-wicket https://source.sakaiproject.org/contrib/longsight/sakai-wicket-for-
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport
 scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/trunk/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
-site-manage  https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
+site-manage -r 309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
 user https://source.sakaiproject.org/svn/msub/longsight.com/user/user-2.9.x_features-backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
