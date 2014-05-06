@@ -17,7 +17,7 @@ toggler needs
     border-top: none;
     padding: .5em
 }
-#templateSettings, #siteTypeList{
+#templateSettings, #siteTypeList, #archiveSettings{
 	padding:.5em;
 	background:#eee;
 	width:50em;

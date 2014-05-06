@@ -1,5 +1,6 @@
 LS-35 Various text changes and customizations to site creation, Sam hand-edited for 2.9.x
 * AFO-617846: suppress outgoing email
+SAK-25867 - Improvements to Site Archive tool
 
 Updating site-manage on 04/14/2014
 --- Merging r123294 through r308183 into '.':

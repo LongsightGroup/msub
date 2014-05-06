@@ -161,13 +161,21 @@ sakai.siteTypeSetup = function(){
         $('#buildOwn').attr('checked', '');
         $('#siteTypeList').hide();
         $('#termList').hide();
-        utils.resizeFrame('grow');
         $('#submitFromTemplate').show();
         $('#submitBuildOwn').hide();
         $('#submitBuildOwn').attr('disabled', 'disabled');
 	$('#copyContent').attr('checked','checked');
+
+        //hide/reset archive parts
+        $('#archiveSettings').hide();
+        $('#archive').attr('checked', '');
+        $('#submitBuildOwn').attr('disabled', 'disabled');
+        $('#submitFromArchive').hide();
+
+        utils.resizeFrame('grow');
+
     });
-    
+
     $('#buildOwn').click(function(e){
         $('#templateSettings').hide();
         $('#templateSettings input:checked').attr('checked', '');
@@ -181,8 +189,48 @@ sakai.siteTypeSetup = function(){
         $('#submitFromTemplateCourse').hide();
         $('#submitBuildOwn').show();
         $('#nextInstructions span').hide();
+
+        //hide/reset archive parts
+        $('#archiveSettings').hide();
+        $('#archive').attr('checked', '');
+        $('#submitBuildOwn').attr('disabled', 'disabled');
+        $('#submitFromArchive').hide();
+
         utils.resizeFrame('grow');
     });
+
+    // handles display of "create site from archive"
+    $('#archive').click(function(e){
+
+        //show archive settings
+        $('#archiveSettings').show();
+        $('#submitFromArchive').show();
+        $('#submitBuildOwn').attr('disabled', '');
+        toggleArchiveTermList();
+                                     
+        //hide and disable buildOwn section
+        $('#buildOwn').attr('checked', '');
+        $('#siteTypeList').hide();
+        $('#termList').hide();
+        $('#submitBuildOwn').hide();
+        $('#submitBuildOwn').attr('disabled', 'disabled');
+                                                                                 
+        //hide create from template section
+        $('#copy').attr('checked', '');
+        $('#templateSettings').hide();
+        $('#templateSettings input:checked').attr('checked', '');
+        $('#allTemplateSettings').hide();
+        $('#siteTitleField').attr('value', '');
+        $('#templateSettings select').attr('selectedIndex', 0);
+        $('#templateSettingsTitleTerm span.templateTitleTerm').hide();
+        $('#submitFromTemplate').hide().attr('disabled', 'disabled');
+        $('#submitFromTemplateCourse').hide();
+                                                                                                                           
+        utils.resizeFrame('grow');
+
+    });
+
+
     $('#siteTitleField').keyup(function(e){
         if ($(this).attr('value').length >= 1) {
             $('#submitFromTemplate').attr('disabled', '');
@@ -359,3 +407,10 @@ utils.resizeFrame = function(updown){
     }
 };
 
+var toggleArchiveTermList = function() {
+    if ($('#archiveSiteType').val() == 'course') {
+      $('#archiveTermList').show();
+    } else {
+      $('#archiveTermList').hide();
+    }
+}
