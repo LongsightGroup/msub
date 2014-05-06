@@ -41,8 +41,11 @@ import org.sakaiproject.user.api.UsersShareEmailUDP;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.io.StringReader;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import org.xml.sax.InputSource;
+
 
 //import javax.xml.rpc.ParameterMode;
 import com.isgsolutions.ibridge.authentication.*;
@@ -467,7 +470,8 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
 
     	   M_log.debug("searchExternalUsers() is called with criteria: " + criteria);
     	   List<UserEdit> users = new ArrayList<UserEdit>();
-
+		   
+		   // first look up by username
     	   DataAccessX0020WebX0020Service dataService = new DataAccessX0020WebX0020Service();
     	   DataAccessX0020WebX0020ServiceSoap dataPort = dataService.getDataAccessX0020WebX0020ServiceSoap();
     	   ExecuteDatasetStoredProcedureResult result = dataPort.executeDatasetStoredProcedure(
@@ -483,69 +487,138 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
     			   Node diffgram = (Node) result.getAny();
     			   NodeList newDS = diffgram.getChildNodes();
     			   if (newDS == null || newDS.getLength() < 1) {
-    				   M_log.debug("searchExternalUser() empty reuslts for criteria: " + criteria);
-    				   return users;
+    				   M_log.debug("searchExternalUser() empty results for username criteria: " + criteria);
+    			   } else {
+					   
+	    			   NodeList table = newDS.item(0).getChildNodes();
+	    			   String firstStr = "", lastStr = "", emailStr = "";
+
+	    			   for (int i=0; i<table.getLength(); i++) {
+	    				   Node record = table.item(i);
+
+	    				   if (record.getNodeName().equals("iBridge-Errors")) {
+	    					   M_log.warn("No Such User");
+	    				   } else {
+
+		    				   NodeList entries = record.getChildNodes();
+		    				   for (int j=0; j < entries.getLength(); j++) {
+		    					   String entryName = entries.item(j).getNodeName();
+		    					   String entryValue = entries.item(j).getTextContent();
+		    					   //System.out.println(entries.item(j).getNodeName()+": "+entries.item(j).getTextContent());
+
+		    					   if (StringUtils.isBlank(firstStr) && StringUtils.equalsIgnoreCase(entryName, "first_name")) {
+		    						   firstStr = entryValue;
+		    					   }
+		    					   else if (StringUtils.isBlank(lastStr) && StringUtils.equalsIgnoreCase(entryName, "last_name")) {
+		    						   lastStr = entryValue;
+		    					   }
+		    					   else if (StringUtils.isBlank(emailStr) && StringUtils.equalsIgnoreCase(entryName, "email")) {
+		    						   emailStr = entryValue;
+		    					   }
+		    					   else {
+		    						   M_log.debug("Unmapped user info: " + entryName + "::" + entryValue);
+		    					   }
+		    				   }
+	    				   }
+	    			   }
+
+	    			   if (StringUtils.isBlank(firstStr)) {
+	    				   M_log.warn("searchExternalUsers() missing firstname: " + criteria);
+	    			   }
+	    			   if (StringUtils.isBlank(lastStr)) {
+	    				   M_log.warn("searchExternalUsers() missing lastname: " + criteria);
+	    			   }
+	    			   if (StringUtils.isBlank(emailStr)) {
+	    				   M_log.warn("searchExternalUsers() missing email: " + criteria);
+	    			   }
+
+	    			   UserEdit user = factory.newUser();
+
+	    			   user.setEid(criteria);
+	    			   user.setFirstName(firstStr);
+	    			   user.setLastName(lastStr);
+	    			   user.setEmail(emailStr);
+	    			   user.setPassword("ffdsfsgsjhdfvdsfvhdsvc"); //TODO - does this have to be set correctly? 
+	    			   user.setType("member");
+
+	    			   users.add(user);
     			   }
-    			   NodeList table = newDS.item(0).getChildNodes();
-
-    			   String firstStr = "", lastStr = "", emailStr = "";
-
-    			   for (int i=0; i<table.getLength(); i++) {
-    				   Node record = table.item(i);
-
-    				   if (record.getNodeName().equals("iBridge-Errors")) {
-    					   M_log.warn("No Such User");
-    					   return users;
-    				   }
-
-    				   NodeList entries = record.getChildNodes();
-    				   for (int j=0; j < entries.getLength(); j++) {
-    					   String entryName = entries.item(j).getNodeName();
-    					   String entryValue = entries.item(j).getTextContent();
-    					   //System.out.println(entries.item(j).getNodeName()+": "+entries.item(j).getTextContent());
-
-    					   if (StringUtils.isBlank(firstStr) && StringUtils.equalsIgnoreCase(entryName, "first_name")) {
-    						   firstStr = entryValue;
-    					   }
-    					   else if (StringUtils.isBlank(lastStr) && StringUtils.equalsIgnoreCase(entryName, "last_name")) {
-    						   lastStr = entryValue;
-    					   }
-    					   else if (StringUtils.isBlank(emailStr) && StringUtils.equalsIgnoreCase(entryName, "email")) {
-    						   emailStr = entryValue;
-    					   }
-    					   else {
-    						   M_log.debug("Unmapped user info: " + entryName + "::" + entryValue);
-    					   }
-    				   }
-    			   }
-
-    			   if (StringUtils.isBlank(firstStr)) {
-    				   M_log.warn("searchExternalUsers() missing firstname: " + criteria);
-    			   }
-    			   if (StringUtils.isBlank(lastStr)) {
-    				   M_log.warn("searchExternalUsers() missing lastname: " + criteria);
-    			   }
-    			   if (StringUtils.isBlank(emailStr)) {
-    				   M_log.warn("searchExternalUsers() missing email: " + criteria);
-    			   }
-
-    			   UserEdit user = factory.newUser();
-
-    			   user.setEid(criteria);
-    			   user.setFirstName(firstStr);
-    			   user.setLastName(lastStr);
-    			   user.setEmail(emailStr);
-    			   user.setPassword("ffdsfsgsjhdfvdsfvhdsvc"); //TODO - does this have to be set correctly? 
-    			   user.setType("member");
-
-    			   users.add(user);
 
     		   } catch (Exception e) {
     			   e.printStackTrace();
     		   }
 
     	   }
-
+		   
+		   if (users.size() == 0) {
+    		   // let's try looking up by email
+	    	   ExecuteDatasetStoredProcedureResult result2 = dataPort.executeDatasetStoredProcedure(
+	    			   spStoredProcedure,
+	    			   "iweb_sp_getUsersByid_SAKAI_Search",
+	    			   "@id ='',@firstname='',@lastname='',@email='"+criteria+"'"
+	    			   );
+			   
+			   if (result2 != null) {
+    			   try {
+					   
+	    			   Node diffgram = (Node) result2.getAny();
+					   NodeList newDS = diffgram.getChildNodes();
+					   
+					   if (newDS == null || newDS.getLength() < 1) {
+						   M_log.debug("searchExternalUser() empty results for email criteria: " + criteria);
+					   } else {
+						   NodeList table = newDS.item(0).getChildNodes();
+						   String firstStr = "", lastStr = "", usernameStr = "";
+						   
+						   for (int i=0; i<table.getLength(); i++) {
+							   Node record = table.item(i);
+							   
+							   if (record.getNodeName().equals("iBridge-Errors")) {
+								   M_log.warn("No Such User");
+							   } else {
+								   NodeList entries = record.getChildNodes();
+								   
+								   for (int j=0; j < entries.getLength(); j++) {
+									   String entryName = entries.item(j).getNodeName();
+									   String entryValue = entries.item(j).getTextContent();
+									   //System.out.println(entries.item(j).getNodeName()+": "+entries.item(j).getTextContent());
+									   
+									   Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+										   .parse(new InputSource(new StringReader(entries.item(j).getTextContent())));
+									   
+									   NodeList userinfo = doc.getElementsByTagName("Name");
+									   if (userinfo.getLength() > 0) {
+										   Element info = (Element)userinfo.item(0);
+										   firstStr = info.getAttribute("first_name");
+										   lastStr = info.getAttribute("last_name");
+										   NodeList userNameInfo = info.getElementsByTagName("aspnet_Users");
+										   if (userNameInfo.getLength() > 0) {
+											   Element username = (Element) userNameInfo.item(0);
+										   	   usernameStr = username.getAttribute("username").toLowerCase();
+										   }
+									   }
+									   
+								   }
+									   
+							   }
+						   }
+						   
+						   UserEdit user = factory.newUser();
+						   user.setEid(usernameStr);
+						   user.setFirstName(firstStr);
+						   user.setLastName(lastStr);
+						   user.setEmail(criteria);
+						   user.setPassword("ffdsfsgsjhdfvdsfvhdsvc"); 
+						   user.setType("member");
+						   users.add(user);
+					   }
+    			   } catch (Exception e) {
+					   e.printStackTrace();
+    			   }
+			   }
+			   
+		   }
+		   
     	   return users;
        }
 }
