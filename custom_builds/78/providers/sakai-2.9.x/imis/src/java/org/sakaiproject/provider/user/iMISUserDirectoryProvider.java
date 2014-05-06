@@ -568,7 +568,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
 						   M_log.debug("searchExternalUser() empty results for email criteria: " + criteria);
 					   } else {
 						   NodeList table = newDS.item(0).getChildNodes();
-						   String firstStr = "", lastStr = "", usernameStr = "";
+						   String firstStr = "", lastStr = "", usernameStr = "", emailStr = "";
 						   
 						   for (int i=0; i<table.getLength(); i++) {
 							   Node record = table.item(i);
@@ -591,6 +591,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
 										   Element info = (Element)userinfo.item(0);
 										   firstStr = info.getAttribute("first_name");
 										   lastStr = info.getAttribute("last_name");
+										   emailStr = info.getAttribute("Email");
 										   NodeList userNameInfo = info.getElementsByTagName("aspnet_Users");
 										   if (userNameInfo.getLength() > 0) {
 											   Element username = (Element) userNameInfo.item(0);
@@ -607,7 +608,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
 						   user.setEid(usernameStr);
 						   user.setFirstName(firstStr);
 						   user.setLastName(lastStr);
-						   user.setEmail(criteria);
+						   user.setEmail(emailStr);
 						   user.setPassword("ffdsfsgsjhdfvdsfvhdsvc"); 
 						   user.setType("member");
 						   users.add(user);
