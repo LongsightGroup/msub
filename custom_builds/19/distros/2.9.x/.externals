@@ -90,6 +90,7 @@ edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_iRubric/
+gradebook-export https://source.sakaiproject.org/svn/msub/longsight.com/gradebook-export/gradebook-export-1.5-src
 help https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/19/help/help-2.9.x
 hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6/
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-1.3.x
