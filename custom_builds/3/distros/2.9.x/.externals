@@ -86,7 +86,7 @@ delegatedaccess https://source.sakaiproject.org/contrib/delegatedaccess/trunk/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 feed https://source.sakaiproject.org/contrib/feed/trunk/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6/
 #LS-61
 formbuilder https://source.sakaiproject.org/contrib/ucf/formbuilder/tags/formbuilder_2-7-1/
 #NMG-275133
