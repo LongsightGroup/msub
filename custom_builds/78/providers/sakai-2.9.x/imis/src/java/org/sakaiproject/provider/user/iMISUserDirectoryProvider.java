@@ -476,8 +476,8 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
     	   DataAccessX0020WebX0020ServiceSoap dataPort = dataService.getDataAccessX0020WebX0020ServiceSoap();
     	   ExecuteDatasetStoredProcedureResult result = dataPort.executeDatasetStoredProcedure(
     			   spStoredProcedure,
-    			   "iweb_sp_getUsersByid_SAKAI",
-    			   "'"+criteria+"'"
+    			   "iweb_sp_getUsersByid_SAKAI_Search",
+    			   "@id ='"+criteria+"',@firstname='',@lastname='',@email=''"
     			   );
 
     	   if (result != null)
@@ -489,9 +489,8 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
     			   if (newDS == null || newDS.getLength() < 1) {
     				   M_log.debug("searchExternalUser() empty results for username criteria: " + criteria);
     			   } else {
-					   
+					   M_log.debug("success for: @id ='"+criteria+"',@firstname='',@lastname='',@email=''");
 	    			   NodeList table = newDS.item(0).getChildNodes();
-	    			   String firstStr = "", lastStr = "", emailStr = "";
 
 	    			   for (int i=0; i<table.getLength(); i++) {
 	    				   Node record = table.item(i);
@@ -503,45 +502,42 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
 		    				   NodeList entries = record.getChildNodes();
 		    				   for (int j=0; j < entries.getLength(); j++) {
 		    					   String entryName = entries.item(j).getNodeName();
-		    					   String entryValue = entries.item(j).getTextContent();
-		    					   //System.out.println(entries.item(j).getNodeName()+": "+entries.item(j).getTextContent());
+		    					   String entryValue = "<xml>"+entries.item(j).getTextContent()+"</xml>";
+		    					   //System.out.println(entryName+": "+entryValue);
+								   
+								   Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+									   .parse(new InputSource(new StringReader(entryValue)));
+								   
+								   NodeList userinfo = doc.getElementsByTagName("Name");
+								   for (int k = 0; k < userinfo.getLength(); k++) {
+									   String firstStr = "", lastStr = "", usernameStr = "", emailStr = "";
+									   Element info = (Element)userinfo.item(k);
+									   firstStr = info.getAttribute("first_name");
+									   lastStr = info.getAttribute("last_name");
+									   emailStr = info.getAttribute("Email");
+									   NodeList userNameInfo = info.getElementsByTagName("aspnet_Users");
+									   if (userNameInfo.getLength() > 0) {
+										   Element username = (Element) userNameInfo.item(0);
+										   usernameStr = username.getAttribute("username").toLowerCase();
+									   }
+									   
+									   UserEdit user = factory.newUser();
+									   user.setEid(usernameStr);
+									   user.setFirstName(firstStr);
+									   user.setLastName(lastStr);
+									   user.setEmail(emailStr);
+									   user.setPassword("ffdsfsgsjhdfvdsfvhdsvc");
+									   user.setType("member");
+									   users.add(user);
+									   
+								   } 
 
-		    					   if (StringUtils.isBlank(firstStr) && StringUtils.equalsIgnoreCase(entryName, "first_name")) {
-		    						   firstStr = entryValue;
-		    					   }
-		    					   else if (StringUtils.isBlank(lastStr) && StringUtils.equalsIgnoreCase(entryName, "last_name")) {
-		    						   lastStr = entryValue;
-		    					   }
-		    					   else if (StringUtils.isBlank(emailStr) && StringUtils.equalsIgnoreCase(entryName, "email")) {
-		    						   emailStr = entryValue;
-		    					   }
-		    					   else {
-		    						   M_log.debug("Unmapped user info: " + entryName + "::" + entryValue);
-		    					   }
 		    				   }
-	    				   }
+							   
+						   }
+						   
 	    			   }
 
-	    			   if (StringUtils.isBlank(firstStr)) {
-	    				   M_log.warn("searchExternalUsers() missing firstname: " + criteria);
-	    			   }
-	    			   if (StringUtils.isBlank(lastStr)) {
-	    				   M_log.warn("searchExternalUsers() missing lastname: " + criteria);
-	    			   }
-	    			   if (StringUtils.isBlank(emailStr)) {
-	    				   M_log.warn("searchExternalUsers() missing email: " + criteria);
-	    			   }
-
-	    			   UserEdit user = factory.newUser();
-
-	    			   user.setEid(criteria);
-	    			   user.setFirstName(firstStr);
-	    			   user.setLastName(lastStr);
-	    			   user.setEmail(emailStr);
-	    			   user.setPassword("ffdsfsgsjhdfvdsfvhdsvc"); //TODO - does this have to be set correctly? 
-	    			   user.setType("member");
-
-	    			   users.add(user);
     			   }
 
     		   } catch (Exception e) {
@@ -567,8 +563,8 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
 					   if (newDS == null || newDS.getLength() < 1) {
 						   M_log.debug("searchExternalUser() empty results for email criteria: " + criteria);
 					   } else {
+						   M_log.debug("success for: @id ='',@firstname='',@lastname='',@email='"+criteria+"'");
 						   NodeList table = newDS.item(0).getChildNodes();
-						   String firstStr = "", lastStr = "", usernameStr = "", emailStr = "";
 						   
 						   for (int i=0; i<table.getLength(); i++) {
 							   Node record = table.item(i);
@@ -580,15 +576,16 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
 								   
 								   for (int j=0; j < entries.getLength(); j++) {
 									   String entryName = entries.item(j).getNodeName();
-									   String entryValue = entries.item(j).getTextContent();
+									   String entryValue = "<xml>"+entries.item(j).getTextContent()+"</xml>";
 									   //System.out.println(entries.item(j).getNodeName()+": "+entries.item(j).getTextContent());
 									   
 									   Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder()
-										   .parse(new InputSource(new StringReader(entries.item(j).getTextContent())));
+										   .parse(new InputSource(new StringReader(entryValue)));
 									   
 									   NodeList userinfo = doc.getElementsByTagName("Name");
-									   if (userinfo.getLength() > 0) {
-										   Element info = (Element)userinfo.item(0);
+									   for (int k = 0; k <userinfo.getLength(); k++) {
+										   String firstStr = "", lastStr = "", usernameStr = "", emailStr = "";
+										   Element info = (Element)userinfo.item(k);
 										   firstStr = info.getAttribute("first_name");
 										   lastStr = info.getAttribute("last_name");
 										   emailStr = info.getAttribute("Email");
@@ -597,21 +594,23 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider, UsersSh
 											   Element username = (Element) userNameInfo.item(0);
 										   	   usernameStr = username.getAttribute("username").toLowerCase();
 										   }
+										   
+										   UserEdit user = factory.newUser();
+										   user.setEid(usernameStr);
+										   user.setFirstName(firstStr);
+										   user.setLastName(lastStr);
+										   user.setEmail(emailStr);
+										   user.setPassword("ffdsfsgsjhdfvdsfvhdsvc");
+										   user.setType("member");
+										   users.add(user);
 									   }
 									   
 								   }
+								   
 									   
 							   }
 						   }
 						   
-						   UserEdit user = factory.newUser();
-						   user.setEid(usernameStr);
-						   user.setFirstName(firstStr);
-						   user.setLastName(lastStr);
-						   user.setEmail(emailStr);
-						   user.setPassword("ffdsfsgsjhdfvdsfvhdsvc"); 
-						   user.setType("member");
-						   users.add(user);
 					   }
     			   } catch (Exception e) {
 					   e.printStackTrace();
