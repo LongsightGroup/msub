@@ -126,6 +126,8 @@ profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/
 #shell_command patch -p0 < mneme.patch
 #shell_command patch -p0 < evaluation.patch
 
+#shell_command sed -i "s/sakai.version/sakai.calendar.version/g" melete/melete-impl/pom.xml
+
 #free Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
 #shell_command cd bigbluebutton-sakai/bbb-tool
