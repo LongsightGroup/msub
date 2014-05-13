@@ -119,6 +119,7 @@ profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/
 #shell_command sed -i 's/2.6.0RC1-SNAPSHOT/2.9-SNAPSHOT/g' feed/pom.xml
 #shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' formbuilder/pom.xml 
 #shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' formbuilder/tool/pom.xml 
+#shell_command sed -i 's/2.9-SNAPSHOT/2.9.4-SNAPSHOT/g' mneme/mneme-impl/impl/pom.xml 
 
 #shell_command patch -p0 < jforum.patch
 #shell_command patch -p0 < ambrosia.patch
