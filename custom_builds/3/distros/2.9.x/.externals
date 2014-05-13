@@ -82,7 +82,7 @@ hybrid https://source.sakaiproject.org/svn/hybrid/branches/hybrid-1.2.x
 adobeconnect -r83509 https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/2.9.x
 ambrosia https://source.sakaiproject.org/contrib//umich/etudes/ambrosia/branches/2.1.8/
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x
-delegatedaccess https://source.sakaiproject.org/contrib/delegatedaccess/trunk/
+delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/trunk
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 feed https://source.sakaiproject.org/contrib/feed/trunk/
@@ -92,7 +92,6 @@ formbuilder https://source.sakaiproject.org/contrib/ucf/formbuilder/tags/formbui
 #NMG-275133
 jforum https://source.sakaiproject.org/contrib/etudes/sakai-jforum/tags/2.9.11/
 kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/trunk
-mailsender https://source.sakaiproject.org/contrib/mailsender/branches/1.6
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak29x
 mneme https://source.sakaiproject.org/contrib/longsight/mneme/CTools-2.9.0-patched/
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport
@@ -101,7 +100,8 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai
 qna https://source.sakaiproject.org/contrib/qna/trunk/
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
+#Update because of site archive changes
+site-manage -r 309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
 sms https://source.sakaiproject.org/contrib/sms/sms/trunk
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
 tool https://source.sakaiproject.org/svn/msub/longsight.com/tool/tool-2.9.x_features-backport/
@@ -114,7 +114,8 @@ profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/
 
 #POM Changes
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
-#shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' delegatedaccess/pom.xml formbuilder/pom.xml formbuilder/tool/pom.xml
+#shell_command sed -i '0,/11-SNAPSHOT/{s/11-SNAPSHOT/2.9-SNAPSHOT/}' delegatedaccess/pom.xml
+#shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' formbuilder/pom.xml formbuilder/tool/pom.xml
 #shell_command sed -i 's/2.6.0RC1-SNAPSHOT/2.9-SNAPSHOT/g' feed/pom.xml
 #shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' formbuilder/pom.xml 
 #shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' formbuilder/tool/pom.xml 
@@ -136,6 +137,3 @@ profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/
 
 #GIT Projects
 #git_project bigbluebutton-sakai/bbb-tool
-
-
-
