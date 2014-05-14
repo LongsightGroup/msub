@@ -63,12 +63,11 @@
         <li> <a target="_blank" href="http://www.gordonconwell.edu/jacksonville/">Jacksonville</a></li>
 </ul>
 <ul id="utilityNav">
-        <li class="ul1">
-                <a target="_blank" href="http://mail.gcts.edu/?__hstc=231821248.32634cc0419c4ea6cffa426c113766c4.1377263548395.1377263548395.1377263548396.1&amp;__hssc=231821248.1.1377263548396" target="_blank">Webmail</a></li>
-        <li class="ul2"> <a href="http://www.gordonconwell.edu/contact.cfm" target="_blank">Contact</a></li>
-        <li class="ul3"> <a target="_blank" href="https://cams-web.gordonconwell.edu/estudent">Student Portal</a></li>
-        <li class="ul4"> <a target="_blank" href="http://www.gordonconwell.edu/resources/Helpdesk.cfm">Helpdesk</a></li>
-        <li class="ul5"> <a target="_blank" href="http://www.gordonconwell.edu/resources/Quick-Links2.cfm">Quicklinks</a></li>
+        <li class="ul1"><a target="_blank" title="Webmail" href="http://mail.gcts.edu">Webmail</a></li>
+        <li class="ul2"> <a href="http://www.gordonconwell.edu/contact.cfm" title="Contact Us" target="_blank">Contact</a></li>
+        <li class="ul3"> <a target="_blank" href="https://cams-web.gordonconwell.edu/estudent" title="CAMS Student Portal">Student Portal</a></li>
+        <li class="ul5"> <a target="_blank" href="http://www.gordonconwell.edu/resources/Helpdesk.cfm" title="Helpdesk">Helpdesk</a></li>
+        <li class="ul6"> <a target="_blank" href="http://www.gordonconwell.edu/resources/Quick-Links2.cfm" title="Quick Links">Quicklinks</a></li>
 </ul>
 
 </div>
@@ -110,11 +109,11 @@
 </ul>
 </div>
 <ul id="utilityNav">
-        <li class="ul1"> <a href="http://www.gordonconwell.edu/contact.cfm" target="_blank">Contact</a></li>
-        <li class="ul2"> <a target="_blank" href="http://gcts.christianbook.com/ " target="_blank">Bookstore</a></li>
-        <li class="ul3"> <a target="_blank" href="https://cams-web.gordonconwell.edu/estudent" target="_blank">CAMS Login</a></li>
-        <li class="ul5">
-                <a target="_blank" href="http://mail.gcts.edu/?__hstc=231821248.32634cc0419c4ea6cffa426c113766c4.1377263548395.1377263548395.1377263548396.1&amp;__hssc=231821248.1.1377263548396" target="_blank">Webmail</a></li>
+        <li class="ul1"><a target="_blank" title="Webmail" href="http://mail.gcts.edu">Webmail</a></li>
+        <li class="ul2"> <a href="http://www.gordonconwell.edu/contact.cfm" title="Contact Us" target="_blank">Contact</a></li>
+        <li class="ul3"> <a target="_blank" href="https://cams-web.gordonconwell.edu/estudent" title="CAMS Student Portal">Student Portal</a></li>
+        <li class="ul5"> <a target="_blank" href="http://www.gordonconwell.edu/resources/Helpdesk.cfm" title="Helpdesk">Helpdesk</a></li>
+        <li class="ul6"> <a target="_blank" href="http://www.gordonconwell.edu/resources/Quick-Links2.cfm" title="Quick Links">Quicklinks</a></li>
 </ul>
 
 					<!-- login component -->
