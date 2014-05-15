@@ -74,6 +74,7 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
 #customizations
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x
+da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk
 delegatedaccess https://source.sakaiproject.org/contrib/delegatedaccess/trunk/
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
