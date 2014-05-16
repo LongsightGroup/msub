@@ -75,17 +75,17 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 #customizations
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x
 da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk
-delegatedaccess https://source.sakaiproject.org/contrib/delegatedaccess/trunk/
+delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/trunk/
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6/
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak29x
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
+site-manage -r 307958 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 web https://source.sakaiproject.org/svn/msub/longsight.com/web/web-2.9.x_features-backport/ 
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
@@ -97,7 +97,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #POM Changes
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
-#shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' delegatedaccess/pom.xml 
+#shell_command sed -i '0,/11-SNAPSHOT/{s/11-SNAPSHOT/2.9-SNAPSHOT/}' delegatedaccess/pom.xml
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
