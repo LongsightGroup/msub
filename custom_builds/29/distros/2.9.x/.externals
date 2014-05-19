@@ -81,7 +81,7 @@ edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+hierarchy -r85612 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
 portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.x_features-backport
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/29/web-2.9.x_custom
