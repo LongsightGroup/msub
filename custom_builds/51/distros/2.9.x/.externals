@@ -46,7 +46,7 @@ entitybroker https://source.sakaiproject.org/svn/entitybroker/branches/entitybro
 # Indie tools
 basiclti https://source.sakaiproject.org/svn/basiclti/branches/basiclti-2.1.x
 jobscheduler https://source.sakaiproject.org/svn/jobscheduler/branches/jobscheduler-2.9.x
-lessonbuilder https://source.sakaiproject.org/svn//lessonbuilder/branches/lessonbuilder-1.5.x-fall2013
+lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/trunk
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/1.7
 polls https://source.sakaiproject.org/svn/polls/branches/polls-1.5.x
 profile https://source.sakaiproject.org/svn/profile/branches/profile-2.9.x
