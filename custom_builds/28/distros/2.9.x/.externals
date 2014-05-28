@@ -25,7 +25,7 @@ rights https://source.sakaiproject.org/svn/rights/branches/sakai-2.9.x
 roster https://source.sakaiproject.org/svn/roster/branches/sakai-2.9.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-2.9.x
 sections https://source.sakaiproject.org/svn/sections/branches/sakai-2.9.x
-site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-2.9.x
+#site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-2.9.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-2.9.x
 textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-2.9.x
 tool https://source.sakaiproject.org/svn/tool/branches/sakai-2.9.x
@@ -90,6 +90,7 @@ msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
+site-manage -r 309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
 #Patcher options: "mavenoptions: <options>"
