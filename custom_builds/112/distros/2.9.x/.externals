@@ -86,6 +86,10 @@ hierarchy -r 85612 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/
 login https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/112/login/login-2.9.x
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/112/sam/samigo-2.9.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-P2.9
+
 #POM Changes
 #shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' delegatedaccess/pom.xml
 #shell_command sed -i 's/URLDecoder.decode(title,"UTF-8")/title/g' content-review/contentreview-impl/impl/src/java/org/sakaiproject/contentreview/impl/turnitin/TurnitinReviewServiceImpl.java
