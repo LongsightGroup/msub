@@ -133,7 +133,6 @@
                 <module>hierarchy</module>
                 <module>batch-user-creation</module>
                 <module>clog</module>
-                <module>delegatedaccess</module>
                 <module>sis_integration</module>
                 <module>content-review/contentreview-impl</module>
             </modules>
