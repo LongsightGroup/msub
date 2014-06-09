@@ -223,7 +223,6 @@
                 <module>web</module>
                 
                 <!-- Experimental -->
-                <module>hybrid</module>
                 <!-- <module>roster2</module> -->
             </modules>
         </profile>
