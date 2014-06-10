@@ -130,7 +130,6 @@
                 <module>web</module>
                 <module>blogwow</module>
                 <module>hierarchy</module>
-                <module>delegatedaccess</module>
                 <module>evaluation</module>
                 <module>signup</module>
             </modules>
