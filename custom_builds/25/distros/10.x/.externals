@@ -82,7 +82,7 @@ gradebook-export https://source.sakaiproject.org/svn/msub/longsight.com/gradeboo
 
 
 #shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' gradebook-export/pom.xml
-#shell_command sed -i 's/opensymphony\.quartz/org\.quartz-scheduler/g' scheduler-jobs/pom.xml
+#shell_command sed -i 's/opensymphony\.quartz/org\.quartz-scheduler/g' gradebook-export/scheduler-jobs/pom.xml
 
 #CAS
 #bradleyTools.war?
