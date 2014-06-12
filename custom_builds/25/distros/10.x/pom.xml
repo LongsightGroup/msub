@@ -116,6 +116,8 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>blogwow</module>
+                <module>content-review/contentreview-impl</module>
+                <module>evaluation</module>
                 <module>gradebook-export</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
