@@ -100,6 +100,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #shell_command sed -i 's/artifactId>hibernate/artifactId>hibernate-core/g' content-review/contentreview-impl/impl/pom.xml
 #shell_command sed -i 's/artifactId>spring/artifactId>spring-core/g' content-review/contentreview-impl/impl/pom.xml
 #shell_command sed -i 's/2.5.6.SEC02/${kernel\.spring\.version}/g' content-review/contentreview-impl/impl/pom.xml
+#shell_command sed -i 's/spring-core-test/spring-test/g' content-review/contentreview-impl/impl/pom.xml
 #shell_command sed -i 's/\/dependencies>/dependency><groupId>org\.springframework<\/groupId><artifactId>spring-orm<\/artifactId><\/dependency><\/dependencies>/g' content-review/contentreview-impl/impl/pom.xml
 
 #CAS
