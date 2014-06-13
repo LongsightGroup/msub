@@ -80,7 +80,7 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 archive https://source.sakaiproject.org/svn/msub/longsight.com/archive/archive-10.x_backport
 blogwow -r 86574 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
 common https://source.sakaiproject.org/svn/msub/longsight.com/common/common-10.x_backport
-content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/tags/content-review-0.7
+content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl/
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x 
 gradebook-export https://source.sakaiproject.org/svn/msub/longsight.com/gradebook-export/gradebook-export-1.5-src
 jobscheduler https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/25/jobscheduler/jobscheduler-10.x
