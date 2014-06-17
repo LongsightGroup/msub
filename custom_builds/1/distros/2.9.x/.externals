@@ -86,7 +86,7 @@ edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+hierarchy -r 85612 https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
 jforum https://source.sakaiproject.org/contrib/etudes/sakai-jforum/tags/2.9.11
 mailsender https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/1/mailsender-2.9.x_custom
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
