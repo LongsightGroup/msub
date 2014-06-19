@@ -118,6 +118,9 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>evaluation</module>
+                <module>sakai-wicket-for-scorm</module>
+                <module>SCORM.2004.3ED.RTE</module>
             </modules>
         </profile>
         <profile>
