@@ -11,7 +11,7 @@ dav https://source.sakaiproject.org/svn/dav/branches/sakai-2.9.x
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-2.9.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-2.9.x
 linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-2.9.x
-login https://source.sakaiproject.org/svn/login/branches/sakai-2.9.x
+#login https://source.sakaiproject.org/svn/login/branches/sakai-2.9.x
 master https://source.sakaiproject.org/svn/master/branches/sakai-2.9.x
 memory https://source.sakaiproject.org/svn/memory/branches/sakai-2.9.x
 metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-2.9.x
@@ -75,6 +75,7 @@ blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches
 common https://source.sakaiproject.org/svn/msub/longsight.com/common/common-1.2.x-bb6
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/tags/content-review-0.7/
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport
+login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-2.9.x_features-backport
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.x_features-backport/
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
