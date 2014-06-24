@@ -135,6 +135,7 @@
                 <module>evaluation</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>roster2</module>
             </modules>
         </profile>
         <profile>

@@ -95,6 +95,7 @@ portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 reset-pass https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/reset-pass/reset-pass_2.9.x
 roster https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/roster/roster-2.9.x_custom
+roster2 https://source.sakaiproject.org/contrib/roster2/branches/roster2-1.0.x
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
 sitestats https://source.sakaiproject.org/svn/msub/longsight.com/sitestats/sitestats-2.3.x_features-backport/
