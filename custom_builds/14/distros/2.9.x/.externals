@@ -114,6 +114,10 @@ web https://source.sakaiproject.org/svn/msub/longsight.com/web/web-2.9.x_feature
 #shell_command sed -i '0,/11-SNAPSHOT/{s/11-SNAPSHOT/2.9-SNAPSHOT/}' delegatedaccess/pom.xml
 #Update calendar version for melete, luckily only one sakai version in this file
 #shell_command sed -i "s/sakai.version/sakai.calendar.version/g" melete/melete-impl/pom.xml
+#shell_command sed -i "s/0.9/1.1/g" roster2/pom.xml
+#shell_command sed -i "s/oss.sonatype.org - github-releases/oss.sonatype.org/g" roster2/pom.xml
+#shell_command sed -i "s/oss.sonatype.org-github-releases/oss.sonatype.org/g" roster2/pom.xml
+#shell_command sed -i "s/oss.sonatype.org\/content\/repositories\/github-releases/oss.sonatype.org\/content\/groups\/public/g" roster2/pom.xml
 
 
 #Also have  elluminate bridge, cas
