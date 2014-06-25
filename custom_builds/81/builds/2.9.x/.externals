@@ -86,6 +86,8 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport 
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
+sakai-wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/trunk
+SCORM.2004.3ED.RTE https://source.sakaiproject.org/svn/msub/uwo.ca/scorm/trunk
 site-manage -r 309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
 signup https://source.sakaiproject.org/contrib//signup/branches/2-9-x/
 tool https://source.sakaiproject.org/svn/msub/longsight.com/tool/tool-2.9.x_features-backport
@@ -103,4 +105,5 @@ web https://source.sakaiproject.org/svn/msub/longsight.com/web/web-2.9.x_feature
 #shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' blogwow/pom.xml
 #shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' etudes-util/pom.xml
 #shell_command sed -i 's/<artifactId>etudes-util-api<\/artifactId>/<artifactId>etudes-util-api<\/artifactId><version>2\.9-SNAPSHOT<\/version>/g' etudes-util/etudes-util/util/pom.xml
+#shell_command find sakai-wicket-for-scorm/ -name pom.xml -exec sed -i 's/2.8.0/2.9-SNAPSHOT/g' {} \;
 

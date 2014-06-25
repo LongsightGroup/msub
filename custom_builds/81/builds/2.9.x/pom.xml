@@ -133,6 +133,8 @@
                 <module>evaluation</module>
                 <module>kaltura</module>
                 <module>signup</module>
+                <module>sakai-wicket-for-scorm</module>
+                <module>SCORM.2004.3ED.RTE</module>
             </modules>
         </profile>
         <profile>
