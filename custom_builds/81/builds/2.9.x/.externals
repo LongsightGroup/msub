@@ -105,5 +105,4 @@ web https://source.sakaiproject.org/svn/msub/longsight.com/web/web-2.9.x_feature
 #shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' blogwow/pom.xml
 #shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' etudes-util/pom.xml
 #shell_command sed -i 's/<artifactId>etudes-util-api<\/artifactId>/<artifactId>etudes-util-api<\/artifactId><version>2\.9-SNAPSHOT<\/version>/g' etudes-util/etudes-util/util/pom.xml
-#shell_command find sakai-wicket-for-scorm/ -name pom.xml -exec sed -i 's/2.8.0/2.9-SNAPSHOT/g' {} \;
 
