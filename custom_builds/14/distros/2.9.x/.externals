@@ -53,7 +53,7 @@ mailsender https://source.sakaiproject.org/svn/mailsender/branches/1.7
 #msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/msgcntr-3.0.x
 polls https://source.sakaiproject.org/svn/polls/branches/polls-1.5.x
 profile https://source.sakaiproject.org/svn/profile/branches/profile-2.9.x
-profile2 https://source.sakaiproject.org/svn/profile2/branches/profile2-1.5.x
+#profile2 https://source.sakaiproject.org/svn/profile2/branches/profile2-1.5.x
 #reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/reset-pass-2.9.x
 #samigo https://source.sakaiproject.org/svn/sam/branches/samigo-2.9.x
 search https://source.sakaiproject.org/svn/search/branches/search-1.4.x
@@ -92,6 +92,7 @@ login https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/lo
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak29x
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.x_features-backport
+profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/19/profile2/profile2-1.6.x_custom
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 reset-pass https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/reset-pass/reset-pass_2.9.x
 roster https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/roster/roster-2.9.x_custom
