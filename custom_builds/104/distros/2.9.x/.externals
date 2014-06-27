@@ -58,7 +58,6 @@ shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/shortened
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sitestats-2.3.x
 
 announcement https://source.sakaiproject.org/svn/announcement/branches/announcement-2.9.x
-assignment https://source.sakaiproject.org/svn/assignment/branches/assignment-2.9.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/calendar-2.9.x
 courier https://source.sakaiproject.org/svn/courier/branches/courier-2.9.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/mailarchive-2.9.x
@@ -70,6 +69,7 @@ taggable https://source.sakaiproject.org/svn/taggable/branches/taggable-2.9.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
 #Longsight Customizations:
+assignment https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/104/assignment/assignment-2.9.x-backport
 assignment2 https://source.sakaiproject.org/svn/msub/longsight.com/assignment2/assignment2-1.0_sak29x_features-backport/
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x
 common https://source.sakaiproject.org/svn/msub/longsight.com/common/common-1.2.x-bb6
