@@ -3424,7 +3424,10 @@ public class AssignmentAction extends PagedResourceActionII
 							// bulk add all grades for assignment into gradebook
 							Iterator submissions = AssignmentService.getSubmissions(a).iterator();
 
-							Map<String, String> m = new HashMap<String, String>();
+							//Assignment scores map
+							Map<String, String> sm = new HashMap<String, String>();
+							//Assignment comments map, though doesn't look like there's any way to update comments in bulk in the UI yet
+							Map<String, String> cm = new HashMap<String, String>();
 
 							// any score to copy over? get all the assessmentGradingData and copy over
 							while (submissions.hasNext())
@@ -3436,29 +3439,32 @@ public class AssignmentAction extends PagedResourceActionII
 									if (submitters != null && submitters.length > 0) {
 										String submitterId = submitters[0].getId();
 										String gradeString = StringUtils.trimToNull(aSubmission.getGrade(false));
+									        String commentString = FormattedText.convertFormattedTextToPlaintext(aSubmission.getFeedbackComment());
 										String grade = gradeString != null ? displayGrade(state,gradeString) : null;
-										m.put(submitterId, grade);
+										sm.put(submitterId, grade);
+										cm.put(submitterId, commentString);
 									}
 								}
 							}
 
 							// need to update only when there is at least one submission
-							if (!m.isEmpty())
+							if (!sm.isEmpty())
 							{
 								if (associateGradebookAssignment != null)
 								{
 									if (isExternalAssociateAssignmentDefined)
 									{
 										// the associated assignment is externally maintained
-										gExternal.updateExternalAssessmentScoresString(gradebookUid, associateGradebookAssignment, m);
+										gExternal.updateExternalAssessmentScoresString(gradebookUid, associateGradebookAssignment, sm);
+										gExternal.updateExternalAssessmentComments(gradebookUid, associateGradebookAssignment, cm);
 									}
 									else if (isAssignmentDefined)
 									{
 										// the associated assignment is internal one, update records one by one
-										for (Map.Entry<String, String> entry : m.entrySet())
++										for (Map.Entry<String, String> entry : sm.entrySet())
 										{
 											String submitterId = (String) entry.getKey();
-											String grade = StringUtils.trimToNull(displayGrade(state, (String) m.get(submitterId)));
++											String grade = StringUtils.trimToNull(displayGrade(state, (String) sm.get(submitterId)));
 											if (grade != null)
 											{
 												g.setAssignmentScoreString(gradebookUid, associateGradebookAssignment, submitterId, grade, "");
@@ -3468,7 +3474,8 @@ public class AssignmentAction extends PagedResourceActionII
 								}
 								else if (isExternalAssignmentDefined)
 								{
-									gExternal.updateExternalAssessmentScoresString(gradebookUid, assignmentRef, m);
+									gExternal.updateExternalAssessmentScoresString(gradebookUid, assignmentRef, sm);
+									gExternal.updateExternalAssessmentComments(gradebookUid, associateGradebookAssignment, cm);
 								}
 							}
 						}
@@ -3489,6 +3496,9 @@ public class AssignmentAction extends PagedResourceActionII
 											// the associated assignment is externally maintained
 											gExternal.updateExternalAssessmentScore(gradebookUid, associateGradebookAssignment, submitters[0].getId(),
 													(gradeString != null && aSubmission.getGradeReleased()) ? gradeString : null);
+											//Gradebook only supports plaintext strings
+											String commentString = FormattedText.convertFormattedTextToPlaintext(aSubmission.getFeedbackComment());
+											gExternal.updateExternalAssessmentComment(gradebookUid, associateGradebookAssignment, submitters[i].getId(),
 										}
 										else if (g.isAssignmentDefined(gradebookUid, associateGradebookAssignment))
 										{
