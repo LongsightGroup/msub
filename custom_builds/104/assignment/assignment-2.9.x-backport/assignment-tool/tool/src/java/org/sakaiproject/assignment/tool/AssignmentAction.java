@@ -3461,10 +3461,10 @@ public class AssignmentAction extends PagedResourceActionII
 									else if (isAssignmentDefined)
 									{
 										// the associated assignment is internal one, update records one by one
-+										for (Map.Entry<String, String> entry : sm.entrySet())
+										for (Map.Entry<String, String> entry : sm.entrySet())
 										{
 											String submitterId = (String) entry.getKey();
-+											String grade = StringUtils.trimToNull(displayGrade(state, (String) sm.get(submitterId)));
+											String grade = StringUtils.trimToNull(displayGrade(state, (String) sm.get(submitterId)));
 											if (grade != null)
 											{
 												g.setAssignmentScoreString(gradebookUid, associateGradebookAssignment, submitterId, grade, "");
@@ -3498,7 +3498,8 @@ public class AssignmentAction extends PagedResourceActionII
 													(gradeString != null && aSubmission.getGradeReleased()) ? gradeString : null);
 											//Gradebook only supports plaintext strings
 											String commentString = FormattedText.convertFormattedTextToPlaintext(aSubmission.getFeedbackComment());
-											gExternal.updateExternalAssessmentComment(gradebookUid, associateGradebookAssignment, submitters[i].getId(),
+											gExternal.updateExternalAssessmentComment(gradebookUid, associateGradebookAssignment, submitters[0].getId(),
+                                                                                                (commentString != null && aSubmission.getGradeReleased()) ? commentString : "");
 										}
 										else if (g.isAssignmentDefined(gradebookUid, associateGradebookAssignment))
 										{
