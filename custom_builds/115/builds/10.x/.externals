@@ -58,7 +58,7 @@ reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-10.x
-#samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
+samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
 search https://source.sakaiproject.org/svn/search/branches/sakai-10.x
 sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
@@ -78,8 +78,8 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #Customizations
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
-evaluation https://source.sakaiproject.org/contrib/evaluation/trunk/
-samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x/
+#samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
 #Patcher options: "mavenoptions: <options>"
