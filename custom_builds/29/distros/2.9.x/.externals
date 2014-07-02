@@ -97,7 +97,7 @@ msgcntr https://source.sakaiproject.org/svn//msub/longsight.com/msgcntr/msgcntr-
 
 #Patcher options: "mavenoptions: <options>"
 #Evaluation needs -Psakai2.9
-#mavenoptions:-Psakai2.9 -Detudes.util.version=1.0.17
+#mavenoptions:-Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.basiclti.version=2.0.2-SNAPSHOT
  
 #POM Changes
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
