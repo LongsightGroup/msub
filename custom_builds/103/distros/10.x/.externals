@@ -78,9 +78,21 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 # custom tools
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
-sakai-wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/trunk
-SCORM.2004.3ED.RTE https://source.sakaiproject.org/svn/msub/uwo.ca/scorm/trunk
+#Leave out scorm for now, they said they're not using it and might be out of date
+#sakai-wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/trunk
+#SCORM.2004.3ED.RTE https://source.sakaiproject.org/svn/msub/uwo.ca/scorm/trunk
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/webservices/webservices-1.0.x
+
+#Customizations
+config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/config/config-2.9.x-custom
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/kernel/kernel-1.3.x_custom
+providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/providers/providers-2.9.x_custom
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/site-manage/site-manage-2.9.x-custom
+user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/user/user-2.9.x_custom
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/webservices/webservices-1.0.x
+
+certification https://source.sakaiproject.org/contrib/longsight/rsmart-certification/branches/2.9.x
+qna https://source.sakaiproject.org/contrib/longsight/qna/trunk
 
 #shell_command find sakai-wicket-for-scorm/ -name pom.xml -exec sed -i 's/2.8.0/10-SNAPSHOT/g' {} \;
 #shell_command find SCORM.2004.3ED.RTE/ -name pom.xml -exec sed -i 's/2.9.1/10-SNAPSHOT/g' {} \;
