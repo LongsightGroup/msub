@@ -122,6 +122,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #shell_command sed -i 's/>ehcache</>ehcache-core</g' scorm/scorm-tool/pom.xml scorm/scorm-impl/model/pom.xml
 #Update calendar version for melete, luckily only one sakai version in this file
 #shell_command sed -i "s/sakai.version/sakai.calendar.version/g" melete/melete-impl/pom.xml
+#shell_command sed -i 's/10-SNAPSHOT/2.9-SNAPSHOT/g' gradebook-export/pom.xml
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
