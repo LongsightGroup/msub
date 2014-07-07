@@ -4,7 +4,7 @@
 master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 
 # Core services
-kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
+#kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
@@ -52,7 +52,7 @@ portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
-providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
+#providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
 reference https://source.sakaiproject.org/svn/reference/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
@@ -64,13 +64,13 @@ sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
 signup https://source.sakaiproject.org/svn/signup/branches/sakai-10.x/
 site https://source.sakaiproject.org/svn/site/branches/sakai-10.x
-site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
+#site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
 textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-10.x
 tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
-user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
+#user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
@@ -81,15 +81,13 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 #Leave out scorm for now, they said they're not using it and might be out of date
 #sakai-wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/trunk
 #SCORM.2004.3ED.RTE https://source.sakaiproject.org/svn/msub/uwo.ca/scorm/trunk
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/webservices/webservices-1.0.x
 
 #Customizations
-config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/config/config-2.9.x-custom
-kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/kernel/kernel-1.3.x_custom
-providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/providers/providers-2.9.x_custom
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/site-manage/site-manage-2.9.x-custom
-user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/user/user-2.9.x_custom
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/webservices/webservices-1.0.x
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/kernel/kernel-10.x_custom
+providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/providers/sakai-10.x_custom
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/site-manage/sakai-10.x_custom
+user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/user/sakai-10.x_custom
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/webservices/sakai-10.x_custom
 
 certification https://source.sakaiproject.org/contrib/longsight/rsmart-certification/branches/2.9.x
 qna https://source.sakaiproject.org/contrib/longsight/qna/trunk
