@@ -1,0 +1,2 @@
+CMCC-10 Allow use of student number in JLDAP provider
+
