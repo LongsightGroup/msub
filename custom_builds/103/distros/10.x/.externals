@@ -30,7 +30,7 @@ basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
 chat https://source.sakaiproject.org/svn/chat/branches/sakai-10.x
 citations https://source.sakaiproject.org/svn/citations/branches/sakai-10.x
-config https://source.sakaiproject.org/svn/config/branches/sakai-10.x
+#config https://source.sakaiproject.org/svn/config/branches/sakai-10.x
 content https://source.sakaiproject.org/svn/content/branches/sakai-10.x
 courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
@@ -64,7 +64,7 @@ sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
 signup https://source.sakaiproject.org/svn/signup/branches/sakai-10.x/
 site https://source.sakaiproject.org/svn/site/branches/sakai-10.x
-#site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
+site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
@@ -83,13 +83,14 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 #SCORM.2004.3ED.RTE https://source.sakaiproject.org/svn/msub/uwo.ca/scorm/trunk
 
 #Customizations
+config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/config/sakai-10.x
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/kernel/kernel-10.x_custom
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/providers/sakai-10.x_custom
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/site-manage/sakai-10.x_custom
+#site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/site-manage/sakai-10.x_custom
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/user/sakai-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/webservices/sakai-10.x_custom
 
-certification https://source.sakaiproject.org/contrib/longsight/rsmart-certification/branches/2.9.x
+certification https://source.sakaiproject.org/contrib/longsight/rsmart-certification/branches/10.x
 qna https://source.sakaiproject.org/contrib/longsight/qna/trunk
 
 #shell_command find sakai-wicket-for-scorm/ -name pom.xml -exec sed -i 's/2.8.0/10-SNAPSHOT/g' {} \;
