@@ -2329,6 +2329,70 @@ public String getManyCourseGrades(String sessionId, String siteIds) throws AxisF
   return gradeResult;
 }
 
+public String getNumericalCourseGrades(String sessionId, String siteId) throws AxisFault {
+  Session session = establishSession(sessionId);
+  
+  if (!securityService.isSuperUser()) {
+    LOG.warn("WS getCourseGrades(): Permission denied. Restricted to super users.");
+    throw new AxisFault("WS getCourseGrades(): Permission denied. Restricted to super users.");
+  }
+
+  String gradeResult = "";
+  try {
+      GradebookService aGradebookService = (GradebookService) ComponentManager.get("org.sakaiproject.service.gradebook.GradebookService");
+      
+      Gradebook gb = (Gradebook) aGradebookService.getGradebook(siteId);
+
+        // get the calculated grades
+        Map<String, String> cCourseGrade = aGradebookService.getCalculatedCourseGrade(siteId, false); 
+        Map<String, String> eCourseGrade = aGradebookService.getEnteredCourseGrade(siteId);
+
+        Document dom = Xml.createDocument();
+        Node course = dom.createElement("course");
+        dom.appendChild(course);
+
+        Node course_id = dom.createElement("course_id");
+        course.appendChild(course_id);
+        course_id.appendChild(dom.createTextNode(siteId));
+
+
+        // override any grades the instructor has manually set
+        for (Map.Entry<String, String> entry : eCourseGrade.entrySet()) {
+          Node override = dom.createElement("override");
+          course.appendChild(override);
+
+          Node student_id = dom.createElement("student_id");
+          override.appendChild(student_id);
+          student_id.appendChild(dom.createTextNode(entry.getKey()));
+
+          Node course_grade = dom.createElement("course_grade");
+          override.appendChild(course_grade);
+
+          course_grade.appendChild(dom.createTextNode(entry.getValue()));
+        }
+
+        for (Map.Entry<String, String> entry : cCourseGrade.entrySet()) {
+          Node student = dom.createElement("student");
+          course.appendChild(student);
+
+          Node student_id = dom.createElement("student_id");
+          student.appendChild(student_id);
+          student_id.appendChild(dom.createTextNode(entry.getKey()));
+
+          Node course_grade = dom.createElement("course_grade");
+          student.appendChild(course_grade);
+
+          course_grade.appendChild(dom.createTextNode(entry.getValue()));
+        }
+
+        gradeResult = Xml.writeDocumentToString(dom);
+  } catch (Exception e) {
+    return e.getClass().getName() + " : " + e.getMessage();
+  }
+
+  return gradeResult;
+}
+
 public String getCourseGradesForUser(String sessionId, String siteId, String instructorId, String userid) throws AxisFault
 {
   Session session = establishSession(sessionId);
@@ -2868,6 +2932,16 @@ public Boolean removeMemberFromGroup( String sessionId, String siteId, String gr
 		return returnList;
 	}
 
+	public String longsightGetUserDisplayId( String sessionid, String eid ) throws AxisFault {
+	  Session session = establishSession(sessionid);
+	  try {
+		User user = userDirectoryService.getUserByEid(eid);
+		return user.getDisplayId();
+	  } catch (Exception e) {  
+	 	LOG.error("WS longsightGetUserDisplayId() failed for user: " + eid + " : " + e.getClass().getName() + " : " + e.getMessage());
+		return "";
+	  }
+	}
 public Map transferCopyEntities(String toolId, String fromContext, String toContext) {
 
         Map transversalMap = new HashMap();
