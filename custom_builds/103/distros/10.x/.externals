@@ -92,6 +92,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds
 
 certification https://source.sakaiproject.org/contrib/longsight/rsmart-certification/branches/10.x
 qna https://source.sakaiproject.org/contrib/longsight/qna/trunk
+sms https://source.sakaiproject.org/contrib/sms/sms/trunk/
 
 #shell_command find sakai-wicket-for-scorm/ -name pom.xml -exec sed -i 's/2.8.0/10-SNAPSHOT/g' {} \;
 #shell_command find SCORM.2004.3ED.RTE/ -name pom.xml -exec sed -i 's/2.9.1/10-SNAPSHOT/g' {} \;
