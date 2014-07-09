@@ -29,7 +29,7 @@ site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-2.9.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-2.9.x
 #textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-2.9.x
 tool https://source.sakaiproject.org/svn/tool/branches/sakai-2.9.x
-user https://source.sakaiproject.org/svn/user/branches/sakai-2.9.x
+#user https://source.sakaiproject.org/svn/user/branches/sakai-2.9.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-2.9.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-2.9.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-2.9.x
@@ -91,6 +91,7 @@ portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
+user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/user/user-2.9.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
 #Patcher options: "mavenoptions: <options>"
