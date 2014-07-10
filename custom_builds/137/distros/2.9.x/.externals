@@ -66,7 +66,7 @@ calendar https://source.sakaiproject.org/svn/calendar/branches/calendar-2.9.x
 courier https://source.sakaiproject.org/svn/courier/branches/courier-2.9.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/mailarchive-2.9.x
 message https://source.sakaiproject.org/svn/message/branches/message-2.9.x
-portal https://source.sakaiproject.org/svn/portal/branches/portal-2.9.x
+#portal https://source.sakaiproject.org/svn/portal/branches/portal-2.9.x
 presence https://source.sakaiproject.org/svn/presence/branches/presence-2.9.x
 site https://source.sakaiproject.org/svn/site/branches/site-2.9.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/taggable-2.9.x
@@ -74,3 +74,6 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
 
 # Indie experimental
+
+# custom builds
+portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.x_features-backport
