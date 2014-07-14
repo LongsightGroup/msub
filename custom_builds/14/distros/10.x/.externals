@@ -75,3 +75,10 @@ usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
+
+#customizations
+
+blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl
+roster2 https://source.sakaiproject.org/contrib/roster2/trunk

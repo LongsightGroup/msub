@@ -118,6 +118,10 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>blogwow</module>
+                <module>evaluation</module>
+                <module>content-review/contentreview-impl</module>
+                <module>roster2</module>
             </modules>
         </profile>
         <profile>
