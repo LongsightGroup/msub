@@ -119,6 +119,7 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>content-review/contentreview-impl</module>
+                <module>melete</module>
             </modules>
         </profile>
         <profile>
