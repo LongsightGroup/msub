@@ -137,6 +137,8 @@
                 <module>mneme</module>
                 <module>ambrosia</module>
                 <module>etudes-util</module>
+                <module>wicket-for-scorm</module>
+                <module>scorm</module>
             </modules>
         </profile>
         <profile>
