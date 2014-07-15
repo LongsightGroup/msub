@@ -51,7 +51,6 @@ portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
-providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
@@ -78,4 +77,6 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl
-melete https://source.sakaiproject.org/contrib/etudes/melete/tags/2.9.5
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
+etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
+melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
