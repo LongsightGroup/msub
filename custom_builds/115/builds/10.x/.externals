@@ -80,7 +80,7 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x/
 #samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 #Patcher options: "mavenoptions: <options>"
 #Evaluation needs -Psakai-10
