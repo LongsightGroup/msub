@@ -63,7 +63,7 @@
                 <module>config</module>
                 <module>content</module>
                 <module>content-review</module>
-                <!-- module>content-review/contentreview-impl-vericite</module -->
+                <module>content-review/contentreview-impl-vericite</module>
                 <module>courier</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
@@ -122,7 +122,7 @@
                 <module>da_evalprovider</module>
                 <module>etudes-util</module>
                 <module>melete</module>
-                <!-- module>iclicker</module -->
+                <module>iclicker</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
         </profile>
