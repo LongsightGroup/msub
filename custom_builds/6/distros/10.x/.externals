@@ -96,6 +96,7 @@ iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.4
 #POM Changes
 #shell_command sed -i 's/2.9.2/10-SNAPSHOT/g' iclicker/pom.xml
 #shell_command sed -i 's/1.4-SNAPSHOT/10-SNAPSHOT/g' da_evalprovider/pom.xml
+#shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
