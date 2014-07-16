@@ -102,6 +102,7 @@ iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.4
 #shell_command mv pom2.xml pom.xml
 #shell_command cat pom.xml | sed "s/<entitybroker-utils\.version>.*<\/entitybroker-utils\.version>/<entitybroker-utils\.version>10-SNAPSHOT<\/entitybroker-utils\.version>/g" > pom2.xml 
 #shell_command mv pom2.xml pom.xml
+#shell_command cd ../..
 
 #VeriCite
 #shell_command cd content-review
