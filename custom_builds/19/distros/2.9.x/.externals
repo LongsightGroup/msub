@@ -119,6 +119,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #shell_command sed -i 's/2.9.1/2.9-SNAPSHOT/g' assignment2/impl/pom.xml
 #shell_command sed -i 's/2.8.0/2.9-SNAPSHOT/g' scorm/pom.xml
 #shell_command sed -i 's/3.0.1/3.0.0/g' scorm/pom.xml
+#shell_command sed -i 's/<yuicompressor\.plugin\.version>0\.9/<yuicompressor\.plugin\.version>1\.2/g' roster2/pom.xml
 #shell_command sed -i 's/>ehcache</>ehcache-core</g' scorm/scorm-tool/pom.xml scorm/scorm-impl/model/pom.xml
 #Update calendar version for melete, luckily only one sakai version in this file
 #shell_command sed -i "s/sakai.version/sakai.calendar.version/g" melete/melete-impl/pom.xml
