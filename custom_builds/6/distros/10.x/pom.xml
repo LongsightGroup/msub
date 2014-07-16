@@ -172,7 +172,6 @@
                 <module>message</module>
                 <module>metaobj</module>
                 <module>msgcntr</module>
-                <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
                 <module>portal</module>
