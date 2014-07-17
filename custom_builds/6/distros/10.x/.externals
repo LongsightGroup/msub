@@ -70,7 +70,7 @@ syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
 textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-10.x
 tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
-#user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
+user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
@@ -85,7 +85,7 @@ content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-re
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
-user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/user/user-10.x_custom
+#user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/user/user-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.4
