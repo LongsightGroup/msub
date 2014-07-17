@@ -80,6 +80,7 @@ content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnit
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
+linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-10.x/
 
 #shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
 
