@@ -87,7 +87,7 @@ gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/grade
 hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6/
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
+site-manage -r 307958 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
 web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/118/web/web-2.9.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
