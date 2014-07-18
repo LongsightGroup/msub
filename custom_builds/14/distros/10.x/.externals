@@ -37,7 +37,6 @@ dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-10.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-10.x
 lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
-login https://source.sakaiproject.org/svn/login/branches/sakai-10.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
 memory https://source.sakaiproject.org/svn/memory/branches/sakai-10.x
@@ -81,6 +80,7 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-10.x/
+login https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/login/login-10.x_custom
 
 #shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
 
