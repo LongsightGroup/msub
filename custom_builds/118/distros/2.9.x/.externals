@@ -79,7 +79,7 @@ hybrid https://source.sakaiproject.org/svn/hybrid/branches/hybrid-1.2.x
 
 #customizations
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x
-da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk/
+da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/branches/sakai-2.9.x
 delegatedaccess https://source.sakaiproject.org/contrib/delegatedaccess/trunk/
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
