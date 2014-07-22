@@ -74,6 +74,9 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
+# Contrib tools
+blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
+
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
