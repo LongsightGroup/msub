@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Slideshow</title>
+  <style type="text/css">
+  img { border: none }
+  #slideshow { margin: 20px auto; width: 667px; height: 342px }
+  #slideshow div { width: 667px; height: 342px;  }
+  #slideshow div img { margin: auto; display: block }
+  </style>
+  <script type="text/javascript" src="/library/js/jquery.js"></script>
+  <script type="text/javascript" src="jquery.cycle.lite.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    $('#slideshow').cycle({ 
+      fx:    'fade', 
+      pause:  1 
+    });
+  });
+  </script>
+</head>
+<body>
+<div id="slideshow">
+    <div><img src="Web_FrontPageSlideShow_KIROLogo.jpg" width="500" height="240" /> </div>
+    <div><img src="Web_FrontPageSlideShow_Building.jpg" width="500" height="240" /> </div>
+    <div><img src="Web_FrontPageSlideShow_CMCCMain.jpg" width="500" height="240" /> </div>
+    <div><img src="Web_FrontPageSlideShow_Hands.jpg" width="500" height="240" /></div>
+    <div><img src="Web_FrontPageSlideShow_LectureHall.jpg" width="500" height="240" /> </div>
+    <div><img src="Web_FrontPageSlideShow_Room.jpg" width="500" height="240" /></div>
+    <div><img src="Web_FrontPageSlideShow_XRay.jpg" width="500" height="240" /></div>
+    <div><img src="Web_FrontPageSlideShow_Back.jpg" width="500" height="240" /></div>
+</div> 
+    <!--img src="ShortSwoosh_GreenGrey_Cropped.jpg" width="612" height="118" /--> 
+</body>

@@ -1,0 +1,477 @@
+Index: tool.css
+===================================================================
+--- tool.css	(revision 129910)
++++ tool.css	(working copy)
+@@ -114,7 +114,7 @@
+     color: #000;
+ }
+ .navIntraTool a:hover {
+-    color: #009DCE !important;
++    color: #E99535 !important;
+     text-decoration: underline;
+ }
+ /* where one is at in hierarchy - can be static or active links */
+@@ -317,12 +317,12 @@
+     font-weight: bold !important;
+ }
+ .listHier th a:hover {
+-    color: #009DCE
++    color: #E99535
+ }
+ /* skinned cell of standard tab. data table */
+ .listHier td {
+     vertical-align: top;
+-    padding: .3em .4em;
++    padding: .3em .4em !important;
+ }
+ /* lines - provides rules and hover effects on some tables */
+ table.lines {
+@@ -476,7 +476,7 @@
+ }
+ /* a required marker for a shorttext label/input pair */
+ .shorttext .reqStar {
+-    color: #009DCE;
++    color: #E99535;
+     width: auto;
+     margin: 0 0 0 -1em;
+     font-weight: bold;
+@@ -503,9 +503,6 @@
+ textarea:focus {
+     border: 1px solid #000
+ }
+-textarea.cke_source:focus {
+-    border: none
+-}
+ /* select element for actions on items in resources tool's list view */
+ .actionmenu {
+     font-size: 85%
+@@ -629,7 +626,7 @@
+     min-height: 15px;
+     margin-left: 5px !important;
+     padding: 1px !important;
+-    background: #009DCE;
++    background: #E99535;
+     border: 2px solid white !important;
+     border-radius: 20pt;
+     color: #fff !important;
+@@ -703,11 +700,11 @@
+ }
+ /* button link color */
+ .navIntraTool a:link:hover, #actionToolbar a:link:hover {
+-    color: #009DCE !important
++    color: #E99535 !important
+ }
+ .neoPortletTitleWrap {
+     width: 99%;
+-    border-bottom: 2px solid #009DCE;
++    border-bottom: 2px solid #E99535;
+     border-radius: 3px;
+ }
+ /* SECTION 9 MESSAGES */
+@@ -723,7 +720,7 @@
+ /* the generic required marker */
+ /* see: create any item */
+ .reqStar {
+-    color: #009DCE;
++    color: #E99535;
+     width: auto;
+     margin-left: -1em;
+     font-weight: bold;
+@@ -735,7 +732,7 @@
+ /* the required marker for a longtext label/input pair */
+ /* see: create any item with a textarea */
+ .longtext .reqStar {
+-    color: #009DCE;
++    color: #E99535;
+     font-size: 1.2em;
+     font-weight: normal;
+     padding: 0 0 0 .1em;
+@@ -744,7 +741,7 @@
+ /* when need to display the required marker inline as a part of a text */
+ /* see: create any item - instruction message about requireed fields */
+ .reqStarInline {
+-    color: #009DCE;
++    color: #E99535;
+     font-size: 1.2em;
+     vertical-align: middle;
+     width: 1em;
+@@ -988,9 +985,9 @@
+     color: #111
+ }
+ .login td.logo {
+-    width: 175px;
+-    background: #fff url(images/x-login-logo.png) no-repeat;
+-    background-position: 20px 0;
++    width: 196px;
++    background: #fff url(images/kiro_logo.png) no-repeat;
++    background-position: 20px 7px;
+     border-width: 1px 0 1px 1px;
+     border-style: solid;
+     border-color: #ccc;
+@@ -1136,7 +1133,7 @@
+ /* ===[ Lessons ]=== */
+ .lessonsHeader {
+     width: 99%;
+-    border-bottom: 2px solid #009DCE !important;
++    border-bottom: 2px solid #E99535 !important;
+     border-radius: 3px !important;
+     height: 25px;
+ }
+@@ -1166,7 +1163,7 @@
+     background: linear-gradient(top, #f6f6f5 0%,#e0e0e0 93%,#e0e0e0 97%,#e9e9e9 100%) !important;
+     border: 1px solid #E0E3E5 !important;
+     box-shadow: 0 1px 1px 0 #999999 !important;
+-    color: #2683BC !important;
++    color: #E99535 !important;
+     font-size: 11px !important;
+     font-weight: bold !important;
+     height: 24px !important;
+Index: portal.css
+===================================================================
+--- portal.css	(revision 129910)
++++ portal.css	(working copy)
+@@ -1,12 +1,15 @@
+ /* PART 1 - MAIN LAYOUT BLOCKS
+ /* general body - used by main portal document   */
+ body.portalBody {
++    background-image: url(images/cmcc_swoosh.png);
++    background-repeat: no-repeat;
++    /* scroll */
++    background-position: -20px -30px;    
+     width: 100%;
+     padding: 0;
+     font-family: 'Helvetica Neue', Arial, sans-serif;
+     font-size: .8em;
+     margin: 0;
+-    background-repeat: repeat-x;
+ }
+  /* outer wrapper for portal content (decorative - child is #portalContainer )  */
+ #portalOuterContainer {}
+@@ -48,14 +51,9 @@
+ #content {
+     padding: .8em 0 0 13.2em;
+ }
+-/* second wrapper for content - needed by SAK-12563 */
+-#innercontent {
+-    float: left;
+-    width:100%
+-}
+ #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
+     width: 98.5%;
+-    border-bottom: 2px solid #009DCE;
++    border-bottom: 2px solid #D47B18;
+ }
+ #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
+     width: 98.5%;
+@@ -63,7 +61,7 @@
+ }
+ #col1 .portletTitleWrap {
+     width: 99%;
+-    border-bottom: 2px solid #009DCE !important;
++    border-bottom: 2px solid #D47B18 !important;
+ }
+ #col1 .portletMainWrap {
+     width: 99%
+@@ -101,17 +99,23 @@
+ 
+ /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
+ #headerMax, #headerMin {
+-    background: #009DCE;
+-    background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
+-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
+-    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    border-bottom: 1px solid #007194;
++    /*background: #D47B18;
++    background: -moz-linear-gradient(top, #D47B18 0%, #E99535 100%);
++    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D47B18), color-stop(100%,#E99535));
++    background: -webkit-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -o-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -ms-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: linear-gradient(top, #D47B18 0%,#E99535 100%);
++
++    border-bottom: 1px solid #E99535;
++*/
+ }
+ #headerMin {
+     overflow: hidden;
++    background-image: url('images/header.gif');
++    background-repeat:repeat-x;
++    height: 120px;
++	
+ }
+ /* outermost block containing mast head elements and site navigation. Block also has a class = site type name, in case you need to 
+  * do something special to either mast head elements or site navigation depending on the site type (i.e. a site type='collab') may get a banner with a 
+@@ -130,18 +134,18 @@
+     display: none;
+ }
+ #mastLogo img {
+-    display: none
++    display: none;
+ }
+ /* show #mastLogo if the user is not logged in so that we can display the logo in the usual place (the logo
+ in this skin is rendered via ul.topnav, which a anon user does not see)*/
+ #headerMin #mastLogo {
+     display: block; 
+-    background-image: url(images/logo.png);
++    background-image: url('images/kiro_logo.gif');
+     background-repeat: no-repeat;
+     background-position: 8px 4px;
+     float: left;
+-    width: 100px;
+-    height: 50px;
++    width: 170px;
++    height: 90px;
+ }
+ /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
+ that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
+@@ -165,17 +169,20 @@
+ }
+ #loginForm label {
+     padding: 0 6px;
+-    color: #fff;
++    color: #000;
+ }
+ #eid, #pw {
+     border: 1px solid #ccc;
+     padding: 3px;
+     margin-right: 15px;
+-    width: 7em;
++   /* width: 7em; */
+ }
+ /* #submit is rendered like the logout link, so defined there, instead of here,
+  * display: block there overriden here */
+-#submit {display: inline !important;}
++#submit {
++	display: inline !important;
++	color: #53284F !important;
++	}
+ #submit:hover {}
+ /* #mastLogin #loginLinks: block for login/logout links and  link to the user centered menu */
+ #loginLinks {
+@@ -204,20 +211,20 @@
+     padding: 4px 6px;
+     text-align: center;
+     text-decoration: none;
+-    background: #008DB9;
+-    background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
+-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
+-    background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
+-    background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
+-    background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
+-    background: linear-gradient(top, #008DB9 0%,#007194 100%);
+-    border: 1px solid #005A76;
++    background: #D47B18;
++    background: -moz-linear-gradient(top, #D47B18 0%, #E99535 100%);
++    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D47B18), color-stop(100%,#E99535));
++    background: -webkit-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -o-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -ms-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: linear-gradient(top, #D47B18 0%,#E99535 100%);
++    border: 1px solid #E99535;
+ }
+ #headerMin #loginLink1, #headerMin #loginLink2 {
+     margin-top: -2px;
+ }
+ #loginLink1:hover, #loginLink2:hover, form#loginForm input#submit:hover {
+-    background: #007194;
++    background: #E99535;
+     text-decoration: none;
+ }
+ /*make secondary CAS login link (ie. Guest Login) different*/ 
+@@ -334,10 +341,10 @@
+  * if you do not have a logo you can eliminate it to save some room */
+ #linkNav ul.topnav {
+     list-style: none;
+-    padding: 8px 0 5px 155px; /* matches the width of the toolMenu*/
++    padding: 50px 0 5px 180px; /* matches the width of the toolMenu*/
+     margin: 0;
+     width: 100%;
+-    background: transparent url(images/logo.png) 8px 4px no-repeat;
++    background: transparent url(images/kiro_logo.gif) 8px 4px no-repeat;
+ }
+ /* the individual containers for the site links, tool menu control, tool menu*/
+ ul.topnav li {
+@@ -353,21 +360,21 @@
+ }
+ /* hover treatment for site links*/
+ ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
+-    border: 1px solid #005A76;
++    border: 1px solid #E99535;
+     -moz-border-radius: 3px;
+     -webkit-border-radius: 3px;
+     border-radius: 3px;
+ }
+ /* current site control rendering */
+  ul.topnav li.nav-selected {
+-     background: #008DB9;
+-    background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
+-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
+-    background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
+-    background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
+-    background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
+-    background: linear-gradient(top, #008DB9 0%,#007194 100%);
+-    border: 1px solid #005A76;
++     background: #D47B18;
++    background: -moz-linear-gradient(top, #D47B18 0%, #E99535 100%);
++    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D47B18), color-stop(100%,#E99535));
++    background: -webkit-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -o-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -ms-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: linear-gradient(top, #D47B18 0%,#E99535 100%);
++    border: 1px solid #E99535;
+     -moz-border-radius: 3px;
+     -webkit-border-radius: 3px;
+     border-radius: 3px;
+@@ -429,7 +436,7 @@
+ ul.topnav li a {
+     padding: 8px 7px 8px 8px;
+     font-size: 13px;
+-    color: #fff;
++    color: #000;
+     text-decoration: none;
+     float: left;
+     display: block;
+@@ -572,14 +579,14 @@
+  *  ul.otherSitesCategorList. This last one will appear once per each category
+  */
+ ul#otherSiteList li, ul.otherSitesCategorList li {
+-    background: #009DCE;
+-    background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
+-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
+-    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    border: 1px solid #005A76;
++    background: #D47B18;
++    background: -moz-linear-gradient(top, #D47B18 0%, #E99535 100%);
++    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D47B18), color-stop(100%,#E99535));
++    background: -webkit-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -o-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -ms-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: linear-gradient(top, #D47B18 0%,#E99535 100%);
++    border: 1px solid #E99535;
+     font-weight: bold;
+     position: relative;
+     border-radius: 5px;
+@@ -610,8 +617,9 @@
+ }
+ /* search elements for flat other sites tray search */
+ #otherSiteSearch {
+-    margin: 15px;
+-    float: left;
++    position: absolute;
++    top: 15px;
++    left:10px;
+ }
+ #otherSiteSearch span#noSearchResults {
+     padding-left: 10px;
+@@ -626,8 +634,6 @@
+ }
+ /* specific to  categorized view */
+ #otherSitesCategorWrap {
+-    float: none;
+-    clear: both;
+     margin: 5px;
+     max-height: 300px !important;
+     overflow: auto;
+@@ -653,7 +659,7 @@
+     display: block;
+ }
+ #otherSiteTools li a:focus {
+-    color: #009DCE;
++    color: #D47B18;
+ }
+ /* trigger that retrieves from entity broker the tool menu for a site in the "More sites" tray*/
+ .toolMenus {
+@@ -694,7 +700,7 @@
+     padding: 0 1px 0 0;
+ }
+ #siteHierarchy li a, #siteHierarchy li a:visited {
+-    color: #009DCE;
++    color: #D47B18;
+     font-size: 1.2em;
+     text-decoration: none;
+ }
+@@ -740,7 +746,7 @@
+ }
+ /* the current tool */
+ #toolMenu li.selectedTool a {
+-    color: #009DCE !important;
++    color: #D47B18 !important;
+     cursor: default;
+ }
+ /* eliminate the normal hover effect when it is current tool */
+@@ -748,9 +754,8 @@
+     background: inherit !important;
+     *background: #f3f3f3 !important;
+ }
+-/* span holds the tool icon bkgnd image for left hand menu 
+- * and "a" the icon for tool pull downs - here a default is provided */
+-#toolMenu li span, #subSites li span, .submenuitem a, .otherSiteTool a {
++/* span holds the tool icon bkgnd image - here a default is provided */
++#toolMenu li span, #subSites li span {
+     background-repeat: no-repeat;
+     background-position: right;
+     background-image: url(../../image/silk/application.png);
+@@ -780,13 +785,13 @@
+ }
+ #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
+     text-decoration: none;
+-    background: #009DCE;
+-    background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
+-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
+-    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
++    background: #D47B18;
++    background: -moz-linear-gradient(top, #D47B18 0%, #E99535 100%);
++    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D47B18), color-stop(100%,#E99535));
++    background: -webkit-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -o-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: -ms-linear-gradient(top, #D47B18 0%,#E99535 100%);
++    background: linear-gradient(top, #D47B18 0%,#E99535 100%);
+     color: #fff;
+ }
+ /* link in tool menu that allows adding one more tool, may be disabled */
+@@ -968,7 +973,7 @@
+ /* the links displayed inside the wrapper above  */
+ /* a second wrapper - server info,build,etc  */
+ #footerInfo {
+-    display: none
++    display: block;
+ }
+ #footerInfo img {
+     margin-top: .5em;
+@@ -1252,6 +1257,19 @@
+     background-image: url(/library/image/silk/user_add.png) !important
+ }
+ 
++.icon-sakai-qna {
++            background-image: url(../../image/silk/comments.png);
++}
++
++.icon-com-rsmart-certification {
++        background-image: url(../../image/silk/page_white_medal.png);
++}
++
++.icon-sakai-lessonbuildertool {
++        background-image: url(../../image/silk/book_open.png) !important
++}
++
++
+ /* PART 10: specific functionality: presence, chat */
+ 
+ /* presence and chat rendering */
+@@ -1332,7 +1350,7 @@
+ }
+ /* list item when the user is an a chat room is a link to that chat room */
+ .presenceList li a {
+-    color: #009DCE;
++    color: #D47B18;
+     text-decoration: none;
+ }
