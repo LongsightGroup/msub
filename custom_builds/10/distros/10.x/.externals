@@ -87,14 +87,15 @@ linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-10.x/
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/sakai-10/
-wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/trunk/
+wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/branches/sakai-2.9
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 
 #POM CHANGES
 #shell_command sed -i 's/<artifactId>etudes-util-api<\/artifactId>/<artifactId>etudes-util-api<\/artifactId><version>\${etudes.util.version}<\/version><scope>provided<\/scope>/g' etudes-util/etudes-util/util/pom.xml mneme/mneme-impl/impl/pom.xml mneme/mneme-api/api/pom.xml mneme/mneme-tool/tool/pom.xml
 #shell_command sed -i 's/2.8.0/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
 #shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
-
+#shell_command sed -i 's/<version>10<\/version>/<version>10-SNAPSHOT<\/version>/g' scorm/pom.xml
+#shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
