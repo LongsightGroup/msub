@@ -91,7 +91,6 @@ wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-s
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 
 #POM CHANGES
-#shell_command sed -i 's/<artifactId>etudes-util-api<\/artifactId>/<artifactId>etudes-util-api<\/artifactId><version>\${etudes.util.version}<\/version><scope>provided<\/scope>/g' etudes-util/etudes-util/util/pom.xml mneme/mneme-impl/impl/pom.xml mneme/mneme-api/api/pom.xml mneme/mneme-tool/tool/pom.xml
 #shell_command sed -i 's/2.8.0/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
 #shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
 #shell_command sed -i 's/<version>10<\/version>/<version>10-SNAPSHOT<\/version>/g' scorm/pom.xml
