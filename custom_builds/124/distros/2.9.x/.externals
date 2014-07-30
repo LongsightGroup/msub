@@ -91,7 +91,7 @@ portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
-user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/user/user-2.9.x_custom
+user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/124/user/user-2.9.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
 #Patcher options: "mavenoptions: <options>"
