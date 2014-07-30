@@ -118,6 +118,7 @@
                                  <option value="student" #if($longsightType=="student")SELECTED#end>student</option>
                                  <option value="faculty" #if($longsightType=="faculty")SELECTED#end>faculty</option>
                                  <option value="coordinator" #if($longsightType=="coordinator")SELECTED#end>coordinator</option>
+                                 <option value="registered" #if($longsightType=="registered")SELECTED#end>registered</option>
                             </select>
 			#else
 				#if($user)$validator.escapeHtml($user.Type)#elseif($valueType)$validator.escapeHtml($valueType)#end
