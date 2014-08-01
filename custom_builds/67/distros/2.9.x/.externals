@@ -106,7 +106,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
 #shell_command sed -i 's/<\/dependencies>/<dependency><groupId>org.springframework<\/groupId><artifactId>spring-webmvc<\/artifactId><scope>runtime<\/scope><\/dependency><\/dependencies>/g' itunesu-tool/itunesu-admin-tool/pom.xml
 #shell_command sed -i 's/2.8.2/2.9-SNAPSHOT/g' kaltura/pom.xml
-#shell_command sed -i 's/Media Gallery/Kaltura/g' src/main/webapp/tools/sakai.kaltura.xml
+#shell_command sed -i 's/Media Gallery/Loyola Media/g' src/main/webapp/tools/sakai.kaltura.xml
 #shell_command sed -i "s/sakai.version/sakai.calendar.version/g" melete/melete-impl/pom.xml
 
 #Big Blue Button:
