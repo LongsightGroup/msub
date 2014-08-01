@@ -76,7 +76,7 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 adobeconnect https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/2.9.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x
 common https://source.sakaiproject.org/svn/msub/longsight.com/common/common-1.2.x-bb6/
-content-review/contentreview-impl https://source.sakaiproject.org/contrib//turnitin/branches/sakai-10.x/contentreview-impl/
+content-review/contentreview-impl -r85372 https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl/
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.8_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport/
