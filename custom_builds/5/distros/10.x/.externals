@@ -78,6 +78,9 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
+qna https://source.sakaiproject.org/contrib/qna/trunk
+etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
+melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 
 #POM CHANGES
-###shell_command sed -i 's/<version>2.9-SNAPSHOT<\/version>/<version>10-SNAPSHOT<\/version>/g' adobeconnect/pom.xml
+# sharestream, wiris
