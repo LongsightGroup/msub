@@ -122,7 +122,6 @@
                 <module>da_evalprovider</module>
                 <module>etudes-util</module>
                 <module>melete</module>
-                <!-- module>iclicker</module -->
                 <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
         </profile>

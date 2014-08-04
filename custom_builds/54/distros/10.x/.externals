@@ -88,15 +88,12 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/user/user-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
-iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.4
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
 #POM Changes
-#shell_command sed -i 's/2.9.2/10-SNAPSHOT/g' iclicker/pom.xml
 #shell_command sed -i 's/1.4-SNAPSHOT/10-SNAPSHOT/g' da_evalprovider/pom.xml
-#shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
