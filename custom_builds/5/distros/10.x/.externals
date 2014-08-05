@@ -82,5 +82,8 @@ qna https://source.sakaiproject.org/contrib/qna/trunk
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
+
 #POM CHANGES
 # sharestream, wiris
