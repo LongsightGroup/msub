@@ -87,7 +87,7 @@ jobscheduler https://source.sakaiproject.org/svn/msub/longsight.com/custom_build
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-10.x_backport
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-10.x_backport
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_backport
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
 #shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' gradebook-export/pom.xml
