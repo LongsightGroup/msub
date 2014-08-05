@@ -116,6 +116,12 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+
+                <module>blogwow</module>
+                <module>etudes-util</module>
+                <module>melete</module>
+                <module>evaluation</module>
+                <module>qna</module>
             </modules>
         </profile>
         <profile>
