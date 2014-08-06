@@ -75,12 +75,15 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 #customizations
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
-content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl
+content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-10.x/
 login https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/login/login-10.x_custom
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
 #shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
 
