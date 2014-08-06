@@ -1,0 +1,2 @@
+SAM-2366 Incorrect submission count when taken via URL after taking other assessments
+SAK-25943 missing key error in link to /direct assessment
