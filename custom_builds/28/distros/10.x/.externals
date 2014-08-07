@@ -87,6 +87,8 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
+#shell_command sed -i 's/11-SNAPSHOT/10-SNAPSHOT/g' content-review/contentreview-impl/pom.xml content-review/contentreview-impl/impl/pom.xml content-review/contentreview-impl/scheduler-jobs/pom.xml content-review/contentreview-impl/pack/pom.xml content-review/contentreview-impl/hbm/pom.xml content-review/contentreview-impl/tool/pom.xml content-review/contentreview-impl/ddl/pom.xml
+
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
 #shell_command cd bigbluebutton-sakai/bbb-tool
