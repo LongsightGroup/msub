@@ -74,16 +74,17 @@ user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
-web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
+#web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
-providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
+web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/29/web/sakai-10.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
-# custom link tool! tool categories                    
+# tool categories                    
 # custom fonts 
 
 #Patcher options: "mavenoptions: <options>"
@@ -103,4 +104,3 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 #GIT Projects
 #git_project bigbluebutton-sakai/bbb-tool
 
-# formbuilder? 
