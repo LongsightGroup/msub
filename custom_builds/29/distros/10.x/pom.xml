@@ -118,6 +118,10 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>blogwow</module>
+                <module>evaluation</module>
+                <module>etudes-util</module>
+                <module>melete</module>
             </modules>
         </profile>
         <profile>
