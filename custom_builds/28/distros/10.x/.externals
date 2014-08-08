@@ -77,7 +77,7 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
-content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl
+content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
@@ -86,8 +86,6 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
-
-#shell_command sed -i 's/11-SNAPSHOT/10-SNAPSHOT/g' content-review/contentreview-impl/pom.xml content-review/contentreview-impl/impl/pom.xml content-review/contentreview-impl/scheduler-jobs/pom.xml content-review/contentreview-impl/pack/pom.xml content-review/contentreview-impl/hbm/pom.xml content-review/contentreview-impl/tool/pom.xml content-review/contentreview-impl/ddl/pom.xml
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
@@ -102,4 +100,4 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 #GIT Projects
 #git_project bigbluebutton-sakai/bbb-tool
 
-# formbuilder? 
+# formbuilder? respondus-ldb
