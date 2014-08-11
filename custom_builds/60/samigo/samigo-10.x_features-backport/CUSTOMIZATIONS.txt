@@ -10,5 +10,6 @@ SAM-1117 Option to Not Display how many points question worth in assessments
 SAM-1751 Add Honor Pledge Option like the Assignments Tool has
 SAM-2188 Expand Collapse All for samigo settings
 SAM-2352 Don't run on assessment attempts with a null submittedDate ; Tests and Quizzes - Autosubmit issues (MND-488196)
+SAM-1263 New question type - image map
 
 TODO: SAM-2056 Better usability in jquery ui

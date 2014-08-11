@@ -350,6 +350,11 @@
       <property-name>showCalculatedQuestion</property-name>
       <value>true</value>
     </managed-property>
+    <!-- // IMAGEMAP_QUESTION -->
+    <managed-property>
+      <property-name>showImageMapQuestion</property-name>
+      <value>true</value>
+    </managed-property>
   </managed-bean>
   <managed-bean>
     <description>For authorization</description>
@@ -1016,6 +1021,10 @@
     <navigation-case>
       <from-outcome>emiItem</from-outcome>
       <to-view-id>/jsf/author/item/extendedMatchingItems.jsp</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>imageMapItem</from-outcome>
+      <to-view-id>/jsf/author/item/imageMapQuestion.jsp</to-view-id>
     </navigation-case>
     <navigation-case>
       <from-outcome>matrixChoicesSurveyItem</from-outcome>

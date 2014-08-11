@@ -203,4 +203,6 @@ public interface ItemDataIfc extends Comparable<ItemDataIfc>, java.io.Serializab
   Boolean getScoreDisplayFlag();
   
   void setScoreDisplayFlag(Boolean scoreDisplayFlag);
+  
+  String getImageMapSrc();
 }

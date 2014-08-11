@@ -56,6 +56,7 @@ import org.sakaiproject.tool.assessment.data.dao.grading.ItemGradingData;
 import org.sakaiproject.tool.assessment.data.ifc.assessment.AssessmentAccessControlIfc;
 import org.sakaiproject.tool.assessment.data.ifc.assessment.ItemDataIfc;
 import org.sakaiproject.tool.assessment.data.ifc.assessment.PublishedAssessmentIfc;
+import org.sakaiproject.tool.assessment.data.ifc.assessment.SectionDataIfc;
 import org.sakaiproject.tool.assessment.facade.AgentFacade;
 import org.sakaiproject.tool.assessment.facade.PublishedAssessmentFacade;
 import org.sakaiproject.tool.assessment.services.FinFormatException;
@@ -387,6 +388,7 @@ public class SubmitToGradingActionListener implements ActionListener {
 			HashMap<Long, ItemDataIfc> calcQuestionMap = getCalcQuestionMap(publishedAssessment); // CALCULATED_QUESTION
 			HashMap<Long, ItemDataIfc> mcmrMap = getMCMRMap(publishedAssessment);
 			HashMap<Long, ItemDataIfc> emiMap = getEMIMap(publishedAssessment);
+                        HashMap<Long, ItemDataIfc> imagQuestionMap = getImagQuestionMap(publishedAssessment); // IMAGEMAP_QUESTION
 			Set<ItemGradingData> itemGradingSet = adata.getItemGradingSet();
 			log.debug("*** 2a. before removal & addition " + (new Date()));
 			if (itemGradingSet != null) {
@@ -417,7 +419,7 @@ public class SubmitToGradingActionListener implements ActionListener {
 						+ adds.size());
 
 				HashSet<ItemGradingData> updateItemGradingSet = getUpdateItemGradingSet(
-						itemGradingSet, adds, fibMap, finMap, calcQuestionMap, mcmrMap, emiMap, adata);
+						itemGradingSet, adds, fibMap, finMap, imagQuestionMap, calcQuestionMap, mcmrMap, emiMap, adata);
 				adata.setItemGradingSet(updateItemGradingSet);
 			}
 		}
@@ -484,6 +486,17 @@ public class SubmitToGradingActionListener implements ActionListener {
 	    return (HashMap<Long, ItemDataIfc>) publishedAssesmentService.prepareCalcQuestionItemHash(publishedAssessment);
 	}
   
+  	/**
+  	 * IMAGEMAP_QUESTION
+  	 * @param publishedAssessment
+  	 * @return map of image items
+  	 */
+  	private HashMap<Long, ItemDataIfc> getImagQuestionMap(PublishedAssessmentIfc publishedAssessment){
+            PublishedAssessmentService s = new PublishedAssessmentService();
+	    return (HashMap<Long, ItemDataIfc>) s.prepareImagQuestionItemHash(publishedAssessment);
+	}
+  
+  
 
 	private HashMap<Long, ItemDataIfc> getMCMRMap(PublishedAssessmentIfc publishedAssessment) {
 		return publishedAssesmentService.prepareMCMRItemHash(publishedAssessment);
@@ -495,8 +508,9 @@ public class SubmitToGradingActionListener implements ActionListener {
 	}
 	
 	private HashSet<ItemGradingData> getUpdateItemGradingSet(Set oldItemGradingSet,
-			Set<ItemGradingData> newItemGradingSet, HashMap<Long, ItemDataIfc> fibMap, HashMap<Long, ItemDataIfc> finMap, HashMap<Long, ItemDataIfc> calcQuestionMap, HashMap<Long, ItemDataIfc> mcmrMap,
+			Set<ItemGradingData> newItemGradingSet, HashMap<Long, ItemDataIfc> fibMap, HashMap<Long, ItemDataIfc> finMap, HashMap<Long, ItemDataIfc> imagQuestionMap, HashMap<Long, ItemDataIfc> calcQuestionMap, HashMap<Long, ItemDataIfc> mcmrMap,
 			HashMap<Long, ItemDataIfc> emiMap, AssessmentGradingData adata) {
+
 		log.debug("Submitforgrading: oldItemGradingSet.size = "
 				+ oldItemGradingSet.size());
 		log.debug("Submitforgrading: newItemGradingSet.size = "
@@ -545,6 +559,7 @@ public class SubmitToGradingActionListener implements ActionListener {
 						|| emiMap.get(oldItem.getPublishedItemId()) != null 
 						|| finMap.get(oldItem.getPublishedItemId())!=null
 						|| calcQuestionMap.get(oldItem.getPublishedItemId())!=null
+						|| imagQuestionMap.get(oldItem.getPublishedItemId())!=null
 						|| mcmrMap.get(oldItem.getPublishedItemId()) != null) {
 					oldItem.setReview(newItem.getReview());
 					oldItem.setPublishedAnswerId(newItem.getPublishedAnswerId());
@@ -717,6 +732,7 @@ public class SubmitToGradingActionListener implements ActionListener {
 			break;			
 		case 8: // FIB
 		case 15: // CALCULATED_QUESTION
+		case 16: //IMAGEMAP_QUESTION 	
 		case 11: // FIN
 			boolean addedToAdds = false;
 			for (int m = 0; m < grading.size(); m++) {

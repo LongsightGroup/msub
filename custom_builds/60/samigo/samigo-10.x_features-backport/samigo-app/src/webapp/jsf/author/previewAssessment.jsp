@@ -150,6 +150,10 @@
             <%@ include file="/jsf/author/preview_item/CalculatedQuestion.jsp" %>
           </h:panelGroup>
 
+          <h:panelGroup rendered="#{question.itemData.typeId == 16"><!-- // IMAGEMAP_QUESTION -->
+            <%@ include file="/jsf/author/preview_item/ImageMapQuestion.jsp" %>
+          </h:panelGroup>
+
         </h:panelGrid>
 
 </h:column>

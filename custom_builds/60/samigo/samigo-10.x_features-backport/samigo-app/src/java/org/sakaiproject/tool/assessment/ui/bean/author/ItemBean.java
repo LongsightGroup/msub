@@ -99,6 +99,8 @@ public class ItemBean
   
   private int totalMCAsnwers;
   private CalculatedQuestionBean calculatedQuestion;
+  private String requireAllOk = "false";
+  private String imageMapSrc="";
   
   private boolean[] choiceCorrectArray;
   private String maxRecordingTime;
@@ -114,7 +116,8 @@ public class ItemBean
   private String instruction;  // matching's question text
   private ArrayList matchItemBeanList;  // store List of MatchItemBean, used for Matching only
   private MatchItemBean currentMatchPair;  // do not need this ?   store List of MatchItemBeans, used for Matching only
-
+  private ArrayList imageMapItemBeanList;
+  
 // begin DELETEME
   private String[] matches;
   private String[] matchAnswers;
@@ -696,6 +699,13 @@ public class ItemBean
   {
     this.matchItemBeanList= list;
   }
+  
+  public void setImageMapItemBeanList(ArrayList list)
+  {
+    this.imageMapItemBeanList= list;
+  }
+  
+  
 
   /**
    * getSelfSequenceList examines the MatchItemBean list and returns a list of SelectItemOptions that
@@ -757,7 +767,11 @@ public class ItemBean
   {
         return currentMatchPair;
   }
-
+  
+  public ArrayList getImageMapItemBeanList()
+  {
+	return imageMapItemBeanList;
+  }
 
   /**
    * for multiple choice questions, multiple correct?
@@ -792,9 +806,46 @@ public class ItemBean
   public void setRandomized(String randomized) {
     this.randomized = randomized;
   }
+  
+  /**
+   * This question require all answers right to have the full score?
+   * @return true or false
+   */
+  public String getRequireAllOk() {
+    return requireAllOk;
+  }
+
+  /**
+   * This question require all answers right to have the full score?
+   * @param requireAllOk true if it is
+   */
+  public void setRequireAllOk(String requireAllOk) {
+    this.requireAllOk = requireAllOk;
+  }
+  
+  /**
+   * The image map Image URL
+   * @return the URL as String
+   */
+  public String getImageMapSrc() {
+    return imageMapSrc;
+  }
+
+  /**
+   *  The image map Image URL
+   * @param imageMapSrc. The URL as String
+   */
+  public void setImageMapSrc(String imageMapSrc) {
+    this.imageMapSrc = imageMapSrc;
+  }
+  
 
 
   public String getInstruction() {
+    if ((TypeFacade.IMAGEMAP_QUESTION.toString().equals(this.itemType))&&(!(instruction != null && !instruction.isEmpty()))){
+            ResourceLoader rb = new ResourceLoader("org.sakaiproject.tool.assessment.bundle.AuthorMessages");
+            instruction=rb.getString("image_map_default_instruction");
+    }
     return instruction;
   }
   
@@ -1324,7 +1375,44 @@ public class ItemBean
     return "matchingItem";
   }
 
-   
+  
+///IMAGEMAP
+  
+
+  public String getSerializedImageMap () {
+	 StringBuffer ret = new StringBuffer();
+	 List<ImageMapItemBean> list = getImageMapItemBeanList();
+	 for(ImageMapItemBean ib : list)
+	 {
+	 	if(ret.length() > 0)
+	 		ret.append("#-#");
+	 	
+	 	ret.append(ib.serialize());
+	 }
+	 
+	 return ret.toString();
+  }
+  
+  
+  public void setSerializedImageMap (String serializedString) {
+		if(serializedString != null)
+		{
+			ArrayList<ImageMapItemBean> list = new ArrayList<ImageMapItemBean>();
+			for(String str : serializedString.split("#-#"))
+			{
+				if(str != null && !"".equals(str))
+				{
+					ImageMapItemBean imib = new ImageMapItemBean(str);
+					imib.setSequence( Long.valueOf(list.size()+1));
+					list.add(imib);
+				}
+			}
+			
+			this.setImageMapItemBeanList(list);
+		}
+	}
+  
+
   /**
    * for fib, case sensitive for grading?
    * @return
@@ -1988,6 +2076,7 @@ public class ItemBean
 	public void setMcmsPartialCredit(String mcmsPartialCredit) {
 		this.mcmsPartialCredit = mcmsPartialCredit;
 	}
+	
 
 	public String getItemMinScore() {
 		return itemMinScore;
