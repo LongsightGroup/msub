@@ -122,6 +122,7 @@
                 <module>evaluation</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
         </profile>
         <profile>
