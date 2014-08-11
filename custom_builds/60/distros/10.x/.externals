@@ -78,7 +78,7 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/60/config/sakai-10.x
-content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/
+content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl
 da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
