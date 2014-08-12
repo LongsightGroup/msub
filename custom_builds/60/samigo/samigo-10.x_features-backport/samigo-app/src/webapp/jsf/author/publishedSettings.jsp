@@ -410,10 +410,6 @@
  <f:verbatim></div></f:verbatim>
     </h:panelGroup>
   
-  <f:verbatim></div></f:verbatim>
-  </samigo:hideDivision>
-  </h:panelGroup>
-
 	<f:verbatim></div></f:verbatim>
     </h:panelGroup>
 

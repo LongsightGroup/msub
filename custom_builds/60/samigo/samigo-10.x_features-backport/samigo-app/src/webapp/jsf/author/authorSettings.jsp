@@ -375,8 +375,6 @@
           <f:selectItem itemValue="1" itemLabel="#{assessmentSettingsMessages.anonymous}"/>
         </h:selectOneRadio>
       </h:panelGrid>
- <f:verbatim></div></f:verbatim>
-    </h:panelGroup>
     
         <!-- Display Scores -->
     <h:panelGroup rendered="#{assessmentSettings.valueMap.displayScores_isInstructorEditable==true}">
@@ -391,7 +389,6 @@
     </h:panelGroup>
  <f:verbatim></div></f:verbatim>
 
-<f:verbatim></div></f:verbatim>
 </h:panelGroup>
     <!-- GRADEBOOK OPTIONS -->
     <h:panelGroup rendered="#{assessmentSettings.valueMap.toGradebook_isInstructorEditable==true && assessmentSettings.gradebookExists==true}">
