@@ -118,6 +118,9 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>blogwow</module>
+                <module>evaluation</module>
+                <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
         </profile>
         <profile>
