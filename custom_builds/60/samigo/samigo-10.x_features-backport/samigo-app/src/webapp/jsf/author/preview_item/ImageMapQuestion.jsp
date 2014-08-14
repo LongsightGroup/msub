@@ -26,7 +26,7 @@ should be included in file importing DeliveryMessages
    <!-- ATTACHMENTS -->
   <%@ include file="/jsf/author/preview_item/attachment.jsp" %>
   <h:outputText escape="false" value="#{question.instruction}" />
-  <!-- 1. print out the matching choices rendered="#{itemText.sequence==1}"--> 
+  <!-- 1. print out the matching choices --> 
   <h:dataTable id="items" value="#{question.itemData.itemTextArraySorted}" var="itemText">
     <h:column>
       <h:panelGrid columns="1">
@@ -34,7 +34,7 @@ should be included in file importing DeliveryMessages
       </h:panelGrid>
     </h:column>
     <h:column>
-      <h:dataTable id="answers" value="#{itemText.answerArraySorted}" var="answer">
+    <h:dataTable id="answers" value="#{itemText.answerArraySorted}" var="answer" rendered="#{itemText.sequence==1}">
         <h:column>
 		  <h:outputText escape="false" value="<input type='hidden' id='hiddenSerializedCoords_#{partBean.number}_#{question.number}_#{itemText.sequence}' value='#{answer.text}' />" /> 
         </h:column>

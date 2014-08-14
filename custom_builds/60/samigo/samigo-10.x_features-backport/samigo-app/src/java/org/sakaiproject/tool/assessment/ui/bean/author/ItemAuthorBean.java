@@ -1354,11 +1354,11 @@ public class ItemAuthorBean
 		AssessmentService.getContentHostingService().checkCollection(collectionId);
 	}catch(IdUnusedException e){
 		try {
-			ResourcePropertiesEdit resourceProperties = AssessmentService.getContentHostingService().newResourceProperties();
-			resourceProperties.addProperty(ResourceProperties.PROP_DISPLAY_NAME, ToolManager.getCurrentPlacement().getContext());
-			//resourceProperties.addProperty(ResourceProperties.PROP_HIDDEN_WITH_ACCESSIBLE_CONTENT, "true");
 			
-			ContentCollectionEdit edit = (ContentCollectionEdit)AssessmentService.getContentHostingService().addCollection(collectionId, resourceProperties);
+			ContentCollectionEdit edit = AssessmentService.getContentHostingService().addCollection(collectionId);
+			ResourcePropertiesEdit resourceProperties = edit.getPropertiesEdit();
+			resourceProperties.addProperty(ResourceProperties.PROP_DISPLAY_NAME, ToolManager.getCurrentPlacement().getContext());
+			resourceProperties.addProperty(ResourceProperties.PROP_HIDDEN_WITH_ACCESSIBLE_CONTENT, "true");
 			
 			edit.setPublicAccess();
 			AssessmentService.getContentHostingService().commitCollection(edit);
