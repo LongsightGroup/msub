@@ -398,6 +398,7 @@
       </h:panelGrid>
     <f:verbatim></div></f:verbatim>
   </h:panelGroup>
+
   <!-- Display Scores -->
     <h:panelGroup rendered="#{publishedSettings.valueMap.displayScores_isInstructorEditable==true}">
      <f:verbatim><div class="longtext"></f:verbatim> <h:outputLabel for="displayScores" value="#{assessmentSettingsMessages.displayScores}" /> <f:verbatim> </div><div class="tier3"> </f:verbatim>
@@ -410,8 +411,6 @@
  <f:verbatim></div></f:verbatim>
     </h:panelGroup>
   
-	<f:verbatim></div></f:verbatim>
-    </h:panelGroup>
 
     <!-- RECORDED SCORE AND MULTIPLES -->
     <h:panelGroup rendered="#{publishedSettings.valueMap.recordedScore_isInstructorEditable==true}">
