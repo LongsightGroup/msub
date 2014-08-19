@@ -20,11 +20,13 @@
     <deploy.target>components</deploy.target>
   </properties>
   <dependencies>
-<!-- Needed for the sample provider
+<!-- Needed for the custom iMIS provider
 		-->
     <dependency>
       <groupId>org.sakaiproject</groupId>
-      <artifactId>sakai-sample-provider</artifactId>
+      <artifactId>sakai-imis-provider</artifactId>
+      <version>2.9-SNAPSHOT</version>
+      <scope>compile</scope>
     </dependency>
 <!-- -->
 <!-- Needed for the JLDAP Provider
