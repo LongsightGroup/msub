@@ -151,7 +151,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 	 * @return true if a user by this id exists, false if not.
 	 */
 	protected boolean userExists(String userId) {
-		M_log.info("userExists is being called! " + userId);
+		M_log.debug("userExists is being called! " + userId);
 		if (userId == null)
 			return false;
 
@@ -181,7 +181,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 				return true;
 
 			} catch (Exception e) {
-				e.printStackTrace();
+				M_log.info("userExists is false: " + userId);
 			}
 		}
 		return false;
@@ -197,18 +197,14 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 	 *         if not.
 	 */
 	public boolean getUser(UserEdit edit) {
-		M_log.info("getUser is being called! " + edit.getEid());
-		if (edit == null)
-			return false;
-		if (!userExists(edit.getEid()))
-			return false;
+		M_log.debug("getUser is being called! " + edit.getEid());
+		if (edit == null) return false;
+		if (!userExists(edit.getEid())) return false;
 
 		DataAccessX0020WebX0020Service dataService = new DataAccessX0020WebX0020Service();
-		DataAccessX0020WebX0020ServiceSoap dataPort = dataService
-				.getDataAccessX0020WebX0020ServiceSoap();
+		DataAccessX0020WebX0020ServiceSoap dataPort = dataService.getDataAccessX0020WebX0020ServiceSoap();
 
-		ExecuteDatasetStoredProcedureResult result = dataPort
-				.executeDatasetStoredProcedure(spStoredProcedure,
+		ExecuteDatasetStoredProcedureResult result = dataPort.executeDatasetStoredProcedure(spStoredProcedure,
 						"iweb_sp_getUsersByid_SAKAI", edit.getEid());
 
 		if (result == null) {
@@ -230,33 +226,24 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 					NodeList entries = record.getChildNodes();
 					for (int j = 0; j < entries.getLength(); j++) {
 						// System.out.println(entries.item(j).getNodeName()+": "+entries.item(j).getTextContent());
-						if (firstStr.equals("")
-								&& entries.item(j).getNodeName()
-										.equals("first_name")) {
+						if (firstStr.equals("") && entries.item(j).getNodeName().equals("first_name")) {
 							firstStr = entries.item(j).getTextContent();
-						} else if (lastStr.equals("")
-								&& entries.item(j).getNodeName()
-										.equals("last_name")) {
+						} else if (lastStr.equals("") && entries.item(j).getNodeName().equals("last_name")) {
 							lastStr = entries.item(j).getTextContent();
-						} else if (emailStr.equals("")
-								&& entries.item(j).getNodeName()
-										.equals("email")) {
+						} else if (emailStr.equals("") && entries.item(j).getNodeName().equals("email")) {
 							emailStr = entries.item(j).getTextContent();
 						}
 					}
 				}
 
 				if (firstStr.equals("")) {
-					M_log.warn("I can't find First Name in the xml for "
-							+ edit.getEid());
+					M_log.warn("I can't find First Name in the xml for " + edit.getEid());
 				}
 				if (lastStr.equals("")) {
-					M_log.warn("I can't find Last Name in the xml for "
-							+ edit.getEid());
+					M_log.warn("I can't find Last Name in the xml for "	+ edit.getEid());
 				}
 				if (emailStr.equals("")) {
-					M_log.warn("I can't find email in the xml for "
-							+ edit.getEid());
+					M_log.warn("I can't find email in the xml for "	+ edit.getEid());
 				}
 
 				edit.setFirstName(firstStr);
@@ -307,8 +294,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 	 *         if not.
 	 */
 	public boolean findUserByEmail(UserEdit edit, String email) {
-		if ((edit == null) || (email == null))
-			return false;
+		if ((edit == null) || (email == null)) return false;
 
 		// assume a "@local.host"
 		int pos = email.indexOf("@local.host");
@@ -364,26 +350,19 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 	 *            The password.
 	 * @return true if authenticated, false if not.
 	 */
-	public boolean authenticateUser(String userId, UserEdit edit,
-			String password) {
-		M_log.info("authenticateUser is being called!");
-		if ((userId == null) || (password == null))
-			return false;
+	public boolean authenticateUser(String userId, UserEdit edit, String password) {
+		M_log.debug("authenticateUser is being called!");
+		if ((userId == null) || (password == null)) return false;
 
 		// if (userId.startsWith("test")) return userId.equals(password);
 		// if (userExists(userId) && password.equals("sakai")) return true;
 
-		String result = null;
-
 		AuthenticationX0020WebX0020Service authService = new AuthenticationX0020WebX0020Service();
-		AuthenticationX0020WebX0020ServiceSoap authPort = authService
-				.getAuthenticationX0020WebX0020ServiceSoap();
-		String authResult = authPort.authenticateUser(spAuthenticateUser,
-				userId, password);
+		AuthenticationX0020WebX0020ServiceSoap authPort = authService.getAuthenticationX0020WebX0020ServiceSoap();
+		String authResult = authPort.authenticateUser(spAuthenticateUser, userId, password);
 
 		try {
-			InputStream res = new ByteArrayInputStream(
-					authResult.getBytes("UTF-16"));
+			InputStream res = new ByteArrayInputStream(authResult.getBytes("UTF-16"));
 
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = dbf.newDocumentBuilder();
@@ -391,16 +370,14 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 
 			NodeList userList = doc.getElementsByTagName("User");
 			if (userList == null || userList.getLength() == 0) {
-				M_log.error("Error: That user does not exist or you have the wrong pwd!");
-				M_log.error(result);
+				M_log.error("Error: That user does not exist or you have the wrong pwd: " + authResult);
 				return false;
 			} else {
 				Element user = (Element) userList.item(0);
 				return true;
 			}
-
 		} catch (Exception e) {
-			System.out.println(e.getClass().getName() + " : " + e.getMessage());
+			M_log.error("authenticateUser error", e);
 			return false;
 		}
 
@@ -444,18 +421,14 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 		return "?";
 	}
 
-	public List<UserEdit> searchExternalUsers(String criteria, int first,
-			int last, UserFactory factory) {
+	public List<UserEdit> searchExternalUsers(String criteria, int first, int last, UserFactory factory) {
 
 		M_log.info("searchExternalUsers() is called!");
 		List<UserEdit> users = new ArrayList<UserEdit>();
 
 		DataAccessX0020WebX0020Service dataService = new DataAccessX0020WebX0020Service();
-		DataAccessX0020WebX0020ServiceSoap dataPort = dataService
-				.getDataAccessX0020WebX0020ServiceSoap();
-		ExecuteDatasetStoredProcedureResult result = dataPort
-				.executeDatasetStoredProcedure(spStoredProcedure,
-						"iweb_sp_getUsersByid_SAKAI", criteria);
+		DataAccessX0020WebX0020ServiceSoap dataPort = dataService.getDataAccessX0020WebX0020ServiceSoap();
+		ExecuteDatasetStoredProcedureResult result = dataPort.executeDatasetStoredProcedure(spStoredProcedure, "iweb_sp_getUsersByid_SAKAI", criteria);
 
 		if (result != null) {
 			try {
@@ -475,29 +448,21 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 					NodeList entries = record.getChildNodes();
 					for (int j = 0; j < entries.getLength(); j++) {
 						// System.out.println(entries.item(j).getNodeName()+": "+entries.item(j).getTextContent());
-						if (firstStr.equals("")
-								&& entries.item(j).getNodeName()
-										.equals("first_name")) {
+						if (firstStr.equals("") && entries.item(j).getNodeName().equals("first_name")) {
 							firstStr = entries.item(j).getTextContent();
-						} else if (lastStr.equals("")
-								&& entries.item(j).getNodeName()
-										.equals("last_name")) {
+						} else if (lastStr.equals("") && entries.item(j).getNodeName().equals("last_name")) {
 							lastStr = entries.item(j).getTextContent();
-						} else if (emailStr.equals("")
-								&& entries.item(j).getNodeName()
-										.equals("email")) {
+						} else if (emailStr.equals("") && entries.item(j).getNodeName().equals("email")) {
 							emailStr = entries.item(j).getTextContent();
 						}
 					}
 				}
 
 				if (firstStr.equals("")) {
-					M_log.warn("I can't find First Name in the xml for "
-							+ criteria);
+					M_log.warn("I can't find First Name in the xml for " + criteria);
 				}
 				if (lastStr.equals("")) {
-					M_log.warn("I can't find Last Name in the xml for "
-							+ criteria);
+					M_log.warn("I can't find Last Name in the xml for " + criteria);
 				}
 				if (emailStr.equals("")) {
 					M_log.warn("I can't find email in the xml for " + criteria);
@@ -517,7 +482,7 @@ public class iMISUserDirectoryProvider implements UserDirectoryProvider,
 				users.add(user);
 
 			} catch (Exception e) {
-				e.printStackTrace();
+				M_log.error("Could not searchExternalUsers: " + criteria, e);
 			}
 
 		}
