@@ -58,7 +58,7 @@ reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-10.x
-samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
+#samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
 search https://source.sakaiproject.org/svn/search/branches/sakai-10.x
 sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
@@ -77,7 +77,8 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 # custom tools
-evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+#Fixed version for now
+evaluation -r 86939 https://source.sakaiproject.org/contrib/evaluation/branches/EVALSYS-1413/
 #Leave out scorm for now, they said they're not using it and might be out of date
 #sakai-wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/trunk
 #SCORM.2004.3ED.RTE https://source.sakaiproject.org/svn/msub/uwo.ca/scorm/trunk
@@ -90,6 +91,7 @@ kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/providers/sakai-10.x_custom
 reference https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/reference/sakai-10.x_custom
 #site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/site-manage/sakai-10.x_custom
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/samigo/samigo-10.x_backport
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/user/sakai-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/webservices/sakai-10.x_custom
 
