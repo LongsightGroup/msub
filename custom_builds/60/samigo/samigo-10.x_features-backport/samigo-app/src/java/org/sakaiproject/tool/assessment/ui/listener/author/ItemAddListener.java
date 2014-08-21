@@ -132,18 +132,13 @@ public class ItemAddListener
     if( (!iType.equals(TypeFacade.MATCHING.toString())&&((iText==null) ||(iText.toLowerCase().replaceAll("<^[^(img)]*?>", "").trim().equals(""))))|| (iType.equals(TypeFacade.MATCHING.toString()) && ((iInstruction==null)||(iInstruction.toLowerCase().replaceAll("<^[^(img)]*?>", "").trim().equals(""))))){
     	
     	// Like Matching CaculatedQuestion will also use Instruction instead of itemText
-    	if (!iType.equals(TypeFacade.CALCULATED_QUESTION.toString())) {
+    	if (!iType.equals(TypeFacade.CALCULATED_QUESTION.toString()) && !iType.equals(TypeFacade.IMAGEMAP_QUESTION.toString())) {
+			System.out.println("I really think iText is empty 1");
 			String emptyText_err = ContextUtil.getLocalizedString("org.sakaiproject.tool.assessment.bundle.AuthorMessages","emptyText_error");     
 			context.addMessage(null,new FacesMessage(emptyText_err));
 			return;
     	}
-
-    	// Like Matching CaculatedQuestion will also use Instruction instead of itemText
-    	if ( !iType.equals(TypeFacade.IMAGEMAP_QUESTION.toString()) ) {
-			String emptyText_err = ContextUtil.getLocalizedString("org.sakaiproject.tool.assessment.bundle.AuthorMessages","emptyText_error");     
-			context.addMessage(null,new FacesMessage(emptyText_err));
-			return;
-    	}
+		
     }
 
     if(iType.equals(TypeFacade.EXTENDED_MATCHING_ITEMS.toString()))
