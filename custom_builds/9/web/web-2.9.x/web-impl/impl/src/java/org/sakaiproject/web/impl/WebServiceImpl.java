@@ -461,7 +461,7 @@ public class WebServiceImpl implements WebService, EntityTransferrer
 			SiteService.save(toSite);
 			ToolSession session = SessionManager.getCurrentToolSession();
 
-			if (session.getAttribute(ATTR_TOP_REFRESH) == null)
+			if (session != null && session.getAttribute(ATTR_TOP_REFRESH) == null)
 			{
 				session.setAttribute(ATTR_TOP_REFRESH, Boolean.TRUE);
 			}
@@ -531,7 +531,7 @@ public class WebServiceImpl implements WebService, EntityTransferrer
 				SiteService.save(toSite);
 				ToolSession session = SessionManager.getCurrentToolSession();
 
-				if (session.getAttribute(ATTR_TOP_REFRESH) == null)
+				if (session != null && session.getAttribute(ATTR_TOP_REFRESH) == null)
 				{
 					session.setAttribute(ATTR_TOP_REFRESH, Boolean.TRUE);
 				}
