@@ -128,13 +128,13 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>blogwow</module>
-                <module>content-review/contentreview-impl</module>
+                <!--module>content-review/contentreview-impl</module-->
                 <module>hierarchy</module>
                 <module>delegatedaccess</module>
                 <module>evaluation</module>
-                <module>da_evalprovider</module>
+                <!--module>da_evalprovider</module>
                 <module>etudes-util</module>
-                <module>melete</module>
+                <module>melete</module -->
             </modules>
         </profile>
         <profile>
