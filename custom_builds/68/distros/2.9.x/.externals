@@ -81,7 +81,7 @@ hybrid https://source.sakaiproject.org/svn/hybrid/branches/hybrid-1.2.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x/
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
-formbuilder https://source.sakaiproject.org/contrib/ucf/formbuilder/trunk/
+formbuilder https://source.sakaiproject.org/contrib/ucf/formbuilder/branches/sakai_2.9.x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
 gradebook2 https://source.sakaiproject.org/contrib/gradebook2/trunk/
