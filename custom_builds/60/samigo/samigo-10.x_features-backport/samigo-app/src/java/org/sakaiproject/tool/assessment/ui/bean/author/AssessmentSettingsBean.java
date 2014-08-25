@@ -681,7 +681,7 @@ public class AssessmentSettingsBean
   }
 
   public void setTimedHours(Integer timedHours) {
-    this.timedHours = timedHours;
+    this.timedHours = (timedHours==null)?0:timedHours;
   }
 
   public Integer getTimedHours() {
@@ -689,7 +689,7 @@ public class AssessmentSettingsBean
   }
 
   public void setTimedMinutes(Integer timedMinutes) {
-    this.timedMinutes =  timedMinutes;
+    this.timedMinutes =  (timedMinutes==null)?0:timedMinutes;
   }
 
   public Integer getTimedMinutes() {

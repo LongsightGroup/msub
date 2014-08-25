@@ -28,8 +28,9 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.faces.context.ExternalContext;
-import javax.faces.context.FacesContext;
+import javax.faces.component.UICommand;
+import javax.faces.component.UIComponent;
+import javax.faces.event.ActionEvent;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -139,6 +140,9 @@ public class LoginServlet
     		pub.getAssessmentMetaDataByLabel("honorpledge_isInstructorEditable").toLowerCase().equals("true"));
     delivery.setPublishedAssessment(pub);
 
+    BeginDeliveryActionListener listener = new BeginDeliveryActionListener();
+    listener.populateBeanFromPub(delivery, pub);
+
     RequestDispatcher dispatcher = null;
     String path = "/jsf/delivery/invalidAssessment.faces";
     boolean relativePath = true;
@@ -186,7 +190,6 @@ public class LoginServlet
         // Assessment is available for taking
         else if ("safeToProceed".equals(nextAction)){
           // if assessment is available, set it in delivery bean for display in deliverAssessment.jsp
-          BeginDeliveryActionListener listener = new BeginDeliveryActionListener();
           listener.processAction(null);
           path = "/jsf/delivery/beginTakingAssessment_viaurl.faces";
         }
@@ -243,7 +246,11 @@ public class LoginServlet
         }
         else {
           DeliveryActionListener deliveryListener = new DeliveryActionListener();
-          deliveryListener.processAction(null);
+          //This has to be setup if it's coming from direct otherwise it doesn't start right
+          UIComponent uic = new UICommand();
+          uic.setId("beginAssessment");
+          ActionEvent ae = new ActionEvent(uic);
+          deliveryListener.processAction(ae);
         }
         
         //TODO: Should be something a bit more robust as validate() can retun a lot of things...
