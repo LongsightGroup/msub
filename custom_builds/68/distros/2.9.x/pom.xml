@@ -136,8 +136,8 @@
                 <module>gradebook2</module>
                 <module>iclicker</module>
                 <module>melete</module>
-                <module>wicket-for-scorm</module>
-                <module>scorm</module>
+                <!-- module>wicket-for-scorm</module -->
+                <!-- module>scorm</module -->
                 <module>signup</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>

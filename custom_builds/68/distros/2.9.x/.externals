@@ -107,8 +107,8 @@ wicket-for-scorm https://source.sakaiproject.org/contrib/longsight/sakai-wicket-
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
 #shell_command sed -i 's/2.8.0/2.9-SNAPSHOT/g' scorm/pom.xml 
-#shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' formbuilder/pom.xml formbuilder/tool/pom.xml
-#shell_command sed -i -e"s/<version>2.10-SNAPSHOT<\/version>/<version>2.9-SNAPSHOT<\/version>/g"  gradebook2/pom.xml gradebook2/model/pom.xml gradebook2/shared/pom.xml gradebook2/server/pom.xml gradebook2/api/pom.xml gradebook2/client/pom.xml gradebook2/war/pom.xml gradebook2/help/pom.xml
+#shell_command sed -i 's/2.9.3/2.9-SNAPSHOT/g' formbuilder/pom.xml formbuilder/tool/pom.xml
+#shell_command sed -i -e"s/<version>10-SNAPSHOT<\/version>/<version>2.9-SNAPSHOT<\/version>/g"  gradebook2/pom.xml gradebook2/model/pom.xml gradebook2/shared/pom.xml gradebook2/server/pom.xml gradebook2/api/pom.xml gradebook2/client/pom.xml gradebook2/war/pom.xml gradebook2/help/pom.xml
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
