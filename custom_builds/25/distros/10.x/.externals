@@ -81,6 +81,8 @@ archive https://source.sakaiproject.org/svn/msub/longsight.com/archive/archive-1
 blogwow -r 86574 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
 common https://source.sakaiproject.org/svn/msub/longsight.com/common/common-10.x_backport
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
+etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
+melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x 
 gradebook-export https://source.sakaiproject.org/svn/msub/longsight.com/gradebook-export/gradebook-export-1.5-src
 jobscheduler https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/25/jobscheduler/jobscheduler-10.x
@@ -90,6 +92,9 @@ sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sak
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_custom
 syllabus https://source.sakaiproject.org/svn/msub/longsight.com/syllabus/syllabus-10.x_backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
 #shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' gradebook-export/pom.xml
 #shell_command sed -i 's/opensymphony\.quartz/quartz-scheduler/g' gradebook-export/scheduler-jobs/pom.xml
