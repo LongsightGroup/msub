@@ -129,13 +129,13 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>blogwow</module>
-                <module>etudes-util</module>
-                <module>formbuilder</module>
+                <!-- module>etudes-util</module -->
+                <!-- module>formbuilder</module -->
                 <module>hierarchy</module>
                 <module>evaluation</module>
                 <module>gradebook2</module>
                 <module>iclicker</module>
-                <module>melete</module>
+                <!-- module>melete</module -->
                 <!-- module>wicket-for-scorm</module -->
                 <!-- module>scorm</module -->
                 <module>signup</module>
