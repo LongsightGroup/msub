@@ -104,7 +104,7 @@ public class PublishedAssessmentFacade
   private int enrolledStudentCount;
   private Integer timeLimit;
   private String lastModifiedDateForDisplay;
-  
+  private int groupCount = 0; 
   public PublishedAssessmentFacade() {
   }
 
@@ -151,6 +151,7 @@ public class PublishedAssessmentFacade
 	  this.lateHandling = lateHandling;
 	  this.unlimitedSubmissions = unlimitedSubmissions;
 	  this.submissionsAllowed = submissionsAllowed;
+  	  setGroupCount();
   }
 
   // constructor that whole min. info, used for listing
@@ -838,4 +839,19 @@ public class PublishedAssessmentFacade
   public void setLastModifiedDateForDisplay(String lastModifiedDateForDisplay) {
 	  this.lastModifiedDateForDisplay = lastModifiedDateForDisplay;
   }
+
+    public void setGroupCount() {
+      if (releaseToGroupsList != null) {
+          groupCount = releaseToGroupsList.size();
+      }
+      else {
+          groupCount = 0;
+      }
+  }
+
+  public int getGroupCount() {
+      return groupCount;
+  }
+
+
 }
