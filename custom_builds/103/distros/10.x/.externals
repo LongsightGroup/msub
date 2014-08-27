@@ -98,6 +98,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds
 certification https://source.sakaiproject.org/contrib/longsight/rsmart-certification/branches/10.x
 qna https://source.sakaiproject.org/contrib/longsight/qna/trunk
 sms https://source.sakaiproject.org/contrib/sms/sms/trunk/
+linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-10.x/
 
 content-review-impl-vericite https://github.com/LongsightGroup/contentreview-impl-vericite/trunk
 
