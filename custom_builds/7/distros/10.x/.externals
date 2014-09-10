@@ -29,7 +29,6 @@ basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
 chat https://source.sakaiproject.org/svn/chat/branches/sakai-10.x
 citations https://source.sakaiproject.org/svn/citations/branches/sakai-10.x
-config https://source.sakaiproject.org/svn/config/branches/sakai-10.x
 content https://source.sakaiproject.org/svn/content/branches/sakai-10.x
 courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
@@ -46,7 +45,6 @@ msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
 polls https://source.sakaiproject.org/svn/polls/branches/sakai-10.x
-portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
@@ -70,18 +68,20 @@ user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
-web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
 #customizations:
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
+config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/config/config-10.x_custom
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
+portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
+web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/web/web-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 
 #Big Blue Button:
