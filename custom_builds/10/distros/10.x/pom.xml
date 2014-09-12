@@ -126,7 +126,8 @@
 		<module>melete</module>
 		<module>scorm</module>
 		<module>bigbluebutton-sakai/bbb-tool</module>
-	    </modules>
+                <module>sms</module>
+            </modules>
         </profile>
         <profile>
             <id>experimental</id>
