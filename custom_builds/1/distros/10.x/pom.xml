@@ -119,6 +119,16 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>gradebook-export</module>
+                <module>blogwow</module>
+                <module>etudes-util</module>
+                <!--
+                <module>jforum</module>
+                -->
+                <module>melete</module>
+                <module>evaluation</module>
+                <module>scorm</module>
+                <module>wicket-for-scorm</module>
+                <module>content-review/contentreview-impl</module>
             </modules>
         </profile>
         <profile>
