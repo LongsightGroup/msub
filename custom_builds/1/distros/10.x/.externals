@@ -91,7 +91,7 @@ blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/1/config-10.x_custom
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
-jforum https://source.sakaiproject.org/contrib/etudes/sakai-jforum/tags/2.9.11
+#jforum https://source.sakaiproject.org/contrib/etudes/sakai-jforum/tags/2.9.11
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/sakai-10
