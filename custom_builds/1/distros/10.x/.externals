@@ -44,7 +44,6 @@ memory https://source.sakaiproject.org/svn/memory/branches/sakai-10.x
 message https://source.sakaiproject.org/svn/message/branches/sakai-10.x
 metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/sakai-10.x
-osp https://source.sakaiproject.org/svn/osp/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
 polls https://source.sakaiproject.org/svn/polls/branches/sakai-10.x
@@ -53,7 +52,6 @@ postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
 providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
-reference https://source.sakaiproject.org/svn/reference/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
@@ -100,7 +98,12 @@ wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-s
 #Patcher options: "mavenoptions: <options>"
 #Evaluation needs -Psakai-10
 #mavenoptions:-Psakai10 -Detudes.util.version=1.0.17 -Detudes.jforum.version=2.9.1
+
+#POM CHANGES
+#shell_command sed -i 's/2.8.0/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
 #shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
+#shell_command sed -i 's/<version>10<\/version>/<version>10-SNAPSHOT<\/version>/g' scorm/pom.xml
+#shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
 
 # Big Blue Button
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
