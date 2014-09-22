@@ -2,6 +2,7 @@
 # Updating: svn propset svn:externals -F .externals .
 # Corporate POM
 master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
+deploy https://source.sakaiproject.org/svn/sakai/branches/sakai-10.x/deploy/
 
 # Core services
 kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
