@@ -127,6 +127,7 @@
                 <module>scorm</module>
                 <module>wicket-for-scorm</module>
                 <module>content-review/contentreview-impl</module>
+                <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
         </profile>
         <profile>
