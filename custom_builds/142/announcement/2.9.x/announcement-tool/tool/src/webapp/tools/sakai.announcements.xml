@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+	<tool title="Announcements" description="Use Announcements to distribute information and send out notification about activities or events relevant to your site." id="sakai.announcements">
+
+		<configuration name="channel" value=""/>
+		<configuration name="pagesize" value="10"/>
+		<configuration name="enableReorder"/>
+
+		
+		
+		
+		
+		
+		
+		
+
+		<configuration name="functions.require" value="annc.read"/> 
+
+		<configuration name="groupAware" value="true"/>
+	<category name="course"/>
+<category name="portfolio"/>
+<category name="project"/>
+<category name="portfolioAdmin"/>
+<category name="myworkspacebuserdguest"/>
+<category name="myworkspacebuserdregistered"/>
+<category name="myworkspacebuserdmaintain"/>
+</tool>
+
+</registration>
