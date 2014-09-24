@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="Messages" description="Use Messages to post private messages to site participants." id="sakai.messages">
+    <configuration name="groupAware" value="true" />
+
+
+      <configuration name="help.id" type="final" value="sakai.messages"/>
+
+
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="project"/>
+</tool>
+
+</registration>

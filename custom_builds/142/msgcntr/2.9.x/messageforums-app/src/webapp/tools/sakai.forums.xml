@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="Forums" description="Use Forums to post discussion topics or respond to discussion threads." id="sakai.forums">
+
+
+      <configuration name="help.id" type="final" value="sakai.messagecenter"/>
+
+
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="project"/>
+</tool>
+
+</registration>
