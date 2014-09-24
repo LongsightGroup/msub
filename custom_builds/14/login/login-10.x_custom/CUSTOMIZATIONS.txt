@@ -1,0 +1,1 @@
+Simple text change in auth.properties only
