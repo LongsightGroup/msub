@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+
+   <tool title="Wiki" description="Use Wiki to create a website that allows site participants to add and edit content collaboratively." id="sakai.rwiki">
+
+      <configuration name="home-page" value="Home"/>
+      <configuration name="home-page-friendly-name" value=""/>
+
+
+      <configuration name="functions.require" value="rwiki.read"/>
+
+
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="project"/>
+</tool>
+
+</registration>
