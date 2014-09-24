@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="Portfolio Showcase" description="Link to the rSmart Portfolio Showcase." id="sakai.rsn.osp.iframe">
+
+      <configuration name="source" value="http://www.rsmart.com/portfolios?sakai_session=${SESSION_ID}"/>
+      <configuration name="height" value="600px"/>
+
+      <configuration name="reset.button" type="final" value="false"/>
+      <configuration name="functions.require" value="site.upd"/>
+
+
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="portfolio"/>
+<category name="portfolioAdmin"/>
+</tool>
+
+</registration>
