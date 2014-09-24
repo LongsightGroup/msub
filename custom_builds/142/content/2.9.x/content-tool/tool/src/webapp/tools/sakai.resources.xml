@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="Resources" description="Use Resources to post, store and organize material of use to site participants." id="sakai.resources">
+
+      <configuration name="home" value=""/>
+      <configuration name="optional_properties" value="true"/>
+      <configuration name="user_sees_all_their_sites" value="true"/>
+      <configuration name="collections_per_page" value="50"/>
+
+      <configuration name="resources_mode" type="final" value="resources"/>
+
+		
+		<configuration name="groupAware" value="true"/>
+
+      <configuration name="functions.require" value="content.read"/>
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="portfolio"/>
+<category name="project"/>
+<category name="portfolioAdmin"/>
+<category name="aw"/>
+<category name="myworkspacebuserdguest"/>
+<category name="myworkspacebuserdregistered"/>
+<category name="myworkspacebuserdmaintain"/>
+<category name="myworkspacetadmin"/>
+</tool>
+
+</registration>
