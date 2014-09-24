@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>rsmart-meleteDocs</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>2.9.3</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+  <artifactId>rsmart-meleteDocs-impl</artifactId>
+  <groupId>com.rsmart</groupId>
+  <name>rSmart meleteDocs impl</name>
+  <organization>
+    <name>The rSmart Group</name>
+    <url>http://www.rsmart.com/</url>
+  </organization>
+  <inceptionYear>2002</inceptionYear>
+  <packaging>jar</packaging>
+  <properties>
+    <deploy.target/>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-component-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.4</version>
+    </dependency>
+    <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <scope>provided</scope>
+    </dependency>
+<!--org.sakaiprojectsakai-component-api${sakai.version}-->
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/bundle</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/java</directory>
+        <includes>
+          <include>**/*.hbm.xml</include>
+        </includes>
+      </resource>
+    </resources>
+<!-- java source -->
+    <sourceDirectory>src/java</sourceDirectory>
+  </build>
+</project>

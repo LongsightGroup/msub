@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright 2011 The rSmart Group
+  ~
+  ~ The contents of this file are subject to the Mozilla Public License
+  ~ Version 1.1 (the "License"); you may not use this file except in
+  ~ compliance with the License. You may obtain a copy of the License at
+  ~ http://www.mozilla.org/MPL/
+  ~
+  ~ Software distributed under the License is distributed on an "AS IS"
+  ~ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  ~ License for the specific language governing rights and limitations
+  ~ under the License.
+  ~
+  ~ Contributor(s): duffy
+  -->
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+<!--  CLE-4652 had to eliminate encryption because of the need to alter JVM to include Unlimited Strength Encryption (non-export grade)
+    <typedef name="encrypted" class="org.jasypt.hibernate.type.EncryptedStringType">
+        <param name="algorithm">PBEWithMD5AndDES</param>
+        <param name="password">jasypt</param>
+        <param name="keyObtentionIterations">1000</param>
+    </typedef>
+-->
+
+
+	<class name="com.rsmart.oauth.hibernate.OAuthProviderHibernateImpl" table="oauth_provider" lazy="false">
+
+		<id name="UUID" length="36" type="java.lang.String" column="uuid">
+			<generator class="uuid.hex" />
+		</id>
+
+<!--  CLE-4652 had to eliminate encryption because of the need to alter JVM to include Unlimited Strength Encryption (non-export grade)
+        <property name="consumerKey" type="encrypted" column="consumer_key"
+            not-null="true" length="100"/>
+
+        <property name="consumerSecret" type="encrypted" column="consumer_secret"
+            not-null="true" length="100"/>
+-->
+
+        <property name="description" type="java.lang.String" column="description" length="500"/>
+
+        <property name="consumerKey" type="java.lang.String" column="consumer_key"
+            not-null="true" length="100"/>
+
+        <property name="consumerSecret" type="java.lang.String" column="hmacSha1SharedSecret"
+            insert="false" update="false"/>
+
+        <property name="accessTokenURL" type="java.lang.String" column="accessTokenURL"
+            not-null="true" length="255"/>
+
+        <property name="requestTokenURL" type="java.lang.String" column="requestTokenURL"
+            not-null="true" length="255"/>
+
+        <property name="userAuthorizationURL" type="java.lang.String" column="userAuthorizationURL"
+            not-null="true" length="255"/>
+
+        <property name="realm" type="java.lang.String" column="realm"
+            not-null="false" length="100"/>
+
+        <property name="providerName" type="java.lang.String" column="name"
+            not-null="true" length="100" unique="true"/>
+
+        <property name="rsaSha1Key" type="text" column="rsakey"/>
+
+        <property name="hmacSha1SharedSecret" type="java.lang.String" column="hmacSha1SharedSecret"/>
+        
+        <property name="signatureMethod" type="com.rsmart.oauth.hibernate.OAuthSignatureMethodEnumUserType"
+                  column="signatureMethod" not-null="true"/>
+
+        <property name="enabled" type="boolean" not-null="true" column="enabled"/>
+
+        <map name="additionalHeaders" table="oauth_headers" lazy="false" cascade="save-update,delete">
+            <key column="providerUUID" not-null="true"/>
+            <map-key column="propertyKey" type="string" length="100"/>
+            <element column="propertyValue" type="string" length="512" not-null="true"/>
+        </map>
+
+   </class>
+
+    <query name="query.getAllProviders">
+        from OAuthProviderHibernateImpl
+    </query>
+    
+    <query name="query.deleteProviderById">
+        delete from OAuthProviderHibernateImpl as provider
+            where provider.UUID = ?
+    </query>
+
+    <query name="query.emptyAdditionalHeadersByProviderId">
+        update OAuthProviderHibernateImpl as provider
+            set provider.additionalHeaders = null
+            where provider.UUID = ?
+    </query>
+
+    <query name="query.providerByName">
+        from OAuthProviderHibernateImpl as provider
+            where provider.providerName = ?
+    </query>
+
+    <query name="query.getProviderStatus">
+        select provider.enabled
+        from OAuthProviderHibernateImpl as provider
+        where provider.providerName = ?
+    </query>
+
+    <query name="query.setProviderStatus">
+        update OAuthProviderHibernateImpl as provider
+            set provider.enabled = ?
+            where provider.providerName = ?
+    </query>
+
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="MOTD" description="Use Message of the Day to post a system-wide message displayed in users' My Workspace site." fake="true" id="rsmart.motd.announcements" realId="sakai.announcements">
+
+      <configuration name="channel" value="/announcement/channel/!site/motd"/>
+      <configuration name="pagesize" value="10"/>
+
+
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="aw"/>
+<category name="myworkspacetadmin"/>
+</tool>
+
+</registration>

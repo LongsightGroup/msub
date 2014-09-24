@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+   <bean abstract="false" autowire="default" 
+         class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" 
+         dependency-check="default" id="com.rsmart.admin.customizer.api.CustomizerService"
+         lazy-init="default" singleton="true">
+      <property name="transactionManager">
+        <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
+      </property>
+      <property name="target">
+         <ref bean="com.rsmart.admin.customizer.api.CustomizerService.target"/>
+      </property>
+      <property name="transactionAttributes">
+         <props>
+            <prop key="*">PROPAGATION_REQUIRED</prop>
+         </props>
+      </property>
+   </bean>
+   
+   <bean id="com.rsmart.admin.customizer.api.CustomizerService.target"
+         class="com.rsmart.admin.customizer.impl.CustomizerServiceImpl"
+         singleton="true">
+      <lookup-method name="toolManager" bean="org.sakaiproject.tool.api.ActiveToolManager" />
+      <lookup-method name="portalManager" bean="org.theospi.portfolio.portal.intf.PortalManager.tx" />
+      <lookup-method name="contentHostingService" bean="org.sakaiproject.content.api.ContentHostingService" />
+      <lookup-method name="updatableServerConfigurationService" 
+                     bean="org.sakaiproject.component.api.ServerConfigurationService"/>
+      <lookup-method name="eventTrackingService" 
+                     bean="org.sakaiproject.event.api.EventTrackingService"/>
+      <lookup-method name="sqlService" 
+                     bean="org.sakaiproject.db.api.SqlService"/>
+      <lookup-method name="siteService" 
+                     bean="org.sakaiproject.site.api.SiteService"/>
+      <lookup-method name="authzGroupService" 
+                     bean="org.sakaiproject.authz.api.AuthzGroupService"/>
+      <lookup-method name="securityService"
+                     bean="org.sakaiproject.authz.api.SecurityService"/>       
+   </bean>
+
+   <bean id="testBean" class="com.rsmart.admin.customizer.impl.SiteTypeMapHolder" singleton="true">
+      
+   </bean>
+   
+</beans>

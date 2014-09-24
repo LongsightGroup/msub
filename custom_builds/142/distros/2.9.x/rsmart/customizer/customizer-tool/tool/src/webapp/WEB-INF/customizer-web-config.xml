@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="true">
+
+   <bean id="customizerController" 
+         class="com.rsmart.admin.customizer.tool.CustomizerController">
+       <property name="customizerService">
+           <ref bean="com.rsmart.admin.customizer.api.CustomizerService"/>
+       </property>
+       <property name="pages">
+           <list>
+              <value>start</value>
+              <value>pickSpreadsheetFileRedirect</value>
+               <value>reviewWarnings</value>
+               <value>success</value>
+           </list>
+       </property>
+       <property name="commandName">
+           <value>form</value>
+       </property>
+       <property name="commandClass">
+           <value>com.rsmart.admin.customizer.tool.CustomizerForm</value>
+       </property>
+   </bean>
+   
+   <bean id="funcRequireController" class="org.sakaiproject.metaobj.utils.mvc.impl.servlet.FormControllerImpl">
+      <property name="controller">
+         <bean class="com.rsmart.admin.customizer.tool.FuncRequireController">
+            <property name="customizerService" ref="com.rsmart.admin.customizer.api.CustomizerService"/>
+         </bean>
+      </property>
+      <property name="sessionForm">
+         <value>true</value>
+      </property>
+      <property name="screenMappings">
+         <props>
+            <prop key="success">listToolsRedirect</prop>
+         </props>
+      </property>
+      <property name="customTypedEditors">
+         <list>
+            <ref bean="idCustomEditor"/>
+         </list>
+      </property>
+      <property name="commandName">
+         <value>bean</value>
+      </property>
+      <property name="commandClass">
+         <value>com.rsmart.admin.customizer.tool.FuncRequireForm</value>
+      </property>
+      <property name="formView">
+         <value>funcRequireView</value>
+      </property>
+   </bean>
+   
+   <bean id="siteTypesPermsController" class="org.sakaiproject.metaobj.utils.mvc.impl.servlet.FormControllerImpl">
+      <property name="controller">
+         <bean class="com.rsmart.admin.customizer.tool.SiteTypePermController">
+            <property name="customizerService" ref="com.rsmart.admin.customizer.api.CustomizerService"/>
+            <property name="authzGroupService" ref="org.sakaiproject.authz.api.AuthzGroupService"/>
+         </bean>
+      </property>
+      <property name="sessionForm">
+         <value>true</value>
+      </property>
+      <property name="screenMappings">
+         <props>
+            <prop key="success">listSiteTypesRedirect</prop>
+         </props>
+      </property>
+      <property name="customTypedEditors">
+         <list>
+            <ref bean="idCustomEditor"/>
+         </list>
+      </property>
+      <property name="commandName">
+         <value>bean</value>
+      </property>
+      <property name="commandClass">
+         <value>com.rsmart.admin.customizer.tool.PermForm</value>
+      </property>
+      <property name="formView">
+         <value>siteTypePermsView</value>
+      </property>
+   </bean>
+
+   <bean id="siteTypesListController" class="org.sakaiproject.metaobj.utils.mvc.impl.servlet.FormControllerImpl">
+      <property name="controller">
+         <bean class="com.rsmart.admin.customizer.tool.SiteTypesController">
+            <property name="customizerService" ref="com.rsmart.admin.customizer.api.CustomizerService"/>
+            <property name="authzGroupService" ref="org.sakaiproject.authz.api.AuthzGroupService"/>
+            <property name="idManager" ref="idManager"/>
+            <property name="updatableServerConfigurationService"
+               ref="com.rsmart.sakaiproject.component.api.UpdatableServerConfigurationService.tx"/>
+            <property name="siteTypeToRealmMap">
+               <map>
+                  <entry key="aw" value="/site/!admin"/>
+                  <entry key="myworkspacebuserdmaintain" value="!user.template.maintain"/>
+                  <entry key="myworkspacebuserdregistered" value="!user.template.registered"/>
+                  <entry key="myworkspacetadmin" value="/site/~admin"/>
+                  <entry key="myworkspacebuserdguest" value="!user.template.guest"/>
+               </map>
+            </property>
+         </bean>
+      </property>
+      <property name="sessionForm">
+         <value>true</value>
+      </property>
+      <property name="screenMappings">
+         <props>
+            <prop key="success">listSiteTypesRedirect</prop>
+         </props>
+      </property>
+      <property name="customTypedEditors">
+         <list>
+            <ref bean="idCustomEditor"/>
+         </list>
+      </property>
+      <property name="commandName">
+         <value>bean</value>
+      </property>
+      <property name="commandClass">
+         <value>com.rsmart.admin.customizer.tool.SiteTypeListForm</value>
+      </property>
+      <property name="formView">
+         <value>siteTypeListView</value>
+      </property>
+      <property name="validator">
+         <bean class="org.theospi.utils.mvc.impl.SimpleValidator">
+            <property name="requiredFields">
+               <list>
+                  <value>newCategoryName</value>
+               </list>
+            </property>
+         </bean>
+      </property>
+   </bean>
+
+   <bean id="addToolsController" class="org.sakaiproject.metaobj.utils.mvc.impl.servlet.FormControllerImpl">
+      <property name="controller">
+         <bean class="com.rsmart.admin.customizer.tool.AddToolController">
+            <property name="customizerService" ref="com.rsmart.admin.customizer.api.CustomizerService"/>
+            <property name="authzGroupService" ref="org.sakaiproject.authz.api.AuthzGroupService"/>
+            <property name="idManager" ref="idManager"/>
+            <property name="updatableServerConfigurationService"
+               ref="org.sakaiproject.component.api.ServerConfigurationService"/>
+         </bean>
+      </property>
+      <property name="sessionForm">
+         <value>true</value>
+      </property>
+      <property name="screenMappings">
+         <props>
+            <prop key="success">listSiteTypesRedirect</prop>
+         </props>
+      </property>
+      <property name="customTypedEditors">
+         <list>
+            <ref bean="idCustomEditor"/>
+         </list>
+      </property>
+      <property name="commandName">
+         <value>bean</value>
+      </property>
+      <property name="commandClass">
+         <value>com.rsmart.admin.customizer.tool.AddToolForm</value>
+      </property>
+      <property name="formView">
+         <value>addToolsForm</value>
+      </property>
+   </bean>
+
+   <bean id="toolListController" class="org.sakaiproject.metaobj.utils.mvc.impl.servlet.FormControllerImpl">
+      <property name="controller">
+         <bean class="com.rsmart.admin.customizer.tool.CustomizerToolController">
+            <property name="customizerService" ref="com.rsmart.admin.customizer.api.CustomizerService"/>
+         </bean>
+      </property>
+      <property name="sessionForm">
+         <value>true</value>
+      </property>
+      <property name="screenMappings">
+         <props>
+            <prop key="success">listToolsRedirect</prop>
+         </props>
+      </property>
+      <property name="customTypedEditors">
+         <list>
+            <ref bean="idCustomEditor"/>
+         </list>
+      </property>
+      <property name="commandName">
+         <value>bean</value>
+      </property>
+      <property name="commandClass">
+         <value>com.rsmart.admin.customizer.tool.ToolForm</value>
+      </property>
+      <property name="formView">
+         <value>toolViewList</value>
+      </property>
+   </bean>
+
+
+     <bean id="revertMessageBundleController"
+        class="com.rsmart.admin.customizer.tool.RevertMessageBundleController">
+          <property name="commandClass"            value="org.sakaiproject.messagebundle.api.MessageBundleProperty"/>
+          <property name="commandName"             value="command"/>
+          <property name="formView"                value="revertMessageBundleProperty"/>
+          <property name="successView"             value="redirect:messageBundleHome.osp"/>
+         <property name="messageBundleService"><ref bean="org.sakaiproject.messagebundle.api.MessageBundleService"/></property>
+     </bean>
+     <bean id="editMessageBundlePropertyController"
+        class="com.rsmart.admin.customizer.tool.EditMessageBundlePropertyController">
+          <property name="commandClass"            value="org.sakaiproject.messagebundle.api.MessageBundleProperty"/>
+          <property name="commandName"             value="command"/>
+          <property name="formView"                value="editMessageBundleProperty"/>
+          <property name="successView"             value="redirect:messageBundleHome.osp?_clear&amp;listfilter=-1"/>
+         <property name="messageBundleService"><ref bean="org.sakaiproject.messagebundle.api.MessageBundleService"/></property>
+     </bean>
+
+    <bean id="messageBundleHomeController"
+        class="com.rsmart.admin.customizer.tool.MessageBundleListController">
+          <property name="listName"                value="properties"/>
+          <property name="successView"             value="messageBundleHome"/>
+          <property name="messageBundleService"><ref bean="org.sakaiproject.messagebundle.api.MessageBundleService"/></property>
+          <property name="applyFilter" value="false"/>
+          <property name="enableSorting"    value="true"/>
+          <property name="defaultSortCol"   value="moduleName"/>
+          <property name="defaultSortOrder" value="ASC"/>
+     </bean>
+    <bean id="messageBundleController" class="com.rsmart.admin.customizer.tool.MessageBundleController">        
+        <property name="methodNameResolver">
+            <bean class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+                <property name="paramName" value="method"/>
+            </bean>
+        </property>
+        <property name="messageBundleService"><ref bean="org.sakaiproject.messagebundle.api.MessageBundleService"/></property>
+    </bean>
+
+    <bean id="uploadMessageBundleFileController" class="com.rsmart.admin.customizer.tool.UploadMessageBundleFileController">
+        <property name="messageBundleService"><ref bean="org.sakaiproject.messagebundle.api.MessageBundleService"/></property>
+        <property name="commandClass" value="com.rsmart.admin.customizer.tool.FileUploadBean"/>
+        <property name="commandName" value="command"/>
+        <property name="formView" value="uploadMessageBundle"/>
+        <property name="successView" value="redirect:messageBundleHome.osp"/>
+    </bean>
+
+   <bean id="reloadToolsController"
+        class="com.rsmart.admin.customizer.tool.ReloadToolsController">
+           <property name="successView" value="reloadTools"/>
+           <property name="formView" value="reloadTools"/>
+           <property name="commandClass" value="java.lang.String"/>
+           <property name="customizerService">
+               <ref bean="com.rsmart.admin.customizer.api.CustomizerService"/>
+           </property>
+     </bean>
+
+    <bean id="org.springframework.web.servlet.HandlerInterceptor.SakaiStyleSheetInterceptor"
+      class="org.sakaiproject.metaobj.shared.control.SakaiStyleSheetInterceptor">
+      <property name="worksiteManager">
+         <ref bean="org.sakaiproject.metaobj.worksite.mgt.WorksiteManager"/>
+      </property>
+   </bean>
+
+     <!-- this locale resolver gets the locale set by the sakai preferences tool set using the "language" link -->
+     <bean id="localeResolver" class="com.rsmart.sakai.common.web.springframework.SakaiLocaleResolver"/>
+
+     <!-- spring resource bundle.  see page 84 -->
+     <!-- this message bundle contains messages specific to the virtual classroom tool -->
+      <bean id="messageSource" class="org.sakaiproject.util.ResourceLoaderMessageSource">
+         <property name="basename" value="messages"/>  
+      </bean>
+
+     <!-- spring method name resolver for multi action controlllers.  see page 303 -->
+     <bean id="methodNameResolver" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+        <property name="paramName"><value>action</value></property>
+     </bean>
+
+   <bean id="controllerFilterManager" class="org.sakaiproject.metaobj.utils.mvc.impl.ControllerFilterManager"/>
+
+</beans>

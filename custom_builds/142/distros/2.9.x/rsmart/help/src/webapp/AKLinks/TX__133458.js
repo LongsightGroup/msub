@@ -1,0 +1,1 @@
+﻿d2hStoreMenuItems("TX__133458", [["WordDocuments/toolsincoursesites.htm", "right", "Tools in Course Sites"],["WordDocuments/toolsinprojectsites.htm", "right", "Tools in Project Sites"],["WordDocuments/wiki.htm", "right", "Wiki"]]);

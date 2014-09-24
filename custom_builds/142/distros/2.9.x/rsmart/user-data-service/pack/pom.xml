@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>user-data-service</artifactId>
+        <groupId>com.rsmart</groupId>
+        <version>2.9.3</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>sakai-component</packaging>
+    <name>user-data-pack</name>
+    <artifactId>user-data-pack</artifactId>
+    <groupId>com.rsmart</groupId>
+
+    <properties>
+        <deploy.target>components</deploy.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <artifactId>user-data-impl</artifactId>
+            <groupId>com.rsmart</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>user-data-model</artifactId>
+            <groupId>com.rsmart</groupId>
+        </dependency>
+     </dependencies>
+    <build>
+          <sourceDirectory>src/java</sourceDirectory>
+    </build>
+</project>
+

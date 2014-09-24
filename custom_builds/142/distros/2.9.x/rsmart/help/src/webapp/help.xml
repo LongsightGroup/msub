@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<help-reg>
+    <category name="Introducing the CLE">
+        <resource defaultForTool="" name="Overview" location="/WordDocuments/introducingthecle.htm"/>
+        <resource defaultForTool="" name="Types of Sites in the CLE"
+                  location="/WordDocuments/typesofsitesinthecle.htm"/>
+        <resource defaultForTool="" name="Authentication" location="/WordDocuments/authentication.htm"/>
+        <resource defaultForTool="" name="Roles and Permissions in the CLE"
+                  location="/WordDocuments/rolesandpermissionsinthecle.htm"/>
+        <resource defaultForTool="" name="Tools in the CLE" location="/WordDocuments/toolsinthecle.htm"/>
+        <resource defaultForTool="" name="CLE Gateway" location="/WordDocuments/clegateway.htm"/>
+        <resource defaultForTool="" name="My Workspace" location="/WordDocuments/myworkspace.htm"/>
+        <resource defaultForTool="" name="Course Sites" location="/WordDocuments/coursesites.htm"/>
+        <resource defaultForTool="" name="Project Sites" location="/WordDocuments/projectsites.htm"/>
+        <resource defaultForTool="" name="Portfolio Sites" location="/WordDocuments/portfoliosites.htm"/>
+    </category>
+    <category name="About the CLE Screens">
+        <resource defaultForTool="" name="Overview" location="/WordDocuments/abouttheclescreens.htm"/>
+        <resource defaultForTool="" name="Logout Area" location="/WordDocuments/logoutarea.htm"/>
+        <resource defaultForTool="" name="Quicklinks and My Sites" location="/WordDocuments/quicklinksandmysites.htm"/>
+        <resource defaultForTool="" name="Site Name" location="/WordDocuments/sitename.htm"/>
+        <resource defaultForTool="" name="Tool Name" location="/WordDocuments/toolname.htm"/>
+        <resource defaultForTool="" name="Reset Button ()" location="/WordDocuments/resetbutton.htm"/>
+        <resource defaultForTool="" name="Contextual Help Button ()"
+                  location="/WordDocuments/contextualhelpbutton.htm"/>
+        <resource defaultForTool="" name="Tools Menu" location="/WordDocuments/toolsmenu.htm"/>
+        <resource defaultForTool="" name="&quot;Users Present&quot; List"
+                  location="/WordDocuments/userspresentlist.htm"/>
+        <resource defaultForTool="" name="Body of the Screen" location="/WordDocuments/bodyofthescreen.htm"/>
+    </category>
+    <category name="Performing Common Tasks">
+        <resource defaultForTool="" name="Performing Common Tasks" location="/WordDocuments/performingcommontasks.htm"/>
+        <resource defaultForTool="" name="Logging In" location="/WordDocuments/loggingin.htm"/>
+        <resource defaultForTool="" name="Selecting a Site" location="/WordDocuments/selectingasite.htm"/>
+        <resource defaultForTool="" name="Viewing Your Site as a User in Another Role"
+                  location="/WordDocuments/viewingyoursiteasauserinanotherrole.htm"/>
+        <resource defaultForTool="" name="Selecting a Tool" location="/WordDocuments/selectingatool.htm"/>
+        <resource defaultForTool="" name="Returning to a Site or Tool Home Page"
+                  location="/WordDocuments/returningtoasiteortoolhomepage.htm"/>
+        <resource defaultForTool="" name="Help" location="/WordDocuments/help.htm"/>
+        <resource defaultForTool="" name="Using the Rich Text Editor"
+                  location="/WordDocuments/usingtherichtexteditor.htm"/>
+        <resource defaultForTool="" name="Selecting Multiple Items from a List Field"
+                  location="/WordDocuments/selectingmultipleitemsfromalistfield.htm"/>
+        <resource defaultForTool="" name="Working with Lists" location="/WordDocuments/workingwithlists.htm"/>
+        <resource defaultForTool="" name="Customizing a Site Home Page"
+                  location="/WordDocuments/customizingasitehomepage.htm"/>
+        <resource defaultForTool="" name="Specifying Email Notification Options"
+                  location="/WordDocuments/specifyingemailnotificationoptions.htm"/>
+        <resource defaultForTool="" name="Working with Attachments, Files, etc."
+                  location="/WordDocuments/workingwithattachmentsfilesetc.htm"/>
+        <resource defaultForTool="" name="Adding an Attachment" location="/WordDocuments/addinganattachment.htm"/>
+        <resource defaultForTool="" name="Exporting a File from an ePortfolio Tool"
+                  location="/WordDocuments/exportingafilefromaneportfoliotool.htm"/>
+        <resource defaultForTool="" name="Displaying Copyright Alerts"
+                  location="/WordDocuments/displayingcopyrightalerts.htm"/>
+        <resource defaultForTool="" name="Search" location="/WordDocuments/search.htm"/>
+        <resource defaultForTool="" name="Accessing Publicly Available Materials from the Gateway"
+                  location="/WordDocuments/accessingpubliclyavailablematerialsfromthegateway.htm"/>
+    </category>
+    <category name="Account">
+        <resource defaultForTool="sakai.singleuser" name="Overview" location="/WordDocuments/account.htm"/>
+        <resource defaultForTool="" name="Changing Your Password and Account Details"
+                  location="/WordDocuments/changingyourpasswordandaccountdetails.htm"/>
+    </category>
+    <category name="Announcements">
+        <resource defaultForTool="sakai.announcements" name="Overview" location="/WordDocuments/announcements.htm"/>
+        <resource defaultForTool="" name="Accessing the Announcements Tool"
+                  location="/WordDocuments/accessingtheannouncementstool.htm"/>
+        <resource defaultForTool="" name="Creating an Announcement"
+                  location="/WordDocuments/creatinganannouncement.htm"/>
+        <resource defaultForTool="" name="Editing an Announcement" location="/WordDocuments/editinganannouncement.htm"/>
+        <resource defaultForTool="" name="Deleting an Announcement"
+                  location="/WordDocuments/deletinganannouncement.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Announcements Tool"
+                  location="/WordDocuments/changingpermissionsforusingtheannouncementstool.htm"/>
+        <resource defaultForTool="" name="Merging/Unmerging Announcements"
+                  location="/WordDocuments/mergingunmergingannouncements.htm"/>
+        <resource defaultForTool="" name="Setting Announcements Options"
+                  location="/WordDocuments/settingannouncementsoptions.htm"/>
+    </category>
+    <category name="Assignments">
+    <resource defaultForTool="sakai.assignment" name="Overview" location="/WordDocuments/assignments.htm"/>
+    <resource defaultForTool="" name="Assignments Tool Workflow" location="/WordDocuments/assignmentstoolworkflow.htm"/>
+    <resource defaultForTool="" name="Accessing the Assignments Home Page" location="/WordDocuments/accessingtheassignmentshomepage.htm"/>
+        <resource defaultForTool="" name="Instructor Activities" location="/WordDocuments/instructoractivities.htm"/>
+        <resource defaultForTool="" name="Student Activities" location="/WordDocuments/studentactivities.htm"/>
+    </category>
+    <category name="Blogs">
+        <resource defaultForTool="sakai.blogwow" name="Overview" location="/WordDocuments/blogs.htm"/>
+        <resource defaultForTool="" name="Accessing the Blogs Tool"
+                  location="/WordDocuments/accessingtheblogstool.htm"/>
+        <resource defaultForTool="" name="Viewing Blogs of Other Users"
+                  location="/WordDocuments/viewingblogsofotherusers.htm"/>
+        <resource defaultForTool="" name="Leaving Comments for Blog Entries"
+                  location="/WordDocuments/leavingcommentsforblogentries.htm"/>
+        <resource defaultForTool="" name="Adding an RSS feed for a Blog"
+                  location="/WordDocuments/addinganrssfeedforablog.htm"/>
+        <resource defaultForTool="" name="Viewing and Managing Your Blog Entries"
+                  location="/WordDocuments/viewingandmanagingyourblogentries.htm"/>
+        <resource defaultForTool="" name="Adding a Blog Entry" location="/WordDocuments/addingablogentry.htm"/>
+        <resource defaultForTool="" name="Editing a Blog Entry" location="/WordDocuments/editingablogentry.htm"/>
+        <resource defaultForTool="" name="Removing a Blog Entry" location="/WordDocuments/removingablogentry.htm"/>
+        <resource defaultForTool="" name="Creating or Editing your Blog Profile"
+                  location="/WordDocuments/creatingoreditingyourblogprofile.htm"/>
+        <resource defaultForTool="" name="Setting User Permissions"
+                  location="/WordDocuments/settinguserpermissions.htm"/>
+    </category>
+    <category name="Calendar">
+        <resource defaultForTool="sakai.schedule" name="Overview" location="/WordDocuments/calendar.htm"/>
+        <resource defaultForTool="" name="Viewing Calendars" location="/WordDocuments/viewingcalendars.htm"/>
+        <resource defaultForTool="" name="Subscribing to External Calendars"
+                  location="/WordDocuments/subscribingtoexternalcalendars.htm"/>
+        <resource defaultForTool="" name="Managing Events" location="/WordDocuments/managingevents.htm"/>
+        <resource defaultForTool="" name="Merging and Unmerging Calendars"
+                  location="/WordDocuments/mergingandunmergingcalendars.htm"/>
+        <resource defaultForTool="" name="Importing Calendar Events"
+                  location="/WordDocuments/importingcalendarevents.htm"/>
+        <resource defaultForTool="" name="Adding and Removing Calendar Fields"
+                  location="/WordDocuments/addingandremovingcalendarfields.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Calendar Tool"
+                  location="/WordDocuments/changingpermissionsforusingthecalendartool.htm"/>
+    </category>
+    <category name="Certification">
+        <resource defaultForTool="com.rsmart.certification" name="Overview" location="/WordDocuments/certification.htm"/>
+        <resource defaultForTool="" name="Accessing the Certification Tool"
+                  location="/WordDocuments/accessingthecertificationtool.htm"/>
+        <resource defaultForTool="" name="Adding a Certificate" location="/WordDocuments/addingacertificate.htm"/>
+        <resource defaultForTool="" name="Editing a Certificate" location="/WordDocuments/editingacertificate.htm"/>
+        <resource defaultForTool="" name="Deleting a Certificate" location="/WordDocuments/deletingacertificate.htm"/>
+        <resource defaultForTool="" name="For Students: Printing a Certificate"
+                  location="/WordDocuments/forstudentsprintingacertificate.htm"/>
+    </category>
+    <category name="Chat Room">
+        <resource defaultForTool="sakai.chat" name="Overview" location="/WordDocuments/chatroom.htm"/>
+        <resource defaultForTool="" name="Accessing Chat" location="/WordDocuments/accessingchat.htm"/>
+        <resource defaultForTool="" name="Viewing Another Chat Room"
+                  location="/WordDocuments/viewinganotherchatroom.htm"/>
+        <resource defaultForTool="" name="Changing Your Default Chat Room"
+                  location="/WordDocuments/changingyourdefaultchatroom.htm"/>
+        <resource defaultForTool="" name="Posting Chat Messages" location="/WordDocuments/postingchatmessages.htm"/>
+        <resource defaultForTool="" name="Deleting Chat Room Messages"
+                  location="/WordDocuments/deletingchatroommessages.htm"/>
+        <resource defaultForTool="" name="Clearing History for a Chat Room"
+                  location="/WordDocuments/clearinghistoryforachatroom.htm"/>
+        <resource defaultForTool="" name="Adding a Chat Room" location="/WordDocuments/addingachatroom.htm"/>
+        <resource defaultForTool="" name="Editing Information about a Chat Room"
+                  location="/WordDocuments/editinginformationaboutachatroom.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Chat Room Tool"
+                  location="/WordDocuments/changingpermissionsforusingthechatroomtool.htm"/>
+        <resource defaultForTool="" name="Hiding Chat Messages" location="/WordDocuments/hidingchatmessages.htm"/>
+        <resource defaultForTool="" name="Creating Chat Archives in Resources"
+                  location="/WordDocuments/creatingchatarchivesinresources.htm"/>
+    </category>
+    <category name="Discussion Forums">
+    <resource defaultForTool="sakai.jforum.tool" name="Overview" location="/WordDocuments/discussionforums.htm"/>
+    <resource defaultForTool="" name="Accessing the Discussion Forums Tool" location="/WordDocuments/accessingthediscussionforumstool.htm"/>
+        <resource defaultForTool="" name="Reading Messages" location="/WordDocuments/readingmessages.htm"/>
+        <resource defaultForTool="" name="Watching a Topic" location="/WordDocuments/watchingatopic.htm"/>
+        <resource defaultForTool="" name="Bookmarking a Topic" location="/WordDocuments/bookmarkingatopic.htm"/>
+        <resource defaultForTool="" name="Searching for a Topic" location="/WordDocuments/searchingforatopic.htm"/>
+        <resource defaultForTool="" name="Posting Messages" location="/WordDocuments/postingmessages.htm"/>
+        <resource defaultForTool="" name="Editing and Deleting Messages"
+                  location="/WordDocuments/editinganddeletingmessages.htm"/>
+        <resource defaultForTool="" name="Starting a New Topic" location="/WordDocuments/startinganewtopic.htm"/>
+        <resource defaultForTool="" name="Grading by Category, Forum, or Topic"
+                  location="/WordDocuments/gradingbycategoryforumortopic.htm"/>
+        <resource defaultForTool="" name="Viewing Your Grades" location="/WordDocuments/viewingyourgrades.htm"/>
+        <resource defaultForTool="" name="Managing Topics" location="/WordDocuments/managingtopics.htm"/>
+        <resource defaultForTool="" name="Managing Categories" location="/WordDocuments/managingcategories.htm"/>
+        <resource defaultForTool="" name="Managing Forums" location="/WordDocuments/managingforums.htm"/>
+        <resource defaultForTool="" name="Creating and Working with User Profiles"
+                  location="/WordDocuments/creatingandworkingwithuserprofiles.htm"/>
+        <resource defaultForTool="" name="Sending and Receiving Private Messages"
+                  location="/WordDocuments/sendingandreceivingprivatemessages.htm"/>
+    </category>
+    <category name="Drop Box">
+        <resource defaultForTool="sakai.dropbox" name="Overview" location="/WordDocuments/dropbox.htm"/>
+    </category>
+    <category name="Email Archive">
+        <resource defaultForTool="sakai.mailbox" name="Overview" location="/WordDocuments/emailarchive.htm"/>
+        <resource defaultForTool="" name="Sending Mail to All Site Participants"
+                  location="/WordDocuments/sendingmailtoallsiteparticipants.htm"/>
+        <resource defaultForTool="" name="Reading Messages in the Email Archive"
+                  location="/WordDocuments/readingmessagesintheemailarchive.htm"/>
+        <resource defaultForTool="" name="Customizing Email Archive"
+                  location="/WordDocuments/customizingemailarchive.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Email Archive Tool"
+                  location="/WordDocuments/changingpermissionsforusingtheemailarchivetool.htm"/>
+    </category>
+    <category name="Evaluation System">
+        <resource defaultForTool="sakai.rsf.evaluation" name="Overview" location="/WordDocuments/evaluationsystem.htm"/>
+        <resource defaultForTool="" name="Accessing the Evaluation System"
+                  location="/WordDocuments/accessingtheevaluationsystem.htm"/>
+        <resource defaultForTool="" name="Working with Evaluation Questions and Headers"
+                  location="/WordDocuments/workingwithevaluationquestionsandheaders.htm"/>
+        <resource defaultForTool="" name="Working with Templates" location="/WordDocuments/workingwithtemplates.htm"/>
+        <resource defaultForTool="" name="Creating Evaluations" location="/WordDocuments/creatingevaluations.htm"/>
+        <resource defaultForTool="" name="Previewing Evaluations" location="/WordDocuments/previewingevaluations.htm"/>
+        <resource defaultForTool="" name="Changing Evaluations" location="/WordDocuments/changingevaluations.htm"/>
+        <resource defaultForTool="" name="Removing Evaluations" location="/WordDocuments/removingevaluations.htm"/>
+        <resource defaultForTool="" name="Closing and Reopening Evaluations"
+                  location="/WordDocuments/closingandreopeningevaluations.htm"/>
+        <resource defaultForTool="" name="Viewing and Working with Evaluation Results"
+                  location="/WordDocuments/viewingandworkingwithevaluationresults.htm"/>
+        <resource defaultForTool="" name="For Evaluators: Taking an Evaluation"
+                  location="/WordDocuments/forevaluatorstakinganevaluation.htm"/>
+    </category>
+    <category name="Evaluations">
+        <resource defaultForTool="osp.evaluation" name="Overview" location="/WordDocuments/evaluations.htm"/>
+        <resource defaultForTool="" name="Accessing the Evaluations Tool"
+                  location="/WordDocuments/accessingtheevaluationstool.htm"/>
+        <resource defaultForTool="" name="Evaluating Submitted Work"
+                  location="/WordDocuments/evaluatingsubmittedwork.htm"/>
+        <resource defaultForTool="" name="Editing Evaluations" location="/WordDocuments/editingevaluations.htm"/>
+        <resource defaultForTool="" name="Deleting Evaluations" location="/WordDocuments/deletingevaluations.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Evaluations Tool"
+                  location="/WordDocuments/changingpermissionsforusingtheevaluationstool.htm"/>
+    </category>
+    <category name="Feedback">
+        <resource defaultForTool="sakai.postem" name="Overview" location="/WordDocuments/feedback.htm"/>
+        <resource defaultForTool="" name="Feedback Home Page" location="/WordDocuments/feedbackhomepage.htm"/>
+        <resource defaultForTool="" name="Viewing Feedback (as a Student)"
+                  location="/WordDocuments/viewingfeedbackasastudent.htm"/>
+        <resource defaultForTool="" name="Creating and Adding a Feedback File"
+                  location="/WordDocuments/creatingandaddingafeedbackfile.htm"/>
+        <resource defaultForTool="" name="Viewing Feedback (as an Instructor)"
+                  location="/WordDocuments/viewingfeedbackasaninstructor.htm"/>
+        <resource defaultForTool="" name="Updating a Feedback File"
+                  location="/WordDocuments/updatingafeedbackfile.htm"/>
+        <resource defaultForTool="" name="Deleting a Feedback File"
+                  location="/WordDocuments/deletingafeedbackfile.htm"/>
+        <resource defaultForTool="" name="Downloading a Feedback File"
+                  location="/WordDocuments/downloadingafeedbackfile.htm"/>
+    </category>
+    <category name="Forms">
+        <resource defaultForTool="sakai.metaobj" name="Overview"
+                  location="/WordDocuments/forms.htm"/>
+        <resource defaultForTool="" name="An Introduction to Forms"
+                  location="/WordDocuments/anintroductiontoforms.htm"/>
+        <resource defaultForTool="" name="The Forms Tool and the Resources Tool"
+                  location="/WordDocuments/theformstoolandtheresourcestool.htm"/>
+        <resource defaultForTool="" name="Accessing the Forms Tool"
+                  location="/WordDocuments/accessingtheformstool.htm"/>
+        <resource defaultForTool="" name="Adding a Form" location="/WordDocuments/addingaform.htm"/>
+        <resource defaultForTool="" name="Viewing a Form" location="/WordDocuments/viewingaform.htm"/>
+        <resource defaultForTool="" name="Changing Details about a Form"
+                  location="/WordDocuments/changingdetailsaboutaform.htm"/>
+        <resource defaultForTool="" name="Publishing a Form" location="/WordDocuments/publishingaform.htm"/>
+        <resource defaultForTool="" name="Requesting that a Form Be Published Globally"
+                  location="/WordDocuments/requestingthataformbepublishedglobally.htm"/>
+        <resource defaultForTool="" name="Publishing a Form Globally"
+                  location="/WordDocuments/publishingaformglobally.htm"/>
+        <resource defaultForTool="" name="Exporting and Importing a Form"
+                  location="/WordDocuments/exportingandimportingaform.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Forms Tool"
+                  location="/WordDocuments/changingpermissionsforusingtheformstool.htm"/>
+    </category>
+    <category name="Forums">
+        <resource defaultForTool="sakai.messagecenter" name="Overview" location="/WordDocuments/forums.htm"/>
+        <resource defaultForTool="" name="Accessing the Forums Tool"
+                  location="/WordDocuments/accessingtheforumstool.htm"/>
+        <resource defaultForTool="" name="Setting up and Maintaining Discussion Forums"
+                  location="/WordDocuments/settingupandmaintainingdiscussionforums.htm"/>
+        <resource defaultForTool="" name="Participating in a Discussion"
+                  location="/WordDocuments/participatinginadiscussion.htm"/>
+    </category>
+    <category name="Glossary">
+        <resource defaultForTool="osp.glossary" name="Overview" location="/WordDocuments/glossary.htm"/>
+        <resource defaultForTool="" name="Accessing the Glossary Tool" location="/WordDocuments/accessingtheglossarytool.htm"/>
+        <resource defaultForTool="" name="Adding a Glossary Term" location="/WordDocuments/addingaglossaryterm.htm"/>
+        <resource defaultForTool="" name="Changing a Glossary Term"
+                  location="/WordDocuments/changingaglossaryterm.htm"/>
+        <resource defaultForTool="" name="Deleting a Glossary Term"
+                  location="/WordDocuments/deletingaglossaryterm.htm"/>
+        <resource defaultForTool="" name="Publishing a Glossary Term Globally"
+                  location="/WordDocuments/publishingaglossarytermglobally.htm"/>
+        <resource defaultForTool="" name="Exporting and Importing a Glossary"
+                  location="/WordDocuments/exportingandimportingaglossary.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Glossary Tool"
+                  location="/WordDocuments/changingpermissionsforusingtheglossarytool.htm"/>
+    </category>
+    <category name="Gradebook">
+        <resource defaultForTool="sakai.gradebook" name="Overview" location="/WordDocuments/gradebook.htm"/>
+        <resource defaultForTool="" name="Home Page" location="/WordDocuments/homepage.htm"/>
+        <resource defaultForTool="" name="Viewing Grades" location="/WordDocuments/viewinggrades.htm"/>
+        <resource defaultForTool="" name="Creating a Gradebook Item"
+                  location="/WordDocuments/creatingagradebookitem.htm"/>
+        <resource defaultForTool="" name="Changing a Gradebook Item"
+                  location="/WordDocuments/changingagradebookitem.htm"/>
+        <resource defaultForTool="" name="Deleting a Gradebook Item"
+                  location="/WordDocuments/deletingagradebookitem.htm"/>
+        <resource defaultForTool="" name="Entering and Editing Grades"
+                  location="/WordDocuments/enteringandeditinggrades.htm"/>
+        <resource defaultForTool="" name="Importing Grades" location="/WordDocuments/importinggrades.htm"/>
+        <resource defaultForTool="" name="Exporting Grades to Date"
+                  location="/WordDocuments/exportinggradestodate.htm"/>
+        <resource defaultForTool="" name="Calculating and Exporting Course Grades"
+                  location="/WordDocuments/calculatingandexportingcoursegrades.htm"/>
+        <resource defaultForTool="" name="Overriding an Auto-calculated Course Grade"
+                  location="/WordDocuments/overridinganautocalculatedcoursegrade.htm"/>
+        <resource defaultForTool="" name="Reverting Back to Auto-calculated Grades"
+                  location="/WordDocuments/revertingbacktoautocalculatedgrades.htm"/>
+        <resource defaultForTool="" name="Setting up Your Gradebook"
+                  location="/WordDocuments/settingupyourgradebook.htm"/>
+        <resource defaultForTool="" name="Setting Grade Display and Conversion Options"
+                  location="/WordDocuments/settinggradedisplayandconversionoptions.htm"/>
+        <resource defaultForTool="" name="Assigning Special Grading Permissions to Teaching Assistants"
+                  location="/WordDocuments/assigningspecialgradingpermissionstoteachingassistants.htm"/>
+        <resource defaultForTool="" name="For Students: Viewing the Gradebook"
+                  location="/WordDocuments/forstudentsviewingthegradebook.htm"/>
+    </category>
+    <category name="Gradebook2">
+        <resource defaultForTool="sakai.gradebook.gwt.rpc" name="Overview" location="/WordDocuments/gradebook2.htm"/>
+        <resource defaultForTool="" name="Navigating the Gradebook2 User Interface"
+                  location="/WordDocuments/navigatingthegradebook2userinterface.htm"/>
+        <resource defaultForTool="" name="Working with the Gradebook Tab"
+                  location="/WordDocuments/workingwiththegradebooktab.htm"/>
+        <resource defaultForTool="" name="Working with the Spreadsheet Frame"
+                  location="/WordDocuments/workingwiththespreadsheetframe.htm"/>
+        <resource defaultForTool="" name="Creating a Gradebook" location="/WordDocuments/creatingagradebook.htm"/>
+        <resource defaultForTool="" name="Setting up the Gradebook"
+                  location="/WordDocuments/settingupthegradebook.htm"/>
+        <resource defaultForTool="" name="Adding Gradebook Categories"
+                  location="/WordDocuments/addinggradebookcategories.htm"/>
+        <resource defaultForTool="" name="Changing a Category" location="/WordDocuments/changingacategory1.htm"/>
+        <resource defaultForTool="" name="Deleting a Category" location="/WordDocuments/deletingacategory.htm"/>
+        <resource defaultForTool="" name="Adding Gradebook Items" location="/WordDocuments/addinggradebookitems.htm"/>
+        <resource defaultForTool="" name="Changing Gradebook Items"
+                  location="/WordDocuments/changinggradebookitems.htm"/>
+        <resource defaultForTool="" name="Deleting Gradebook Items"
+                  location="/WordDocuments/deletinggradebookitems.htm"/>
+        <resource defaultForTool="" name="Working with Items Created in Other Tools"
+                  location="/WordDocuments/workingwithitemscreatedinothertools.htm"/>
+        <resource defaultForTool="" name="Entering Grades and Comments"
+                  location="/WordDocuments/enteringgradesandcomments.htm"/>
+        <resource defaultForTool="" name="Editing Grades and Comments"
+                  location="/WordDocuments/editinggradesandcomments.htm"/>
+        <resource defaultForTool="" name="Viewing Grades" location="/WordDocuments/viewinggrades1.htm"/>
+        <resource defaultForTool="" name="Overriding Auto-calculated Course Grades"
+                  location="/WordDocuments/overridingautocalculatedcoursegrades.htm"/>
+        <resource defaultForTool="" name="Reverting Back to Auto-calculated Course Grades"
+                  location="/WordDocuments/revertingbacktoautocalculatedcoursegrades.htm"/>
+        <resource defaultForTool="" name="Viewing Gradebook History"
+                  location="/WordDocuments/viewinggradebookhistory.htm"/>
+        <resource defaultForTool="" name="Viewing Gradebook Statistics"
+                  location="/WordDocuments/viewinggradebookstatistics.htm"/>
+        <resource defaultForTool="" name="Setting Grader Permissions"
+                  location="/WordDocuments/settinggraderpermissions.htm"/>
+        <resource defaultForTool="" name="Changing Course Grade Format and Scale"
+                  location="/WordDocuments/changingcoursegradeformatandscale.htm"/>
+        <resource defaultForTool="" name="Importing Grades in Gradebook2"
+                  location="/WordDocuments/importinggradesingradebook2.htm"/>
+        <resource defaultForTool="" name="Exporting Grades" location="/WordDocuments/exportinggrades.htm"/>
+        <resource defaultForTool="" name="For Students: Viewing Grades"
+                  location="/WordDocuments/forstudentsviewinggrades.htm"/>
+    </category>
+
+    <category name="Lessons">
+        <resource defaultForTool="sakai.melete" name="Overview" location="/WordDocuments/lessons.htm"/>
+        <resource defaultForTool="" name="Accessing the Lessons Tool"
+                  location="/WordDocuments/accessingthelessonstool.htm"/>
+        <resource defaultForTool="" name="Adding a Module" location="/WordDocuments/addingamodule.htm"/>
+        <resource defaultForTool="" name="Editing a Module" location="/WordDocuments/editingamodule.htm"/>
+        <resource defaultForTool="" name="Adding and Changing the Next Step in a Module"
+                  location="/WordDocuments/addingandchangingthenextstepinamodule.htm"/>
+        <resource defaultForTool="" name="Duplicating a Module" location="/WordDocuments/duplicatingamodule.htm"/>
+        <resource defaultForTool="" name="Printing Lessons" location="/WordDocuments/printinglessons.htm"/>
+        <resource defaultForTool="" name="Deleting a Module or Section"
+                  location="/WordDocuments/deletingamoduleorsection.htm"/>
+        <resource defaultForTool="" name="Managing Your Lessons" location="/WordDocuments/managingyourlessons.htm"/>
+        <resource defaultForTool="" name="Setting Preferences" location="/WordDocuments/settingpreferences.htm"/>
+        <resource defaultForTool="" name="For Students: Working with Lessons"
+                  location="/WordDocuments/forstudentsworkingwithlessons.htm"/>
+    </category>
+    <category name="Linked Accounts">
+        <resource defaultForTool="" name="Overview" location="/WordDocuments/linkedaccounts.htm"/>
+        <resource defaultForTool="" name="Removing CLE Access to a Google Account"
+                  location="/WordDocuments/removingcleaccesstoagoogleaccount.htm"/>
+    </category>
+    <category name="Live Virtual Classroom">
+        <resource defaultForTool="rsmart.virtual_classroom.tool" name="Overview" location="/WordDocuments/livevirtualclassroom.htm"/>
+        <resource defaultForTool="" name="Accessing the Live Virtual Classroom"
+                  location="/WordDocuments/accessingthelivevirtualclassroom.htm"/>
+        <resource defaultForTool="" name="Adding a Virtual Classroom Session"
+                  location="/WordDocuments/addingavirtualclassroomsession.htm"/>
+        <resource defaultForTool="" name="Editing a Virtual Classroom Session"
+                  location="/WordDocuments/editingavirtualclassroomsession.htm"/>
+        <resource defaultForTool="" name="Deleting a Virtual Classroom Session"
+                  location="/WordDocuments/deletingavirtualclassroomsession.htm"/>
+        <resource defaultForTool="" name="Joining a Virtual Classroom Session"
+                  location="/WordDocuments/joiningavirtualclassroomsession.htm"/>
+        <resource defaultForTool="" name="Viewing a Recorded Session"
+                  location="/WordDocuments/viewingarecordedsession.htm"/>
+    </category>
+    <category name="Mailtool">
+    <resource defaultForTool="sakai.mailsender" name="Overview" location="/WordDocuments/mailtool.htm"/>
+        <resource defaultForTool="" name="Accessing the Mailtool" location="/WordDocuments/accessingthemailtool.htm"/>
+        <resource defaultForTool="" name="Sending an Email" location="/WordDocuments/sendinganemail.htm"/>
+        <resource defaultForTool="" name="Changing Your Default Settings"
+                  location="/WordDocuments/changingyourdefaultsettings.htm"/>
+        <resource defaultForTool="" name="Setting Mailtool Permissions"
+                  location="/WordDocuments/settingmailtoolpermissions.htm"/>
+    </category>
+    <category name="Matrices">
+        <resource defaultForTool="osp.matrix" name="Overview" location="/WordDocuments/matrices.htm"/>
+        <resource defaultForTool="" name="An Introduction to Matrices" location="/WordDocuments/anintroductiontomatrices.htm"/>
+        <resource defaultForTool="" name="Designing a Matrix" location="/WordDocuments/designingamatrix.htm"/>
+        <resource defaultForTool="" name="Accessing the Matrices Tool"
+                  location="/WordDocuments/accessingthematricestool.htm"/>
+        <resource defaultForTool="" name="Creating a Matrix" location="/WordDocuments/creatingamatrix.htm"/>
+        <resource defaultForTool="" name="Exporting and Importing a Matrix"
+                  location="/WordDocuments/exportingandimportingamatrix.htm"/>
+        <resource defaultForTool="" name="Changing a Matrix" location="/WordDocuments/changingamatrix.htm"/>
+        <resource defaultForTool="" name="Providing Formative Feedback on a Matrix"
+                  location="/WordDocuments/providingformativefeedbackonamatrix.htm"/>
+        <resource defaultForTool="" name="Editing and Deleting Feedback in Matrices"
+                  location="/WordDocuments/editinganddeletingfeedbackinmatrices.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Matrices Tool"
+                  location="/WordDocuments/changingpermissionsforusingthematricestool.htm"/>
+        <resource defaultForTool="" name="Setting Notification Preferences for the Matrices Tool"
+                  location="/WordDocuments/settingnotificationpreferencesforthematricestool.htm"/>
+        <resource defaultForTool="" name="Using the Matrices Tool for Site Association"
+                  location="/WordDocuments/usingthematricestoolforsiteassociation.htm"/>
+        <resource defaultForTool="" name="For Site Participants: Completing a Matrix"
+                  location="/WordDocuments/forsiteparticipantscompletingamatrix.htm"/>
+    </category>
+    <category name="Membership">
+        <resource defaultForTool="sakai.membership" name="Overview" location="/WordDocuments/membership.htm"/>
+        <resource defaultForTool="" name="Joining and Unjoining Public Sites" location="/WordDocuments/joiningandunjoiningpublicsites.htm"/>
+    </category>
+    <category name="Messages">
+        <resource defaultForTool="sakai.messages" name="Overview" location="/WordDocuments/messages.htm"/>
+        <resource defaultForTool="" name="Accessing the Messages Tool" location="/WordDocuments/accessingthemessagestool.htm"/>
+        <resource defaultForTool="" name="Sending a Message" location="/WordDocuments/sendingamessage.htm"/>
+        <resource defaultForTool="" name="Restricting/Allowing Sending to Email Addresses"
+                  location="/WordDocuments/restrictingallowingsendingtoemailaddresses.htm"/>
+        <resource defaultForTool="" name="Turning Auto Forwarding On and Off"
+                  location="/WordDocuments/turningautoforwardingonandoff.htm"/>
+        <resource defaultForTool="" name="Reading Messages" location="/WordDocuments/readingmessages2.htm"/>
+        <resource defaultForTool="" name="Using Advanced Search" location="/WordDocuments/usingadvancedsearch.htm"/>
+        <resource defaultForTool="" name="Replying to a Message" location="/WordDocuments/replyingtoamessage.htm"/>
+        <resource defaultForTool="" name="Forwarding a Message" location="/WordDocuments/forwardingamessage.htm"/>
+        <resource defaultForTool="" name="Moving a Message to another Folder"
+                  location="/WordDocuments/movingamessagetoanotherfolder.htm"/>
+        <resource defaultForTool="" name="Moving Multiple Messages To/From a Folder"
+                  location="/WordDocuments/movingmultiplemessagestofromafolder.htm"/>
+        <resource defaultForTool="" name="Deleting Messages" location="/WordDocuments/deletingmessages.htm"/>
+        <resource defaultForTool="" name="Working with Folders" location="/WordDocuments/workingwithfolders.htm"/>
+    </category>
+    <category name="News">
+        <resource defaultForTool="sakai.news" name="Overview" location="/WordDocuments/news.htm"/>
+        <resource defaultForTool="" name="Viewing News" location="/WordDocuments/viewingnews.htm"/>
+        <resource defaultForTool="" name="Changing a News Link" location="/WordDocuments/changinganewslink.htm"/>
+    </category>
+
+    <category name="Podcasts">
+    <resource defaultForTool="sakai.podcasts" name="Overview" location="/WordDocuments/podcasts.htm"/>
+    <resource defaultForTool="" name="Accessing the Podcasts Home Page" location="/WordDocuments/accessingthepodcastshomepage.htm"/>
+        <resource defaultForTool="" name="Adding a Podcast" location="/WordDocuments/addingapodcast.htm"/>
+        <resource defaultForTool="" name="Editing a Podcast" location="/WordDocuments/editingapodcast.htm"/>
+        <resource defaultForTool="" name="Deleting a Podcast" location="/WordDocuments/deletingapodcast.htm"/>
+        <resource defaultForTool="" name="Changing Access to Your Podcasts"
+                  location="/WordDocuments/changingaccesstoyourpodcasts.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Podcasts"
+                  location="/WordDocuments/changingpermissionsforpodcasts.htm"/>
+        <resource defaultForTool="" name="Information for Site Participants"
+                  location="/WordDocuments/informationforsiteparticipants.htm"/>
+    </category>
+    <category name="Polls">
+    <resource defaultForTool="sakai.poll" name="Overview" location="/WordDocuments/polls.htm"/>
+    <resource defaultForTool="" name="Accessing the Polls Tool" location="/WordDocuments/accessingthepollstool.htm"/>
+        <resource defaultForTool="" name="Adding a Poll" location="/WordDocuments/addingapoll.htm"/>
+        <resource defaultForTool="" name="Editing a Poll" location="/WordDocuments/editingapoll.htm"/>
+        <resource defaultForTool="" name="Deleting a Poll" location="/WordDocuments/deletingapoll.htm"/>
+        <resource defaultForTool="" name="Displaying Poll Results" location="/WordDocuments/displayingpollresults.htm"/>
+        <resource defaultForTool="" name="Voting" location="/WordDocuments/voting.htm"/>
+        <resource defaultForTool="" name="Assigning Permissions for the Polls Tool"
+                  location="/WordDocuments/assigningpermissionsforthepollstool.htm"/>
+    </category>
+    <category name="Portfolio Layouts">
+        <resource defaultForTool="osp.presLayout" name="Overview" location="/WordDocuments/portfoliolayouts.htm"/>
+        <resource defaultForTool="" name="Accessing the Portfolio Layouts Tool" location="/WordDocuments/accessingtheportfoliolayoutstool.htm"/>
+        <resource defaultForTool="" name="Adding a Layout" location="/WordDocuments/addingalayout.htm"/>
+        <resource defaultForTool="" name="Changing a Layout" location="/WordDocuments/changingalayout.htm"/>
+        <resource defaultForTool="" name="Deleting a Layout" location="/WordDocuments/deletingalayout.htm"/>
+        <resource defaultForTool="" name="Requesting that a Layout Be Published Globally"
+                  location="/WordDocuments/requestingthatalayoutbepublishedglobally.htm"/>
+        <resource defaultForTool="" name="Publishing a Layout Globally"
+                  location="/WordDocuments/publishingalayoutglobally.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Portfolio Layouts Tool"
+                  location="/WordDocuments/changingpermissionsforusingtheportfoliolayoutstool.htm"/>
+    </category>
+    <category name="Portfolio Templates">
+        <resource defaultForTool="osp.presTemplate" name="Overview"
+                  location="/WordDocuments/portfoliotemplates.htm"/>
+        <resource defaultForTool="" name="An Introduction to Portfolio Templates"
+                  location="/WordDocuments/anintroductiontoportfoliotemplates.htm"/>
+        <resource defaultForTool="" name="The Portfolio Templates Tool and the Resources Tool"
+                  location="/WordDocuments/theportfoliotemplatestoolandtheresourcestool.htm"/>
+        <resource defaultForTool="" name="Accessing the Portfolio Templates Tool"
+                  location="/WordDocuments/accessingtheportfoliotemplatestool.htm"/>
+        <resource defaultForTool="" name="Preparing to Create a Template"
+                  location="/WordDocuments/preparingtocreateatemplate.htm"/>
+        <resource defaultForTool="" name="Creating a Template" location="/WordDocuments/creatingatemplate.htm"/>
+        <resource defaultForTool="" name="Publishing a Template" location="/WordDocuments/publishingatemplate.htm"/>
+        <resource defaultForTool="" name="Changing a Template" location="/WordDocuments/changingatemplate.htm"/>
+        <resource defaultForTool="" name="Copying a Template" location="/WordDocuments/copyingatemplate.htm"/>
+        <resource defaultForTool="" name="Exporting and Importing a Template"
+                  location="/WordDocuments/exportingandimportingatemplate.htm"/>
+        <resource defaultForTool="" name="Deleting a Template" location="/WordDocuments/deletingatemplate.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Portfolio Templates Tool"
+                  location="/WordDocuments/changingpermissionsforusingtheportfoliotemplatestool.htm"/>
+    </category>
+    <category name="Portfolios">
+        <resource defaultForTool="osp.presentation" name="Overview" location="/WordDocuments/portfolios.htm"/>
+        <resource defaultForTool="" name="Planning a Portfolio" location="/WordDocuments/planningaportfolio.htm"/>
+        <resource defaultForTool="" name="Accessing the Portfolios Tool"
+                  location="/WordDocuments/accessingtheportfoliostool.htm"/>
+        <resource defaultForTool="" name="Creating a Portfolio" location="/WordDocuments/creatingaportfolio.htm"/>
+        <resource defaultForTool="" name="Changing a Portfolio" location="/WordDocuments/changingaportfolio.htm"/>
+        <resource defaultForTool="" name="Sharing Your Portfolio" location="/WordDocuments/sharingyourportfolio.htm"/>
+        <resource defaultForTool="" name="Downloading (Exporting) a Portfolio"
+                  location="/WordDocuments/downloadingexportingaportfolio.htm"/>
+        <resource defaultForTool="" name="Hiding a Portfolio" location="/WordDocuments/hidingaportfolio.htm"/>
+        <resource defaultForTool="" name="Deleting a Portfolio" location="/WordDocuments/deletingaportfolio.htm"/>
+        <resource defaultForTool="" name="Viewing a Portfolio and Its Comments"
+                  location="/WordDocuments/viewingaportfolioanditscomments.htm"/>
+        <resource defaultForTool="" name="Leaving a Comment" location="/WordDocuments/leavingacomment.htm"/>
+        <resource defaultForTool="" name="Managing Comments on Your Portfolio"
+                  location="/WordDocuments/managingcommentsonyourportfolio.htm"/>
+        <resource defaultForTool="" name="Seeing Who Has Viewed Your Portfolio"
+                  location="/WordDocuments/seeingwhohasviewedyourportfolio.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Portfolios Tool"
+                  location="/WordDocuments/changingpermissionsforusingtheportfoliostool.htm"/>
+    </category>
+
+    <category name="Preferences">
+        <resource defaultForTool="sakai.preferences" name="Overview" location="/WordDocuments/preferences.htm"/>
+        <resource defaultForTool="" name="Customizing Site Links" location="/WordDocuments/customizingsitelinks.htm"/>
+        <resource defaultForTool="" name="Setting Notification Preferences"
+                  location="/WordDocuments/settingnotificationpreferences.htm"/>
+        <resource defaultForTool="" name="Setting Your Time Zone" location="/WordDocuments/settingyourtimezone.htm"/>
+        <resource defaultForTool="" name="Setting Your Language Preference"
+                  location="/WordDocuments/settingyourlanguagepreference.htm"/>
+        <resource defaultForTool="" name="Setting Your Privacy Status"
+                  location="/WordDocuments/settingyourprivacystatus.htm"/>
+    </category>
+    <category name="Profile">
+        <resource defaultForTool="sakai.profile" name="Overview" location="/WordDocuments/profile.htm"/>
+        <resource defaultForTool="" name="Editing Your Profile" location="/WordDocuments/editingyourprofile.htm"/>
+        <resource defaultForTool="" name="Working with Images" location="/WordDocuments/workingwithimages.htm"/>
+        <resource defaultForTool="" name="Searching Users and Requesting Connections"
+                  location="/WordDocuments/searchingusersandrequestingconnections.htm"/>
+        <resource defaultForTool="" name="Viewing and Managing Connections"
+                  location="/WordDocuments/viewingandmanagingconnections.htm"/>
+        <resource defaultForTool="" name="Working with Messages" location="/WordDocuments/workingwithmessages.htm"/>
+        <resource defaultForTool="" name="Setting Privacy Controls"
+                  location="/WordDocuments/settingprivacycontrols.htm"/>
+        <resource defaultForTool="" name="Setting Preferences in the Profile Tool"
+                  location="/WordDocuments/settingpreferencesintheprofiletool.htm"/>
+    </category>
+    <category name="Resources">
+        <resource defaultForTool="sakai.resources" name="Overview" location="/WordDocuments/resources.htm"/>
+        <resource defaultForTool="" name="Accessing the Resources Home Page"
+                  location="/WordDocuments/accessingtheresourceshomepage.htm"/>
+        <resource defaultForTool="" name="Viewing the List and Accessing Folder Content"
+                  location="/WordDocuments/viewingthelistandaccessingfoldercontent.htm"/>
+        <resource defaultForTool="" name="Accessing a Resource" location="/WordDocuments/accessingaresource.htm"/>
+        <resource defaultForTool="" name="Adding Resources" location="/WordDocuments/addingresources.htm"/>
+        <resource defaultForTool="" name="Changing the Content of Resources"
+                  location="/WordDocuments/changingthecontentofresources.htm"/>
+        <resource defaultForTool="" name="Changing Other Information for a Resource"
+                  location="/WordDocuments/changingotherinformationforaresource.htm"/>
+        <resource defaultForTool="" name="Deleting a Resource" location="/WordDocuments/deletingaresource.htm"/>
+        <resource defaultForTool="" name="Moving a Resource" location="/WordDocuments/movingaresource.htm"/>
+        <resource defaultForTool="" name="Copying a Resource" location="/WordDocuments/copyingaresource.htm"/>
+        <resource defaultForTool="" name="Duplicating a Resource" location="/WordDocuments/duplicatingaresource.htm"/>
+        <resource defaultForTool="" name="Reordering Resources" location="/WordDocuments/reorderingresources.htm"/>
+        <resource defaultForTool="" name="Changing Types of Resources Allowed"
+                  location="/WordDocuments/changingtypesofresourcesallowed.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Resources Tool"
+                  location="/WordDocuments/changingpermissionsforusingtheresourcestool.htm"/>
+        <resource defaultForTool="" name="Uploading/Downloading Multiple Resources"
+                  location="/WordDocuments/uploadingdownloadingmultipleresources.htm"/>
+    </category>
+    <category name="Roster">
+    <resource defaultForTool="sakai.site.roster" name="Overview" location="/WordDocuments/roster.htm"/>
+        <resource defaultForTool="" name="Viewing a Roster" location="/WordDocuments/viewingaroster.htm"/>
+        <resource defaultForTool="" name="Viewing Pictures in a Roster"
+                  location="/WordDocuments/viewingpicturesinaroster.htm"/>
+        <resource defaultForTool="" name="Printing a Roster" location="/WordDocuments/printingaroster.htm"/>
+        <resource defaultForTool="" name="Exporting a Roster" location="/WordDocuments/exportingaroster.htm"/>
+    </category>
+    <category name="Sections">
+    <resource defaultForTool="sakai.sections" name="Overview" location="/WordDocuments/sections.htm"/>
+        <resource defaultForTool="" name="Considerations" location="/WordDocuments/considerations.htm"/>
+        <resource defaultForTool="" name="Accessing the Sections Home Page"
+                  location="/WordDocuments/accessingthesectionshomepage.htm"/>
+        <resource defaultForTool="" name="Managing Sections" location="/WordDocuments/managingsections.htm"/>
+        <resource defaultForTool="" name="Adding Students to a Section"
+                  location="/WordDocuments/addingstudentstoasection.htm"/>
+        <resource defaultForTool="" name="Assigning a Teaching Assistant (TA)"
+                  location="/WordDocuments/assigningateachingassistantta.htm"/>
+        <resource defaultForTool="" name="Changing Section Assignments: Student Memberships"
+                  location="/WordDocuments/changingsectionassignmentsstudentmemberships.htm"/>
+        <resource defaultForTool="" name="Downloading and Printing Section Lists"
+                  location="/WordDocuments/downloadingandprintingsectionlists.htm"/>
+        <resource defaultForTool="" name="Changing Student Options"
+                  location="/WordDocuments/changingstudentoptions.htm"/>
+    </category>
+    <category name="Site Editor">
+        <resource defaultForTool="sakai.siteinfo" name="Overview" location="/WordDocuments/siteeditor.htm"/>
+        <resource defaultForTool="" name="Accessing the Site Editor Home Page"
+                  location="/WordDocuments/accessingthesiteeditorhomepage.htm"/>
+        <resource defaultForTool="" name="Editing Site Description and Other Information"
+                  location="/WordDocuments/editingsitedescriptionandotherinformation.htm"/>
+        <resource defaultForTool="" name="Selecting Tools for Your Site"
+                  location="/WordDocuments/selectingtoolsforyoursite.htm"/>
+        <resource defaultForTool="" name="Managing Groups" location="/WordDocuments/managinggroups.htm"/>
+        <resource defaultForTool="" name="Managing Access" location="/WordDocuments/managingaccess.htm"/>
+        <resource defaultForTool="" name="Managing Participants" location="/WordDocuments/managingparticipants.htm"/>
+        <resource defaultForTool="" name="Updating Class Rosters" location="/WordDocuments/updatingclassrosters.htm"/>
+        <resource defaultForTool="" name="Duplicating a Site" location="/WordDocuments/duplicatingasite.htm"/>
+        <resource defaultForTool="" name="Importing Material from another Site"
+                  location="/WordDocuments/importingmaterialfromanothersite.htm"/>
+        <resource defaultForTool="" name="Importing Users from another Site"
+                  location="/WordDocuments/importingusersfromanothersite.htm"/>
+    </category>
+    <category name="Site Setup">
+        <resource defaultForTool="sakai.sitesetup" name="Overview" location="/WordDocuments/sitesetup.htm"/>
+        <resource defaultForTool="" name="Creating a New Site" location="/WordDocuments/creatinganewsite.htm"/>
+        <resource defaultForTool="" name="Revising a Site" location="/WordDocuments/revisingasite.htm"/>
+        <resource defaultForTool="" name="Deleting a Site" location="/WordDocuments/deletingasite.htm"/>
+    </category>
+    <category name="Site Statistics">
+        <resource defaultForTool="sakai.sitestats" name="Overview" location="/WordDocuments/sitestatistics.htm"/>
+        <resource defaultForTool="" name="Accessing the Site Statistics Tool"
+                  location="/WordDocuments/accessingthesitestatisticstool.htm"/>
+        <resource defaultForTool="" name="Working with Visits, Activity, and Resources Summaries"
+                  location="/WordDocuments/workingwithvisitsactivityandresourcessummaries.htm"/>
+        <resource defaultForTool="" name="Generating and Working with Site Statistics Reports"
+                  location="/WordDocuments/generatingandworkingwithsitestatisticsreports.htm"/>
+        <resource defaultForTool="" name="Setting Your Preferences"
+                  location="/WordDocuments/settingyourpreferences.htm"/>    </category>
+    <category name="Styles">
+    <resource defaultForTool="osp.style" name="Overview" location="/WordDocuments/styles.htm"/>
+        <resource defaultForTool="" name="Adding a Style" location="/WordDocuments/addingastyle.htm"/>
+        <resource defaultForTool="" name="Changing a Style" location="/WordDocuments/changingastyle.htm"/>
+        <resource defaultForTool="" name="Deleting a Style" location="/WordDocuments/deletingastyle.htm"/>
+        <resource defaultForTool="" name="Suggesting Global Publication of a Style"
+                  location="/WordDocuments/suggestingglobalpublicationofastyle.htm"/>
+        <resource defaultForTool="" name="Publishing a Style Globally"
+                  location="/WordDocuments/publishingastyleglobally.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Styles Tool"
+                  location="/WordDocuments/changingpermissionsforusingthestylestool.htm"/>
+    </category>
+    <category name="Syllabus">
+    <resource defaultForTool="sakai.syllabus" name="Overview" location="/WordDocuments/syllabus.htm"/>
+        <resource defaultForTool="" name="General View" location="/WordDocuments/generalview.htm"/>
+        <resource defaultForTool="" name="Creating a Syllabus Item"
+                  location="/WordDocuments/creatingasyllabusitem.htm"/>
+        <resource defaultForTool="" name="Editing a Syllabus Item" location="/WordDocuments/editingasyllabusitem.htm"/>
+        <resource defaultForTool="" name="Printing a Syllabus" location="/WordDocuments/printingasyllabus.htm"/>
+        <resource defaultForTool="" name="Redirecting your Syllabus"
+                  location="/WordDocuments/redirectingyoursyllabus.htm"/>
+        <resource defaultForTool="" name="Reordering Syllabus Items"
+                  location="/WordDocuments/reorderingsyllabusitems.htm"/>
+        <resource defaultForTool="" name="Deleting Syllabus Items" location="/WordDocuments/deletingsyllabusitems.htm"/>
+    </category>
+    <category name="Tests &amp; Quizzes">
+        <resource defaultForTool="sakai.samigo" name="Overview" location="/WordDocuments/testsquizzes.htm"/>
+        <resource defaultForTool="" name="Accessing the Tests &amp; Quizzes Tool"
+                  location="/WordDocuments/accessingthetestsquizzestool.htm"/>
+        <resource defaultForTool="" name="Creating and Publishing Assessments"
+                  location="/WordDocuments/creatingandpublishingassessments.htm"/>
+        <resource defaultForTool="" name="Creating and Working With Assessment Types"
+                  location="/WordDocuments/creatingandworkingwithassessmenttypes.htm"/>
+        <resource defaultForTool="" name="Changing an Unpublished Assessment"
+                  location="/WordDocuments/changinganunpublishedassessment.htm"/>
+        <resource defaultForTool="" name="Changing a Published Assessment"
+                  location="/WordDocuments/changingapublishedassessment.htm"/>
+        <resource defaultForTool="" name="Working with Student Submissions"
+                  location="/WordDocuments/workingwithstudentsubmissions.htm"/>
+        <resource defaultForTool="" name="Retracting a Published Assessment"
+                  location="/WordDocuments/retractingapublishedassessment.htm"/>
+        <resource defaultForTool="" name="Printing or Downloading an Assessment"
+                  location="/WordDocuments/printingordownloadinganassessment.htm"/>
+        <resource defaultForTool="" name="Deleting an Assessment" location="/WordDocuments/deletinganassessment.htm"/>
+        <resource defaultForTool="" name="Exporting and Importing an Assessment"
+                  location="/WordDocuments/exportingandimportinganassessment.htm"/>
+        <resource defaultForTool="" name="Working with Question Pools"
+                  location="/WordDocuments/workingwithquestionpools.htm"/>
+        <resource defaultForTool="" name="For Students: Taking an Assessment"
+                  location="/WordDocuments/forstudentstakinganassessment.htm"/>
+    </category>
+    <category name="Web Content">
+        <resource defaultForTool="sakai.iframe" name="Overview" location="/WordDocuments/webcontent.htm"/>
+        <resource defaultForTool="" name="Accessing a Web Content Tool"
+                  location="/WordDocuments/accessingawebcontenttool.htm"/>
+        <resource defaultForTool="" name="Adding a Web Content Tool"
+                  location="/WordDocuments/addingawebcontenttool.htm"/>
+        <resource defaultForTool="" name="Changing a Web Content Tool"
+                  location="/WordDocuments/changingawebcontenttool.htm"/>
+        <resource defaultForTool="" name="Deleting a Web Content Tool"
+                  location="/WordDocuments/deletingawebcontenttool.htm"/>
+    </category>
+    <category name="Wiki">
+        <resource defaultForTool="sakai.rwiki" name="Overview" location="/WordDocuments/wiki.htm"/>
+        <resource defaultForTool="" name="What Can We Do with Wikis?"
+                  location="/WordDocuments/whatcanwedowithwikis.htm"/>
+        <resource defaultForTool="" name="Key Features of the Wiki Tool"
+                  location="/WordDocuments/keyfeaturesofthewikitool.htm"/>
+        <resource defaultForTool="" name="Accessing the Wiki Tool" location="/WordDocuments/accessingthewikitool.htm"/>
+        <resource defaultForTool="" name="Where to Begin" location="/WordDocuments/wheretobegin.htm"/>
+        <resource defaultForTool="" name="Editing a Wiki Page" location="/WordDocuments/editingawikipage.htm"/>
+        <resource defaultForTool="" name="Adding a Page" location="/WordDocuments/addingapage.htm"/>
+        <resource defaultForTool="" name="Entering a Comment" location="/WordDocuments/enteringacomment.htm"/>
+        <resource defaultForTool="" name="Searching for Content" location="/WordDocuments/searchingforcontent.htm"/>
+        <resource defaultForTool="" name="Moving from Page to Page" location="/WordDocuments/movingfrompagetopage.htm"/>
+        <resource defaultForTool="" name="Viewing Page Information"
+                  location="/WordDocuments/viewingpageinformation.htm"/>
+        <resource defaultForTool="" name="Saving a Page in Word or PDF Format"
+                  location="/WordDocuments/savingapageinwordorpdfformat.htm"/>
+        <resource defaultForTool="" name="Putting a Watch on a Wiki Page"
+                  location="/WordDocuments/puttingawatchonawikipage.htm"/>
+        <resource defaultForTool="" name="Monitoring Activity on a Page"
+                  location="/WordDocuments/monitoringactivityonapage.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Wiki Tool"
+                  location="/WordDocuments/changingpermissionsforusingthewikitool.htm"/>
+    </category>
+    <category name="Wizards">
+        <resource defaultForTool="osp.wizard" name="Overview"
+                  location="/WordDocuments/wizards.htm"/>
+        <resource defaultForTool="" name="An Introduction to Wizards"
+                  location="/WordDocuments/anintroductiontowizards.htm"/>
+        <resource defaultForTool="" name="Accessing the Wizards Tool"
+                  location="/WordDocuments/accessingthewizardstool.htm"/>
+        <resource defaultForTool="" name="Designing a Wizard" location="/WordDocuments/designingawizard.htm"/>
+        <resource defaultForTool="" name="Building a Wizard" location="/WordDocuments/buildingawizard.htm"/>
+        <resource defaultForTool="" name="Changing a Wizard" location="/WordDocuments/changingawizard.htm"/>
+        <resource defaultForTool="" name="Deleting a Wizard" location="/WordDocuments/deletingawizard.htm"/>
+        <resource defaultForTool="" name="Previewing and Publishing a Wizard"
+                  location="/WordDocuments/previewingandpublishingawizard.htm"/>
+        <resource defaultForTool="" name="Exporting and Importing a Wizard"
+                  location="/WordDocuments/exportingandimportingawizard.htm"/>
+        <resource defaultForTool="" name="Providing Formative Feedback on a Wizard"
+                  location="/WordDocuments/providingformativefeedbackonawizard.htm"/>
+        <resource defaultForTool="" name="Editing and Deleting Feedback on Wizards"
+                  location="/WordDocuments/editinganddeletingfeedbackonwizards.htm"/>
+        <resource defaultForTool="" name="Changing Permissions for Using the Wizards Tool"
+                  location="/WordDocuments/changingpermissionsforusingthewizardstool.htm"/>
+        <resource defaultForTool="" name="Setting Notification Preferences for the Wizards Tool"
+                  location="/WordDocuments/settingnotificationpreferencesforthewizardstool.htm"/>
+        <resource defaultForTool="" name="For Site Participants: Completing a Wizard"
+                  location="/WordDocuments/forsiteparticipantscompletingawizard.htm"/>
+    </category>
+</help-reg>
+

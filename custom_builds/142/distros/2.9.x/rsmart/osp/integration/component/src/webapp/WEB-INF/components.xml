@@ -1,0 +1,6913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="no" default-dependency-check="none" default-lazy-init="false">
+
+   <bean abstract="false" autowire="default" class="com.rsmart.sakai.osp.integration.service.CleanupToolsIntegrationPlugin" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.cleanupTools" lazy-init="default" singleton="true">
+<property name="active" value="true"/>
+<property name="description" value="cleanup tools"/>
+<property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
+<property name="title" value="Cleanup"/>
+<property name="potentialIntegrations">
+<list>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.cleanupAdminWorkspace"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.cleanupPortfolioAdmin"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.cleanup.buser.guest"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.cleanup.buser.registered"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.cleanup.buser.maintain"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.cleanup.tadmin"/>
+</list>
+</property>
+</bean>
+<bean class="com.rsmart.sakai.osp.integration.service.CleanupSiteToolsOption" id="org.theospi.portfolio.admin.model.IntegrationOption.cleanupAdminWorkspace">
+<property name="include" value="true"/>
+<property name="label" value="cleanup !admin"/>
+<property name="siteId" value="!admin"/>
+<property name="ignorePages">
+<list>
+<value>Home</value>
+</list>
+</property>
+<property name="tools">
+<list/>
+</property>
+</bean>
+<bean class="com.rsmart.sakai.osp.integration.service.CleanupSiteToolsOption" id="org.theospi.portfolio.admin.model.IntegrationOption.cleanupPortfolioAdmin">
+<property name="include" value="true"/>
+<property name="label" value="cleanup PortfolioAdmin"/>
+<property name="siteId" value="PortfolioAdmin"/>
+<property name="ignorePages">
+<list>
+<value>Home</value>
+</list>
+</property>
+<property name="tools">
+<list/>
+</property>
+</bean>
+<bean class="com.rsmart.sakai.osp.integration.service.CleanupSiteToolsOption" id="org.theospi.portfolio.admin.model.IntegrationOption.cleanup.buser.guest">
+<property name="include" value="true"/>
+<property name="label" value="cleanup !user.guest"/>
+<property name="siteId" value="!user.guest"/>
+<property name="ignorePages">
+<list>
+<value>Home</value>
+</list>
+</property>
+<property name="tools">
+<list/>
+</property>
+</bean>
+<bean class="com.rsmart.sakai.osp.integration.service.CleanupSiteToolsOption" id="org.theospi.portfolio.admin.model.IntegrationOption.cleanup.buser.registered">
+<property name="include" value="true"/>
+<property name="label" value="cleanup !user.registered"/>
+<property name="siteId" value="!user.registered"/>
+<property name="ignorePages">
+<list>
+<value>Home</value>
+</list>
+</property>
+<property name="tools">
+<list/>
+</property>
+</bean>
+<bean class="com.rsmart.sakai.osp.integration.service.CleanupSiteToolsOption" id="org.theospi.portfolio.admin.model.IntegrationOption.cleanup.buser.maintain">
+<property name="include" value="true"/>
+<property name="label" value="cleanup !user.maintain"/>
+<property name="siteId" value="!user.maintain"/>
+<property name="ignorePages">
+<list>
+<value>Home</value>
+</list>
+</property>
+<property name="tools">
+<list/>
+</property>
+</bean>
+<bean class="com.rsmart.sakai.osp.integration.service.CleanupSiteToolsOption" id="org.theospi.portfolio.admin.model.IntegrationOption.cleanup.tadmin">
+<property name="include" value="true"/>
+<property name="label" value="cleanup ~admin"/>
+<property name="siteId" value="~admin"/>
+<property name="ignorePages">
+<list>
+<value>Home</value>
+</list>
+</property>
+<property name="tools">
+<list/>
+</property>
+</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.SiteIntegrationPlugin" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.rsmartSites" lazy-init="default" singleton="true">
+<property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
+<property name="title" value="Site Creation"/>
+<property name="description" value="Plugin to create sites"/>
+<property name="potentialIntegrations">
+<list>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.aw"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.portfolioAdmin"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.buser.guest"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.buser.registered"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.buser.maintain"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.tadmin"/>
+</list>
+</property>
+</bean>
+<bean class="org.theospi.portfolio.admin.service.SiteOption" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.aw">
+<property name="siteId" value="!admin"/>
+<property name="siteType" value="aw"/>
+<property name="siteTitle" value="Administration Workspace"/>
+<property name="siteDescription" value="Template site for users"/>
+<property name="label" value="User Site Template Creation"/>
+<property name="include" value="true"/>
+</bean>
+<bean class="org.theospi.portfolio.admin.service.SiteOption" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.portfolioAdmin">
+<property name="siteId" value="PortfolioAdmin"/>
+<property name="siteType" value="portfolioAdmin"/>
+<property name="siteTitle" value=""/>
+<property name="siteDescription" value="Template site for users"/>
+<property name="label" value="User Site Template Creation"/>
+<property name="include" value="true"/>
+</bean>
+<bean class="org.theospi.portfolio.admin.service.SiteOption" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.buser.guest">
+<property name="siteId" value="!user.guest"/>
+<property name="siteType" value="myworkspacebuserdguest"/>
+<property name="siteTitle" value="My Workspace"/>
+<property name="siteDescription" value="Template site for users"/>
+<property name="label" value="User Site Template Creation"/>
+<property name="include" value="true"/>
+</bean>
+<bean class="org.theospi.portfolio.admin.service.SiteOption" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.buser.registered">
+<property name="siteId" value="!user.registered"/>
+<property name="siteType" value="myworkspacebuserdregistered"/>
+<property name="siteTitle" value="My Workspace"/>
+<property name="siteDescription" value="Template site for users"/>
+<property name="label" value="User Site Template Creation"/>
+<property name="include" value="true"/>
+</bean>
+<bean class="org.theospi.portfolio.admin.service.SiteOption" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.buser.maintain">
+<property name="siteId" value="!user.maintain"/>
+<property name="siteType" value="myworkspacebuserdmaintain"/>
+<property name="siteTitle" value="My Workspace"/>
+<property name="siteDescription" value="Template site for users"/>
+<property name="label" value="User Site Template Creation"/>
+<property name="include" value="true"/>
+</bean>
+<bean class="org.theospi.portfolio.admin.service.SiteOption" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartSite.tadmin">
+<property name="siteId" value="~admin"/>
+<property name="siteType" value="myworkspacetadmin"/>
+<property name="siteTitle" value="My Workspace"/>
+<property name="siteDescription" value="Template site for users"/>
+<property name="label" value="User Site Template Creation"/>
+<property name="include" value="true"/>
+</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolPageIntegrationPlugin" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.rsmartPages" lazy-init="default" singleton="true">
+<property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
+<property name="toolManager" ref="org.sakaiproject.tool.api.ActiveToolManager"/>
+<property name="title" value=""/>
+<property name="description" value=""/>
+<property name="potentialIntegrations">
+<list>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.rsmart.home.page.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.rsmart.home.page.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.rsmart.home.page.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.search.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.users.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.aliases.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.sites.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.realms.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.sitesetup.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.rsmart.motd.announcements.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.resources.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.configviewer.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.archive.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.edia.sakai.skinmanager.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.rutgers.linktool.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.online.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.memory.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.scheduler.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.su.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.usermembership.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.rsmart.customizer.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.emailtemplateservice.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.rsf.evaluation.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.iframe.rsn.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.com.rsmart.oauth.provider.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.com.rsmart.oauth.token.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.schedule.1"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.resources.1"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.profile.1"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.schedule.1"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.resources.1"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.profile.1"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.schedule.1"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.resources.1"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.profile.1"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.announcements.2"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.news.2"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.profile2.2"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.announcements.2"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.osp.presentation.2"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.profile2.2"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.announcements.2"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.osp.presentation.2"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.profile2.2"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.iframe.3"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.membership.3"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.osp.matrix.3"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.membership.3"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.osp.matrix.3"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.membership.3"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.search.4"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.preferences.4"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.news.4"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.preferences.4"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.news.4"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.preferences.4"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.osp.presentation.5"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.singleuser.5"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.iframe.5"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.singleuser.5"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.iframe.5"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.singleuser.5"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.rsf.evaluation.6"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.sitesetup.6"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.search.6"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.com.rsmart.oauth.token.6"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.search.6"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.com.rsmart.oauth.token.6"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.rsf.evaluation.7"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.sitesetup.7"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.rsf.evaluation.7"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.sitesetup.7"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.search.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.users.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.sites.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.realms.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.aliases.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.resources.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.configviewer.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.rsmart.motd.announcements.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.sitesetup.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.archive.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.edia.sakai.skinmanager.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.memory.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.online.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.scheduler.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.su.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.usermembership.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.rsmart.customizer.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.emailtemplateservice.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.rsf.evaluation.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.iframe.rsn.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.com.rsmart.oauth.provider.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.com.rsmart.oauth.token.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.rsmart.home.page.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.schedule.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.announcements.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.resources.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.mailbox.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.rsn.osp.iframe.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.presTemplate.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.presLayout.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.style.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.glossary.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.metaobj.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.matrix.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.wizard.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.sitesetup.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.usermembership.0"/>
+<ref bean="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.search.0"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.rsmart.home.page.0">
+<property name="label">
+<value>user site home page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Home</value>
+</property>
+<property name="layout">
+<value>1</value>
+</property>
+<property name="positionFromEnd">
+<value>50</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMOTD"/>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSInfo"/>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSCal"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.rsmart.home.page.0">
+<property name="label">
+<value>user site home page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Home</value>
+</property>
+<property name="layout">
+<value>1</value>
+</property>
+<property name="positionFromEnd">
+<value>50</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMOTD"/>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSInfo"/>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSCal"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.rsmart.home.page.0">
+<property name="label">
+<value>user site home page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Home</value>
+</property>
+<property name="layout">
+<value>1</value>
+</property>
+<property name="positionFromEnd">
+<value>50</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMOTD"/>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSInfo"/>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSCal"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.schedule.1">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Calendar</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.schedule"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.announcements.2">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Announcements</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.announcements"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.resources.1">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Resources</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.resources"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.news.2">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>News</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.news"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.iframe.3">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Web Content</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iframe"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.search.4">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Search</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.search"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.osp.presentation.5">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Portfolios</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presentation"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.rsf.evaluation.6">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Evaluation System</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsf.evaluation"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.profile.1">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Profile</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.profile2.2">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Profile2</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile2"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.membership.3">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Membership</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.membership"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.preferences.4">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Preferences</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.preferences"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.singleuser.5">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Account</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.singleuser"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.sitesetup.6">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.guest</value>
+</property>
+<property name="pageName">
+<value>Site Setup</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitesetup"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.schedule.1">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Calendar</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.schedule"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.announcements.2">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Announcements</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.announcements"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.resources.1">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Resources</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.resources"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.osp.presentation.2">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Portfolios</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presentation"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.osp.matrix.3">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Matrices</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.matrix"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.news.4">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>News</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.news"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.iframe.5">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Web Content</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iframe"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.search.6">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Search</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.search"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.rsf.evaluation.7">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Evaluation System</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsf.evaluation"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.profile.1">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Profile</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.profile2.2">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Profile2</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile2"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.membership.3">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Membership</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.membership"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.preferences.4">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Preferences</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.preferences"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.singleuser.5">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Account</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.singleuser"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.com.rsmart.oauth.token.6">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Oauth Tokens</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.token"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.sitesetup.7">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.registered</value>
+</property>
+<property name="pageName">
+<value>Site Setup</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitesetup"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.schedule.1">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Calendar</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.schedule"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.announcements.2">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Announcements</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.announcements"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.resources.1">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Resources</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.resources"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.osp.presentation.2">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Portfolios</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presentation"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.osp.matrix.3">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Matrices</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.matrix"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.news.4">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>News</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.news"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.iframe.5">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Web Content</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iframe"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.search.6">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Search</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.search"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.rsf.evaluation.7">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Evaluation System</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsf.evaluation"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.profile.1">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Profile</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.profile2.2">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Profile2</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile2"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.membership.3">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Membership</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.membership"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.preferences.4">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Preferences</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.preferences"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.singleuser.5">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Account</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.singleuser"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.com.rsmart.oauth.token.6">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Oauth Tokens</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.token"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.sitesetup.7">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!user.maintain</value>
+</property>
+<property name="pageName">
+<value>Site Setup</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitesetup"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.search.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Search</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.search"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.users.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Users</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.users"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.aliases.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Aliases</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.aliases"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.sites.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Sites</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sites"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.realms.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Realms</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.realms"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.sitesetup.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Site Setup</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitesetup"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.rsmart.motd.announcements.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>MOTD</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.motd.announcements"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.resources.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Resources</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.adminResources"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.configviewer.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Configuration Viewer</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.configviewer"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.archive.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Site Archive</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.archive"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.edia.sakai.skinmanager.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Skin Manager</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.edia.sakai.skinmanager"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.rutgers.linktool.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Link Tool</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rutgers.linktool"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.online.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>On-Line</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.online"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.memory.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Memory</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.memory"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.scheduler.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Job Scheduler</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.scheduler"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.su.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Super User</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.su"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.usermembership.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>User Membership</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.usermembership"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.rsmart.customizer.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Customizer</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.customizer"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.emailtemplateservice.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Email Template Administration</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.emailtemplateservice"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.rsf.evaluation.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Evaluation System</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsf.evaluation"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.iframe.rsn.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>rSmart Support</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iframe.rsn"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.com.rsmart.oauth.provider.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Oauth Providers</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.provider"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.com.rsmart.oauth.token.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>~admin</value>
+</property>
+<property name="pageName">
+<value>Oauth Tokens</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.token"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.search.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Search</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.search"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.users.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Users</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.users"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.sites.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Sites</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sites"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.realms.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Realms</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.realms"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.aliases.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Aliases</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.aliases"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.resources.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Resources</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.adminResources"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.configviewer.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Configuration Viewer</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.configviewer"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.rsmart.motd.announcements.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>MOTD</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.motd.announcements"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.sitesetup.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Site Setup</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitesetup"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.archive.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Site Archive</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.archive"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.edia.sakai.skinmanager.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Skin Manager</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.edia.sakai.skinmanager"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.memory.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Memory</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.memory"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.online.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>On-Line</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.online"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.scheduler.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Job Scheduler</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.scheduler"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.su.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Super User</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.su"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.usermembership.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>User Membership</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.usermembership"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.rsmart.customizer.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Customizer</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.customizer"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.emailtemplateservice.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Email Template Administration</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.emailtemplateservice"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.rsf.evaluation.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Evaluation System</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsf.evaluation"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.iframe.rsn.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>rSmart Support</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iframe.rsn"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.com.rsmart.oauth.provider.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Oauth Providers</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.provider"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.com.rsmart.oauth.token.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>!admin</value>
+</property>
+<property name="pageName">
+<value>Oauth Tokens</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.token"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.schedule.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Calendar</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.schedule"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.announcements.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Announcements</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.announcements"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.resources.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Resources</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.resources"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.mailbox.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Email Archive</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mailbox"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.rsn.osp.iframe.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Portfolio Showcase</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsn.osp.iframe"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.presTemplate.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Portfolio Templates</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presTemplate"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.presLayout.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Portfolio Layouts</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presLayout"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.style.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Styles</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.style"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.glossary.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Glossary</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.glossary"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.metaobj.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Forms</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.metaobj"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.matrix.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Matrices</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.matrix"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.wizard.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Wizards</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.wizard"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.sitesetup.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Site Setup</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitesetup"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.usermembership.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>User Membership</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.usermembership"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.search.0">
+<property name="label">
+<value>site page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Search</value>
+</property>
+<property name="positionFromEnd">
+<value>0</value>
+</property>
+<property name="layout">
+<value>0</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.search"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.rsmart.home.page.0">
+<property name="label">
+<value>user site home page</value>
+</property>
+<property name="worksiteId">
+<value>PortfolioAdmin</value>
+</property>
+<property name="pageName">
+<value>Home</value>
+</property>
+<property name="layout">
+<value>1</value>
+</property>
+<property name="positionFromEnd">
+<value>50</value>
+</property>
+<property name="tools">
+<list>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.portfolioAdminTemplateSiteInfo"/>
+<ref bean="org.theospi.portfolio.admin.service.ToolOption.rsmart.portfolioAdminTemplateAnnouncement"/>
+</list>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.home.page">
+<property name="toolId">
+<value>rsmart.home.page</value>
+</property>
+<property name="title">
+<value>Home</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="test">reg-value</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.singleuser">
+<property name="toolId">
+<value>sakai.singleuser</value>
+</property>
+<property name="title">
+<value>Account</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="include-password">true</prop>
+<prop key="single-user">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.aliases">
+<property name="toolId">
+<value>sakai.aliases</value>
+</property>
+<property name="title">
+<value>Aliases</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.announcements">
+<property name="toolId">
+<value>sakai.announcements</value>
+</property>
+<property name="title">
+<value>Announcements</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="channel"/>
+<prop key="pagesize">10</prop>
+<prop key="enableReorder"/>
+<prop key="functions.require">annc.read</prop>
+<prop key="groupAware">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.assignment.grades">
+<property name="toolId">
+<value>sakai.assignment.grades</value>
+</property>
+<property name="title">
+<value>Assignments</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="showNumSubmissionColumn">TRUE</prop>
+<prop key="groupAware">true</prop>
+<prop key="pagesize">200</prop>
+<prop key="withGrades">TRUE</prop>
+<prop key="help.id">sakai.assignment</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.schedule">
+<property name="toolId">
+<value>sakai.schedule</value>
+</property>
+<property name="title">
+<value>Calendar</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="calendar"/>
+<prop key="functions.require">calendar.read</prop>
+<prop key="groupAware">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.chat">
+<property name="toolId">
+<value>sakai.chat</value>
+</property>
+<property name="title">
+<value>Chat Room</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="display-date">false</prop>
+<prop key="display-time">true</prop>
+<prop key="display-user">true</prop>
+<prop key="sound-alert">true</prop>
+<prop key="filter-type">SelectMessagesByTime</prop>
+<prop key="filter-param">3</prop>
+<prop key="channel"/>
+<prop key="functions.require">chat.read</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.citation.tool">
+<property name="toolId">
+<value>sakai.citation.tool</value>
+</property>
+<property name="title">
+<value>Citation Helper</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.configviewer">
+<property name="toolId">
+<value>sakai.configviewer</value>
+</property>
+<property name="title">
+<value>Configuration Viewer</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.customizer">
+<property name="toolId">
+<value>rsmart.customizer</value>
+</property>
+<property name="title">
+<value>Customizer</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="test">reg-value</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.jforum.tool">
+<property name="toolId">
+<value>sakai.jforum.tool</value>
+</property>
+<property name="title">
+<value>Discussion Forums</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="reset.button">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.dropbox">
+<property name="toolId">
+<value>sakai.dropbox</value>
+</property>
+<property name="title">
+<value>Drop Box</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="resources_mode">dropbox</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mailbox">
+<property name="toolId">
+<value>sakai.mailbox</value>
+</property>
+<property name="title">
+<value>Email Archive</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="channel"/>
+<prop key="pagesize">20</prop>
+<prop key="functions.require">mail.read</prop>
+<prop key="showNonAlias">false</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.evaluation">
+<property name="toolId">
+<value>osp.evaluation</value>
+</property>
+<property name="title">
+<value>Evaluations</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="theospi.resetUrl">/member/listEvaluationItems.osp</prop>
+<prop key="theospi.toolListenerId">org.theospi.portfolio.security.mgt.ToolPermissionManager.review</prop>
+<prop key="functions.require">osp.portfolio.evaluation.use</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.postem">
+<property name="toolId">
+<value>sakai.postem</value>
+</property>
+<property name="title">
+<value>Feedback</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.metaobj">
+<property name="toolId">
+<value>sakai.metaobj</value>
+</property>
+<property name="title">
+<value>Forms</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="test">reg-value</prop>
+<prop key="theospi.resetUrl">listStructuredArtifactDefinitions.osp</prop>
+<prop key="functions.require">metaobj.create</prop>
+<prop key="display.usage">false</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.forums">
+<property name="toolId">
+<value>sakai.forums</value>
+</property>
+<property name="title">
+<value>Forums</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="help.id">sakai.messagecenter</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.glossary">
+<property name="toolId">
+<value>osp.glossary</value>
+</property>
+<property name="title">
+<value>Glossary</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="test">reg-value</prop>
+<prop key="theospi.resetUrl">/member/glossaryList.osp</prop>
+<prop key="theospi.toolListenerId">org.theospi.portfolio.security.mgt.ToolPermissionManager.glossary</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.gradebook.tool">
+<property name="toolId">
+<value>sakai.gradebook.tool</value>
+</property>
+<property name="title">
+<value>Gradebook</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="help.id">sakai.gradebook</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.help">
+<property name="toolId">
+<value>sakai.help</value>
+</property>
+<property name="title">
+<value>Help</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="help.collections">sakai_iframe_myworkspace,sakai_menubar,sakai_course_sites,sakai_permissions,sakai_accessibility,sakai_editor</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.scheduler">
+<property name="toolId">
+<value>sakai.scheduler</value>
+</property>
+<property name="title">
+<value>Job Scheduler</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.melete">
+<property name="toolId">
+<value>sakai.melete</value>
+</property>
+<property name="title">
+<value>Lessons</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rutgers.linktool">
+<property name="toolId">
+<value>sakai.rutgers.linktool</value>
+</property>
+<property name="title">
+<value>Link Tool</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="url">http://nightly2.sakaiproject.org/linktool/linktool.php</prop>
+<prop key="height">800px</prop>
+<prop key="allowMultipleInstances">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mailtool">
+<property name="toolId">
+<value>sakai.mailtool</value>
+</property>
+<property name="title">
+<value>Mailtool</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="help.id">sakai.mailsender</prop>
+<prop key="functions.require">mailtool.send</prop>
+<prop key="subjectprefix"/>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.matrix">
+<property name="toolId">
+<value>osp.matrix</value>
+</property>
+<property name="title">
+<value>Matrices</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="theospi.resetUrl">/member/viewMatrix.osp</prop>
+<prop key="theospi.toolListenerId">org.theospi.portfolio.security.mgt.ToolPermissionManager.scaffolding</prop>
+<prop key="institutionSite">false</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.membership">
+<property name="toolId">
+<value>sakai.membership</value>
+</property>
+<property name="title">
+<value>Membership</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="reset.button">false</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.memory">
+<property name="toolId">
+<value>sakai.memory</value>
+</property>
+<property name="title">
+<value>Memory</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.messages">
+<property name="toolId">
+<value>sakai.messages</value>
+</property>
+<property name="title">
+<value>Messages</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="help.id">sakai.messages</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.motd.announcements">
+<property name="toolId">
+<value>sakai.announcements</value>
+</property>
+<property name="title">
+<value>MOTD</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="channel">/announcement/channel/!site/motd</prop>
+<prop key="pagesize">10</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.news">
+<property name="toolId">
+<value>sakai.news</value>
+</property>
+<property name="title">
+<value>News</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="channel-url">http://www.sakaiproject.org/cms/index2.php?option=com_rss&amp;feed=RSS2.0&amp;no_html=1</prop>
+<prop key="functions.require"/>
+<prop key="allowMultipleInstances">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.online">
+<property name="toolId">
+<value>sakai.online</value>
+</property>
+<property name="title">
+<value>On-Line</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.podcasts">
+<property name="toolId">
+<value>sakai.podcasts</value>
+</property>
+<property name="title">
+<value>Podcasts</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="functions.require">content.read</prop>
+<prop key="help.id">sakai.podcasts</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.poll">
+<property name="toolId">
+<value>sakai.poll</value>
+</property>
+<property name="title">
+<value>Polls</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presLayout">
+<property name="toolId">
+<value>osp.presLayout</value>
+</property>
+<property name="title">
+<value>Portfolio Layouts</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="theospi.resetUrl">/listLayout.osp</prop>
+<prop key="theospi.toolListenerId">org.theospi.portfolio.security.mgt.ToolPermissionManager.presentationLayout</prop>
+<prop key="functions.require">osp.presentation.layout.create</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsn.osp.iframe">
+<property name="toolId">
+<value>sakai.rsn.osp.iframe</value>
+</property>
+<property name="title">
+<value>Portfolio Showcase</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="source">http://www.rsmart.com/portfolios?sakai_session=${SESSION_ID}</prop>
+<prop key="height">600px</prop>
+<prop key="reset.button">false</prop>
+<prop key="functions.require">site.upd</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presTemplate">
+<property name="toolId">
+<value>osp.presTemplate</value>
+</property>
+<property name="title">
+<value>Portfolio Templates</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="theospi.resetUrl">/member/listTemplate.osp</prop>
+<prop key="theospi.toolListenerId">org.theospi.portfolio.security.mgt.ToolPermissionManager.presentationTemplate</prop>
+<prop key="functions.require">osp.presentation.template.create</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presentation">
+<property name="toolId">
+<value>osp.presentation</value>
+</property>
+<property name="title">
+<value>Portfolios</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="theospi.resetUrl">/member/listPresentation.osp</prop>
+<prop key="theospi.toolListenerId">org.theospi.portfolio.security.mgt.ToolPermissionManager.presentation</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.preferences">
+<property name="toolId">
+<value>sakai.preferences</value>
+</property>
+<property name="title">
+<value>Preferences</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile">
+<property name="toolId">
+<value>sakai.profile</value>
+</property>
+<property name="title">
+<value>Profile</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.realms">
+<property name="toolId">
+<value>sakai.realms</value>
+</property>
+<property name="title">
+<value>Realms</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="pagesize">20</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.resources">
+<property name="toolId">
+<value>sakai.resources</value>
+</property>
+<property name="title">
+<value>Resources</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="home"/>
+<prop key="optional_properties">true</prop>
+<prop key="user_sees_all_their_sites">true</prop>
+<prop key="collections_per_page">50</prop>
+<prop key="resources_mode">resources</prop>
+<prop key="groupAware">true</prop>
+<prop key="functions.require">content.read</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iframe.rsn">
+<property name="toolId">
+<value>sakai.iframe.rsn</value>
+</property>
+<property name="title">
+<value>rSmart Support</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="source">http://rsn.rsmart.com/</prop>
+<prop key="height">600px</prop>
+<prop key="reset.button">false</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.search">
+<property name="toolId">
+<value>sakai.search</value>
+</property>
+<property name="title">
+<value>Search</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="search_site_ids"/>
+<prop key="search_all_sites"/>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sections">
+<property name="toolId">
+<value>sakai.sections</value>
+</property>
+<property name="title">
+<value>Sections</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="help.id">sakai.sections</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.archive">
+<property name="toolId">
+<value>sakai.archive</value>
+</property>
+<property name="title">
+<value>Site Archive</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.siteinfo">
+<property name="toolId">
+<value>sakai.siteinfo</value>
+</property>
+<property name="title">
+<value>Site Editor</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="siteTypes">course,project,portfolio</prop>
+<prop key="defaultSiteType">project</prop>
+<prop key="publicChangeableSiteTypes">project</prop>
+<prop key="publicSiteTypes">course</prop>
+<prop key="privateSiteTypes"/>
+<prop key="site_mode">siteinfo</prop>
+<prop key="functions.require">site.upd</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.site.roster">
+<property name="toolId">
+<value>sakai.site.roster</value>
+</property>
+<property name="title">
+<value>Roster</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitebrowser">
+<property name="toolId">
+<value>sakai.sitebrowser</value>
+</property>
+<property name="title">
+<value>Site Search</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="pagesize">20</prop>
+<prop key="reset.button">false</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitesetup">
+<property name="toolId">
+<value>sakai.sitesetup</value>
+</property>
+<property name="title">
+<value>Site Setup</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="siteTypes">course,project,portfolio</prop>
+<prop key="defaultSiteType">project</prop>
+<prop key="publicChangeableSiteTypes">project</prop>
+<prop key="publicSiteTypes">course</prop>
+<prop key="privateSiteTypes"/>
+<prop key="site_mode">sitesetup</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitestats">
+<property name="toolId">
+<value>sakai.sitestats</value>
+</property>
+<property name="title">
+<value>Site Statistics</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="roles.allow">maintain,Instructor</prop>
+<prop key="functions.require">sitestats.view</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitestats.admin">
+<property name="toolId">
+<value>sakai.sitestats.admin</value>
+</property>
+<property name="title">
+<value>Site Stats Admin</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="functions.require">sitestats.admin.view</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sites">
+<property name="toolId">
+<value>sakai.sites</value>
+</property>
+<property name="title">
+<value>Sites</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="pagesize">20</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.edia.sakai.skinmanager">
+<property name="toolId">
+<value>edia.sakai.skinmanager</value>
+</property>
+<property name="title">
+<value>Skin Manager</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="reset.button">true</prop>
+<prop key="help.button">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.edia.sakai.selector">
+<property name="toolId">
+<value>edia.sakai.selector</value>
+</property>
+<property name="title">
+<value>Skin Selector</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="reset.button">true</prop>
+<prop key="help.button">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.style">
+<property name="toolId">
+<value>osp.style</value>
+</property>
+<property name="title">
+<value>Styles</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="theospi.toolListenerId">org.theospi.portfolio.security.mgt.ToolPermissionManager.style</prop>
+<prop key="functions.require">osp.style.create</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.su">
+<property name="toolId">
+<value>sakai.su</value>
+</property>
+<property name="title">
+<value>Super User</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.syllabus">
+<property name="toolId">
+<value>sakai.syllabus</value>
+</property>
+<property name="title">
+<value>Syllabus</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.samigo">
+<property name="toolId">
+<value>sakai.samigo</value>
+</property>
+<property name="title">
+<value>Tests &amp; Quizzes</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.users">
+<property name="toolId">
+<value>sakai.users</value>
+</property>
+<property name="title">
+<value>Users</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="pagesize">20</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.usermembership">
+<property name="toolId">
+<value>sakai.usermembership</value>
+</property>
+<property name="title">
+<value>User Membership</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="help.id">sakai.usermembership</prop>
+<prop key="functions.require">usermembership.view</prop>
+<prop key="userType.limitToSelf">false</prop>
+<prop key="userType.limitToList"/>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iframe">
+<property name="toolId">
+<value>sakai.iframe</value>
+</property>
+<property name="title">
+<value>Web Content</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="source"/>
+<prop key="height">600px</prop>
+<prop key="reset.button">true</prop>
+<prop key="functions.require"/>
+<prop key="allowMultipleInstances">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rwiki">
+<property name="toolId">
+<value>sakai.rwiki</value>
+</property>
+<property name="title">
+<value>Wiki</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="home-page">Home</prop>
+<prop key="home-page-friendly-name"/>
+<prop key="functions.require">rwiki.read</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.wizard">
+<property name="toolId">
+<value>osp.wizard</value>
+</property>
+<property name="title">
+<value>Wizards</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="theospi.toolListenerId">org.theospi.portfolio.security.mgt.ToolPermissionManager.wizard</prop>
+<prop key="functions.require">osp.wizard.view|osp.wizard.review|osp.wizard.evaluate|osp.wizard.create</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.virtual_classroom.tool">
+<property name="toolId">
+<value>rsmart.virtual_classroom.tool</value>
+</property>
+<property name="title">
+<value>Live Virtual Classroom</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="help.id">rsmart.virtual_classroom.tool</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mneme">
+<property name="toolId">
+<value>sakai.mneme</value>
+</property>
+<property name="title">
+<value>Tasks, Tests and Surveys</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile2">
+<property name="toolId">
+<value>sakai.profile2</value>
+</property>
+<property name="title">
+<value>Profile2</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="functions.require"/>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsn.linktool.pentaho">
+<property name="toolId">
+<value>rsn.linktool.pentaho</value>
+</property>
+<property name="title">
+<value>Pentaho Reports</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="urlProp">rsn.linktool.pentaho.url</prop>
+<prop key="trustedService">true</prop>
+<prop key="height">750px</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.blogwow">
+<property name="toolId">
+<value>sakai.blogwow</value>
+</property>
+<property name="title">
+<value>Blogs</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsf.evaluation">
+<property name="toolId">
+<value>sakai.rsf.evaluation</value>
+</property>
+<property name="title">
+<value>Evaluation System</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.emailtemplateservice">
+<property name="toolId">
+<value>sakai.emailtemplateservice</value>
+</property>
+<property name="title">
+<value>Email Template Administration</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.gradebook.gwt.rpc">
+<property name="toolId">
+<value>sakai.gradebook.gwt.rpc</value>
+</property>
+<property name="title">
+<value>Gradebook2</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="displayid.value">student</prop>
+<prop key="height">620px</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iTunesU">
+<property name="toolId">
+<value>sakai.iTunesU</value>
+</property>
+<property name="title">
+<value>iTunes U</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="source"/>
+<prop key="height">600px</prop>
+<prop key="target_site_id"/>
+<prop key="admin_role"/>
+<prop key="credentialString">@urn:mace:itunesu.com:sites:</prop>
+<prop key="iTunesUHandle"/>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.basiclti">
+<property name="toolId">
+<value>sakai.basiclti</value>
+</property>
+<property name="title">
+<value>Basic LTI</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="sakai:portlet-pre-render">true</prop>
+<prop key="functions.require"/>
+<prop key="imsti.launch"/>
+<prop key="imsti.xml"/>
+<prop key="imsti.secret"/>
+<prop key="imsti.key"/>
+<prop key="imsti.pagetitle"/>
+<prop key="imsti.tooltitle"/>
+<prop key="imsti.newpage"/>
+<prop key="imsti.maximize"/>
+<prop key="imsti.frameheight"/>
+<prop key="imsti.debug"/>
+<prop key="imsti.releasename"/>
+<prop key="imsti.releaseemail"/>
+<prop key="imsti.custom"/>
+<prop key="imsti.allowsettings"/>
+<prop key="imsti.allowroster"/>
+<prop key="imsti.contentlink"/>
+<prop key="final.launch">false</prop>
+<prop key="final.xml">true</prop>
+<prop key="final.secret">false</prop>
+<prop key="final.key">false</prop>
+<prop key="final.pagetitle">false</prop>
+<prop key="final.tooltitle">false</prop>
+<prop key="final.newpage">false</prop>
+<prop key="final.maximize">false</prop>
+<prop key="final.frameheight">false</prop>
+<prop key="final.debug">false</prop>
+<prop key="final.releasename">false</prop>
+<prop key="final.releaseemail">false</prop>
+<prop key="final.custom">false</prop>
+<prop key="final.allowsettings">false</prop>
+<prop key="final.allowroster">false</prop>
+<prop key="final.contentlink">false</prop>
+<prop key="allowMultipleInstances">true</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.provider">
+<property name="toolId">
+<value>com.rsmart.oauth.provider</value>
+</property>
+<property name="title">
+<value>Oauth Providers</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.token">
+<property name="toolId">
+<value>com.rsmart.oauth.token</value>
+</property>
+<property name="title">
+<value>Oauth Tokens</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.bbb">
+<property name="toolId">
+<value>sakai.bbb</value>
+</property>
+<property name="title">
+<value>Meetings</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.kaltura">
+<property name="toolId">
+<value>sakai.kaltura</value>
+</property>
+<property name="title">
+<value>Media Gallery</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai-elluminate">
+<property name="toolId">
+<value>sakai-elluminate</value>
+</property>
+<property name="title">
+<value>Elluminate Live! Bridge</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="help.url">/sakai-elluminate-tool/tools/Usage.htm</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.turningtool">
+<property name="toolId">
+<value>sakai.turningtool</value>
+</property>
+<property name="title">
+<value>TurningTechnologies</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props/>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.signup">
+<property name="toolId">
+<value>sakai.signup</value>
+</property>
+<property name="title">
+<value>Sign-Up</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="functions.require">signup.view|signup.view.all</prop>
+</props>
+</property>
+</bean>
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.clog">
+<property name="toolId">
+<value>sakai.clog</value>
+</property>
+<property name="title">
+<value>Clog</value>
+</property>
+<property name="layoutHints">
+<value>0,0</value>
+</property>
+<property name="initProperties">
+<props>
+<prop key="functions.require"/>
+</props>
+</property>
+</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMOTD" lazy-init="default" singleton="true">
+      <property name="toolId">
+         <value>sakai.motd</value>
+      </property>
+      <property name="title" value="Message Of The Day"/>
+      <property name="layoutHints" value="0,0"/>
+      <property name="initProperties">
+         <props>
+            <prop key="show-subject">false</prop>
+            <prop key="items">1</prop>
+            <prop key="channel">/announcement/channel/!site/motd</prop>
+            <prop key="show-newlines">true</prop>
+            <prop key="length">50000</prop>
+            <prop key="days">1000</prop>
+         </props>
+      </property>
+   </bean>
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSInfo" lazy-init="default" singleton="true">
+      <property name="toolId" value="sakai.iframe.myworkspace"/>
+      <property name="title" value="My Workspace Information"/>
+      <property name="layoutHints" value="1,0"/>
+      <property name="initProperties">
+         <props>
+            <prop key="height">600px</prop>
+         </props>
+      </property>
+   </bean>
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSCal" lazy-init="default" singleton="true">
+      <property name="toolId" value="sakai.summary.calendar"/>
+      <property name="title" value="Calendar"/>
+      <property name="layoutHints" value="0,1"/>
+      <property name="initProperties">
+         <props>
+         </props>
+      </property>
+   </bean>
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.portfolioAdminTemplateAnnouncement" lazy-init="default" singleton="true">
+      <property name="toolId">
+         <value>sakai.synoptic.announcement</value>
+      </property>
+      <property name="title" value="Recent Announcements"/>
+      <property name="layoutHints" value="0,1"/>
+      <property name="initProperties">
+         <props>
+            <prop key="showOnlyOptionsButton">true</prop>
+            <prop key="items">3</prop>
+            <prop key="showAnnouncementBody">true</prop>
+            <prop key="channel"/>
+            <prop key="length">50</prop>
+            <prop key="showAllColumns">false</prop>
+            <prop key="days">10</prop>
+         </props>
+      </property>
+   </bean>
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.portfolioAdminTemplateSiteInfo" lazy-init="default" singleton="true">
+      <property name="toolId" value="sakai.iframe.site"/>
+      <property name="title" value="Worksite Information"/>
+      <property name="layoutHints" value="0,0"/>
+      <property name="initProperties">
+         <props>
+            <prop key="height">600px</prop>
+         </props>
+      </property>
+   </bean>
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.adminResources" lazy-init="default" singleton="true">
+      <property name="toolId">
+         <value>sakai.resources</value>
+      </property>
+      <property name="title">
+         <value>Resources</value>
+      </property>
+      <property name="layoutHints">
+         <value>0,0</value>
+      </property>
+      <property name="initProperties">
+         <props>
+            <prop key="home">/</prop>
+            <prop key="optional_properties">true</prop>
+            <prop key="user_sees_all_their_sites">true</prop>
+            <prop key="collections_per_page">50</prop>
+            <prop key="resources_mode">resources</prop>
+            <prop key="functions.require">content.read</prop>
+         </props>
+      </property>
+   </bean>
+
+   <bean abstract="false" autowire="default" class="com.rsmart.sakai.osp.integration.service.RsmartSakaiIntegrationServiceImpl" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationService.rsmart" lazy-init="default" singleton="true">
+      <property name="integrationPlugins">
+         <list>
+            <value>org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.rsmartSites</value>
+            <value>org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.cleanupTools</value>
+            <value>org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.rsmartPages</value>
+         </list>
+      </property>
+      <property name="startupResetManager">
+         <ref bean="org.theospi.portfolio.admin.intf.StartupResetManager"/>
+      </property>
+      <property name="initUsers">
+         <list>
+            <value>admin</value>
+         </list>
+      </property>
+      <property name="pollingInterval" value="5000"/>
+      <property name="schedulerManager" ref="org.sakaiproject.api.app.scheduler.SchedulerManager"/>
+      <property name="dependantBeans">
+         <list>
+            <ref bean="org.theospi.portfolio.security.model.SakaiDefaultPermsManager.sakaiTools"/>
+            <ref bean="org.sakaiproject.mailarchive.api.MailArchiveService"/>
+            <ref bean="org.sakaiproject.announcement.api.AnnouncementService"/>
+            <ref bean="org.sakaiproject.calendar.api.CalendarService"/>
+
+            <ref bean="org.sakaiproject.content.api.ContentHostingService"/>
+
+            <ref bean="uk.ac.cam.caret.sakai.rwiki.service.api.RWikiObjectService"/>
+         </list>
+      </property>
+      <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService"/>
+      <property name="contentHostingService" ref="org.sakaiproject.content.api.ContentHostingService"/>
+   </bean>
+
+</beans>

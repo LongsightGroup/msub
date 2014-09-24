@@ -1,0 +1,1 @@
+﻿d2hStoreMenuItems("TX__133827", [["WordDocuments/managingyourlessons.htm", "right", "Managing Your Lessons"],["WordDocuments/settingpreferences.htm", "right", "Setting Preferences"]]);

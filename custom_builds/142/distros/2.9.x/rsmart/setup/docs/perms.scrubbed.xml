@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- input: perms.xml, sites and roles.scrubbed and tools.scrubbed -->
+<perms>
+   <tool id="" type="">
+      <realm id="">
+         <role id="">
+            <function id=""/>
+         </role>
+      </realm>
+   </tool>
+</perms>
