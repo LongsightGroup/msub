@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.sakaiproject.refgradeprovider.model">
+
+   <class name="RefGradingPeriod" table="rgp_grading_period">
+		<id name="id" column="ID" type="long">
+			<generator class="native">
+				<param name="sequence">rgp_grade_period_id</param>
+			</generator>
+		</id>
+      <property name="columnKey" type="string" column="column_key"/>
+      <property name="columnName" type="string" column="description" />
+      <property name="submitButton" type="string" column="submit_button" />
+      <property name="courseId" type="string" column="course"/>
+      <property name="writable" type="boolean" column="writable" />
+   </class>
+
+   <class name="ExternalGrade" table="rgp_external_grade">
+		<id name="id" column="ID" type="long">
+			<generator class="native">
+				<param name="sequence">rgp_ex_grade_id</param>
+			</generator>
+		</id>
+      <property name="studentId" type="string" column="student"/>
+      <property name="graderId" type="string" column="grader"/>
+      <property name="modifiedOn" type="java.util.Date" column="modified_on"/>
+		<many-to-one name="gradingPeriod" class="RefGradingPeriod" column="period_id" not-null="true" lazy="false"/>
+      <property name="grade" type="string" column="grade"/>
+   </class>
+
+   <query name="gradingPeriodForCourse">
+      from RefGradingPeriod a where courseId is ?
+   </query>
+   
+   <query name="gradesForPeriod">
+      from ExternalGrade a where gradingPeriod is ?
+   </query>
+   
+   <query name="courseGradingPeriod">
+      from RefGradingPeriod a where courseId is ? and columnKey is ?
+   </query>
+   
+   
+</hibernate-mapping>

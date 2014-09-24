@@ -1,0 +1,21 @@
+       <t:columns rendered="#{courseGradeDetailsBean.externalGradesBean.externalGrades}" value="#{courseGradeDetailsBean.externalGradesBean.gradingPeriods}" var="gradingPeriod" id="externalGrades" >
+				<f:facet name="header">
+		            <t:commandSortHeader columnName="#{gradingPeriod.columnKey}" propertyName="#{gradingPeriod.columnKey}" arrow="true" immediate="false" actionListener="#{courseGradeDetailsBean.sort}">
+						<h:outputText value="#{gradingPeriod.columnName}"/>
+		            </t:commandSortHeader>
+				</f:facet>
+				<t:div styleClass="shorttext">
+               <h:inputText rendered="#{scoreRow.userCanGrade && gradingPeriod.writable}"
+						id="Grade"
+						value="#{courseGradeDetailsBean.externalGradesBean.periodGrades[gradingPeriod.columnKey][scoreRow.enrollment.user.userUid]}"
+						size="4"
+						onkeypress="return submitOnEnter(event, 'gbForm:saveButton');">
+						<f:converter converterId="org.sakaiproject.gradebook.jsf.converter.COURSE_GRADE" />
+					</h:inputText>
+					<h:outputText rendered="#{!(scoreRow.userCanGrade && gradingPeriod.writable) && courseGradeDetailsBean.externalGradesBean.periodGrades[gradingPeriod.columnKey][scoreRow.enrollment.user.userUid] != null}" value="#{courseGradeDetailsBean.externalGradesBean.periodGrades[gradingPeriod.columnKey][scoreRow.enrollment.user.userUid]}">
+						<f:converter converterId="org.sakaiproject.gradebook.jsf.converter.COURSE_GRADE" />
+					</h:outputText>
+					<h:outputText rendered="#{!(scoreRow.userCanGrade && gradingPeriod.writable) && courseGradeDetailsBean.externalGradesBean.periodGrades[gradingPeriod.columnKey][scoreRow.enrollment.user.userUid] == null}" value="#{msgs.score_null_placeholder}" />
+   			</t:div>
+       </t:columns>
+         

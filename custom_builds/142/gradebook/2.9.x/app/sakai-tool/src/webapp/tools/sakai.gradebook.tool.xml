@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+   <tool title="Gradebook" description="Use Gradebook to calculate, store and distribute grade information to students." id="sakai.gradebook.tool">
+
+      <configuration name="help.id" value="sakai.gradebook"/>
+
+
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+</tool>
+</registration>

@@ -1,0 +1,9 @@
+<t:dataList rendered="#{courseGradeDetailsBean.externalGradesBean.externalGrades}" 
+            value="#{courseGradeDetailsBean.externalGradesBean.gradingPeriods}" var="gradingPeriod">
+   <h:commandButton
+      value="#{gradingPeriod.submitLabel}"
+      action="#{gradingPeriod.submit}"
+      disabled="#{!gradingPeriod.writable}"
+      onclick="return confirm('#{gradingPeriod.confirmMessage}')"
+      />
+</t:dataList>
