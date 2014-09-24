@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+   <tool title="Polls" description="Use Polls to take a quick poll of users on your site." id="sakai.poll">
+
+
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="project"/>
+</tool>
+</registration>
