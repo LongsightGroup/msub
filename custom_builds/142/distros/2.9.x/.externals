@@ -11,7 +11,7 @@ bigbluebutton -r 269           https://github.com/asahinet/bigbluebutton-sakai/b
 blogwow -r 85080                 https://source.sakaiproject.org/contrib/rsmart/msub/blogwow/branches/2.9.3.x
 calendar -r 306511                https://source.sakaiproject.org/svn/msub/rsmart.com/calendar/branches/2.9.3.x
 chat -r 131604                    https://source.sakaiproject.org/svn/msub/rsmart.com/chat/branches/2.9.3.x
-clog -r 85765                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/2.9.3.x
+#clog -r 85765                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/2.9.3.x
 citations -r 306512               https://source.sakaiproject.org/svn/msub/rsmart.com/citations/branches/2.9.3.x
 common -r 131606                  https://source.sakaiproject.org/svn/msub/rsmart.com/common/branches/2.9.3.x
 config -r 133661                  https://source.sakaiproject.org/svn/msub/rsmart.com/config/branches/2.9.3.x
@@ -34,7 +34,7 @@ hierarchy -r 85088               https://source.sakaiproject.org/contrib/rsmart/
 hybrid -r 131617                  https://source.sakaiproject.org/svn/msub/rsmart.com/hybrid/branches/2.9.3.x
 itunesu-tool -r 85089            https://source.sakaiproject.org/contrib/rsmart/msub/itunesu-tool/branches/2.9.3.x
 iclicker -r 85090                https://source.sakaiproject.org/contrib/rsmart/msub/iclicker/branches/2.9.3.x
-jforum -r 85763                  https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/2.9.3.x
+#jforum -r 85763                  https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/2.9.3.x
 jobscheduler -r 131618            https://source.sakaiproject.org/svn/msub/rsmart.com/jobscheduler/branches/2.9.3.x
 jsf -r 131619                     https://source.sakaiproject.org/svn/msub/rsmart.com/jsf/branches/2.9.3.x
 kaltura -r 131620                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/2.9.3.x
@@ -61,7 +61,7 @@ presence -r 131638                https://source.sakaiproject.org/svn/msub/rsmar
 profile -r 131639                 https://source.sakaiproject.org/svn/msub/rsmart.com/profile/branches/2.9.3.x
 profile2 -r 133671                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/branches/2.9.3.x
 providers -r 131641               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/branches/2.9.3.x
-reference -r 133663               https://source.sakaiproject.org/svn/msub/rsmart.com/reference/branches/2.9.3.x
+#reference -r 133663               https://source.sakaiproject.org/svn/msub/rsmart.com/reference/branches/2.9.3.x
 reports -r 131643                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/branches/2.9.3.x
 reset-pass -r 131644              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/branches/2.9.3.x
 rights -r 131645                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/branches/2.9.3.x

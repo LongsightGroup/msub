@@ -121,7 +121,6 @@
                 <module>calendar</module>
                 <module>chat</module>
                 <module>citations</module>
-                <module>clog</module>
                 <module>common</module>
                 <module>config</module>
                 <module>config-viewer</module>
@@ -149,7 +148,6 @@
                 <module>hybrid</module>
                 <module>iclicker</module>
                 <module>itunesu-tool</module>
-		<module>jforum</module> 
                 <module>jobscheduler</module>
                 <module>jsf</module>
                 <module>kaltura</module>
@@ -178,8 +176,6 @@
                 <module>providers</module>
                 <module>profile</module>
                 <module>profile2</module>
-
-                <module>reference</module>
 
                 <module>rights</module>
                 <module>roster</module>
