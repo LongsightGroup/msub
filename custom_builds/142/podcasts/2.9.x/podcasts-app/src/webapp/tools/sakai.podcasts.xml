@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+   <tool title="Podcasts" description="Use Podcasts to share rss feeds with your site participants." id="sakai.podcasts">
+
+
+      <configuration name="functions.require" value="content.read"/>
+      <configuration name="help.id" value="sakai.podcasts"/> 
+
+
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="project"/>
+</tool>
+</registration>
