@@ -63,6 +63,10 @@
 			<artifactId>entitybroker-api</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.sakaiproject.entitybroker</groupId>
+			<artifactId>entitybroker-utils</artifactId>
+		</dependency>
+		<dependency>
             <groupId>org.sakaiproject.edu-services.gradebook</groupId>
             <artifactId>gradebook-service-api</artifactId>
             <version>${sakai.edu-services.version}</version>
@@ -99,6 +103,11 @@
             <version>${sakai.scheduler.version}</version>
             <scope>provided</scope>
         </dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>0.11.6</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<resources>
