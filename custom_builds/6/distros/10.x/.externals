@@ -89,7 +89,7 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/user/user-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
-iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.4
+iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.5
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
