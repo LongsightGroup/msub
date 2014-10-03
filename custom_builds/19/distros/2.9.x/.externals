@@ -86,7 +86,7 @@ blogwow https://source.sakaiproject.org/contrib//programmerscafe/blogwow/branche
 clog https://source.sakaiproject.org/contrib/clog/tags/clog-0.9.3/
 common https://source.sakaiproject.org/svn/msub/longsight.com/common/common-1.2.x-backport
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/19/config/config-2.9.x_custom
-edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport
+edu-services -r 313810 https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_iRubric/
