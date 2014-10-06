@@ -80,7 +80,7 @@ blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
-kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20140811
+kaltura -r 313603 https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/trunk
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
