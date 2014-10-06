@@ -58,7 +58,7 @@ reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-10.x
-#samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
+samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
 search https://source.sakaiproject.org/svn/search/branches/sakai-10.x
 sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
@@ -90,7 +90,7 @@ jobscheduler https://source.sakaiproject.org/svn/msub/longsight.com/custom_build
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-10.x_backport
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-10.x_backport
-samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/25/samigo/sakai-10.x
+#samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/25/samigo/sakai-10.x
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_custom
 syllabus https://source.sakaiproject.org/svn/msub/longsight.com/syllabus/syllabus-10.x_backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
