@@ -85,7 +85,6 @@
                 <module>message</module>
                 <module>metaobj</module>
                 <module>msgcntr</module>
-                <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
                 <module>portal</module>
@@ -93,7 +92,6 @@
                 <module>presence</module>
                 <module>profile2</module>
                 <module>providers</module>
-                <module>reference</module>
                 <module>reset-pass</module>
                 <module>rights</module>
                 <module>roster2</module>
@@ -118,6 +116,11 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>blogwow</module>
+                <module>etudes-util</module>
+                <module>melete</module>
+                <module>kaltura</module>
+                <module>evaluation</module>
             </modules>
         </profile>
         <profile>
