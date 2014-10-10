@@ -98,7 +98,7 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-10.x_backport
 scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/sakai-10/
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_custom
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_customIrubric
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/branches/sakai-2.9
 
