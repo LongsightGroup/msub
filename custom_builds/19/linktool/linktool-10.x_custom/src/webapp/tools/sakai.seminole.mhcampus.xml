@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<registration>
+
+        <tool
+                        id="sakai.seminole.mhcampus"
+                        title="MHCampus"
+                        description="McGraw-Hill content integration option.">
+
+                <configuration name="urlProp" value="sakai.seminole.mhcampus.url" />
+                <configuration name="height" value="1000px" />
+                <configuration name="trustedService" value="true" />
+    <category name="course" />
+    <category name="project" />
+    <category name="portfolio" />
+
+
+                <keyword name="linktool" />
+<configuration name="functions.require" />
+        </tool>
+
+</registration>
+
