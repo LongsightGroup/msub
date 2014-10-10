@@ -24,7 +24,7 @@ access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
 alias https://source.sakaiproject.org/svn/alias/branches/sakai-10.x
 announcement https://source.sakaiproject.org/svn/announcement/branches/sakai-10.x
 #archive https://source.sakaiproject.org/svn/archive/branches/sakai-10.x
-assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
+#assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
 authz https://source.sakaiproject.org/svn/authz/branches/sakai-10.x
 basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
@@ -77,6 +77,7 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 # CUSTOMIZATIONS
+assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_iRubric
 assignment2 https://source.sakaiproject.org/svn/msub/longsight.com/assignment2/assignment2-10.x_features-backport
 archive https://source.sakaiproject.org/svn/msub/longsight.com/archive/archive-10.x_backport
 batch-user-creation https://source.sakaiproject.org/contrib/samoo/batch-user-creation-tool/trunk
@@ -90,6 +91,7 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-10.x_iRubric
 gradebook-export https://source.sakaiproject.org/svn/msub/longsight.com/gradebook-export/gradebook-export-1.5-src
 help https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/19/help/help-10.x_custom
+irubric https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-core/
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-10.x_backport
 linktool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/19/linktool/linktool-10.x_custom
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x

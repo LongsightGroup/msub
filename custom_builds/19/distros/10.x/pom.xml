@@ -53,7 +53,8 @@
                 <module>alias</module>
                 <module>announcement</module>
                 <module>archive</module>
-                <module>assignment</module>
+                <module>irubric</module>
+		<module>assignment</module>
                 <module>authz</module>
                 <module>basiclti</module>
                 <module>calendar</module>
