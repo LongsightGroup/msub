@@ -118,6 +118,18 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+                
+		<module>assignment2</module>
+		<module>batch-user-creation</module>
+		<module>blogwow</module>
+		<module>clog</module>
+		<module>etudes-util</module>
+		<module>melete</module>
+		<module>evaluation</module>
+		<module>gradebook-export</module>
+		<module>linktool</module>
+		<module>wicket-for-scorm</module>
+		<module>scorm</module>
             </modules>
         </profile>
         <profile>
