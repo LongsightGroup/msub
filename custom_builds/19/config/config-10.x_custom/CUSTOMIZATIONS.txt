@@ -1,1 +1,5 @@
+Assignment1 Name = Assignment1
+Assignment2 Name = Assignment2
+Schedule Name = Calendar
+SEMS-71 Rename BBB to Webinars
 
