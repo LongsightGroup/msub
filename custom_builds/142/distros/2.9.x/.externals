@@ -90,5 +90,5 @@ velocity -r 131662                https://source.sakaiproject.org/svn/msub/rsmar
 warehouse -r 131663               https://source.sakaiproject.org/svn/msub/rsmart.com/warehouse/branches/2.9.3.x
 was -r 131664                     https://source.sakaiproject.org/svn/msub/rsmart.com/was/branches/2.9.3.x
 web                               https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/web/2.9.x
-webservices -r 132618             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.3.x
+webservices                       https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.5.x
 
