@@ -88,7 +88,7 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 reset-pass https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/reset-pass-2.9.x_custom
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-2.9.x-backport
-signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
+signup https://source.sakaiproject.org/svn/msub/longsight.com/signup/signup-2.9.x_features-backport/
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/site-manage/branches/sakai-2.9.x/
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
