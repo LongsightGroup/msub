@@ -56,6 +56,12 @@
 					<tr>
 						<td colspan="2"><a href="${passwordResetUrl}">${passwordResetWording}</a></td>
 					</tr>
+					<tr>
+						<td colspan="2"><a href="${passwordResetUrl}">¿Olvido su contraseña?</a></td>
+					</tr>
+					<tr>
+						<td colspan="2">(Note: Using this link does not work if you have an account that is linked to your institution's local network account. Contact your local Sakai Coordinator if you are unsure.)</a></td>
+					</tr>
 					#end
 					</table>
 				</form>
