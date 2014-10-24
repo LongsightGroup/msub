@@ -70,7 +70,7 @@ rwiki 			                   https://source.sakaiproject.org/svn/msub/longsight.c
 sakai-mock -r 131648              https://source.sakaiproject.org/svn/msub/rsmart.com/sakai-mock/branches/2.9.3.x
 sakai-wicket -r 85095            https://source.sakaiproject.org/contrib/rsmart/msub/sakai-wicket/branches/2.9.3.x
 sakora -r 85096                  https://source.sakaiproject.org/contrib/rsmart/msub/sakora/branches/2.9.3.x
-sam -r 307136                     https://source.sakaiproject.org/svn/msub/rsmart.com/sam/branches/2.9.3.x
+sam                             https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/sam/2.9.x
 search -r 306516                  https://source.sakaiproject.org/svn/msub/rsmart.com/search/branches/2.9.3.x
 sections -r 131651                https://source.sakaiproject.org/svn/msub/rsmart.com/sections/branches/2.9.3.x
 shortenedurl -r 131652            https://source.sakaiproject.org/svn/msub/rsmart.com/shortenedurl/branches/2.9.3.x
