@@ -1,0 +1,2 @@
+* SAM-1330: disable data discprenacy
+  * samigo.browserDataDiscrepancy=false
