@@ -58,13 +58,13 @@ reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-10.x
-samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
+#samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
 search https://source.sakaiproject.org/svn/search/branches/sakai-10.x
 sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
 signup https://source.sakaiproject.org/svn/signup/branches/sakai-10.x/
 site https://source.sakaiproject.org/svn/site/branches/sakai-10.x
-site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
+#site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
@@ -75,3 +75,15 @@ usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
+
+# CUSTOMIZATIONS:
+
+blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x/
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_features-backport
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-10
+
