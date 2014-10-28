@@ -13,3 +13,6 @@ SAM-2352 Don't run on assessment attempts with a null submittedDate ; Tests and 
 SAM-1263 New question type - image map
 
 TODO: SAM-2056 Better usability in jquery ui
+Updated 08/28/2014 svn merge "^/sam/branches/sakai-10.x"
+Updated 10/20/2014 svn merge "^/sam/branches/sakai-10.x"
+Updated 10/28/2014 Update this clients FB (6) to match the regular FB 
