@@ -1,0 +1,15 @@
+SAM-1239 Properties wording change for data_discrepancy_1
+SAM-1330 Allow disabling of browser-based data discrepancy errors
+SAM-948 'Minimum value' option for questions
+SEMS-39 Turn off warning to users of Edited Quiz
+LS-4 Test Description 60k limit; patch submitted but not committed on SAM-1200
+LS-112 Allow 60k chars instead of 4k chars for Part Information textarea
+LS-136 fill in the blank plus question type comming from a bb import 
+LS-145 Set Samigo Feedback Text field limit to 60k 
+SAM-1117 Option to Not Display how many points question worth in assessments
+SAM-1751 Add Honor Pledge Option like the Assignments Tool has
+SAM-2188 Expand Collapse All for samigo settings
+SAM-2352 Don't run on assessment attempts with a null submittedDate ; Tests and Quizzes - Autosubmit issues (MND-488196)
+SAM-1263 New question type - image map
+
+TODO: SAM-2056 Better usability in jquery ui
