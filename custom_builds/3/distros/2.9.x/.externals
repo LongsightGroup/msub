@@ -11,7 +11,7 @@ dav https://source.sakaiproject.org/svn/dav/branches/sakai-2.9.x
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-2.9.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-2.9.x
 linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-2.9.x
-login https://source.sakaiproject.org/svn/login/branches/sakai-2.9.x
+#login https://source.sakaiproject.org/svn/login/branches/sakai-2.9.x
 master https://source.sakaiproject.org/svn/master/branches/sakai-2.9.x
 memory https://source.sakaiproject.org/svn/memory/branches/sakai-2.9.x
 metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-2.9.x
@@ -20,7 +20,7 @@ pack https://source.sakaiproject.org/svn/pack/branches/sakai-2.9.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-2.9.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-2.9.x
 #providers https://source.sakaiproject.org/svn/providers/branches/sakai-2.9.x
-reference https://source.sakaiproject.org/svn/reference/branches/sakai-2.9.x
+#reference https://source.sakaiproject.org/svn/reference/branches/sakai-2.9.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-2.9.x
 roster https://source.sakaiproject.org/svn/roster/branches/sakai-2.9.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-2.9.x
@@ -92,6 +92,7 @@ formbuilder https://source.sakaiproject.org/contrib/ucf/formbuilder/tags/formbui
 #NMG-275133
 jforum https://source.sakaiproject.org/contrib/etudes/sakai-jforum/tags/2.9.11/
 kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/trunk
+login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-2.9.x_features-backport
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak29x
 mneme https://source.sakaiproject.org/contrib/longsight/mneme/CTools-2.9.0-patched/
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport

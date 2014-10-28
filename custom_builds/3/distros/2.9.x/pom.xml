@@ -112,7 +112,6 @@
                 <module>postem</module>
                 <module>presence</module>
                 <module>providers</module>
-                <module>reference</module>
                 <module>rights</module>
                 <module>roster</module>
                 <module>rwiki</module>
