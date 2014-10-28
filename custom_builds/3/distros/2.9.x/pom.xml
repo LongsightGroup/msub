@@ -128,23 +128,25 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <!-- Customizations -->
-		<module>adobeconnect</module>
 		<module>blogwow</module>
 		<module>etudes-util</module>
-		<module>ambrosia</module>
 		<module>hierarchy</module>
 		<module>delegatedaccess</module>
 		<module>evaluation</module>
-		<module>feed</module>
 		<module>formbuilder</module>
 		<module>jforum</module>
-		<module>kaltura</module>
 		<module>mailsender</module>
 		<module>melete</module>
+                <!-- 2014-10-25 Just want successful build
+		<module>adobeconnect</module>
+		<module>feed</module>
+		<module>kaltura</module>
+		<module>ambrosia</module>
 		<module>mneme</module>
 		<module>qna</module>
 		<module>signup</module>
 		<module>sms</module>
+                -->
 	    </modules>
         </profile>
         <profile>
