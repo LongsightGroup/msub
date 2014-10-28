@@ -912,3 +912,15 @@ div.expand {
 div.collapse {
     background: url('/library/image/sakai/expand.gif') no-repeat left !important;
 }
+
+.qtipBodyContent{
+   font-family: 'Helvetica Neue', Arial,sans-serif !important;
+   font-size: 1.3em !important;
+   min-width: 400px !important;
+}
+
+.qtip{
+    font-size: inherit !important;
+    line-height: inherit !important;
+    font-family: inherit !important;
+}
