@@ -48,6 +48,7 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
 		
 		ProfileImage image = new ProfileImage();
 		boolean allowed = false;
+		boolean gctsViewHidden = false;
 		boolean isSameUser = false;
 		String officialImageSource;
 		
@@ -98,6 +99,7 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
 			if(!sakaiProxy.isUserMyWorkspace(siteId)) {
 				log.debug("checking if user: " + currentUserUuid + " has permissions in site: " + siteId);
 				allowed = sakaiProxy.isUserAllowedInSite(currentUserUuid, ProfileConstants.ROSTER_VIEW_PHOTO, siteId);
+				gctsViewHidden = sakaiProxy.isUserAllowedInSite(currentUserUuid, "roster.viewhidden", siteId);
 			}
 		}
 		
@@ -186,7 +188,7 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
 				
 				//check source and get appropriate value
 				if(StringUtils.equals(officialImageSource, ProfileConstants.OFFICIAL_IMAGE_SETTING_URL)){
-					image.setOfficialImageUrl(getOfficialImageUrl(userUuid));
+					image.setOfficialImageUrl(getOfficialImageUrl(userUuid, gctsViewHidden));
 				} else if(StringUtils.equals(officialImageSource, ProfileConstants.OFFICIAL_IMAGE_SETTING_PROVIDER)){
 					String data = getOfficialImageEncoded(userUuid);
 					if(StringUtils.isBlank(data)) {
@@ -654,8 +656,9 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
 	 * 
 	 * @return url or a default image if none
 	 */
-	private String getOfficialImageUrl(final String userUuid) {
-		
+	private String getOfficialImageUrl(final String userUuid, final boolean gctsViewHidden) {
+    	String imageUrl = "";
+
 		//get external image from institutional repository
 		User u = sakaiProxy.getUserById(userUuid);
 		String eid = StringUtils.lowerCase(u.getEid());
@@ -668,9 +671,17 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
 			return defaultImageUrl;
 		}
     	
-		String imageSalt = sakaiProxy.getServerConfigurationParameter("longsight.LS-163.salt", "xxxxxxxxx");
-		String saltedEid = ProfileUtils.calculateMD5(eid + imageSalt);
-		String imageUrl = sakaiProxy.getServerConfigurationParameter("longsight.LS-163.urlpath", "https://images.longsight.com/") + saltedEid + ".jpg";
+
+    	if (gctsViewHidden) {
+    		String imageSalt = sakaiProxy.getServerConfigurationParameter("longsight.LS-185.salt", "xxxxxxxxx");
+    		String saltedEid = ProfileUtils.calculateMD5(eid + imageSalt);
+    		imageUrl = sakaiProxy.getServerConfigurationParameter("longsight.LS-185.urlpath", "https://images.longsight.com/") + saltedEid + ".jpg";
+    	}
+    	else {
+    		String imageSalt = sakaiProxy.getServerConfigurationParameter("longsight.LS-163.salt", "xxxxxxxxx");
+    		String saltedEid = ProfileUtils.calculateMD5(eid + imageSalt);
+    		imageUrl = sakaiProxy.getServerConfigurationParameter("longsight.LS-163.urlpath", "https://images.longsight.com/") + saltedEid + ".jpg";
+    	}
 		
     	return imageUrl;
 	}
