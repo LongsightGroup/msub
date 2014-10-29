@@ -1378,7 +1378,7 @@ public class GradingService
           if (!totalItems.containsKey(itemId)){
             totalItems.put(itemId,  Double.valueOf(autoScore));
           }else {
-            accumelateScore = ((Float)totalItems.get(itemId)).floatValue();
+            accumelateScore = ((Double)totalItems.get(itemId)).doubleValue();
             accumelateScore += autoScore;
             totalItems.put(itemId,  Double.valueOf(accumelateScore));
           }
