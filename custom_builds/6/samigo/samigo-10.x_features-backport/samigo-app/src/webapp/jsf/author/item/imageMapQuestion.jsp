@@ -35,7 +35,6 @@
       <head><%= request.getAttribute("html.head") %>
       <title><h:outputText value="#{authorMessages.item_display_author}"/></title>
 	  
-	  <script type="text/javascript" src="/library/js/jquery/1.7.1/jquery-1.7.1.min.js"></script>
 	  <script language='javascript' src='/samigo-app/js/jquery.dynamiclist.author.js'></script>
 	  <script language='javascript' src='/samigo-app/js/selection.author.js'></script>
 	  

@@ -24,7 +24,6 @@ include file for displaying fill in the numeric questions
 -->
 
 <f:verbatim>
-<script type="text/javascript" src="/library/js/jquery/1.7.1/jquery-1.7.1.min.js"></script>
 <script language='javascript' src='/samigo-app/js/selection.author.preview.js'></script>
 <script language='javascript' src='/samigo-app/js/selection.student.preview.js'></script>
 

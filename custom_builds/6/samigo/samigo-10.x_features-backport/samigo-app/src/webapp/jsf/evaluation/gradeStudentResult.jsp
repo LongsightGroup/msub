@@ -44,11 +44,8 @@ $Id$
         }
       </style>
       <title><h:outputText value="#{commonMessages.total_scores}" /></title>
-      <script type="text/javascript" src="/library/js/jquery/jquery-1.9.1.min.js"></script>
-      <script type="text/javascript" src="/library/js/jquery/ui/1.10.3/jquery-ui.1.10.3.full.min.js"></script>
     <samigo:script path="/jsf/widget/hideDivision/hideDivision.js" />
 	
-		<script type="text/javascript" src="/library/js/jquery/1.7.1/jquery-1.7.1.min.js"></script>
 		<script language='javascript' src='/samigo-app/js/jquery.dynamiclist.student.preview.js'></script>
 		<script language='javascript' src='/samigo-app/js/selection.student.preview.js'></script>
 		<script language='javascript' src='/samigo-app/js/selection.author.preview.js'></script>
