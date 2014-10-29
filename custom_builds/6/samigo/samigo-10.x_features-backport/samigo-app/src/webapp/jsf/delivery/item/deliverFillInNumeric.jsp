@@ -30,7 +30,7 @@ should be included in file importing DeliveryMessages
 <h:outputLink value="#" styleClass="hasTooltip">
 	<h:outputText value="#{deliveryMessages.additional_instructions_label}" />
 </h:outputLink>
-<h:panelGroup layout="block" id="div_accepted_instruction" style="display:none;">
+<h:panelGroup id="div_accepted_instruction" style="display:none;">
 	<h:outputText value="#{deliveryMessages.fin_accepted_instruction} " escape="false" />
 	<f:verbatim><br /></f:verbatim>
 	<h:outputText value="#{deliveryMessages.fin_complex_note} " escape="false" />
@@ -135,7 +135,7 @@ should be included in file importing DeliveryMessages
 $('.hasTooltip').each(function() { // Notice the .each() loop, discussed below
     $(this).qtip({
         content: {
-            text: $(this).next('div') // Use the "div" element after this for the content
+            text: $(this).next('span') // Use the "div" element after this for the content
         },
         position: {
           target: 'mouse', 
