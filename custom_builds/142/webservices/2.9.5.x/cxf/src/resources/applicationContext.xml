@@ -70,6 +70,12 @@ http://cxf.apache.org/schemas/jaxws.xsd">
         </jaxrs:serviceBeans>
     </jaxrs:server>
 
+    <jaxrs:server id="WSLongsightRS" address="/rest/longsight">
+        <jaxrs:serviceBeans>
+            <ref bean="org.sakaiproject.webservices.WSLongsight"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
     <jaxrs:server id="GenerateTokensRS" address="/rest/generatetokens">
         <jaxrs:serviceBeans>
             <ref bean="org.sakaiproject.webservices.GenerateTokens"/>
@@ -154,6 +160,10 @@ http://cxf.apache.org/schemas/jaxws.xsd">
                     implementor="#org.sakaiproject.webservices.TestsAndQuizzes"
                     address="/soap/testsandquizzes"/>
 
+    <jaxws:endpoint id="WSLongsight"
+                    implementor="#org.sakaiproject.webservices.WSLongsight"
+                    address="/soap/longsight"/>
+
     <jaxws:endpoint id="GenerateTokens"
                     implementor="#org.sakaiproject.webservices.GenerateTokens"
                     address="/soap/generatetokens"/>
@@ -212,6 +222,12 @@ http://cxf.apache.org/schemas/jaxws.xsd">
         <property name="shortenedUrlService" ref="org.sakaiproject.shortenedurl.api.ShortenedUrlService"/>
         <property name="samLiteService" ref="org_sakaiproject_tool_assessment_services_samlite_SamLiteService"/>
         <property name="idManager" ref="org.sakaiproject.id.api.IdManager"/>
+        <property name="preferencesService" ref="org.sakaiproject.user.api.PreferencesService"/>
+        <property name="archiveService" ref="org.sakaiproject.archive.api.ArchiveService"/>
+        <property name="memoryService" ref="org.sakaiproject.memory.api.MemoryService"/>
+        <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
+        <property name="importService" ref="org.sakaiproject.importer.api.ImportService"/>
+        <property name="syllabusManager" ref="org.sakaiproject.api.app.syllabus.SyllabusManager"/>
     </bean>
 
     <bean id="org.sakaiproject.webservices.Assignments" class="org.sakaiproject.webservices.Assignments" init-method="init" parent="org.sakaiproject.webservices.AbstractWebService" />
@@ -223,6 +239,7 @@ http://cxf.apache.org/schemas/jaxws.xsd">
     <bean id="org.sakaiproject.webservices.SakaiScript" class="org.sakaiproject.webservices.SakaiScript" init-method="init" parent="org.sakaiproject.webservices.AbstractWebService" />
     <bean id="org.sakaiproject.webservices.ShortenedUrl" class="org.sakaiproject.webservices.ShortenedUrl" init-method="init" parent="org.sakaiproject.webservices.AbstractWebService" />
     <bean id="org.sakaiproject.webservices.TestsAndQuizzes" class="org.sakaiproject.webservices.TestsAndQuizzes" init-method="init" parent="org.sakaiproject.webservices.AbstractWebService" />
+    <bean id="org.sakaiproject.webservices.WSLongsight" class="org.sakaiproject.webservices.WSLongsight" init-method="init" parent="org.sakaiproject.webservices.AbstractWebService" />
     <bean id="org.sakaiproject.webservices.GenerateTokens" class="org.sakaiproject.webservices.GenerateTokens" init-method="init" parent="org.sakaiproject.webservices.AbstractWebService" >
         <property name="generatedTokenService" ref="com.rsmart.decryption.api.GeneratedTokenService"/>
     </bean>

@@ -30,6 +30,12 @@
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxws</artifactId>
             <version>${cxf.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>asm</groupId>
+                    <artifactId>asm</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
@@ -80,6 +86,10 @@
         <dependency>
             <groupId>org.sakaiproject.calendar</groupId>
             <artifactId>sakai-calendar-api</artifactId>
+        </dependency>
+		<dependency>
+            <groupId>org.sakaiproject</groupId>
+            <artifactId>sakai-syllabus-api</artifactId>
         </dependency>
 		<dependency>
 	      	<groupId>org.sakaiproject.shortenedurl</groupId>
@@ -198,6 +208,15 @@
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
         </dependency>
+
+        <!-- SAK-27503 we do not want aopalliance JAR deployed in our WAR! -->
+        <dependency>
+            <groupId>aopalliance</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
         	<groupId>com.thoughtworks.paranamer</groupId>
         	<artifactId>paranamer</artifactId>
@@ -210,6 +229,19 @@
         	<version>4.11</version>
             <scope>test</scope>
         </dependency>
+
+	<!-- Needed for WSLongsight only -->
+    <dependency>
+      <groupId>org.sakaiproject.edu-services.gradebook</groupId>
+      <artifactId>gradebook-service-hibernate</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.edu-services.gradebook</groupId>
+      <artifactId>gradebook-service-impl</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+	<!-- End WSLongsight only-->
+
     </dependencies>
 
     <build>
