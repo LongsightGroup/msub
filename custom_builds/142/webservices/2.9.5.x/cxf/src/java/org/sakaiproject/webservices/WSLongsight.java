@@ -64,8 +64,6 @@ import org.sakaiproject.entity.cover.EntityManager;
 import org.sakaiproject.event.api.NotificationService;
 import org.sakaiproject.event.api.UsageSession;
 import org.sakaiproject.exception.IdUnusedException;
-import org.sakaiproject.importer.api.ImportDataSource;
-import org.sakaiproject.importer.api.ResetOnCloseInputStream;
 import org.sakaiproject.memory.api.Cache;
 import org.sakaiproject.service.gradebook.shared.Assignment;
 import org.sakaiproject.site.api.Group;
@@ -79,7 +77,6 @@ import org.sakaiproject.time.api.TimeBreakdown;
 import org.sakaiproject.time.api.TimeRange;
 import org.sakaiproject.tool.api.Session;
 import org.sakaiproject.tool.api.Tool;
-import org.sakaiproject.tool.assessment.data.dao.grading.AssessmentGradingData;
 import org.sakaiproject.tool.assessment.facade.PublishedAssessmentFacade;
 import org.sakaiproject.tool.assessment.facade.PublishedAssessmentFacadeQueries;
 import org.sakaiproject.tool.assessment.services.assessment.PublishedAssessmentService;
@@ -1718,25 +1715,6 @@ public class WSLongsight extends AbstractWebService {
 	}
 
 	@WebMethod
-	@Path("/archiveSite")
-	@Produces("text/plain")
-	@GET
-	public String archiveSite(
-			@WebParam(name = "sessionid", partName = "sessionid") @QueryParam("sessionid") String sessionid,
-			@WebParam(name = "siteid", partName = "siteid") @QueryParam("siteid") String siteid) 
-	{
-		Session session = establishSession(sessionid);
-
-		try {
-			String msg = archiveService.archive(siteid);
-		}
-		catch (Exception e) {
-			return e.getClass().getName() + " : " + e.getMessage();
-		}
-		return "success";
-	}
-
-	@WebMethod
 	@Path("/addConfigPropertyToPage")
 	@Produces("text/plain")
 	@GET
@@ -2651,46 +2629,6 @@ public class WSLongsight extends AbstractWebService {
 	}
 
 	@WebMethod
-	@Path("/longsightImportFromFile")
-	@Produces("text/plain")
-	@GET
-	public String longsightImportFromFile(
-			@WebParam(name = "sessionId", partName = "sessionId") @QueryParam("sessionId") String sessionId,
-			@WebParam(name = "siteId", partName = "siteId") @QueryParam("siteId") String siteId,
-			@WebParam(name = "filename", partName = "filename") @QueryParam("filename") String filename) 
-	{
-		Session session = establishSession(sessionId);
-
-		if (!securityService.isSuperUser()) {
-			LOG.warn("WS getCourseGrades(): Permission denied. Restricted to super users.");
-			return "FAILURE: getCourseGrades(): Permission denied. Restricted to super users.";
-		}
-
-		try {
-			FileInputStream file = new FileInputStream(filename);
-			byte[] bytes = new byte[file.available()];
-			file.read(bytes);
-			file.close();
-
-			ResetOnCloseInputStream inputStream = new ResetOnCloseInputStream(file);
-
-			if (importService.isValidArchive(inputStream)) {
-				ImportDataSource importDataSource = importService.parseFromFile(inputStream);
-				LOG.info("Getting import items from manifest.");
-				List lst = importDataSource.getItemCategories();
-				if (lst != null && lst.size() > 0) {
-					importService.doImportItems(importDataSource.getItemsForCategories(lst), siteId);
-					return "success";
-				}
-			}
-			return "failure";
-		} catch (Exception e) {
-			return e.getClass().getName() + " : " + e.getMessage();
-		}
-
-	}
-
-	@WebMethod
 	@Path("/longsightGetRoleForSite")
 	@Produces("text/plain")
 	@GET
@@ -3049,8 +2987,7 @@ public class WSLongsight extends AbstractWebService {
 					int success = dbUpdate(UPDATE_SQL, new String[]{newEid, currentEid});
 					if(success > 0){
 						// Need to clear the id - eid cache
-						boolean clearedCache = clearCache(ID_EID_CACHE);
-						LOG.info("Cache cleared because of eid update: " + ID_EID_CACHE + ":" + clearedCache);
+						boolean clearedCache = false;
 						return "Successfully updated eid: " + currentEid + " to eid: " + newEid + ";cacheCleared=" + clearedCache;
 					}else{
 						return "Update failed for changing from eid: " + currentEid + " to eid: " + newEid;
@@ -3472,141 +3409,6 @@ public class WSLongsight extends AbstractWebService {
 	}
 
 	@WebMethod
-	@Path("/getUserAssesmentAttemptDate")
-	@Produces("text/plain")
-	@GET
-	public String getUserAssesmentAttemptDate(
-			@WebParam(name = "sessionid", partName = "sessionid") @QueryParam("sessionid") String sessionid,
-			@WebParam(name = "siteid", partName = "siteid") @QueryParam("siteid") String siteid,
-			@WebParam(name = "userid", partName = "userid") @QueryParam("userid") String userid,
-			@WebParam(name = "assessmentName", partName = "assessmentName") @QueryParam("assessmentName") String assessmentName) {
-		Session session = establishSession(sessionid); 
-		String retVal = "";
-		LOG.warn(assessmentName);
-
-		PublishedAssessmentService publishedAssessmentService = new PublishedAssessmentService();
-
-		try {
-
-			Site site = siteService.getSite(siteid);
-			userid = userDirectoryService.getUserByEid(userid).getId();        
-
-			ArrayList scores = publishedAssessmentService.getBasicInfoOfLastOrHighestOrAverageSubmittedAssessmentsByScoringOption(userid, siteid, true);
-			LOG.warn("Got this many assessments: "+scores.size());
-
-			for (int i = 0; i < scores.size(); i++) {
-				AssessmentGradingData agd = (AssessmentGradingData) scores.get(i);
-				LOG.warn("Got "+agd.getPublishedAssessmentTitle());
-				if (agd.getPublishedAssessmentTitle().equals(assessmentName)) {
-
-					retVal = agd.getAttemptDate().toString();
-				}
-
-			}
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return retVal;
-	}
-
-	@WebMethod
-	@Path("/getScoresForSite")
-	@Produces("text/plain")
-	@GET
-	public String getScoresForSite(
-			@WebParam(name = "sessionid", partName = "sessionid") @QueryParam("sessionid") String sessionid,
-			@WebParam(name = "siteid", partName = "siteid") @QueryParam("siteid") String siteid) {
-		Session session = establishSession(sessionid); 
-
-		// establish the xml document
-		Document dom = Xml.createDocument();
-		Node list = dom.createElement("list");
-		dom.appendChild(list);
-
-		PublishedAssessmentService publishedAssessmentService = new PublishedAssessmentService();
-
-		try {
-
-			Site site = siteService.getSite(siteid);
-			Set users = site.getUsersHasRole("Student");
-
-			for (Iterator u = users.iterator(); u.hasNext();) {
-				String userid = (String) u.next();
-
-				ArrayList scores = publishedAssessmentService.getBasicInfoOfLastOrHighestOrAverageSubmittedAssessmentsByScoringOption(userid, siteid, true);
-
-				for (int i = 0; i < scores.size(); i++) {
-					AssessmentGradingData agf = (AssessmentGradingData) scores.get(i);
-
-					Node item = dom.createElement("item");
-
-					Node assessmentId = dom.createElement("assessmentId");
-					assessmentId.appendChild( dom.createTextNode(agf.getPublishedAssessmentId().toString()));
-					item.appendChild(assessmentId);
-
-					Node title = dom.createElement("title");
-					title.appendChild( dom.createTextNode(agf.getPublishedAssessmentTitle()));
-					item.appendChild(title);
-
-					Node finalScore = dom.createElement("finalScore");
-					finalScore.appendChild( dom.createTextNode(agf.getFinalScore().toString()));
-					item.appendChild(finalScore);
-
-					Node autoScore = dom.createElement("autoScore");
-					autoScore.appendChild( dom.createTextNode(agf.getTotalAutoScore().toString()));
-					item.appendChild(autoScore);
-
-					Node overrideScore = dom.createElement("overrideScore");
-					overrideScore.appendChild( dom.createTextNode(agf.getTotalOverrideScore().toString()));
-					item.appendChild(overrideScore);
-
-					Node attemptDate = dom.createElement("attemptDate");
-					attemptDate.appendChild( dom.createTextNode(agf.getAttemptDate().toString()));
-					item.appendChild(attemptDate);
-
-					Node comments = dom.createElement("comments");
-					comments.appendChild( dom.createTextNode(agf.getComments()));
-					item.appendChild(comments);
-
-					Node sakaiUserId = dom.createElement("userId");
-					sakaiUserId.appendChild( dom.createTextNode(agf.getAgentId()));
-					item.appendChild(sakaiUserId);
-
-					Node username = dom.createElement("username");
-					try {
-						User user = userDirectoryService.getUser(agf.getAgentId());
-						String eid = user.getEid();
-						username.appendChild( dom.createTextNode(eid) );
-
-						Node firstName = dom.createElement("firstName");
-						firstName.appendChild( dom.createTextNode(user.getFirstName()));
-						item.appendChild(firstName);
-
-						Node lastName = dom.createElement("lastName");
-						lastName.appendChild( dom.createTextNode(user.getLastName()));
-						item.appendChild(lastName);
-					}
-					catch (Exception ee) {
-						username.appendChild( dom.createTextNode("nouser") );
-					}
-					item.appendChild(username);
-
-
-
-					list.appendChild(item);
-				}
-			}
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return Xml.writeDocumentToString(dom);
-	}
-
-	@WebMethod
 	@Path("/getAssignmentsForContext")
 	@Produces("text/plain")
 	@GET
@@ -3774,102 +3576,6 @@ public class WSLongsight extends AbstractWebService {
 	} 
 
         @WebMethod
-        @Path("/getScoresForSiteForUser")
-        @Produces("text/plain")
-        @GET
-        public String getScoresForSiteForUser(
-            @WebParam(name = "sessionid", partName = "sessionid") @QueryParam("sessionid") String sessionid,
-            @WebParam(name = "siteid", partName = "siteid") @QueryParam("siteid") String siteid,
-            @WebParam(name = "userid", partName = "userid") @QueryParam("userid") String userid) {
-            Session session = establishSession(sessionid); 
-
-            // establish the xml document
-            Document dom = Xml.createDocument();
-            Node list = dom.createElement("list");
-            dom.appendChild(list);
-
-            PublishedAssessmentService publishedAssessmentService = new PublishedAssessmentService();
-
-            try {
-
-                    Site site = siteService.getSite(siteid);
-                    //Set users = site.getUsersHasRole("Student");
-                    userid = userDirectoryService.getUserByEid(userid).getId();
-
-
-                    ArrayList scores = publishedAssessmentService.getBasicInfoOfLastOrHighestOrAverageSubmittedAssessmentsByScoringOption(userid, siteid, true);
-                    System.out.println(userid+" "+scores.size());
-
-                    for (int i = 0; i < scores.size(); i++) {
-                            AssessmentGradingData agd = (AssessmentGradingData) scores.get(i);
-
-                            Node item = dom.createElement("item");
-
-                            Node assessmentId = dom.createElement("assessmentId");
-                            assessmentId.appendChild( dom.createTextNode(agd.getPublishedAssessmentId().toString()));
-                            item.appendChild(assessmentId);
-
-                            Node title = dom.createElement("title");
-                            title.appendChild( dom.createTextNode(agd.getPublishedAssessmentTitle()));
-                            item.appendChild(title);
-
-                            Node finalScore = dom.createElement("finalScore");
-                            finalScore.appendChild( dom.createTextNode(agd.getFinalScore().toString()));
-                            item.appendChild(finalScore);
-
-                            Node autoScore = dom.createElement("autoScore");
-                            autoScore.appendChild( dom.createTextNode(agd.getTotalAutoScore().toString()));
-                            item.appendChild(autoScore);
-
-                            Node overrideScore = dom.createElement("overrideScore");
-                            overrideScore.appendChild( dom.createTextNode(agd.getTotalOverrideScore().toString()));
-                            item.appendChild(overrideScore);
-
-                            Node attemptDate = dom.createElement("attemptDate");
-                            attemptDate.appendChild( dom.createTextNode(agd.getAttemptDate().toString()));
-                            item.appendChild(attemptDate);
-
-                            Node submitDate = dom.createElement("submitDate");
-                            submitDate.appendChild( dom.createTextNode(agd.getSubmittedDate().toString()));
-                            item.appendChild(submitDate);
-
-                            Node comments = dom.createElement("comments");
-                            comments.appendChild( dom.createTextNode(agd.getComments()));
-                            item.appendChild(comments);
-
-                            Node sakaiUserId = dom.createElement("userId");
-                            sakaiUserId.appendChild( dom.createTextNode(agd.getAgentId()));
-                            item.appendChild(sakaiUserId);
-
-                            Node username = dom.createElement("username");
-                            try {
-                                    User user = userDirectoryService.getUser(agd.getAgentId());
-                                    String eid = user.getEid();
-                                    username.appendChild( dom.createTextNode(eid) );
-
-                                    Node firstName = dom.createElement("firstName");
-                                    firstName.appendChild( dom.createTextNode(user.getFirstName()));
-                                    item.appendChild(firstName);
-
-                                    Node lastName = dom.createElement("lastName");
-                                    lastName.appendChild( dom.createTextNode(user.getLastName()));
-                                    item.appendChild(lastName);
-                            }
-                            catch (Exception ee) {
-                                    username.appendChild( dom.createTextNode("nouser") );
-                            }
-                            item.appendChild(username);
-                            list.appendChild(item);
-                    }
-            }
-            catch (Exception e) {
-                    e.printStackTrace();
-            }
-
-            return Xml.writeDocumentToString(dom);
-    }
-
-        @WebMethod
         @Path("/getPublishedAssessmentsForSite")
         @Produces("text/plain")
         @GET
@@ -3904,21 +3610,6 @@ public class WSLongsight extends AbstractWebService {
 
                 return Xml.writeDocumentToString(dom);
         }
-
-	@WebMethod
-	@Path("/clearUserIdEidCache")
-	@Produces("text/plain")
-	@GET
-	public boolean clearCache() {
-		return clearCache(ID_EID_CACHE);
-	}
-
-	@WebMethod(exclude = true)
-	private boolean clearCache(String cacheName) {
-		Cache cache = memoryService.getCache(cacheName);
-		cache.removeAll();
-		return true;
-	}
 
 	@WebMethod(exclude = true)
 	private int dbUpdate(String SQL, String[] params){

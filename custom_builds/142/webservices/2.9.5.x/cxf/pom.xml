@@ -185,7 +185,7 @@
         <dependency>
             <groupId>org.sakaiproject.sitemanage</groupId>
             <artifactId>sakai-site-manage-api</artifactId>
-            <version>${sakai.version}</version>
+            <version>2.9.3</version>
             <scope>provided</scope>
         </dependency>
 
@@ -234,11 +234,12 @@
     <dependency>
       <groupId>org.sakaiproject.edu-services.gradebook</groupId>
       <artifactId>gradebook-service-hibernate</artifactId>
+      <version>1.2.3</version>
     </dependency>
     <dependency>
       <groupId>org.sakaiproject.edu-services.gradebook</groupId>
       <artifactId>gradebook-service-impl</artifactId>
-      <version>${sakai.version}</version>
+      <version>1.2.3</version>
     </dependency>
 	<!-- End WSLongsight only-->
 
