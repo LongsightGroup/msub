@@ -1,0 +1,90 @@
+import org.apache.axis.AxisFault;
+import org.sakaiproject.component.cover.ComponentManager;
+import com.rsmart.sakai.mvel.api.MvelService;
+import org.sakaiproject.tool.api.Session;
+import org.sakaiproject.tool.api.SessionManager;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * SakaiMVEL.jws
+ * 
+ * Web service that will evaluate MVEL scripts
+ */
+
+public class SakaiMVEL {
+
+	private static final Log LOG = LogFactory.getLog(SakaiMVEL.class);
+
+	private MvelService mvelService;
+	private SessionManager sessionManager;
+	
+	/**
+	 * Setup dependencies
+	 */
+	public SakaiMVEL() {
+		sessionManager = (SessionManager) ComponentManager.get(SessionManager.class.getName());
+		mvelService = (MvelService) ComponentManager.get(MvelService.class.getName());
+	}
+
+	/**
+	 * Get the Session related to the given sessionid
+	 * 
+	 * @param sessionid
+	 *            the id of the session to retrieve
+	 * @return the session, if it is active
+	 * @throws AxisFault
+	 *             if session is inactive
+	 */
+	private Session establishSession(String sessionid) throws AxisFault {
+		Session s = sessionManager.getSession(sessionid);
+
+		if (s == null) {
+			throw new AxisFault("Session \"" + sessionid + "\" is not active");
+		}
+		s.setActive();
+		sessionManager.setCurrentSession(s);
+		return s;
+	}
+
+	/**
+	 * Evaluate the expression using the MvelService
+	 * 
+	 * @param sessionid
+	 *            the id of the session to retrieve
+	 * @param expression
+	 *            the expression to evaluate
+	 * @return the result of the expression
+	 * @throws AxisFault
+	 */
+	public String evaluate(String sessionid, String expression) throws AxisFault {
+		Session session = establishSession(sessionid);
+		
+		return mvelService.evaluateAsString(expression);
+	}
+	
+	/**
+	 * Evaluate the expression and paramters using the MvelService
+	 * Parameters must be expressed in JSON as a Map, for example:
+	 * 		{
+	 * 			"two": 2, 
+	 * 			"three": 3,
+	 * 			"firstName": "Earle"
+	 * 		}
+	 * Only Simple data types can be mapped.
+	 * 
+	 * @param sessionid
+	 *            the id of the session to retrieve
+	 * @param expression
+	 *            the expression to evaluate
+	 * @param parameters
+	 *            paramters that are used in the evaluation. Paramters are expressed in JSON.
+	 * @return the result of the expression
+	 * @throws AxisFault
+	 */
+	public String evaluate(String sessionid, String expression, String parameters) throws AxisFault {
+		Session session = establishSession(sessionid);
+		
+		return mvelService.evaluateAsString(expression, parameters);
+	}
+}

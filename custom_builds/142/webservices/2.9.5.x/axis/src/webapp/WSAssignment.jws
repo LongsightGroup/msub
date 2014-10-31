@@ -1,0 +1,239 @@
+/**********************************************************************************
+ * $URL: https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/axis/src/webapp/WSAssignment.jws $
+ ***********************************************************************************
+ *
+ * Copyright (c) 2014 The Sakai Foundation
+ *
+ * Licensed under the Educational Community License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.opensource.org/licenses/ECL-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ **********************************************************************************/
+
+import org.sakaiproject.component.cover.ComponentManager;
+
+import org.sakaiproject.assignment.cover.AssignmentService;
+import org.sakaiproject.assignment.api.Assignment;
+import org.sakaiproject.assignment.api.AssignmentEdit;
+import org.sakaiproject.assignment.api.AssignmentSubmissionEdit;
+import org.sakaiproject.assignment.api.AssignmentSubmission;
+import org.sakaiproject.assignment.api.AssignmentContentEdit;
+import org.sakaiproject.assignment.api.AssignmentContent;
+import org.sakaiproject.assignment.api.AssignmentSubmissionEdit;
+import org.sakaiproject.service.gradebook.shared.AssignmentHasIllegalPointsException;
+import org.sakaiproject.entity.api.Entity;
+import org.sakaiproject.entity.api.Reference;
+import org.sakaiproject.entity.api.EntityPropertyNotDefinedException;
+import org.sakaiproject.entity.api.EntityPropertyTypeException;
+import org.sakaiproject.entity.api.ResourceProperties;
+import org.sakaiproject.entity.api.ResourcePropertiesEdit;
+
+import org.sakaiproject.user.cover.UserDirectoryService;
+import org.sakaiproject.user.api.User;
+import org.sakaiproject.time.api.Time;
+import org.sakaiproject.time.cover.TimeService;
+
+import org.sakaiproject.calendar.api.Calendar;
+import org.sakaiproject.calendar.api.CalendarEvent;
+import org.sakaiproject.calendar.api.CalendarEventEdit;
+import org.sakaiproject.calendar.cover.CalendarService;
+import org.sakaiproject.exception.PermissionException;
+import org.sakaiproject.exception.InUseException;
+import org.sakaiproject.exception.IdUnusedException;
+
+import java.util.Iterator;
+import java.util.AbstractList;
+import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+import org.sakaiproject.util.Xml;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import org.sakaiproject.tool.api.Session;
+import org.sakaiproject.tool.cover.SessionManager;
+import org.sakaiproject.event.api.UsageSession;
+
+import org.sakaiproject.service.gradebook.shared.ConflictingAssignmentNameException;
+import org.sakaiproject.service.gradebook.shared.GradebookNotFoundException;
+import org.sakaiproject.service.gradebook.shared.ConflictingExternalIdException;
+import org.sakaiproject.service.gradebook.shared.GradebookService;
+
+import org.sakaiproject.authz.cover.AuthzGroupService;
+import org.sakaiproject.authz.cover.SecurityService;
+import org.sakaiproject.authz.api.AuthzGroup;
+import org.sakaiproject.authz.api.Member;
+import java.util.Set;
+import java.util.Iterator;
+
+import org.sakaiproject.site.cover.SiteService;
+import org.sakaiproject.site.api.SiteService.SelectionType;
+import org.sakaiproject.site.api.SiteService.SortType;
+import org.sakaiproject.site.api.Site;
+
+import org.sakaiproject.content.api.ContentCollection;
+import org.sakaiproject.content.api.ContentCollectionEdit;
+import org.sakaiproject.content.api.ContentResource;
+import org.sakaiproject.content.api.ContentResourceEdit;
+import org.sakaiproject.content.api.ContentResourceFilter;
+import org.sakaiproject.content.cover.ContentHostingService;
+import org.sakaiproject.content.cover.ContentTypeImageService;
+import org.sakaiproject.exception.IdUnusedException;
+import org.sakaiproject.exception.IdUsedException;
+import org.sakaiproject.exception.IdInvalidException;
+import org.sakaiproject.exception.InconsistentException;
+import org.sakaiproject.exception.ServerOverloadException;
+import org.sakaiproject.exception.PermissionException;
+
+import org.apache.axis.encoding.Base64;
+import org.sakaiproject.db.cover.SqlService;
+
+import org.sakaiproject.content.cover.ContentHostingService;
+import org.sakaiproject.content.api.ContentResource;
+import org.sakaiproject.content.api.ContentResourceEdit;
+import org.sakaiproject.entity.api.Entity;
+import org.sakaiproject.entity.api.ResourceProperties;
+import org.sakaiproject.entity.api.ResourcePropertiesEdit;
+import org.sakaiproject.entity.api.EntityManager;
+import org.sakaiproject.util.StringUtil;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import org.apache.axis.AxisFault;
+
+
+public class WSAssignment {
+
+	public String test(String sessionID) throws AxisFault, org.sakaiproject.user.api.UserNotDefinedException
+	{
+	
+		//check to make sure session is valid
+		Session s = establishSession(sessionID);
+		
+		UserDirectoryService userDirectoryService = (UserDirectoryService) ComponentManager.get(UserDirectoryService.class.getName());
+		
+		String eid;
+		try
+		{
+			eid = userDirectoryService.getUserId("7fbc1625-95b1-4cd0-b12a-c19e3eeb8252");
+		}
+		catch(Exception e)
+		{
+			eid = "7fbc1625-95b1-4cd0-b12a-c19e3eeb8252";
+		}
+		
+		return eid;
+		
+	}
+	
+	public void UpdateScore(String sessionID, String gradebookID, String assignmentID, String userID, String Points) throws AxisFault, org.sakaiproject.user.api.UserNotDefinedException
+	{
+		//check to make sure session is valid
+		Session s = establishSession(sessionID);
+		
+		UserDirectoryService userDirectoryService = (UserDirectoryService) ComponentManager.get(UserDirectoryService.class.getName());
+		
+		String eid;
+		try
+		{
+			eid = userDirectoryService.getUserId(userID);
+		}
+		catch(Exception e)
+		{
+			eid = userID;
+		}
+
+		//create gradebook object
+		org.sakaiproject.service.gradebook.shared.GradebookExternalAssessmentService g = (org.sakaiproject.service.gradebook.shared.GradebookExternalAssessmentService) ComponentManager.get("org.sakaiproject.service.gradebook.GradebookExternalAssessmentService");
+		
+		// add assignment to gradebook
+		//g.setAssignmentScore(gradebookID, assignmentID, userID, scoreReceived);
+		
+		g.updateExternalAssessmentScore(gradebookID, assignmentID, eid, Points);
+			
+	}
+	
+	public void UpdateScorableItem (String sessionID, String gradebookID, String assignmentID, String addUpdateRemoveAssignment, String assignment_Title, Double assignment_maxPoints, long assignment_dueTime) throws AxisFault
+	{
+		//check to make sure session is valid
+		Session s = establishSession(sessionID);
+
+		//create gradebook object
+		org.sakaiproject.service.gradebook.shared.GradebookExternalAssessmentService g = (org.sakaiproject.service.gradebook.shared.GradebookExternalAssessmentService) ComponentManager.get("org.sakaiproject.service.gradebook.GradebookExternalAssessmentService");
+
+		
+		
+		//add assignment
+		if (addUpdateRemoveAssignment.equals("add"))
+		{
+			
+			if (g.isExternalAssignmentDefined(gradebookID, assignmentID))
+			{
+				// update assignment in gradebook
+				g.updateExternalAssessment(gradebookID,
+						assignmentID, 
+						"",
+						assignment_Title,
+						assignment_maxPoints,
+						new Date(assignment_dueTime));
+			}
+			else
+			{
+				// add assignment to gradebook
+				g.addExternalAssessment(gradebookID,
+						assignmentID, 
+						"",
+						assignment_Title,
+						assignment_maxPoints,
+						new Date(assignment_dueTime),
+				"MH Gradebook", false);
+				
+				//release assessment to assignment
+				//g.setExternalAssessmentToGradebookAssignment(gradebookID, assignmentID);
+			}	
+
+		} 
+		
+	
+		
+		//remove
+		if (addUpdateRemoveAssignment.equals("remove"))
+		{
+			// add assignment to gradebook
+			g.removeExternalAssessment(gradebookID, assignmentID);
+		} 
+		
+			
+	}
+
+	private Session establishSession(String id) throws AxisFault 
+	{
+		Session s = SessionManager.getSession(id);
+		
+		if (s == null)
+		{
+			throw new AxisFault("Session "+id+" is not active");
+		}
+		SessionManager.setCurrentSession(s);
+		return s;
+	}
+	
+
+}

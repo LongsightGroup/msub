@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <!--parent>
+    <artifactId>webservices-base</artifactId>
+    <groupId>org.sakaiproject</groupId>
+    <version>${sakai.version}</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent-->
+  <name>Webservices Test</name>
+  <groupId>org.sakaiproject</groupId>
+  <artifactId>sakai-axis-test</artifactId>
+  <version>${sakai.version}</version>
+  <organization>
+    <name>University of Michigan</name>
+    <url>http://sakaiproject.org/</url>
+  </organization>
+  <inceptionYear>2005</inceptionYear>
+  <packaging>jar</packaging>
+  <dependencies>
+    <!--dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-util</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-component-manager</artifactId>
+      <version>${sakai.version}</version>
+    </dependency-->
+<!--
+      This has been relocated to sakai-kernel-util
+      org.sakaiproject.kernel.utilsakai-util-->
+<!-- from lib 
+             32489 28 Feb 22:39 axis-ant.jar
+           1573104 28 Feb 22:39 axis.jar
+             74527 28 Feb 22:39 commons-discovery.jar
+             31605 28 Feb 22:39 commons-logging.jar
+             32071 28 Feb 22:39 jaxrpc.jar
+            352668 28 Feb 22:39 log4j-1.2.8.jar
+             19427 28 Feb 22:39 saaj.jar
+            161701 28 Feb 22:39 wsdl4j.jar
+	-->
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis</artifactId>
+      <version>1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis-jaxrpc</artifactId>
+      <version>1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis-saaj</artifactId>
+      <version>1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis-wsdl4j</artifactId>
+      <version>1.5.1</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.8</version>
+<!--properties:  dependencyType: lib -->
+    </dependency>
+    <dependency>
+      <groupId>xml-apis</groupId>
+      <artifactId>xml-apis</artifactId>
+      <version>2.0.2</version>
+    </dependency>
+<!-- Xerxces is endorsed in Sakai -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.4</version>
+<!--properties:  -->
+    </dependency>
+    <dependency>
+      <groupId>commons-discovery</groupId>
+      <artifactId>commons-discovery</artifactId>
+      <version>0.2</version>
+    </dependency>
+<!--org.sakaiprojectsakai-component${sakai.version}-->
+<!--org.sakaiprojectsakai-util${sakai.version}-->
+    <!--dependency>
+      <groupId>org.sakaiproject</groupId>
+      <artifactId>sakai-util-axis</artifactId>
+      <version>${sakai.version}</version>
+    </dependency-->
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>org.sakaiproject.webservices.test.WebservicesTest</mainClass>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptorId>jar-with-dependencies</descriptorId>
+          <archive>
+<!-- Please document this -->
+            <manifest>
+              <mainClass>org.sakaiproject.webservices.test.WebservicesTest</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}</outputDirectory>
+              <overWriteReleases>false</overWriteReleases>
+              <overWriteSnapshots>false</overWriteSnapshots>
+              <overWriteIfNewer>true</overWriteIfNewer>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>src/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xsl</include>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
+<!-- java source -->
+    <sourceDirectory>src/java</sourceDirectory>
+  </build>
+</project>

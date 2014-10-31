@@ -1,0 +1,82 @@
+import org.apache.axis.AxisFault;
+import org.apache.axis.Constants;
+import org.apache.axis.MessageContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.sakaiproject.component.api.ServerConfigurationService;
+import org.sakaiproject.component.cover.ComponentManager;
+import org.sakaiproject.event.api.UsageSessionService;
+import org.sakaiproject.tool.api.Session;
+import org.sakaiproject.tool.api.SessionManager;
+import org.sakaiproject.user.api.User;
+import org.sakaiproject.user.api.UserDirectoryService;
+import com.rsmart.decryption.api.GeneratedTokenService;
+import org.sakaiproject.authz.api.SecurityService;
+
+/**
+ *   GenerateTokens.jws
+ *
+ *   The main authentication web service, performs remote login and logout functions for Sakai.
+ *
+ */
+public class GenerateTokens {
+
+    private static final Log LOG = LogFactory.getLog("org.sakaiproject.axis.GenerateTokens");
+
+    private ServerConfigurationService serverConfigurationService;
+    private SessionManager sessionManager;
+    private UsageSessionService usageSessionService;
+    private UserDirectoryService userDirectoryService;
+    private GeneratedTokenService generatedTokenService;
+    private SecurityService securityService;
+
+    public GenerateTokens() {
+    	serverConfigurationService = (ServerConfigurationService) ComponentManager.get(ServerConfigurationService.class.getName());
+    	sessionManager = (SessionManager) ComponentManager.get(SessionManager.class.getName());
+    	usageSessionService = (UsageSessionService) ComponentManager.get(UsageSessionService.class.getName());
+    	userDirectoryService = (UserDirectoryService) ComponentManager.get(UserDirectoryService.class.getName());
+    	generatedTokenService = (GeneratedTokenService) ComponentManager.get(GeneratedTokenService.class.getName());
+    	securityService = (SecurityService) ComponentManager.get(SecurityService.class.getName());
+    }
+     /**
+     * Login with the supplied credentials and return the session string which can be used in subsequent web service calls, ie via SakaiScript
+     * @param id	eid, eg jsmith26
+     * @param pw	password for the user
+     * @return		session string
+     * @throws AxisFault
+     */
+    public String generateToken(String sessionId, String eid) throws AxisFault {
+        Session session = establishSession(sessionId);
+    	if (!securityService.isSuperUser())
+        {
+            LOG.warn("NonSuperUser trying to add accounts: " + session.getUserId());
+            throw new AxisFault("NonSuperUser trying to add accounts: " + session.getUserId());
+                } else{
+    	    String uuidToken = generatedTokenService.generateToken(eid);
+                     return uuidToken;
+                }
+
+             }
+
+        /**
+     * Get the Session related to the given sessionid
+     *
+     * @param sessionid the id of the session to retrieve
+     * @throws AxisFault if session is inactive
+     * @return the session, if it is active
+     */
+    private Session establishSession(String sessionId) throws AxisFault {
+        Session s = sessionManager.getSession(sessionId);
+        if (s == null) {
+            throw new AxisFault("Session \"" + sessionId + "\" is not active");
+        }
+        s.setActive();
+        sessionManager.setCurrentSession(s);
+        return s;
+    }
+
+}
+
+
+
+
