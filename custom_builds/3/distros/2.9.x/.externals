@@ -123,6 +123,8 @@ roster2 -r 87234 https://source.sakaiproject.org/contrib/roster2/trunk
 #shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' formbuilder/tool/pom.xml 
 #shell_command sed -i 's/2.9-SNAPSHOT/2.9.4-SNAPSHOT/g' mneme/mneme-impl/impl/pom.xml 
 #shell_command sed -i 's/10.0-SNAPSHOT/2.9-SNAPSHOT/g' roster2/pom.xml
+#shell_command sed -i 's/10.0-SNAPSHOT/2.9-SNAPSHOT/g' roster2/roster-app/pom.xml
+#shell_command sed -i 's/10.0-SNAPSHOT/2.9-SNAPSHOT/g' roster2/roster-help/pom.xml
 
 #shell_command patch -p0 < jforum.patch
 #shell_command patch -p0 < ambrosia.patch
