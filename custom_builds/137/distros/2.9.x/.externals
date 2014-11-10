@@ -76,4 +76,5 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 # Indie experimental
 
 # custom builds
+evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.x_features-backport
