@@ -167,7 +167,11 @@ public class SakaiBLTIUtil {
                 if ( value == null ) continue;
 				value = value.trim();
 				if ( value.length() < 1 ) continue;
-				setProperty(info, "custom_"+key, value);
+				if("rosetta_stone_group".equals(value)){
+					setProperty(info, key, value);
+				}else{
+					setProperty(info, "custom_"+key, value);
+				}
 			}
 		}
 	}
@@ -702,7 +706,7 @@ public class SakaiBLTIUtil {
 		// Pull in all of the custom parameters
 		for(Object okey : toolProps.keySet() ) {
 			String skey = (String) okey;  
-			if ( ! skey.startsWith(BasicLTIConstants.CUSTOM_PREFIX) ) continue;
+			if (!"rosetta_stone_group".equals(skey) && ! skey.startsWith(BasicLTIConstants.CUSTOM_PREFIX) ) continue;
 			String value = toolProps.getProperty(skey);
 			if ( value == null ) continue;
 			setProperty(ltiProps, skey, value);

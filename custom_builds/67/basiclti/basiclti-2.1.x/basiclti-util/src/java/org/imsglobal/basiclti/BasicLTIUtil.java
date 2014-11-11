@@ -217,6 +217,7 @@ public class BasicLTIUtil {
 	 */
 	public static boolean isSpecifiedPropertyName(final String propertyName) {
 		boolean found = false;
+		if ( "rosetta_stone_group".equals(propertyName)) return true;
 		if ( propertyName.startsWith(BasicLTIConstants.CUSTOM_PREFIX) ) return true;
 		if ( propertyName.startsWith(BasicLTIConstants.EXTENSION_PREFIX) ) return true;
 		if ( propertyName.startsWith(BasicLTIConstants.OAUTH_PREFIX) ) return true;
@@ -248,7 +249,7 @@ public class BasicLTIUtil {
 		}
 		String customName = propertyName.toLowerCase();
 		customName = CUSTOM_REGEX.matcher(customName).replaceAll(UNDERSCORE);
-		if (!customName.startsWith(CUSTOM_PREFIX)) {
+		if (!"rosetta_stone_group".equals(customName) && !customName.startsWith(CUSTOM_PREFIX)) {
 			customName = CUSTOM_PREFIX + customName;
 		}
 		return customName;
@@ -554,7 +555,11 @@ public class BasicLTIUtil {
 			String value = XMLMap.getString(setting, "/"); // Get the value
 			if (key == null || value == null)
 				continue;
-			key = "custom_" + mapKeyName(key);
+			if(!"rosetta_stone_group".equals(mapKeyName(key))){
+				key = "custom_" + mapKeyName(key);
+			}else{
+				key = mapKeyName(key);
+			}
 			dPrint("key=" + key + " val=" + value);
 			postProp.setProperty(key, value);
 		}
@@ -610,7 +615,11 @@ public class BasicLTIUtil {
 			String value = XMLMap.getString(setting, "/"); // Get the value
 			if (key == null || value == null)
 				continue;
-			key = "custom_" + mapKeyName(key);
+			if(!"rosetta_stone_group".equals(mapKeyName(key))){
+				key = "custom_" + mapKeyName(key);
+			}else{
+				key = mapKeyName(key);
+			}
 			dPrint("key=" + key + " val=" + value);
 			postProp.put(key, value);
 		}
