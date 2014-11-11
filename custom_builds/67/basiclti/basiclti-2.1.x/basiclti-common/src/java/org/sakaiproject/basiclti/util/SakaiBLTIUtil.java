@@ -170,7 +170,7 @@ public class SakaiBLTIUtil {
 				if("rosetta_stone_group".equals(value)){
 					setProperty(info, key, value);
 				}else{
-					setProperty(info, "custom_"+key, value);
+					setProperty(info, ""+key, value);
 				}
 			}
 		}

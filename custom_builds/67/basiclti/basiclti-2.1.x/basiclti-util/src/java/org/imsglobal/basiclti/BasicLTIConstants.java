@@ -82,7 +82,7 @@ public class BasicLTIConstants {
 	 * these custom parameters are included in the Basic LTI link, the TC must
 	 * include them in the launch data or the TP may fail to function.
 	 */
-	public static final String CUSTOM_PREFIX = "custom_";
+	public static final String CUSTOM_PREFIX = "";
 	/**
 	 * Parameters with the OAuth prefix are also acceptible.
 	 */

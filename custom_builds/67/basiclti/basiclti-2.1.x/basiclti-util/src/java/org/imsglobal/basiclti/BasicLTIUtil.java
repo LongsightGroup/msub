@@ -556,7 +556,7 @@ public class BasicLTIUtil {
 			if (key == null || value == null)
 				continue;
 			if(!"rosetta_stone_group".equals(mapKeyName(key))){
-				key = "custom_" + mapKeyName(key);
+				key = "" + mapKeyName(key);
 			}else{
 				key = mapKeyName(key);
 			}
@@ -616,7 +616,7 @@ public class BasicLTIUtil {
 			if (key == null || value == null)
 				continue;
 			if(!"rosetta_stone_group".equals(mapKeyName(key))){
-				key = "custom_" + mapKeyName(key);
+				key = "" + mapKeyName(key);
 			}else{
 				key = mapKeyName(key);
 			}

@@ -571,7 +571,7 @@ function do_post_request($url, $data, $optional_headers = null)
         else $nk .= "_";
       }
       $value = (string) $resource;
-      $custom["custom_".$nk] = $value;
+      $custom["".$nk] = $value;
     }
     return array("launch_url" => $launch_url, "custom" => $custom ) ;
   }
@@ -586,7 +586,7 @@ function do_post_request($url, $data, $optional_headers = null)
         else if ( $ch >= "0" && $ch <= "9" ) $nk .= $ch;
         else $nk .= "_";
       }
-      $parms["custom_".$nk] = $val;
+      $parms["".$nk] = $val;
     }
   }
 
