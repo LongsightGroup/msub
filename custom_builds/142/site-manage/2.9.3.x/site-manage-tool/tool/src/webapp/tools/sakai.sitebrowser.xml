@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+	<tool title="Site Search" description="Use Site Search to look for content on your site." id="sakai.sitebrowser">
+
+		<configuration name="pagesize" value="20"/>
+
+		<configuration name="reset.button" type="final" value="false"/>
+
+	</tool>
+
+</registration>

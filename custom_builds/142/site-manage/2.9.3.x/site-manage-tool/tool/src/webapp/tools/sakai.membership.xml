@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="Membership" description="Use Membership to manage your participation in sites." id="sakai.membership">
+
+
+      <configuration name="reset.button" type="final" value="false"/>
+
+
+      
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="myworkspacebuserdguest"/>
+<category name="myworkspacebuserdregistered"/>
+<category name="myworkspacebuserdmaintain"/>
+</tool>
+
+</registration>

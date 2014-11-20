@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="Site Editor" description="Use Site Editor to edit and manage your site." id="sakai.siteinfo">
+
+
+      <configuration name="siteTypes" value="course,project,portfolio"/>
+
+      <configuration name="defaultSiteType" value="project"/>
+		
+
+      <configuration name="publicChangeableSiteTypes" value="project"/>
+
+      <configuration name="publicSiteTypes" value="course"/>
+
+      <configuration name="privateSiteTypes" value=""/>
+
+      <configuration name="site_mode" type="final" value="siteinfo"/>
+
+
+      <configuration name="functions.require" value="site.upd"/>
+
+
+      
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="portfolio"/>
+<category name="project"/>
+</tool>
+
+</registration>
