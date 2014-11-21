@@ -79,11 +79,6 @@
             <version>${sakai.samigo.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.sakaiproject.scheduler</groupId>
-            <artifactId>scheduler-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.sakaiproject.calendar</groupId>
             <artifactId>sakai-calendar-api</artifactId>
         </dependency>
@@ -126,24 +121,6 @@
             <groupId>org.opensymphony.quartz</groupId>
             <artifactId>quartz</artifactId>
               <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.rsmart</groupId>
-            <artifactId>rsmart-mvel-api</artifactId>
-            <version>1.0.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.rsmart</groupId>
-            <artifactId>rsmart-decryption-api</artifactId>
-            <version>${sakai.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.rsmart</groupId>
-            <artifactId>customer-int-api</artifactId>
-            <version>${sakai.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jdom</groupId>
@@ -235,6 +212,7 @@
       <groupId>org.sakaiproject.edu-services.gradebook</groupId>
       <artifactId>gradebook-service-hibernate</artifactId>
       <version>1.2.3</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.sakaiproject.edu-services.gradebook</groupId>

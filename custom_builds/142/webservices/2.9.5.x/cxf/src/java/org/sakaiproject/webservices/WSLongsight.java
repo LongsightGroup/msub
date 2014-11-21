@@ -736,6 +736,35 @@ public class WSLongsight extends AbstractWebService {
 	}
 
 	@WebMethod
+	@Path("/longsightAddUserProperty")
+	@Produces("text/plain")
+	@GET
+	public String longsightAddUserProperty(
+			@WebParam(name = "sessionid", partName = "sessionid") @QueryParam("sessionid") String sessionid,
+			@WebParam(name = "eid", partName = "eid") @QueryParam("eid") String eid,
+			@WebParam(name = "propname", partName = "propname") @QueryParam("propname") String propname,
+			@WebParam(name = "propval", partName = "propval") @QueryParam("propval") String propval)
+	{
+		Session session = establishSession(sessionid);
+
+		try {
+			String userid = userDirectoryService.getUserByEid(eid).getId();
+			UserEdit userEdit = userDirectoryService.editUser(userid);
+                        ResourcePropertiesEdit properties = userEdit.getPropertiesEdit();
+                        properties.addProperty(propname, propval);
+			userDirectoryService.commitEdit(userEdit);
+
+			return "success";
+		}
+		catch (Exception e) {  
+                        LOG.warn("longsightAddUserProperty: trying to add " + propname + " for " + eid, e);
+			return "failure";
+		}
+
+	}
+
+
+	@WebMethod
 	@Path("/longsightAddNewUser")
 	@Produces("text/plain")
 	@GET
