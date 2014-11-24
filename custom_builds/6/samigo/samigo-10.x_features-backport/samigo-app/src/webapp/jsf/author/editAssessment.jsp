@@ -79,6 +79,7 @@ document.links[newindex].onclick();
 //-->
 </script>
 
+<script type="text/javascript" src="/library/js/jquery/1.7.1/jquery-1.7.1.min.js"></script>
 <script language='javascript' src='/samigo-app/js/selection.author.preview.js'></script>
 
 <link href="/samigo-app/css/imageQuestion.author.css" type="text/css" rel="stylesheet" media="all" />
