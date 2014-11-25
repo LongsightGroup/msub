@@ -76,7 +76,7 @@ sections -r 131651                https://source.sakaiproject.org/svn/msub/rsmar
 shortenedurl -r 131652            https://source.sakaiproject.org/svn/msub/rsmart.com/shortenedurl/branches/2.9.3.x
 signup -r 85518                  https://source.sakaiproject.org/contrib/rsmart/msub/signup/branches/2.9.3.x 
 site -r 131653                    https://source.sakaiproject.org/svn/msub/rsmart.com/site/branches/2.9.3.x
-site-manage -r 307138             https://source.sakaiproject.org/svn/msub/rsmart.com/site-manage/branches/2.9.3.x
+site-manage                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/site-manage/2.9.3.x
 sitestats -r 131655               https://source.sakaiproject.org/svn/msub/rsmart.com/sitestats/branches/2.9.3.x
 skin-manager -r 85617            https://source.sakaiproject.org/contrib/rsmart/msub/skin-manager/branches/2.9.3.x
 syllabus 			                https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/syllabus/2.9.x
