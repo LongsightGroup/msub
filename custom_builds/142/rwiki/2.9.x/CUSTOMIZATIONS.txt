@@ -1,0 +1,2 @@
+* ND-5: Keitai backport work
+* SAK-27752 problems with Xalan and Xerces in ND-TEST environment
