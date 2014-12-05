@@ -4580,9 +4580,69 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		IdInvalidException,	InconsistentException, OverQuotaException, ServerOverloadException, 
 		TypeException, InUseException
 	{
-		ContentResourceEdit deleResource;
+		ContentResourceEdit deleResource = null;
 		try {
 			deleResource = editDeletedResource(id);
+
+			ContentResourceEdit newResource;
+			try {
+				newResource = addResource(id);
+			} catch (IdUsedException iue) {
+				M_log.error("restoreResource: cannot restore resource " + id, iue);
+				throw iue;
+			}
+			newResource.setContentType(deleResource.getContentType());
+			newResource.setContentLength(deleResource.getContentLength());
+			newResource.setResourceType(deleResource.getResourceType());
+			newResource.setAvailability(deleResource.isHidden(), deleResource.getReleaseDate(),deleResource.getRetractDate());
+			newResource.setContent(m_storage.streamDeletedResourceBody(deleResource));
+			try {
+				addProperties(newResource.getPropertiesEdit(), deleResource.getProperties());
+				commitResource(newResource, NotificationService.NOTI_NONE);
+
+			} catch (ServerOverloadException e) {
+				M_log.debug("ServerOverloadException " + e);
+				try
+				{
+					removeResource(newResource.getId());
+				}
+				catch(Exception e1)
+				{
+					// ignore -- no need to remove the resource if it doesn't exist
+					M_log.debug("Unable to remove partially completed resource: " + newResource.getId() + "\n" + e1);
+				}
+				throw e;
+			} catch (OverQuotaException e) {
+				M_log.debug("OverQuotaException " + e);
+				try
+				{
+					removeResource(newResource.getId());
+				}
+				catch(Exception e1)
+				{
+					// ignore -- no need to remove the resource if it doesn't exist
+					M_log.debug("Unable to remove partially completed resource: " + newResource.getId() + "\n" + e1);
+				}
+				throw e;
+			}
+			try {
+				// If you're storing the file in DB this breaks as it removes the restored file.
+				removeDeletedResource(deleResource);
+				// close the edit object
+				((BaseResourceEdit) deleResource).closeEdit();
+			} catch (PermissionException pe) {
+				M_log.error("restoreResource: access to resource not permitted" + id, pe);
+				try
+				{
+					removeResource(newResource.getId());
+				}
+				catch(Exception e1)
+				{
+					// ignore -- no need to remove the resource if it doesn't exist
+					M_log.debug("Unable to remove partially completed resource: " + deleResource.getId() + "\n" + e1);
+				}
+				throw pe;
+			}
 		} catch (IdUnusedException iue) {
 			M_log.error("restoreResource: cannot locate deleted resource " + id, iue);
 			throw iue;
@@ -4594,67 +4654,13 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 			throw ie;
 		} catch (PermissionException pe) {
 			M_log.error("restoreResource: access to resource not permitted" + id, pe);
-			throw pe;			
+			throw pe;
+		} finally {
+			// Unlock if something went wrong.
+			if (deleResource != null && deleResource.isActiveEdit()) {
+				m_storage.cancelDeletedResource(deleResource);
+			}
 		}
-		ContentResourceEdit newResource;
-		try {
-			newResource = addResource(id);
-		} catch (IdUsedException iue) {
-			M_log.error("restoreResource: cannot restore resource " + id, iue);
-			throw iue;
-		}
-		newResource.setContentType(deleResource.getContentType());
-		newResource.setContentLength(deleResource.getContentLength());
-		newResource.setResourceType(deleResource.getResourceType());
-		newResource.setAvailability(deleResource.isHidden(), deleResource.getReleaseDate(),deleResource.getRetractDate());
-		newResource.setContent(m_storage.streamDeletedResourceBody(deleResource));
-		try {
-			addProperties(newResource.getPropertiesEdit(), deleResource.getProperties());
-			commitResource(newResource, NotificationService.NOTI_NONE);
-			
-		} catch (ServerOverloadException e) {
-			M_log.debug("ServerOverloadException " + e);
-			try
-			{
-				removeResource(newResource.getId());
-			}
-			catch(Exception e1)
-			{
-				// ignore -- no need to remove the resource if it doesn't exist
-				M_log.debug("Unable to remove partially completed resource: " + newResource.getId() + "\n" + e1); 
-			}
-			throw e;
-		} catch (OverQuotaException e) {
-			M_log.debug("OverQuotaException " + e);
-			try
-			{
-				removeResource(newResource.getId());
-			}
-			catch(Exception e1)
-			{
-				// ignore -- no need to remove the resource if it doesn't exist
-				M_log.debug("Unable to remove partially completed resource: " + newResource.getId() + "\n" + e1); 
-			}
-			throw e;
-		} 
-		try {
-			// If you're storing the file in DB this breaks as it removes the restored file.
-			removeDeletedResource(deleResource);
-			// close the edit object
-			((BaseResourceEdit) deleResource).closeEdit();
-		} catch (PermissionException pe) {
-			M_log.error("restoreResource: access to resource not permitted" + id, pe);
-			try
-			{
-				removeResource(newResource.getId());
-			}
-			catch(Exception e1)
-			{
-				// ignore -- no need to remove the resource if it doesn't exist
-				M_log.debug("Unable to remove partially completed resource: " + deleResource.getId() + "\n" + e1); 
-			}
-			throw pe;			
-		} 
 	}
 	
 	/**
@@ -4669,6 +4675,9 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 	 */
 	public void addResourceToDeleteTable(ContentResourceEdit edit, String uuid, String userId) throws PermissionException, ServerOverloadException
 	{
+		if (m_bodyPathDeleted == null) {
+			return;
+		}
 		String id = edit.getId();
 		String content_type = edit.getContentType();
 
@@ -4714,6 +4723,15 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		// check security-unlock to add record
 		unlock(AUTH_RESOURCE_ADD, id);
 
+		// In the future we may wish to allow multiple copies of the file in the recycle bin.
+		// Remove Deleted Resource prevents id collision as #restoreResource(String) doesn't allow you to
+		// specify which version of a file you want to restore.
+		try {
+			removeDeletedResource(id);
+		} catch (Exception ex) {
+			// There is no collision
+		}
+		
 		// reserve the resource in storage - it will fail if the id is in use
 		BaseResourceEdit edit = (BaseResourceEdit) m_storage.putDeleteResource(id, uuid, userId);
 		// added for NPE static code review -AZ
@@ -5541,7 +5559,8 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 
 		boolean still_trying = true;
 		int attempt = 0;
-
+		boolean destIsDropBox=false; 
+		
 		while (still_trying && attempt < MAXIMUM_ATTEMPTS_FOR_UNIQUENESS)
 		{
 			// copy the resource to the new location
@@ -5552,6 +5571,12 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 				// this duplicates a lot of the code from BaseResourceEdit.set()
 				edit.setContentType(resource.getContentType());
 
+				if (isInDropbox(edit.getId()))
+				{
+					M_log.debug("We are copying to a dropbox folder :"+ edit.getId());
+					destIsDropBox = true;
+				}
+				
 				if (referenceCopy && edit instanceof BaseResourceEdit) {
 				    // do a reference copy so the actual content is not duplicated
 				    ((BaseResourceEdit)edit).setReferenceCopy(resource.getId());
@@ -5579,7 +5604,7 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 				//				}
 				edit.setAvailability(resource.isHidden(), resource.getReleaseDate(), resource.getRetractDate());
 
-				commitResource(edit,NotificationService.NOTI_OPTIONAL);
+				commitResource(edit,destIsDropBox ? NotificationService.NOTI_OPTIONAL: NotificationService.NOTI_NONE);
 				// close the edit object
 				((BaseResourceEdit) edit).closeEdit();
 
@@ -5816,6 +5841,20 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 
 	} // deepcopyCollection
 
+	private boolean hasContentType(String resourceId) {
+
+		String contentType = null;
+		
+		try {
+			contentType = getResource(resourceId).getContentType();
+		} catch (PermissionException e) {
+		} catch (IdUnusedException e) {
+		} catch (TypeException e) {
+		}
+		
+		return contentType != null && !contentType.isEmpty();
+    }
+	
 	/**
 	 * Commit the changes made, and release the lock. The Object is disabled, and not to be used after this call.
 	 * 
@@ -5857,11 +5896,13 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 			return;
 		}
 		
+        boolean hasContentTypeAlready = hasContentType(edit.getId());
+        
         //use magic to fix mimetype
         //Don't process for special TYPE_URL type
         String currentContentType = edit.getContentType();
         m_useMimeMagic = m_serverConfigurationService.getBoolean("content.useMimeMagic", m_useMimeMagic);
-        if (m_useMimeMagic && DETECTOR != null && !ResourceProperties.TYPE_URL.equals(currentContentType)) {
+        if (m_useMimeMagic && DETECTOR != null && !ResourceProperties.TYPE_URL.equals(currentContentType) && !hasContentTypeAlready) {
             try{
                 //we have to make the stream resetable so tika can read some of it and reset for saving.
                 //Also have to give the tika stream to the edit object since tika can invalidate the original 
@@ -13322,7 +13363,8 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		public List getDeletedResources(ContentCollection collection);      
 		public ContentResourceEdit editDeletedResource(String resourceId);      
 		public void removeDeletedResource(ContentResourceEdit edit); 
-
+		public void cancelDeletedResource(ContentResourceEdit edit);
+		
 		/**
 		 * Retrieve a collection of ContentResource objects pf a particular resource-type.  The collection will 
 		 * contain no more than the number of items specified as the pageSize, where pageSize is a non-negative 

@@ -27,6 +27,7 @@ import org.sakaiproject.component.cover.ComponentManager;
 import org.sakaiproject.util.api.FormattedText.Level;
 import org.sakaiproject.util.api.MockFormattedText;
 import org.w3c.dom.Element;
+import java.text.NumberFormat;
 
 /**
  * COVER
@@ -182,4 +183,39 @@ public class FormattedText {
         return getFormattedText().stripHtmlFromText(text, smartSpacing);
     }
 
+    /**
+     * @see org.sakaiproject.util.api.FormattedText#stripHtmlFromText(String,boolean,boolean)
+     */
+    public static String stripHtmlFromText(String text, boolean smartSpacing, boolean stripEscapeSequences) {
+        return getFormattedText().stripHtmlFromText(text, smartSpacing, stripEscapeSequences);
+    }
+
+    /**
+     * @see org.sakaiproject.util.api.FormattedText#makeShortenedText(String)
+     */
+    public static String makeShortenedText(String text, Integer maxLength, String separator, String cutMethod) {
+        return getFormattedText().makeShortenedText(text, maxLength, separator, cutMethod);
+}
+    
+    /**
+     * @see org.sakaiproject.util.api.FormattedText#getDecimalSeparator()
+     */
+    public static String getDecimalSeparator() {
+        return getFormattedText().getDecimalSeparator();
+}
+    
+    /**
+     * @see org.sakaiproject.util.api.FormattedText#getNumberFormat(Integer,Integer,Boolean)
+     */
+    public static NumberFormat getNumberFormat(Integer maxFractionDigits, Integer minFractionDigits, Boolean groupingUsed) {
+    	return getFormattedText().getNumberFormat(maxFractionDigits, minFractionDigits, groupingUsed);
+    }
+
+    /**
+     * @see org.sakaiproject.util.api.FormattedText#getNumberFormat()
+     */
+    public static NumberFormat getNumberFormat() {
+    	return getFormattedText().getNumberFormat();
+    }
+    
 }

@@ -22,6 +22,7 @@
 package org.sakaiproject.util.api;
 
 import org.w3c.dom.Element;
+import java.text.NumberFormat;
 
 /**
  * These Utils provide support for user entry of formatted text (typically HTML). This
@@ -401,5 +402,54 @@ public interface FormattedText {
      * @see #convertFormattedTextToPlaintext(String) for alternative mechanism
      */
     public String stripHtmlFromText(String text, boolean smartSpacing);
+
+    /**
+     * Strips html/xml tags from a string and returns the cleaned version.
+     *
+     * @param text any text (if this is null or empty then the input text is returned unchanged)
+     * @param smartSpacing if true then try to make the text represent the intent of the html,
+     *                     trims out duplicate spaces, converts block type html into a space, etc.,
+     *                     else just removes html tags and leaves all other parts of the string intact,
+     *                     NOTE: false is also slightly faster
+     * @param stripEscapeSequences if true, strips out any escape sequences such as '&nbsp;'
+     * @return the cleaned string
+     * @see #convertFormattedTextToPlaintext(String) for alternative mechanism
+     */
+     public String stripHtmlFromText(String text, boolean smartSpacing, boolean stripEscapeSequences);
+
+     /**
+      * General utility to make shortened titles and descriptions (or any string really).
+      *
+      * @param text the full site title (or desc) to shorten
+      * @param maxLength maximum length for the string before it is shortened (and after shortening) (null defaults to 25)
+      * @param separator the separator string to use (null defaults to '...')
+      * @param cutMethod the string key method for cutting (null defaults to '100:0')
+      * @return the shortened string
+      */
+     public String makeShortenedText(String text, Integer maxLength, String separator, String cutMethod);
+
+     /**
+      * General utility to get current decimal separator
+      *
+      * @return the decimal separator string
+      */
+     public String getDecimalSeparator();
+
+     /**
+      * General utility to get current number format
+      *
+      * @param maxFractionDigits maximum fraction digits
+      * @param maxFractionDigits minimum fraction digits
+      * @param groupingUsed grouping used
+      * @return the number format
+      */
+     public NumberFormat getNumberFormat(Integer maxFractionDigits, Integer minFractionDigits, Boolean groupingUsed);
+
+     /**
+      * General utility to get current number format
+      *
+      * @return the number format
+      */
+     public NumberFormat getNumberFormat();
 
 }
