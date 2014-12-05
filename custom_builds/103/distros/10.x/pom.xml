@@ -122,11 +122,11 @@
                 <!--
                 <module>sakai-wicket-for-scorm</module>
                 <module>SCORM.2004.3ED.RTE</module>
-                -->
                 <module>sms</module>
                 <module>qna</module>
                 <module>certification</module>
                 <module>content-review-impl-vericite</module>
+                -->
             </modules>
         </profile>
         <profile>
