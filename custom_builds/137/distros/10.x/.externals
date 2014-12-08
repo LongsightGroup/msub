@@ -34,6 +34,7 @@ config https://source.sakaiproject.org/svn/config/branches/sakai-10.x
 content https://source.sakaiproject.org/svn/content/branches/sakai-10.x
 courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-10.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-10.x
 lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
@@ -75,3 +76,7 @@ usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 #warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
+
+# custom tools
+blogwow -r 86512 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+#evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
