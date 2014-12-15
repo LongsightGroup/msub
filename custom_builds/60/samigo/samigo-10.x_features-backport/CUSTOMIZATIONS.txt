@@ -11,5 +11,12 @@ SAM-1751 Add Honor Pledge Option like the Assignments Tool has
 SAM-2188 Expand Collapse All for samigo settings
 SAM-2352 Don't run on assessment attempts with a null submittedDate ; Tests and Quizzes - Autosubmit issues (MND-488196)
 SAM-1263 New question type - image map
+SAM-2389 Post events for viewing assessment feedback and resuming an assessment
 
 TODO: SAM-2056 Better usability in jquery ui
+Updated 08/28/2014 svn merge "^/sam/branches/sakai-10.x"
+Updated 10/20/2014 svn merge "^/sam/branches/sakai-10.x"
+Updated 11/17/2014 svn merge "^/sam/branches/sakai-10.x"
+Updated 11/24/2014 svn merge "^/sam/branches/sakai-10.x"
+
+(Branch update - Updated 60 branch to FB on 12/15/2014)

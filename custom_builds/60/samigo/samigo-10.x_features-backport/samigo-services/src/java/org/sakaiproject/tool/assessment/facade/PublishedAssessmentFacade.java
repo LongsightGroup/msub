@@ -100,11 +100,11 @@ public class PublishedAssessmentFacade
   private Date lastNeedResubmitDate;
   private boolean activeStatus;
   private String releaseToGroups;
-  private ArrayList releaseToGroupsList = new ArrayList();
+  private List<String> releaseToGroupsList = new ArrayList<String>();
   private int enrolledStudentCount;
   private Integer timeLimit;
   private String lastModifiedDateForDisplay;
-  private int groupCount = 0; 
+  private int groupCount;
   public PublishedAssessmentFacade() {
   }
 
@@ -151,7 +151,7 @@ public class PublishedAssessmentFacade
 	  this.lateHandling = lateHandling;
 	  this.unlimitedSubmissions = unlimitedSubmissions;
 	  this.submissionsAllowed = submissionsAllowed;
-  	  setGroupCount();
+	  setGroupCount();
   }
 
   // constructor that whole min. info, used for listing
@@ -773,15 +773,30 @@ public class PublishedAssessmentFacade
   }
 
   public void setReleaseToGroupsList() {
-	  String [] groups = releaseToGroups.split(",");
-	  releaseToGroupsList = new ArrayList();
-	  for (int i = 0; i < groups.length; i++) {
-		  releaseToGroupsList.add(groups[i].trim());
+          
+          // SAM-2382
+          releaseToGroupsList = new ArrayList<String>();
+          for (String group : releaseToGroups.split(",")) {
+              releaseToGroupsList.add( group.trim());
 	  }
+          Collections.sort(releaseToGroupsList);
   }
   
-  public ArrayList getReleaseToGroupsList() {
+  public List<String> getReleaseToGroupsList() {
 	    return releaseToGroupsList;
+  }
+  
+  public void setGroupCount() {
+      if (releaseToGroupsList != null) {
+          groupCount = releaseToGroupsList.size();
+      }
+      else {
+          groupCount = 0;
+      }
+  }
+  
+  public int getGroupCount() {
+      return groupCount;
   }
 
   public int getInProgressCount() {
@@ -839,19 +854,5 @@ public class PublishedAssessmentFacade
   public void setLastModifiedDateForDisplay(String lastModifiedDateForDisplay) {
 	  this.lastModifiedDateForDisplay = lastModifiedDateForDisplay;
   }
-
-    public void setGroupCount() {
-      if (releaseToGroupsList != null) {
-          groupCount = releaseToGroupsList.size();
-      }
-      else {
-          groupCount = 0;
-      }
-  }
-
-  public int getGroupCount() {
-      return groupCount;
-  }
-
 
 }

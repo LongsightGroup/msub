@@ -412,7 +412,6 @@
  <f:verbatim></div></f:verbatim>
     </h:panelGroup>
   
-
     <!-- RECORDED SCORE AND MULTIPLES -->
     <h:panelGroup rendered="#{publishedSettings.valueMap.recordedScore_isInstructorEditable==true}">
    <f:verbatim>  <h4 class="samigo-category-subhead">  </f:verbatim> <h:outputLabel for="scoringType1" value="#{assessmentSettingsMessages.recorded_score}" rendered="#{author.canRecordAverage}"/><h:outputLabel for="scoringType2" value="#{assessmentSettingsMessages.recorded_score}" rendered="#{!author.canRecordAverage}"/><f:verbatim></h4> <div class="tier3"> </f:verbatim>

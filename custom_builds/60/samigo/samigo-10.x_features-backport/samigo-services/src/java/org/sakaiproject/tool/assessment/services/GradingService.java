@@ -963,7 +963,9 @@ public class GradingService
       //of its total score by itemId -> autoScore[]{user's score, total possible}
       Map<Long, Double[]> mcmcAllOrNothingCheck = new HashMap<Long, Double[]>();
       //collect min score information to determine if the auto score will need to be adjusted
-      Float minScore = null;
+      //collect min score information to determine if the auto score will need to be adjusted
+      //since there can be multiple questions store in map: itemId -> {user's score, minScore, # of answers}
+      Map<Long, Float[]> minScoreCheck = new HashMap<Long, Float[]>();
       float totalAutoScoreCheck = 0;
       //get item information to check if it's MCMS and Not Partial Credit
       Long itemType2 = -1l;
@@ -979,7 +981,7 @@ public class GradingService
         	log.error("unable to retrive itemDataIfc for: " + publishedItemHash.get(itemId));
         	continue;
         }
-	minScore = item.getMinScore();
+
         itemType2 = item.getTypeId();
         //get item information to check if it's MCMS and Not Partial Credit
         mcmsPartialCredit = item.getItemMetaDataByLabel(ItemMetaDataIfc.MCMS_PARTIAL_CREDIT);
@@ -1006,6 +1008,17 @@ public class GradingService
         		accumulatedScore += accumulatedScoreArr[0];
         	}
         	mcmcAllOrNothingCheck.put(itemId, new Double[]{accumulatedScore, item.getScore()});
+        }
+        //min score check
+        if(item.getMinScore() != null){
+        	Float accumulatedScore = new Float(itemGrading.getAutoScore());
+        	Float itemParts = 1f;
+        	if(minScoreCheck.containsKey(itemId)){
+        		Float[] accumulatedScoreArr = minScoreCheck.get(itemId);
+        		accumulatedScore += accumulatedScoreArr[0];
+        		itemParts += accumulatedScoreArr[2];
+        	}
+        	minScoreCheck.put(itemId, new Float[]{accumulatedScore, item.getMinScore(), itemParts});
         }
       }
       
@@ -1077,14 +1090,20 @@ public class GradingService
       }
       
       //if there is a minimum score value, then make sure the auto score is at least the minimum
-      if(minScore != null && totalAutoScoreCheck < minScore){    	  
-          iter = itemGradingSet.iterator();
-          while(iter.hasNext())
-          {
-            ItemGradingData itemGrading = (ItemGradingData) iter.next();
-           	itemGrading.setAutoScore( Double.valueOf(minScore / itemGradingSet.size()));
-          }
-    	  
+      //entry.getValue()[0] = total score for the question
+      //entry.getValue()[1] = min score
+      //entry.getValue()[2] = how many question answers to divide minScore across
+      for(Entry<Long, Float[]> entry : minScoreCheck.entrySet()){
+    	  if(entry.getValue()[0] < entry.getValue()[1]){
+    		  //reset all scores to 0 since the user didn't get all correct answers
+    		  iter = itemGradingSet.iterator();
+    		  while(iter.hasNext()){
+    			  ItemGradingData itemGrading = (ItemGradingData) iter.next();
+    			  if(itemGrading.getPublishedItemId().equals(entry.getKey())){
+    				  itemGrading.setAutoScore(new Double(entry.getValue()[1]/entry.getValue()[2]));
+    			  }
+    		  }
+    	  }
       }
       
       log.debug("****x4. "+(new Date()).getTime());

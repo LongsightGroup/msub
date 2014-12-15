@@ -920,39 +920,6 @@ public class ItemFacade implements Serializable, ItemDataIfc, Comparable<ItemDat
     return this.data.getText();
   }
 
-  /**
-   * Utility method.
-   * Obeys the semantics and rules of the getText() but removes
-   * HTML tags.
-   *
-   * @see getText()
-   * @return text of question, removes
-   * HTML tags.
-   * @throws DataFacadeException
-   */
-  public String getTextHtmlStripped() throws DataFacadeException
-  {
-    String regexHTMLTag = "\\<.*?\\>";
-    String regexLineBreaks = "(\\r|\\n)";
-    return getText().replaceAll(regexLineBreaks,"").replaceAll(regexHTMLTag," ");
-  }
-
-  /**
-   * Utility method.
-   * Obeys the semantics and rules of the getText() but removes
-   * HTML tags. The differency of getTextHtmlStripped() is this
-   * API doesn't replace HTMLtags by white space.
-   *
-   * @see getText()
-   * @return text of question, removes
-   * HTML tags.
-   * @throws DataFacadeException
-   */
-  public String getTextHtmlStrippedAll() throws DataFacadeException
-  {
-    String regex = "\\<.*?\\>|\\n|\\r\\n";
-    return getText().replaceAll(regex,"");
-  }
   
   public ArrayList getItemTextArray() {
     ArrayList list = new ArrayList();

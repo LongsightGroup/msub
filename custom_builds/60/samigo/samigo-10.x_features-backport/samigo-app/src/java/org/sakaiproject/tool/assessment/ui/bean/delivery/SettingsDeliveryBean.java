@@ -382,7 +382,12 @@ public class SettingsDeliveryBean implements Serializable
     setUsername(control.getUsername());
     setPassword(control.getPassword());
     setItemNumbering(control.getItemNumbering().toString());
-    setDisplayScoreDuringAssessments(control.getDisplayScoreDuringAssessments().toString());
+    if (control != null && control.getDisplayScoreDuringAssessments() != null) {
+      setDisplayScoreDuringAssessments(control.getDisplayScoreDuringAssessments().toString());
+    }
+    else {
+      setDisplayScoreDuringAssessments("0");
+    }
 
     setIpAddresses(pubAssessment.getSecuredIPAddressSet());
 
