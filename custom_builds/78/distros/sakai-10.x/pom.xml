@@ -118,7 +118,9 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+                <!--
                 <module>gradebook-export</module>
+                -->
                 <module>evaluation</module>
                 <module>blogwow</module>
                 <module>etudes-util</module>
