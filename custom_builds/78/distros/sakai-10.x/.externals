@@ -87,12 +87,19 @@ gradebook-export https://source.sakaiproject.org/svn/msub/longsight.com/gradeboo
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-10.x_backport
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-10.x_backport
 #samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/60/samigo/samigo-10.x_features-backport
-samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/samigo/samigo-10.x_features-backport
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_custom
 
 
 # Additional tools
 
+#dashboard https://source.sakaiproject.org/svn/dashboard/branches/sakai-10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
-dashboard https://source.sakaiproject.org/svn/dashboard/branches/sakai-10.x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x 
+etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
+melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
+
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
+#shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
