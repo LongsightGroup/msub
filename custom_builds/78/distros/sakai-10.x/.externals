@@ -46,7 +46,6 @@ memory https://source.sakaiproject.org/svn/memory/branches/sakai-10.x
 message https://source.sakaiproject.org/svn/message/branches/sakai-10.x
 metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/sakai-10.x
-osp https://source.sakaiproject.org/svn/osp/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
 polls https://source.sakaiproject.org/svn/polls/branches/sakai-10.x
@@ -55,7 +54,6 @@ postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
 #providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
-reference https://source.sakaiproject.org/svn/reference/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
