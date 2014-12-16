@@ -50,6 +50,12 @@ import org.sakaiproject.site.api.ToolConfiguration;
 import org.sakaiproject.tool.api.Session;
 import org.sakaiproject.tool.api.Tool;
 import org.sakaiproject.tool.cover.SessionManager;
+import org.sakaiproject.user.api.Authentication;
+import org.sakaiproject.user.api.AuthenticationException;
+import org.sakaiproject.user.api.Evidence;
+import org.sakaiproject.user.cover.AuthenticationManager;
+import org.sakaiproject.util.IdPwEvidence;
+import org.sakaiproject.util.StringUtil;
 import org.sakaiproject.util.ResourceLoader;
 import org.sakaiproject.util.Web;
 
@@ -299,9 +305,84 @@ public class SkinnableLogin extends HttpServlet implements Login {
 			credentials.setSessionId(session.getId());
 
 			try {
-				loginService.authenticate(credentials);
-				String returnUrl = (String) session.getAttribute(Tool.HELPER_DONE_URL);
-				complete(returnUrl, session, tool, res);
+				String eid = credentials.getIdentifier();
+				String pw = credentials.getPassword();
+				//If the user is authenticated, must it change its password?
+				if (loginUtils.userMustChangePassword(eid)) {
+					String pwNew = req.getParameter("newpass");
+					String pwNewConfirm = req.getParameter("newpassconfirm");
+
+					session.setAttribute("user_eid", eid);
+					session.setAttribute("renewpass", "true");
+
+					//Check if the new password field exists.
+					if (pwNew != null && pwNewConfirm != null) {
+
+						//Check if the new password fields are empty
+						//Show error if empty
+						if ((pwNew.equals("") && pwNewConfirm.equals(""))
+								|| (pwNew.equals("") || pwNewConfirm.equals(""))) {
+							session.setAttribute(ATTR_MSG,
+									rb.getString("renewpass.empty"));
+							res.sendRedirect(res.encodeRedirectURL(Web
+									.returnUrl(req, null)));
+
+							//Check if the new password meets the password requirements
+						}else if (!loginUtils.passwordMeetsRequirements(pwNew)){
+							session.setAttribute(ATTR_MSG,
+									rb.getString("renewpass.notvalid"));
+							res.sendRedirect(res.encodeRedirectURL(Web
+									.returnUrl(req, null)));
+
+							//Check if the new password field and the confirm field are different.
+							//Display error if they are different, should be equal
+						} else if (StringUtil.different(pwNew, pwNewConfirm)) {
+							session.setAttribute(ATTR_MSG,
+									rb.getString("renewpass.notequal"));
+							res.sendRedirect(res.encodeRedirectURL(Web
+									.returnUrl(req, null)));
+
+							//Check if the new password if equal to the old password
+							//Show error if they are equal
+						}else if (pwNew.equals(pw)){
+							session.setAttribute(ATTR_MSG,
+									rb.getString("renewpass.notnew"));
+							res.sendRedirect(res.encodeRedirectURL(Web
+									.returnUrl(req, null)));
+
+							//Everything is OK. Password can be changed.
+						} else {
+							try {
+								//check if old password was correct:
+								Evidence e = new IdPwEvidence(eid, pw);
+								Authentication a = AuthenticationManager.authenticate(e);
+								//password checks out, new password is correct format, let's change it and log the user in
+								loginUtils.setNewPasswordUser(eid, pwNew);
+								credentials.setPassword(pwNew);
+								loginService.authenticate(credentials);
+								String returnUrl = (String) session.getAttribute(Tool.HELPER_DONE_URL);
+								complete(returnUrl, session, tool, res);
+							} catch (AuthenticationException e1) {
+								session.setAttribute(ATTR_MSG,
+										rb.getString("pass.requirements.oldnotvalid"));
+								res.sendRedirect(res.encodeRedirectURL(Web
+										.returnUrl(req, null)));
+							}
+						}
+
+						//It's the first time this page is visited, show message.
+					} else {
+						session.setAttribute(ATTR_MSG,
+								rb.getString("log.renewpass"));
+						res.sendRedirect(res.encodeRedirectURL(Web.returnUrl(
+								req, null)));
+					}
+				}else{
+
+					loginService.authenticate(credentials);
+					String returnUrl = (String) session.getAttribute(Tool.HELPER_DONE_URL);
+					complete(returnUrl, session, tool, res);
+				}
 
 			} catch (LoginException le) {
 
@@ -354,6 +435,41 @@ public class SkinnableLogin extends HttpServlet implements Login {
 		}
 	}
 
+	/*****************************************************************************
+	 * Addition: Force a user to change its password if it has expired
+	 * Cooperates with: User Tool (For updating password change date)
+	 * Author: Lex de Ruijter
+	 * Company: Samoo
+	 *****************************************************************************/
+
+	private LoginUtils loginUtils = LoginUtils.getInstance(); 
+
+	/**
+	 * Get the localised information text for the password requirements. 
+	 * @return
+	 */
+	private String getPasswordRequirementsText(){
+		String text = "";
+		if(loginUtils.getPasswordMinimumLength() > 0){
+			text += "<br />";
+			text += rb.getFormattedMessage("pass.requirements.length", new String[]{String.valueOf(loginUtils.getPasswordMinimumLength())});
+		}
+		if(loginUtils.getPasswordMinimumAmountOfNumbers() > 0){
+			text += "<br />";
+			text += rb.getFormattedMessage("pass.requirements.length_numbers", new String[]{String.valueOf(loginUtils.getPasswordMinimumAmountOfNumbers())});
+		}if (loginUtils.getPasswordMinimumAmountOfLowerCaseLetters() > 0){
+			text += "<br />";
+			text += rb.getFormattedMessage("pass.requirements.length_letters_lower", new String[]{String.valueOf(loginUtils.getPasswordMinimumAmountOfLowerCaseLetters())});		
+
+		}if (loginUtils.getPasswordMinimumAmountOfUpperCaseLetters() > 0){
+			text += "<br />";
+			text += rb.getFormattedMessage("pass.requirements.length_letters_upper", new String[]{String.valueOf(loginUtils.getPasswordMinimumAmountOfUpperCaseLetters())});		
+
+		}
+
+		return text;
+	}
+	
 	public void sendResponse(LoginRenderContext rcontext, HttpServletResponse res,
 			String template, String contentType) throws IOException
 	{
@@ -391,6 +507,10 @@ public class SkinnableLogin extends HttpServlet implements Login {
 	{
 		LoginRenderEngine rengine = loginService.getRenderEngine(loginContext, request);
 		LoginRenderContext rcontext = rengine.newRenderContext(request);
+		
+		// get the session
+		Session session = SessionManager.getCurrentSession();
+		boolean changePass = "true".equals((String) session.getAttribute("renewpass")) ? true : false;
 
 		if (StringUtils.isEmpty(skin))
 		{
@@ -409,12 +529,17 @@ public class SkinnableLogin extends HttpServlet implements Login {
 		String passwordResetUrl = getPasswordResetUrl();
 
 		String eidWording = rb.getString("userid");
-		String pwWording = rb.getString("log.pass");
-		String loginRequired = rb.getString("log.logreq");
 		String loginWording = rb.getString("log.login");
 		String cancelWording = rb.getString("log.cancel");
 		String passwordResetWording = rb.getString("log.password.reset");
-
+		String pwWording = changePass ? rb.getString("log.oldpass") : rb
+				.getString("log.pass");
+		String loginRequired = changePass ? rb.getString("log.pwchangereq")
+				: rb.getString("log.logreq");
+		
+		String pwNewConfirmWording = rb.getString("log.newpassconfirm");
+		String pwNewWording = rb.getString("log.newpass");
+		
 		rcontext.put("action", response.encodeURL(Web.returnUrl(request, null)));
 		rcontext.put("pageSkinRepo", skinRepo);
 		rcontext.put("pageSkin", skin);
@@ -427,7 +552,17 @@ public class SkinnableLogin extends HttpServlet implements Login {
 		rcontext.put("cancelWording", cancelWording);
 		rcontext.put("passwordResetUrl", passwordResetUrl);
 		rcontext.put("passwordResetWording", passwordResetWording);
-
+		rcontext.put("pwNewConfirmWording", pwNewConfirmWording);
+		rcontext.put("pwNewWording", pwNewWording);
+		rcontext.put("changePass", changePass);
+		String passwordRequirements = getPasswordRequirementsText();
+		if(!"".equals(passwordRequirements)){
+			passwordRequirements = rb.getString("pass.requirements.info") + passwordRequirements;
+			passwordRequirements = "<div class=\"alertMessage\">" + passwordRequirements + "</div>";
+		}
+		rcontext.put("passwordRequirements", passwordRequirements);
+		rcontext.put(ATTR_MSG, session.getAttribute(ATTR_MSG));
+		
 		String eid = StringEscapeUtils.escapeHtml(request.getParameter("eid"));
 		String pw = StringEscapeUtils.escapeHtml(request.getParameter("pw"));
 
@@ -497,6 +632,8 @@ public class SkinnableLogin extends HttpServlet implements Login {
 			session.removeAttribute(ATTR_MSG);
 			session.removeAttribute(ATTR_RETURN_URL);
 			session.removeAttribute(ATTR_CONTAINER_CHECKED);
+			session.removeAttribute("user_eid");
+			session.removeAttribute("renewpass");
 		}
 
 		// if we end up with nowhere to go, go to the portal
