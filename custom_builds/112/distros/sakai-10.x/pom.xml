@@ -119,10 +119,11 @@
                 <!--
                 <module>gradebook-export</module>
                 -->
-                <module>evaluation</module>
-                <module>blogwow</module>
-                <module>etudes-util</module>
-                <module>melete</module>
+                <module>bigbluebutton-sakai/bbb-tool</module>
+                <module>batch-user-creation</module>
+                <module>clog</module>
+                <module>sis_integration</module>
+                <module>content-review/contentreview-impl</module>
                 
             </modules>
         </profile>
