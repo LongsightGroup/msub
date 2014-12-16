@@ -8,7 +8,7 @@ deploy https://source.sakaiproject.org/svn/sakai/branches/sakai-10.x/deploy/
 # Core services
 #kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 #common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
-#content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
+content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
 edu-services https://source.sakaiproject.org/svn/edu-services/branches/sakai-10.x
 emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/branches/sakai-10.x
@@ -96,7 +96,8 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 batch-user-creation https://source.sakaiproject.org/contrib/samoo/batch-user-creation-tool/trunk/
 #0.9.4 from client 19 10.x
 clog https://source.sakaiproject.org/contrib/clog/tags/clog-0.9.4/
-content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
+content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl
+
 login https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/112/login/sakai-10.x
 
 #Patcher options: "mavenoptions: <options>"
