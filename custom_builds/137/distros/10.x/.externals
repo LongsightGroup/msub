@@ -80,3 +80,4 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 # custom tools
 blogwow -r 86512 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
 #evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+#preauth_filter https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/trunk/rsmart/preauth_filter
