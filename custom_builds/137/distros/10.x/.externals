@@ -17,7 +17,6 @@ jobscheduler https://source.sakaiproject.org/svn/jobscheduler/branches/sakai-10.
 jsf https://source.sakaiproject.org/svn/jsf/branches/sakai-10.x
 sakai-mock https://source.sakaiproject.org/svn/sakai-mock/branches/sakai-10.x
 userauditservice https://source.sakaiproject.org/svn/userauditservice/branches/sakai-10.x
-webservices https://source.sakaiproject.org/svn/webservices/branches/sakai-10.x
 
 # Core Sakai Tools
 access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
@@ -38,7 +37,6 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-10.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-10.x
 lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
-login https://source.sakaiproject.org/svn/login/branches/sakai-10.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
 memory https://source.sakaiproject.org/svn/memory/branches/sakai-10.x
@@ -78,6 +76,9 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 # custom tools
-blogwow -r 86512 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
-#evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+# LOGIN REQUIRES PREAUTH JAR -- currently manually deployed
+login https://source.sakaiproject.org/svn/login/branches/sakai-10.x
 #preauth_filter https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/trunk/rsmart/preauth_filter
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
