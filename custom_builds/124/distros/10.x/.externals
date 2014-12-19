@@ -69,15 +69,19 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
+
 #customizations
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-10.x_custom
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+gradebook2 -r86616 https://source.sakaiproject.org/contrib/gradebook2/trunk
 
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/124/config/config-10.x_custom
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/124/user/user-10.x_custom
 
-#Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
+#POM CHANGES
+#shell_command sed -i -e"s/<version>2.10-SNAPSHOT<\/version>/<version>10-SNAPSHOT<\/version>/"  gradebook2/pom.xml gradebook2/model/pom.xml gradebook2/shared/pom.xml gradebook2/server/pom.xml gradebook2/api/pom.xml gradebook2/client/pom.xml gradebook2/war/pom.xml gradebook2/help/pom.xml

@@ -117,6 +117,7 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>evaluation</module>
+                <module>gradebook2</module>
                 <module>blogwow</module>
             </modules>
         </profile>
