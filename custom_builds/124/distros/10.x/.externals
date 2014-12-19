@@ -83,5 +83,8 @@ gradebook2 -r86616 https://source.sakaiproject.org/contrib/gradebook2/trunk
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/124/config/config-10.x_custom
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/124/user/user-10.x_custom
 
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT
+
 #POM CHANGES
 #shell_command sed -i -e"s/<version>2.10-SNAPSHOT<\/version>/<version>10-SNAPSHOT<\/version>/"  gradebook2/pom.xml gradebook2/model/pom.xml gradebook2/shared/pom.xml gradebook2/server/pom.xml gradebook2/api/pom.xml gradebook2/client/pom.xml gradebook2/war/pom.xml gradebook2/help/pom.xml
