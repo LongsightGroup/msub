@@ -74,6 +74,13 @@
          <dispatcher>FORWARD</dispatcher>
          <dispatcher>INCLUDE</dispatcher>
     </filter-mapping>
+    <filter-mapping>
+         <filter-name>sakai.request</filter-name>
+         <servlet-name>walsh.softwaretraining</servlet-name>
+         <dispatcher>REQUEST</dispatcher>
+         <dispatcher>FORWARD</dispatcher>
+         <dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
 
 
 	<!-- the vm handling servlet : used direct by name, not by URL path -->
@@ -192,6 +199,19 @@
      <servlet>
         <servlet-name>
           walsh.plagiarism
+        </servlet-name>
+        <servlet-class>
+          org.sakaiproject.web.tool.IFrameAction
+        </servlet-class>
+        <init-param>
+          <param-name>template</param-name>
+          <param-value>web/chef_iframe</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+     </servlet>
+     <servlet>
+        <servlet-name>
+          walsh.softwaretraining
         </servlet-name>
         <servlet-class>
           org.sakaiproject.web.tool.IFrameAction
