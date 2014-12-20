@@ -116,6 +116,9 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>etudes-util</module>
+                <module>ltiContact</module>
+                <module>melete</module>
             </modules>
         </profile>
         <profile>
