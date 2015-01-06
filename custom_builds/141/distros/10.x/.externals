@@ -6,7 +6,7 @@ master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 # Core services
 kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
-content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
+#content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
 edu-services https://source.sakaiproject.org/svn/edu-services/branches/sakai-10.x
 emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/branches/sakai-10.x
@@ -24,7 +24,7 @@ access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
 alias https://source.sakaiproject.org/svn/alias/branches/sakai-10.x
 announcement https://source.sakaiproject.org/svn/announcement/branches/sakai-10.x
 archive https://source.sakaiproject.org/svn/archive/branches/sakai-10.x
-assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
+#assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
 authz https://source.sakaiproject.org/svn/authz/branches/sakai-10.x
 basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
@@ -52,7 +52,7 @@ portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
-providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
+#providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
 reference https://source.sakaiproject.org/svn/reference/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
@@ -77,4 +77,8 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 # additional tools
+assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
+content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
 blogwow -r 86416 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+turnitin https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
