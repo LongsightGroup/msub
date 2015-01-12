@@ -121,11 +121,11 @@
                 <!--
                 <module>gradebook-export</module>
                 <module>jforum</module>
+                <module>scorm</module>
+                <module>wicket-for-scorm</module>
                 -->
                 <module>melete</module>
                 <module>evaluation</module>
-                <module>scorm</module>
-                <module>wicket-for-scorm</module>
                 <module>content-review/contentreview-impl</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
