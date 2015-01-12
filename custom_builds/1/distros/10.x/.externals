@@ -61,7 +61,7 @@ sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
 signup https://source.sakaiproject.org/svn/signup/branches/sakai-10.x/
 site https://source.sakaiproject.org/svn/site/branches/sakai-10.x
-#site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
+site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
@@ -75,7 +75,6 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 # Backports
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport/
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 # Customizations
