@@ -116,10 +116,10 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>gradebook-export</module>
                 <module>blogwow</module>
                 <module>etudes-util</module>
                 <!--
+                <module>gradebook-export</module>
                 <module>jforum</module>
                 -->
                 <module>melete</module>
