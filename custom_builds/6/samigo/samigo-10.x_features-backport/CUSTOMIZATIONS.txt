@@ -18,3 +18,9 @@ SAM-2417 - Possible issue with static log4j AgentFacade NoClassDefFoundError
 Updated 08/28/2014 svn merge "^/sam/branches/sakai-10.x"
 Updated 10/20/2014 svn merge "^/sam/branches/sakai-10.x"
 Updated 10/28/2014 Update this clients FB (6) to match the regular FB 
+
+== EXPERIMENTAL PATCHES ==
+SAM-2461 Problems when autosubmit job runs during startup (2015-01-19)
+ * Moved auto-submit job from 5am to 4:22am
+  * merged git commit c5826f634a34e6c2059000fce87856bb41563f58 from
+  * ottenhoff/lamp-static-issues
