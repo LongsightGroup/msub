@@ -42,9 +42,9 @@ mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
 memory https://source.sakaiproject.org/svn/memory/branches/sakai-10.x
 message https://source.sakaiproject.org/svn/message/branches/sakai-10.x
-metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
+#metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/sakai-10.x
-osp https://source.sakaiproject.org/svn/osp/branches/sakai-10.x
+#osp https://source.sakaiproject.org/svn/osp/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
 polls https://source.sakaiproject.org/svn/polls/branches/sakai-10.x
@@ -73,11 +73,11 @@ tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
 #user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
-warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
+#warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 # custom tools
-evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x_backport
 #Leave out scorm for now, they said they're not using it and might be out of date
 #sakai-wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/trunk
 #SCORM.2004.3ED.RTE https://source.sakaiproject.org/svn/msub/uwo.ca/scorm/trunk
