@@ -67,7 +67,7 @@ calendar https://source.sakaiproject.org/svn/calendar/branches/calendar-2.9.x
 courier https://source.sakaiproject.org/svn/courier/branches/courier-2.9.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/mailarchive-2.9.x
 message https://source.sakaiproject.org/svn/message/branches/message-2.9.x
-portal https://source.sakaiproject.org/svn/portal/branches/portal-2.9.x
+#portal https://source.sakaiproject.org/svn/portal/branches/portal-2.9.x
 presence https://source.sakaiproject.org/svn/presence/branches/presence-2.9.x
 site https://source.sakaiproject.org/svn/site/branches/site-2.9.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/taggable-2.9.x
@@ -85,6 +85,7 @@ kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/2012070
 login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-2.9.x_googleplus
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.8.2_sak29x_features-backport/
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport
+portal https://source.sakaiproject.org/svn/msub/longsight.com/sakai/portal/portal-SAK-29001-2.9.x
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport
 site-manage -r 309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/74/user/user-2.9.x_custom
