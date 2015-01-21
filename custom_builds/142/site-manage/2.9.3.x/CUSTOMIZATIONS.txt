@@ -1,3 +1,5 @@
 * Forked from r307138 https://source.sakaiproject.org/svn/msub/rsmart.com/site-manage/branches/2.9.3.x
 * SAK-28069 Enhance site import from Site to automatically add any missing tools
   * Applied via manual patch from Steve S
+* SAK-28993 Enhance Import from Site to automatically add any missing tools - part 2
+  * Applied via manual patch from Steve S
