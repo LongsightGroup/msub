@@ -554,6 +554,16 @@ public class PortalSiteHelperImpl implements PortalSiteHelper
 
 		List<Map> l = new ArrayList<Map>();
 
+                //get the category array from the properties file
+                int categorySize = 0;
+                try{
+                        categorySize = Integer.parseInt(ServerConfigurationService.getString("toolmenu.category.size"));
+                }catch(Exception e){
+
+                }
+
+                Map<String, List> categorizedMaps = new HashMap<String, List>();
+
 		String addMoreToolsUrl = null;
 		for (Iterator i = pages.iterator(); i.hasNext();)
 		{
@@ -564,6 +574,7 @@ public class PortalSiteHelperImpl implements PortalSiteHelper
 			List<ToolConfiguration> pTools = p.getTools();
 			ToolConfiguration firstTool = null;
 			String toolsOnPage = null;
+                        Map<String, String> toolIds = new HashMap<String, String>();
 
 			// Check the tools that indicate the portal is to do the popup
 			Iterator<ToolConfiguration> toolz = pTools.iterator();
@@ -579,6 +590,7 @@ public class PortalSiteHelperImpl implements PortalSiteHelper
 						resetTools, effectiveSiteId, null);
 					addMoreToolsUrl += "?sakai_action=doMenu_edit_site_tools&panel=Shortcut";
 				}
+                                toolIds.put(pageTool.getPageId(), pageTool.getToolId());
 			}
 			if ( count != 1 ) {
 				source = null;
@@ -636,6 +648,27 @@ public class PortalSiteHelperImpl implements PortalSiteHelper
 				m.put("pageRefUrl", pagerefUrl);
 				m.put("toolpopup", Boolean.valueOf(source!=null));
 				m.put("toolpopupurl", source);
+
+                                String toolRegistryId = "";
+
+                                //first try to set the toolRegistryId(ex. sakai.resources)
+                                try{
+                                        toolRegistryId = toolIds.get(p.getId());
+                                } 
+                                catch(Exception e){
+                                        toolRegistryId = null;
+                                }
+
+                                //determine the category that this tool falls in
+                                for(int j=0; j < categorySize; j++){
+                                    if(toolRegistryId != null && ServerConfigurationService.getString("toolmenu.category["+j+"].tools").contains(toolRegistryId)){
+                                        m.put("category", ServerConfigurationService.getString("toolmenu.category["+j+"].title", "NONE"));
+                                    }
+                                }
+                                //finally if it doesn't have a category set it to NONE
+                                if(m.get("category") == null){
+                                        m.put("category", "NONE");
+                                }
 				
 				// TODO: Should have Web.escapeHtmlAttribute()
 				String description = desc.toString().replace("\"","&quot;");
@@ -662,9 +695,22 @@ public class PortalSiteHelperImpl implements PortalSiteHelper
 				m.put("pageProps", createPageProps(p));
 				// this is here to allow the tool reorder to work
 				m.put("_sitePage", p);
-				l.add(m);
+                                //sort as we go
+                                if(categorizedMaps.containsKey(m.get("category").toString())){
+                                    List<Map> tempList = categorizedMaps.get(m.get("category").toString());
+                                    tempList.add(m);
+                                    categorizedMaps.remove(m.get("category").toString());
+                                    categorizedMaps.put(m.get("category").toString(), tempList);
+                                }else{
+                                    List<Map> tempList = new ArrayList<Map>();
+                                    tempList.add(m);
+                                    categorizedMaps.put(m.get("category").toString(), tempList);
+                                }
+                                //l.add(m);
 				continue;
 			}
+
+                        //add each category to the l map
 
 			String toolUrl = Web.returnUrl(req, "/" + portalPrefix + "/"
 				+ Web.escapeUrl(getSiteEffectiveId(site)));
@@ -722,6 +768,20 @@ public class PortalSiteHelperImpl implements PortalSiteHelper
 			theMap.put("pageNavCanAddMoreTools", true);
 		} else {
 			theMap.put("pageNavCanAddMoreTools", false);
+		}
+
+                //always list uncategorized items first
+                if(categorizedMaps.containsKey("NONE")){
+                    l.addAll(categorizedMaps.get("NONE"));
+                    categorizedMaps.remove("NONE");
+                }
+                //fill in the rest
+                // do this in order!
+                for(int j=0; j < categorySize; j++){
+                    String key = ServerConfigurationService.getString("toolmenu.category["+j+"].title", "");
+                    if (key != null && !key.equals("") && categorizedMaps.containsKey(key)) {
+                    l.addAll(categorizedMaps.get(key));
+                }
 		}
 
 		theMap.put("pageNavTools", l);

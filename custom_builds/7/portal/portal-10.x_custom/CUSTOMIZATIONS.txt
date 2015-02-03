@@ -1,1 +1,3 @@
 LS-138 Show unpublished sites in My Courses
+SAK-23718 Portal Navigation Menu: Static Categorization of Tools
+ * svn merge -c311766,311814,312185 ^/msub/longsight.com/portal/portal-10.x_custom
