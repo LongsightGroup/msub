@@ -35,6 +35,7 @@ public class Assignment implements Serializable {
     private Long id;
     private Double points;
     private Date dueDate;
+    private Date autoReleaseDate;
     private boolean counted;
     private boolean externallyMaintained;
     private String externalId;
@@ -81,6 +82,12 @@ public class Assignment implements Serializable {
 	 */
 	public Date getDueDate() {
 		return dueDate;
+	}
+	/**
+	 * @return Returns the auto submit date for the assignment, or null if none is defined.
+	 */
+	public Date getAutoReleaseDate() {
+		return autoReleaseDate;
 	}
 
     /**
@@ -131,6 +138,10 @@ public class Assignment implements Serializable {
 
 	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
+	}
+	
+	public void setAutoReleaseDate(Date autoReleaseDate) {
+		this.autoReleaseDate = autoReleaseDate;
 	}
 
 	public void setExternalAppName(String externalAppName) {

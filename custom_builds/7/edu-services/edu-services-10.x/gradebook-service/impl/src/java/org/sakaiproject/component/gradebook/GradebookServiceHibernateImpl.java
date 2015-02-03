@@ -242,6 +242,7 @@ public class GradebookServiceHibernateImpl extends BaseHibernateManager implemen
     	assignmentDefinition.setName(internalAssignment.getName());
     	assignmentDefinition.setPoints(internalAssignment.getPointsPossible());
     	assignmentDefinition.setDueDate(internalAssignment.getDueDate());
+    	assignmentDefinition.setAutoReleaseDate(internalAssignment.getAutoReleaseDate());
     	assignmentDefinition.setCounted(internalAssignment.isCounted());
     	assignmentDefinition.setExternallyMaintained(internalAssignment.isExternallyMaintained());
     	assignmentDefinition.setExternalAppName(internalAssignment.getExternalAppName());
@@ -443,6 +444,10 @@ public class GradebookServiceHibernateImpl extends BaseHibernateManager implemen
 		if (log.isDebugEnabled()) log.debug("Score updated in gradebookUid=" + gradebookUid + ", assignmentName=" + assignmentName + " by userUid=" + getUserUid() + " from client=" + clientServiceDescription + ", new score=" + score);
 	}
 	
+	public List getPastAutoReleaseDate() {
+		return getHibernateTemplate().find("from org.sakaiproject.tool.gradebook.GradableObject where autoReleaseDate < CURRENT_TIMESTAMP()");
+	}
+
 	public String getGradebookDefinitionXml(String gradebookUid) {		
 		Long gradebookId = getGradebook(gradebookUid).getId();
 		Gradebook gradebook = getGradebook(gradebookUid);
@@ -509,6 +514,7 @@ public class GradebookServiceHibernateImpl extends BaseHibernateManager implemen
 							
 							catList_tempt.add(catTempt);
 							createAssignmentForCategory(gradebook.getId(), catId, assignmentDef.getName(), assignmentDef.getPoints(), assignmentDef.getDueDate(), true, false, assignmentDef.isExtraCredit());
+							
 							assignmentsAddedCount++;
 						}
 						else{
@@ -720,6 +726,7 @@ public class GradebookServiceHibernateImpl extends BaseHibernateManager implemen
 				}
 				assignment.setCounted(assignmentDefinition.isCounted());
 				assignment.setDueDate(assignmentDefinition.getDueDate());
+				assignment.setAutoReleaseDate(assignmentDefinition.getAutoReleaseDate());
 				assignment.setName(assignmentDefinition.getName().trim());
 				assignment.setPointsPossible(assignmentDefinition.getPoints());
 				assignment.setReleased(assignmentDefinition.isReleased());

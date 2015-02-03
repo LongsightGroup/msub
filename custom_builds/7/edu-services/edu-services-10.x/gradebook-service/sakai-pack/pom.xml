@@ -15,6 +15,11 @@
     <deploy.target>components</deploy.target>
   </properties>
   <dependencies>
+			<dependency>
+					<groupId>org.sakaiproject.edu-services.gradebook</groupId>
+					<artifactId>gradebook-scheduler-jobs</artifactId>
+					<version>${project.version}</version>
+			</dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>gradebook-service-impl</artifactId>

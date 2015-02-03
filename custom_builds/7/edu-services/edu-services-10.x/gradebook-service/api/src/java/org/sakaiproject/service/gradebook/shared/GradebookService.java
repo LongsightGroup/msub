@@ -836,4 +836,11 @@ public interface GradebookService {
 	 */
 	public String getAverageCourseGrade(String gradebookUid);
 
+	/**
+	 *
+	 * @return A list of item ids past the auto release date
+	 */
+	   
+	public List getPastAutoReleaseDate();
+
 }

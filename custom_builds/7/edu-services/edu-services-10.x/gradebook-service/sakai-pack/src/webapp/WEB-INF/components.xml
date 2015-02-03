@@ -23,6 +23,70 @@
 		</property>
    </bean>
 
+
+  <!-- This is the actual bean to execute (with an optional parameter that is consumed by the job)
+  Things to note:
+    - the 'id' is arbitrary but must be the same for this bean definition AND the following one
+    - the 'class' is the fully qualified package name of your Java class
+    - you can inject any properties or services into your job in this bean.
+    -->
+  <bean id="gradebookAutoReleaseJob"
+          class="org.sakaiproject.job.gradebook.AutoReleaseJob" init-method="init">
+
+    <property name="configMessage">
+      <value></value>
+    </property>
+
+    <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
+		<property name="gradebookService" ref="org_sakaiproject_service_gradebook_GradebookService" />
+		<property name="schedulerManager" ref="org.sakaiproject.api.app.scheduler.SchedulerManager" />
+    <!--  example of injecting some Sakai API's into your job if you needed them
+    <property name="sessionManager">
+      <ref bean="org.sakaiproject.tool.api.SessionManager" />
+    </property>
+    
+    <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager" />
+    <property name="userDirectoryService" ref="org.sakaiproject.user.api.UserDirectoryService" />
+    <property name="contentHostingService" ref="org.sakaiproject.content.api.ContentHostingService" />
+    <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
+    <property name="entityManager" ref="org.sakaiproject.entity.api.EntityManager" />
+    <property name="sakaiPersonManager" ref="org.sakaiproject.api.common.edu.person.SakaiPersonManager" />
+    <property name="siteAdvisor" ref="org.sakaiproject.contentreview.service.ContentReviewSiteAdvisor" />
+    <property name="sqlService" ref="org.sakaiproject.db.api.SqlService" />
+    
+        -->
+  </bean>
+
+  <!-- This is the helper that will register the above bean with the ScheduleManager
+    Things to note:
+      - id must end with the same bean id from above
+      - class must be the class of the SpringJobBeanWrapper, ie don't change it.
+      - the beanId property must match the bean id from above
+      - the jobName property is the text that will be rendered in the list of jobs in Sakai
+  -->
+  <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.autoReleaseJob"
+   class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
+    singleton="true" init-method="init">
+
+    <property name="beanId">
+      <value>gradebookAutoReleaseJob</value>
+    </property>
+
+    <property name="jobName">
+      <value>Auto Release Grades Job</value>
+    </property>
+
+        <property name="schedulerManager">
+      <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager" />
+    </property>
+
+   </bean>
+
+
+   <!--  if you have multiple jobs you can wire them in here, simply copy the above example blocks and modify as needed -->
+
+
+
 	<!-- Required facade definitions -->
 	<!-- <import resource="spring-facades.xml" /> -->
 

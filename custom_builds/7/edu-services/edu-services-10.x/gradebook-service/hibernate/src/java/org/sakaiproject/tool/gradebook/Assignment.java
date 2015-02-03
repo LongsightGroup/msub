@@ -64,6 +64,7 @@ public class Assignment extends GradableObject {
 
     private Double pointsPossible;
     private Date dueDate;
+    private Date autoReleaseDate;
     private boolean notCounted;
     private boolean externallyMaintained;
     private String externalStudentLink;
@@ -257,7 +258,28 @@ public class Assignment extends GradableObject {
         this.extraCredit = Boolean.FALSE;
         this.hideInAllGradesTable = false;
     }
+    
+    /**
+     * constructor to support auto submit date
+     * @param gradebook
+     * @param name
+     * @param autoReleaseDate
+     * @param pointsPossible
+     * @param dueDate
+     * @param released
+     */
+    public Assignment(Gradebook gradebook, String name, Double pointsPossible, Date dueDate, boolean released, Date autoReleaseDate) {
+        this.gradebook = gradebook;
+        this.name = name;
+        this.pointsPossible = pointsPossible;
+        this.dueDate = dueDate;
+        this.released = released;
+        this.extraCredit = Boolean.FALSE;
+        this.hideInAllGradesTable = false;
+        this.autoReleaseDate = autoReleaseDate;
+    }
 
+    
     public Assignment() {
     	super();
     	this.extraCredit = Boolean.FALSE;
@@ -299,6 +321,19 @@ public class Assignment extends GradableObject {
 	 */
 	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
+	}
+	
+	/**
+	 * @return Returns the autoReleaseDate.
+	 */
+	public Date getAutoReleaseDate() {
+		return autoReleaseDate;
+	}
+	/**
+	 * @param autoReleaseDate The autoReleaseDate to set.
+	 */
+	public void setAutoReleaseDate(Date autoReleaseDate) {
+		this.autoReleaseDate = autoReleaseDate;
 	}
 	/**
 	 */

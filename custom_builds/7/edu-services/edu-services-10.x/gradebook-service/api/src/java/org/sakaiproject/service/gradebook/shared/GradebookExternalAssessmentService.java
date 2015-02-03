@@ -86,7 +86,11 @@ public interface GradebookExternalAssessmentService {
 			String title, Double points, Date dueDate, String externalServiceDescription, Boolean ungraded)
             throws GradebookNotFoundException, ConflictingAssignmentNameException,
             ConflictingExternalIdException, AssignmentHasIllegalPointsException;
-	
+
+	/**
+ 	 * @deprecated Replaced by
+	 *		{@link addExternalAssessment(String, String, String, String, Double, Date, Date, String, Boolean, Long, Date)}
+	 */
 	/**
 	 * This method is identical to {@link #addExternalAssessment(String, String, String, String, Double, Date, String, Boolean)} but
 	 * allows you to also specify the associated Category for this assignment. If the gradebook is set up for categories and
@@ -97,6 +101,33 @@ public interface GradebookExternalAssessmentService {
 	 * @param title
 	 * @param points
 	 * @param dueDate
+	 * @param autoReleaseDate
+	 * @param externalServiceDescription
+	 * @param ungraded
+	 * @param categoryId
+	 * @throws GradebookNotFoundException
+	 * @throws ConflictingAssignmentNameException
+	 * @throws ConflictingExternalIdException
+	 * @throws AssignmentHasIllegalPointsException
+	 * @throws InvalidCategoryException
+	 */
+
+	
+   public void addExternalAssessment(String gradebookUid, String externalId, String externalUrl,
+            String title, Double points, Date dueDate, String externalServiceDescription, Boolean ungraded, Long categoryId)
+            throws GradebookNotFoundException, ConflictingAssignmentNameException,
+            ConflictingExternalIdException, AssignmentHasIllegalPointsException, InvalidCategoryException;
+
+   	/**
+	 * This method is identical to {@link #addExternalAssessment(String, String, String, String, Double, Date, String, Boolean)} but
+	 * allows you to also specify the auto submit date for this assignment.
+	 * @param gradebookUid
+	 * @param externalId
+	 * @param externalUrl
+	 * @param title
+	 * @param points
+	 * @param dueDate
+	 * @param autoReleaseDate
 	 * @param externalServiceDescription
 	 * @param ungraded
 	 * @param categoryId
@@ -107,10 +138,10 @@ public interface GradebookExternalAssessmentService {
 	 * @throws InvalidCategoryException
 	 */
     public void addExternalAssessment(String gradebookUid, String externalId, String externalUrl,
-            String title, Double points, Date dueDate, String externalServiceDescription, Boolean ungraded, Long categoryId)
+            String title, Double points, Date dueDate, String externalServiceDescription, Boolean ungraded, Long categoryId, Date autoReleaseDate)
             throws GradebookNotFoundException, ConflictingAssignmentNameException,
-            ConflictingExternalIdException, AssignmentHasIllegalPointsException, InvalidCategoryException;
-	
+            ConflictingExternalIdException, AssignmentHasIllegalPointsException, InvalidCategoryException; 
+    
 		/**
 		 * @deprecated Replaced by
 		 *		{@link updateExternalAssessment(String, String, String, String, Double, Date, Boolean)}
@@ -139,6 +170,10 @@ public interface GradebookExternalAssessmentService {
   	        throws GradebookNotFoundException, AssessmentNotFoundException,
               ConflictingAssignmentNameException, AssignmentHasIllegalPointsException;
 
+    public void updateExternalAssessment(String gradebookUid, String externalId, String externalUrl,
+			String title, Double points, Date dueDate, Boolean ungraded, Date autoReleaseDate)
+  	        throws GradebookNotFoundException, AssessmentNotFoundException,
+              ConflictingAssignmentNameException, AssignmentHasIllegalPointsException;
 	/**
 	 * Remove the assessment reference from the gradebook. Although Samigo
 	 * doesn't currently delete assessments, an instructor can retract an
