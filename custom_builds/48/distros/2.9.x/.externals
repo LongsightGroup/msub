@@ -76,7 +76,7 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 hybrid https://source.sakaiproject.org/svn/hybrid/branches/hybrid-1.2.x
 
 #customizations
-blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+blogwow -r 86404 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 etudes-util https://source.sakaiproject.org/contrib/etudes/etudes-util/tags/1.0.8
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
@@ -96,7 +96,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/w
 #POM Changes
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
-#shell_command sed -i 's/2.10-SNAPSHOT/2.9-SNAPSHOT/g' blogwow/pom.xml
+#shell_command sed -i 's/10-SNAPSHOT/2.9-SNAPSHOT/g' blogwow/pom.xml
 #shell_command sed -i 's/2.7.1/2.9-SNAPSHOT/g' etudes-util/pom.xml
 #shell_command sed -i 's/<artifactId>etudes-util-api<\/artifactId>/<artifactId>etudes-util-api<\/artifactId><version>\${etudes.util.version}<\/version>/g' etudes-util/etudes-util/util/pom.xml 
 
