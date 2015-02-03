@@ -6,12 +6,13 @@
         <artifactId>edu-services</artifactId>
         <groupId>org.sakaiproject.edu-services</groupId>
         <version>10-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>gradebook-scheduler-jobs</artifactId>
   <name>Gradebook Quartz Scheduler Jobs</name>
-  <groupId>org.sakaiproject.edu-services.schedulerjobs</groupId>
+  <groupId>org.sakaiproject.edu-services.gradebook</groupId>
 
   <packaging>jar</packaging>
     <properties>
