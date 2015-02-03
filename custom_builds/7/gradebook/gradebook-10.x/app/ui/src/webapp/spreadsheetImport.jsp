@@ -47,6 +47,16 @@
 				    <t:inputCalendar id="dueDate" value="#{spreadsheetUploadBean.assignment.dueDate}" renderAsPopup="true" renderPopupButtonAsImage="true" popupTodayString="#{msgs.date_entry_today_is}" popupWeekString="#{msgs.date_entry_week_header}" />
 						<h:message for="dueDate" styleClass="alertMessageInline" />
 					</h:panelGroup>
+
+					<h:panelGroup>
+						<h:outputLabel for="autoReleaseDate" id="autoReleaseDateLabel" value="#{msgs.auto_release_date}"/>
+						<h:outputText style="font-weight:normal;" value=" #{spreadsheetUploadBean.dateEntryFormatDescription}"/>
+					</h:panelGroup>
+					<h:panelGroup>
+				    <t:inputCalendar id="autoReleaseDate" value="#{spreadsheetUploadBean.assignment.autoReleaseDate}" renderAsPopup="true" renderPopupButtonAsImage="true" popupTodayString="#{msgs.date_entry_today_is}" popupWeekString="#{msgs.date_entry_week_header}" />
+						<h:message for="autoReleaseDate" styleClass="alertMessageInline" />
+					</h:panelGroup>
+
 					
 					<h:outputLabel for="category" id="categoryLabel" value="#{msgs.add_assignment_category}" rendered="#{spreadsheetUploadBean.categoriesEnabled}" />
 					<h:panelGroup rendered="#{spreadsheetUploadBean.categoriesEnabled}">

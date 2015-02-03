@@ -82,6 +82,12 @@
                 </h:outputText>
 				<h:outputText id="dueDatePlaceholder" value="#{msgs.score_null_placeholder}" rendered="#{assignmentDetailsBean.assignment.dueDate == null}" />
 
+				<h:outputText id="autoReleaseDateLabel" value="#{msgs.auto_release_date}"/>
+				<h:outputText id="autoReleaseDate" value="#{assignmentDetailsBean.assignment.autoReleaseDate}" rendered="#{assignmentDetailsBean.assignment.autoReleaseDate != null}" >
+                     <gbx:convertDateTime/>
+                </h:outputText>
+				<h:outputText id="autoReleaseDatePlaceholder" value="#{msgs.score_null_placeholder}" rendered="#{assignmentDetailsBean.assignment.autoReleaseDate == null}" />
+
 				<h:outputText id="optionsLabel" value="#{msgs.assignment_details_options}" rendered="#{assignmentDetailsBean.userAbleToEditAssessments}"/>
 				<h:panelGrid cellpadding="0" cellspacing="0" columns="1" rendered="#{assignmentDetailsBean.userAbleToEditAssessments}">
 					<h:outputText

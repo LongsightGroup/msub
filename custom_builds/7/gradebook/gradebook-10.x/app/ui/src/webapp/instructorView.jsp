@@ -198,6 +198,20 @@
 					</h:outputText>
 					<h:outputText value="#{msgs.score_null_placeholder}" rendered="#{row.assignment && row.associatedAssignment.dueDate == null}"/>
 				</h:column>
+
+				<h:column>
+					<f:facet name="header">
+						<t:commandSortHeader columnName="autoReleaseDate" propertyName="autoReleaseDate" immediate="true" arrow="true">
+							<h:outputText value="#{msgs.auto_release_date}"/>
+						</t:commandSortHeader>
+					</f:facet>
+
+					<h:outputText value="#{row.associatedAssignment.autoReleaseDate}" rendered="#{row.assignment && row.associatedAssignment.autoReleaseDate != null}">
+						<gbx:convertDateTime />
+					</h:outputText>
+					<h:outputText value="#{msgs.score_null_placeholder}" rendered="#{row.assignment && row.associatedAssignment.autoReleaseDate == null}"/>
+				</h:column>
+
 				    
         <h:column rendered="#{instructorViewBean.weightingEnabled}">
 					<f:facet name="header">

@@ -1,0 +1,2 @@
+EST-6 LS-121 set date for grade auto-release 
+  *  svn merge -c108853  ^/msub/longsight.com/custom_builds/7/gradebook/gradebook-2.8.x_features-backport

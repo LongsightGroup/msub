@@ -321,6 +321,14 @@ public interface GradebookManager {
      */
     public Assignment getAssignmentWithStats(Long assignmentId);
 
+		/**
+		 *  @deprecated Replaced by
+		 *  {@link createAssignment(Long, String, Double, Date, Boolean, Boolean, Boolean, Date)}
+     */
+
+    public Long createAssignment(Long gradebookId, String name, Double points, Date dueDate, Boolean isNotCounted, Boolean isReleased, Boolean isExtraCredit)
+            throws ConflictingAssignmentNameException, StaleObjectModificationException;
+
    /**
      * Add a new assignment to a gradebook
      *
@@ -334,7 +342,7 @@ public interface GradebookManager {
      * @return The ID of the new assignment
      */
 
-    public Long createAssignment(Long gradebookId, String name, Double points, Date dueDate, Boolean isNotCounted, Boolean isReleased, Boolean isExtraCredit)
+    public Long createAssignment(Long gradebookId, String name, Double points, Date dueDate, Boolean isNotCounted, Boolean isReleased, Boolean isExtraCredit, Date autoReleaseDate)
             throws ConflictingAssignmentNameException, StaleObjectModificationException;
 
 
@@ -434,6 +442,15 @@ public interface GradebookManager {
     */
     public List getCategories(final Long gradebookId) throws HibernateException;
     
+
+		  /**
+			 *  @deprecated Replaced by
+			 *  {@link createAssignmentForCategory(Long, Long, String, Double, Date, Boolean, Boolean, Boolean, Date)}
+	     */
+
+    public Long createAssignmentForCategory(Long gradebookId, Long categoryId, String name, Double points, Date dueDate, Boolean isNotCounted, Boolean isReleased, Boolean isExtraCredit)
+    throws ConflictingAssignmentNameException, StaleObjectModificationException, IllegalArgumentException;
+
     /**
      * Add a new assignment to a category
      *
@@ -448,7 +465,8 @@ public interface GradebookManager {
      * @return The ID of the new assignment
      * @throws ConflictingAssignmentNameException StaleObjectModificationException IllegalArgumentException
      */
-    public Long createAssignmentForCategory(Long gradebookId, Long categoryId, String name, Double points, Date dueDate, Boolean isNotCounted, Boolean isReleased, Boolean isExtraCredit)
+
+    public Long createAssignmentForCategory(Long gradebookId, Long categoryId, String name, Double points, Date dueDate, Boolean isNotCounted, Boolean isReleased, Boolean isExtraCredit, Date autoReleaseDate)
     throws ConflictingAssignmentNameException, StaleObjectModificationException, IllegalArgumentException;
 
     /**method to get all assignments for a category

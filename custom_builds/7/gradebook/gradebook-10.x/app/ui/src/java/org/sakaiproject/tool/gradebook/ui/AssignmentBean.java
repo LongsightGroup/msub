@@ -441,6 +441,11 @@ public class AssignmentBean extends GradebookDependentBean implements Serializab
 			long dueDateMillis = -1;
 			Date dueDate = assignment.getDueDate();
 			if (dueDate != null) dueDateMillis = dueDate.getTime();
+			
+			long autoReleaseDateMillis = -1;
+			Date autoReleaseDate = assignment.getAutoReleaseDate();
+			if (autoReleaseDate != null) autoReleaseDateMillis = autoReleaseDate.getTime();
+			
 			getGradebookBean().getEventTrackingService().postEvent("gradebook.updateAssignment","/gradebook/"+getGradebookUid()+"/"+assignment.getName()+"/"+assignment.getPointsPossible()+"/"+dueDateMillis+"/"+assignment.isReleased()+"/"+assignment.isCounted()+"/"+getAuthzLevel());
 			
 			if ((!origPointsPossible.equals(newPointsPossible)) && scoresEnteredForAssignment) {

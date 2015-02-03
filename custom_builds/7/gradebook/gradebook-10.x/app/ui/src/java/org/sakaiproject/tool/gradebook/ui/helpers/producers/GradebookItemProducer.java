@@ -142,6 +142,7 @@ ViewComponentProducer, ViewParamsReporter, DefaultView {
     	cal.set(Calendar.HOUR_OF_DAY, 17);
     	cal.set(Calendar.MINUTE, 0);
     	Date duedate = cal.getTime();
+    	Date autoreleasedate = cal.getTime();
 
         
         if (add){
@@ -199,6 +200,11 @@ ViewComponentProducer, ViewParamsReporter, DefaultView {
 		UIInput dueDateField = UIInput.make(form, "due_date:", assignmentOTP + ".dueDate");
 		Date initDueDate = assignment.getDueDate() != null ? assignment.getDueDate() : duedate;
 		dateEvolver.evolveDateInput(dueDateField, initDueDate);
+
+		UIInput autoReleaseDateField = UIInput.make(form, "auto_release_date:", assignmentOTP + ".autoReleaseDate");
+		Date initAutoReleaseDate = assignment.getDueDate() != null ? assignment.getAutoReleaseDate() : autoreleasedate;
+		dateEvolver.evolveDateInput(autoReleaseDateField, initAutoReleaseDate);
+
 		
 		// add the due date as a UIELBinding to force it to save this value
         // if the user doesn't update the due date field

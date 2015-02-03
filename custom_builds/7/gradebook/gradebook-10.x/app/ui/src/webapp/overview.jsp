@@ -193,6 +193,18 @@
         </h:outputText>
 				<h:outputText value="#{msgs.score_null_placeholder}" rendered="#{gradebookItem.assignment && gradebookItem.dueDate == null}"/>
 			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:panelGroup> 
+						<h:outputText value="#{msgs.auto_release_date}"/>
+					</h:panelGroup> 
+		    </f:facet>
+				<h:outputText value="#{gradebookItem.autoReleaseDate}" rendered="#{gradebookItem.assignment && gradebookItem.autoReleaseDate != null}">
+        	<gbx:convertDateTime/>
+        </h:outputText>
+				<h:outputText value="#{msgs.score_null_placeholder}" rendered="#{gradebookItem.assignment && gradebookItem.autoReleaseDate == null}"/>
+			</h:column>
 			
 			<h:column>
 				<f:facet name="header">
