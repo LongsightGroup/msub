@@ -309,7 +309,7 @@ function redirectBasedOnSelection(){
 				
 
 		
-		#if ($termCourseList && $currentUserId != $userId)
+		#if (1==6 && $termCourseList && $currentUserId != $userId)
 					<div class="shorttext required">
 						<span class="reqStar">*</span>						
 						<label for="uniqname">		
