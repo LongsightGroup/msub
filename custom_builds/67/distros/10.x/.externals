@@ -88,5 +88,10 @@ kaltura -r 313603 https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tr
 #shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
 #shell_command sed -i 's/2.10-SNAPSHOT/10-SNAPSHOT/g' itunesu-tool/pom.xml
 #shell_command sed -i 's/2.9-SNAPSHOT/10-SNAPSHOT/g' providers/pom.xml
+#shell_command sed -i 's/2.9-SNAPSHOT/10-SNAPSHOT/g' adobeconnect/pom.xml
+#shell_command sed -i 's/3.0.0/3.0.1/g' scorm/pom.xml
 #shell_command sed -i 's/<\/dependencies>/<dependency><groupId>org.springframework<\/groupId><artifactId>spring-webmvc<\/artifactId><scope>runtime<\/scope><\/dependency><\/dependencies>/g' itunesu-tool/itunesu-admin-tool/pom.xml
 #shell_command sed -i 's/Media Gallery/Loyola Media/g' kaltura/src/main/webapp/tools/sakai.kaltura.xml
+#shell_command find providers/ -name pom.xml -exec sed -i 's/2.9-SNAPSHOT/10-SNAPSHOT/g' {} \;
+#shell_command find itunesu-tool/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
+#shell_command find adobeconnect/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
