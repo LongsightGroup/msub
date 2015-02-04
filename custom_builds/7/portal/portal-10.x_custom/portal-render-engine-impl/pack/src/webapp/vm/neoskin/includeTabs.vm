@@ -208,6 +208,10 @@
 							</a>
 							<a href="#" id="${site.siteId}" class="toolMenus">&nbsp;<span class="skip">Tools</span></a>
 						</li>
+					#elseif ( $site.published == 'false' && $site.siteUpdate == 'false' )
+						<li>
+							<div title="${site.fullTitle}" class="fullTitle walshUnpublishedSite">${site.siteTitle}</div>
+						</li>
 					#else
 						<li>
 							#if (( ${tabDisplayLabel} == 2 ) && ( ${site.shortDescription} ))
