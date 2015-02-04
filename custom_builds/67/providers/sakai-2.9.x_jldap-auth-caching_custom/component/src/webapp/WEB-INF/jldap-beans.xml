@@ -7,6 +7,10 @@
 		class="edu.amc.sakai.user.JLDAPDirectoryProvider" init-method="init"
 		destroy-method="destroy" singleton="true">
 		
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+		<property name="emailService"><ref bean="org.sakaiproject.email.api.EmailService"/></property>
+		<property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>
+
 		<property name="memoryService">
 			<ref bean="org.sakaiproject.memory.api.MemoryService"/>
 		</property>
@@ -119,6 +123,7 @@
 				<!--entry key="altEmail"><value>altMail</value></entry-->  
 				<entry key="groupMembership"><value>groupMembership</value></entry>   
 				<!--entry key="jpegPhoto"><value>jpegPhoto</value></entry-->   
+				<entry key="employeeNumber"><value>employeeNumber</value></entry>   
 			</map>
 		</property>
 		

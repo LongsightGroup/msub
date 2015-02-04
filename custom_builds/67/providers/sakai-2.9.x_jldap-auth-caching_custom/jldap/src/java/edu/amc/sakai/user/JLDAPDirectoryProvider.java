@@ -35,6 +35,9 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.sakaiproject.component.api.ServerConfigurationService;
+import org.sakaiproject.db.api.SqlService;
+import org.sakaiproject.email.api.EmailService;
 import org.sakaiproject.memory.api.Cache;
 import org.sakaiproject.memory.api.MemoryService;
 import org.sakaiproject.user.api.ExternalUserSearchUDP;
@@ -187,6 +190,11 @@ public class JLDAPDirectoryProvider implements UserDirectoryProvider, LdapConnec
 	private Map<String,String> attributeMappings;
 
 	private MemoryService memoryService;
+	
+	// EST-3 LUC immutable id customization
+	private SqlService sqlService;
+	private EmailService emailService;
+	private ServerConfigurationService serverConfigurationService;
 	
 	/**
 	 * Cache of {@link LdapUserData} objects, keyed by eid. 
@@ -474,6 +482,40 @@ public class JLDAPDirectoryProvider implements UserDirectoryProvider, LdapConnec
 			// check the conn for validity
 			if (conn == null || !conn.isConnectionAlive()) {
 				return attemptCachedAuthentication (userLogin, password);
+			}
+			
+			// EST-3 make sure the LUC user hasn't changed their username
+			String[] ldapAttrs = {"employeeNumber"};
+			LdapUserData resolvedEntry = (LdapUserData)searchDirectoryForSingleEntry("samaccountname=" + userLogin, conn, null, ldapAttrs, null);
+			String employeeNumber = resolvedEntry.getProperties().getProperty("employeeNumber");
+            
+			if (StringUtils.isBlank(employeeNumber)) {
+				M_log.warn("JLDAP could not find employeeNumber of eid " + userLogin);
+			}
+			else {
+				Object[] fields = {userLogin};
+				List<String> previousEids = sqlService.dbRead("select eid from jldap_immutable where immutable_id = ?", fields, null);
+				if (!previousEids.isEmpty()) {
+					String previousEid = previousEids.get(0);
+					
+					if (!StringUtils.equals(previousEid, employeeNumber)) {
+						String emailBody = "Request to change " + previousEid + " to " + userLogin + " in Sakai.";
+						String fromStr = serverConfigurationService.getString("support.email","help@"+ serverConfigurationService.getServerUrl());
+						String toStr = serverConfigurationService.getString("luc.eid.change.email", "sakai@luc.edu");
+						String subject = serverConfigurationService.getString("luc.eid.change.subject", "LUC Sakai EID Change");
+						emailService.send(fromStr, toStr, subject, emailBody, null, null, null);
+						M_log.warn("JLDAP LUC EID change: " + emailBody);
+						return false;
+					}
+				}
+				else {
+					String insertImmutableSql = "insert into jldap_immutable (immutable_id, eid) VALUES (?,?)";
+					Object insertFields[] = new Object[2];
+					insertFields[0] = employeeNumber;
+					insertFields[1] = userLogin;
+					sqlService.dbWrite(insertImmutableSql, insertFields);
+					M_log.info("JLDAP added immutable id (" + employeeNumber + ") for eid " + userLogin);
+				}
 			}
 
 			// look up the end-user's DN, which could be nested at some 
@@ -1790,6 +1832,31 @@ public class JLDAPDirectoryProvider implements UserDirectoryProvider, LdapConnec
 
 	public void setMemoryService(MemoryService memoryService) {
 		this.memoryService = memoryService;
+	}
+	
+	// EST-3 custom for LUC immutable id checking
+	public SqlService getSqlService() {
+		return sqlService;
+	}
+
+	public void setSqlService(SqlService sqlService) {
+		this.sqlService = sqlService;
+	}
+	
+	public EmailService getEmailService() {
+		return emailService;
+	}
+
+	public void setEmailService(EmailService emailService) {
+		this.emailService = emailService;
+	}
+	
+	public ServerConfigurationService getServerConfigurationService() {
+		return serverConfigurationService;
+	}
+
+	public void setServerConfigurationService(ServerConfigurationService serverConfigurationService) {
+		this.serverConfigurationService = serverConfigurationService;
 	}
 
 	/** 
