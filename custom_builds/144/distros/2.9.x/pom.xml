@@ -128,6 +128,8 @@
                 <module>velocity</module>
                 <module>warehouse</module>
                 <module>web</module>
+
+                <module>gradebook2</module>
             </modules>
         </profile>
         <profile>
