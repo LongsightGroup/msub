@@ -73,6 +73,8 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
 
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
-gradebook2 -r 86614 https://source.sakaiproject.org/contrib/gradebook2/trunk/
+scoring-service https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/branches/2.9.3.x/scoring-service/
+gradebook2 -r 87144 https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/2.9.x
 
-#shell_command sed -i -e"s/<version>2.10-SNAPSHOT<\/version>/<version>2.9-SNAPSHOT<\/version>/g"  gradebook2/pom.xml 
+#shell_command find scoring-service/ -name pom.xml -exec sed -i 's/2.9.3/2.9-SNAPSHOT/g' {} \;
+#shell_command find gradebook2/ -name pom.xml -exec sed -i 's/2.9.3/2.9-SNAPSHOT/g' {} \;
