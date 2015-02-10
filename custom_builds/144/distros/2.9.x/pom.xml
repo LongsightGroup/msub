@@ -104,7 +104,6 @@
                 <module>mailarchive</module>
                 <module>memory</module>
                 <module>message</module>
-                <module>metaobj</module>
                 <module>podcasts</module>
                 <module>portal</module>
                 <module>postem</module>
@@ -125,9 +124,16 @@
                 <module>usermembership</module>
                 <module>velocity</module>
                 <module>web</module>
-                <module>osp/xsltcharon/xsltcharon-portal/xsl-portal</module>
+
                 <module>scoring-service</module>
                 <module>gradebook2</module>
+                <module>etudes-util</module>
+		<module>melete</module>
+		<module>content-review/contentreview-impl</module>
+<!--
+                <module>osp/xsltcharon/xsltcharon-portal/xsl-portal</module>
+                <module>metaobj</module>
+-->
             </modules>
         </profile>
         <profile>
