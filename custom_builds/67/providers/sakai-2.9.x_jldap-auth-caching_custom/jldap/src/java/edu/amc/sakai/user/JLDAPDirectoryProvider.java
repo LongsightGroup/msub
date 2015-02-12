@@ -483,40 +483,6 @@ public class JLDAPDirectoryProvider implements UserDirectoryProvider, LdapConnec
 			if (conn == null || !conn.isConnectionAlive()) {
 				return attemptCachedAuthentication (userLogin, password);
 			}
-			
-			// EST-3 make sure the LUC user hasn't changed their username
-			String[] ldapAttrs = {"employeeNumber"};
-			LdapUserData resolvedEntry = (LdapUserData)searchDirectoryForSingleEntry("samaccountname=" + userLogin, conn, null, ldapAttrs, null);
-			String employeeNumber = resolvedEntry.getProperties().getProperty("employeeNumber");
-            
-			if (StringUtils.isBlank(employeeNumber)) {
-				M_log.warn("JLDAP could not find employeeNumber of eid " + userLogin);
-			}
-			else {
-				Object[] fields = {userLogin};
-				List<String> previousEids = sqlService.dbRead("select eid from jldap_immutable where immutable_id = ?", fields, null);
-				if (!previousEids.isEmpty()) {
-					String previousEid = previousEids.get(0);
-					
-					if (!StringUtils.equals(previousEid, employeeNumber)) {
-						String emailBody = "Request to change " + previousEid + " to " + userLogin + " in Sakai.";
-						String fromStr = serverConfigurationService.getString("support.email","help@"+ serverConfigurationService.getServerUrl());
-						String toStr = serverConfigurationService.getString("luc.eid.change.email", "sakai@luc.edu");
-						String subject = serverConfigurationService.getString("luc.eid.change.subject", "LUC Sakai EID Change");
-						emailService.send(fromStr, toStr, subject, emailBody, null, null, null);
-						M_log.warn("JLDAP LUC EID change: " + emailBody);
-						return false;
-					}
-				}
-				else {
-					String insertImmutableSql = "insert into jldap_immutable (immutable_id, eid) VALUES (?,?)";
-					Object insertFields[] = new Object[2];
-					insertFields[0] = employeeNumber;
-					insertFields[1] = userLogin;
-					sqlService.dbWrite(insertImmutableSql, insertFields);
-					M_log.info("JLDAP added immutable id (" + employeeNumber + ") for eid " + userLogin);
-				}
-			}
 
 			// look up the end-user's DN, which could be nested at some 
 			// arbitrary depth below getBasePath().
@@ -548,7 +514,47 @@ public class JLDAPDirectoryProvider implements UserDirectoryProvider, LdapConnec
 			}
 			
 			// put the successful authentication in the authCache
-			cacheAuthAttempt (userLogin, password);
+			cacheAuthAttempt (userLogin, password);			
+			
+			// EST-3 make sure the LUC user hasn't changed their username
+			String[] ldapAttrs = {"employeeNumber"};
+			LdapUserData resolvedEntry = (LdapUserData)searchDirectoryForSingleEntry("samaccountname=" + userLogin, conn, null, ldapAttrs, null);
+			String employeeNumber = null;
+			try {
+				employeeNumber = resolvedEntry.getProperties().getProperty("employeeNumber");
+			} catch (Exception e) {
+				M_log.debug("JLDAP could not fetch employeeNumber for user: " + userLogin);
+			}
+            
+			if (StringUtils.isBlank(employeeNumber)) {
+				M_log.warn("JLDAP could not find employeeNumber of eid " + userLogin);
+			}
+			else {
+				Object[] fields = {userLogin};
+				List<String> previousEids = sqlService.dbRead("select eid from jldap_immutable where immutable_id = ?", fields, null);
+				if (!previousEids.isEmpty()) {
+					String previousEid = previousEids.get(0);
+					
+					if (!StringUtils.equals(previousEid, employeeNumber)) {
+						String emailBody = "Request to change " + previousEid + " to " + userLogin + " in Sakai.";
+						String fromStr = serverConfigurationService.getString("support.email","help@"+ serverConfigurationService.getServerUrl());
+						String toStr = serverConfigurationService.getString("luc.eid.change.email", "sakai@luc.edu");
+						String subject = serverConfigurationService.getString("luc.eid.change.subject", "LUC Sakai EID Change");
+						emailService.send(fromStr, toStr, subject, emailBody, null, null, null);
+						M_log.warn("JLDAP LUC EID change: " + emailBody);
+						return false;
+					}
+				}
+				else {
+					String insertImmutableSql = "insert into jldap_immutable (immutable_id, eid) VALUES (?,?)";
+					Object insertFields[] = new Object[2];
+					insertFields[0] = employeeNumber;
+					insertFields[1] = userLogin;
+					sqlService.dbWrite(insertImmutableSql, insertFields);
+					M_log.info("JLDAP added immutable id (" + employeeNumber + ") for eid " + userLogin);
+				}
+			}
+
 			return true;
 
 		}
