@@ -15,6 +15,13 @@
   #end
 #end
 <!-- START from NEO includeTabs.vm -->
+					#if (!${loginTopLogin})
+                                        ## EST-6 Walsh Customization
+                                        <div class="orientation">
+                                                            Quicklinks: <a href="/portal/site/039f69aa-f786-412b-933c-defe7eb3f4c1">Orientation to ECN</a>
+                                        </div>
+					#end
+
 			<!-- start includeTabs -->
 			<div class="${tabsCssClass}"><div id="maxToolsInt" style="display:none">$maxToolsInt</div><div id="maxToolsAnchor" style="display:none">${rloader.sit_alltools}</div>
 				<div id="siteNav">
