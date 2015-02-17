@@ -70,15 +70,16 @@ Index: jforum-impl/impl/pom.xml
  
  	<packaging>jar</packaging>
  
-@@ -41,6 +41,7 @@
+@@ -41,6 +41,8 @@
  		<dependency>
  			<groupId>org.etudes</groupId>
  			<artifactId>etudes-jforum-api</artifactId>
 +			<version>2.6</version>
++			<scope>provided</scope>
  		</dependency>
  
  		<dependency>
-@@ -67,11 +68,13 @@
+@@ -67,11 +69,13 @@
  			<groupId>org.etudes</groupId>
  			<artifactId>etudes-util-api</artifactId>
  			<scope>provided</scope>
@@ -114,15 +115,22 @@ Index: jforum-impl/pack/pom.xml
  
  	<packaging>sakai-component</packaging>
  	
-@@ -44,7 +44,7 @@
+@@ -44,8 +44,14 @@
  		<dependency>
  			<groupId>org.etudes</groupId>
  			<artifactId>etudes-jforum-impl</artifactId>
 -			<version>${etudes.jforum.version}</version>
 +			<version>2.6</version>
  		</dependency>
++		<dependency>
++			<groupId>org.etudes</groupId>
++			<artifactId>etudes-util-api</artifactId>
++			<version>1.0.17</version>
++			<scope>provided</scope>
++		</dependency>
  
  		<dependency>
+ 			<groupId>org.sakaiproject.kernel</groupId>
 Index: jforum-tool/pom.xml
 ===================================================================
 --- jforum-tool/pom.xml	(revision 85763)
@@ -144,11 +152,12 @@ Index: jforum-tool/pom.xml
  
  	<packaging>war</packaging>
  
-@@ -40,11 +41,13 @@
+@@ -40,11 +41,14 @@
  		<dependency>
  			<groupId>org.etudes</groupId>
  			<artifactId>etudes-jforum-api</artifactId>
 +			<version>2.6</version>
++			<scope>provided</scope>
  		</dependency>
  
  		<dependency>
@@ -158,7 +167,7 @@ Index: jforum-tool/pom.xml
  		</dependency>
  		
  		<dependency>
-@@ -51,6 +54,7 @@
+@@ -51,12 +55,14 @@
  			<groupId>org.etudes</groupId>
  			<artifactId>etudes-util-util</artifactId>
  			<scope>compile</scope>
@@ -166,22 +175,26 @@ Index: jforum-tool/pom.xml
  		</dependency>
  		
  		<dependency>
-@@ -57,6 +61,7 @@
  			<groupId>org.etudes</groupId>
  			<artifactId>etudes-util-api</artifactId>
- 			<scope>compile</scope>
+-			<scope>compile</scope>
++			<scope>provided</scope>
 +			<version>1.0.17</version>
  		</dependency>
  		
  		<dependency>
-@@ -69,6 +74,7 @@
-         <dependency>
-             <groupId>org.etudes</groupId>
-             <artifactId>etudes-util-api</artifactId>
-+        <version>1.0.17</version>
-         </dependency>
+@@ -66,11 +72,6 @@
+ 			<scope>compile</scope>
+  		</dependency>
  
+-        <dependency>
+-            <groupId>org.etudes</groupId>
+-            <artifactId>etudes-util-api</artifactId>
+-        </dependency>
+-
  		<dependency>
+ 			<groupId>javax.servlet</groupId>
+ 			<artifactId>servlet-api</artifactId>
 Index: pom.xml
 ===================================================================
 --- pom.xml	(revision 85763)
