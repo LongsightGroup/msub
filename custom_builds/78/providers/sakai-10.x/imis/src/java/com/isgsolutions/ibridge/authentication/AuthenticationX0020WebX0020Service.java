@@ -26,7 +26,7 @@ import javax.xml.ws.WebServiceClient;
  * </p>
  * 
  */
-@WebServiceClient(name = "Authentication_x0020_Web_x0020_Service", targetNamespace = "http://ibridge.isgsolutions.com/Authentication/", wsdlLocation = "http://isgweb.actfl.org/iservices/Authentication.asmx?wsdl")
+@WebServiceClient(name = "Authentication", targetNamespace = "http://ibridge.isgsolutions.com/Authentication/", wsdlLocation = "http://isgweb.actfl.org/iservices/Authentication.asmx?wsdl")
 public class AuthenticationX0020WebX0020Service extends Service {
 
 	private final static URL AUTHENTICATIONX0020WEBX0020SERVICE_WSDL_LOCATION;
@@ -57,18 +57,18 @@ public class AuthenticationX0020WebX0020Service extends Service {
 	public AuthenticationX0020WebX0020Service() {
 		super(AUTHENTICATIONX0020WEBX0020SERVICE_WSDL_LOCATION, new QName(
 				"http://ibridge.isgsolutions.com/Authentication/",
-				"Authentication_x0020_Web_x0020_Service"));
+				"Authentication"));
 	}
 
 	/**
 	 * 
 	 * @return returns AuthenticationX0020WebX0020ServiceSoap
 	 */
-	@WebEndpoint(name = "Authentication_x0020_Web_x0020_ServiceSoap")
+	@WebEndpoint(name = "AuthenticationSoap")
 	public AuthenticationX0020WebX0020ServiceSoap getAuthenticationX0020WebX0020ServiceSoap() {
 		return super.getPort(new QName(
 				"http://ibridge.isgsolutions.com/Authentication/",
-				"Authentication_x0020_Web_x0020_ServiceSoap"),
+				"AuthenticationSoap"),
 				AuthenticationX0020WebX0020ServiceSoap.class);
 	}
 
@@ -76,11 +76,11 @@ public class AuthenticationX0020WebX0020Service extends Service {
 	 * 
 	 * @return returns AuthenticationX0020WebX0020ServiceSoap
 	 */
-	@WebEndpoint(name = "Authentication_x0020_Web_x0020_ServiceSoap12")
+	@WebEndpoint(name = "AuthenticationSoap12")
 	public AuthenticationX0020WebX0020ServiceSoap getAuthenticationX0020WebX0020ServiceSoap12() {
 		return super.getPort(new QName(
 				"http://ibridge.isgsolutions.com/Authentication/",
-				"Authentication_x0020_Web_x0020_ServiceSoap12"),
+				"AuthenticationSoap12"),
 				AuthenticationX0020WebX0020ServiceSoap.class);
 	}
 
@@ -88,11 +88,11 @@ public class AuthenticationX0020WebX0020Service extends Service {
 	 * 
 	 * @return returns AuthenticationX0020WebX0020ServiceHttpGet
 	 */
-	@WebEndpoint(name = "Authentication_x0020_Web_x0020_ServiceHttpGet")
+	@WebEndpoint(name = "AuthenticationHttpGet")
 	public AuthenticationX0020WebX0020ServiceHttpGet getAuthenticationX0020WebX0020ServiceHttpGet() {
 		return super.getPort(new QName(
 				"http://ibridge.isgsolutions.com/Authentication/",
-				"Authentication_x0020_Web_x0020_ServiceHttpGet"),
+				"AuthenticationHttpGet"),
 				AuthenticationX0020WebX0020ServiceHttpGet.class);
 	}
 
@@ -100,11 +100,11 @@ public class AuthenticationX0020WebX0020Service extends Service {
 	 * 
 	 * @return returns AuthenticationX0020WebX0020ServiceHttpPost
 	 */
-	@WebEndpoint(name = "Authentication_x0020_Web_x0020_ServiceHttpPost")
+	@WebEndpoint(name = "AuthenticationHttpPost")
 	public AuthenticationX0020WebX0020ServiceHttpPost getAuthenticationX0020WebX0020ServiceHttpPost() {
 		return super.getPort(new QName(
 				"http://ibridge.isgsolutions.com/Authentication/",
-				"Authentication_x0020_Web_x0020_ServiceHttpPost"),
+				"AuthenticationHttpPost"),
 				AuthenticationX0020WebX0020ServiceHttpPost.class);
 	}
 

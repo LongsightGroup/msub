@@ -19,7 +19,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "DataAccess_x0020_Web_x0020_Service", targetNamespace = "http://ibridge.isgsolutions.com/DataAccess/", wsdlLocation = "http://isgweb.actfl.org/iservices/DataAccess.asmx?wsdl")
+@WebServiceClient(name = "DataAccess", targetNamespace = "http://ibridge.isgsolutions.com/DataAccess/", wsdlLocation = "http://isgweb.actfl.org/iservices/DataAccess.asmx?wsdl")
 public class DataAccessX0020WebX0020Service
     extends Service
 {
@@ -45,7 +45,7 @@ public class DataAccessX0020WebX0020Service
     }
 
     public DataAccessX0020WebX0020Service() {
-        super(DATAACCESSX0020WEBX0020SERVICE_WSDL_LOCATION, new QName("http://ibridge.isgsolutions.com/DataAccess/", "DataAccess_x0020_Web_x0020_Service"));
+        super(DATAACCESSX0020WEBX0020SERVICE_WSDL_LOCATION, new QName("http://ibridge.isgsolutions.com/DataAccess/", "DataAccess"));
     }
 
     /**
@@ -53,9 +53,9 @@ public class DataAccessX0020WebX0020Service
      * @return
      *     returns DataAccessX0020WebX0020ServiceSoap
      */
-    @WebEndpoint(name = "DataAccess_x0020_Web_x0020_ServiceSoap")
+    @WebEndpoint(name = "DataAccessSoap")
     public DataAccessX0020WebX0020ServiceSoap getDataAccessX0020WebX0020ServiceSoap() {
-        return super.getPort(new QName("http://ibridge.isgsolutions.com/DataAccess/", "DataAccess_x0020_Web_x0020_ServiceSoap"), DataAccessX0020WebX0020ServiceSoap.class);
+        return super.getPort(new QName("http://ibridge.isgsolutions.com/DataAccess/", "DataAccessSoap"), DataAccessX0020WebX0020ServiceSoap.class);
     }
 
     /**
@@ -65,9 +65,9 @@ public class DataAccessX0020WebX0020Service
      * @return
      *     returns DataAccessX0020WebX0020ServiceSoap
      */
-    @WebEndpoint(name = "DataAccess_x0020_Web_x0020_ServiceSoap")
+    @WebEndpoint(name = "DataAccessSoap")
     public DataAccessX0020WebX0020ServiceSoap getDataAccessX0020WebX0020ServiceSoap(WebServiceFeature... features) {
-        return super.getPort(new QName("http://ibridge.isgsolutions.com/DataAccess/", "DataAccess_x0020_Web_x0020_ServiceSoap"), DataAccessX0020WebX0020ServiceSoap.class, features);
+        return super.getPort(new QName("http://ibridge.isgsolutions.com/DataAccess/", "DataAccessSoap"), DataAccessX0020WebX0020ServiceSoap.class, features);
     }
 
 }
