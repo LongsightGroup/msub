@@ -52,7 +52,7 @@ portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
-#providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
+providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
@@ -82,7 +82,6 @@ archive https://source.sakaiproject.org/svn/msub/longsight.com/archive/archive-1
 common https://source.sakaiproject.org/svn/msub/longsight.com/common/common-10.x_backport
 gradebook-export https://source.sakaiproject.org/svn/msub/longsight.com/gradebook-export/gradebook-export-1.5-src
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-10.x_backport
-providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/78/providers/sakai-10.x
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-10.x_backport
 #samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/60/samigo/samigo-10.x_features-backport
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
