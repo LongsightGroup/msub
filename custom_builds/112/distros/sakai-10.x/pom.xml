@@ -122,10 +122,15 @@
                 <module>bigbluebutton-sakai/bbb-tool</module>
                 <module>batch-user-creation</module>
                 <module>clog</module>
-                <module>sis_integration</module>
                 <module>content-review/contentreview-impl</module>
                 
             </modules>
+        </profile>
+        <profile>
+          <id>sis_integration</id>
+          <modules>
+            <module>sis_integration</module>
+          </modules>
         </profile>
         <profile>
             <id>experimental</id>
