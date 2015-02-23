@@ -86,7 +86,7 @@ hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6/
 msgcntr https://source.sakaiproject.org/svn//msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/44/providers/providers-2.9.x_custom
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
+site-manage -r 309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
