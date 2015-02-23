@@ -20,7 +20,7 @@ pack https://source.sakaiproject.org/svn/pack/branches/sakai-2.9.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-2.9.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-2.9.x
 #providers https://source.sakaiproject.org/svn/providers/branches/sakai-2.9.x
-reference https://source.sakaiproject.org/svn/reference/branches/sakai-2.9.x
+#reference https://source.sakaiproject.org/svn/reference/branches/sakai-2.9.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-2.9.x
 roster https://source.sakaiproject.org/svn/roster/branches/sakai-2.9.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-2.9.x
@@ -82,7 +82,7 @@ blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-1.2.x_features-backport/
 evaluation https://source.sakaiproject.org/svn/msub/longsight.com/evaluation/evaluation-1.4.x_features-backport
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-2.9.x_features-backport/
-hierarchy https://source.sakaiproject.org/contrib/caret/hierarchy/tags/hierarchy-1.2.6/
+hierarchy https://source.sakaiproject.org/svn/hierarchy/tags/hierarchy-1.2.6/
 msgcntr https://source.sakaiproject.org/svn//msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/44/providers/providers-2.9.x_custom
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
