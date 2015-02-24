@@ -42,7 +42,6 @@ mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
 memory https://source.sakaiproject.org/svn/memory/branches/sakai-10.x
 message https://source.sakaiproject.org/svn/message/branches/sakai-10.x
 metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
-msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
 polls https://source.sakaiproject.org/svn/polls/branches/sakai-10.x
@@ -78,13 +77,16 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 #customizations:
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
-evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 kaltura -r 313603 https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/trunk
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
-samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 gradebook2 -r86616 https://source.sakaiproject.org/contrib/gradebook2/trunk
+msgcntr -r 38635 https://github.com/sakaiproject/sakai/trunk/msgcntr
+samigo -r 38635 https://github.com/sakaiproject/sakai/trunk/samigo
 
 #POM CHANGES
 #shell_command sed -i -e"s/<version>2.10-SNAPSHOT<\/version>/<version>10-SNAPSHOT<\/version>/"  gradebook2/pom.xml gradebook2/model/pom.xml gradebook2/shared/pom.xml gradebook2/server/pom.xml gradebook2/api/pom.xml gradebook2/client/pom.xml gradebook2/war/pom.xml gradebook2/help/pom.xml
+##shell_command cd gradebook2;patch -p0 < ../GRBK-1441.patch;cd ../
+#shell_command find msgcntr/ -name pom.xml -exec sed -i 's/11-SNAPsHOT/10-SNAPSHOT/g' {} \;
+#shell_command find samigo/ -name pom.xml -exec sed -i 's/11-SNAPsHOT/10-SNAPSHOT/g' {} \;

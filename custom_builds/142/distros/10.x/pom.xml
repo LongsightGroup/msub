@@ -120,7 +120,6 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>kaltura</module>
-                <module>evaluation</module>
                 <module>gradebook2</module>
             </modules>
         </profile>
