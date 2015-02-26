@@ -83,10 +83,10 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 gradebook2 -r86616 https://source.sakaiproject.org/contrib/gradebook2/trunk
 msgcntr -r 38635 https://github.com/sakaiproject/sakai/trunk/msgcntr
-samigo -r 38635 https://github.com/sakaiproject/sakai/trunk/samigo
+samigo -r 38667 https://github.com/sakaiproject/sakai/trunk/samigo
 
 #POM CHANGES
 #shell_command sed -i -e"s/<version>2.10-SNAPSHOT<\/version>/<version>10-SNAPSHOT<\/version>/"  gradebook2/pom.xml gradebook2/model/pom.xml gradebook2/shared/pom.xml gradebook2/server/pom.xml gradebook2/api/pom.xml gradebook2/client/pom.xml gradebook2/war/pom.xml gradebook2/help/pom.xml
 ##shell_command cd gradebook2;patch -p0 < ../GRBK-1441.patch;cd ../
-#shell_command find msgcntr/ -name pom.xml -exec sed -i 's/11-SNAPsHOT/10-SNAPSHOT/g' {} \;
-#shell_command find samigo/ -name pom.xml -exec sed -i 's/11-SNAPsHOT/10-SNAPSHOT/g' {} \;
+##shell_command cd samigo;patch -p0 < ../ND-SAMIGO.patch;cd ../
+#shell_command find msgcntr/ -name pom.xml -exec sed -i 's/11-SNAPSHOT/10-SNAPSHOT/g' {} \;
