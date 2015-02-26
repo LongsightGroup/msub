@@ -88,6 +88,7 @@ msgcntr https://source.sakaiproject.org/svn//msub/longsight.com/msgcntr/msgcntr-
 portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.x_features-backport
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
+signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x
 site-manage -r309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
 web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/9/web/web-2.9.x
