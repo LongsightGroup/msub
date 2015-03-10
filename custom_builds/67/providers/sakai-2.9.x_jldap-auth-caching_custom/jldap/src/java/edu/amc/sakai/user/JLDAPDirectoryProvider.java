@@ -530,12 +530,12 @@ public class JLDAPDirectoryProvider implements UserDirectoryProvider, LdapConnec
 				M_log.warn("JLDAP could not find employeeNumber of eid " + userLogin);
 			}
 			else {
-				Object[] fields = {userLogin};
+				Object[] fields = {employeeNumber};
 				List<String> previousEids = sqlService.dbRead("select eid from jldap_immutable where immutable_id = ?", fields, null);
 				if (!previousEids.isEmpty()) {
 					String previousEid = previousEids.get(0);
 					
-					if (!StringUtils.equals(previousEid, employeeNumber)) {
+					if (!StringUtils.equals(previousEid, userLogin)) {
 						String emailBody = "Request to change " + previousEid + " to " + userLogin + " in Sakai.";
 						String fromStr = serverConfigurationService.getString("support.email","help@"+ serverConfigurationService.getServerUrl());
 						String toStr = serverConfigurationService.getString("luc.eid.change.email", "sakai@luc.edu");
