@@ -117,19 +117,6 @@ public class DefaultSiteViewImpl extends AbstractSiteViewImpl
 			tabsToDisplay = serverConfigurationService.getInt(
 					"gatewaySiteListDisplayCount", tabsToDisplay);
 		}
-		else
-		{
-			Preferences prefs = preferencesService
-					.getPreferences(session.getUserId());
-			ResourceProperties props = prefs.getProperties("sakai:portal:sitenav");
-			try
-			{
-				tabsToDisplay = (int) props.getLongProperty("tabs");
-			}
-			catch (Exception any)
-			{
-			}
-		}
 
 		// we allow one site in the drawer - that is OK
 		moreSites = new ArrayList<Site>();
@@ -148,7 +135,7 @@ public class DefaultSiteViewImpl extends AbstractSiteViewImpl
 
 			// Save space for the current site
 			if (!found) tabsToDisplay = tabsToDisplay - 1;
-			if (tabsToDisplay < 2) tabsToDisplay = 2;
+			//if (tabsToDisplay < 2) tabsToDisplay = 2;
 
 			// Create the list of "additional sites"- but do not
 			// include the currently selected set in the list
