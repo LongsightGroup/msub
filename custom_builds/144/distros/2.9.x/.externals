@@ -63,7 +63,6 @@ calendar https://source.sakaiproject.org/svn/calendar/branches/calendar-2.9.x
 courier https://source.sakaiproject.org/svn/courier/branches/courier-2.9.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/mailarchive-2.9.x
 message https://source.sakaiproject.org/svn/message/branches/message-2.9.x
-portal https://source.sakaiproject.org/svn/portal/branches/portal-2.9.x
 presence https://source.sakaiproject.org/svn/presence/branches/presence-2.9.x
 site https://source.sakaiproject.org/svn/site/branches/site-2.9.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/taggable-2.9.x
@@ -71,11 +70,12 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/tags/content-review-0.8/
 webservices 		https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
+portal 			https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.x_features-backport
 providers 		https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 scoring-service 	https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/branches/2.9.3.x/scoring-service/
 etudes-util -r 85084    https://source.sakaiproject.org/contrib/rsmart/msub/etudes-util/branches/2.9.3.x
 melete -r 86036         https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/2.9.3.x
-gradebook2 -r 87144 	https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/2.9.x
+gradebook2 		https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-sgu-2.9.x
 jforum -r 85763         https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/2.9.3.x
 
 #mavenoptions:-Psakai2.9 -P2.9
