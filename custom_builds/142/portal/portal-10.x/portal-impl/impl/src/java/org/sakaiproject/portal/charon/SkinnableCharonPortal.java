@@ -1895,6 +1895,8 @@ public class SkinnableCharonPortal extends HttpServlet implements Portal
 					User thisUser = UserDirectoryService.getCurrentUser();
 					loginUserDispId = Validator.escapeHtml(thisUser.getDisplayId());
 					loginUserDispName = Validator.escapeHtml(thisUser.getDisplayName());
+					// ND-61 put first name into context for use in includeTabs.vm
+					rcontext.put("notreDameFirstName", thisUser.getFirstName());
 				}
 
 				// check for a logout text override
