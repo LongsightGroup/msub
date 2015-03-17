@@ -58,7 +58,6 @@ sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
 signup https://source.sakaiproject.org/svn/signup/branches/sakai-10.x/
 site https://source.sakaiproject.org/svn/site/branches/sakai-10.x
-site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
@@ -71,7 +70,7 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT
+#mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT -Dsakai.jdk.version=1.7
 
 #customizations:
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
@@ -83,10 +82,12 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 gradebook2 -r86616 https://source.sakaiproject.org/contrib/gradebook2/trunk
 msgcntr -r 38635 https://github.com/sakaiproject/sakai/trunk/msgcntr
-samigo -r 38667 https://github.com/sakaiproject/sakai/trunk/samigo
+samigo -r 38764 https://github.com/sakaiproject/sakai/trunk/samigo
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/site-manage/10.x
 
 #POM CHANGES
 #shell_command sed -i -e"s/<version>2.10-SNAPSHOT<\/version>/<version>10-SNAPSHOT<\/version>/"  gradebook2/pom.xml gradebook2/model/pom.xml gradebook2/shared/pom.xml gradebook2/server/pom.xml gradebook2/api/pom.xml gradebook2/client/pom.xml gradebook2/war/pom.xml gradebook2/help/pom.xml
 ##shell_command cd gradebook2;patch -p0 < ../GRBK-1441.patch;cd ../
 ##shell_command cd samigo;patch -p0 < ../ND-SAMIGO.patch;cd ../
 #shell_command find msgcntr/ -name pom.xml -exec sed -i 's/11-SNAPSHOT/10-SNAPSHOT/g' {} \;
+#shell_command cd kernel/;patch -p2 < ../294.patch;cd ../

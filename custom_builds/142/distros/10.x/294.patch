@@ -1,0 +1,37 @@
+From 9f8df8c488b44bcb56e0255284a37e0f1eda9e58 Mon Sep 17 00:00:00 2001
+From: Steve Swinsburg <steve.swinsburg@gmail.com>
+Date: Tue, 10 Mar 2015 22:27:05 +1100
+Subject: [PATCH 1/5] Add method to get the list of names for a tool in
+ multiple sites
+
+---
+ .../sakaiproject/entity/api/ContentExistsAware.java   | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ create mode 100644 kernel/api/src/main/java/org/sakaiproject/entity/api/ContentExistsAware.java
+
+diff --git a/kernel/api/src/main/java/org/sakaiproject/entity/api/ContentExistsAware.java b/kernel/api/src/main/java/org/sakaiproject/entity/api/ContentExistsAware.java
+new file mode 100644
+index 0000000..f650d54
+--- /dev/null
++++ b/kernel/api/src/main/java/org/sakaiproject/entity/api/ContentExistsAware.java
+@@ -0,0 +1,19 @@
++package org.sakaiproject.entity.api;
++
++/**
++ * Services which implement ContentExistsAware declare that they are able to determine if they contain content for the site they are in.
++ * Note that services must also be registered EntityProducers.
++ *
++ * @since 11.0
++ * @author Steve Swinsburg (steve.swinsburg@gmail.com)
++ */
++public interface ContentExistsAware {
++
++	/**
++	 * Does this tool contain content in this site?
++	 * 
++	 * @param siteId the siteId to use when checking if content exists
++	 */
++	public boolean hasContent(String siteId);
++	
++}
+
