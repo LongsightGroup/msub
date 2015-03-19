@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<registration>
+
+  <tool
+      id="rsn.linktool.mylibrary"
+      title="MyLibrary"
+      description="MyLibrary tool">
+
+    <configuration name="url" value="https://courses.pepperdine.edu/access/content/group/fb934cd1-b3ad-4d52-8bf4-7c2e27f28b20/MyLibrary/MyLibrary.html" />
+    <configuration name="height" value="1000px" />
+    
+    <keyword name="linktool" />
+    
+    <category name="course"/>
+    
+    <configuration name="functions.require" /> 
+  </tool>
+</registration>
