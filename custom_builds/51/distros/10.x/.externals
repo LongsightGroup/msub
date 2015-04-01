@@ -84,6 +84,12 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
+#shell_command sed -i 's/2.9-SNAPSHOT/10-SNAPSHOT/g' adobeconnect/pom.xml
+#shell_command find adobeconnect/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
+#shell_command sed -i 's/2.10-SNAPSHOT/10-SNAPSHOT/g' itunesu-tool/pom.xml
+#shell_command find itunesu-tool/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
+#shell_command sed -i 's/<\/dependencies>/<dependency><groupId>org.springframework<\/groupId><artifactId>spring-webmvc<\/artifactId><scope>runtime<\/scope><\/dependency><\/dependencies>/g' itunesu-tool/itunesu-admin-tool/pom.xml
+
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
 #shell_command cd bigbluebutton-sakai/bbb-tool
