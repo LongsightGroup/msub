@@ -444,8 +444,11 @@ public class JLDAPDirectoryProvider implements UserDirectoryProvider, LdapConnec
 	 * 
 	 * @see #lookupUserBindDn(String, LDAPConnection)
 	 */
-	public boolean authenticateUser(final String userLogin, final UserEdit edit, final String password)
+	public boolean authenticateUser(final String userLoginMixedCase, final UserEdit edit, final String password)
 	{
+		// FSK-841370 mixed-case by users
+		String userLogin = StringUtils.lowerCase(userLoginMixedCase);
+
 		if ( !isSearchableEid(userLogin) ) {
 			M_log.debug("authenticateUser(): passing on auth attempt because user is in the eid blacklist [userLogin = " + userLogin + "].");
 			return false;
