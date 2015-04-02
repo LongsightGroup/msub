@@ -54,7 +54,7 @@ reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 #roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-10.x
-samigo -r 318011 https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 search https://source.sakaiproject.org/svn/search/branches/sakai-10.x
 sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
