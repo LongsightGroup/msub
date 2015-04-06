@@ -29,7 +29,6 @@ citations https://source.sakaiproject.org/svn/citations/branches/sakai-10.x
 content https://source.sakaiproject.org/svn/content/branches/sakai-10.x
 courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
-help https://source.sakaiproject.org/svn/help/branches/sakai-10.x
 lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
 login https://source.sakaiproject.org/svn/login/branches/sakai-10.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
@@ -82,6 +81,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes/etudes-util-1.0.25/
 ltiContact https://source.sakaiproject.org/contrib/longsight/etudes/ltiContact-1.2/
 melete https://source.sakaiproject.org/contrib/longsight/melete/melete-2.9.9-uindy/
+help https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/help/10.x
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
