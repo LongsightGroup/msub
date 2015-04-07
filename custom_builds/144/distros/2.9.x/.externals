@@ -74,15 +74,21 @@ portal 			https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2
 providers 		https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 scoring-service 	https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/branches/2.9.3.x/scoring-service/
 etudes-util -r 85084    https://source.sakaiproject.org/contrib/rsmart/msub/etudes-util/branches/2.9.3.x
-melete -r 86036         https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/2.9.3.x
+melete 			https://source.sakaiproject.org/contrib/longsight/melete/melete-2.9.3.x
 gradebook2 		https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-sgu-2.9.x
 jforum -r 85763         https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/2.9.3.x
+
+rsmart/common			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.1/rsmart/common
+rsmart/customer			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.1/rsmart/customer
+rsmart/user-data-service	https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.1/rsmart/user-data-service
 
 #mavenoptions:-Psakai2.9 -P2.9
 #shell_command sed -i "s/<artifactId>etudes-util-api<\/artifactId>/<artifactId>etudes-util-api<\/artifactId><version>1.0.17<\/version>/g" etudes-util/etudes-util/util/pom.xml
 
+#shell_command find rsmart/ -name pom.xml -exec sed -i 's/2.9.3/2.9-SNAPSHOT/g' {} \;
+#shell_command rm -rf rsmart/customer/customer-int-impl/src/java/com/rsmart/evalsys rsmart/customer/customer-int-impl/src/java/com/rsmart/customer/integration/job/CMSHierarchyLoaderJob.java
+#shell_command cp rsmart-pom.xml rsmart/pom.xml
 #shell_command find etudes-util/ -name pom.xml -exec sed -i 's/2.9.3/2.9-SNAPSHOT/g' {} \;
-#shell_command find melete/ -name pom.xml -exec sed -i 's/2.9.3/2.9-SNAPSHOT/g' {} \;
 #shell_command find scoring-service/ -name pom.xml -exec sed -i 's/2.9.3/2.9-SNAPSHOT/g' {} \;
 #shell_command find gradebook2/ -name pom.xml -exec sed -i 's/2.9.3/2.9-SNAPSHOT/g' {} \;
 #shell_command cd jforum;patch -p0 < ../jforum.patch;cd ../

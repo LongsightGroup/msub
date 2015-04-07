@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>master</artifactId>
+    <groupId>org.sakaiproject</groupId>
+    <version>2.9-SNAPSHOT</version>
+    <relativePath>../master/pom.xml</relativePath>
+  </parent>
+  <name>rsmart</name>
+  <groupId>com.rsmart</groupId>
+  <artifactId>rsn-base</artifactId>
+  <version>2.9-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>common</module>
+    <module>customer</module>
+    <module>user-data-service</module>
+  </modules>
+
+   <dependencyManagement>
+        <dependencies>
+        <dependency>
+            <groupId>aopalliance</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-full</artifactId>
+            <version>2.0.2</version>
+            <scope>provided</scope>
+        </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
