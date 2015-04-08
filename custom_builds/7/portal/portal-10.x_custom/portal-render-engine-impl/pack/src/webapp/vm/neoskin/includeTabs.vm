@@ -30,24 +30,6 @@
 					$portalLinks
 					#if (!${loginTopLogin})
 					
-					#if ($viewAsStudentLink)
-						<div id="roleSwitch">
-						#if ($roleSwitchState)
-							<a href="$switchRoleUrl"  id="roleSwitchAnchor"><span>${rloader.rs_exitRoleSwap} $roleUrlValue ${rloader.rs_view}</span></a>
-						#else
-							#if ($roleswapdropdown)
-								<select id="roleSwitchSelect" onchange="if (this.options[this.selectedIndex].value != '') { parent.location = this.options[this.selectedIndex].value; } else { this.selectedIndex = 0; }">       
-								<option value="" selected="selected">${rloader.rs_viewSiteAs}</option>   
-								#foreach( $role in $siteRoles)   
-									<option value="$switchRoleUrl$role$panelString">$role</option>       
-								#end     
-								</select>
-							#else
-								<a href="$switchRoleUrl" id="roleSwitchAnchor"><span>${rloader.rs_enterRoleSwap} $roleUrlValue ${rloader.rs_view}</span></a>
-							#end
-						#end
-						</div>
-					#end
 					
 						<div id="loginLinks">
 <span class="topnav">
@@ -111,6 +93,28 @@
 <!-- this allows us to reliably detect if the browser is internet explorer, depends on these elements ul#topnav h1#sitetabs -->
 <script type="text/javascript">var sakai_portal_ie_detected=false;</script>
 <!--[if IE]><script type="text/javascript">sakai_portal_ie_detected=true;</script><![endif]-->
+
+                                        <!-- BEGIN Walsh customization TKM-759130 -->
+					#if ($viewAsStudentLink)
+						<div id="roleSwitch">
+						#if ($roleSwitchState)
+							<a href="$switchRoleUrl"  id="roleSwitchAnchor"><span>${rloader.rs_exitRoleSwap} $roleUrlValue ${rloader.rs_view}</span></a>
+						#else
+							#if ($roleswapdropdown)
+								<select id="roleSwitchSelect" onchange="if (this.options[this.selectedIndex].value != '') { parent.location = this.options[this.selectedIndex].value; } else { this.selectedIndex = 0; }">       
+								<option value="" selected="selected">${rloader.rs_viewSiteAs}</option>   
+								#foreach( $role in $siteRoles)   
+									<option value="$switchRoleUrl$role$panelString">$role</option>       
+								#end     
+								</select>
+							#else
+								<a href="$switchRoleUrl" id="roleSwitchAnchor"><span>${rloader.rs_enterRoleSwap} $roleUrlValue ${rloader.rs_view}</span></a>
+							#end
+						#end
+						</div>
+					#end
+                                        <!-- END Walsh customization TKM-759130 -->
+
 							<h1 class="skip" id="sitetabs">${rloader.sit_worksiteshead}</h1>
 <ul class="topnav" id="topnav" role="menubar" aria-label="${rloader.sit_worksiteshead}">
 						#foreach ( $site in $tabsSites.tabsSites ) 
