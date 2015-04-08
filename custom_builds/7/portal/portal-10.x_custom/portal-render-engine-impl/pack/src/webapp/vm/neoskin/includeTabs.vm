@@ -78,7 +78,7 @@
 
 </ul>
 
-<span class="drop" tabindex="-1"></span>
+<span class="drop walsh-user-info" tabindex="-1">${loginUserDispName}</span>
 </span>
 </span>
 
