@@ -1,2 +1,3 @@
+04-08-2015 - Updated Kernel svn merge "^/kernel/branches/sakai-10.x" 
 CMCC-10 Allow use of student number in JLDAP provider
 
