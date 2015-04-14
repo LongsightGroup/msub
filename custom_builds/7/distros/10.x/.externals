@@ -53,6 +53,7 @@ sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
 signup https://source.sakaiproject.org/svn/signup/branches/sakai-10.x/
 site https://source.sakaiproject.org/svn/site/branches/sakai-10.x
+site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
@@ -76,7 +77,7 @@ gradebook https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 #portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/portal/portal-10.x_custom
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/site-manage/site-manage-10.x_custom/
+#site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/site-manage/site-manage-10.x_custom/
 web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/web/web-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes/etudes-util-1.0.25/
