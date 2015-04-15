@@ -50,7 +50,6 @@ portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
-providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
@@ -74,6 +73,7 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 adobeconnect https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/2.9.x
