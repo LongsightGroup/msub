@@ -8610,28 +8610,32 @@ private Map<String,List> getTools(SessionState state, String type, Site site) {
 							final String userEmail = UserDirectoryService.getCurrentUser().getEmail();
 							final Session session = SessionManager.getCurrentSession();
 							final ToolSession toolSession = SessionManager.getCurrentToolSession();
-							Thread siteImportThread = new Thread(){
+							final String siteId = existingSite.getId();
+                                                        Thread siteImportThread = new Thread(){
 								public void run() {
-									Site existingSite = getStateSite(state);
-									EventTrackingService.post(EventTrackingService.newEvent(SiteService.EVENT_SITE_IMPORT_START, existingSite.getReference(), false));
-									SessionManager.setCurrentSession(session);
-									SessionManager.setCurrentToolSession(toolSession);
-									importToolIntoSite(selectedTools, importTools, existingSite);
-									existingSite = getStateSite(state); // refresh site for
-									// WC and News
-									commitSite(existingSite);
-									if (ServerConfigurationService.getBoolean(SAK_PROP_IMPORT_NOTIFICATION, true)) {
-										userNotificationProvider.notifySiteImportCompleted(userEmail, existingSite.getId(), existingSite.getTitle());
-									}
-									EventTrackingService.post(EventTrackingService.newEvent(SiteService.EVENT_SITE_IMPORT_END, existingSite.getReference(), false));
-								}
+									Site existingSite;
+                                                                        try{
+                                                                                existingSite = SiteService.getSite(siteId);
+                                                                                //Site existingSite = getStateSite(state);
+									        EventTrackingService.post(EventTrackingService.newEvent(SiteService.EVENT_SITE_IMPORT_START, existingSite.getReference(), false));
+									        SessionManager.setCurrentSession(session);
+									        SessionManager.setCurrentToolSession(toolSession);
+									        importToolIntoSite(selectedTools, importTools, existingSite);
+									        if (ServerConfigurationService.getBoolean(SAK_PROP_IMPORT_NOTIFICATION, true)) {
+										        userNotificationProvider.notifySiteImportCompleted(userEmail, existingSite.getId(), existingSite.getTitle());
+									        }
+									        EventTrackingService.post(EventTrackingService.newEvent(SiteService.EVENT_SITE_IMPORT_END, existingSite.getReference(), false));
+							                } catch (IdUnusedException e) {
+                                                                                M_log.error(e.getMessage(), e);
+                                                                        }        
+                                                                }
 							};
 							siteImportThread.setName(threadName);
 							siteImportThread.start();
 							state.setAttribute(IMPORT_QUEUED, rb.get("importQueued"));
 							state.removeAttribute(STATE_IMPORT_SITE_TOOL);
 							state.removeAttribute(STATE_IMPORT_SITES);
-						}
+                                               }
 					} else {
 						// show alert and remain in current page
 						addAlert(state, rb.getString("java.toimporttool"));
@@ -8677,26 +8681,32 @@ private Map<String,List> getTools(SessionState state, String type, Site site) {
 							final String userEmail = UserDirectoryService.getCurrentUser().getEmail();
 							final Session session = SessionManager.getCurrentSession();
 							final ToolSession toolSession = SessionManager.getCurrentToolSession();
-							Thread siteImportThread = new Thread(){
+							final String siteId = existingSite.getId();
+                                                        Thread siteImportThread = new Thread(){
 								public void run() {
-									Site existingSite = getStateSite(state);
-									EventTrackingService.post(EventTrackingService.newEvent(SiteService.EVENT_SITE_IMPORT_START, existingSite.getReference(), false));
-									SessionManager.setCurrentSession(session);
-									SessionManager.setCurrentToolSession(toolSession);
-									// Remove all old contents before importing contents from new site
-									importToolIntoSiteMigrate(selectedTools, importTools, existingSite);
-									if (ServerConfigurationService.getBoolean(SAK_PROP_IMPORT_NOTIFICATION, true)) {
-										userNotificationProvider.notifySiteImportCompleted(userEmail, existingSite.getId(), existingSite.getTitle());
-									}
-									EventTrackingService.post(EventTrackingService.newEvent(SiteService.EVENT_SITE_IMPORT_END, existingSite.getReference(), false));
-								}
+									Site existingSite;
+                                                                        try{
+                                                                                existingSite = SiteService.getSite(siteId);
+								        	EventTrackingService.post(EventTrackingService.newEvent(SiteService.EVENT_SITE_IMPORT_START, existingSite.getReference(), false));
+									        SessionManager.setCurrentSession(session);
+				        					SessionManager.setCurrentToolSession(toolSession);
+					        				// Remove all old contents before importing contents from new site
+						        			importToolIntoSiteMigrate(selectedTools, importTools, existingSite);
+							        		if (ServerConfigurationService.getBoolean(SAK_PROP_IMPORT_NOTIFICATION, true)) {
+								        		userNotificationProvider.notifySiteImportCompleted(userEmail, existingSite.getId(), existingSite.getTitle());
+									        }
+									        EventTrackingService.post(EventTrackingService.newEvent(SiteService.EVENT_SITE_IMPORT_END, existingSite.getReference(), false));
+								        } catch (IdUnusedException e) {
+                                                                            M_log.error(e.getMessage(), e);
+                                                                        }
+                                                                }
 							};
 							siteImportThread.setName(threadName);
 							siteImportThread.start();
 							state.setAttribute(IMPORT_QUEUED, rb.get("importQueued"));
 							state.removeAttribute(STATE_IMPORT_SITE_TOOL);
 							state.removeAttribute(STATE_IMPORT_SITES);
-						}
+                                               }
 					} else {
 						// show alert and remain in current page
 						addAlert(state, rb.getString("java.toimporttool"));

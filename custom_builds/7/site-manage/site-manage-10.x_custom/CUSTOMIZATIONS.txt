@@ -3,3 +3,4 @@
     * Done via a property in 10.x: wsetup.skipManualCourseCreation=true
 * LS-153 Allow instructors to merge rosters even if they are not official instructor in SIS
 * LS-192 KFH-318453 - Allow disabling various import options 
+SAK-29293 Don't use session state inside import thread
