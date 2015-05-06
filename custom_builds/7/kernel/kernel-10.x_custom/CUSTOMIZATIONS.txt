@@ -1,1 +1,2 @@
 KNL-1023 New selection type for LS-138 applied from https://github.com/sakaiproject/sakai/pull/135.patch 
+BES-828645 force lowerCase on the internal user id 

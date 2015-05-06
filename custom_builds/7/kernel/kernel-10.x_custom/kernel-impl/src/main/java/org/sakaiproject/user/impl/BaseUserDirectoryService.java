@@ -1727,7 +1727,7 @@ public abstract class BaseUserDirectoryService implements UserDirectoryService, 
 		id = StringUtils.trimToNull(id);
 		// max length for an id is 99 chars
         id = StringUtils.abbreviate(id, 99);
-		return id;
+		return StringUtils.lowerCase(id);
 	}
 
 	/**
