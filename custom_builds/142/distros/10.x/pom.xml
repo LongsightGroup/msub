@@ -121,6 +121,8 @@
                 <module>melete</module>
                 <module>kaltura</module>
                 <module>gradebook2</module>
+                <module>messageservice</module>
+                <module>gradebook2export</module>
             </modules>
         </profile>
         <profile>
