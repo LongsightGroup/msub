@@ -1,2 +1,3 @@
 SAK-23718 - Portal Navigation Menu: Static Categorization of Tools
 LS-160 custom portal rendering
+ZRY-749784 Display user display name 
