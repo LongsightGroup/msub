@@ -6,7 +6,6 @@ master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 # Core services
 kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
-content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
 edu-services https://source.sakaiproject.org/svn/edu-services/branches/sakai-10.x
 emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/branches/sakai-10.x
@@ -46,10 +45,8 @@ msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
 polls https://source.sakaiproject.org/svn/polls/branches/sakai-10.x
-portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
-profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
@@ -73,23 +70,23 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
+content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 adobeconnect https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/2.9.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
+portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/portal/portal-10.x_custom
+profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/profile2/10.x-custom
 
-#POM Changes
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
-#shell_command cd bigbluebutton-sakai/bbb-tool
-#shell_command mvn versions:update-parent
-#shell_command cat pom.xml | sed "s/<entitybroker\.version>.*<\/entitybroker\.version>/<entitybroker\.version>10-SNAPSHOT<\/entitybroker\.version>/g" > pom2.xml
-#shell_command mv pom2.xml pom.xml
-#shell_command cat pom.xml | sed "s/<entitybroker-utils\.version>.*<\/entitybroker-utils\.version>/<entitybroker-utils\.version>10-SNAPSHOT<\/entitybroker-utils\.version>/g" > pom2.xml 
-#shell_command mv pom2.xml pom.xml
-#shell_command cd ../..
+#shell_command cd bigbluebutton-sakai
+#shell_command git apply bigbluebutton-sakai10x.patch
+#shell_command cd ..
 
 #VeriCite
 #shell_command cd content-review
@@ -102,3 +99,5 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 #git_project bigbluebutton-sakai/bbb-tool
 #git_project content-review/contentreview-impl-vericite
 
+#shell_command sed -i 's/2.9-SNAPSHOT/10-SNAPSHOT/g' adobeconnect/pom.xml
+#shell_command find adobeconnect/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
