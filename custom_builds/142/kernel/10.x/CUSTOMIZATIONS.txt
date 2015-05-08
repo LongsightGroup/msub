@@ -1,0 +1,4 @@
+SAK-29159 - Kernel part of Enhance import from site to automatically add any
+missing tools
+
+Adding custom classes from https://source.sakaiproject.org/svn/msub/rsmart.com/kernel/branches/10.2.x/ to support GB2 export
