@@ -91,3 +91,7 @@ site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds
 ##shell_command cd samigo;patch -p0 < ../ND-SAMIGO.patch;cd ../
 #shell_command find msgcntr/ -name pom.xml -exec sed -i 's/11-SNAPSHOT/10-SNAPSHOT/g' {} \;
 #shell_command cd kernel/;patch -p2 < ../294.patch;cd ../
+#
+
+#For mulesoft export
+messageservice https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/branches/10.2.x
