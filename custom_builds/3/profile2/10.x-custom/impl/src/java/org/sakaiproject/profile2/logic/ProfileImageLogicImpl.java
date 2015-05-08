@@ -744,23 +744,23 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
 	 */
 	private String getOfficialImageUrl(final String userUuid) {
 		
-		//get external image record for this user
-		ProfileImageOfficial official = dao.getOfficialImageRecordForUser(userUuid);
-		
+		//get external image from institutional repository
+		User u = sakaiProxy.getUserById(userUuid);
+		String eid = StringUtils.lowerCase(u.getEid());
+
 		//setup default
 		String defaultImageUrl = getUnavailableImageURL();
 		
-		//if none, return null
-    	if(official == null) {
-    		return defaultImageUrl;
-    	}
-    	
-    	if(StringUtils.isBlank(official.getUrl())) {
-        	log.info("ProfileLogic.getOfficialImageUrl. No URL for userUuid: " + userUuid + ". Returning default.");  
+    	if(StringUtils.isBlank(eid)) {
+        	log.info("ProfileLogic.getOfficialImageUrl. No eid for uuid: " + userUuid + ". Returning default.");  
 			return defaultImageUrl;
 		}
     	
-    	return official.getUrl();
+		String imageSalt = sakaiProxy.getServerConfigurationParameter("longsight.LS-163.salt", "xxxxxxxxx");
+		String saltedEid = ProfileUtils.calculateMD5(eid + imageSalt);
+		String imageUrl = sakaiProxy.getServerConfigurationParameter("longsight.LS-163.urlpath", "https://images.longsight.com/") + saltedEid + ".jpg";
+		
+    	return imageUrl;
 	}
 	
 	/**
