@@ -154,14 +154,14 @@ public class SuTool
 				return "error";
 			}
 		}
-	/*	Allow anyone with access to this tool to use it
+		
 		if (!getAllowed(userinfo))
 		{
 			confirm = false;
 			userinfo = null;
 			return "unauthorized";
 		}
-	*/	
+		
 		// don't try to become yourself
 		if (sakaiSession.getUserEid().equals(validatedUserEid)) {
 			confirm = false;
@@ -249,6 +249,9 @@ public class SuTool
 	
 	public boolean getAllowed(User userinfo)
 	{
+		return !M_security.isSuperUser(userinfo.getId());
+
+		/*
 		Session sakaiSession = M_session.getCurrentSession();
 		FacesContext fc = FacesContext.getCurrentInstance();
 
@@ -337,6 +340,7 @@ public class SuTool
 		}
 
 		return allowed;
+		*/
 	}
 
 	/**
