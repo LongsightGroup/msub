@@ -249,7 +249,7 @@ public class SuTool
 	
 	public boolean getAllowed(User userinfo)
 	{
-		return !M_security.isSuperUser(userinfo.getId());
+		return M_security.isSuperUser() || !M_security.isSuperUser(userinfo.getId());
 
 		/*
 		Session sakaiSession = M_session.getCurrentSession();
