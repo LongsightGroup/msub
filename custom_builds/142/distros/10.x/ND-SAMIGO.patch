@@ -1,6 +1,6 @@
 Index: samigo-cp/pom.xml
 ===================================================================
---- samigo-cp/pom.xml	(revision 38667)
+--- samigo-cp/pom.xml	(revision 38889)
 +++ samigo-cp/pom.xml	(working copy)
 @@ -5,7 +5,7 @@
  	<parent>
@@ -13,7 +13,7 @@ Index: samigo-cp/pom.xml
  	<name>Sakai Samigo Content Packaging (samigo-cp)</name>
 Index: samigo-api/pom.xml
 ===================================================================
---- samigo-api/pom.xml	(revision 38667)
+--- samigo-api/pom.xml	(revision 38889)
 +++ samigo-api/pom.xml	(working copy)
 @@ -5,7 +5,7 @@
  	<parent>
@@ -26,7 +26,7 @@ Index: samigo-api/pom.xml
  	<name>Sakai Samigo API (samigo-api)</name>
 Index: pom.xml
 ===================================================================
---- pom.xml	(revision 38667)
+--- pom.xml	(revision 38889)
 +++ pom.xml	(working copy)
 @@ -5,14 +5,14 @@
      <parent>
@@ -47,7 +47,7 @@ Index: pom.xml
      <properties>
 Index: samigo-pack/pom.xml
 ===================================================================
---- samigo-pack/pom.xml	(revision 38667)
+--- samigo-pack/pom.xml	(revision 38889)
 +++ samigo-pack/pom.xml	(working copy)
 @@ -5,7 +5,7 @@
  	<parent>
@@ -58,22 +58,9 @@ Index: samigo-pack/pom.xml
  	</parent>
      
  	<name>Sakai Samigo Component Package (samigo-pack)</name>
-Index: samlite-impl/pom.xml
-===================================================================
---- samlite-impl/pom.xml	(revision 38667)
-+++ samlite-impl/pom.xml	(working copy)
-@@ -5,7 +5,7 @@
- 	<parent>
- 		<groupId>org.sakaiproject.samigo</groupId>
- 		<artifactId>samigo</artifactId>
--		<version>11-SNAPSHOT</version>
-+		<version>10-SNAPSHOT</version>
- 	</parent>
-     
- 	<name>Sakai Samigo Lite Service Implementaiton (samlite-impl)</name>
 Index: samigo-app/sakai-samigo/webapp/include/header.inc
 ===================================================================
---- samigo-app/sakai-samigo/webapp/include/header.inc	(revision 38667)
+--- samigo-app/sakai-samigo/webapp/include/header.inc	(revision 38889)
 +++ samigo-app/sakai-samigo/webapp/include/header.inc	(working copy)
 @@ -6,7 +6,7 @@
        String head = (String) request.getAttribute("sakai.html.head");
@@ -84,9 +71,24 @@ Index: samigo-app/sakai-samigo/webapp/include/header.inc
        head += "<script type=\"text/javascript\" src=\"/library/js/jquery/ui/1.10.3/jquery-ui.1.10.3.full.min.js\"></script>\n";
        head += "<script type=\"text/javascript\" src=\"/library/js/jquery/tablesorter/2.1.17/jquery.tablesorter.min.js\"></script>\n";
        head += "<link href=\"/library/js/jquery/tablesorter/2.1.17/css/theme.default.css\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />\n";
+Index: samigo-app/src/java/org/sakaiproject/tool/assessment/ui/bean/author/AuthorBean.java
+===================================================================
+--- samigo-app/src/java/org/sakaiproject/tool/assessment/ui/bean/author/AuthorBean.java	(revision 38889)
++++ samigo-app/src/java/org/sakaiproject/tool/assessment/ui/bean/author/AuthorBean.java	(working copy)
+@@ -650,8 +650,8 @@
+   public void setCurrentFormTime(long formTime) {
+ 	  if (formTime != currentFormTime) {
+ 		  try {
+-			  ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();
+-			  context.redirect("discrepancyInData");
++			  //ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();
++			  //context.redirect("discrepancyInData");
+ 		  } catch (Exception e) {};
+ 	  }
+   }
 Index: samigo-app/pom.xml
 ===================================================================
---- samigo-app/pom.xml	(revision 38667)
+--- samigo-app/pom.xml	(revision 38889)
 +++ samigo-app/pom.xml	(working copy)
 @@ -5,7 +5,7 @@
  	<parent>
@@ -97,9 +99,22 @@ Index: samigo-app/pom.xml
  	</parent>
      
  	<name>Sakai Samigo Tool (samigo-app)</name>
+Index: samlite-impl/pom.xml
+===================================================================
+--- samlite-impl/pom.xml	(revision 38889)
++++ samlite-impl/pom.xml	(working copy)
+@@ -5,7 +5,7 @@
+ 	<parent>
+ 		<groupId>org.sakaiproject.samigo</groupId>
+ 		<artifactId>samigo</artifactId>
+-		<version>11-SNAPSHOT</version>
++		<version>10-SNAPSHOT</version>
+ 	</parent>
+     
+ 	<name>Sakai Samigo Lite Service Implementaiton (samlite-impl)</name>
 Index: samigo-archive/sam-handlers/pom.xml
 ===================================================================
---- samigo-archive/sam-handlers/pom.xml	(revision 38667)
+--- samigo-archive/sam-handlers/pom.xml	(revision 38889)
 +++ samigo-archive/sam-handlers/pom.xml	(working copy)
 @@ -5,7 +5,7 @@
  	<parent>
@@ -112,7 +127,7 @@ Index: samigo-archive/sam-handlers/pom.xml
      
 Index: samigo-services/pom.xml
 ===================================================================
---- samigo-services/pom.xml	(revision 38667)
+--- samigo-services/pom.xml	(revision 38889)
 +++ samigo-services/pom.xml	(working copy)
 @@ -5,7 +5,7 @@
      <parent>
@@ -125,7 +140,7 @@ Index: samigo-services/pom.xml
      <name>Sakai Samigo Services (samigo-services)</name>
 Index: samigo-deploy/shared/pom.xml
 ===================================================================
---- samigo-deploy/shared/pom.xml	(revision 38667)
+--- samigo-deploy/shared/pom.xml	(revision 38889)
 +++ samigo-deploy/shared/pom.xml	(working copy)
 @@ -5,7 +5,7 @@
      <parent>
@@ -138,7 +153,7 @@ Index: samigo-deploy/shared/pom.xml
      <name>Sakai samigo Shared Deploy</name>
 Index: samigo-deploy/pom.xml
 ===================================================================
---- samigo-deploy/pom.xml	(revision 38667)
+--- samigo-deploy/pom.xml	(revision 38889)
 +++ samigo-deploy/pom.xml	(working copy)
 @@ -4,7 +4,7 @@
      <parent>
@@ -151,7 +166,7 @@ Index: samigo-deploy/pom.xml
      <name>Sakai Samigo Deploy POM</name>
 Index: samigo-qti/pom.xml
 ===================================================================
---- samigo-qti/pom.xml	(revision 38667)
+--- samigo-qti/pom.xml	(revision 38889)
 +++ samigo-qti/pom.xml	(working copy)
 @@ -5,7 +5,7 @@
  	<parent>
@@ -164,7 +179,7 @@ Index: samigo-qti/pom.xml
  	<name>Sakai Samigo QTI Services (samigo-qti)</name>
 Index: samigo-hibernate/pom.xml
 ===================================================================
---- samigo-hibernate/pom.xml	(revision 38667)
+--- samigo-hibernate/pom.xml	(revision 38889)
 +++ samigo-hibernate/pom.xml	(working copy)
 @@ -5,7 +5,7 @@
  	<parent>
