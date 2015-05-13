@@ -52,7 +52,6 @@ polls https://source.sakaiproject.org/svn/polls/branches/polls-1.5.x
 profile https://source.sakaiproject.org/svn/profile/branches/profile-2.9.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/profile2-1.5.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/reset-pass-2.9.x
-samigo https://source.sakaiproject.org/svn/sam/branches/samigo-2.9.x
 search https://source.sakaiproject.org/svn/search/branches/search-1.4.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/shortenedurl-1.1.x
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sitestats-2.3.x
@@ -77,6 +76,7 @@ etudes-util -r 85084    https://source.sakaiproject.org/contrib/rsmart/msub/etud
 melete 			https://source.sakaiproject.org/contrib/longsight/melete/melete-2.9.3.x
 gradebook2 		https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-sgu-2.9.x
 jforum -r 85763         https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/2.9.3.x
+samigo 			https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport
 
 rsmart/common			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.1/rsmart/common
 rsmart/customer			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.1/rsmart/customer
