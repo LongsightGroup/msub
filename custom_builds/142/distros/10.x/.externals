@@ -62,7 +62,7 @@ sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
 textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-10.x
-tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
+#tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
 user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
@@ -84,6 +84,7 @@ gradebook2 -r86616 https://source.sakaiproject.org/contrib/gradebook2/trunk
 msgcntr -r 38635 https://github.com/sakaiproject/sakai/trunk/msgcntr
 samigo -r 38764 https://github.com/sakaiproject/sakai/trunk/samigo
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/site-manage/10.x
+tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/tool/tool-10.x
 
 #POM CHANGES
 #shell_command sed -i -e"s/<version>2.10-SNAPSHOT<\/version>/<version>10-SNAPSHOT<\/version>/"  gradebook2/pom.xml gradebook2/model/pom.xml gradebook2/shared/pom.xml gradebook2/server/pom.xml gradebook2/api/pom.xml gradebook2/client/pom.xml gradebook2/war/pom.xml gradebook2/help/pom.xml
