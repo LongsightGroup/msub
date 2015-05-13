@@ -154,14 +154,14 @@ public class SuTool
 				return "error";
 			}
 		}
-		
+	/*	Allow anyone with access to this tool to use it
 		if (!getAllowed(userinfo))
 		{
 			confirm = false;
 			userinfo = null;
 			return "unauthorized";
 		}
-		
+	*/	
 		// don't try to become yourself
 		if (sakaiSession.getUserEid().equals(validatedUserEid)) {
 			confirm = false;
