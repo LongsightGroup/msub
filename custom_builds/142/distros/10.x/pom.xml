@@ -121,6 +121,11 @@
                 <module>melete</module>
                 <module>kaltura</module>
                 <module>gradebook2</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>mulesoft</id>
+            <modules>
                 <module>messageservice</module>
                 <module>gradebook2-export</module>
             </modules>

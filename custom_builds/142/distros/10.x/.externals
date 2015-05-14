@@ -95,5 +95,7 @@ tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/to
 #
 
 #For mulesoft export
+#Build the mulesoft profile on it's own -P mulesoft
+#It's possible the PacificInstitutionalAdvisor will fail, so the easiest fix is to remove that and remove it from the bean.
 messageservice https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/branches/10.2.x
 gradebook2-export https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/trunk/rsmart/gradebook2-export
