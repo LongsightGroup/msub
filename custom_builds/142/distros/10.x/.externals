@@ -81,7 +81,7 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 gradebook2 -r86616 https://source.sakaiproject.org/contrib/gradebook2/trunk
-msgcntr -r 38635 https://github.com/sakaiproject/sakai/trunk/msgcntr
+msgcntr -r 39250 https://github.com/sakaiproject/sakai/trunk/msgcntr
 samigo -r 38764 https://github.com/sakaiproject/sakai/trunk/samigo
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/site-manage/10.x
 tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/tool/tool-10.x

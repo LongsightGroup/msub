@@ -122,7 +122,7 @@
                 <module>kaltura</module>
                 <module>gradebook2</module>
                 <module>messageservice</module>
-                <module>gradebook2export</module>
+                <module>gradebook2-export</module>
             </modules>
         </profile>
         <profile>
