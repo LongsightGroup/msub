@@ -121,6 +121,7 @@
                 <module>adobeconnect</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>warehouse</module>
                 <!--module>bigbluebutton-sakai/bbb-tool</module-->
             </modules>
         </profile>
