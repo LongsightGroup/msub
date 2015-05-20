@@ -1,0 +1,2 @@
+ND-75 apply irubric patch
+ * https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/patches/sakai-10.2/edu-services.diff
