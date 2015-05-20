@@ -1,0 +1,9 @@
+Modifications to the JLDAP provider to better failover among three available LDAP servers. Also modification to getUsers to request hundreds of users at once instead of one at a time.
+SAK-21619 Findbugs fixes
+LS-131 domain-limiting and auth caching of LDAP users 
+LS-140 check alternate LDAP attribute for user email address
+Encountered Anomalous Lookup Error for Add Participants >Non-official Participants (AEW-707564)
+LS-162 NPE in jldap search users
+------
+Branched on 12/23/2013
+ * LS-165 add objectClass=user to user search query
