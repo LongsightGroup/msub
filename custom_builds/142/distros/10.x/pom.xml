@@ -120,6 +120,8 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>kaltura</module>
+                <module>irubric-core</module>
+                <module>irubric-tool</module>
                 <module>gradebook2</module>
             </modules>
         </profile>
