@@ -8,7 +8,6 @@ kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
-edu-services https://source.sakaiproject.org/svn/edu-services/branches/sakai-10.x
 emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/branches/sakai-10.x
 entitybroker https://source.sakaiproject.org/svn/entitybroker/branches/sakai-10.x
 external-calendaring-service https://source.sakaiproject.org/svn/external-calendaring-service/branches/sakai-10.x/ 
@@ -87,6 +86,7 @@ tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/to
 jforum -r 87383 https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/10.2.x
 
 # iRubric customizations ND-75
+edu-services https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/edu-services/10.x
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-core
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-tool
 gradebook2 https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x/
