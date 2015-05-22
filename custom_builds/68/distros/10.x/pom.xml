@@ -116,7 +116,6 @@
                 <module>webservices</module>
                 <module>blogwow</module>
                 <module>evaluation</module>
-                <module>evaluation</module>
                 <!-- module>iclicker</module -->
                 <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
