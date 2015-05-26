@@ -52,7 +52,7 @@ mailsender https://source.sakaiproject.org/svn/mailsender/branches/1.7
 #msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/msgcntr-3.0.x
 polls https://source.sakaiproject.org/svn/polls/branches/polls-1.5.x
 profile https://source.sakaiproject.org/svn/profile/branches/profile-2.9.x
-profile2 https://source.sakaiproject.org/svn/profile2/branches/profile2-1.5.x
+#profile2 https://source.sakaiproject.org/svn/profile2/branches/profile2-1.5.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/reset-pass-2.9.x
 search https://source.sakaiproject.org/svn/search/branches/search-1.4.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/shortenedurl-1.1.x
@@ -79,6 +79,7 @@ edu-services -r313810 https://source.sakaiproject.org/svn/msub/longsight.com/edu
 login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-2.9.x_features-backport
 msgcntr https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/msgcntr-3.0.x-features-backport/
 portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.x_features-backport/
+profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/104/profile2/profile2-1.5.x_backport
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x
 site-manage -r 309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
