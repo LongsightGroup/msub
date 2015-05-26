@@ -1,0 +1,1 @@
+SAK-29267 - Add ability to disable profile2 search and connections
