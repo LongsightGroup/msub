@@ -158,6 +158,8 @@ public class BasePage extends WebPage implements IHeaderContributor {
 		if(newRequestsCount == 0) {
 			newRequestsLabel.setVisible(false);
 		}
+
+		myFriendsLink.setVisible(sakaiProxy.isConnectionsEnabledGlobally());
 		add(myFriendsLink);
 		
 		
@@ -203,6 +205,9 @@ public class BasePage extends WebPage implements IHeaderContributor {
 		};
 		searchLink.add(new Label("searchLabel",new ResourceModel("link.my.search")));
 		searchLink.add(new AttributeModifier("title", true, new ResourceModel("link.my.search.tooltip")));
+
+		searchLink.setVisible(sakaiProxy.isSearchEnabledGlobally());
+
 		add(searchLink);
 		
 		
