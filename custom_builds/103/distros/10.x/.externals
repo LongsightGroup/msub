@@ -8,7 +8,6 @@ master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 #content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
-edu-services https://source.sakaiproject.org/svn/edu-services/branches/sakai-10.x
 emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/branches/sakai-10.x
 entitybroker https://source.sakaiproject.org/svn/entitybroker/branches/sakai-10.x
 external-calendaring-service https://source.sakaiproject.org/svn/external-calendaring-service/branches/sakai-10.x/ 
@@ -93,6 +92,7 @@ reference https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/1
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/samigo/samigo-10.x_backport
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/user/sakai-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/webservices/sakai-10.x_custom
+edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-10.x_features-backport
 
 certification https://source.sakaiproject.org/contrib/longsight/rsmart-certification/branches/10.x
 qna https://source.sakaiproject.org/contrib/longsight/qna/trunk
