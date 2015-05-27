@@ -86,7 +86,6 @@ kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/2015032
 
 #shell_command sed -i 's/<version>10<\/version>/<version>10-SNAPSHOT<\/version>/g' scorm/pom.xml
 #shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
-#shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' kaltura/pom.xml
 #shell_command sed -i 's/2.10-SNAPSHOT/10-SNAPSHOT/g' itunesu-tool/pom.xml
 #shell_command sed -i 's/2.9-SNAPSHOT/10-SNAPSHOT/g' adobeconnect/pom.xml
 #shell_command sed -i 's/3.0.0/3.0.1/g' scorm/pom.xml
