@@ -6,7 +6,7 @@ master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 # Core services
 kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
-content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
+#content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
 edu-services https://source.sakaiproject.org/svn/edu-services/branches/sakai-10.x
 emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/branches/sakai-10.x
@@ -24,7 +24,7 @@ access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
 alias https://source.sakaiproject.org/svn/alias/branches/sakai-10.x
 announcement https://source.sakaiproject.org/svn/announcement/branches/sakai-10.x
 archive https://source.sakaiproject.org/svn/archive/branches/sakai-10.x
-assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
+#assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
 authz https://source.sakaiproject.org/svn/authz/branches/sakai-10.x
 basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
@@ -77,6 +77,8 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #customizations
+assignmnet https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
+content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
 da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk
 #etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
@@ -89,6 +91,12 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 #shell_command sed -i 's/1\.8\.0\.7/1\.8\.0\.10/g' evaluation/impl/pom.xml
 
+# VeriCite
+#shell_command cd content-review
+#shell_command git clone https://github.com/LongsightGroup/contentreview-impl-vericite.git
+#shell_command cd contentreview-impl-vericite
+#shell_command git apply sakai10x.patch
+#shell_command cd ../../
 
 # Free Big Blue Button on dev:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
@@ -101,7 +109,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 #GIT Projects
 #git_project bigbluebutton-sakai/bbb-tool
-
+#git_project content-review/contentreview-impl-vericite
 
 
 
