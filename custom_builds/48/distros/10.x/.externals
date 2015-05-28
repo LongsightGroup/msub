@@ -75,3 +75,30 @@ usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
+
+#customizations
+
+blogwow -r 86574 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x 
+melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
+portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/48/portal/portal-10.x_custom
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
+
+#shell_command sed -i 's/1\.8\.0\.7/1\.8\.0\.10/g' evaluation/impl/pom.xml
+
+# Free Big Blue Button on dev:
+#shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
+#shell_command cd bigbluebutton-sakai/bbb-tool
+#shell_command mvn versions:update-parent
+#shell_command cat pom.xml | sed "s/<entitybroker\.version>.*<\/entitybroker\.version>/<entitybroker\.version>10-SNAPSHOT<\/entitybroker\.version>/g" > pom2.xml
+#shell_command mv pom2.xml pom.xml
+#shell_command cat pom.xml | sed "s/<entitybroker-utils\.version>.*<\/entitybroker-utils\.version>/<entitybroker-utils\.version>10-SNAPSHOT<\/entitybroker-utils\.version>/g" > pom2.xml
+#shell_command mv pom2.xml pom.xml
+
+#GIT Projects
+#git_project bigbluebutton-sakai/bbb-tool
+
+
+
