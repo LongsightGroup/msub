@@ -114,15 +114,19 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>content-review/contentreview-impl</module>
                 <module>adobeconnect</module>
                 <module>kaltura</module>
-                <module>itunesu-tool</module>
                 <module>wicket-for-scorm</module>
                 <module>scorm</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>itunes</id>
+            <modules>
+                <module>itunesu-tool</module>
             </modules>
         </profile>
         <profile>
