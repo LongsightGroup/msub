@@ -84,17 +84,6 @@ scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/providers/sakai-10.x_jldap-auth-caching_custom
 kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20150320/
 
-#Big Blue Button (Make sure to push and pop back to the right directory):
-#shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
-#shell_command pushd .
-#shell_command cd bigbluebutton-sakai/bbb-tool
-#shell_command mvn versions:update-parent
-#shell_command cat pom.xml | sed "s/<entitybroker\.version>.*<\/entitybroker\.version>/<entitybroker\.version>1.5.4-SNAPSHOT<\/entitybroker\.version>/g" > pom2.xml
-#shell_command mv pom2.xml pom.xml
-#shell_command cat pom.xml | sed "s/<entitybroker-utils\.version>.*<\/entitybroker-utils\.version>/<entitybroker-utils\.version>1.5.4-SNAPSHOT<\/entitybroker-utils\.version>/g" > pom2.xml
-#shell_command mv pom2.xml pom.xml
-#shell_command popd
-
 #GIT Projects
 #git_project bigbluebutton-sakai/bbb-tool
 
@@ -108,3 +97,12 @@ kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/2015032
 #shell_command sed -i 's/Media Gallery/Loyola Media/g' kaltura/src/main/webapp/tools/sakai.kaltura.xml
 #shell_command find itunesu-tool/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
 #shell_command find adobeconnect/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
+#Big Blue Button (Make sure to cd back):
+#shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
+#shell_command cd bigbluebutton-sakai/bbb-tool
+#shell_command mvn versions:update-parent
+#shell_command cat pom.xml | sed "s/<entitybroker\.version>.*<\/entitybroker\.version>/<entitybroker\.version>1.5.4-SNAPSHOT<\/entitybroker\.version>/g" > pom2.xml
+#shell_command mv pom2.xml pom.xml
+#shell_command cat pom.xml | sed "s/<entitybroker-utils\.version>.*<\/entitybroker-utils\.version>/<entitybroker-utils\.version>1.5.4-SNAPSHOT<\/entitybroker-utils\.version>/g" > pom2.xml
+#shell_command mv pom2.xml pom.xml
+#shell_command cd ../..
