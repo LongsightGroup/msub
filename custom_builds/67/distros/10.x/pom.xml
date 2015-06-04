@@ -117,7 +117,6 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>content-review/contentreview-impl</module>
-                <module>adobeconnect</module>
                 <module>kaltura</module>
                 <module>wicket-for-scorm</module>
                 <module>scorm</module>
@@ -127,6 +126,12 @@
             <id>itunes</id>
             <modules>
                 <module>itunesu-tool</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>adobeconnect</id>
+            <modules>
+                <module>adobeconnect</module>
             </modules>
         </profile>
         <profile>
