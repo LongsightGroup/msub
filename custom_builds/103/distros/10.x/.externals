@@ -16,7 +16,6 @@ jobscheduler https://source.sakaiproject.org/svn/jobscheduler/branches/sakai-10.
 jsf https://source.sakaiproject.org/svn/jsf/branches/sakai-10.x
 sakai-mock https://source.sakaiproject.org/svn/sakai-mock/branches/sakai-10.x
 userauditservice https://source.sakaiproject.org/svn/userauditservice/branches/sakai-10.x
-#webservices https://source.sakaiproject.org/svn/webservices/branches/sakai-10.x
 
 # Core Sakai Tools
 access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
@@ -91,7 +90,7 @@ reference https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/1
 #site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/site-manage/sakai-10.x_custom
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/samigo/samigo-10.x_backport
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/user/sakai-10.x_custom
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/webservices/sakai-10.x_custom
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-10.x_features-backport
 
 certification https://source.sakaiproject.org/contrib/longsight/rsmart-certification/branches/10.x
