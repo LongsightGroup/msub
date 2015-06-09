@@ -90,7 +90,7 @@ reference https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/1
 #site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/site-manage/sakai-10.x_custom
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/samigo/samigo-10.x_backport
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/user/sakai-10.x_custom
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x_numerical-grades
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-10.x_features-backport
 
 certification https://source.sakaiproject.org/contrib/longsight/rsmart-certification/branches/10.x
