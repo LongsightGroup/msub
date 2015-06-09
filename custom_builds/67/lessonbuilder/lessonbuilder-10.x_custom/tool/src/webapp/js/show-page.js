@@ -151,6 +151,14 @@ $(function() {
 			resizable: false,
 			draggable: false
 		});
+		
+		$('#add-alert-dialog').dialog({
+			autoOpen: false,
+			width: 600,
+			modal: false,
+			resizable: false,
+			draggable: false
+		});
 
 		$('#comments-dialog').dialog({
 			autoOpen: false,
@@ -305,6 +313,24 @@ $(function() {
 			return false;
 		    });
 
+		$('#add-alert').click(function(){
+			closeDropdowns();
+			var position =  $(this).position();
+			$("#add-alert-dialog").dialog("option", "position", [position.left, position.top]);
+			oldloc = $(".dropdown a");
+			$('#add-alert-dialog').dialog('open');
+			checksize($('#add-alert-dialog'));
+			$("#add-alert-error-container").hide();
+			return false;
+		});
+				
+		$('#add-alert-all-roles').click(function(){
+			var selected = $(this).prop("checked");
+			$(".add-alert-role").each(function(){
+				$(this).prop('checked', selected);
+			});
+		});
+		
 		$('#import-cc-submit').click(function() {
 			// prevent double clicks
 			if (!importccactive)
@@ -485,6 +511,7 @@ $(function() {
 			$("#edit-title-dialog").dialog("option", "width", outerWidth-10);
 			$("#import-cc-dialog").dialog("option", "width", outerWidth-10);
 			$("#export-cc-dialog").dialog("option", "width", outerWidth-10);
+			$("#add-alert-dialog").dialog("option", "width", outerWidth-10);
 			$("#new-page-dialog").dialog("option", "width", outerWidth-10);
 			$("#remove-page-dialog").dialog("option", "width", outerWidth-10);
 			$("#youtube-dialog").dialog("option", "width", outerWidth-10);
@@ -1812,6 +1839,7 @@ $(function() {
 				$('#movie-dialog').dialog('isOpen') ||
 				$('#import-cc-dialog').dialog('isOpen') ||
 				$('#export-cc-dialog').dialog('isOpen') ||
+				$('#add-alert-dialog').dialog('isOpen') ||
 				$('#comments-dialog').dialog('isOpen') ||
 				$('#student-dialog').dialog('isOpen')) ||
 				$('#question-dialog').dialog('isOpen')) {
@@ -2084,6 +2112,11 @@ function closeImportCcDialog() {
 
 function closeExportCcDialog() {
 	$('#export-cc-dialog').dialog('close');
+	oldloc.focus();
+}
+
+function closeAddAlertDialog(){
+	$('#add-alert-dialog').dialog('close');
 	oldloc.focus();
 }
 
@@ -2643,6 +2676,21 @@ function prepareQuestionDialog() {
 	// RSF bugs out if we don't undisable these before submitting
 	$("#multipleChoiceSelect").removeAttr("disabled");
 	$("#shortanswerSelect").removeAttr("disabled");
+	return true;
+}
+
+function prepareAddAlertDialog(){
+	if($("input.add-alert-role:checkbox:checked").length == 0){
+		$('#add-alert-error').text(msg("simplepage.add-alert-need-role"));
+	    $('#add-alert-error-container').show();
+	    $('#add-alert-dialog').scrollTop(0);
+		return false;
+	}else if(!$("#addAlertBeginDate").val()){
+		$('#add-alert-error').text(msg("simplepage.add-alert-need-begin-date"));
+	    $('#add-alert-error-container').show();
+	    $('#add-alert-dialog').scrollTop(0);
+		return false;
+	}
 	return true;
 }
 

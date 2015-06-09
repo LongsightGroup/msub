@@ -145,7 +145,13 @@ simplePageBean.selectPage,
 simplePageBean.peerEval,
 simplePageBean.peerEvalDueDate,
 simplePageBean.peerEvalOpenDate,
-simplePageBean.peerEvalAllowSelfGrade
+simplePageBean.peerEvalAllowSelfGrade,
+simplePageBean.addAlert,
+simplePageBean.addAlertStudentMessage,
+simplePageBean.addAlertRoles,
+simplePageBean.addAlertRecurrence,
+simplePageBean.addAlertOtherMessage,
+simplePageBean.addAlertBeginDate
 </value>
 </property>
    </bean>

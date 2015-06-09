@@ -200,6 +200,8 @@ public class SimplePageBean {
     
 	public String questionType;
     public String questionText, questionCorrectText, questionIncorrectText;
+    public String addAlertStudentMessage, addAlertOtherMessage, addAlertRecurrence, addAlertBeginDate;
+    public String[] addAlertRoles = new String[]{};
     public String questionAnswer;
     public Boolean questionShowPoll;
     private HashMap<Integer, String> questionAnswers = null;
@@ -5791,6 +5793,27 @@ public class SimplePageBean {
 			}
 		}
 	    }
+	}
+	
+	public void addAlert(){
+		if (!canEditPage())
+			return;
+		if (!checkCsrf())
+			return;
+		
+		StringBuilder output = new StringBuilder();
+		output.append("Add Alert Called:\n\nRoles: " + addAlertRoles.length + "\n\n");
+		for(String role : addAlertRoles){
+			output.append(role + "\n");
+		}
+		output.append("\nBeginDate: " + addAlertBeginDate + "\n\n");
+		output.append("Recurrence: " + addAlertRecurrence);
+		output.append("\n\nStudent Alert Message:\n\n");
+		output.append(addAlertStudentMessage);
+		output.append("\n\nOther Alert Message:\n\n");
+		output.append(addAlertOtherMessage);
+		
+		log.info(output.toString());
 	}
 
     // called by edit dialog to update parameters of a Youtube item
