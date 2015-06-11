@@ -53,7 +53,6 @@ reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-10.x
-samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
 search https://source.sakaiproject.org/svn/search/branches/sakai-10.x
 sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
@@ -81,6 +80,7 @@ etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/e
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/portal/portal-10.x_custom
 profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/profile2/10.x-custom
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
