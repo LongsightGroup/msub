@@ -1,1 +1,2 @@
 SAK-29267 - Add ability to disable profile2 search and connections
+SAK-27157 - Add capability to disable messaging globally

@@ -527,6 +527,15 @@ public interface SakaiProxy {
 	public boolean isConnectionsEnabledGlobally();
 
 	/**
+	 * Is the profile2.messaging.enabled flag set in sakai.properties?
+	 * If not set, default to <code>true</code>.
+	 * 
+	 * @return the status of the profile2.messaging.enabled flag in sakai.properties.
+	 * Returns <code>true</code> by default.
+	 */
+	public boolean isMessagingEnabledGlobally();
+	
+	/**
 	 * Is the profile2.picture.change.enabled flag set in sakai.properties?
 	 * If not set, defaults to true
 	 * 

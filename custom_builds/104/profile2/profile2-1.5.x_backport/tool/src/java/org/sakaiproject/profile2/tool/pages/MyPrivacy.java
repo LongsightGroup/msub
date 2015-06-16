@@ -345,6 +345,8 @@ public class MyPrivacy extends BasePage {
             }
         });
 		
+		messagesContainer.setVisible(sakaiProxy.isMessagingEnabledGlobally());
+		
 		// kudos privacy
 		WebMarkupContainer myKudosContainer = new WebMarkupContainer("myKudosContainer");
 		myKudosContainer.add(new Label("myKudosLabel", new ResourceModel("privacy.mykudos")));

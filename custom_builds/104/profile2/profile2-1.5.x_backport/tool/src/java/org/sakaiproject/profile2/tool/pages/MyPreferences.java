@@ -152,6 +152,8 @@ public class MyPreferences extends BasePage{
             }
         });
 		
+		emailNewMessage.setVisible(sakaiProxy.isMessagingEnabledGlobally());
+		
 		//message reply emails
 		final RadioGroup<Boolean> emailReplyMessage = new RadioGroup<Boolean>("messageReplyEmailEnabled", new PropertyModel<Boolean>(preferencesModel, "messageReplyEmailEnabled"));
 		emailReplyMessage.add(new Radio<Boolean>("messageReplyOn", new Model<Boolean>(Boolean.valueOf(true))));
@@ -166,6 +168,8 @@ public class MyPreferences extends BasePage{
             	target.appendJavascript("$('#" + formFeedbackId + "').fadeOut();");
             }
         });
+		
+		emailReplyMessage.setVisible(sakaiProxy.isMessagingEnabledGlobally());
 		
 		// new wall item notification emails
 		final RadioGroup<Boolean> wallItemNew = new RadioGroup<Boolean>("wallItemNewEmailEnabled", new PropertyModel<Boolean>(preferencesModel, "wallItemNewEmailEnabled"));
