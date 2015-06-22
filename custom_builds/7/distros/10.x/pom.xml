@@ -120,7 +120,6 @@
                 <module>ltiContact</module>
                 <module>evaluation</module>
                 <module>melete</module>
-                <module>bigbluebutton-sakai/bbb-tool</module>
                 <module>content-review/contentreview-impl</module>
             </modules>
         </profile>
