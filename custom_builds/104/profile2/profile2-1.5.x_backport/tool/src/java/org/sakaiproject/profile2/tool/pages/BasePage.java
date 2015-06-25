@@ -119,6 +119,11 @@ public class BasePage extends WebPage implements IHeaderContributor {
 		};
 		myProfileLink.add(new Label("myProfileLabel",new ResourceModel("link.my.profile")));
 		myProfileLink.add(new AttributeModifier("title", true, new ResourceModel("link.my.profile.tooltip")));
+
+		if(!sakaiProxy.isMenuEnabledGlobally()) {
+			myProfileLink.setVisible(false);
+		}
+
 		add(myProfileLink);
 		
 		//my pictures link
@@ -159,7 +164,10 @@ public class BasePage extends WebPage implements IHeaderContributor {
 			newRequestsLabel.setVisible(false);
 		}
 
-		myFriendsLink.setVisible(sakaiProxy.isConnectionsEnabledGlobally());
+		if(!sakaiProxy.isConnectionsEnabledGlobally()) {
+			myFriendsLink.setVisible(false);
+		}
+
 		add(myFriendsLink);
 		
 		
@@ -197,6 +205,11 @@ public class BasePage extends WebPage implements IHeaderContributor {
 		};
 		myPrivacyLink.add(new Label("myPrivacyLabel",new ResourceModel("link.my.privacy")));
 		myPrivacyLink.add(new AttributeModifier("title", true, new ResourceModel("link.my.privacy.tooltip")));
+
+		if(!sakaiProxy.isPrivacyEnabledGlobally()) {
+			myPrivacyLink.setVisible(false);
+		}
+
 		add(myPrivacyLink);
 		
 		
@@ -210,7 +223,9 @@ public class BasePage extends WebPage implements IHeaderContributor {
 		searchLink.add(new Label("searchLabel",new ResourceModel("link.my.search")));
 		searchLink.add(new AttributeModifier("title", true, new ResourceModel("link.my.search.tooltip")));
 
-		searchLink.setVisible(sakaiProxy.isSearchEnabledGlobally());
+		if(!sakaiProxy.isSearchEnabledGlobally()) {
+			searchLink.setVisible(false);
+		}
 
 		add(searchLink);
 		
@@ -224,6 +239,10 @@ public class BasePage extends WebPage implements IHeaderContributor {
 		};
 		preferencesLink.add(new Label("preferencesLabel",new ResourceModel("link.my.preferences")));
 		preferencesLink.add(new AttributeModifier("title", true, new ResourceModel("link.my.preferences.tooltip")));
+
+		if(!sakaiProxy.isPreferenceEnabledGlobally()) {
+			preferencesLink.setVisible(false);
+		}
 		add(preferencesLink);
 			
 		

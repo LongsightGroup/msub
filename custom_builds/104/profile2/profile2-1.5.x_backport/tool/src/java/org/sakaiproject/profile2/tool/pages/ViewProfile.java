@@ -137,7 +137,7 @@ public class ViewProfile extends BasePage {
 		add(profileName);
 		
 		/* ONLINE PRESENCE INDICATOR */
-		if(prefs.isShowOnlineStatus() && isOnlineStatusVisible){
+		if(sakaiProxy.isOnlineStatusEnabledGlobally() && prefs.isShowOnlineStatus() && isOnlineStatusVisible){
 			add(new OnlinePresenceIndicator("online", userUuid));
 		} else {
 			add(new EmptyPanel("online"));
@@ -191,7 +191,7 @@ public class ViewProfile extends BasePage {
 			});
 		}
 		
-		if (true == sakaiProxy.isWallEnabledGlobally()) {
+		if (sakaiProxy.isWallEnabledGlobally()) {
 			
 			tabs.add(new AbstractTab(new ResourceModel("link.tab.wall")) {
 
@@ -205,7 +205,7 @@ public class ViewProfile extends BasePage {
 				}
 			});
 			
-			if (true == sakaiProxy.isWallDefaultProfilePage() && null == tabCookie) {
+			if (sakaiProxy.isWallDefaultProfilePage() && null == tabCookie) {
 				
 				tabbedPanel.setSelectedTab(ProfileConstants.TAB_INDEX_WALL);
 			}
@@ -284,11 +284,11 @@ public class ViewProfile extends BasePage {
             	}
             }
         });
-		
+		addFriendWindow.setVisible(sakaiProxy.isConnectionsEnabledGlobally());
 		add(addFriendWindow);
 		
 		//hide connection link if not allowed
-		if(!isConnectionAllowed) {
+		if(!isConnectionAllowed && !sakaiProxy.isConnectionsEnabledGlobally()) {
 			addFriendContainer.setVisible(false);
 		} else {
 			visibleSideLinksCount++;
@@ -303,7 +303,7 @@ public class ViewProfile extends BasePage {
 		
 		
 		/* KUDOS PANEL */
-		if(isKudosVisible) {
+		if(sakaiProxy.isMyKudosEnabledGlobally() && isKudosVisible) {
 			add(new AjaxLazyLoadPanel("myKudos"){
 				private static final long serialVersionUID = 1L;
 	
@@ -325,7 +325,7 @@ public class ViewProfile extends BasePage {
 		
 		
 		/* FRIENDS FEED PANEL */
-		if(isFriendsListVisible) {
+		if(sakaiProxy.isConnectionsEnabledGlobally() && isFriendsListVisible) {
 			add(new AjaxLazyLoadPanel("friendsFeed") {
 				private static final long serialVersionUID = 1L;
 

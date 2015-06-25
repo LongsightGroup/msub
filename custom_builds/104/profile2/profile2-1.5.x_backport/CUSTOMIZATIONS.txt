@@ -1,2 +1,3 @@
+SAK-29408 - Add ability to disable profile2 privacy, preferences, myKudos, onlineStatus, and overall menu
 SAK-29267 - Add ability to disable profile2 search and connections
 SAK-27157 - Add capability to disable messaging globally

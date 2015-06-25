@@ -149,6 +149,8 @@ public class MySearch extends BasePage {
 		// model is true (include connections by default)
 		connectionsCheckBox = new CheckBox("connectionsCheckBox", new Model<Boolean>(true));
 		connectionsCheckBox.setOutputMarkupId(true);
+		//hide if connections disabled globally
+		connectionsCheckBox.setVisible(sakaiProxy.isConnectionsEnabledGlobally());
 		searchForm.add(connectionsCheckBox);
 				
 		final List<Site> worksites = sakaiProxy.getUserSites();
@@ -331,7 +333,7 @@ public class MySearch extends BasePage {
 		    	final WebMarkupContainer c1 = new WebMarkupContainer("connectionContainer");
 		    	c1.setOutputMarkupId(true);
 
-				if(!isConnectionAllowed){
+				if(!isConnectionAllowed && !sakaiProxy.isConnectionsEnabledGlobally()){
 					//add blank components - TODO turn this into an EmptyLink component
 					AjaxLink<Void> emptyLink = new AjaxLink<Void>("connectionLink"){
 						private static final long serialVersionUID = 1L;
@@ -426,7 +428,7 @@ public class MySearch extends BasePage {
 				viewFriendsLink.add(viewFriendsLabel);
 				
 				//hide if not allowed
-				if(!isFriendsListVisible) {
+				if(!isFriendsListVisible && !sakaiProxy.isConnectionsEnabledGlobally()) {
 					viewFriendsLink.setEnabled(false);
 					c2.setVisible(false);
 				}

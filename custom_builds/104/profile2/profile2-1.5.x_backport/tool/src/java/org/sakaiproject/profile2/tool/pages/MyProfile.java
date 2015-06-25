@@ -368,7 +368,11 @@ public class MyProfile extends BasePage {
 			
 			add(addFriendWindow);
 		
+			if(sakaiProxy.isConnectionsEnabledGlobally()) {
 			visibleSideLinksCount++;
+      } else {
+        addFriendContainer.setVisible(false);
+      }
 			
 			
 			//ADMIN: LOCK/UNLOCK A PROFILE
@@ -526,7 +530,7 @@ public class MyProfile extends BasePage {
 
 			@Override
 			public Component getLazyLoadComponent(String markupId) {
-				if(prefs.isShowKudos()){
+				if(sakaiProxy.isMyKudosEnabledGlobally() && prefs.isShowKudos()){
 										
 					int score = kudosLogic.getKudos(userUuid);
 					if(score > 0) {
@@ -544,7 +548,10 @@ public class MyProfile extends BasePage {
 
 			@Override
             public Component getLazyLoadComponent(String markupId) {
+							if(sakaiProxy.isConnectionsEnabledGlobally()) {
             	return new FriendsFeed(markupId, userUuid, userUuid);
+            }
+							return new EmptyPanel(markupId);
             }
 
 			@Override
