@@ -1,3 +1,12 @@
 SAK-29408 - Add ability to disable profile2 privacy, preferences, myKudos, onlineStatus, and overall menu
 SAK-29267 - Add ability to disable profile2 search and connections
 SAK-27157 - Add capability to disable messaging globally
+
+This branch contains support for these additional custom properties
+profile2.menu.enabled=true/false
+profile2.privacy.enabled=true/false
+profile2.preference.enabled=true/false
+profile2.myKudos.enabled=true/false
+profile2.onlineStatus.enabled=true/false
+profile2.connections.enabled = true/false
+profile2.search.enabled= true/false
