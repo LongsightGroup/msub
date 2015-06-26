@@ -66,7 +66,7 @@ signup https://source.sakaiproject.org/svn/signup/branches/sakai-10.x/
 site https://source.sakaiproject.org/svn/site/branches/sakai-10.x
 #site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
-#syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
+syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
 textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-10.x
 tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
@@ -93,7 +93,7 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-10.x_backport
 #samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/25/samigo/sakai-10.x
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_custom
-syllabus https://source.sakaiproject.org/svn/msub/longsight.com/syllabus/syllabus-10.x_backport
+#syllabus https://source.sakaiproject.org/svn/msub/longsight.com/syllabus/syllabus-10.x_backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
 #Patcher options: "mavenoptions: <options>"
