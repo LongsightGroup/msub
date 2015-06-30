@@ -33,7 +33,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
-
 import java.sql.Connection;
 
 import org.apache.commons.logging.Log;
@@ -50,6 +49,7 @@ import org.sakaiproject.authz.cover.AuthzGroupService;
 import org.sakaiproject.db.api.SqlReader;
 import org.sakaiproject.db.api.SqlService;
 import org.sakaiproject.event.cover.EventTrackingService;
+import org.sakaiproject.lessonbuildertool.ActivityAlert;
 import org.sakaiproject.lessonbuildertool.SimplePage;
 import org.sakaiproject.lessonbuildertool.SimplePageComment;
 import org.sakaiproject.lessonbuildertool.SimplePageCommentImpl;
@@ -75,13 +75,11 @@ import org.sakaiproject.lessonbuildertool.SimplePagePeerEvalResult;
 import org.sakaiproject.lessonbuildertool.SimplePagePeerEvalResultImpl;
 import org.sakaiproject.lessonbuildertool.SimplePageProperty;
 import org.sakaiproject.lessonbuildertool.SimplePagePropertyImpl;
-
 import org.sakaiproject.tool.api.ToolManager;
 import org.sakaiproject.user.cover.UserDirectoryService;
 import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.orm.hibernate3.HibernateTemplate;
-
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.JSONArray;
@@ -761,7 +759,9 @@ public class SimplePageToolDaoImpl extends HibernateDaoSupport implements Simple
 		}
 
 		try {
-			if(!(o instanceof SimplePageLogEntry)) {
+			if(o instanceof ActivityAlert) {
+				getHibernateTemplate().saveOrUpdate(o);	
+			}else if(!(o instanceof SimplePageLogEntry)) {
 				getHibernateTemplate().merge(o);
 			}else {
 				// Updating seems to always update the timestamp on the log correctly,
@@ -1476,6 +1476,27 @@ public class SimplePageToolDaoImpl extends HibernateDaoSupport implements Simple
 		});
 
 	    return objectMap;
+	}
+
+	@Override
+	public ActivityAlert findActivityAlert(String siteId, String tool, String pageId) {
+		DetachedCriteria d = DetachedCriteria.forClass(ActivityAlert.class)
+				.add(Restrictions.eq("siteId", siteId))
+				.add(Restrictions.eq("tool", tool))
+				.add(Restrictions.eq("reference", pageId));
+		List<ActivityAlert> list = getHibernateTemplate().findByCriteria(d);
+		
+		if(list.size() > 0) {
+			return list.get(0);
+		}else {
+			return null;
+		}
+	}
+
+	@Override
+	public void saveActityAlert(ActivityAlert alert) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

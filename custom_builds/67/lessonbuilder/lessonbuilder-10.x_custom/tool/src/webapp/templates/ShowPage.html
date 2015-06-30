@@ -1207,6 +1207,17 @@ function resizeiframe(id) {
 		                    ashidden: { iso8601: 'addAlertBeginDate' }
 		                });
 		              </script>
+					  <br/>
+					  <span rsf:id="msg=simplepage.add-alert.ending" id="simplepage.add-alert.ending">Ending</span>:&nbsp;<input id="addAlertEndDateInput" type="text" /><input rsf:id="addAlertEndDate" id="addAlertEndDate" type="hidden" />
+					  <script type="text/javascript">
+		                localDatePicker({
+		                    input: '#addAlertEndDateInput',
+		                    useTime: 1,
+		                    parseFormat: 'YYYY-MM-DD HH:mm:ss',
+		                    val: $("#addAlertEndDate").val(),
+		                    ashidden: { iso8601: 'addAlertEndDate' }
+		                });
+		              </script>
 					  <br/><br/>
 					  <span rsf:id="msg=simplepage.add-alert.recurrence" id="simplepage.add-alert.recurrence">Recurrence</span>
 					  <br/>

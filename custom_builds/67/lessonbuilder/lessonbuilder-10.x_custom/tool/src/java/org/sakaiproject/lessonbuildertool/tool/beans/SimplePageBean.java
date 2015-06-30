@@ -24,9 +24,12 @@
 
 package org.sakaiproject.lessonbuildertool.tool.beans;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.text.Format;
 import java.math.BigDecimal;
+
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.sakaiproject.authz.api.AuthzGroup;
@@ -72,11 +75,13 @@ import org.sakaiproject.util.FormattedText;
 import org.sakaiproject.util.ResourceLoader;
 import org.sakaiproject.util.Validator;
 import org.springframework.web.multipart.MultipartFile;
+
 import uk.org.ponder.messageutil.MessageLocator;
 import uk.org.ponder.rsf.components.UIContainer;
 import uk.org.ponder.rsf.components.UIInternalLink;
 
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.*;
 import java.lang.reflect.Method;
 import java.net.URL;
@@ -86,7 +91,9 @@ import java.text.DateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import org.sakaiproject.lessonbuildertool.tool.beans.helpers.ResourceHelper;
+
 import au.com.bytecode.opencsv.CSVParser;
 
 /**
@@ -200,7 +207,8 @@ public class SimplePageBean {
     
 	public String questionType;
     public String questionText, questionCorrectText, questionIncorrectText;
-    public String addAlertStudentMessage, addAlertOtherMessage, addAlertRecurrence, addAlertBeginDate;
+    public String addAlertRecurrence = "" + ActivityAlert.RECURRENCCE_NONE;
+    public String addAlertStudentMessage, addAlertOtherMessage, addAlertBeginDate, addAlertEndDate;
     public String[] addAlertRoles = new String[]{};
     public String questionAnswer;
     public Boolean questionShowPoll;
@@ -5795,25 +5803,95 @@ public class SimplePageBean {
 	    }
 	}
 	
+	public void setupActivityAlert(){
+		if(canEditPage()){
+			ActivityAlert alert = simplePageToolDao.findActivityAlert(getCurrentSiteId(), "sakai.lessonbuildertool", "" + getCurrentPageId());
+			if(alert != null){
+				addAlertStudentMessage = alert.getStudentMessage();
+				addAlertOtherMessage = alert.getNonStudentMessage();
+				addAlertRecurrence = alert.getReference() == null ? "" + ActivityAlert.RECURRENCCE_NONE : "" + alert.getReference();
+				addAlertBeginDate = alert.getBeginDate() == null ? "" : isoDateFormat.format(alert.getBeginDate());
+				addAlertEndDate = alert.getEndDate() == null ? "" : isoDateFormat.format(alert.getEndDate());
+				List<String> recipientsRolesList = new ArrayList<String>();
+				if(StringUtils.isNotEmpty(alert.getStudentRecipients())){
+					for(String recipient : alert.getStudentRecipients().split(ActivityAlert.RECIPIENT_TYPE_DELIMITER)){
+						if(recipient.startsWith(ActivityAlert.RECIPIENT_TYPE_ROLE)){
+							recipient = recipient.substring(ActivityAlert.RECIPIENT_TYPE_ROLE.length());
+							recipientsRolesList.add(recipient);
+						}						
+					}
+				}
+				if(StringUtils.isNotEmpty(alert.getNonStudentRecipients())){
+					for(String recipient : alert.getNonStudentRecipients().split(ActivityAlert.RECIPIENT_TYPE_DELIMITER)){
+						if(recipient.startsWith(ActivityAlert.RECIPIENT_TYPE_ROLE)){
+							recipient = recipient.substring(ActivityAlert.RECIPIENT_TYPE_ROLE.length());
+							recipientsRolesList.add(recipient);
+						}
+					}
+				}
+				addAlertRoles = recipientsRolesList.toArray(new String[recipientsRolesList.size()]);
+			}
+		}
+	}
+	
 	public void addAlert(){
 		if (!canEditPage())
 			return;
 		if (!checkCsrf())
 			return;
 		
-		StringBuilder output = new StringBuilder();
-		output.append("Add Alert Called:\n\nRoles: " + addAlertRoles.length + "\n\n");
-		for(String role : addAlertRoles){
-			output.append(role + "\n");
-		}
-		output.append("\nBeginDate: " + addAlertBeginDate + "\n\n");
-		output.append("Recurrence: " + addAlertRecurrence);
-		output.append("\n\nStudent Alert Message:\n\n");
-		output.append(addAlertStudentMessage);
-		output.append("\n\nOther Alert Message:\n\n");
-		output.append(addAlertOtherMessage);
+		//there is only one activity alert per page, so always write over it:
+		ActivityAlert activityAlert = new ActivityAlertImpl();
+		activityAlert.setSiteId(getCurrentPage().getSiteId());
+		activityAlert.setTool("sakai.lessonbuildertool");
+		activityAlert.setReference("" + getCurrentPageId());
 		
-		log.info(output.toString());
+		activityAlert.setStudentMessage(addAlertStudentMessage);
+		activityAlert.setNonStudentMessage(addAlertOtherMessage);
+		Integer recurrence = ActivityAlert.RECURRENCCE_NONE;
+		try{
+			recurrence = Integer.parseInt(addAlertRecurrence);
+		}catch(Exception e){
+			log.warn(e.getMessage(), e);
+		}
+		activityAlert.setRecurrence(recurrence);
+		Date beginDate = null;
+		if(StringUtils.isNotEmpty(addAlertBeginDate)){
+			try {
+				beginDate = isoDateFormat.parse(addAlertBeginDate);
+			} catch (ParseException e) {
+				log.error(e.getMessage(), e);
+			}
+		}
+		activityAlert.setBeginDate(beginDate);
+		Date endDate = null;
+		if(StringUtils.isNotEmpty(addAlertEndDate)){
+			try {
+				endDate = isoDateFormat.parse(addAlertEndDate);
+			} catch (ParseException e) {
+				log.error(e.getMessage(), e);
+			}
+		}
+		activityAlert.setEndDate(endDate);
+		StringBuilder studentRecipients = new StringBuilder();
+		StringBuilder nonStudentRecipients = new StringBuilder();
+		for(String role : addAlertRoles){
+			if("access".equals(role) || "Student".equals(role)){
+				if(StringUtils.isNotEmpty(studentRecipients.toString())){
+					studentRecipients.append(ActivityAlert.RECIPIENT_TYPE_DELIMITER);
+				}
+				studentRecipients.append(ActivityAlert.RECIPIENT_TYPE_ROLE + role);
+			}else{
+				if(StringUtils.isNotEmpty(nonStudentRecipients.toString())){
+					nonStudentRecipients.append(ActivityAlert.RECIPIENT_TYPE_DELIMITER);
+				}
+				nonStudentRecipients.append(ActivityAlert.RECIPIENT_TYPE_ROLE + role);
+			}
+		}
+		activityAlert.setStudentRecipients(studentRecipients.toString());
+		activityAlert.setNonStudentRecipients(nonStudentRecipients.toString());
+		
+		update(activityAlert, false);
 	}
 
     // called by edit dialog to update parameters of a Youtube item

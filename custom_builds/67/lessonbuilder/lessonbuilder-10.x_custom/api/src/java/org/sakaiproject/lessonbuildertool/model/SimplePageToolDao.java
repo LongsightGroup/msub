@@ -27,12 +27,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Collection;
 
+import org.sakaiproject.lessonbuildertool.ActivityAlert;
 import org.sakaiproject.lessonbuildertool.SimplePage;
 import org.sakaiproject.lessonbuildertool.SimplePageComment;
 import org.sakaiproject.lessonbuildertool.SimplePageGroup;
 import org.sakaiproject.lessonbuildertool.SimplePageItem;
 import org.sakaiproject.lessonbuildertool.SimplePageLogEntry;
-
 import org.sakaiproject.lessonbuildertool.SimplePageQuestionAnswer;
 import org.sakaiproject.lessonbuildertool.SimplePageQuestionResponse;
 import org.sakaiproject.lessonbuildertool.SimplePageQuestionResponseTotals;
@@ -40,7 +40,6 @@ import org.sakaiproject.lessonbuildertool.SimpleStudentPage;
 import org.sakaiproject.lessonbuildertool.SimplePagePeerEval;
 import org.sakaiproject.lessonbuildertool.SimplePagePeerEvalResult;
 import org.sakaiproject.lessonbuildertool.SimplePageProperty;
-
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
 public interface SimplePageToolDao {
@@ -283,5 +282,8 @@ public interface SimplePageToolDao {
     // returns map of old to new sakaiid's after a site copy or import
     public Map<String,String> getObjectMap(String siteId);
 
-
+    public ActivityAlert findActivityAlert(String siteId, String tool, String pageId);
+    
+    public void saveActityAlert(ActivityAlert alert);
+    
 }

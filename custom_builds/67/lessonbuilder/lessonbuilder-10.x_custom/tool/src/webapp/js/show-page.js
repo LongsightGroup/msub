@@ -2690,6 +2690,11 @@ function prepareAddAlertDialog(){
 	    $('#add-alert-error-container').show();
 	    $('#add-alert-dialog').scrollTop(0);
 		return false;
+	}else if(!$("#addAlertEndDate").val()){
+		$('#add-alert-error').text(msg("simplepage.add-alert-need-end-date"));
+	    $('#add-alert-error-container').show();
+	    $('#add-alert-dialog').scrollTop(0);
+		return false;
 	}
 	return true;
 }

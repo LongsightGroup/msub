@@ -74,6 +74,7 @@ import org.sakaiproject.content.cover.ContentTypeImageService;
 import org.sakaiproject.entity.api.ResourceProperties;
 import org.sakaiproject.event.api.UsageSession;
 import org.sakaiproject.event.cover.UsageSessionService;
+import org.sakaiproject.lessonbuildertool.ActivityAlert;
 import org.sakaiproject.lessonbuildertool.SimplePage;
 import org.sakaiproject.lessonbuildertool.SimplePageComment;
 import org.sakaiproject.lessonbuildertool.SimplePageItem;
@@ -3653,48 +3654,55 @@ public class ShowPageProducer implements ViewComponentProducer, DefaultView, Nav
 	}
 	
 	private void createAddAlertDialog(UIContainer tofill) {
-		UIOutput.make(tofill, "add-alert-dialog").decorate(new UIFreeAttributeDecorator("title", messageLocator.getMessage("simplepage.add-alert-title")));
+		if(simplePageBean.canEditPage()){
+			simplePageBean.setupActivityAlert();
 
-		UIForm form = UIForm.make(tofill, "add-alert-form");
-		makeCsrf(form, "csrf22");
-		
-		//Roles:
-		String currentSiteId = toolManager.getCurrentPlacement().getContext();
-		Site site = null;
-		List<String> roles = new ArrayList<String>();
-		try {
-			site = SiteService.getSite(currentSiteId);
-			for(Role role : site.getRoles()){
-				roles.add(role.getId());
+			UIOutput.make(tofill, "add-alert-dialog").decorate(new UIFreeAttributeDecorator("title", messageLocator.getMessage("simplepage.add-alert-title")));
+
+			UIForm form = UIForm.make(tofill, "add-alert-form");
+			makeCsrf(form, "csrf22");
+
+			//Roles:
+			String currentSiteId = toolManager.getCurrentPlacement().getContext();
+			Site site = null;
+			List<String> roles = new ArrayList<String>();
+			try {
+				site = SiteService.getSite(currentSiteId);
+				for(Role role : site.getRoles()){
+					roles.add(role.getId());
+				}
+			} catch (Exception e) {
+				log.warn(e.getMessage(), e);
 			}
-		} catch (Exception e) {
-			log.warn(e.getMessage(), e);
-		}
-		Collections.sort(roles);		
-		UISelect select = UISelect.makeMultiple(form, "addAlertRoleSelect", roles.toArray(new String[roles.size()]), "#{simplePageBean.addAlertRoles}", new String[] {});
-		for(String role: roles){
-			UIBranchContainer row = UIBranchContainer.make(form, "role:", String.valueOf(roles.indexOf(role)));
-			UISelectChoice.make(row, "roleOption", select.getFullID(), roles.indexOf(role));
-			UIOutput.make(row, "roleOptionLabel", role);
-		}
-		
-		//BeginDate:
-		UIInput.make(form, "addAlertBeginDate", "#{simplePageBean.addAlertBeginDate}");		
-		
-		//Recurrence:
-		UISelect questionType = UISelect.make(form, "add-alert-recurrence", new String[] {"none", "daily", "weekly"}, "#{simplePageBean.addAlertRecurrence}", "none");
-		UISelectChoice.make(form, "addAlertRecurrenceNone", questionType.getFullID(), 0);
-		UISelectChoice.make(form, "addAlertRecurrenceDaily", questionType.getFullID(), 1);
-		UISelectChoice.make(form, "addAlertRecurrenceWeekly", questionType.getFullID(), 1);
-		
-		//Student alert message:
-		UIInput.make(form, "add-alert-student-message", "#{simplePageBean.addAlertStudentMessage}");
-		
-		//Other alert message:
-		UIInput.make(form, "add-alert-other-message", "#{simplePageBean.addAlertOtherMessage}");
+			Collections.sort(roles);
+			UISelect select = UISelect.makeMultiple(form, "addAlertRoleSelect", roles.toArray(new String[roles.size()]), "#{simplePageBean.addAlertRoles}", simplePageBean.addAlertRoles);
+			for(String role: roles){
+				UIBranchContainer row = UIBranchContainer.make(form, "role:", String.valueOf(roles.indexOf(role)));
+				UISelectChoice.make(row, "roleOption", select.getFullID(), roles.indexOf(role));
+				UIOutput.make(row, "roleOptionLabel", role);
+			}
 
-		UICommand.make(form, "add-alert-submit", messageLocator.getMessage("simplepage.save"), "#{simplePageBean.addAlert}");
-		UICommand.make(form, "add-alert-cancel", messageLocator.getMessage("simplepage.cancel"), null);
+			//BeginDate:
+			UIInput.make(form, "addAlertBeginDate", "#{simplePageBean.addAlertBeginDate}");
+
+			//EndDate:
+			UIInput.make(form, "addAlertEndDate", "#{simplePageBean.addAlertEndDate}");
+
+			//Recurrence:
+			UISelect questionType = UISelect.make(form, "add-alert-recurrence", new String[] {"" + ActivityAlert.RECURRENCCE_NONE, "" + ActivityAlert.RECURRENCCE_DAILY, "" + ActivityAlert.RECURRENCCE_WEEKLY}, "#{simplePageBean.addAlertRecurrence}", simplePageBean.addAlertRecurrence);
+			UISelectChoice.make(form, "addAlertRecurrenceNone", questionType.getFullID(), 0);
+			UISelectChoice.make(form, "addAlertRecurrenceDaily", questionType.getFullID(), 1);
+			UISelectChoice.make(form, "addAlertRecurrenceWeekly", questionType.getFullID(), 1);
+
+			//Student alert message:
+			UIInput.make(form, "add-alert-student-message", "#{simplePageBean.addAlertStudentMessage}");
+
+			//Other alert message:
+			UIInput.make(form, "add-alert-other-message", "#{simplePageBean.addAlertOtherMessage}");
+
+			UICommand.make(form, "add-alert-submit", messageLocator.getMessage("simplepage.save"), "#{simplePageBean.addAlert}");
+			UICommand.make(form, "add-alert-cancel", messageLocator.getMessage("simplepage.cancel"), null);
+		}
 	}
 
 	private void createEditMultimediaDialog(UIContainer tofill, SimplePage currentPage) {
