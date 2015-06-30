@@ -20,7 +20,6 @@ osp https://source.sakaiproject.org/svn/osp/branches/sakai-2.9.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-2.9.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-2.9.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-2.9.x
-providers https://source.sakaiproject.org/svn/providers/branches/sakai-2.9.x
 #reference https://source.sakaiproject.org/svn/reference/branches/sakai-2.9.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-2.9.x
 roster https://source.sakaiproject.org/svn/roster/branches/sakai-2.9.x
@@ -84,6 +83,7 @@ samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x
 site-manage -r 309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
 web https://source.sakaiproject.org/svn/msub/longsight.com/web/web-2.9.x_features-backport/
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 
 
 #Pom Changes
