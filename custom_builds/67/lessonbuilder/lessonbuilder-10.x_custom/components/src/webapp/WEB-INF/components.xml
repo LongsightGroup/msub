@@ -36,6 +36,14 @@
     <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService" />
     <property name="sqlService" ref="org.sakaiproject.db.api.SqlService" />
   </bean>
+  
+  <bean id="org.sakaiproject.lessonbuildertool.model.ActivityAlertService"
+    	class="org.sakaiproject.lessonbuildertool.model.ActivityAlertServiceImpl"
+    	singleton="true">
+    	<property name="timeService" ref="org.sakaiproject.time.api.TimeService" />
+		<property name="scheduledInvocationManager" ref="org.sakaiproject.api.app.scheduler.ScheduledInvocationManager" />
+		<property name="simplePageToolDao" ref="org.sakaiproject.lessonbuildertool.model.SimplePageToolDao" />
+  </bean>  
 
 <!-- here's the version our code will access -->
 

@@ -3692,7 +3692,7 @@ public class ShowPageProducer implements ViewComponentProducer, DefaultView, Nav
 			UISelect questionType = UISelect.make(form, "add-alert-recurrence", new String[] {"" + ActivityAlert.RECURRENCCE_NONE, "" + ActivityAlert.RECURRENCCE_DAILY, "" + ActivityAlert.RECURRENCCE_WEEKLY}, "#{simplePageBean.addAlertRecurrence}", simplePageBean.addAlertRecurrence);
 			UISelectChoice.make(form, "addAlertRecurrenceNone", questionType.getFullID(), 0);
 			UISelectChoice.make(form, "addAlertRecurrenceDaily", questionType.getFullID(), 1);
-			UISelectChoice.make(form, "addAlertRecurrenceWeekly", questionType.getFullID(), 1);
+			UISelectChoice.make(form, "addAlertRecurrenceWeekly", questionType.getFullID(), 2);
 
 			//Student alert message:
 			UIInput.make(form, "add-alert-student-message", "#{simplePageBean.addAlertStudentMessage}");

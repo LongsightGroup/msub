@@ -1791,6 +1791,11 @@ $(function() {
 			setUpRequirements();
 		});
 		
+		$('.addAlertEndDateInputSpan').toggle(!$("#addAlertRecurrenceNone").is(':checked'));
+		$("input[name=add-alert-recurrence-selection]:radio").change(function(){
+			$('.addAlertEndDateInputSpan').toggle(!$("#addAlertRecurrenceNone").is(':checked'));
+		});
+		
 		function delete_confirm(event, message) {
 			if (insist) {
 			    insist = false;
@@ -2690,7 +2695,7 @@ function prepareAddAlertDialog(){
 	    $('#add-alert-error-container').show();
 	    $('#add-alert-dialog').scrollTop(0);
 		return false;
-	}else if(!$("#addAlertEndDate").val()){
+	}else if(!$("#addAlertEndDate").val() && !$("#addAlertRecurrenceNone").is(':checked')){
 		$('#add-alert-error').text(msg("simplepage.add-alert-need-end-date"));
 	    $('#add-alert-error-container').show();
 	    $('#add-alert-dialog').scrollTop(0);

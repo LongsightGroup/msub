@@ -55,6 +55,7 @@ import org.sakaiproject.lessonbuildertool.cc.CartridgeLoader;
 import org.sakaiproject.lessonbuildertool.cc.Parser;
 import org.sakaiproject.lessonbuildertool.cc.PrintHandler;
 import org.sakaiproject.lessonbuildertool.cc.ZipLoader;
+import org.sakaiproject.lessonbuildertool.model.ActivityAlertService;
 import org.sakaiproject.lessonbuildertool.model.SimplePageToolDao;
 import org.sakaiproject.lessonbuildertool.service.*;
 import org.sakaiproject.lessonbuildertool.tool.producers.ShowItemProducer;
@@ -533,6 +534,7 @@ public class SimplePageBean {
 	private SecurityService securityService;
 	private SiteService siteService;
 	private SimplePageToolDao simplePageToolDao;
+	private ActivityAlertService activityAlertService;
 	private LessonsAccess lessonsAccess;
         private LessonBuilderAccessService lessonBuilderAccessService;
 
@@ -1480,6 +1482,10 @@ public class SimplePageBean {
 
 	public void setSimplePageToolDao(Object dao) {
 		simplePageToolDao = (SimplePageToolDao) dao;
+	}
+	
+	public void setActivityAlertService(ActivityAlertService activityAlertService){
+		this.activityAlertService = activityAlertService;
 	}
 
 	public void setLessonsAccess(LessonsAccess a) {
@@ -5809,7 +5815,7 @@ public class SimplePageBean {
 			if(alert != null){
 				addAlertStudentMessage = alert.getStudentMessage();
 				addAlertOtherMessage = alert.getNonStudentMessage();
-				addAlertRecurrence = alert.getReference() == null ? "" + ActivityAlert.RECURRENCCE_NONE : "" + alert.getReference();
+				addAlertRecurrence = alert.getRecurrence() == null ? "" + ActivityAlert.RECURRENCCE_NONE : "" + alert.getRecurrence();
 				addAlertBeginDate = alert.getBeginDate() == null ? "" : isoDateFormat.format(alert.getBeginDate());
 				addAlertEndDate = alert.getEndDate() == null ? "" : isoDateFormat.format(alert.getEndDate());
 				List<String> recipientsRolesList = new ArrayList<String>();
@@ -5872,6 +5878,9 @@ public class SimplePageBean {
 				log.error(e.getMessage(), e);
 			}
 		}
+		if(beginDate != null && endDate != null && endDate.before(beginDate)){
+			endDate = new Date(beginDate.getTime());
+		}
 		activityAlert.setEndDate(endDate);
 		StringBuilder studentRecipients = new StringBuilder();
 		StringBuilder nonStudentRecipients = new StringBuilder();
@@ -5892,6 +5901,7 @@ public class SimplePageBean {
 		activityAlert.setNonStudentRecipients(nonStudentRecipients.toString());
 		
 		update(activityAlert, false);
+		activityAlertService.scheduleActivityAlert(activityAlert);
 	}
 
     // called by edit dialog to update parameters of a Youtube item
