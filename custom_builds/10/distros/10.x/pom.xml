@@ -119,7 +119,7 @@
                 <module>web</module>
                 <module>webservices</module>
             	<module>etudes-util</module>
-		<module>wicket-for-scorm</module>
+	<!--	<module>wicket-for-scorm</module> -->
 		<module>blogwow</module>
 		<module>evaluation</module>
 		<module>linktool</module>
