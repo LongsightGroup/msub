@@ -124,7 +124,7 @@
 		<module>evaluation</module>
 		<module>linktool</module>
 		<module>melete</module>
-		<module>scorm</module>
+	<!--	<module>scorm</module>  -->
 		<module>bigbluebutton-sakai/bbb-tool</module>
                 <module>sms</module>
             </modules>
