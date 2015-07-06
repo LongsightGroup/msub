@@ -1,15 +1,30 @@
 package org.sakaiproject.lessonbuildertool.model;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.sakaiproject.api.app.scheduler.DelayedInvocation;
 import org.sakaiproject.api.app.scheduler.ScheduledInvocationManager;
+import org.sakaiproject.component.cover.ServerConfigurationService;
+import org.sakaiproject.email.cover.EmailService;
+import org.sakaiproject.exception.IdUnusedException;
 import org.sakaiproject.lessonbuildertool.ActivityAlert;
+import org.sakaiproject.lessonbuildertool.SimplePage;
+import org.sakaiproject.site.api.Site;
+import org.sakaiproject.site.cover.SiteService;
 import org.sakaiproject.time.api.Time;
 import org.sakaiproject.time.api.TimeService;
+import org.sakaiproject.user.api.User;
+import org.sakaiproject.user.api.UserNotDefinedException;
+import org.sakaiproject.user.cover.UserDirectoryService;
 
 public class ActivityAlertServiceImpl implements ActivityAlertService{
 	private static Log log = LogFactory.getLog(ActivityAlertServiceImpl.class);
@@ -17,6 +32,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService{
 	private TimeService timeService;
 	private SimplePageToolDao simplePageToolDao;
 	private static final String ID_DELIMITER = ";";
+	private static final String MULTIPART_BOUNDARY = "======sakai-multi-part-boundary======";
 
 	@Override
 	public void scheduleActivityAlert(ActivityAlert alert){
@@ -87,17 +103,148 @@ public class ActivityAlertServiceImpl implements ActivityAlertService{
 		if(idSplit.length == 3){
 			ActivityAlert alert = simplePageToolDao.findActivityAlert(idSplit[0], idSplit[1], idSplit[2]);
 			if(alert != null){
-				
-				
-				
-				
-				
+				Integer pageId = null;
+				try{
+					pageId = Integer.parseInt(alert.getReference());
+				}catch(Exception e){
+					log.error(e.getMessage(), e);
+				}
+				if(pageId != null){
+					SimplePage lessonPage = simplePageToolDao.getPage(pageId);
+					if(lessonPage != null){
+						try {
+							Site alertSite = SiteService.getSite(alert.getSiteId());
+							if(alertSite != null){			
+								//get list of students:
+								Set<String> inactiveStudentIds = new HashSet<String>();
+								Set<String> studentRecipientRoles = alert.getStudentRecipientsType(ActivityAlert.RECIPIENT_TYPE_ROLE);
+								if(studentRecipientRoles != null && studentRecipientRoles.size() > 0){
+									for(String role : studentRecipientRoles){
+										inactiveStudentIds.addAll(alertSite.getUsersHasRole(role));
+									}
+								}
+								//get list of non students:
+								Set<String> inactiveNonStudentIds = new HashSet<String>();
+								Set<String> nonStudentRecipientRoles = alert.getNonStudentRecipientsType(ActivityAlert.RECIPIENT_TYPE_ROLE);
+								if(nonStudentRecipientRoles != null && nonStudentRecipientRoles.size() > 0){
+									for(String role : nonStudentRecipientRoles){
+										inactiveNonStudentIds.addAll(alertSite.getUsersHasRole(role));
+									}
+								}
+
+								Set<String> checkUsersIds = new HashSet<String>(inactiveStudentIds);
+								checkUsersIds.addAll(inactiveNonStudentIds);
+
+								//now check the checkUsersIds users have any activity, filter out the ones that don't:
+								//TODO: Make sure to filter out checkUsersIds, inactiveNonStudentIds and inactiveStudentIds
+
+								//Look up User's emails and email them if possible:
+								List<User> inactiveUsers = new ArrayList<User>();
+								Set<User> failedEmailUsers = new HashSet<User>();
+								Set<String> alertNonStudentEmails = new HashSet<String>();
+								Set<String> alertStudentEmails = new HashSet<String>();
+								for(String userId : checkUsersIds){
+									try {
+										User user = UserDirectoryService.getUser(userId);
+										inactiveUsers.add(user);
+										if(user.getEmail() != null && !"".equals(user.getEmail())){
+											//send email:
+											if(inactiveNonStudentIds.contains(userId)){
+												alertNonStudentEmails.add(user.getEmail());
+											}else{
+												alertStudentEmails.add(user.getEmail());
+											}											
+										}else{
+											failedEmailUsers.add(user);
+										}
+									} catch (UserNotDefinedException e) {
+										log.error(e.getMessage(), e);
+									}
+								}
+								String defaultAlertMessage = "No activity has been reported for your account in " + alertSite.getTitle() + ":" + lessonPage.getTitle();
+								if(alertStudentEmails.size() > 0){
+									String alertMessage = defaultAlertMessage;
+									if(alert.getStudentMessage() != null && !"".equals(alert.getStudentMessage().trim())){
+										alertMessage = alert.getStudentMessage();
+									}
+									EmailService.sendToUsers(alertStudentEmails, getHeaders(alertSite.getTitle(), lessonPage), alertMessage);
+								}
+								if(alertNonStudentEmails.size() > 0){
+									String alertMessage = defaultAlertMessage;
+									if(alert.getNonStudentMessage() != null && !"".equals(alert.getNonStudentMessage().trim())){
+										alertMessage = alert.getNonStudentMessage();
+									}
+									EmailService.sendToUsers(alertNonStudentEmails, getHeaders(alertSite.getTitle(), lessonPage), alertMessage);
+								}
+
+								//Get list of maintainers
+								Set<String> maintainerEmails = new HashSet<String>();
+								for(String userId : alertSite.getUsersHasRole(alertSite.getMaintainRole())){
+									try {
+										User user = UserDirectoryService.getUser(userId);
+										if(user.getEmail() != null && !"".equals(user.getEmail())){
+											maintainerEmails.add(user.getEmail());
+										}
+									} catch (UserNotDefinedException e) {
+										log.error(e.getMessage(), e);
+									}
+								}
+								if(maintainerEmails.size() > 0){
+									StringBuilder maintainerMessage = new StringBuilder();
+									if(inactiveUsers.size() == 0){
+										maintainerMessage.append("All users have activity logged in " + alertSite.getTitle() + ":" + lessonPage.getTitle());
+									}else{
+										Collections.sort(inactiveUsers, new Comparator<User>(){
+											@Override
+											public int compare(User o1, User o2) {
+												return o1.getDisplayName().compareTo(o2.getDisplayName());
+											}											
+										});
+										maintainerMessage.append("The following users have not logged any activity in " + alertSite.getTitle() + ":" + lessonPage.getTitle() + "\n\n");
+										for(User user : inactiveUsers){
+											maintainerMessage.append(user.getDisplayName() + "\n");
+										}										
+										if(failedEmailUsers.size() > 0){
+											maintainerMessage.append("\n");
+											maintainerMessage.append("Alert: The following users do not have an email associated with their account and haven't been notified:\n\n");
+											for(User user : failedEmailUsers){
+												maintainerMessage.append(user.getDisplayName() + "\n");
+											}
+										}
+									}
+									EmailService.sendToUsers(maintainerEmails, getHeaders(alertSite.getTitle(), lessonPage), maintainerMessage.toString());
+								}
+							}
+						} catch (IdUnusedException e) {
+							log.error(e.getMessage(), e);
+						}
+					}
+				}
 				
 				//Now see if you there needs to be a recurrence or not:
 				scheduleActivityAlert(alert);
 			}
 		}
 	}
+	
+	private List<String> getHeaders(String siteTitle, SimplePage lessonsPage)
+    {
+            List<String> rv = new ArrayList<String>();
+
+            rv.add("MIME-Version: 1.0");
+            rv.add("Content-Type: multipart/alternative; boundary=\""+MULTIPART_BOUNDARY+"\"");
+            // set the subject
+            rv.add("Subject: Inactivity Report for " + siteTitle + ":" + lessonsPage.getTitle());
+            // from
+            rv.add("From: " + "\"" + ServerConfigurationService.getString("ui.service", "Sakai") + "\" <"+ ServerConfigurationService.getString("setup.request","no-reply@"+ ServerConfigurationService.getServerName()) + ">");
+
+            return rv;
+    }
+	
+	protected String getFrom()
+    {
+            return "From: " + "\"" + ServerConfigurationService.getString("ui.service", "Sakai") + "\" <"+ ServerConfigurationService.getString("setup.request","no-reply@"+ ServerConfigurationService.getServerName()) + ">";
+    }
 
 	public ScheduledInvocationManager getScheduledInvocationManager() {
 		return scheduledInvocationManager;

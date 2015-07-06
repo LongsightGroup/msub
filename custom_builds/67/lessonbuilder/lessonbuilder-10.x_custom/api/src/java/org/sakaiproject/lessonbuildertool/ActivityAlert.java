@@ -1,10 +1,11 @@
 package org.sakaiproject.lessonbuildertool;
 
 import java.util.Date;
+import java.util.Set;
 
 public interface ActivityAlert {
 	
-	public static final String RECIPIENT_TYPE_DELIMITER = ";";
+	public static final String RECIPIENT_DELIMITER = ";";
 	public static final String RECIPIENT_TYPE_ROLE = "role:";
 	public static final int RECURRENCCE_NONE = 0;
 	public static final int RECURRENCCE_DAILY = 1;
@@ -39,4 +40,7 @@ public interface ActivityAlert {
 	
 	public String getSiteId();
 	public void setSiteId(String siteId);
+	
+	public Set<String> getStudentRecipientsType(String type);
+	public Set<String> getNonStudentRecipientsType(String type);
 }

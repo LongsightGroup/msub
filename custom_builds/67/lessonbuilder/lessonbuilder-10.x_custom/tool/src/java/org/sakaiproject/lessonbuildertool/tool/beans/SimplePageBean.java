@@ -5818,23 +5818,8 @@ public class SimplePageBean {
 				addAlertRecurrence = alert.getRecurrence() == null ? "" + ActivityAlert.RECURRENCCE_NONE : "" + alert.getRecurrence();
 				addAlertBeginDate = alert.getBeginDate() == null ? "" : isoDateFormat.format(alert.getBeginDate());
 				addAlertEndDate = alert.getEndDate() == null ? "" : isoDateFormat.format(alert.getEndDate());
-				List<String> recipientsRolesList = new ArrayList<String>();
-				if(StringUtils.isNotEmpty(alert.getStudentRecipients())){
-					for(String recipient : alert.getStudentRecipients().split(ActivityAlert.RECIPIENT_TYPE_DELIMITER)){
-						if(recipient.startsWith(ActivityAlert.RECIPIENT_TYPE_ROLE)){
-							recipient = recipient.substring(ActivityAlert.RECIPIENT_TYPE_ROLE.length());
-							recipientsRolesList.add(recipient);
-						}						
-					}
-				}
-				if(StringUtils.isNotEmpty(alert.getNonStudentRecipients())){
-					for(String recipient : alert.getNonStudentRecipients().split(ActivityAlert.RECIPIENT_TYPE_DELIMITER)){
-						if(recipient.startsWith(ActivityAlert.RECIPIENT_TYPE_ROLE)){
-							recipient = recipient.substring(ActivityAlert.RECIPIENT_TYPE_ROLE.length());
-							recipientsRolesList.add(recipient);
-						}
-					}
-				}
+				Set<String> recipientsRolesList = alert.getStudentRecipientsType(ActivityAlert.RECIPIENT_TYPE_ROLE);
+				recipientsRolesList.addAll(alert.getNonStudentRecipientsType(ActivityAlert.RECIPIENT_TYPE_ROLE));
 				addAlertRoles = recipientsRolesList.toArray(new String[recipientsRolesList.size()]);
 			}
 		}
@@ -5887,12 +5872,12 @@ public class SimplePageBean {
 		for(String role : addAlertRoles){
 			if("access".equals(role) || "Student".equals(role)){
 				if(StringUtils.isNotEmpty(studentRecipients.toString())){
-					studentRecipients.append(ActivityAlert.RECIPIENT_TYPE_DELIMITER);
+					studentRecipients.append(ActivityAlert.RECIPIENT_DELIMITER);
 				}
 				studentRecipients.append(ActivityAlert.RECIPIENT_TYPE_ROLE + role);
 			}else{
 				if(StringUtils.isNotEmpty(nonStudentRecipients.toString())){
-					nonStudentRecipients.append(ActivityAlert.RECIPIENT_TYPE_DELIMITER);
+					nonStudentRecipients.append(ActivityAlert.RECIPIENT_DELIMITER);
 				}
 				nonStudentRecipients.append(ActivityAlert.RECIPIENT_TYPE_ROLE + role);
 			}

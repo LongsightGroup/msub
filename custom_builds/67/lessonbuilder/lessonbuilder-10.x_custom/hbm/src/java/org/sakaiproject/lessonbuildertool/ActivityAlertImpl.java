@@ -2,6 +2,8 @@ package org.sakaiproject.lessonbuildertool;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ActivityAlertImpl implements ActivityAlert, Serializable{
 
@@ -76,5 +78,26 @@ public class ActivityAlertImpl implements ActivityAlert, Serializable{
 	}
 	public void setSiteId(String siteId) {
 		this.siteId = siteId;
-	}	
+	}
+	@Override
+	public Set<String> getStudentRecipientsType(String type) {
+		return getRecipientsType(studentRecipients, type);
+	}
+	@Override
+	public Set<String> getNonStudentRecipientsType(String type) {
+		return getRecipientsType(nonStudentRecipients, type);
+	}
+	
+	private Set<String> getRecipientsType(String recipients, String type){
+		Set<String> recipientsTypeList = new HashSet<String>();
+		if(recipients != null && !"".equals(recipients.trim())){
+			for(String recipient : recipients.split(RECIPIENT_DELIMITER)){
+				if(recipient.startsWith(type)){
+					recipient = recipient.substring(type.length());
+					recipientsTypeList.add(recipient);
+				}						
+			}
+		}
+		return recipientsTypeList;
+	}
 }
