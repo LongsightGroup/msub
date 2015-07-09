@@ -84,6 +84,7 @@ samigo -r 38764 https://github.com/sakaiproject/sakai/trunk/samigo
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/site-manage/10.x
 tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/tool/tool-10.x
 jforum -r 87383 https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/10.2.x
+gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/sakai-10.x
 
 # iRubric customizations ND-75
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/edu-services/10.x
