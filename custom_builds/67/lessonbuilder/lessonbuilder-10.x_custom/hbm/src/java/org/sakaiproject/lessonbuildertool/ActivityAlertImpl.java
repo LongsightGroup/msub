@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.util.StringUtils;
+
 public class ActivityAlertImpl implements ActivityAlert, Serializable{
 
 	private static final long serialVersionUID = 2045356417886560929L;
@@ -90,7 +92,7 @@ public class ActivityAlertImpl implements ActivityAlert, Serializable{
 	
 	private Set<String> getRecipientsType(String recipients, String type){
 		Set<String> recipientsTypeList = new HashSet<String>();
-		if(recipients != null && !"".equals(recipients.trim())){
+		if(StringUtils.hasText(recipients)){
 			for(String recipient : recipients.split(RECIPIENT_DELIMITER)){
 				if(recipient.startsWith(type)){
 					recipient = recipient.substring(type.length());

@@ -208,7 +208,7 @@ public class SimplePageBean {
     
 	public String questionType;
     public String questionText, questionCorrectText, questionIncorrectText;
-    public String addAlertRecurrence = "" + ActivityAlert.RECURRENCCE_NONE;
+    public String addAlertRecurrence = "" + ActivityAlert.RECURRENCCE_ONCE;
     public String addAlertStudentMessage, addAlertOtherMessage, addAlertBeginDate, addAlertEndDate;
     public String[] addAlertRoles = new String[]{};
     public String questionAnswer;
@@ -5815,7 +5815,7 @@ public class SimplePageBean {
 			if(alert != null){
 				addAlertStudentMessage = alert.getStudentMessage();
 				addAlertOtherMessage = alert.getNonStudentMessage();
-				addAlertRecurrence = alert.getRecurrence() == null ? "" + ActivityAlert.RECURRENCCE_NONE : "" + alert.getRecurrence();
+				addAlertRecurrence = alert.getRecurrence() == null ? "" + ActivityAlert.RECURRENCCE_ONCE : "" + alert.getRecurrence();
 				addAlertBeginDate = alert.getBeginDate() == null ? "" : isoDateFormat.format(alert.getBeginDate());
 				addAlertEndDate = alert.getEndDate() == null ? "" : isoDateFormat.format(alert.getEndDate());
 				Set<String> recipientsRolesList = alert.getStudentRecipientsType(ActivityAlert.RECIPIENT_TYPE_ROLE);
@@ -5839,7 +5839,7 @@ public class SimplePageBean {
 		
 		activityAlert.setStudentMessage(addAlertStudentMessage);
 		activityAlert.setNonStudentMessage(addAlertOtherMessage);
-		Integer recurrence = ActivityAlert.RECURRENCCE_NONE;
+		Integer recurrence = ActivityAlert.RECURRENCCE_ONCE;
 		try{
 			recurrence = Integer.parseInt(addAlertRecurrence);
 		}catch(Exception e){

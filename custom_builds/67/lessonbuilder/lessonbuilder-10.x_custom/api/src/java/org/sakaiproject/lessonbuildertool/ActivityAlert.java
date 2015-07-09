@@ -7,7 +7,7 @@ public interface ActivityAlert {
 	
 	public static final String RECIPIENT_DELIMITER = ";";
 	public static final String RECIPIENT_TYPE_ROLE = "role:";
-	public static final int RECURRENCCE_NONE = 0;
+	public static final int RECURRENCCE_ONCE = 0;
 	public static final int RECURRENCCE_DAILY = 1;
 	public static final int RECURRENCCE_WEEKLY = 2;
 	

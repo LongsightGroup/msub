@@ -1174,17 +1174,16 @@ function resizeiframe(id) {
 				</div>
 				<form action="#" rsf:id="add-alert-form" method="post" enctype="multipart/form-data" class="controlPanel">
 					<input type="hidden" rsf:id="csrf22" />
-					<div class="">
-					  <table>
+					<div>
+					  <div>
+					  <label rsf:id="msg=simplepage.add-alert.select" id="add-alert-select-label">Select the roles that should receive the notification</label>
+					  <table style="margin-left: 20px">
 					  	<tr>
-					  		<td valign="top">
-					  			<label rsf:id="msg=simplepage.add-alert.to" id="add-alert-to-label">To</label>:
-					  		</td>
 					  		<td>
 					  			<!-- Select All -->
 					  			<input type="checkbox" id="add-alert-all-roles"/>
 					    		<label rsf:id="msg=simplepage.add-alert-all-roles" for="add-alert-all-roles" id="add-alert-all-roles-label">All Roles</label> 
-					    		<br/>
+					    		<hr style="margin-top: 0"/>
 					    		<span rsf:id="addAlertRoleSelect"/>
 					    		<span rsf:id="role:" role="listitem">
 						    		<input rsf:id="roleOption" class="add-alert-role" type="checkbox"/>
@@ -1194,55 +1193,58 @@ function resizeiframe(id) {
 					  		</td>
 					  	</tr>
 					  </table>
-					  <br/>
-					  <label rsf:id="msg=simplepage.add-alert.specify-dates" id="add-alert.specify-dates-label">Specify Dates</label>&nbsp;-&nbsp;(<span rsf:id="msg=simplepage.add-alert.specify-dates-info" id="add-alert.specify-dates-info-label">Choose when  this alert will be sent</span>)
-					  <br/>
-					  <span rsf:id="msg=simplepage.add-alert.beginning" id="simplepage.add-alert.beginning">Beginning</span>:&nbsp;<input id="addAlertBeginDateInput" type="text" /><input rsf:id="addAlertBeginDate" id="addAlertBeginDate" type="hidden" />
-					  <script type="text/javascript">
-		                localDatePicker({
+					  </div>
+					  <div style="margin-top: 10px">
+					  	<span rsf:id="msg=simplepage.add-alert.recurrence" id="simplepage.add-alert.recurrence">Choose the frequency this alert should occur</span>
+					  	<br/>
+					  	<span rsf:id="add-alert-recurrence" style="margin-left: 20px"/>
+                      	<input type="radio" name="addAlertRecurrenceGroup" rsf:id="addAlertRecurrenceNone" id="addAlertRecurrenceNone" onchange="$('#addAlertEndDateInput').toggle($(this).is(':checked'));"/>
+                      	<label for="addAlertRecurrenceNone" rsf:id="msg=simplepage.add-alert.none" />
+                      	<input type="radio" name="addAlertRecurrenceGroup" rsf:id="addAlertRecurrenceDaily" id="addAlertRecurrenceDaily" />
+                      	<label for="addAlertRecurrenceDaily" rsf:id="msg=simplepage.add-alert.daily" />
+                      	<input type="radio" name="addAlertRecurrenceGroup" rsf:id="addAlertRecurrenceWeekly" id="addAlertRecurrenceWeekly" />
+                      	<label for="addAlertRecurrenceWeekly" rsf:id="msg=simplepage.add-alert.weekly" />
+					  </div>
+					  <div style="margin-top: 10px">	
+					  	<label rsf:id="msg=simplepage.add-alert.specify-dates" id="add-alert.specify-dates-label">Choose when the alert notification should be sent by specifying the date(s)</label>
+					  	<br/>
+					  	<span rsf:id="msg=simplepage.add-alert.beginning" id="simplepage.add-alert.beginning" style="margin-left: 20px">Beginning</span>:&nbsp;<input id="addAlertBeginDateInput" type="text" /><input rsf:id="addAlertBeginDate" id="addAlertBeginDate" type="hidden" />
+					  	<script type="text/javascript">
+		                  localDatePicker({
 		                    input: '#addAlertBeginDateInput',
 		                    useTime: 1,
 		                    parseFormat: 'YYYY-MM-DD HH:mm:ss',
 		                    val: $("#addAlertBeginDate").val(),
 		                    ashidden: { iso8601: 'addAlertBeginDate' }
-		                });
-		              </script>
-					  <br/>
-					  <span class="addAlertEndDateInputSpan">
-						  <span rsf:id="msg=simplepage.add-alert.ending" id="simplepage.add-alert.ending">Ending</span>:&nbsp;<input id="addAlertEndDateInput" type="text" /><input rsf:id="addAlertEndDate" id="addAlertEndDate" type="hidden" />
+		                  });
+		              	</script>
+					  	<span class="addAlertEndDateInputSpan">
+					      <br />
+						  <span rsf:id="msg=simplepage.add-alert.ending" id="simplepage.add-alert.ending" style="margin-left: 20px">Ending</span>:&nbsp;<input id="addAlertEndDateInput" type="text" /><input rsf:id="addAlertEndDate" id="addAlertEndDate" type="hidden" />
 						  <script type="text/javascript">
 			                localDatePicker({
 			                    input: '#addAlertEndDateInput',
 			                    useTime: 1,
 			                    parseFormat: 'YYYY-MM-DD HH:mm:ss',
 			                    val: $("#addAlertEndDate").val(),
-			                    ashidden: { iso8601: 'addAlertEndDate' }
+			                    ashidden: { iso8601: 'addAlertEndDate' },
+			                	minDate: new Date($("#addAlertBeginDate").val())
 			                });
+			                console.log('adding addAlertEndDate');
 			              </script>
-						  <br/>
-					  </span>
-					  <br/>
-					  <span rsf:id="msg=simplepage.add-alert.recurrence" id="simplepage.add-alert.recurrence">Recurrence</span>
-					  <br/>
-					  <span rsf:id="add-alert-recurrence" />
-                      <input type="radio" name="addAlertRecurrenceGroup" rsf:id="addAlertRecurrenceNone" id="addAlertRecurrenceNone" onchange="$('#addAlertEndDateInput').toggle($(this).is(':checked'));"/>
-                      <label for="addAlertRecurrenceNone" rsf:id="msg=simplepage.add-alert.none" />
-                      <input type="radio" name="addAlertRecurrenceGroup" rsf:id="addAlertRecurrenceDaily" id="addAlertRecurrenceDaily" />
-                      <label for="addAlertRecurrenceDaily" rsf:id="msg=simplepage.add-alert.daily" />
-                      <input type="radio" name="addAlertRecurrenceGroup" rsf:id="addAlertRecurrenceWeekly" id="addAlertRecurrenceWeekly" />
-                      <label for="addAlertRecurrenceWeekly" rsf:id="msg=simplepage.add-alert.weekly" />
-					  <br/><br/>
-					  <div>
+					  	</span>
+					  </div>
+					  
+					  <div style="margin-top: 10px">
 						<label for="add-alert-student-message"><span rsf:id="msg=simplepage.add-alert-student-message-label"></span>:</label>
 							<div>
 								<textarea rsf:id="add-alert-student-message" id="add-alert-student-message" rows="6" columns="50" style="width: 100%"></textarea>
                             </div>
 					  </div>
-					  <br/>
-					  <div>
+					  <div style="margin-top: 10px">
 						<label for="add-alert-other-message"><span rsf:id="msg=simplepage.add-alert-other-message-label"></span>:</label>
 							<div>
-								<textarea rsf:id="add-alert-other-message" id="add-alert-other-message" rows="6" columns="50" style="width: 100%"></textarea>
+								<textarea rsf:id="add-alert-other-message" id="add-alert-other-message" placeholder="msg=simplepage.add-alert-message-default" rows="6" columns="50" style="width: 100%"></textarea>
                             </div>
 					  </div>
 					  <p>

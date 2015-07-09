@@ -18,6 +18,7 @@ import org.sakaiproject.email.cover.EmailService;
 import org.sakaiproject.exception.IdUnusedException;
 import org.sakaiproject.lessonbuildertool.ActivityAlert;
 import org.sakaiproject.lessonbuildertool.SimplePage;
+import org.sakaiproject.lessonbuildertool.SimplePageLogEntry;
 import org.sakaiproject.site.api.Site;
 import org.sakaiproject.site.cover.SiteService;
 import org.sakaiproject.time.api.Time;
@@ -25,8 +26,9 @@ import org.sakaiproject.time.api.TimeService;
 import org.sakaiproject.user.api.User;
 import org.sakaiproject.user.api.UserNotDefinedException;
 import org.sakaiproject.user.cover.UserDirectoryService;
+import org.springframework.util.StringUtils;
 
-public class ActivityAlertServiceImpl implements ActivityAlertService{
+public class ActivityAlertServiceImpl implements ActivityAlertService {
 	private static Log log = LogFactory.getLog(ActivityAlertServiceImpl.class);
 	private ScheduledInvocationManager scheduledInvocationManager;
 	private TimeService timeService;
@@ -35,40 +37,44 @@ public class ActivityAlertServiceImpl implements ActivityAlertService{
 	private static final String MULTIPART_BOUNDARY = "======sakai-multi-part-boundary======";
 
 	@Override
-	public void scheduleActivityAlert(ActivityAlert alert){
+	public void scheduleActivityAlert(ActivityAlert alert) {
 		log.info("ActivityAlertServiceImpl.scheduleActivityAlert");
-		if(alert != null && alert.getSiteId() != null && !"".equals(alert.getSiteId().trim())
-				 && alert.getTool() != null && !"".equals(alert.getTool().trim())
-				 && alert.getReference() != null && !"".equals(alert.getReference().trim())){
+		
+		if(alert != null 
+				&& StringUtils.hasText(alert.getSiteId()) 
+				&& StringUtils.hasText(alert.getTool())
+				&& StringUtils.hasText(alert.getReference())) {
+
 			//first clear out any existing scheduled alerts:
 			clearActivityAlert(alert);
-			if(alert.getBeginDate() != null && alert.getRecurrence() != null && 
-					((alert.getStudentRecipients() != null && !"".equals(alert.getStudentRecipients().trim()))
-					|| (alert.getNonStudentRecipients() != null && !"".equals(alert.getNonStudentRecipients().trim())))){
+		
+			if(alert.getBeginDate() != null && alert.getRecurrence() != null
+					&& (StringUtils.hasText(alert.getStudentRecipients()) || StringUtils.hasText(alert.getNonStudentRecipients()))) {
 				Date scheduleDate = alert.getBeginDate();
 				Calendar c = Calendar.getInstance();
 				Date now = c.getTime();
-				if(ActivityAlert.RECURRENCCE_NONE != alert.getRecurrence().intValue()){
-					while(scheduleDate.before(now)){
+				
+				if(ActivityAlert.RECURRENCCE_ONCE != alert.getRecurrence().intValue()) {
+					while(scheduleDate.before(now)) {
 						c.setTime(scheduleDate);
 						//find the next DATE 
-						if(ActivityAlert.RECURRENCCE_DAILY == alert.getRecurrence()){
+						if(ActivityAlert.RECURRENCCE_DAILY == alert.getRecurrence()) {
 							c.add(Calendar.DAY_OF_YEAR, 1);
-						}else if(ActivityAlert.RECURRENCCE_WEEKLY == alert.getRecurrence()){
+						} else if(ActivityAlert.RECURRENCCE_WEEKLY == alert.getRecurrence()) {
 							c.add(Calendar.DAY_OF_YEAR, 7);
-						}else{
+						} else {
 							break;
 						}
 						scheduleDate = c.getTime();
 					}
-					if(alert.getEndDate() == null){
+					if(alert.getEndDate() == null) {
 						alert.setEndDate(alert.getBeginDate());
 					}
-					if(scheduleDate.after(alert.getEndDate())){
+					if(scheduleDate.after(alert.getEndDate())) {
 						scheduleDate = null;
 					}
 				}
-				if(scheduleDate != null && scheduleDate.after(now)){
+				if(scheduleDate != null && scheduleDate.after(now)) {
 					log.info("Scheduling alert at: " + scheduleDate);
 					Time scheduleTime = timeService.newTime(scheduleDate.getTime());
 					scheduledInvocationManager.createDelayedInvocation(scheduleTime, "org.sakaiproject.lessonbuildertool.model.ActivityAlertService", getActivitySchedulerId(alert));
@@ -91,14 +97,14 @@ public class ActivityAlertServiceImpl implements ActivityAlertService{
 		}
 	}
 	
-	private String getActivitySchedulerId(ActivityAlert alert){
+	private String getActivitySchedulerId(ActivityAlert alert) {
 		return alert.getSiteId() + ID_DELIMITER + alert.getTool() + ID_DELIMITER + alert.getReference();
 	}
 	
 	@Override
 	public void execute(String id) {
 		log.info("ActivityAlertServiceImpl.execute");
-		
+
 		String[] idSplit = id.split(ID_DELIMITER);
 		if(idSplit.length == 3){
 			ActivityAlert alert = simplePageToolDao.findActivityAlert(idSplit[0], idSplit[1], idSplit[2]);
@@ -118,7 +124,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService{
 								//get list of students:
 								Set<String> inactiveStudentIds = new HashSet<String>();
 								Set<String> studentRecipientRoles = alert.getStudentRecipientsType(ActivityAlert.RECIPIENT_TYPE_ROLE);
-								if(studentRecipientRoles != null && studentRecipientRoles.size() > 0){
+								if(!studentRecipientRoles.isEmpty()){
 									for(String role : studentRecipientRoles){
 										inactiveStudentIds.addAll(alertSite.getUsersHasRole(role));
 									}
@@ -126,7 +132,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService{
 								//get list of non students:
 								Set<String> inactiveNonStudentIds = new HashSet<String>();
 								Set<String> nonStudentRecipientRoles = alert.getNonStudentRecipientsType(ActivityAlert.RECIPIENT_TYPE_ROLE);
-								if(nonStudentRecipientRoles != null && nonStudentRecipientRoles.size() > 0){
+								if(!nonStudentRecipientRoles.isEmpty()){
 									for(String role : nonStudentRecipientRoles){
 										inactiveNonStudentIds.addAll(alertSite.getUsersHasRole(role));
 									}
@@ -135,61 +141,71 @@ public class ActivityAlertServiceImpl implements ActivityAlertService{
 								Set<String> checkUsersIds = new HashSet<String>(inactiveStudentIds);
 								checkUsersIds.addAll(inactiveNonStudentIds);
 
-								//now check the checkUsersIds users have any activity, filter out the ones that don't:
-								//TODO: Make sure to filter out checkUsersIds, inactiveNonStudentIds and inactiveStudentIds
-
 								//Look up User's emails and email them if possible:
 								List<User> inactiveUsers = new ArrayList<User>();
 								Set<User> failedEmailUsers = new HashSet<User>();
-								Set<String> alertNonStudentEmails = new HashSet<String>();
-								Set<String> alertStudentEmails = new HashSet<String>();
+								Set<User> alertNonStudentUsers = new HashSet<User>();
+								Set<User> alertStudentUsers = new HashSet<User>();
+
+								//now check the checkUsersIds users have any activity, filter out the ones that don't:
 								for(String userId : checkUsersIds){
+									User user = null;
 									try {
-										User user = UserDirectoryService.getUser(userId);
-										inactiveUsers.add(user);
-										if(user.getEmail() != null && !"".equals(user.getEmail())){
-											//send email:
-											if(inactiveNonStudentIds.contains(userId)){
-												alertNonStudentEmails.add(user.getEmail());
+										user = UserDirectoryService.getUser(userId);
+										
+										SimplePageLogEntry entry = simplePageToolDao.getLogEntry(userId, pageId, -1L);
+
+										// if there is no entry or firstViewed is null 
+										// then this user is inactive for this page
+										if (entry == null || entry.getFirstViewed() == null) {
+											inactiveUsers.add(user);
+											if(StringUtils.hasText(user.getEmail())){
+												//send email:
+												if(inactiveNonStudentIds.contains(userId)){
+													alertNonStudentUsers.add(user);
+												}else{
+													alertStudentUsers.add(user);
+												}											
 											}else{
-												alertStudentEmails.add(user.getEmail());
-											}											
-										}else{
-											failedEmailUsers.add(user);
+												failedEmailUsers.add(user);
+											}
 										}
 									} catch (UserNotDefinedException e) {
 										log.error(e.getMessage(), e);
+										failedEmailUsers.add(user);
 									}
 								}
 								String defaultAlertMessage = "No activity has been reported for your account in " + alertSite.getTitle() + ":" + lessonPage.getTitle();
-								if(alertStudentEmails.size() > 0){
+								if(alertStudentUsers.size() > 0){
 									String alertMessage = defaultAlertMessage;
-									if(alert.getStudentMessage() != null && !"".equals(alert.getStudentMessage().trim())){
+									if(StringUtils.hasText(alert.getStudentMessage())){
 										alertMessage = alert.getStudentMessage();
 									}
-									EmailService.sendToUsers(alertStudentEmails, getHeaders(alertSite.getTitle(), lessonPage), alertMessage);
+									EmailService.sendToUsers(alertStudentUsers, getHeaders(alertSite.getTitle(), lessonPage), alertMessage);
 								}
-								if(alertNonStudentEmails.size() > 0){
+								if(alertNonStudentUsers.size() > 0){
 									String alertMessage = defaultAlertMessage;
-									if(alert.getNonStudentMessage() != null && !"".equals(alert.getNonStudentMessage().trim())){
+									if(StringUtils.hasText(alert.getNonStudentMessage())){
 										alertMessage = alert.getNonStudentMessage();
 									}
-									EmailService.sendToUsers(alertNonStudentEmails, getHeaders(alertSite.getTitle(), lessonPage), alertMessage);
+									EmailService.sendToUsers(alertNonStudentUsers, getHeaders(alertSite.getTitle(), lessonPage), alertMessage);
 								}
 
 								//Get list of maintainers
-								Set<String> maintainerEmails = new HashSet<String>();
+								Set<User> maintainerUsers = new HashSet<User>();
 								for(String userId : alertSite.getUsersHasRole(alertSite.getMaintainRole())){
+									User user = null;
 									try {
-										User user = UserDirectoryService.getUser(userId);
-										if(user.getEmail() != null && !"".equals(user.getEmail())){
-											maintainerEmails.add(user.getEmail());
+										user = UserDirectoryService.getUser(userId);
+										if(StringUtils.hasText(user.getEmail())){
+											maintainerUsers.add(user);
 										}
 									} catch (UserNotDefinedException e) {
 										log.error(e.getMessage(), e);
+										failedEmailUsers.add(user);
 									}
 								}
-								if(maintainerEmails.size() > 0){
+								if(maintainerUsers.size() > 0){
 									StringBuilder maintainerMessage = new StringBuilder();
 									if(inactiveUsers.size() == 0){
 										maintainerMessage.append("All users have activity logged in " + alertSite.getTitle() + ":" + lessonPage.getTitle());
@@ -212,7 +228,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService{
 											}
 										}
 									}
-									EmailService.sendToUsers(maintainerEmails, getHeaders(alertSite.getTitle(), lessonPage), maintainerMessage.toString());
+									EmailService.sendToUsers(maintainerUsers, getHeaders(alertSite.getTitle(), lessonPage), maintainerMessage.toString());
 								}
 							}
 						} catch (IdUnusedException e) {
@@ -220,7 +236,6 @@ public class ActivityAlertServiceImpl implements ActivityAlertService{
 						}
 					}
 				}
-				
 				//Now see if you there needs to be a recurrence or not:
 				scheduleActivityAlert(alert);
 			}

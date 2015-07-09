@@ -3657,7 +3657,7 @@ public class ShowPageProducer implements ViewComponentProducer, DefaultView, Nav
 		if(simplePageBean.canEditPage()){
 			simplePageBean.setupActivityAlert();
 
-			UIOutput.make(tofill, "add-alert-dialog").decorate(new UIFreeAttributeDecorator("title", messageLocator.getMessage("simplepage.add-alert-title")));
+			UIOutput.make(tofill, "add-alert-dialog").decorate(new UIFreeAttributeDecorator("title", messageLocator.getMessage("simplepage.add-alert-title") + " - " + simplePageBean.getPageTitle()));
 
 			UIForm form = UIForm.make(tofill, "add-alert-form");
 			makeCsrf(form, "csrf22");
@@ -3689,16 +3689,16 @@ public class ShowPageProducer implements ViewComponentProducer, DefaultView, Nav
 			UIInput.make(form, "addAlertEndDate", "#{simplePageBean.addAlertEndDate}");
 
 			//Recurrence:
-			UISelect questionType = UISelect.make(form, "add-alert-recurrence", new String[] {"" + ActivityAlert.RECURRENCCE_NONE, "" + ActivityAlert.RECURRENCCE_DAILY, "" + ActivityAlert.RECURRENCCE_WEEKLY}, "#{simplePageBean.addAlertRecurrence}", simplePageBean.addAlertRecurrence);
+			UISelect questionType = UISelect.make(form, "add-alert-recurrence", new String[] {"" + ActivityAlert.RECURRENCCE_ONCE, "" + ActivityAlert.RECURRENCCE_DAILY, "" + ActivityAlert.RECURRENCCE_WEEKLY}, "#{simplePageBean.addAlertRecurrence}", simplePageBean.addAlertRecurrence);
 			UISelectChoice.make(form, "addAlertRecurrenceNone", questionType.getFullID(), 0);
 			UISelectChoice.make(form, "addAlertRecurrenceDaily", questionType.getFullID(), 1);
 			UISelectChoice.make(form, "addAlertRecurrenceWeekly", questionType.getFullID(), 2);
 
 			//Student alert message:
-			UIInput.make(form, "add-alert-student-message", "#{simplePageBean.addAlertStudentMessage}");
+			UIInput.make(form, "add-alert-student-message", "#{simplePageBean.addAlertStudentMessage}").decorate(new UIFreeAttributeDecorator("placeholder", messageLocator.getMessage("simplepage.add-alert-message-default")));
 
 			//Other alert message:
-			UIInput.make(form, "add-alert-other-message", "#{simplePageBean.addAlertOtherMessage}");
+			UIInput.make(form, "add-alert-other-message", "#{simplePageBean.addAlertOtherMessage}").decorate(new UIFreeAttributeDecorator("placeholder", messageLocator.getMessage("simplepage.add-alert-message-default")));
 
 			UICommand.make(form, "add-alert-submit", messageLocator.getMessage("simplepage.save"), "#{simplePageBean.addAlert}");
 			UICommand.make(form, "add-alert-cancel", messageLocator.getMessage("simplepage.cancel"), null);
