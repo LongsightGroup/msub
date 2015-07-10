@@ -118,6 +118,8 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>blogwow</module>
+                <module>evaluation</module>
             </modules>
         </profile>
         <profile>
