@@ -55,6 +55,10 @@
             <groupId>org.springframework</groupId>
             <artifactId>${sakai.spring.artifactId}</artifactId>
             <version>${sakai.spring.version}</version> 
+        </dependency>
+        <dependency>
+        	<groupId>commons-lang</groupId>
+        	<artifactId>commons-lang</artifactId>
         </dependency>      
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>

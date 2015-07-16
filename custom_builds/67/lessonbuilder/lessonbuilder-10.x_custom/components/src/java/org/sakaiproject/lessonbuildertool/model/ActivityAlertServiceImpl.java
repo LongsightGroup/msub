@@ -9,6 +9,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.sakaiproject.api.app.scheduler.DelayedInvocation;
@@ -26,7 +28,6 @@ import org.sakaiproject.time.api.TimeService;
 import org.sakaiproject.user.api.User;
 import org.sakaiproject.user.api.UserNotDefinedException;
 import org.sakaiproject.user.cover.UserDirectoryService;
-import org.springframework.util.StringUtils;
 
 public class ActivityAlertServiceImpl implements ActivityAlertService {
 	private static Log log = LogFactory.getLog(ActivityAlertServiceImpl.class);
@@ -35,21 +36,27 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 	private SimplePageToolDao simplePageToolDao;
 	private static final String ID_DELIMITER = ";";
 	private static final String MULTIPART_BOUNDARY = "======sakai-multi-part-boundary======";
+	private static final String BOUNDARY_LINE = "\n\n--"+MULTIPART_BOUNDARY+"\n";
+	private static final String TERMINATION_LINE = "\n\n--"+MULTIPART_BOUNDARY+"--\n\n";
+	private static final String MIME_ADVISORY = "This message is for MIME-compliant mail readers.";
+	private static final String PLAIN_TEXT_HEADERS= "Content-Type: text/plain\n\n";
+	private static final String HTML_HEADERS = "Content-Type: text/html; charset=ISO-8859-1\n\n";
+	private static final String HTML_END = "\n  </body>\n</html>\n";
 
 	@Override
 	public void scheduleActivityAlert(ActivityAlert alert) {
-		log.info("ActivityAlertServiceImpl.scheduleActivityAlert");
+		log.debug("ActivityAlertServiceImpl.scheduleActivityAlert");
 		
 		if(alert != null 
-				&& StringUtils.hasText(alert.getSiteId()) 
-				&& StringUtils.hasText(alert.getTool())
-				&& StringUtils.hasText(alert.getReference())) {
+				&& StringUtils.isNotBlank(alert.getSiteId()) 
+				&& StringUtils.isNotBlank(alert.getTool())
+				&& StringUtils.isNotBlank(alert.getReference())) {
 
 			//first clear out any existing scheduled alerts:
 			clearActivityAlert(alert);
 		
 			if(alert.getBeginDate() != null && alert.getRecurrence() != null
-					&& (StringUtils.hasText(alert.getStudentRecipients()) || StringUtils.hasText(alert.getNonStudentRecipients()))) {
+					&& (StringUtils.isNotBlank(alert.getStudentRecipients()) || StringUtils.isNotBlank(alert.getNonStudentRecipients()))) {
 				Date scheduleDate = alert.getBeginDate();
 				Calendar c = Calendar.getInstance();
 				Date now = c.getTime();
@@ -75,7 +82,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 					}
 				}
 				if(scheduleDate != null && scheduleDate.after(now)) {
-					log.info("Scheduling alert at: " + scheduleDate);
+					log.debug("Scheduling alert at: " + scheduleDate);
 					Time scheduleTime = timeService.newTime(scheduleDate.getTime());
 					scheduledInvocationManager.createDelayedInvocation(scheduleTime, "org.sakaiproject.lessonbuildertool.model.ActivityAlertService", getActivitySchedulerId(alert));
 				}
@@ -85,7 +92,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 
 	@Override
 	public void clearActivityAlert(ActivityAlert alert) {
-		log.info("ActivityAlertServiceImpl.clearActivityAlert");
+		log.debug("ActivityAlertServiceImpl.clearActivityAlert");
 		// Remove any existing notifications for this area
 		DelayedInvocation[] fdi = scheduledInvocationManager.findDelayedInvocations("org.sakaiproject.lessonbuildertool.model.ActivityAlertService", getActivitySchedulerId(alert));
 		if (fdi != null && fdi.length > 0)
@@ -103,7 +110,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 	
 	@Override
 	public void execute(String id) {
-		log.info("ActivityAlertServiceImpl.execute");
+		log.debug("ActivityAlertServiceImpl.execute");
 
 		String[] idSplit = id.split(ID_DELIMITER);
 		if(idSplit.length == 3){
@@ -159,7 +166,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 										// then this user is inactive for this page
 										if (entry == null || entry.getFirstViewed() == null) {
 											inactiveUsers.add(user);
-											if(StringUtils.hasText(user.getEmail())){
+											if(StringUtils.isNotBlank(user.getEmail())){
 												//send email:
 												if(inactiveNonStudentIds.contains(userId)){
 													alertNonStudentUsers.add(user);
@@ -176,19 +183,20 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 									}
 								}
 								String defaultAlertMessage = "No activity has been reported for your account in " + alertSite.getTitle() + ":" + lessonPage.getTitle();
+								String defaultAlertSubject = "[" + alertSite.getTitle() + "] inactivity for page " + lessonPage.getTitle();
 								if(alertStudentUsers.size() > 0){
 									String alertMessage = defaultAlertMessage;
-									if(StringUtils.hasText(alert.getStudentMessage())){
+									if(StringUtils.isNotBlank(alert.getStudentMessage())){
 										alertMessage = alert.getStudentMessage();
 									}
-									EmailService.sendToUsers(alertStudentUsers, getHeaders(alertSite.getTitle(), lessonPage), alertMessage);
+									EmailService.sendToUsers(alertStudentUsers, getHeaders(defaultAlertSubject), formatMessage(defaultAlertSubject, alertMessage));
 								}
 								if(alertNonStudentUsers.size() > 0){
 									String alertMessage = defaultAlertMessage;
-									if(StringUtils.hasText(alert.getNonStudentMessage())){
+									if(StringUtils.isNotBlank(alert.getNonStudentMessage())){
 										alertMessage = alert.getNonStudentMessage();
 									}
-									EmailService.sendToUsers(alertNonStudentUsers, getHeaders(alertSite.getTitle(), lessonPage), alertMessage);
+									EmailService.sendToUsers(alertNonStudentUsers, getHeaders(defaultAlertSubject), formatMessage(defaultAlertSubject, alertMessage));
 								}
 
 								//Get list of maintainers
@@ -197,7 +205,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 									User user = null;
 									try {
 										user = UserDirectoryService.getUser(userId);
-										if(StringUtils.hasText(user.getEmail())){
+										if(StringUtils.isNotBlank(user.getEmail())){
 											maintainerUsers.add(user);
 										}
 									} catch (UserNotDefinedException e) {
@@ -207,6 +215,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 								}
 								if(maintainerUsers.size() > 0){
 									StringBuilder maintainerMessage = new StringBuilder();
+									String maintainerSubject = "[" + alertSite.getTitle() + "] Inactivity Report for page " + lessonPage.getTitle();
 									if(inactiveUsers.size() == 0){
 										maintainerMessage.append("All users have activity logged in " + alertSite.getTitle() + ":" + lessonPage.getTitle());
 									}else{
@@ -228,7 +237,7 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 											}
 										}
 									}
-									EmailService.sendToUsers(maintainerUsers, getHeaders(alertSite.getTitle(), lessonPage), maintainerMessage.toString());
+									EmailService.sendToUsers(maintainerUsers, getHeaders(maintainerSubject), formatMessage(maintainerSubject, maintainerMessage.toString()));
 								}
 							}
 						} catch (IdUnusedException e) {
@@ -242,25 +251,54 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 		}
 	}
 	
-	private List<String> getHeaders(String siteTitle, SimplePage lessonsPage)
+	private List<String> getHeaders(String subject)
     {
             List<String> rv = new ArrayList<String>();
 
             rv.add("MIME-Version: 1.0");
             rv.add("Content-Type: multipart/alternative; boundary=\""+MULTIPART_BOUNDARY+"\"");
             // set the subject
-            rv.add("Subject: Inactivity Report for " + siteTitle + ":" + lessonsPage.getTitle());
+            rv.add(formatSubject(subject));
             // from
             rv.add("From: " + "\"" + ServerConfigurationService.getString("ui.service", "Sakai") + "\" <"+ ServerConfigurationService.getString("setup.request","no-reply@"+ ServerConfigurationService.getServerName()) + ">");
 
             return rv;
     }
 	
-	protected String getFrom()
-    {
-            return "From: " + "\"" + ServerConfigurationService.getString("ui.service", "Sakai") + "\" <"+ ServerConfigurationService.getString("setup.request","no-reply@"+ ServerConfigurationService.getServerName()) + ">";
-    }
-
+	private String formatSubject(String subject) {
+		return "Subject: " + subject;
+	}
+	
+	/** helper methods for formatting the message */
+	private String formatMessage(String subject, String message) {
+		StringBuilder sb = new StringBuilder();
+		sb.append(MIME_ADVISORY);
+		sb.append(BOUNDARY_LINE);
+		sb.append(PLAIN_TEXT_HEADERS);
+		sb.append(StringEscapeUtils.escapeHtml(message));
+		sb.append(BOUNDARY_LINE);
+		sb.append(HTML_HEADERS);
+		sb.append(htmlPreamble(subject));
+		sb.append(message);
+		sb.append(HTML_END);
+		sb.append(TERMINATION_LINE);
+		
+		return sb.toString();
+	}
+	
+	private String htmlPreamble(String subject) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n");
+		sb.append("\"http://www.w3.org/TR/html4/loose.dtd\">\n");
+		sb.append("<html>\n");
+		sb.append("<head><title>");
+		sb.append(subject);
+		sb.append("</title></head>\n");
+		sb.append("<body>\n");
+		
+		return sb.toString();
+	}
+	
 	public ScheduledInvocationManager getScheduledInvocationManager() {
 		return scheduledInvocationManager;
 	}
