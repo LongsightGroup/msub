@@ -80,6 +80,9 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+qna https://source.sakaiproject.org/contrib/qna/branches/sakai-10.x/
+sms https://source.sakaiproject.org/contrib/longsight/sms/sms-sakai10.x-datepicker/
+
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
