@@ -118,7 +118,9 @@
                 <module>etudes-util</module>
                 <module>evaluation</module>
                 <module>melete</module>
-            </modules>
+                <module>qna</module>
+                <module>sms</module>        
+    </modules>
         </profile>
         <profile>
             <id>experimental</id>
