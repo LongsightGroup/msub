@@ -51,9 +51,11 @@
 				<label for="view">$tlang.getString("list.view")</label>
 				<select id="view" name="view" size="1" onchange="document.viewForm.submit();">
 					#foreach($view in $viewKeys)
+                      #if ($views.get($view) != "portfolio")
 						<option value ="$view"
 						#if($view == $viewSelected) selected="selected" #end
 						> $views.get($view) </option>
+                      #end
 					#end
 				</select>
 				#if(!$hideTermFilter)
