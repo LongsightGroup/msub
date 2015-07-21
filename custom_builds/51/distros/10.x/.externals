@@ -56,7 +56,6 @@ sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
 signup https://source.sakaiproject.org/svn/signup/branches/sakai-10.x/
 site https://source.sakaiproject.org/svn/site/branches/sakai-10.x
-site-manage https://source.sakaiproject.org/svn/site-manage/branches/sakai-10.x
 sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
@@ -82,6 +81,7 @@ irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irub
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-tool
 assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_iRubric/
 gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-10.x_iRubric/
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/site-manage/branches/sakai-10.x
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-10.x_iRubric
 
 #Patcher options: "mavenoptions: <options>"
