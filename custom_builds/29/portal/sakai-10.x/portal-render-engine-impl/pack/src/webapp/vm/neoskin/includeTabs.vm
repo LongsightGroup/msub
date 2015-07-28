@@ -158,6 +158,16 @@
 						</ul>
 					</div> <!-- /linkNav -->
 
+<!-- LS-163 customization for WSCC -->
+<div id="wscc-links">
+#if ($wsccEmailAddress && $wsccEmailAddress.contains("@wscc.edu"))
+  <a href="/portal/site/dda47388-2837-49dd-9220-b5793995506c">Student Resources</a>
+  <a href="/portal/site/71a2f77f-d87c-4c68-bdb9-ea7ebb213e4f">Employee Resources</a>
+#elseif ($wsccEmailAddress)
+  <a href="/portal/site/dda47388-2837-49dd-9220-b5793995506c">Student Resources</a>
+#end
+</div>
+
 					#if ($tabsAddLogout)
 					<div class="galleryLogin">
 						<a href="$tabsLogoutUrl">${rloader.sit_log}</a>

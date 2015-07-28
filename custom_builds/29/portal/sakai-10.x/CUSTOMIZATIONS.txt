@@ -1,2 +1,6 @@
-SAK-23718 - Portal Navigation Menu: Static Categorization of Tools
-SAK-29665 - Send user id to Google Analytics
+From https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-10.x_custom/
+ * SAK-23718 - Portal Navigation Menu: Static Categorization of Tools
+ * SAK-29665 - Send user id to Google Analytics
+
+For WSCC: 
+* LS-196 - Special Student Resources and Employee Resources links

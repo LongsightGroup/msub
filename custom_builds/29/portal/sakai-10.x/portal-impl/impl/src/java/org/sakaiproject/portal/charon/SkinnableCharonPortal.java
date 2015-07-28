@@ -1836,6 +1836,7 @@ public class SkinnableCharonPortal extends HttpServlet implements Portal
 			// for showing user display name and id next to logout (SAK-10492)
 			String loginUserDispName = null;
 			String loginUserDispId = null;
+			String wsccEmailAddress = "";
 			boolean displayUserloginInfo = ServerConfigurationService.
 			getBoolean("display.userlogin.info", true);
 
@@ -1894,13 +1895,10 @@ public class SkinnableCharonPortal extends HttpServlet implements Portal
 				logInOutUrl += ServerConfigurationService.getString("portalPath")
 				+ "/logout";
 
-				// get current user display id and name
-				if (displayUserloginInfo)
-				{
 					User thisUser = UserDirectoryService.getCurrentUser();
 					loginUserDispId = Validator.escapeHtml(thisUser.getDisplayId());
 					loginUserDispName = Validator.escapeHtml(thisUser.getDisplayName());
-				}
+					wsccEmailAddress = thisUser.getEmail();
 
 				// check for a logout text override
 				message = StringUtils.trimToNull(ServerConfigurationService
@@ -1966,6 +1964,7 @@ public class SkinnableCharonPortal extends HttpServlet implements Portal
 				rcontext.put("loginUserDispName", loginUserDispName);
 				rcontext.put("loginUserDispId", loginUserDispId);
 			}
+			rcontext.put("wsccEmailAddress", wsccEmailAddress);
 			rcontext.put("displayUserloginInfo", displayUserloginInfo && loginUserDispId != null);
 		}
 	}
