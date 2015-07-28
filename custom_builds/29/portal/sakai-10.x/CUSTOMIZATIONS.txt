@@ -1,0 +1,2 @@
+SAK-23718 - Portal Navigation Menu: Static Categorization of Tools
+SAK-29665 - Send user id to Google Analytics
