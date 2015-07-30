@@ -114,6 +114,10 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>evaluation</module>
+                <module>jforum</module>
+                <module>etudes-util</module>
+                <module>melete</module>
             </modules>
         </profile>
         <profile>
