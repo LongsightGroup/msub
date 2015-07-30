@@ -75,7 +75,7 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/29/portal/sakai-10.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_features-backport
-web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/29/web/sakai-10.x
+web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 # tool categories                    
