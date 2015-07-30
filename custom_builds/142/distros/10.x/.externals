@@ -83,7 +83,7 @@ msgcntr -r 39250 https://github.com/sakaiproject/sakai/trunk/msgcntr
 samigo -r 38764 https://github.com/sakaiproject/sakai/trunk/samigo
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/site-manage/10.x
 tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/tool/tool-10.x
-jforum -r 87383 https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/10.2.x
+jforum https://source.sakaiproject.org/contrib/longsight/jforum/10.x
 gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/sakai-10.x
 
 # iRubric customizations ND-75
@@ -94,7 +94,6 @@ gradebook2 https://source.sakaiproject.org/contrib/longsight/gradebook2/gradeboo
 
 #POM CHANGES
 #shell_command cd samigo;patch -p0 < ../ND-SAMIGO.patch;cd ../
-#shell_command cd jforum;patch -p0 < ../ND-JFORUM.patch;cd ../
 #shell_command find msgcntr/ -name pom.xml -exec sed -i 's/11-SNAPSHOT/10-SNAPSHOT/g' {} \;
 #shell_command cd kernel/;patch -p2 < ../294.patch;cd ../
 #
