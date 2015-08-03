@@ -85,7 +85,9 @@ content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-re
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
-evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x 
+#evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x 
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x_backport
+#
 gradebook-export https://source.sakaiproject.org/svn/msub/longsight.com/gradebook-export/gradebook-export-1.5-src
 jobscheduler https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/25/jobscheduler/jobscheduler-10.x
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-10.x_backport
