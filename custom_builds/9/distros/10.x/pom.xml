@@ -84,6 +84,7 @@
                 <module>memory</module>
                 <module>message</module>
                 <module>msgcntr</module>
+                <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
                 <module>portal</module>
