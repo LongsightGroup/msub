@@ -1,0 +1,2 @@
+* Tool names from old vendor
+* Rename the Schedule Tool (PBZ-192026)
