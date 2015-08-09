@@ -29,6 +29,7 @@
     <module>kerberos</module>
     <module>openldap</module>
     <module>sample</module>
+    <module>ico</module>
   </modules>
 
   <profiles>
