@@ -63,7 +63,6 @@
                 <module>config</module>
                 <module>content</module>
                 <module>content-review</module>
-                <module>content-review/contentreview-impl</module>
                 <module>courier</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
@@ -121,6 +120,7 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
+                <module>content-review/contentreview-impl</module>
             </modules>
         </profile>
         <profile>
