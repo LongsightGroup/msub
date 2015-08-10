@@ -53,7 +53,6 @@ postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
 providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
-reference https://source.sakaiproject.org/svn/reference/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
@@ -77,13 +76,12 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #Customizations
-blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x/
-#samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/trunk
 
 #Patcher options: "mavenoptions: <options>"
 #Evaluation needs -Psakai-10
 #mavenoptions:-Psakai-10
-
 
