@@ -70,12 +70,6 @@
   </build>
   <dependencies>
     <dependency>
-        <groupId>com.rsmart</groupId>
-        <artifactId>rsmart-antivirus-api</artifactId>
-        <version>10.4</version>
-        <scope>provided</scope>
-    </dependency>
-    <dependency>
       <groupId>org.sakaiproject.kernel</groupId>
       <artifactId>sakai-kernel-api</artifactId>
       <version>${project.version}</version>
