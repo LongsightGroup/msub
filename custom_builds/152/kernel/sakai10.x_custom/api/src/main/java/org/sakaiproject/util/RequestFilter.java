@@ -21,7 +21,6 @@
 
 package org.sakaiproject.util;
 
-import com.rsmart.decryption.api.GeneratedTokenService;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadBase;
 import org.apache.commons.fileupload.FileUploadException;
@@ -46,7 +45,6 @@ import org.springframework.dao.DataAccessResourceFailureException;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
 import org.springframework.orm.hibernate3.SessionHolder;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
-import com.rsmart.decryption.api.DecryptionUtilityService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -249,10 +247,6 @@ public class RequestFilter implements Filter
 	private String [] contentPaths;
 	private String [] loginPaths;
 	private String [] contentExceptions;
-
-    private DecryptionUtilityService decryptionUtilityService;
-
-    private GeneratedTokenService generatedTokenService;
 
     protected static final String SAKAI_GENERATE_TOKEN = "sakai.generate.token";
 
@@ -1066,29 +1060,6 @@ public class RequestFilter implements Filter
 		{
 			if (m_sessionParamAllow) {
 				sessionId = req.getParameter(ATTR_SESSION);
-			    //Decrypting the sakai.session id
-
-                if (org.sakaiproject.component.cover.ServerConfigurationService.getInstance().getBoolean("sakai.session.decryption", true)) {
-                    String decryptedSessionId = getDecryptionUtilityService().deEncryptionStringUtility(sessionId);
-                    if (decryptedSessionId != null) {
-                        String eid = getGeneratedTokenService().getUserId(decryptedSessionId);
-
-                        if (eid == null) {
-                            M_log.debug("eid is null, there is no token associated with eid: " + eid);
-                        } else {
-                            if (s == null) {
-                                String userId = getDecryptionUtilityService().getUserId(eid);
-                                s = SessionManager.startSession();
-                                SessionManager.setCurrentSession(s);
-                                UsageSessionService usageSessionService = (UsageSessionService) ComponentManager.get(UsageSessionService.class.getName());
-                                usageSessionService.login(userId, eid, req.getRemoteAddr(), req.getHeader("user-agent"), null);
-                                sessionId = s.getId();
-                            }
-                        }
-                    } else {
-                        M_log.debug("Decryption failed for session Id" + sessionId);
-                    }
-                }
             }
 
 			// find our session id from our cookie
@@ -1648,31 +1619,5 @@ public class RequestFilter implements Filter
 			return url;
 		}
 	}
-
-    // IOC setters
-    public void setDecryptionUtilityService(DecryptionUtilityService decryptionUtilityService) {
-       this.decryptionUtilityService = decryptionUtilityService;
-    }
-
-    public DecryptionUtilityService getDecryptionUtilityService() {
-        if (decryptionUtilityService == null) {
-            decryptionUtilityService = (DecryptionUtilityService) ComponentManager.getInstance().get(DecryptionUtilityService.class.getName());
-        }
-        if (decryptionUtilityService == null) {
-            M_log.error("can't find bean with name '" + DecryptionUtilityService.class.getName() + "' in sakai's ComponentManager");
-        }
-        return decryptionUtilityService;
-    }
-
-      public GeneratedTokenService getGeneratedTokenService() {
-        if (generatedTokenService == null) {
-            generatedTokenService = (GeneratedTokenService) ComponentManager.getInstance().get(GeneratedTokenService.class.getName());
-        }
-        if (decryptionUtilityService == null) {
-            M_log.error("can't find bean with name '" + GeneratedTokenService.class.getName() + "' in sakai's ComponentManager");
-        }
-        return generatedTokenService;
-    }
-
 }
 

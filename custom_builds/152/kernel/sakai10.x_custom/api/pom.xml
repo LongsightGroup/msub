@@ -91,11 +91,5 @@
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
     </dependency>
-     <dependency>
-       <groupId>com.rsmart</groupId>
-       <artifactId>rsmart-decryption-api</artifactId>
-        <version>10.4</version>
-         <scope>provided</scope>
-    </dependency>
   </dependencies>
 </project>
