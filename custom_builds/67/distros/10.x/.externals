@@ -83,8 +83,7 @@ wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-s
 scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/sakai-10/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/providers/sakai-10.x_jldap-auth-caching_custom
 kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20150320/
-#lessonbuilder -r 319792 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/lessonbuilder/lessonbuilder-10.x_custom
-lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
+lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/lessonbuilder/lessonbuilder-10.x_custom
 
 #GIT Projects
 #git_project bigbluebutton-sakai/bbb-tool
