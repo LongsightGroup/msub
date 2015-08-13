@@ -14,7 +14,7 @@
   <modules>
     <module>grade-exporter</module>
     <!--module>virtual_classroom</module-->
-    <module>antivirus</module>
+    <!-- module>antivirus</module -->
     <module>brands</module>
     <module>mvel</module>
     <module>certification</module>
