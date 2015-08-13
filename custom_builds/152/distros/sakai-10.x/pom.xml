@@ -62,7 +62,7 @@
                 <module>authz</module>
                 <module>basiclti</module>
 		        <module>blogwow</module>
-                <module>bigbluebutton</module>
+                <!-- module>bigbluebutton</module -->
                 <module>calendar</module>
                 <module>chat</module>
                 <module>citations</module>
