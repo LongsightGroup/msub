@@ -1,0 +1,14 @@
+Lessons/Melete upgrade troubleshooting directions
+
+   
+Once the errors are corrected, log in as administrator into Sakai, 
+go to My workspace->Resources, expand the /private folder 
+and delete the meleteDocs folder under it.
+
+Further, the following commands need to be run:
+DELETE FROM melete_migrate_status;
+DELETE FROM melete_section_resource;
+DELETE FROM melete_resource;
+   
+Now, the process may be restarted by following the instructions above. The process 
+will restart from scratch and migrate content from the filesystem to contentHosting.

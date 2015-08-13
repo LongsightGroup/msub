@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-lazy-init="false">
+
+   <!-- 
+   this should define the real provider... 
+   the ID shouldn't be changed... the impl loads based on this name
+   -->
+   <bean id="org.sakaiproject.authz.api.GroupProvider.configurableCustom"
+         class="org.sakaiproject.coursemanagement.impl.provider.CourseManagementGroupProvider"
+         init-method="init"
+         destroy-method="destroy" singleton="true">
+      <property name="cmService">
+         <ref bean="org.sakaiproject.coursemanagement.api.CourseManagementService"/>
+      </property>
+      <property name="rolePreferences">
+         <list>
+            <value>Instructor</value>
+            <value>Teaching Assistant</value>
+            <value>Student</value>
+         </list>
+      </property>
+      <property name="roleResolvers">
+         <list>
+            <bean class="org.sakaiproject.coursemanagement.impl.provider.SectionRoleResolver">
+               <property name="roleMap">
+                  <map>
+                     <entry key="I" value="Instructor"/>
+                     <entry key="S" value="Student"/>
+                     <entry key="GSI" value="Teaching Assistant"/>
+                  </map>
+               </property>
+               <property name="officialInstructorRole" value="Instructor"/>
+               <property name="enrollmentStatusRoleMap">
+                  <map>
+                     <entry key="enrolled" value="Student"/>
+                     <entry key="wait" value="Student"/>
+                  </map>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.coursemanagement.impl.provider.CourseOfferingRoleResolver">
+               <property name="roleMap">
+                  <map>
+                     <entry key="CourseAdmin" value="Instructor"/>
+                     <entry key="I" value="Instructor"/>
+                  </map>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.coursemanagement.impl.provider.CourseSetRoleResolver">
+               <property name="roleMap">
+                  <map>
+                     <entry key="DeptAdmin" value="Instructor"/>
+                  </map>
+               </property>
+            </bean>
+         </list>
+      </property>
+   </bean>
+
+</beans>

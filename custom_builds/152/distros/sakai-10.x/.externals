@@ -58,7 +58,7 @@ postem -r 319530                  https://source.sakaiproject.org/svn/msub/rsmar
 presence -r 319531                https://source.sakaiproject.org/svn/msub/rsmart.com/presence/branches/10.4.x
 profile2 -r 319532                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/branches/10.4.x
 providers -r 319533               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/branches/10.4.x
-reference -r 319534               https://source.sakaiproject.org/svn/msub/rsmart.com/reference/branches/10.4.x
+reference                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/reference/sakai10.x_custom
 reports -r 319535                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/branches/10.4.x
 reset-pass -r 319536              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/branches/10.4.x
 rights -r 319537                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/branches/10.4.x

@@ -1,0 +1,3 @@
+<!ELEMENT module (section+) >
+<!ELEMENT section (section*) >
+<!ATTLIST section  id    ID    #REQUIRED>

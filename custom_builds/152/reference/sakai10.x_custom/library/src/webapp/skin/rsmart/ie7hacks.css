@@ -1,0 +1,55 @@
+
+
+.siteNavWrap {
+	position: relative;
+	*/top: -3px;
+	*/margin-bottom: -3px; 
+	width: 100%;
+	background: #AFBC22;
+	clear: both;
+	font-size: 1.0em;
+	line-height: normal;
+	height: auto;
+	white-space: normal;
+}
+
+#quickLinks li a, #quickLinks li a:link, #quickLinks li a:visited {
+	color: #5E7900;
+	font-weight: bold;
+	position: relative;
+	*/top: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+#siteLinkList{
+	white-space: nowrap;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 0;	
+	padding: 4px 0px 0 0;
+	float: right;
+	height: auto;
+	font-weight: bold;
+}
+
+/*list elements - children are <span> and <a>*/
+#siteLinkList li {
+/*	position: relative;
+	top: 7px;
+	background: transparent url(images/tab-left.gif) no-repeat scroll left top; */
+	white-space: nowrap;
+	background: #5E7A00;
+	display: inline;
+	float: left;
+	margin: 0 3px 0 0;
+	padding: 2px 6px 2px 6px;
+}

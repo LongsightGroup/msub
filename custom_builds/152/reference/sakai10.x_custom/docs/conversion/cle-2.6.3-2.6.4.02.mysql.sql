@@ -1,0 +1,2 @@
+
+create index MFR_AREA_T_CONTEXT_IDX on MFR_AREA_T(CONTEXT_ID);

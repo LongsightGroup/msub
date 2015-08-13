@@ -1,0 +1,184 @@
+<html>
+<body>
+<h1>Getting started with the rSmart Sakai CLE</h1>
+
+<h2>Start up the CLE</h2>
+
+cd into tomcat.home/bin and execute ./startup.sh to start tomcat. On windows, use the startup.bat file.
+
+We recommend tailing the catalina.out file to watch for errors upon startup (tail -f tomcat.home/logs/catalina.out).  On windows, the log output is in a separate command prompt window.
+
+<h2>Stopping the CLE</h2>
+
+cd into tomcat.home/bin and execute ./shutdown.sh to start tomcat. On windows, use the shutdown.bat file.
+
+<h2>Connecting to the CLE with a browser</h2>
+
+<p>Once the server is up, open a browser to: http://localhost:8080.  The default logon is admin/admin.</p>
+
+<p>Note: adjust the url depending on the name of your server and tomcat port</p>
+
+<h2>Installation Information</h2>
+
+<h3>/apache-tomcat/bin</h3>
+
+This is where the startup and shutdown scripts live. Use these to start and and stop the CLE server.
+
+<h3>/apache-tomcat/logs</h3>
+
+This is where the server logs exist. Look at the catalina.out file for errors and information.
+
+<h3>/apache-tomcat/sakai</h3>
+
+This is where the CLE configuration files exist.
+
+<h3>/files</h3>
+
+This is where the server stores files users upload to the system.
+
+<h3>/jre</h3>
+
+This is the Java Runtime Environment that powers the application.
+
+<h3>cle.sh</h3>
+
+This is a linux init script that can be used to startup and shutdown the application automatically when the box is
+restarted. It can be installed using chkconfig on redhat systems.
+
+<p>Note: You'll want to set the TOMCAT_USER to whatever user the server should run as. Do this by modifying the
+   following line.</p>
+
+<pre>TOMCAT_USER="tomcat"</pre>
+
+<h3>rSmart_Sakai_CLE_v2.5_InstallLog.log</h3>
+
+This is the logs output from the installer. If the installation fails looks here for information as to why.
+
+
+<h2>Configuration - sakai.properties and local.properties</h2>
+
+<p>Should you decide to change any configuration components, it is important to
+   become familiar with the settings within the sakai.properties and local.properties
+   files.</p>
+
+<p>Location: tomcat.home/sakai</p>
+
+<p>Purpose: The main configuration files for the configuration settings in the Sakai
+   CLE are sakai.properties and local.properties. Configuration values located
+   within these two files govern everything from setting your institution name to
+   configuring your database.</p>
+
+<p>**You must restart the CLE for any changes to take effect.**</p>
+
+<p>sakai.properties:  this file stores the default configuration settings for your CLE
+   environment</p>
+
+<p>local.properties:  this file stores customized configuration settings for your CLE
+   environment. Any configuration values that exist in local.properties will
+   override the configuration values in sakai.properties.</p>
+
+<p>You can edit these .properties files with a text editor.</p>
+
+<p>A complete guide (created by John Leasia from the University of Michigan) to the
+   configuration values in sakai.properties and local.properties is online at:</p>
+
+<p>https://source.sakaiproject.org/svn/reference/trunk/docs/architecture/sakai_prope
+   rties.doc</p>
+
+
+<h2>Creating a Database and User in MySQL</h2>
+
+<p>A database and privileged user must be prepared for the CLE's use. Consult your database documentation for details,
+   but below are sample commands for MySQL.</p>
+
+<pre>
+C:\sakai\reference\sql\legacy\mysql\>mysql -u root -p
+Enter password: ******
+Welcome to the MySQL monitor. Commands end with ; or \g.
+
+Your MySQL connection id is 51 to server version: 4.1.22-standard
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> create database sakai default character set utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on sakai.* to sakaiuser@'localhost' identified by 'sakaipassword';
+Query OK, 0 rows affected (0.00 sec
+
+mysql> grant all on sakai.* to sakaiuser@'127.0.0.1' identified by 'sakaipassword';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>  flush privileges;
+
+mysql> quit
+
+</pre>
+<h2>Creating a Tablespace and User in Oracle</h2>
+<p>
+On Oracle, the database character set needs to be AL32UTF8.  This can be validated with the following SQL query:
+<pre>SQL> select value from nls_database_parameters where parameter = 'NLS_CHARACTERSET';
+</pre>
+Then you can create a tablespace in the database and create a user whose default tablespace is the newly created one.</p>
+<p>Typically, you would do this prior to installation so the installer can set these properties in the configuration
+   files for you, and test that they are valid. If you do this after an install, you can manually modify the settings in the local.properties
+   files. See the examples below and
+   adjust to match your environment.
+</p>
+
+<h3>Example MySQL local.properties settings</h3>
+
+<pre>
+username@javax.sql.BaseDataSource=user
+password@javax.sql.BaseDataSource=pwd
+vendor@org.sakaiproject.db.api.SqlService=mysql
+driverClassName@javax.sql.BaseDataSource=com.mysql.jdbc.Driver
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+validationQuery@javax.sql.BaseDataSource=select 1 from DUAL
+defaultTransactionIsolationString@javax.sql.BaseDataSource=TRANSACTION_READ_COMMITTED
+url@javax.sql.BaseDataSource=jdbc:mysql://localhost:3306/cle_dbname?useUnicode=true&characterEncoding=UTF-8&useServerPrepStmts=false&cachePrepStmts=true&prepStmtCacheSize=4096&prepStmtCacheLimit=4096
+</pre>
+
+<h3>Example Oracle local.properties settings</h3>
+
+<pre>
+username@javax.sql.BaseDataSource=user
+password@javax.sql.BaseDataSource=pwd
+vendor@org.sakaiproject.db.api.SqlService=oracle
+driverClassName@javax.sql.BaseDataSource=oracle.jdbc.driver.OracleDriver
+url@javax.sql.BaseDataSource=jdbc:oracle:thin:@vm-oracle:1521:vmware
+validationQuery@javax.sql.BaseDataSource=
+defaultTransactionIsolationString@javax.sql.BaseDataSource=
+testOnBorrow@javax.sql.BaseDataSource=false
+# for oracle 9
+#hibernate.dialect=org.hibernate.dialect.Oracle9iDialect
+# for oracle 10
+hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+</pre>
+
+<h2>The following resources are available to rSmart Support Subscribers</h2>
+
+We've put together a number of resources to help you get started with the rSmart CLE
+
+
+<UL>
+   <LI><A href="https://supportcenteronline.com/ics/support/DLRedirect.asp?fileID=64612">Quick Start Guide
+      for Instructors</A><BR>Just the basics. In PDF format; also available in MS Word format.<BR><BR></LI>
+   <LI><A href="http://supportcenteronline.com/ics/support/DLList.asp?task=download&amp;folderID=26936">rSmart
+      Sakai CLE Tool Overviews</A><BR>The basic information you need about each tool in order&nbsp;to choose
+      the tools you want to use. Each overview covers the purpose, similar tools in other systems, features,
+      restrictions and warnings, and other essential information about a given tool. Available in MS Word
+      and PDF formats; also available as individual articles (by tool name) in the RSN knowledge
+      base.<BR><BR></LI>
+
+   <LI><A href="https://supportcenteronline.com/ics/support/DLRedirect.asp?fileID=64627">Instructional
+      Activities and the Tools in the rSmart Sakai CLE</A><BR>A set of tables, each of which maps several&nbsp;common
+      instructional activities to various tools in the CLE that can be used to accomplish them. Also
+      available in MS Word format.<BR><BR></LI>
+   <LI><A href="https://supportcenteronline.com/ics/support/DLRedirect.asp?fileID=64805">Navigating in the
+      CLE</A><BR>A&nbsp;short flash video that shows you how to get around in the CLE.
+   </LI>
+</UL>
+
+</BODY>
+</html>

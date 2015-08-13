@@ -1,0 +1,172 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	font-size: .8em;
+}
+
+form {
+	margin: 0px;
+	padding: 0px;
+}
+
+.topContent {
+	background: White url(images/loginWelcome_bg.gif) repeat-x top;
+	border-bottom: 7px solid #E0E0E0;
+}
+
+.mainContent {
+	
+	border-top: 1px solid #77A1C7;
+	padding: 10px;
+}
+
+.logoCell {
+	width: 60%;
+	vertical-align: middle;
+}
+
+.welcomeContent {
+	background: White url(images/loginWelcome_bg.gif) repeat-x top;
+	padding-left: 10px;
+}
+.welcomeContent h1 {
+	font-size: 21px;
+	font-weight: normal;
+	color: #8B9719;
+}
+.welcomeContent p {
+	font-weight: normal;
+	color: #333333;
+	line-height: 18px;
+}
+
+.loginCell {
+	background: White url(images/loginWelcome_bg.gif) repeat-x top;
+	padding-left: 10px;
+	vertical-align: top;
+}
+.loginCell h1 {
+	font-size: 21px;
+	font-weight: normal;
+	color: #8B9719;
+}
+.loginCell p {
+	font-weight: normal;
+	color: #333333;
+}
+
+.loginCell h2 {
+	font-size: 13px;
+	font-weight: normal;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 2px;
+	margin-left: 0px;
+	color: #666666;
+}
+
+
+#loginInfo{
+	border: 1px solid #000000;
+	background: White url(images/login_bkg.gif) repeat-x top;
+	height: 40px;
+	margin-top: 6px;
+	margin-right: 20px;
+	vertical-align: middle;
+
+}
+
+#gatewayTools {
+	height: 10em;
+}
+
+.gatewayTools {
+	background-color: White;
+	vertical-align: top;
+	padding-top: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+}
+
+.gatewayTools h1 {
+	font-weight: bold;
+	color: #333333;
+}
+.gatewayTools p {
+	font-weight: normal;
+	color: #333333;
+}
+
+#mySakaiFooter {
+	border-top-width: 8px;
+	border-top-style: solid;
+	border-top-color: #7681BF;
+	margin-top: 3px;
+	padding-top: 5px;
+	text-align: center;
+}
+.error {
+	font: 9px;
+	font-weight: bold;
+	color: Red;
+}
+#subContent {
+	background-color: #EFEDE6;
+	border-top: 1px solid #CCCCCC;
+	color: #666666;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#subContent #heading {
+	font-size: 22px;
+	text-align: center;
+}
+
+#subContent #spacer {
+	width: 30%;
+}
+
+#subContent #reasons {
+	text-align: left;
+	float: left;
+	width: 20%;
+}
+#subContent .reasonsSpacer {
+	width: 40%;
+	float: left;
+}
+#subContent ul li {
+	/* font-size: 0.8em; */
+}
+#registered {
+	font-size: 0.7em;
+}
+
+#toolMenuWrap{
+	width: 100%;
+	text-align: left;
+	padding: 0;
+}
+
+#toolMenu{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	width: 100%;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	color: #555;
+}
+
+#toolMenu li{
+	margin-left: 0;
+	padding: 0 0 0 0;
+	text-align: left;
+	line-height: 16px;
+}
+
+a, a:link {
+	color: #1B96C9;
+	font-weight: bold;
+}

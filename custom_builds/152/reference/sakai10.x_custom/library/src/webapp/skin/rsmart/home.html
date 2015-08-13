@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Welcome to My Sakai</title>
+<link href="loginStyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="gatewayContent">
+      <tr>
+        <td rowspan="2" class="welcomeCell">
+			<div class="welcomeContent">
+			<img src="/library/skin/rsmart/images/gatewayCLE.gif" alt="" name="gatewayCLE" id="gatewayCLE" width="408" height="151" border="0"/>
+			<h1>The Next Step in Collaborative Learning</h1>
+			
+			<p>The rSmart Sakai CLE is a feature-rich, fully scalable, enterprise ready application, unique in its ability to support teaching and learning, project collaboration, group interaction and ePortfolio construction. Based on the latest Sakai code, the CLE offers an open source collaboration environment that's polished, customizable and fully supported. Login to the CLE today and experience the potential of next generation collaborative learning environments.</p><div id="highLighter"><img src="/library/skin/rsmart/images/highlighter.jpg" alt="" width="374" height="163" border="0"/></div>
+</div>
+</td>
+        <td class="loginContent">
+			<img src="/library/skin/rsmart/images/banner_inst_right.jpg" id="banner_inst_right" name="banner_inst_right" width="70" height="52" alt="" border="0"/>
+			<br/><br/>
+			<h1>Log in to get started</h1>
+			<form method="post" action="/xsl-portal/xlogin" enctype="application/x-www-form-urlencoded" target="_parent">
+			  <h2>Username</h2>
+				<input name="eid" id="eid" type="text" />
+				<h2>Password</h2>
+				<input name="pw" id="pw" type="password" />
+				<div><br/><input type="image" value="submit" src="/library/skin/rsmart/images/loginButton.gif" /></div>
+			</form>
+		</td>
+      </tr>
+      <tr>
+        <td class="gatewayTools">
+		<div id="gatewayTools">
+		<!-- <a href="/xsl-portal/tool/4e56002b-76db-4254-a0f1-6b96fc5cc419?panel=Main" accesskey="3" target="_self"><span>Forgot Password?</span></a> --> 
+			<a href="/xsl-portal/tool/!gateway-410?panel=Main" accesskey="2" target="_self"><span>Search Public Courses and Projects</span></a>
+			<br/><a accesskey="h" href="javascript:;" onclick="window.open('/xsl-portal/help/main','Help','resizable=yes,toolbar=no,scrollbars=yes, width=800,height=600')" onkeypress="window.open('/xsl-portal/help/main','Help','resizable=yes,toolbar=no,scrollbars=yes, width=800,height=600')">Get Help and Support</a>
+			<br/><a href="/xsl-portal/tool/!gateway-710?panel=Main" accesskey="1" target="_self"><span>I'm a new user, sign me up!</span></a>
+			<div class="spacer"></div>
+		</div>
+		</td>
+      </tr>
+	  <tr>
+	  	<td id="subContent" colspan="2">
+		  	<div id="heading">Why rSmart<span id="registered"><sup>&reg;</sup></span> Sakai CLE?</div>
+			<div class="spacer"></div>
+			<div class="reasonsSpacer">&nbsp;</div>
+			<div id="reasons">
+				<ul>
+					<li>It's open source</li>
+					<li>Commercially supported</li>
+					<li>Polished user experience</li>
+					<li>Flexible configuration</li>
+					<li>On-demand customization</li>
+				</ul>
+			</div>
+			<div class="reasonsSpacer">&nbsp;</div>
+		</td>
+	  </tr>
+    </table>
+<script>document.forms[0].elements["eid"].focus();</script>
+</body>
+</html>
