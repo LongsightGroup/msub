@@ -86,6 +86,7 @@ kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/2015032
 login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-10.x_googleplus
 user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/74/user/user-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
@@ -98,17 +99,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 #shell_command git apply sakai10x.patch
 #shell_command cd ../../
 
-# Free Big Blue Button on dev:
-#shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
-#shell_command cd bigbluebutton-sakai/bbb-tool
-#shell_command mvn versions:update-parent
-#shell_command cat pom.xml | sed "s/<entitybroker\.version>.*<\/entitybroker\.version>/<entitybroker\.version>10-SNAPSHOT<\/entitybroker\.version>/g" > pom2.xml
-#shell_command mv pom2.xml pom.xml
-#shell_command cat pom.xml | sed "s/<entitybroker-utils\.version>.*<\/entitybroker-utils\.version>/<entitybroker-utils\.version>10-SNAPSHOT<\/entitybroker-utils\.version>/g" > pom2.xml
-#shell_command mv pom2.xml pom.xml
-
 #GIT Projects
-#git_project bigbluebutton-sakai/bbb-tool
 #git_project content-review/contentreview-impl-vericite
 
 
