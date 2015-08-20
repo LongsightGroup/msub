@@ -117,11 +117,13 @@
                 <module>webservices</module>
                 <module>blogwow</module>
                 <module>content-review/contentreview-impl</module>
+                <!--
                 <module>adobeconnect</module>
                 <module>itunesu-tool</module>
                 <module>etudes-util</module>
                 <module>melete</module>
-                <!--module>bigbluebutton-sakai/bbb-tool</module-->
+                -->
+                <module>bigbluebutton-sakai/bbb-tool</module>
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
             </modules>
