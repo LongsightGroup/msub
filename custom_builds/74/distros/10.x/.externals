@@ -17,14 +17,12 @@ jobscheduler https://source.sakaiproject.org/svn/jobscheduler/branches/sakai-10.
 jsf https://source.sakaiproject.org/svn/jsf/branches/sakai-10.x
 sakai-mock https://source.sakaiproject.org/svn/sakai-mock/branches/sakai-10.x
 userauditservice https://source.sakaiproject.org/svn/userauditservice/branches/sakai-10.x
-#webservices https://source.sakaiproject.org/svn/webservices/branches/sakai-10.x
 
 # Core Sakai Tools
 access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
 alias https://source.sakaiproject.org/svn/alias/branches/sakai-10.x
 announcement https://source.sakaiproject.org/svn/announcement/branches/sakai-10.x
 archive https://source.sakaiproject.org/svn/archive/branches/sakai-10.x
-#assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
 authz https://source.sakaiproject.org/svn/authz/branches/sakai-10.x
 basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
@@ -42,9 +40,7 @@ mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
 memory https://source.sakaiproject.org/svn/memory/branches/sakai-10.x
 message https://source.sakaiproject.org/svn/message/branches/sakai-10.x
-metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/sakai-10.x
-osp https://source.sakaiproject.org/svn/osp/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
 polls https://source.sakaiproject.org/svn/polls/branches/sakai-10.x
@@ -53,7 +49,6 @@ postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
 providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
-reference https://source.sakaiproject.org/svn/reference/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
@@ -70,17 +65,14 @@ syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
 textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-10.x
 tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
-#user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
-warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #customizations
-assignmnet https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
+assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
 content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
 da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk
-#etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20150320/
 login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-10.x_googleplus
@@ -91,6 +83,7 @@ bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sak
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 #shell_command sed -i 's/1\.8\.0\.7/1\.8\.0\.10/g' evaluation/impl/pom.xml
+#shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' kaltura/pom.xml
 
 # VeriCite
 #shell_command cd content-review
@@ -101,6 +94,4 @@ bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sak
 
 #GIT Projects
 #git_project content-review/contentreview-impl-vericite
-
-
 
