@@ -81,7 +81,7 @@ portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-2.9.
 profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/104/profile2/profile2-1.5.x_backport
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x
-site-manage -r 309102 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
+site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/104/site-manage/site-manage-2.9.x_features-backport/
 web https://source.sakaiproject.org/svn/msub/longsight.com/web/web-2.9.x_features-backport/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-2.9.x_jldap-auth-caching
 

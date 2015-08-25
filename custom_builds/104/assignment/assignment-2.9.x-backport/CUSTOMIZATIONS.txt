@@ -1,2 +1,4 @@
 *  Assignments comments to gb (ZOQ-219522)
   * Merge back SAK-23787 from trunk
+
+Merge back SAK-27919 from trunk - Assignments Attachments shouldn't be added to Calendar Events
