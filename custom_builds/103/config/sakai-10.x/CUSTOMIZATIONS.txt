@@ -1,1 +1,5 @@
 FIG-157151 - Updated name of Certification tool
+08/25/2015 - Updating config
+    svn merge "^/config/branches/sakai-10.x"
+    --- Merging r310610 through r320936 into '.':
+
