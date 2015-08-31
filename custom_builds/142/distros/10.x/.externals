@@ -43,7 +43,6 @@ metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
 polls https://source.sakaiproject.org/svn/polls/branches/sakai-10.x
-portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
@@ -85,6 +84,7 @@ site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds
 tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/tool/tool-10.x
 jforum https://source.sakaiproject.org/contrib/longsight/jforum/10.x
 gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/sakai-10.x
+portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/portal/portal-10.x
 
 # iRubric customizations ND-75
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/edu-services/10.x
