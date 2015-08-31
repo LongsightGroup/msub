@@ -1159,14 +1159,19 @@ public class SkinnableCharonPortal extends HttpServlet implements Portal
 		String includeExtraHead = ServerConfigurationService.getString("portal.include.extrahead", "");
 		rcontext.put("includeExtraHead",includeExtraHead);
 
-        String analyticsId =  ServerConfigurationService.getString("portal.google.analytics_id", null);
+		String universalAnalyticsId =  ServerConfigurationService.getString("portal.google.universal_analytics_id", null);
+		if ( universalAnalyticsId != null ) {
+			rcontext.put("googleUniversalAnalyticsId", universalAnalyticsId);
+		}
+
+		String analyticsId =  ServerConfigurationService.getString("portal.google.analytics_id", null);
 		if ( analyticsId != null ) {
-            rcontext.put("googleAnalyticsId", analyticsId);
-		    rcontext.put("googleAnalyticsDomain", 
-		        ServerConfigurationService.getString("portal.google.analytics_domain"));
-		    rcontext.put("googleAnalyticsDetail", 
-		        ServerConfigurationService.getBoolean("portal.google.analytics_detail", false));
-        }
+			rcontext.put("googleAnalyticsId", analyticsId);
+			rcontext.put("googleAnalyticsDomain", 
+				ServerConfigurationService.getString("portal.google.analytics_domain"));
+			rcontext.put("googleAnalyticsDetail", 
+				ServerConfigurationService.getBoolean("portal.google.analytics_detail", false));
+		}
 
 		Session s = SessionManager.getCurrentSession();
 		rcontext.put("loggedIn", Boolean.valueOf(s.getUserId() != null));
@@ -1839,7 +1844,9 @@ public class SkinnableCharonPortal extends HttpServlet implements Portal
 			// of a login link, but ignore it if container.login is set
 			boolean topLogin = ServerConfigurationService.getBoolean("top.login", true);
 			boolean containerLogin = ServerConfigurationService.getBoolean("container.login", false);
-			if (containerLogin) topLogin = false;
+			Boolean PDAHandler = (Boolean)session.getAttribute("PDAHandler");
+
+			if (containerLogin || Boolean.TRUE.equals(PDAHandler)) topLogin = false;
 
 			// if not logged in they get login
 			if (session.getUserId() == null)
