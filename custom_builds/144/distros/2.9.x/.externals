@@ -77,6 +77,7 @@ melete 			https://source.sakaiproject.org/contrib/longsight/melete/melete-2.9.3.
 gradebook2 		https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-sgu-2.9.x
 jforum -r 85763         https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/2.9.3.x
 samigo 			https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport
+signup                  https://source.sakaiproject.org/contrib/signup/branches/2-9-x/
 
 rsmart/common			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.1/rsmart/common
 rsmart/customer			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.1/rsmart/customer

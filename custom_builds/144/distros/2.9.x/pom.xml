@@ -131,6 +131,7 @@
 		<module>melete</module>
 		<module>content-review/contentreview-impl</module>
 		<module>jforum</module>
+		<module>signup</module>
 <!--
                 <module>osp/xsltcharon/xsltcharon-portal/xsl-portal</module>
                 <module>metaobj</module>
