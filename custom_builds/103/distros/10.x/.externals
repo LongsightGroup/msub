@@ -81,7 +81,7 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 #SCORM.2004.3ED.RTE https://source.sakaiproject.org/svn/msub/uwo.ca/scorm/trunk
 
 #Customizations
-assignment -r320076 https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport/
+assignment -r320076 https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_fb_vericite
 content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport/
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/config/sakai-10.x
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/103/kernel/kernel-10.x_custom
