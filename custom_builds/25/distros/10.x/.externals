@@ -77,7 +77,7 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 # custom tools
-assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_fb_vericite
+assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
 archive https://source.sakaiproject.org/svn/msub/longsight.com/archive/archive-10.x_backport
 blogwow -r 86574 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
 common https://source.sakaiproject.org/svn/msub/longsight.com/common/common-10.x_backport
