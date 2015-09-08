@@ -81,8 +81,8 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
-samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/samigo/samigo-10.x_features-backport
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 #Patcher options: "mavenoptions: <options>"
