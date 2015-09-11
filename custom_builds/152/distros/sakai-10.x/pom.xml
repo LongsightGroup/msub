@@ -110,7 +110,9 @@
                 <module>presence</module>
                 <module>providers</module>
                 <module>profile2</module>
+                <!--
                 <module>reference</module>
+                -->
                 <module>rights</module>
                 <module>roster2</module>
                 <module>rsmart</module>

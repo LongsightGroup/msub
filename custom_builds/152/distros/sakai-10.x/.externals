@@ -3,7 +3,6 @@ alias -r 319488                   https://source.sakaiproject.org/svn/msub/rsmar
 ambrosia -r 87651                https://source.sakaiproject.org/contrib/rsmart/msub/ambrosia/branches/10.4.x
 announcement -r 319489            https://source.sakaiproject.org/svn/msub/rsmart.com/announcement/branches/10.4.x
 archive -r 319490                 https://source.sakaiproject.org/svn/msub/rsmart.com/archive/branches/10.4.x
-assignment -r 319491              https://source.sakaiproject.org/svn/msub/rsmart.com/assignment/branches/10.4.x
 authz -r 319492                   https://source.sakaiproject.org/svn/msub/rsmart.com/authz/branches/10.4.x
 basiclti -r 319493                https://source.sakaiproject.org/svn/msub/rsmart.com/basiclti/branches/10.4.x
 bigbluebutton -r 356           https://github.com/asahinet/bigbluebutton-sakai/branches/master/bbb-tool
@@ -11,7 +10,6 @@ blogwow -r 87652                 https://source.sakaiproject.org/contrib/rsmart/
 calendar -r 319494                https://source.sakaiproject.org/svn/msub/rsmart.com/calendar/branches/10.4.x
 chat -r 319495                    https://source.sakaiproject.org/svn/msub/rsmart.com/chat/branches/10.4.x
 clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/10.4.x
-cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
 citations -r 319496               https://source.sakaiproject.org/svn/msub/rsmart.com/citations/branches/10.4.x
 common -r 319497                  https://source.sakaiproject.org/svn/msub/rsmart.com/common/branches/10.4.x
 config -r 319498                  https://source.sakaiproject.org/svn/msub/rsmart.com/config/branches/10.4.x
@@ -37,7 +35,6 @@ jforum -r 87661                  https://source.sakaiproject.org/contrib/rsmart/
 jobscheduler -r 319512            https://source.sakaiproject.org/svn/msub/rsmart.com/jobscheduler/branches/10.4.x
 jsf -r 319513                     https://source.sakaiproject.org/svn/msub/rsmart.com/jsf/branches/10.4.x
 kaltura -r 319514                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/10.4.x
-kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/kernel/sakai10.x_custom
 lessonbuilder -r 319516           https://source.sakaiproject.org/svn/msub/rsmart.com/lessonbuilder/branches/10.4.x
 login -r 319517                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/10.4.x
 mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/10.4.x
@@ -48,7 +45,6 @@ memory -r 319521                  https://source.sakaiproject.org/svn/msub/rsmar
 message -r 319522                 https://source.sakaiproject.org/svn/msub/rsmart.com/message/branches/10.4.x
 messageservice -r 87663          https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/branches/10.4.x
 metaobj -r 319523                 https://source.sakaiproject.org/svn/msub/rsmart.com/metaobj/branches/10.4.x
-msgcntr -r 319524                 https://source.sakaiproject.org/svn/msub/rsmart.com/msgcntr/branches/10.4.x
 osp -r 319525                     https://source.sakaiproject.org/svn/msub/rsmart.com/osp/branches/10.4.x
 pack -r 319526                    https://source.sakaiproject.org/svn/msub/rsmart.com/pack/branches/10.4.x 
 podcasts -r 319527                https://source.sakaiproject.org/svn/msub/rsmart.com/podcasts/branches/10.4.x
@@ -58,7 +54,6 @@ postem -r 319530                  https://source.sakaiproject.org/svn/msub/rsmar
 presence -r 319531                https://source.sakaiproject.org/svn/msub/rsmart.com/presence/branches/10.4.x
 profile2 -r 319532                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/branches/10.4.x
 providers -r 319533               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/branches/10.4.x
-reference                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/reference/sakai10.x_custom
 reports -r 319535                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/branches/10.4.x
 reset-pass -r 319536              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/branches/10.4.x
 rights -r 319537                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/branches/10.4.x
@@ -88,3 +83,9 @@ warehouse -r 319556               https://source.sakaiproject.org/svn/msub/rsmar
 web -r 319558                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/10.4.x
 webservices -r 319559             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/10.4.x
 
+# Longsight mods
+kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/kernel/sakai10.x_custom
+reference                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/reference/sakai10.x_custom
+cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
+msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
+assignment -r 321008              https://source.sakaiproject.org/svn/msub/rsmart.com/assignment/trunk
