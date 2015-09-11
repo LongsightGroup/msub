@@ -99,9 +99,7 @@
                 <module>memory</module>
                 <module>message</module>
                 <module>messageservice</module>
-                <module>metaobj</module>
                 <module>msgcntr</module>
-                <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
                 <module>portal</module>
@@ -110,12 +108,16 @@
                 <module>providers</module>
                 <module>profile2</module>
                 <!--
+                <module>metaobj</module>
+                <module>osp</module>
                 <module>reference</module>
                 <module>mailarchive</module>
+                <module>warehouse</module>
+                <module>rsmart</module>
+                <module>webservices</module>
                 -->
                 <module>rights</module>
                 <module>roster2</module>
-                <module>rsmart</module>
                 <module>rwiki</module>
                 <!--module>sakora</module-->
                 <module>sam</module>
@@ -133,11 +135,9 @@
                 <module>tool</module>
                 <module>velocity</module>
                 <module>web</module>
-                <module>webservices</module>
                 <module>user</module>
                 <module>userauditservice</module>
                 <module>usermembership</module>
-                <module>warehouse</module>
                 <module>reports</module>
                 <module>reset-pass</module>
                 <module>taggable</module>
