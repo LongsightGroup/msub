@@ -37,7 +37,6 @@ jsf -r 319513                     https://source.sakaiproject.org/svn/msub/rsmar
 kaltura -r 319514                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/10.4.x
 lessonbuilder -r 319516           https://source.sakaiproject.org/svn/msub/rsmart.com/lessonbuilder/branches/10.4.x
 login -r 319517                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/10.4.x
-mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/10.4.x
 mailsender -r 319519              https://source.sakaiproject.org/svn//msub/rsmart.com/mailsender/branches/10.4.x
 master -r 319520                  https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.4.x
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
@@ -83,9 +82,14 @@ warehouse -r 319556               https://source.sakaiproject.org/svn/msub/rsmar
 web -r 319558                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/10.4.x
 webservices -r 319559             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/10.4.x
 
+# MailArchive requires a custom ANI anti-virus JAR
+mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/10.4.x
+
+# Longsight disabled spellchecker; disabled to speed up build
+#reference                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/reference/sakai10.x_custom
+
 # Longsight mods
 kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/kernel/sakai10.x_custom
-reference                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/reference/sakai10.x_custom
 cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
 msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
 assignment                        https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch

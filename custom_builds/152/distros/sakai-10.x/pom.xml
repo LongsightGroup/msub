@@ -94,7 +94,6 @@
                 <module>kaltura</module>
                 <module>lessonbuilder</module>
                 <module>login</module>
-                <module>mailarchive</module>
                 <module>mailsender</module>
                 <module>melete</module>
                 <module>memory</module>
@@ -112,6 +111,7 @@
                 <module>profile2</module>
                 <!--
                 <module>reference</module>
+                <module>mailarchive</module>
                 -->
                 <module>rights</module>
                 <module>roster2</module>
