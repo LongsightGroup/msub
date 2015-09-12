@@ -93,7 +93,6 @@
                 <module>jsf</module>
                 <module>kaltura</module>
                 <module>lessonbuilder</module>
-                <module>login</module>
                 <module>mailsender</module>
                 <module>melete</module>
                 <module>memory</module>
@@ -108,6 +107,7 @@
                 <module>providers</module>
                 <module>profile2</module>
                 <!--
+                <module>login</module>
                 <module>metaobj</module>
                 <module>osp</module>
                 <module>reference</module>
