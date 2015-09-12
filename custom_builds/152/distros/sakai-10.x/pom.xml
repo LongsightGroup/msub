@@ -115,6 +115,7 @@
                 <module>warehouse</module>
                 <module>rsmart</module>
                 <module>webservices</module>
+                <module>reports</module>
                 -->
                 <module>rights</module>
                 <module>roster2</module>
@@ -138,7 +139,6 @@
                 <module>user</module>
                 <module>userauditservice</module>
                 <module>usermembership</module>
-                <module>reports</module>
                 <module>reset-pass</module>
                 <module>taggable</module>
                 <module>turnitin/contentreview-impl</module>
