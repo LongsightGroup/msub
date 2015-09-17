@@ -121,6 +121,7 @@
                 <module>evaluation</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
                 <module>content-review/contentreview-impl</module>
+                <module>da_evalprovider</module>
             </modules>
         </profile>
         <profile>
