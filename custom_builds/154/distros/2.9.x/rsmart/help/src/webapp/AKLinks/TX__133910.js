@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__133910", [["WordDocuments/addingawebcontenttool.htm", "right", "Adding a Web Content Tool"],["WordDocuments/deletingawebcontenttool.htm", "right", "Deleting a Web Content Tool"]]);

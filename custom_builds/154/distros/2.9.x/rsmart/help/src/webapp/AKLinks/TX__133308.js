@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__133308", [["WordDocuments/revertingbacktoautocalculatedcoursegrades.htm", "right", "Reverting Back to Auto-calculated Course Grades"],["WordDocuments/revertingbacktoautocalculatedgrades.htm", "right", "Reverting Back to Auto-calculated Grades"]]);

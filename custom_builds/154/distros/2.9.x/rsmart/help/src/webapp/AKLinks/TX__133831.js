@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__133831", [["WordDocuments/movingsections.htm", "right", "Moving Sections"],["WordDocuments/reorderingsections.htm", "right", "Reordering Sections"]]);

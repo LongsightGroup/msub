@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__133434", [["WordDocuments/toolsavailableinmyworkspace.htm", "right", "Tools Available in My Workspace"],["WordDocuments/toolsincoursesites.htm", "right", "Tools in Course Sites"],["WordDocuments/toolsinportfoliosites.htm", "right", "Tools in Portfolio Sites"],["WordDocuments/toolsinprojectsites.htm", "right", "Tools in Project Sites"]]);

@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__133590", [["WordDocuments/managingevents.htm", "right", "Managing Events"],["WordDocuments/subscribingtoexternalcalendars.htm", "right", "Subscribing to External Calendars"]]);

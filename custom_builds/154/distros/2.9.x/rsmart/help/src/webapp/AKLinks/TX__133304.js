@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__133304", [["WordDocuments/calculatingandexportingcoursegrades.htm", "right", "Calculating and Exporting Course Grades"],["WordDocuments/overridinganautocalculatedcoursegrade.htm", "right", "Overriding an Auto-calculated Course Grade"]]);

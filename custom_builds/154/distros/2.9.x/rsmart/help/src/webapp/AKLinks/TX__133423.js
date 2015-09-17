@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__133423", [["WordDocuments/calendarsummary.htm", "right", "Calendar Summary"],["WordDocuments/myworkspaceinformation.htm", "right", "My Workspace Information"]]);

@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__134102", [["WordDocuments/changingpermissionsforusingthewizardstool.htm", "right", "Changing Permissions for Using the Wizards Tool"],["WordDocuments/settingnotificationpreferencesforthewizardstool.htm", "right", "Setting Notification Preferences for the Wizards Tool"]]);

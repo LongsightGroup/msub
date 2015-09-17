@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__133402", [["WordDocuments/copyingaquestionfromaquestionpooltoanassessment.htm", "right", "Copying a Question from a Question Pool to an Assessment"],["WordDocuments/copyingandmovingquestionsbetweenpoolssubpools.htm", "right", "Copying and Moving Questions Between Pools/Subpools"]]);

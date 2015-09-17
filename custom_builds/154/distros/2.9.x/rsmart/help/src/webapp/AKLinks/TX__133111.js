@@ -1,1 +1,0 @@
-﻿d2hStoreMenuItems("TX__133111", [["WordDocuments/changingstudentoptions.htm", "right", "Changing Student Options"],["WordDocuments/messageoftheday.htm", "right", "Message of the Day"]]);
