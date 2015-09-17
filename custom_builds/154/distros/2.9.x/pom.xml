@@ -117,14 +117,12 @@
                 <module>basiclti</module>
                 <!--module>blog</module-->
 		<module>blogwow</module>
-                <module>bigbluebutton</module>
                 <module>calendar</module>
                 <module>chat</module>
                 <module>citations</module>
                 <module>clog</module>
                 <module>common</module>
                 <module>config</module>
-                <module>config-viewer</module>
                 <module>content</module>
                 <module>content-review</module>
                 <module>courier</module>
@@ -143,7 +141,6 @@
                 <!--module>gmt</module-->
 		<module>external-calendaring-service</module>
                 <module>gradebook</module>
-                <module>gradebook2</module>
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>hybrid</module>
@@ -154,8 +151,6 @@
                 <module>jsf</module>
                 <module>kaltura</module>
                 <module>lessonbuilder</module>
-                <module>linktool</module>
-                <module>mailarchive</module>
                 <module>mailsender</module>
                 <module>melete</module>
                 <module>memory</module>
@@ -170,13 +165,18 @@
                 <module>polls</module>
 
                 <module>postem</module>
-                <module>presence</module>
-                <module>providers</module>
                 <module>profile</module>
                 <module>profile2</module>
 <!--
+                <module>providers</module>
+                <module>presence</module>
+                <module>gradebook2</module>
+                <module>config-viewer</module>
+                <module>bigbluebutton</module>
                 <module>osp</module>
                 <module>warehouse</module>
+                <module>reports</module>
+                <module>webservices</module>
                 <module>metaobj</module>
                 <module>portal</module>
                 <module>reference</module>
@@ -186,6 +186,9 @@
                 <module>turnitin/contentreview-impl</module>
                 <module>scoring-service</module>
 		<module>irubric</module>
+                <module>search</module>
+                <module>mailarchive</module>
+                <module>linktool</module>
 -->
                 <module>rights</module>
                 <module>roster</module>
@@ -193,7 +196,6 @@
                 <module>rwiki</module>
                 <module>sam</module>
 
-                <module>search</module>
                 <module>sections</module>
                 <module>shortenedurl</module>
                 <module>skin-manager</module>
@@ -209,10 +211,8 @@
                 <module>user</module>
                 <module>velocity</module>
                 <module>web</module>
-                <module>webservices</module>
                 <module>usermembership</module>
                 <module>sakai-wicket</module>
-                <module>reports</module>
                 <module>reset-pass</module>
                 <module>taggable</module>
             </modules>
