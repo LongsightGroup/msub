@@ -65,9 +65,6 @@ usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
-# Locked because it requires edu-services changes
-#samigo -r 320404 https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
-
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/config/branches/sakai-10.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
