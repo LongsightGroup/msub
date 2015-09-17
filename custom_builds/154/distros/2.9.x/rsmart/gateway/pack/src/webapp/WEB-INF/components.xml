@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+
+   <!-- adds the reset password tool to the gateway site upon startup -->
+   <!--
+      <bean id="com.rsmart.sakai.site.SiteInitializer.gateway" class="com.rsmart.sakai.site.SiteInitializer" init-method="init">
+          <property name="siteId"><value>!gateway</value></property>
+          <property name="siteService">
+             <ref bean="org.sakaiproject.site.api.SiteService"/>
+          </property>
+          <property name="tools">
+              <bean class="com.rsmart.sakai.site.ToolBean">
+                  <property name="pageId"><value>Forgot Password</value></property>
+                  <property name="pageName"><value>Forgot Password</value></property>
+                  <property name="toolId"><value>sakai.resetpass</value></property>
+              </bean>
+          </property>
+      </bean>
+   -->
+
+   <!-- the following controls the default tools that show up on the gateway site -->
+<!--   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayNewAccount"
+         lazy-init="default" singleton="true">
+      <property name="label">
+         <value>I'm a new user, sign me up!</value>
+      </property>
+      <property name="worksiteId">
+         <value>!gateway</value>
+      </property>
+      <property name="pageName">
+         <value>I'm a new user, sign me up!</value>
+      </property>
+      <property name="layout">
+         <value>0</value>
+      </property>
+      <property name="positionFromEnd">
+         <value>0</value>
+      </property>
+      <property name="tools">
+         <list>
+            <ref bean="org.theospi.portfolio.admin.service.ToolOption.gatewayNewAccount"/>
+         </list>
+      </property>
+      <property name="include" value="true"/>
+   </bean>
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.gatewayNewAccount" lazy-init="default"
+         singleton="true">
+      <property name="toolId">
+         <value>sakai.createuser</value>
+      </property>
+      <property name="title">
+         <value>I'm a new user, sign me up!</value>
+      </property>
+      <property name="layoutHints">
+         <value>0,0</value>
+      </property>
+      <property name="initProperties">
+         <props>
+         </props>
+      </property>
+   </bean>
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewaySites"
+         lazy-init="default" singleton="true">
+      <property name="label">
+         <value><![CDATA[Search Public Courses & Projects]]></value>
+      </property>
+      <property name="worksiteId">
+         <value>!gateway</value>
+      </property>
+      <property name="pageName">
+         <value><![CDATA[Search Public Courses & Projects]]></value>
+      </property>
+      <property name="layout">
+         <value>0</value>
+      </property>
+      <property name="positionFromEnd">
+         <value>0</value>
+      </property>
+      <property name="tools">
+         <list>
+            <ref bean="org.theospi.portfolio.admin.service.ToolOption.gatewaySites"/>
+         </list>
+      </property>
+      <property name="include" value="true"/>
+   </bean>
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.gatewaySites" lazy-init="default"
+         singleton="true">
+      <property name="toolId">
+         <value>sakai.sitebrowser</value>
+      </property>
+      <property name="title">
+         <value><![CDATA[Search Public Courses & Projects]]></value>
+      </property>
+      <property name="layoutHints">
+         <value>0,0</value>
+      </property>
+      <property name="initProperties">
+         <props>
+         </props>
+      </property>
+   </bean>
+
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayAbout"
+         lazy-init="default" singleton="true">
+      <property name="label">
+         <value>About</value>
+      </property>
+      <property name="worksiteId">
+         <value>!gateway</value>
+      </property>
+      <property name="pageName">
+         <value>About</value>
+      </property>
+      <property name="layout">
+         <value>0</value>
+      </property>
+      <property name="positionFromEnd">
+         <value>0</value>
+      </property>
+      <property name="tools">
+         <list>
+         </list>
+      </property>
+      <property name="include" value="false"/>      
+   </bean>
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayAck"
+         lazy-init="default" singleton="true">
+      <property name="label">
+         <value>Acknowledgements</value>
+      </property>
+      <property name="worksiteId">
+         <value>!gateway</value>
+      </property>
+      <property name="pageName">
+         <value>Acknowledgements</value>
+      </property>
+      <property name="layout">
+         <value>0</value>
+      </property>
+      <property name="positionFromEnd">
+         <value>0</value>
+      </property>
+      <property name="tools">
+         <list>
+         </list>
+      </property>
+      <property name="include" value="false"/>
+   </bean>
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayAccount"
+         lazy-init="default" singleton="true">
+      <property name="label">
+         <value>New Account</value>
+      </property>
+      <property name="worksiteId">
+         <value>!gateway</value>
+      </property>
+      <property name="pageName">
+         <value>New Account</value>
+      </property>
+      <property name="layout">
+         <value>0</value>
+      </property>
+      <property name="positionFromEnd">
+         <value>0</value>
+      </property>
+      <property name="tools">
+         <list>
+         </list>
+      </property>
+      <property name="include" value="false"/>
+   </bean>
+
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayFeatures"
+         lazy-init="default" singleton="true">
+      <property name="label">
+         <value>Features</value>
+      </property>
+      <property name="worksiteId">
+         <value>!gateway</value>
+      </property>
+      <property name="pageName">
+         <value>Features</value>
+      </property>
+      <property name="layout">
+         <value>0</value>
+      </property>
+      <property name="positionFromEnd">
+         <value>0</value>
+      </property>
+      <property name="tools">
+         <list>
+         </list>
+      </property>
+      <property name="include" value="false"/>
+   </bean>
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayTraining"
+         lazy-init="default" singleton="true">
+      <property name="label">
+         <value>Training</value>
+      </property>
+      <property name="worksiteId">
+         <value>!gateway</value>
+      </property>
+      <property name="pageName">
+         <value>Training</value>
+      </property>
+      <property name="layout">
+         <value>0</value>
+      </property>
+      <property name="positionFromEnd">
+         <value>0</value>
+      </property>
+      <property name="tools">
+         <list>
+         </list>
+      </property>
+      <property name="include" value="false"/>
+   </bean>
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
+         dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayWelcome"
+         lazy-init="default" singleton="true">
+      <property name="label">
+         <value>Welcome</value>
+      </property>
+      <property name="worksiteId">
+         <value>!gateway</value>
+      </property>
+      <property name="pageName">
+         <value>Welcome</value>
+      </property>
+      <property name="layout">
+         <value>0</value>
+      </property>
+      <property name="positionFromEnd">
+         <value>0</value>
+      </property>
+      <property name="tools">
+         <list>
+         </list>
+      </property>
+      <property name="include" value="false"/>
+   </bean>
+
+
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolPageIntegrationPlugin"
+         dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.gateway.pages"
+         lazy-init="default" singleton="true">
+      <property name="siteService">
+         <ref bean="org.sakaiproject.site.api.SiteService"/>
+      </property>
+      <property name="toolManager">
+         <ref bean="org.sakaiproject.tool.api.ActiveToolManager"/>
+      </property>
+      <property name="title" value=""/>
+      <property name="description" value=""/>
+      <property name="potentialIntegrations">
+         <list>
+            --><!-- put on site --><!--
+            <ref bean="org.theospi.portfolio.admin.model.IntegrationOption.gatewayNewAccount"/>
+            <ref bean="org.theospi.portfolio.admin.model.IntegrationOption.gatewaySites"/>
+            --><!-- remove from site below --><!--
+            <ref bean="org.theospi.portfolio.admin.model.IntegrationOption.gatewayAbout"/>
+            <ref bean="org.theospi.portfolio.admin.model.IntegrationOption.gatewayAck"/>
+            <ref bean="org.theospi.portfolio.admin.model.IntegrationOption.gatewayFeatures"/>
+            <ref bean="org.theospi.portfolio.admin.model.IntegrationOption.gatewayTraining"/>
+            <ref bean="org.theospi.portfolio.admin.model.IntegrationOption.gatewayWelcome"/>
+            <ref bean="org.theospi.portfolio.admin.model.IntegrationOption.gatewayAccount"/>
+         </list>
+      </property>
+   </bean>
+
+    <bean abstract="false" autowire="default" class="com.rsmart.sakai.osp.integration.service.RsmartSakaiIntegrationServiceImpl" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationService.rsmart.gateway" lazy-init="default" singleton="true">
+      <property name="integrationPlugins">
+         <list>
+            <value>org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.gateway.pages</value>
+         </list>
+      </property>
+      <property name="startupResetManager">
+         <ref bean="org.theospi.portfolio.admin.intf.StartupResetManager"/>
+      </property>
+      <property name="initUsers">
+      	<list>
+      		<value>admin</value>
+      	</list>
+      </property>
+      <property name="pollingInterval" value="5000"/>
+      <property name="schedulerManager" ref="org.sakaiproject.api.app.scheduler.SchedulerManager"/>
+      <property name="dependantBeans">
+         <list>
+            <ref bean="org.theospi.portfolio.security.model.SakaiDefaultPermsManager.sakaiTools"/>
+            <ref bean="org.sakaiproject.mailarchive.api.MailArchiveService"/>
+            <ref bean="org.sakaiproject.announcement.api.AnnouncementService"/>
+            <ref bean="org.sakaiproject.calendar.api.CalendarService"/>
+            <ref bean="org.sakaiproject.chat.api.ChatService"/>
+            <ref bean="org.sakaiproject.content.api.ContentHostingService"/>
+            <ref bean="uk.ac.cam.caret.sakai.rwiki.service.api.RWikiObjectService"/>
+         </list>
+      </property>
+      <property name="contentHostingService" ref="org.sakaiproject.content.api.ContentHostingService"/>
+   </bean>-->
+</beans>

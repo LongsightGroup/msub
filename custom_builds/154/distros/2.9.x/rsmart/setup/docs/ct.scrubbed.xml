@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- input: ct_<site type>.xml and tool-scrubbed.xml -->
+<toolCategories siteId="">
+   <category order="0" type="uncategorized" key="">
+      <name></name>
+      <globalRoleText>
+         <role id="">text here</role>
+      </globalRoleText>
+      <tools>
+         <tool order="0" id="">
+            <title></title>
+            <functions></functions>
+            <roleText>
+               <role id="">text here</role>
+            </roleText>
+         </tool>
+      </tools>
+   </category>
+</toolCategories>

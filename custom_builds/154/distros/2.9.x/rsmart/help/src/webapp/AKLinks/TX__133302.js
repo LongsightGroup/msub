@@ -1,0 +1,1 @@
+﻿d2hStoreMenuItems("TX__133302", [["WordDocuments/exportingcoursegrades.htm", "right", "Exporting Course Grades"],["WordDocuments/exportinggradestodate.htm", "right", "Exporting Grades to Date"]]);

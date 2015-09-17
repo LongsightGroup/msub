@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ valid values for type attribute are: collection, artifact, object
+ if not specified object is assumed
+ 
+ -->
+<submittedAssignment class="com.rsmart.sakaiproject.osp.presentable.assignment.SubmittedAssignment">
+    <baseAssignmentSubmission class="org.sakaiproject.assignment.api.AssignmentSubmission">
+        <assignment class="org.sakaiproject.assignment.api.Assignment">
+            <content class="org.sakaiproject.assignment.api.AssignmentContent">
+                <attachments type="collection" class="org.sakaiproject.entity.impl.ReferenceComponent">
+                </attachments>
+            </content>
+        </assignment>
+        <submittedAttachments type="collection" class="org.sakaiproject.entity.impl.ReferenceComponent">
+        </submittedAttachments>
+        <feedbackAttachments type="collection" class="org.sakaiproject.entity.impl.ReferenceComponent">
+        </feedbackAttachments>
+    </baseAssignmentSubmission>
+    <tags type="collection" class="java.util.Map">
+        <ratings type="collection" class="org.sakaiproject.gmt.api.Rating">
+        </ratings>
+    </tags>
+</submittedAssignment>

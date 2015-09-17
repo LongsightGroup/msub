@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+   <pomVersion>3</pomVersion>
+   <extend>../../../../master/project.xml</extend>
+   <name>rsmart-customizer-api</name>
+   <groupId>rSmart</groupId>
+   <id>rsmart-customizer-api</id>
+   <currentVersion>${sakai.version}</currentVersion>
+   <organization>
+       <name>The rSmart Group</name>
+       <url>http://www.rsmart.com/</url>
+   </organization>
+   <inceptionYear>2002</inceptionYear>
+
+  <properties>
+    <deploy.type>jar</deploy.type>
+    <deploy.target>shared</deploy.target>
+  </properties>
+   
+   <dependencies>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-tool-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+      
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-metaobj-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+            
+   </dependencies>
+
+   <build>
+      <!-- java source -->
+      <sourceDirectory>src/java</sourceDirectory>
+
+      <resources>
+         <resource>
+            <directory>src/bundle</directory>
+            <includes>
+               <include>**/*.properties</include>
+            </includes>
+         </resource>
+         <resource>
+            <directory>src/java</directory>
+            <includes>
+               <include>**/*.hbm.xml</include>
+            </includes>
+         </resource>
+      </resources>
+   </build>
+</project>

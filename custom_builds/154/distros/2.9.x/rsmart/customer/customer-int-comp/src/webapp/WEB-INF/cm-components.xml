@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+    <!--bean id="org.sakaiproject.evaluation.providers.EvalGroupsProvider"
+          class="com.rsmart.evalsys.HierachyEvalGroupsProvider"           
+          init-method="init">
+        <property name="externalHierarchyLogic" ref="org.sakaiproject.evaluation.logic.externals.ExternalHierarchyLogic"/>
+    </bean-->
+    <bean id="com.rsmart.evalsys.HierarchyUtil" class="com.rsmart.evalsys.HierarchyUtil" init-method="init">
+        <property name="hierarchyService" ref="org.sakaiproject.hierarchy.HierarchyService"/>
+    </bean>
+
+    <bean id="com.rsmart.customer.integration.cm.CrossListingHelper" class="com.rsmart.customer.integration.cm.CrossListingHelperImpl" init-method="init">
+        <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
+    </bean>
+
+    <bean id="org.sakaiproject.evaluation.providers.EvalGroupsProvider" class="com.rsmart.evalsys.CMEvalGroupProviderImpl"
+            init-method="init">
+        <property name="courseManagementService" ref="org.sakaiproject.coursemanagement.api.CourseManagementService"/>
+        <property name="uds">
+            <ref bean="org.sakaiproject.user.api.UserDirectoryService"/>
+        </property>
+        <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
+    </bean>
+
+
+
+    <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration.hierarchyloader.configurable"
+          class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobBeanWrapper"
+          singleton="true" init-method="init">
+       <property name="beanId">
+          <value>hierarchyLoaderIntegrationJob</value>
+       </property>
+       <property name="jobName">
+          <value>Hierarchy Loader</value>
+       </property>
+       <property name="schedulerManager">
+          <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/>
+       </property>
+        <property name="resourceBundleBase" value="com.rsmart.customer.integration.job.Messages"/>
+        <property name="configurableJobProperties">
+            <set>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.hierachyloader.term"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.hierachyloader.term_description"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="hierarchyLoaderIntegrationJob" class="com.rsmart.customer.integration.job.CMSHierarchyLoaderJob"
+         init-method="init">
+        <property name="hierarchyUtil" ref="com.rsmart.evalsys.HierarchyUtil"/>
+      <property name="adminUser" value="admin"/>
+      <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
+      <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
+      <property name="hierarchyService" ref="org.sakaiproject.hierarchy.HierarchyService"/>
+      <property name="externalHierarchyLogic" ref="org.sakaiproject.evaluation.logic.externals.ExternalHierarchyLogic"/>
+      <property name="cmService" ref="org.sakaiproject.coursemanagement.api.CourseManagementService"/>
+   </bean>
+
+    <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration.course-management.configurable"
+          class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobBeanWrapper"
+          singleton="true" init-method="init">
+       <property name="beanId">
+          <value>courseManagementIntegrationJob</value>
+       </property>
+       <property name="jobName">
+          <value>Course Management Synchronization</value>
+       </property>
+       <property name="schedulerManager">
+          <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/>
+       </property>
+        <property name="resourceBundleBase" value="com.rsmart.customer.integration.job.Messages"/>
+        <property name="configurableJobProperties">
+            <set>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="path.base"/>
+                     <property name="descriptionResourceKey" value="path.base.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.AcademicSessionProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.AcademicSessionProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.CourseSetProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.CourseSetProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.CanonicalCourseProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.CanonicalCourseProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingMemberProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingMemberProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.SectionCategoryProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.SectionCategoryProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.EnrollmentSetProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.EnrollmentSetProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.SectionProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.SectionProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.SectionMeetingProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.SectionMeetingProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.SectionMemberProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.SectionMemberProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.EnrollmentProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.EnrollmentProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.InstructorProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.InstructorProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.MembershipProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.MembershipProcessor.description"/>
+                </bean>
+
+            </set>
+        </property>
+    </bean>
+
+   <bean id="courseManagementIntegrationJob" class="com.rsmart.customer.integration.job.IntegrationJob"
+         init-method="init">
+      <property name="adminUser" value="admin"/>
+      <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
+      <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
+      <property name="dataProcessors">
+         <list>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.AcademicSessionProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.CourseSetProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.CanonicalCourseProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingMemberProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.SectionCategoryProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.EnrollmentSetProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.SectionProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.SectionMeetingProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.SectionMemberProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.EnrollmentProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.InstructorProcessor"/>
+            <ref bean="com.rsmart.customer.integration.processor.cle.cm.MembershipProcessor"/>
+         </list>
+      </property>
+      <property name="emailService">
+         <ref bean="org.sakaiproject.email.api.EmailService"></ref>
+      </property>
+   </bean>
+
+   <bean abstract="true" id="cmProcessor">
+      <property name="dateFormat">
+         <value>yyyy-MM-dd</value>
+      </property>
+      <property name="cmService">
+         <ref bean="org.sakaiproject.coursemanagement.api.CourseManagementService"/>
+      </property>
+      <property name="cmAdmin">
+         <ref bean="org.sakaiproject.coursemanagement.api.CourseManagementAdministration"/>
+      </property>
+      <property name="fileArchiveUtil">
+         <ref bean="com.rsmart.customer.integration.util.FileArchiveUtil"/>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.CanonicalCourseProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.CanonicalCourseProcessor">
+      <property name="filename">
+         <value>/tmp/canonical_course.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>3</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.AcademicSessionProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.AcademicSessionProcessor">
+      <property name="filename">
+         <value>/tmp/academic_session.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>5</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.CourseSetProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.CourseSetProcessor">
+      <property name="filename">
+         <value>/tmp/course_set.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>5</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingProcessor">
+      <property name="filename">
+         <value>/tmp/course_offering.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>8</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingMemberProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.CourseOfferingMemberProcessor">
+      <property name="filename">
+         <value>/tmp/course_offering_member.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>4</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.SectionProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.SectionProcessor">
+      <property name="filename">
+         <value>/tmp/section.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>7</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.EnrollmentSetProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.EnrollmentSetProcessor">
+      <property name="filename">
+         <value>/tmp/enrollment_set.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>6</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.EnrollmentProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.EnrollmentProcessor">
+      <property name="filename">
+         <value>/tmp/enrollment.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>5</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.SectionMeetingProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.SectionMeetingProcessor">
+        <property name="sectionHibernateHelper">
+         <ref bean="com.rsmart.customer.integration.processor.cle.cm.SectionHibernateHelperImpl"/>
+
+      </property> 
+
+      <property name="filename">
+         <value>/tmp/section_meeting.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>3</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+    <bean id="com.rsmart.customer.integration.processor.cle.cm.SectionHibernateHelperImpl"
+              class="com.rsmart.customer.integration.processor.cle.cm.SectionHibernateHelperImpl">
+        <property name="sessionFactory">
+            <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory" />
+         </property>
+        <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
+     </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.SectionMemberProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.SectionMemberProcessor">
+      <property name="filename">
+         <value>/tmp/section_member.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>4</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.InstructorProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.InstructorProcessor">
+      <property name="filename">
+         <value>/tmp/instructor.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>2</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+    <bean id="com.rsmart.customer.integration.processor.cle.cm.MembershipProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.MembershipProcessor">
+      <property name="filename">
+         <value>/tmp/membership.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>5</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.cm.SectionCategoryProcessor" parent="cmProcessor"
+         class="com.rsmart.customer.integration.processor.cle.cm.SectionCategoryProcessor">
+      <property name="filename">
+         <value>/tmp/section_category.csv</value>
+      </property>
+      <property name="headerRowPresent">
+         <value>false</value>
+      </property>
+      <property name="columns">
+         <value>2</value>
+      </property>
+      <property name="archive">
+         <value>false</value>
+      </property>
+   </bean>
+
+
+</beans>

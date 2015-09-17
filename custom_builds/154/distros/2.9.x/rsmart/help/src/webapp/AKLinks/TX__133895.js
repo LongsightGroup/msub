@@ -1,0 +1,1 @@
+﻿d2hStoreMenuItems("TX__133895", [["WordDocuments/settingupwebdavinmacos103orearlier.htm", "right", "Setting up WebDAV in Mac OS 10.3 or Earlier"],["WordDocuments/settingupwebdavinwindows7andwindowsvista.htm", "right", "Setting up WebDAV in Windows 7 and Windows Vista"]]);
