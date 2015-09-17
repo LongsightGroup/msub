@@ -155,38 +155,42 @@
                 <module>kaltura</module>
                 <module>lessonbuilder</module>
                 <module>linktool</module>
-                <module>login</module>
                 <module>mailarchive</module>
                 <module>mailsender</module>
                 <module>melete</module>
                 <module>memory</module>
                 <module>message</module>
                 <module>messageservice</module>
-                <module>metaobj</module>
                 <module>msgcntr</module>
 
                 <!--module>mneme</module-->
                 <!--module>opensyllabus</module-->
 
-                <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
 
-                <module>portal</module>
                 <module>postem</module>
                 <module>presence</module>
                 <module>providers</module>
                 <module>profile</module>
                 <module>profile2</module>
-
+<!--
+                <module>osp</module>
+                <module>warehouse</module>
+                <module>metaobj</module>
+                <module>portal</module>
                 <module>reference</module>
-
+                <module>login</module>
+                <module>rsmart</module>
+                <module>sakora</module>
+                <module>turnitin/contentreview-impl</module>
+                <module>scoring-service</module>
+		<module>irubric</module>
+-->
                 <module>rights</module>
                 <module>roster</module>
                 <!--module>roster2</module-->
-                <module>rsmart</module>
                 <module>rwiki</module>
-                <module>sakora</module>
                 <module>sam</module>
 
                 <module>search</module>
@@ -208,13 +212,9 @@
                 <module>webservices</module>
                 <module>usermembership</module>
                 <module>sakai-wicket</module>
-                <module>warehouse</module>
                 <module>reports</module>
                 <module>reset-pass</module>
                 <module>taggable</module>
-                <module>turnitin/contentreview-impl</module>
-                <module>scoring-service</module>
-		<module>irubric</module>
             </modules>
         </profile>
         <profile>
