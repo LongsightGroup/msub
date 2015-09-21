@@ -1,1 +1,0 @@
-update rsn_tool_final_config set prop_value = 'sakai.forums' where prop_key = 'help.id' and tool_id = (select id from rsn_tool where tool_id = 'sakai.forums');

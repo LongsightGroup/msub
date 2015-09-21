@@ -1,2 +1,0 @@
-call AddColumnUnlessExists(DATABASE(), 'JFORUM_SEARCH_TOPICS', 'allow_until_date', 'DATETIME NULL DEFAULT NULL AFTER search_time');
-call AddColumnUnlessExists(DATABASE(), 'JFORUM_SEARCH_TOPICS', 'hide_until_open', 'TINYINT(1) NULL DEFAULT 0 AFTER allow_until_date');

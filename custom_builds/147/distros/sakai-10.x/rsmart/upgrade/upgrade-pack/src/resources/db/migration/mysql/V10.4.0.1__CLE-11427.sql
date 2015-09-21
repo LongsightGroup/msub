@@ -1,1 +1,0 @@
-call DropIndexIfExists(DATABASE(), 'MFR_MESSAGE_DELETED_I', 'MFT_MESSAGE_T');
