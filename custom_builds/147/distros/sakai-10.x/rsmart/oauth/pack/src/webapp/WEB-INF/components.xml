@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2011 The rSmart Group
+  ~
+  ~ The contents of this file are subject to the Mozilla Public License
+  ~ Version 1.1 (the "License"); you may not use this file except in
+  ~ compliance with the License. You may obtain a copy of the License at
+  ~ http://www.mozilla.org/MPL/
+  ~
+  ~ Software distributed under the License is distributed on an "AS IS"
+  ~ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  ~ License for the specific language governing rights and limitations
+  ~ under the License.
+  ~
+  ~ Contributor(s): duffy
+  -->
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+
+    <bean id="org.sakaiproject.oauth.hibernate.AdditionalHibernateMappings"
+          class="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl">
+        <property name="mappingResources">
+            <list>
+                <value>com/rsmart/oauth/hibernate/OAuthProviderHibernateImpl.hbm.xml</value>
+                <value>com/rsmart/oauth/hibernate/OAuthTokenHibernateImpl.hbm.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="com.rsmart.oauth.api.OAuthTokenServiceImpl" class="com.rsmart.oauth.hibernate.OAuthTokenServiceHibernateImpl">
+        <property name="sessionFactory" ref="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/>
+    </bean>
+
+    <bean id="com.rsmart.oauth.api.OAuthTokenService"
+          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+        <property name="transactionManager">
+            <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
+        </property>
+        <property name="target">
+            <ref bean="com.rsmart.oauth.api.OAuthTokenServiceImpl"/>
+        </property>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>
+
+<!--
+    <bean id="com.rsmart.oauth.api.OAuthTokenService"
+          class="com.rsmart.content.google.mock.MockOAuthTokenServiceImpl"/>    
+-->
+
+</beans>

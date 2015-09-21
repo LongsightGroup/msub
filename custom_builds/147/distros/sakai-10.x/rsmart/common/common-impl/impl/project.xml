@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+   <pomVersion>3</pomVersion>
+   <extend>../../../../master/project.xml</extend>
+   <name>Rsmart Common Impl</name>
+   <groupId>rSmart</groupId>
+   <id>rsmart-common-impl</id>
+   <currentVersion>${sakai.version}</currentVersion>
+   <organization>
+      <name>The rSmart Group</name>
+      <url>http://www.rsmart.com</url>
+   </organization>
+   <inceptionYear>2000</inceptionYear>
+
+   <properties>
+      <deploy.type>jar</deploy.type>
+      <!-- deploy to "shared", "common" or "server" -->
+   </properties>
+
+   <dependencies>
+       <dependency>
+          <groupId>rSmart</groupId>
+          <artifactId>rsmart-common</artifactId>
+          <version>${sakai.version}</version>
+       </dependency>
+
+      <dependency>
+         <groupId>rSmart</groupId>
+         <artifactId>rsmart-common-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>sakaiproject</groupId>
+        <artifactId>sakai-db-api</artifactId>
+        <version>${sakai.version}</version>
+      </dependency>
+       
+      <dependency>
+        <groupId>${sakai.spring.groupId}</groupId>
+        <artifactId>${sakai.spring.artifactId}</artifactId>
+        <version>${sakai.spring.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai</artifactId>
+         <version>${sakai.plugin.version}</version>
+         <type>plugin</type>
+      </dependency>
+
+       <dependency>
+           <groupId>sakaiproject</groupId>
+           <artifactId>sakai-site-api</artifactId>
+           <version>${sakai.version}</version>
+       </dependency>
+
+       <dependency>
+           <groupId>sakaiproject</groupId>
+           <artifactId>sakai-authz-api</artifactId>
+           <version>${sakai.version}</version>
+       </dependency>
+
+       <dependency>
+           <groupId>sakaiproject</groupId>
+           <artifactId>sakai-tool-api</artifactId>
+           <version>${sakai.version}</version>
+       </dependency>
+
+       <dependency>
+           <groupId>sakaiproject</groupId>
+           <artifactId>sakai-entity-api</artifactId>
+           <version>${sakai.version}</version>
+       </dependency>
+
+       <dependency>
+           <groupId>sakaiproject</groupId>
+           <artifactId>sakai-util-api</artifactId>
+           <version>${sakai.version}</version>
+       </dependency>
+
+       <dependency>
+         <groupId>commons-logging</groupId>
+         <artifactId>commons-logging</artifactId>
+         <version>1.0.4</version>
+       </dependency>
+
+   </dependencies>
+
+   <build>
+      <sourceDirectory>src/java</sourceDirectory>
+   </build>
+</project>
