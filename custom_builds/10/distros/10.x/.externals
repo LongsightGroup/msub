@@ -58,7 +58,7 @@ reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
 rwiki https://source.sakaiproject.org/svn/rwiki/branches/sakai-10.x
-samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
+#samigo https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
 search https://source.sakaiproject.org/svn/search/branches/sakai-10.x
 sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
@@ -87,6 +87,7 @@ linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-10.x/
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 qna https://source.sakaiproject.org/contrib/qna/branches/sakai-10.x
+samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/sakai-10/
 sms https://source.sakaiproject.org/contrib/sms/sms/trunk/
 wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/branches/sakai-2.9
