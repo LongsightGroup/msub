@@ -79,7 +79,9 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 msgcntr -r 39250 https://github.com/sakaiproject/sakai/trunk/msgcntr
-samigo -r 38764 https://github.com/sakaiproject/sakai/trunk/samigo
+#samigo -r 38764 https://github.com/sakaiproject/sakai/trunk/samigo
+#Longsight fork of Samigo
+samigo https://github.com/LongsightGroup/sakai/branches/nd-samigo/samigo
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/site-manage/10.x
 tool https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/tool/tool-10.x
 jforum https://source.sakaiproject.org/contrib/longsight/jforum/10.x
