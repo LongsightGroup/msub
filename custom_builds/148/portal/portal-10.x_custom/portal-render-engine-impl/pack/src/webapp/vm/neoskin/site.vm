@@ -27,6 +27,33 @@
 </script>
 #end
 #end
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+jQuery(document).ready( function() {
+jQuery("#eid").keyup(function (event) {
+    eid = jQuery("#eid").val();
+    char64 = eid.indexOf('@');
+    if (char64 == -1) {
+        if (!$("#domain").is(":visible")) {
+            $("#domain").fadeIn(500, function() { $(this).show(); });
+        }
+    } else {
+        if ($("#domain").is(":visible")) {
+            $("#domain").fadeOut(500, function() { $(this).hide(); });
+        }
+    }
+});
+
+jQuery("#loginForm").submit(function (event) {
+    eid = jQuery("#eid").val();
+    char64 = eid.indexOf('@');
+    if (char64 == -1) {
+        jQuery("#eid").val(eid + "@covenantseminary.edu");
+    }
+});
+});
+//]]>
+</script>
 <!-- site.vm -->
 
 <!-- start includeSiteNav -->
@@ -117,8 +144,9 @@
 					#else
 						<form id="loginForm" method="post" action="${loginPortalPath}/xlogin" enctype="application/x-www-form-urlencoded">
 							<label for="eid">${loginEidWording}</label>
-							<input name="eid" id="eid" type="text" />
-							<label for="pw">${loginPwWording}</label>
+							<input name="eid" id="eid" type="text" style="margin-right: 0px"/>
+                            <span id="domain">@covenantseminary.edu</span>
+							<label for="pw" style="margin-left: 30px">${loginPwWording}</label>
 							<input name="pw" type="password" id="pw" />
 							<input name="submit" type="submit" id="submit" value="${loginWording}" />
 						</form>
