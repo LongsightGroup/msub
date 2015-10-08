@@ -79,6 +79,7 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 gradebook2 -r 87658              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/10.4.x
+clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/10.4.x
 
 # rSmart needs metaobj
 metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
@@ -87,3 +88,4 @@ rsmart                           https://source.sakaiproject.org/svn/msub/rsmart
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 #
 #shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
+#shell_command find clog/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
