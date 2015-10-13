@@ -83,9 +83,7 @@
                 <module>mailsender</module>
                 <module>memory</module>
                 <module>message</module>
-                <module>metaobj</module>
                 <module>msgcntr</module>
-                <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
                 <module>portal</module>
@@ -93,7 +91,6 @@
                 <module>presence</module>
                 <module>profile2</module>
                 <module>providers</module>
-                <module>reference</module>
                 <module>reset-pass</module>
                 <module>rights</module>
                 <module>roster2</module>
@@ -115,17 +112,17 @@
                 <module>userauditservice</module>
                 <module>usermembership</module>
                 <module>velocity</module>
-                <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
             	<module>etudes-util</module>
-	<!--	<module>wicket-for-scorm</module> -->
 		<module>blogwow</module>
 		<module>evaluation</module>
 		<module>linktool</module>
 		<module>melete</module>
 	<!--	<module>scorm</module>  -->
+	<!--	<module>wicket-for-scorm</module> -->
 		<module>bigbluebutton-sakai/bbb-tool</module>
+                <module>qna</module>
                 <module>sms</module>
             </modules>
         </profile>
