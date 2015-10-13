@@ -20,6 +20,7 @@ import org.sakaiproject.email.cover.EmailService;
 import org.sakaiproject.exception.IdUnusedException;
 import org.sakaiproject.lessonbuildertool.ActivityAlert;
 import org.sakaiproject.lessonbuildertool.SimplePage;
+import org.sakaiproject.lessonbuildertool.SimplePageItem;
 import org.sakaiproject.lessonbuildertool.SimplePageLogEntry;
 import org.sakaiproject.site.api.Site;
 import org.sakaiproject.site.cover.SiteService;
@@ -159,12 +160,21 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 									User user = null;
 									try {
 										user = UserDirectoryService.getUser(userId);
+										List<SimplePageItem> pageItems = simplePageToolDao.findItemsOnPage(pageId);
 										
-										SimplePageLogEntry entry = simplePageToolDao.getLogEntry(userId, pageId, -1L);
+										boolean pageViewed = false;
+										for (SimplePageItem pageItem : pageItems) {
+											if (pageViewed == false) {
+												// as long as 1 item was viewed the page is considered visited by the user
+												SimplePageLogEntry entry = simplePageToolDao.getLogEntry(userId, pageItem.getId(), -1L);
+												if (entry != null) {
+													pageViewed = true;
+												}
+											}
+										}
 
-										// if there is no entry or firstViewed is null 
-										// then this user is inactive for this page
-										if (entry == null || entry.getFirstViewed() == null) {
+										if (pageViewed == false) {
+											// user is inactive for this page
 											inactiveUsers.add(user);
 											if(StringUtils.isNotBlank(user.getEmail())){
 												//send email:
