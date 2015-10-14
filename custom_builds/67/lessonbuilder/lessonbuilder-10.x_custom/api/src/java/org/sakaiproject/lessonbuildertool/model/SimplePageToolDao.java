@@ -194,6 +194,9 @@ public interface SimplePageToolDao {
 	
     // includes the dummy entries for preauthoized pages, but that's OK
 	public boolean isPageVisited(long pageId, String userId, String owner);
+	
+	// if user has any activity on the page, doesn't look at student pages
+	public boolean hasActivityForPage(String userId, long pageId);
 
 	public List<SimplePageLogEntry> getStudentPageLogEntries(long itemId, String userId);
 

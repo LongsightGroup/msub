@@ -35,6 +35,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.sql.Connection;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.criterion.DetachedCriteria;
@@ -863,6 +864,21 @@ public class SimplePageToolDaoImpl extends HibernateDaoSupport implements Simple
 			return null;
 		}
 	}
+	
+	public boolean hasActivityForPage(String userId, long pageId) {
+		if (StringUtils.isBlank(userId)) {
+			return false;
+		}
+		Object[] fields = new Object[3];
+		fields[0] = userId;
+		fields[1] = pageId;
+		fields[2] = pageId;
+		List<String> result = sqlService.dbRead("select count(0) > 0 from lesson_builder_log lbl join lesson_builder_items lbi on (lbl.itemId = lbi.id) where lbl.userId = ? and (lbi.pageId = ? or lbi.sakaiId = ?)", fields, null);
+
+		return "1".equals(result.get(0));
+	}
+
+
 	
 	// owner not currently used. would need group as well
         public boolean isPageVisited(long pageId, String userId, String owner) {

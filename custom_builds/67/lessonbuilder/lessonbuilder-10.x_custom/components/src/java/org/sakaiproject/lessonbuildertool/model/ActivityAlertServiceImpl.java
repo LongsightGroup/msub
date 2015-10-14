@@ -160,20 +160,8 @@ public class ActivityAlertServiceImpl implements ActivityAlertService {
 									User user = null;
 									try {
 										user = UserDirectoryService.getUser(userId);
-										List<SimplePageItem> pageItems = simplePageToolDao.findItemsOnPage(pageId);
 										
-										boolean pageViewed = false;
-										for (SimplePageItem pageItem : pageItems) {
-											if (pageViewed == false) {
-												// as long as 1 item was viewed the page is considered visited by the user
-												SimplePageLogEntry entry = simplePageToolDao.getLogEntry(userId, pageItem.getId(), -1L);
-												if (entry != null) {
-													pageViewed = true;
-												}
-											}
-										}
-
-										if (pageViewed == false) {
+										if (!simplePageToolDao.hasActivityForPage(userId, pageId)) {
 											// user is inactive for this page
 											inactiveUsers.add(user);
 											if(StringUtils.isNotBlank(user.getEmail())){
