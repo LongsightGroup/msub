@@ -125,6 +125,7 @@
                 <module>rsmart/user-data-service</module>
                 <module>rsmart/customer</module>
                 <module>rsmart/certification</module>
+                <module>rsmart/integration</module>
                 <module>cloud-content</module>
                 <module>clog</module>
             </modules>
