@@ -8,7 +8,6 @@ kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
-#edu-services https://source.sakaiproject.org/svn/edu-services/branches/sakai-10.x
 emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/branches/sakai-10.x
 entitybroker https://source.sakaiproject.org/svn/entitybroker/branches/sakai-10.x
 external-calendaring-service https://source.sakaiproject.org/svn/external-calendaring-service/branches/sakai-10.x/ 
@@ -24,7 +23,6 @@ access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
 alias https://source.sakaiproject.org/svn/alias/branches/sakai-10.x
 announcement https://source.sakaiproject.org/svn/announcement/branches/sakai-10.x
 archive https://source.sakaiproject.org/svn/archive/branches/sakai-10.x
-assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
 authz https://source.sakaiproject.org/svn/authz/branches/sakai-10.x
 basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
@@ -76,14 +74,18 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
-edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-10.x_features-backport
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
-gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-10.x_features-backport
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-10.x/
 login https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/14/login/login-10.x_custom
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
+
+irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-core
+irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-tool
+assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_iRubric/
+edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-10.x_iRubric
+gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/gradebook-10.x_iRubric/
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
