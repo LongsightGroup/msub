@@ -13,6 +13,7 @@ SAM-2352 Don't run on assessment attempts with a null submittedDate ; Tests and 
 SAM-1263 New question type - image map
   * Fix for equals issue on 2015-03-17
 SAM-2389 Post events for viewing assessment feedback and resuming an assessment
+SAM-2475 - NPE on timed assessment if instructor assigns a score of 0
 
 TODO: SAM-2056 Better usability in jquery ui
 Updated 08/28/2014 svn merge "^/sam/branches/sakai-10.x"
