@@ -121,7 +121,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>evaluation</module>
-              //  <module>qna</module>
+                <module>qna</module>
             </modules>
         </profile>
         <profile>
