@@ -548,6 +548,7 @@ public interface GradebookService {
 
 	public Map getImportCourseGrade(String gradebookUid);
 	public Map getImportCourseGrade(String gradebookUid, boolean useDefault);
+	public Map getImportCourseGrade(String gradebookUid, boolean useDefault, boolean mapTheGrades);
 
 
 	/**return Object to avoid circular dependency with sakai-gradebook-tool */
@@ -698,30 +699,6 @@ public interface GradebookService {
 	public void saveGradesAndComments(String gradebookUid, Long gradableObjectId, List<GradeDefinition> gradeDefList)
 		throws InvalidGradeException, GradebookNotFoundException, AssessmentNotFoundException;
 
-	/**
-	 * Get fixed grades for students by using course grade scale.
-	 * @param gradebookUid
-	 * @return Map of enrollment displayId as key, grade as value
-	 * 
-	 */
-	public Map getFixedGrade(String gradebookUid);
-	
-	/**
-	 * Get fixed earned points for students by using course grade scale.
-	 * @param gradebookUid
-	 * @return Map of enrollment displayId as key, point as value string
-	 * 
-	 */
-	public Map getFixedPoint(String gradebookUid);
-
-	/**
-	 * Get old earned points for students by using letter grade scale.
-	 * @param gradebookUid
-	 * @return Map of enrollment displayId as key, point as value string
-	 * 
-	 */
-	public Map getOldPoint(String gradebookUid);
-	
 	/**
 	 * 
 	 * @param gradebookUid
