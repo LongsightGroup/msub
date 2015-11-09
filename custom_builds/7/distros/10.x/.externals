@@ -63,6 +63,7 @@ tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
 user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
+web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 
@@ -79,7 +80,6 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/portal/portal-10.x_custom
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/site-manage/site-manage-10.x_custom/
-web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/web/web-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes/etudes-util-1.0.25/
 ltiContact https://source.sakaiproject.org/contrib/longsight/etudes/ltiContact-1.2/
