@@ -88,10 +88,12 @@ mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmar
 
 # Use the community branches for bug fixes not in rsmart branches
 content                            https://source.sakaiproject.org/svn/content/branches/sakai-10.x
-velocity                           https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
+velocity                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/velocity/10.4.x
 
 # Longsight mods
 kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/kernel/sakai10.x_custom
 cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
 msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
 assignment                        https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch
+
+#shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
