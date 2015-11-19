@@ -118,16 +118,15 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>gradebook2</module>
-                <module>evaluation</module>
                 <module>rsmart/common</module>
                 <module>rsmart/util</module>
                 <module>rsmart/user</module>
                 <module>rsmart/user-data-service</module>
                 <module>rsmart/customer</module>
-                <module>rsmart/certification</module>
                 <module>rsmart/integration</module>
                 <module>cloud-content</module>
                 <module>clog</module>
+                <module>assignment2</module>
             </modules>
         </profile>
         <profile>
