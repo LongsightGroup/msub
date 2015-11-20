@@ -1,0 +1,1 @@
+LS-184 XLogin: Add spanish along with english reset password links and information
