@@ -114,7 +114,6 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>content-review/contentreview-impl</module>
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>metaobj</module>
@@ -126,7 +125,6 @@
                 <!--
                 <module>rsmart/customer</module>
                 <module>rsmart/integration</module>
-                <module>assignment2</module>
                 -->
                 <module>cloud-content</module>
                 <module>clog</module>
