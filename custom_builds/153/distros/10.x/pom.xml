@@ -117,16 +117,19 @@
                 <module>content-review/contentreview-impl</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>metaobj</module>
                 <module>gradebook2</module>
                 <module>rsmart/common</module>
                 <module>rsmart/util</module>
                 <module>rsmart/user</module>
                 <module>rsmart/user-data-service</module>
+                <!--
                 <module>rsmart/customer</module>
                 <module>rsmart/integration</module>
+                <module>assignment2</module>
+                -->
                 <module>cloud-content</module>
                 <module>clog</module>
-                <module>assignment2</module>
             </modules>
         </profile>
         <profile>

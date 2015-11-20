@@ -75,13 +75,15 @@ kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-
 cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 etudes-util  https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
+
+# TODO: make A2 build against VeriCite
 assignment2 https://source.sakaiproject.org/contrib/assignment2/branches/sakai-10.x/
 
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 gradebook2 -r 87658              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/10.4.x
 clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/10.4.x
 
-# rSmart needs metaobj
+# rSmart needs metaobj 
 metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 rsmart                           https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/10.4.1.1-M2/rsmart
 
@@ -89,3 +91,4 @@ rsmart                           https://source.sakaiproject.org/svn/msub/rsmart
 #
 #shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find clog/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
+#shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
