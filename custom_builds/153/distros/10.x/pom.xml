@@ -126,10 +126,10 @@
                 <!--
                 <module>rsmart/customer</module>
                 <module>rsmart/integration</module>
-                <module>assignment2</module>
                 -->
                 <module>cloud-content</module>
                 <module>clog</module>
+                <module>assignment2</module>
             </modules>
         </profile>
         <profile>
