@@ -129,7 +129,6 @@
                 -->
                 <module>cloud-content</module>
                 <module>clog</module>
-                <module>assignment2</module>
             </modules>
         </profile>
         <profile>
