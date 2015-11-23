@@ -68,7 +68,7 @@ usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
-content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
+content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport/
 content-review/contentreview-impl https://github.com/LongsightGroup/contentreview-impl-vericite/trunk
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
 cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
@@ -91,4 +91,6 @@ rsmart                           https://source.sakaiproject.org/svn/msub/rsmart
 #shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find clog/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
+#shell_command find gradebook2/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
+#shell_command find content-review/ -name pom.xml -exec sed -i 's/11-SNAPSHOT/10-SNAPSHOT/g' {} \;
 #shell_command find assignment2/ -name pom.xml -exec sed -i 's/11-SNAPSHOT/10-SNAPSHOT/g' {} \;
