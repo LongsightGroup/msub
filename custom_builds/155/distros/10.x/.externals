@@ -79,6 +79,9 @@ melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/
 gradebook2 -r 87658              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/10.4.x
 clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/10.4.x
 
+scorm                            https://github.com/LongsightGroup/SCORMCloud_SakaiPlugin/trunk
+scorm/SCORMCloud_JavaLibrary     https://github.com/RusticiSoftware/SCORMCloud_JavaLibrary/trunk
+
 # rSmart needs metaobj 
 metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 rsmart                           https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/10.4.1.1-M2/rsmart
