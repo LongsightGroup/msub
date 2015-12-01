@@ -81,7 +81,8 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk
-evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+#evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x_backport
 content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
