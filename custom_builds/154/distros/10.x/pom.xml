@@ -119,13 +119,13 @@
                 <module>melete</module>
                 <module>gradebook2</module>
                 <module>evaluation</module>
+                <module>metaobj</module>
                 <module>rsmart/common</module>
                 <module>rsmart/util</module>
                 <module>rsmart/user</module>
                 <module>rsmart/user-data-service</module>
                 <module>rsmart/certification</module>
                 <!--
-                <module>metaobj</module>
                 <module>rsmart/customer</module>
                 <module>rsmart/integration</module>
                 -->
