@@ -68,7 +68,7 @@ site -r 319546                    https://source.sakaiproject.org/svn/msub/rsmar
 site-manage -r 319547             https://source.sakaiproject.org/svn/msub/rsmart.com/site-manage/branches/10.4.x
 sitestats -r 319548               https://source.sakaiproject.org/svn/msub/rsmart.com/sitestats/branches/10.4.x
 skin-manager -r 87665            https://source.sakaiproject.org/contrib/rsmart/msub/skin-manager/branches/10.4.x
-syllabus -r 319549                https://source.sakaiproject.org/svn/msub/rsmart.com/syllabus/branches/10.4.x
+syllabus -r 321596                https://source.sakaiproject.org/svn/msub/rsmart.com/syllabus/branches/10.4.x
 taggable -r 319550                https://source.sakaiproject.org/svn/msub/rsmart.com/taggable/branches/10.4.x
 textarea -r 319551                https://source.sakaiproject.org/svn/msub/rsmart.com/textarea/branches/10.4.x
 tool -r 319552                    https://source.sakaiproject.org/svn/msub/rsmart.com/tool/branches/10.4.x
