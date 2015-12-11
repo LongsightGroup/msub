@@ -6,13 +6,13 @@
 	<name>Turning Point Impl</name>
     <groupId>com.rsmart</groupId>
     <artifactId>turningpoint-job-impl</artifactId>
-    <version>10.4</version>
+    <version>10-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <parent>
         <artifactId>turningpoint-job</artifactId>
         <groupId>com.rsmart</groupId>
-        <version>10.4</version>
+        <version>10-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 

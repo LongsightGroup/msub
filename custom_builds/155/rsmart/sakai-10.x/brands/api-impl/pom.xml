@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.rsmart</groupId>
     <artifactId>rsmart-brands</artifactId>
-    <version>10.4</version>
+    <version>10-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>brands-api-impl</artifactId>

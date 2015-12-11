@@ -4,7 +4,7 @@
   <parent>
     <artifactId>gradebook2-export</artifactId>
     <groupId>com.rsmart</groupId>
-    <version>10.4</version>
+    <version>10-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <name>gradebook2-export-component</name>

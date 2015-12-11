@@ -2,64 +2,9 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans default-lazy-init="false">
-    <!--bean id="org.sakaiproject.evaluation.providers.EvalGroupsProvider"
-          class="com.rsmart.evalsys.HierachyEvalGroupsProvider"           
-          init-method="init">
-        <property name="externalHierarchyLogic" ref="org.sakaiproject.evaluation.logic.externals.ExternalHierarchyLogic"/>
-    </bean-->
-    <bean id="com.rsmart.evalsys.HierarchyUtil" class="com.rsmart.evalsys.HierarchyUtil" init-method="init">
-        <property name="hierarchyService" ref="org.sakaiproject.hierarchy.HierarchyService"/>
-    </bean>
-
     <bean id="com.rsmart.customer.integration.cm.CrossListingHelper" class="com.rsmart.customer.integration.cm.CrossListingHelperImpl" init-method="init">
         <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
     </bean>
-
-    <bean id="org.sakaiproject.evaluation.providers.EvalGroupsProvider" class="com.rsmart.evalsys.CMEvalGroupProviderImpl"
-            init-method="init">
-        <property name="courseManagementService" ref="org.sakaiproject.coursemanagement.api.CourseManagementService"/>
-        <property name="uds">
-            <ref bean="org.sakaiproject.user.api.UserDirectoryService"/>
-        </property>
-        <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
-    </bean>
-
-
-
-    <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration.hierarchyloader.configurable"
-          class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobBeanWrapper"
-          singleton="true" init-method="init">
-       <property name="beanId">
-          <value>hierarchyLoaderIntegrationJob</value>
-       </property>
-       <property name="jobName">
-          <value>Hierarchy Loader</value>
-       </property>
-       <property name="schedulerManager">
-          <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/>
-       </property>
-        <property name="resourceBundleBase" value="com.rsmart.customer.integration.job.Messages"/>
-        <property name="configurableJobProperties">
-            <set>
-                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
-                     <property name="required" value="false"/>
-                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.hierachyloader.term"/>
-                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.cm.hierachyloader.term_description"/>
-                </bean>
-            </set>
-        </property>
-    </bean>
-
-    <bean id="hierarchyLoaderIntegrationJob" class="com.rsmart.customer.integration.job.CMSHierarchyLoaderJob"
-         init-method="init">
-        <property name="hierarchyUtil" ref="com.rsmart.evalsys.HierarchyUtil"/>
-      <property name="adminUser" value="admin"/>
-      <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
-      <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
-      <property name="hierarchyService" ref="org.sakaiproject.hierarchy.HierarchyService"/>
-      <property name="externalHierarchyLogic" ref="org.sakaiproject.evaluation.logic.externals.ExternalHierarchyLogic"/>
-      <property name="cmService" ref="org.sakaiproject.coursemanagement.api.CourseManagementService"/>
-   </bean>
 
     <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration.course-management.configurable"
           class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobBeanWrapper"

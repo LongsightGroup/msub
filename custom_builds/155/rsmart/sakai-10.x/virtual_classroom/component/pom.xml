@@ -7,7 +7,7 @@
       <artifactId>virtual-classroom-base</artifactId>
       <groupId>com.rsmart</groupId>
       <relativePath>../pom.xml</relativePath>
-      <version>10.4</version>
+      <version>10-SNAPSHOT</version>
     </parent>
   <name>virtual-classroom-pack</name>
   <url>http://maven.apache.org</url>
@@ -30,7 +30,7 @@
      <dependency>
        <groupId>org.sakaiproject.osp</groupId>
        <artifactId>osp-common-impl</artifactId>
-        <version>10.4</version>
+        <version>10-SNAPSHOT</version>
        <exclusions>
          <exclusion>
            <groupId>aopalliance</groupId>
@@ -59,18 +59,18 @@
     <dependency>
       <groupId>com.rsmart</groupId>
       <artifactId>virtual-classroom-impl</artifactId>
-       <version>10.4</version>
+       <version>10-SNAPSHOT</version>
     </dependency>
      <dependency>
         <groupId>com.rsmart</groupId>
         <artifactId>rsmart-common-api</artifactId>
-        <version>10.4</version>
+        <version>10-SNAPSHOT</version>
          <scope>provided</scope>
      </dependency>
      <dependency>
         <groupId>com.rsmart</groupId>
         <artifactId>rsmart-common-impl</artifactId>
-         <version>10.4</version>
+         <version>10-SNAPSHOT</version>
      </dependency>
     <dependency>
       <groupId>axis</groupId>

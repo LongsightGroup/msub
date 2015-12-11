@@ -4,7 +4,7 @@
   <parent>
     <artifactId>rsmart-customer</artifactId>
     <groupId>com.rsmart</groupId>
-    <version>10.4</version>
+    <version>10-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <name>rSmart Customer Integration Impl</name>
@@ -27,14 +27,13 @@
       <groupId>org.sakaiproject.scheduler</groupId>
       <artifactId>scheduler-component-shared</artifactId>
       <scope>provided</scope>
-    </dependency>
+  </dependency>
     <dependency>
       <groupId>com.rsmart</groupId>
          <artifactId>user-data-api</artifactId>
          <version>${sakai.version}</version>
           <scope>provided</scope>
       </dependency>
-
        <dependency>
          <artifactId>user-data-model</artifactId>
          <groupId>com.rsmart</groupId>
@@ -153,12 +152,6 @@
     	<groupId>org.sakaiproject.emailtemplateservice</groupId>
     	<artifactId>emailtemplateservice-api</artifactId>
     </dependency>
-      <dependency>
-          <groupId>org.sakaiproject.evaluation</groupId>
-          <artifactId>sakai-evaluation-api</artifactId>
-          <version>${sakai.version}</version>
-          <scope>provided</scope>
-      </dependency>
     <dependency>
         <groupId>org.sakaiproject.hierarchy</groupId>
         <artifactId>hierarchy-api</artifactId>

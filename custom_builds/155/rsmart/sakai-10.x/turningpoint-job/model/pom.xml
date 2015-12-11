@@ -6,7 +6,7 @@
     <parent>
         <artifactId>turningpoint-job</artifactId>
         <groupId>com.rsmart</groupId>
-        <version>10.4</version>
+        <version>10-SNAPSHOT</version>
     </parent>
     <artifactId>turningpoint-job-model</artifactId>
     <name>Turningpoint Job Hibernate Model</name>

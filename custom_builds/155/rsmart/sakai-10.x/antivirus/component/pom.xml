@@ -4,7 +4,7 @@
   <parent>
     <artifactId>rsmart-antivirus</artifactId>
     <groupId>com.rsmart</groupId>
-    <version>10.4</version>
+    <version>10-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>rsmart-antivirus-component</artifactId>
@@ -23,7 +23,7 @@
     <dependency>
       <groupId>com.rsmart</groupId>
       <artifactId>rsmart-antivirus-impl</artifactId>
-      <version>10.4</version>
+      <version>10-SNAPSHOT</version>
 <!--properties:  war.bundle: true -->
     </dependency>
   </dependencies>
