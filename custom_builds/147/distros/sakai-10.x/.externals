@@ -87,3 +87,4 @@ rsmart                           https://source.sakaiproject.org/svn/msub/rsmart
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 #
 #shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
+#shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;

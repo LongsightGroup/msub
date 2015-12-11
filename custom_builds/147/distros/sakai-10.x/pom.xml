@@ -119,6 +119,7 @@
                 <module>melete</module>
                 <module>gradebook2</module>
                 <module>evaluation</module>
+                <module>metaobj</module>
                 <module>rsmart/common</module>
                 <module>rsmart/util</module>
                 <module>rsmart/user</module>
