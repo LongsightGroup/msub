@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="turningPointJob" class="com.rsmart.turningpoint.job.TurningPointJob" init-method="init">
+    	<property name="adminUser" value="admin"/>
+        <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
+        <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
+        <property name="turningPointJobService" ref="com.rsmart.turningpoint.api.TurningPointJobService"/>
+    </bean>
+
+    <bean id="TurningPointJobWrapper" class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper" init-method="init">
+        <property name="beanId">
+            <value>turningPointJob</value>
+        </property>
+        <property name="jobName">
+            <value>TurningPoint Helper</value>
+        </property>
+        <property name="schedulerManager">
+            <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/>
+        </property>
+    </bean>
+
+</beans>
