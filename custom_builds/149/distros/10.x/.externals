@@ -4,7 +4,6 @@
 master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 
 # Core services
-kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
@@ -74,11 +73,19 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT -Dsakai.jdk.version=1.7
 
-evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
-jforum https://source.sakaiproject.org/contrib/longsight/jforum/10.x
-etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
-melete https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
+evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+
+jforum https://source.sakaiproject.org/contrib/longsight/jforum/10.x
+etudes-util  https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
+melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
+
+# rSmart needs metaobj 
+metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
+rsmart                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-10.x
 
 #POM CHANGES
 #shell_command find melete/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
+#shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;

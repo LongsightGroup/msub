@@ -118,6 +118,9 @@
                 <module>jforum</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>metaobj</module>
+                <module>rsmart</module>
+                <module>cloud-content</module>
             </modules>
         </profile>
         <profile>
