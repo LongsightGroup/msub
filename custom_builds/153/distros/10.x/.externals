@@ -83,11 +83,10 @@ clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/
 
 # rSmart needs metaobj 
 metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
-rsmart                           https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/10.4.1.1-M2/rsmart
+rsmart                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-10.x
 
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 #
-#shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find clog/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find gradebook2/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;

@@ -119,14 +119,7 @@
                 <module>melete</module>
                 <module>metaobj</module>
                 <module>gradebook2</module>
-                <module>rsmart/common</module>
-                <module>rsmart/util</module>
-                <module>rsmart/user</module>
-                <module>rsmart/user-data-service</module>
-                <!--
-                <module>rsmart/customer</module>
-                <module>rsmart/integration</module>
-                -->
+                <module>rsmart</module>
                 <module>cloud-content</module>
                 <module>clog</module>
             </modules>
