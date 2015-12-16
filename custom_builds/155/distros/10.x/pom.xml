@@ -122,6 +122,7 @@
                 <module>cloud-content</module>
                 <module>clog</module>
                 <module>scorm</module>
+                <module>jforum</module>
             </modules>
         </profile>
         <profile>

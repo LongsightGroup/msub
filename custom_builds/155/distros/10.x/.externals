@@ -78,6 +78,7 @@ etudes-util  https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 gradebook2 -r 87658              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/10.4.x
 clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/10.4.x
+jforum                           https://source.sakaiproject.org/contrib/longsight/jforum/10.x
 
 scorm                            https://github.com/LongsightGroup/SCORMCloud_SakaiPlugin/trunk
 scorm/SCORMCloud_JavaLibrary     https://github.com/LongsightGroup/SCORMCloud_JavaLibrary/trunk
