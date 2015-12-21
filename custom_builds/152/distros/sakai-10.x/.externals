@@ -59,7 +59,7 @@ roster2 -r 319538                 https://source.sakaiproject.org/svn/msub/rsmar
 rwiki -r 319539                   https://source.sakaiproject.org/svn/msub/rsmart.com/rwiki/branches/10.4.x
 sakai-mock -r 319540              https://source.sakaiproject.org/svn/msub/rsmart.com/sakai-mock/branches/10.4.x
 sakora -r 87664                  https://source.sakaiproject.org/contrib/rsmart/msub/sakora/branches/10.4.x
-sam -r 319541                     https://source.sakaiproject.org/svn/msub/rsmart.com/sam/branches/10.4.x
+sam -r 320595                     https://source.sakaiproject.org/svn/msub/rsmart.com/sam/branches/10.4.x
 search -r 319542                  https://source.sakaiproject.org/svn/msub/rsmart.com/search/branches/10.4.x
 sections -r 319543                https://source.sakaiproject.org/svn/msub/rsmart.com/sections/branches/10.4.x
 shortenedurl -r 319544            https://source.sakaiproject.org/svn/msub/rsmart.com/shortenedurl/branches/10.4.x
