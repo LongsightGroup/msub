@@ -88,7 +88,6 @@
                 <module>hierarchy</module>
                 <module>iclicker</module>
                 <module>itunesu-tool</module>
-		        <module>jforum</module>
                 <module>jobscheduler</module>
                 <module>jsf</module>
                 <module>kaltura</module>
@@ -106,6 +105,7 @@
                 <module>presence</module>
                 <module>profile2</module>
                 <!--
+	        <module>jforum</module>
                 <module>login</module>
                 <module>metaobj</module>
                 <module>osp</module>
