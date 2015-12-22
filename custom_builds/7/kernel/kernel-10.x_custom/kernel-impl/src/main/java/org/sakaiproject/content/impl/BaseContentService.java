@@ -7632,7 +7632,7 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		StringBuilder results = new StringBuilder();
 
 		// start with an element with our very own name
-		Element element = doc.createElement(APPLICATION_ID);
+		Element element = doc.createElement(ContentHostingService.class.getName());
 		((Element) stack.peek()).appendChild(element);
 		stack.push(element);
 
@@ -13978,7 +13978,8 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
                 throw new OverQuotaException(resource.getReference());
             }
             // zip files are not too large to extract so do the extract
-			extractZipArchive.extractArchive(resourceId);
+            extractZipArchive.extractArchive(resourceId);
+            cancelResource(resource); //commitResource(resource); // KNL-1220
         }
     }
     

@@ -3,3 +3,6 @@ BES-828645 force lowerCase on the internal user id
 
 Updating to latest 10.x 07/17/2015 svn merge "^/kernel/branches/sakai-10.x"
 --- Merging r319576 through r320202 into '.':
+Updating to latest 10.x 12/22/2015 svn merge "^/kernel/branches/sakai-10.x"
+--- Merging r320203 through r322194 into '.':
+
