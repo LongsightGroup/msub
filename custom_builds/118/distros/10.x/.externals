@@ -4,7 +4,6 @@
 master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 
 # Core services
-kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
@@ -78,15 +77,12 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 scorm https://source.sakaiproject.org/svn/msub/uwo.ca/scorm/trunk
 wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/branches/sakai-10
 
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
+bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
+
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10
 
-#Big Blue Button:
-#shell_command git clone https://github.com/LongsightGroup/bigbluebutton-sakai/
-#shell_command cd bigbluebutton-sakai/bbb-tool
-#shell_command cd ../..
 #shell_command sed -i 's/<version>10.3<\/version>/<version>10-SNAPSHOT<\/version>/g' scorm/pom.xml
-
-#GIT Projects
-#git_project bigbluebutton-sakai/bbb-tool
-
+#shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;

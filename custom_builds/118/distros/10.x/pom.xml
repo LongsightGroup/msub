@@ -116,9 +116,11 @@
                 <module>webservices</module>
                 <module>blogwow</module>
                 <module>evaluation</module>
-         <!--       <module>bigbluebutton-sakai/bbb-tool</module> -->
+                <module>cloud-content</module>
+         <!--       <module>bigbluebutton-sakai/bbb-tool</module>
                 <module>scorm</module>
                 <module>wicket-for-scorm</module>
+                -->
             </modules>
         </profile>
         <profile>
