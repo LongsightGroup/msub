@@ -86,7 +86,7 @@ kaltura -r 319514                https://source.sakaiproject.org/svn/msub/rsmart
 metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 rsmart                           https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/10.4.1.1-M2/rsmart
 
-#mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
+#mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT -Dsakai.jdk.version=1.7
 #
 #shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find clog/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
