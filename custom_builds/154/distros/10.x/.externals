@@ -78,7 +78,7 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_features-backport
 
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
-gradebook2 -r 87658              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/10.4.x
+gradebook2 -r 87580              https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x
 clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/10.4.x
 kaltura -r 319514                https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/10.4.x
 
