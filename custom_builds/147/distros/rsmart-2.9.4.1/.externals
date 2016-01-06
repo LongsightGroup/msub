@@ -79,7 +79,6 @@ site -r 308749                    https://source.sakaiproject.org/svn/msub/rsmar
 site-manage -r 308750             https://source.sakaiproject.org/svn/msub/rsmart.com/site-manage/branches/2.9.4.x
 sitestats -r 308751               https://source.sakaiproject.org/svn/msub/rsmart.com/sitestats/branches/2.9.4.x
 skin-manager -r 86183            https://source.sakaiproject.org/contrib/rsmart/msub/skin-manager/branches/2.9.4.x
-syllabus                         https://source.sakaiproject.org/svn/msub/rsmart.com/syllabus/branches/2.9.4.x
 taggable -r 308753                https://source.sakaiproject.org/svn/msub/rsmart.com/taggable/branches/2.9.4.x
 textarea -r 308754                https://source.sakaiproject.org/svn/msub/rsmart.com/textarea/branches/2.9.4.x
 tool -r 308755                    https://source.sakaiproject.org/svn/msub/rsmart.com/tool/branches/2.9.4.x
@@ -92,3 +91,4 @@ was -r 308760                     https://source.sakaiproject.org/svn/msub/rsmar
 web -r 308761                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/2.9.4.x
 webservices -r 308762             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.4.x
 
+syllabus                          https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/147/syllabus/2.9.4.x_custom
