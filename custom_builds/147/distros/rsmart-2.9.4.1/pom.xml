@@ -102,6 +102,9 @@
                 </file>
             </activation>
             <modules>
+                <module>rsmart/rsmart-Decryption</module>
+                <module>rsmart/antivirus</module>
+                <module>rsmart/shibboleth_filter</module>
                 <module>kernel</module>
                 <module>kernel-deploy</module>
                 <module>master</module>
@@ -140,7 +143,6 @@
                 <!--module>gmt</module-->
 		<module>external-calendaring-service</module>
                 <module>gradebook</module>
-                <module>gradebook2</module>
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>hybrid</module>
@@ -160,14 +162,12 @@
                 <!--module>mneme</module-->
                 <!--module>opensyllabus</module-->
 
-                <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
 
                 <module>portal</module>
                 <module>postem</module>
                 <module>presence</module>
-                <module>providers</module>
                 <module>profile</module>
                 <module>profile2</module>
 
@@ -177,10 +177,8 @@
                 <module>rwiki</module>
                 <module>sam</module>
 
-                <module>search</module>
                 <module>sections</module>
                 <module>shortenedurl</module>
-                <module>signup</module>
                 <module>site</module>
                 <module>site-manage</module>
                 <module>sitestats</module>
@@ -192,10 +190,15 @@
                 <module>user</module>
                 <module>velocity</module>
                 <module>web</module>
-                <module>webservices</module>
                 <module>usermembership</module>
                 <module>sakai-wicket</module>
                 <!--
+                <module>webservices</module>
+                <module>signup</module>
+                <module>search</module>
+                <module>providers</module>
+                <module>osp</module>
+                <module>gradebook2</module>
                 <module>evaluation</module>
                 <module>bigbluebutton</module>
                 <module>ambrosia</module>
