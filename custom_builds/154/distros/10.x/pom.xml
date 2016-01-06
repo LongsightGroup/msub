@@ -131,6 +131,7 @@
                 -->
                 <module>cloud-content</module>
                 <module>clog</module>
+                <module>blogwow</module>
                 <module>kaltura</module>
             </modules>
         </profile>
