@@ -92,3 +92,5 @@ web -r 308761                     https://source.sakaiproject.org/svn/msub/rsmar
 webservices -r 308762             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.4.x
 
 syllabus                          https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/147/syllabus/2.9.4.x_custom
+
+#shell_command find . -name pom.xml -exec sed -i 's/maven.rsmart/maven.scribacorp/g' {} \;
