@@ -1,0 +1,1 @@
+﻿d2hStoreMenuItems("TX__178182", [["WordDocuments/rolesandpermissionsincoursesites1.htm", "right", "Roles and Permissions in Course Sites"],["WordDocuments/rolesandpermissionsinportfoliosites1.htm", "right", "Roles and Permissions in Portfolio Sites"]]);

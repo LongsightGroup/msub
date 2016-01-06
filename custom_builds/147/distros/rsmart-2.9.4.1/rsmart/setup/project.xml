@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <pomVersion>3</pomVersion>
+  <extend>../../master/project.xml</extend>
+  <id>customizer-task</id>
+  <groupId>rSmart</groupId>
+  <name>rSmart Customizer Task</name>
+  <currentVersion>${sakai.version}</currentVersion>
+  <organization>
+      <name>The rSmart Group</name>
+      <url>http://www.rsmart.com/</url>
+  </organization>
+  <inceptionYear>2006</inceptionYear>
+
+  <dependencies>
+  
+  		<dependency>
+			<groupId>maven-plugins</groupId>
+			<artifactId>maven-javaapp-plugin</artifactId>
+			<version>1.3.1</version>
+			<type>plugin</type>
+		</dependency>
+
+     <dependency>
+        <groupId>sakaiproject</groupId>
+        <artifactId>sakai-util</artifactId>
+        <version>${sakai.version}</version>
+     </dependency>
+
+     <dependency>
+        <groupId>rSmart</groupId>
+        <artifactId>rsmart-util</artifactId>
+        <version>${sakai.version}</version>
+     </dependency>
+
+     <dependency>
+        <groupId>rSmart</groupId>
+        <artifactId>rsmart-customizer-util</artifactId>
+        <version>${sakai.version}</version>
+     </dependency>
+
+     <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.0.4</version>
+     </dependency>
+
+     <dependency>
+        <groupId>xml-apis</groupId>
+        <artifactId>xml-apis</artifactId>
+        <version>1.3.03</version>
+     </dependency>
+
+     <dependency>
+        <groupId>xerces</groupId>
+        <artifactId>xercesImpl</artifactId>
+        <version>2.0.2</version>
+     </dependency>
+
+  </dependencies>
+
+  <build>
+  	<!-- java source -->
+  	<sourceDirectory>src/java</sourceDirectory>
+
+  	<resources>
+  		<resource>
+  			<directory>src/resources</directory>
+  			<includes>
+              <include>**/*.properties</include>
+              <include>**/*.xsl</include>
+              <include>**/*.xml</include>
+  			</includes>
+  		</resource>
+  	</resources>
+  </build>
+</project>

@@ -1,0 +1,887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topics>
+    <topic id="0" tId="1721" url="WordDocuments/accessingabasicltitool.htm" target="right"><![CDATA[Accessing a Basic LTI Tool]]><contextids /></topic>
+    <topic id="1" tId="1660" url="WordDocuments/accessingameeting.htm" target="right"><![CDATA[Accessing a Meeting]]><contextids /></topic>
+    <topic id="2" tId="330" url="WordDocuments/accessingaresource.htm" target="right"><![CDATA[Accessing a Resource]]><contextids /></topic>
+    <topic id="3" tId="372" url="WordDocuments/accessingawebcontenttool.htm" target="right"><![CDATA[Accessing a Web Content Tool]]><contextids /></topic>
+    <topic id="4" tId="135" url="WordDocuments/accessingchat.htm" target="right"><![CDATA[Accessing Chat]]><contextids /></topic>
+    <topic id="5" tId="1709" url="WordDocuments/accessingpublicsitecontent.htm" target="right"><![CDATA[Accessing Public Site Content]]><contextids /></topic>
+    <topic id="6" tId="100" url="WordDocuments/accessingtheannouncementstool.htm" target="right"><![CDATA[Accessing the Announcements Tool]]><contextids /></topic>
+    <topic id="7" tId="399" url="WordDocuments/accessingtheassignmentshomepage.htm" target="right"><![CDATA[Accessing the Assignments Home Page]]><contextids /></topic>
+    <topic id="8" tId="1178" url="WordDocuments/accessingtheblogstool.htm" target="right"><![CDATA[Accessing the Blogs Tool]]><contextids /></topic>
+    <topic id="9" tId="1455" url="WordDocuments/accessingthecertificationtool.htm" target="right"><![CDATA[Accessing the Certification Tool]]><contextids /></topic>
+    <topic id="10" tId="1498" url="WordDocuments/accessingtheclogtool.htm" target="right"><![CDATA[Accessing the Clog Tool]]><contextids /></topic>
+    <topic id="11" tId="147" url="WordDocuments/accessingthediscussionforumstool.htm" target="right"><![CDATA[Accessing the Discussion Forums Tool]]><contextids /></topic>
+    <topic id="12" tId="419" url="WordDocuments/accessingtheevaluationsystem.htm" target="right"><![CDATA[Accessing the Evaluation System]]><contextids /></topic>
+    <topic id="13" tId="788" url="WordDocuments/accessingtheevaluationstool.htm" target="right"><![CDATA[Accessing the Evaluations Tool]]><contextids /></topic>
+    <topic id="14" tId="796" url="WordDocuments/accessingtheformstool.htm" target="right"><![CDATA[Accessing the Forms Tool]]><contextids /></topic>
+    <topic id="15" tId="210" url="WordDocuments/accessingtheforumstool.htm" target="right"><![CDATA[Accessing the Forums Tool]]><contextids /></topic>
+    <topic id="16" tId="810" url="WordDocuments/accessingtheglossarytool.htm" target="right"><![CDATA[Accessing the Glossary Tool]]><contextids /></topic>
+    <topic id="17" tId="284" url="WordDocuments/accessingthelessonstool.htm" target="right"><![CDATA[Accessing the Lessons Tool]]><contextids /></topic>
+    <topic id="18" tId="239" url="WordDocuments/accessingthemailtool.htm" target="right"><![CDATA[Accessing the Mailtool]]><contextids /></topic>
+    <topic id="19" tId="822" url="WordDocuments/accessingthematricestool.htm" target="right"><![CDATA[Accessing the Matrices Tool]]><contextids /></topic>
+    <topic id="20" tId="243" url="WordDocuments/accessingthemessagestool.htm" target="right"><![CDATA[Accessing the Messages Tool]]><contextids /></topic>
+    <topic id="21" tId="318" url="WordDocuments/accessingthepodcastshomepage.htm" target="right"><![CDATA[Accessing the Podcasts Home Page]]><contextids /></topic>
+    <topic id="22" tId="260" url="WordDocuments/accessingthepollstool.htm" target="right"><![CDATA[Accessing the Polls Tool]]><contextids /></topic>
+    <topic id="23" tId="843" url="WordDocuments/accessingtheportfoliolayoutstool.htm" target="right"><![CDATA[Accessing the Portfolio Layouts Tool]]><contextids /></topic>
+    <topic id="24" tId="853" url="WordDocuments/accessingtheportfoliotemplatestool.htm" target="right"><![CDATA[Accessing the Portfolio Templates Tool]]><contextids /></topic>
+    <topic id="25" tId="871" url="WordDocuments/accessingtheportfoliostool.htm" target="right"><![CDATA[Accessing the Portfolios Tool]]><contextids /></topic>
+    <topic id="26" tId="328" url="WordDocuments/accessingtheresourceshomepage.htm" target="right"><![CDATA[Accessing the Resources Home Page]]><contextids /></topic>
+    <topic id="27" tId="717" url="WordDocuments/accessingthesectionshomepage.htm" target="right"><![CDATA[Accessing the Sections Home Page]]><contextids /></topic>
+    <topic id="28" tId="1596" url="WordDocuments/accessingthesignuptool.htm" target="right"><![CDATA[Accessing the Sign-up Tool]]><contextids /></topic>
+    <topic id="29" tId="728" url="WordDocuments/accessingthesiteeditorhomepage.htm" target="right"><![CDATA[Accessing the Site Editor Home Page]]><contextids /></topic>
+    <topic id="30" tId="753" url="WordDocuments/accessingthesitestatisticstool.htm" target="right"><![CDATA[Accessing the Site Statistics Tool]]><contextids /></topic>
+    <topic id="31" tId="481" url="WordDocuments/accessingthetestsquizzestool.htm" target="right"><![CDATA[Accessing the Tests & Quizzes Tool]]><contextids /></topic>
+    <topic id="32" tId="379" url="WordDocuments/accessingthewikitool.htm" target="right"><![CDATA[Accessing the Wiki Tool]]><contextids /></topic>
+    <topic id="33" tId="899" url="WordDocuments/accessingthewizardstool.htm" target="right"><![CDATA[Accessing the Wizards Tool]]><contextids /></topic>
+    <topic id="34" tId="698" url="WordDocuments/account.htm" target="right" default="1"><![CDATA[Account]]><contextids /></topic>
+    <topic id="35" tId="1702" url="WordDocuments/activatinghiddensites1.htm" target="right"><![CDATA[Activating Hidden Sites]]><contextids /></topic>
+    <topic id="36" tId="1561" url="WordDocuments/addingabasicltitool.htm" target="right"><![CDATA[Adding a Basic LTI Tool]]><contextids /></topic>
+    <topic id="37" tId="1183" url="WordDocuments/addingablogentry.htm" target="right"><![CDATA[Adding a Blog Entry]]><contextids /></topic>
+    <topic id="38" tId="170" url="WordDocuments/addingacategory.htm" target="right"><![CDATA[Adding a Category]]><contextids /></topic>
+    <topic id="39" tId="1456" url="WordDocuments/addingacertificate.htm" target="right"><![CDATA[Adding a Certificate]]><contextids /></topic>
+    <topic id="40" tId="141" url="WordDocuments/addingachatroom.htm" target="right"><![CDATA[Adding a Chat Room]]><contextids /></topic>
+    <topic id="41" tId="994" url="WordDocuments/addingacitationlist.htm" target="right"><![CDATA[Adding a Citation List]]><contextids /></topic>
+    <topic id="42" tId="334" url="WordDocuments/addingacitationlistandcitations.htm" target="right"><![CDATA[Adding a Citation List and Citations]]><contextids /></topic>
+    <topic id="43" tId="1504" url="WordDocuments/addingacommenttoapost.htm" target="right"><![CDATA[Adding a Comment to a Post]]><contextids /></topic>
+    <topic id="44" tId="131" url="WordDocuments/addingafield.htm" target="right"><![CDATA[Adding a Field]]><contextids /></topic>
+    <topic id="45" tId="797" url="WordDocuments/addingaform.htm" target="right"><![CDATA[Adding a Form]]><contextids /></topic>
+    <topic id="46" tId="1541" url="WordDocuments/addingaforum1.htm" target="right"><![CDATA[Adding a Forum]]><contextids /></topic>
+    <topic id="47" tId="811" url="WordDocuments/addingaglossaryterm.htm" target="right"><![CDATA[Adding a Glossary Term]]><contextids /></topic>
+    <topic id="48" tId="844" url="WordDocuments/addingalayout.htm" target="right"><![CDATA[Adding a Layout]]><contextids /></topic>
+    <topic id="49" tId="1583" url="WordDocuments/addingalinktoaparentsite.htm" target="right"><![CDATA[Adding a Link to a Parent Site]]><contextids /></topic>
+    <topic id="50" tId="1597" url="WordDocuments/addingameeting.htm" target="right"><![CDATA[Adding a Meeting]]><contextids /></topic>
+    <topic id="51" tId="288" url="WordDocuments/addingamodule.htm" target="right"><![CDATA[Adding a Module]]><contextids /></topic>
+    <topic id="52" tId="123" url="WordDocuments/addinganewevent.htm" target="right"><![CDATA[Adding a New Event]]><contextids /></topic>
+    <topic id="53" tId="732" url="WordDocuments/addinganewgroup.htm" target="right"><![CDATA[Adding a New Group]]><contextids /></topic>
+    <topic id="54" tId="385" url="WordDocuments/addingapage.htm" target="right"><![CDATA[Adding a Page]]><contextids /></topic>
+    <topic id="55" tId="1655" url="WordDocuments/addingaparticipanttoatimeslotorwaitlist.htm" target="right"><![CDATA[Adding a participant to a time slot or wait list]]><contextids /></topic>
+    <topic id="56" tId="319" url="WordDocuments/addingapodcast.htm" target="right"><![CDATA[Adding a Podcast]]><contextids /></topic>
+    <topic id="57" tId="261" url="WordDocuments/addingapoll.htm" target="right"><![CDATA[Adding a Poll]]><contextids /></topic>
+    <topic id="58" tId="1112" url="WordDocuments/addingaquestionpoolcreateusingmarkuptext.htm" target="right"><![CDATA[Adding a Question Pool (Create Using Markup Text)]]><contextids /></topic>
+    <topic id="59" tId="536" url="WordDocuments/addingaquestionpoolstandardapproach.htm" target="right"><![CDATA[Adding a Question Pool (Standard Approach)]]><contextids /></topic>
+    <topic id="60" tId="539" url="WordDocuments/addingaquestionsubpool.htm" target="right"><![CDATA[Adding a Question Subpool]]><contextids /></topic>
+    <topic id="61" tId="339" url="WordDocuments/addingasimpletextdocument.htm" target="right"><![CDATA[Adding a Simple Text Document]]><contextids /></topic>
+    <topic id="62" tId="888" url="WordDocuments/addingastyle.htm" target="right"><![CDATA[Adding a Style]]><contextids /></topic>
+    <topic id="63" tId="1544" url="WordDocuments/addingatopic.htm" target="right"><![CDATA[Adding a Topic]]><contextids /></topic>
+    <topic id="64" tId="373" url="WordDocuments/addingawebcontenttool.htm" target="right"><![CDATA[Adding a Web Content Tool]]><contextids /></topic>
+    <topic id="65" tId="86" url="WordDocuments/addinganattachment.htm" target="right"><![CDATA[Adding an Attachment]]><contextids /></topic>
+    <topic id="66" tId="1580" url="WordDocuments/addinganexternaltool.htm" target="right"><![CDATA[Adding an External Tool]]><contextids /></topic>
+    <topic id="67" tId="338" url="WordDocuments/addinganhtmlpage.htm" target="right"><![CDATA[Adding an HTML Page]]><contextids /></topic>
+    <topic id="68" tId="1181" url="WordDocuments/addinganrssfeedforablog.htm" target="right"><![CDATA[Adding an RSS feed for a Blog]]><contextids /></topic>
+    <topic id="69" tId="1540" url="WordDocuments/addingandchangingforumsandtopics.htm" target="right"><![CDATA[Adding and Changing Forums and Topics]]><contextids /></topic>
+    <topic id="70" tId="292" url="WordDocuments/addingandchangingthenextstepinamodule.htm" target="right"><![CDATA[Adding and Changing the Next Step in a Module]]><contextids /></topic>
+    <topic id="71" tId="130" url="WordDocuments/addingandremovingcalendarfields.htm" target="right"><![CDATA[Adding and Removing Calendar Fields]]><contextids /></topic>
+    <topic id="72" tId="998" url="WordDocuments/addingcategories.htm" target="right"><![CDATA[Adding Categories]]><contextids /></topic>
+    <topic id="73" tId="995" url="WordDocuments/addingcitations.htm" target="right"><![CDATA[Adding Citations]]><contextids /></topic>
+    <topic id="74" tId="1145" url="WordDocuments/addingcommentsinastudentsummaryframe.htm" target="right"><![CDATA[Adding Comments in a Student Summary Frame]]><contextids /></topic>
+    <topic id="75" tId="333" url="WordDocuments/addingfiles.htm" target="right"><![CDATA[Adding Files]]><contextids /></topic>
+    <topic id="76" tId="332" url="WordDocuments/addingfolders.htm" target="right"><![CDATA[Adding Folders]]><contextids /></topic>
+    <topic id="77" tId="340" url="WordDocuments/addingformitems.htm" target="right"><![CDATA[Adding Form Items]]><contextids /></topic>
+    <topic id="78" tId="1641" url="WordDocuments/addingforums.htm" target="right"><![CDATA[Adding Forums]]><contextids /></topic>
+    <topic id="79" tId="1192" url="WordDocuments/addinggradebookcategories.htm" target="right"><![CDATA[Adding Gradebook Categories]]><contextids /></topic>
+    <topic id="80" tId="1193" url="WordDocuments/addinggradebookitems.htm" target="right"><![CDATA[Adding Gradebook Items]]><contextids /></topic>
+    <topic id="81" tId="1318" url="WordDocuments/addingimages.htm" target="right"><![CDATA[Adding Images]]><contextids /></topic>
+    <topic id="82" tId="1113" url="WordDocuments/addinglinkstogoogledocuments.htm" target="right"><![CDATA[Adding Links to Google Documents]]><contextids /></topic>
+    <topic id="83" tId="1566" url="WordDocuments/addingorchangingyourinformation1.htm" target="right"><![CDATA[Adding or Changing Your Information]]><contextids /></topic>
+    <topic id="84" tId="1565" url="WordDocuments/addingorchangingyourpicture1.htm" target="right"><![CDATA[Adding or Changing Your Picture]]><contextids /></topic>
+    <topic id="85" tId="1000" url="WordDocuments/addingpages.htm" target="right"><![CDATA[Adding Pages]]><contextids /></topic>
+    <topic id="86" tId="737" url="WordDocuments/addingparticipants.htm" target="right"><![CDATA[Adding Participants]]><contextids /></topic>
+    <topic id="87" tId="1443" url="WordDocuments/addingpartstoanassessment.htm" target="right"><![CDATA[Adding Parts to an Assessment]]><contextids /></topic>
+    <topic id="88" tId="421" url="WordDocuments/addingquestionsandheaders.htm" target="right"><![CDATA[Adding Questions and Headers]]><contextids /></topic>
+    <topic id="89" tId="543" url="WordDocuments/addingquestionstoapoolorsubpool.htm" target="right"><![CDATA[Adding Questions to a Pool or Subpool]]><contextids /></topic>
+    <topic id="90" tId="1429" url="WordDocuments/addingquestionstoanassessment.htm" target="right"><![CDATA[Adding Questions to an Assessment]]><contextids /></topic>
+    <topic id="91" tId="331" url="WordDocuments/addingresources.htm" target="right"><![CDATA[Adding Resources]]><contextids /></topic>
+    <topic id="92" tId="1666" url="WordDocuments/addingrosters1.htm" target="right"><![CDATA[Adding Rosters]]><contextids /></topic>
+    <topic id="93" tId="1325" url="WordDocuments/addingscales.htm" target="right"><![CDATA[Adding Scales]]><contextids /></topic>
+    <topic id="94" tId="719" url="WordDocuments/addingsections.htm" target="right"><![CDATA[Adding Sections]]><contextids /></topic>
+    <topic id="95" tId="1303" url="WordDocuments/addingspecialaccesssettings.htm" target="right"><![CDATA[Adding Special Access Settings]]><contextids /></topic>
+    <topic id="96" tId="722" url="WordDocuments/addingstudentstoasection.htm" target="right"><![CDATA[Adding Students to a Section]]><contextids /></topic>
+    <topic id="97" tId="999" url="WordDocuments/addingsubcategories.htm" target="right"><![CDATA[Adding Subcategories]]><contextids /></topic>
+    <topic id="98" tId="427" url="WordDocuments/addingtemplates.htm" target="right"><![CDATA[Adding Templates]]><contextids /></topic>
+    <topic id="99" tId="434" url="WordDocuments/addingtheevaluation.htm" target="right"><![CDATA[Adding the Evaluation]]><contextids /></topic>
+    <topic id="100" tId="202" url="WordDocuments/addingthefiletothecle.htm" target="right"><![CDATA[Adding the File to the CLE]]><contextids /></topic>
+    <topic id="101" tId="799" url="WordDocuments/addingtheform.htm" target="right"><![CDATA[Adding the Form]]><contextids /></topic>
+    <topic id="102" tId="337" url="WordDocuments/addingurlslinkstowebsites.htm" target="right"><![CDATA[Adding URLs (Links to Web Sites)]]><contextids /></topic>
+    <topic id="103" tId="527" url="WordDocuments/adjustingaquestionscoreandaddingacomment.htm" target="right"><![CDATA[Adjusting a Question Score and Adding a Comment]]><contextids /></topic>
+    <topic id="104" tId="520" url="WordDocuments/adjustingatotalscoreandaddingacomment.htm" target="right"><![CDATA[Adjusting a Total Score and Adding a Comment]]><contextids /></topic>
+    <topic id="105" tId="697" url="WordDocuments/administrationandsitemanagementtools.htm" target="right"><![CDATA[Administration and Site Management Tools]]><contextids /></topic>
+    <topic id="106" tId="524" url="WordDocuments/allowingstudentstoretakeanassessment.htm" target="right"><![CDATA[Allowing Students to Retake an Assessment]]><contextids /></topic>
+    <topic id="107" tId="794" url="WordDocuments/anintroductiontoforms.htm" target="right"><![CDATA[An Introduction to Forms]]><contextids /></topic>
+    <topic id="108" tId="820" url="WordDocuments/anintroductiontomatrices.htm" target="right"><![CDATA[An Introduction to Matrices]]><contextids /></topic>
+    <topic id="109" tId="851" url="WordDocuments/anintroductiontoportfoliotemplates.htm" target="right"><![CDATA[An Introduction to Portfolio Templates]]><contextids /></topic>
+    <topic id="110" tId="895" url="WordDocuments/anintroductiontowizards.htm" target="right"><![CDATA[An Introduction to Wizards]]><contextids /></topic>
+    <topic id="111" tId="99" url="WordDocuments/announcements.htm" target="right"><![CDATA[Announcements]]><contextids /></topic>
+    <topic id="112" tId="302" url="WordDocuments/archivingmodules.htm" target="right"><![CDATA[Archiving Modules]]><contextids /></topic>
+    <topic id="113" tId="1623" url="WordDocuments/archivingresources.htm" target="right"><![CDATA[Archiving Resources]]><contextids /></topic>
+    <topic id="114" tId="396" url="WordDocuments/assessmenttools.htm" target="right"><![CDATA[Assessment Tools]]><contextids /></topic>
+    <topic id="115" tId="723" url="WordDocuments/assigningateachingassistantta.htm" target="right"><![CDATA[Assigning a Teaching Assistant (TA)]]><contextids /></topic>
+    <topic id="116" tId="437" url="WordDocuments/assigninggroupsofevaluators.htm" target="right"><![CDATA[Assigning Groups of Evaluators]]><contextids /></topic>
+    <topic id="117" tId="266" url="WordDocuments/assigningpermissionsforthepollstool.htm" target="right"><![CDATA[Assigning Permissions for the Polls Tool]]><contextids /></topic>
+    <topic id="118" tId="413" url="WordDocuments/assigningpermissionsforusingtheassignmentstool.htm" target="right"><![CDATA[Assigning Permissions for Using the Assignments Tool]]><contextids /></topic>
+    <topic id="119" tId="478" url="WordDocuments/assigningspecialgradingpermissionstoteachingassistants.htm" target="right"><![CDATA[Assigning Special Grading Permissions to Teaching Assistants]]><contextids /></topic>
+    <topic id="120" tId="397" url="WordDocuments/assignments.htm" target="right"><![CDATA[Assignments]]><contextids /></topic>
+    <topic id="121" tId="398" url="WordDocuments/assignmentstoolworkflow.htm" target="right"><![CDATA[Assignments Tool Workflow]]><contextids /></topic>
+    <topic id="122" tId="836" url="WordDocuments/attachingothermaterial.htm" target="right"><![CDATA[Attaching Other Material]]><contextids /></topic>
+    <topic id="123" tId="922" url="WordDocuments/attachingothermaterial1.htm" target="right"><![CDATA[Attaching Other Material]]><contextids /></topic>
+    <topic id="124" tId="11" url="WordDocuments/authentication.htm" target="right"><![CDATA[Authentication]]><contextids /></topic>
+    <topic id="125" tId="1581" url="WordDocuments/automaticgroupcreation.htm" target="right"><![CDATA[Automatic Group Creation]]><contextids /></topic>
+    <topic id="126" tId="1560" url="WordDocuments/basiclti.htm" target="right"><![CDATA[Basic LTI]]><contextids /></topic>
+    <topic id="127" tId="1177" url="WordDocuments/blogs.htm" target="right"><![CDATA[Blogs]]><contextids /></topic>
+    <topic id="128" tId="151" url="WordDocuments/bookmarkingatopic.htm" target="right"><![CDATA[Bookmarking a Topic]]><contextids /></topic>
+    <topic id="129" tId="901" url="WordDocuments/buildingawizard.htm" target="right"><![CDATA[Building a Wizard]]><contextids /></topic>
+    <topic id="130" tId="1669" url="WordDocuments/buildingyourowncoursesite1.htm" target="right"><![CDATA[Building Your Own Course Site]]><contextids /></topic>
+    <topic id="131" tId="1675" url="WordDocuments/buildingyourownportfoliosite.htm" target="right"><![CDATA[Building Your Own Portfolio Site]]><contextids /></topic>
+    <topic id="132" tId="1672" url="WordDocuments/buildingyourownprojectsite.htm" target="right"><![CDATA[Building Your Own Project Site]]><contextids /></topic>
+    <topic id="133" tId="109" url="WordDocuments/calendar.htm" target="right"><![CDATA[Calendar]]><contextids /></topic>
+    <topic id="134" tId="981" url="WordDocuments/calendarbyday.htm" target="right"><![CDATA[Calendar by Day]]><contextids /></topic>
+    <topic id="135" tId="983" url="WordDocuments/calendarbymonth.htm" target="right"><![CDATA[Calendar by Month]]><contextids /></topic>
+    <topic id="136" tId="982" url="WordDocuments/calendarbyweek.htm" target="right"><![CDATA[Calendar by Week]]><contextids /></topic>
+    <topic id="137" tId="984" url="WordDocuments/calendarbyyear.htm" target="right"><![CDATA[Calendar by Year]]><contextids /></topic>
+    <topic id="138" tId="111" url="WordDocuments/calendarnavigationfeatures.htm" target="right"><![CDATA[Calendar Navigation Features]]><contextids /></topic>
+    <topic id="139" tId="1686" url="WordDocuments/calendarsummary1.htm" target="right"><![CDATA[Calendar Summary]]><contextids /></topic>
+    <topic id="140" tId="115" url="WordDocuments/calendarviews.htm" target="right"><![CDATA[Calendar Views]]><contextids /></topic>
+    <topic id="141" tId="1420" url="WordDocuments/certification.htm" target="right"><![CDATA[Certification]]><contextids /></topic>
+    <topic id="142" tId="907" url="WordDocuments/changingacategory.htm" target="right"><![CDATA[Changing a Category]]><contextids /></topic>
+    <topic id="143" tId="1134" url="WordDocuments/changingacategory1.htm" target="right"><![CDATA[Changing a Category]]><contextids /></topic>
+    <topic id="144" tId="1175" url="WordDocuments/changingacategory2.htm" target="right"><![CDATA[Changing a Category]]><contextids /></topic>
+    <topic id="145" tId="257" url="WordDocuments/changingafolderorsubfoldersname.htm" target="right"><![CDATA[Changing a Folder or Subfolder's Name]]><contextids /></topic>
+    <topic id="146" tId="1302" url="WordDocuments/changingaforum.htm" target="right"><![CDATA[Changing a Forum]]><contextids /></topic>
+    <topic id="147" tId="1542" url="WordDocuments/changingaforum1.htm" target="right"><![CDATA[Changing a Forum]]><contextids /></topic>
+    <topic id="148" tId="812" url="WordDocuments/changingaglossaryterm.htm" target="right"><![CDATA[Changing a Glossary Term]]><contextids /></topic>
+    <topic id="149" tId="460" url="WordDocuments/changingagradebookitem.htm" target="right"><![CDATA[Changing a Gradebook Item]]><contextids /></topic>
+    <topic id="150" tId="845" url="WordDocuments/changingalayout.htm" target="right"><![CDATA[Changing a Layout]]><contextids /></topic>
+    <topic id="151" tId="830" url="WordDocuments/changingamatrix.htm" target="right"><![CDATA[Changing a Matrix]]><contextids /></topic>
+    <topic id="152" tId="229" url="WordDocuments/changingamessage.htm" target="right"><![CDATA[Changing a Message]]><contextids /></topic>
+    <topic id="153" tId="316" url="WordDocuments/changinganewslink.htm" target="right"><![CDATA[Changing a News Link]]><contextids /></topic>
+    <topic id="154" tId="908" url="WordDocuments/changingapage.htm" target="right"><![CDATA[Changing a Page]]><contextids /></topic>
+    <topic id="155" tId="941" url="WordDocuments/changingapart.htm" target="right"><![CDATA[Changing a Part]]><contextids /></topic>
+    <topic id="156" tId="739" url="WordDocuments/changingaparticipantsroleandstatus.htm" target="right"><![CDATA[Changing a Participant's Role and Status]]><contextids /></topic>
+    <topic id="157" tId="875" url="WordDocuments/changingaportfolio.htm" target="right"><![CDATA[Changing a Portfolio]]><contextids /></topic>
+    <topic id="158" tId="510" url="WordDocuments/changingapublishedassessment.htm" target="right"><![CDATA[Changing a Published Assessment]]><contextids /></topic>
+    <topic id="159" tId="1440" url="WordDocuments/changingaquestion1.htm" target="right"><![CDATA[Changing a Question]]><contextids /></topic>
+    <topic id="160" tId="889" url="WordDocuments/changingastyle.htm" target="right"><![CDATA[Changing a Style]]><contextids /></topic>
+    <topic id="161" tId="862" url="WordDocuments/changingatemplate.htm" target="right"><![CDATA[Changing a Template]]><contextids /></topic>
+    <topic id="162" tId="1545" url="WordDocuments/changingatopic.htm" target="right"><![CDATA[Changing a Topic]]><contextids /></topic>
+    <topic id="163" tId="374" url="WordDocuments/changingawebcontenttool.htm" target="right"><![CDATA[Changing a Web Content Tool]]><contextids /></topic>
+    <topic id="164" tId="906" url="WordDocuments/changingawizard.htm" target="right"><![CDATA[Changing a Wizard]]><contextids /></topic>
+    <topic id="165" tId="322" url="WordDocuments/changingaccesstoyourpodcasts.htm" target="right"><![CDATA[Changing Access to Your Podcasts]]><contextids /></topic>
+    <topic id="166" tId="484" url="WordDocuments/changinganassessmenttype.htm" target="right"><![CDATA[Changing an Assessment Type]]><contextids /></topic>
+    <topic id="167" tId="405" url="WordDocuments/changinganassignment.htm" target="right"><![CDATA[Changing an Assignment]]><contextids /></topic>
+    <topic id="168" tId="509" url="WordDocuments/changinganunpublishedassessment.htm" target="right"><![CDATA[Changing an Unpublished Assessment]]><contextids /></topic>
+    <topic id="169" tId="511" url="WordDocuments/changingassessmentsettings.htm" target="right"><![CDATA[Changing Assessment Settings]]><contextids /></topic>
+    <topic id="170" tId="441" url="WordDocuments/changingassignedgroups.htm" target="right"><![CDATA[Changing Assigned Groups]]><contextids /></topic>
+    <topic id="171" tId="1161" url="WordDocuments/changingcoursegradeformatandscale.htm" target="right"><![CDATA[Changing Course Grade Format and Scale]]><contextids /></topic>
+    <topic id="172" tId="801" url="WordDocuments/changingdetailsaboutaform.htm" target="right"><![CDATA[Changing Details about a Form]]><contextids /></topic>
+    <topic id="173" tId="440" url="WordDocuments/changingevaluationsettings.htm" target="right"><![CDATA[Changing Evaluation Settings]]><contextids /></topic>
+    <topic id="174" tId="439" url="WordDocuments/changingevaluations.htm" target="right"><![CDATA[Changing Evaluations]]><contextids /></topic>
+    <topic id="175" tId="1209" url="WordDocuments/changinggradebookitems.htm" target="right"><![CDATA[Changing Gradebook Items]]><contextids /></topic>
+    <topic id="176" tId="1600" url="WordDocuments/changinginformationandsettingsforameeting.htm" target="right"><![CDATA[Changing Information and Settings for a Meeting]]><contextids /></topic>
+    <topic id="177" tId="935" url="WordDocuments/changingnotificationemails.htm" target="right"><![CDATA[Changing Notification Emails]]><contextids /></topic>
+    <topic id="178" tId="347" url="WordDocuments/changingotherinformationforaresource.htm" target="right"><![CDATA[Changing Other Information for a Resource]]><contextids /></topic>
+    <topic id="179" tId="355" url="WordDocuments/changingpermissionsatthetoollevel.htm" target="right"><![CDATA[Changing Permissions at the Tool Level]]><contextids /></topic>
+    <topic id="180" tId="356" url="WordDocuments/changingpermissionsforafolder.htm" target="right"><![CDATA[Changing Permissions for a Folder]]><contextids /></topic>
+    <topic id="181" tId="1556" url="WordDocuments/changingpermissionsforaspecificforum.htm" target="right"><![CDATA[Changing Permissions for a Specific Forum]]><contextids /></topic>
+    <topic id="182" tId="1557" url="WordDocuments/changingpermissionsforaspecifictopic.htm" target="right"><![CDATA[Changing Permissions for a Specific Topic]]><contextids /></topic>
+    <topic id="183" tId="395" url="WordDocuments/changingpermissionsforawikipage.htm" target="right"><![CDATA[Changing Permissions for a Wiki Page]]><contextids /></topic>
+    <topic id="184" tId="1554" url="WordDocuments/changingpermissionsforforumsandtopics1.htm" target="right"><![CDATA[Changing Permissions for Forums and Topics]]><contextids /></topic>
+    <topic id="185" tId="323" url="WordDocuments/changingpermissionsforpodcasts.htm" target="right"><![CDATA[Changing Permissions for Podcasts]]><contextids /></topic>
+    <topic id="186" tId="394" url="WordDocuments/changingpermissionsfortheentirewiki.htm" target="right"><![CDATA[Changing Permissions for the Entire Wiki]]><contextids /></topic>
+    <topic id="187" tId="1622" url="WordDocuments/changingpermissionsforthemessagestool.htm" target="right"><![CDATA[Changing Permissions for the Messages Tool]]><contextids /></topic>
+    <topic id="188" tId="104" url="WordDocuments/changingpermissionsforusingtheannouncementstool.htm" target="right"><![CDATA[Changing Permissions for Using the Announcements Tool]]><contextids /></topic>
+    <topic id="189" tId="133" url="WordDocuments/changingpermissionsforusingthecalendartool.htm" target="right"><![CDATA[Changing Permissions for Using the Calendar Tool]]><contextids /></topic>
+    <topic id="190" tId="143" url="WordDocuments/changingpermissionsforusingthechatroomtool.htm" target="right"><![CDATA[Changing Permissions for Using the Chat Room Tool]]><contextids /></topic>
+    <topic id="191" tId="196" url="WordDocuments/changingpermissionsforusingtheemailarchivetool.htm" target="right"><![CDATA[Changing Permissions for Using the Email Archive Tool]]><contextids /></topic>
+    <topic id="192" tId="792" url="WordDocuments/changingpermissionsforusingtheevaluationstool.htm" target="right"><![CDATA[Changing Permissions for Using the Evaluations Tool]]><contextids /></topic>
+    <topic id="193" tId="808" url="WordDocuments/changingpermissionsforusingtheformstool.htm" target="right"><![CDATA[Changing Permissions for Using the Forms Tool]]><contextids /></topic>
+    <topic id="194" tId="818" url="WordDocuments/changingpermissionsforusingtheglossarytool.htm" target="right"><![CDATA[Changing Permissions for Using the Glossary Tool]]><contextids /></topic>
+    <topic id="195" tId="833" url="WordDocuments/changingpermissionsforusingthematricestool.htm" target="right"><![CDATA[Changing Permissions for Using the Matrices Tool]]><contextids /></topic>
+    <topic id="196" tId="849" url="WordDocuments/changingpermissionsforusingtheportfoliolayoutstool.htm" target="right"><![CDATA[Changing Permissions for Using the Portfolio Layouts Tool]]><contextids /></topic>
+    <topic id="197" tId="868" url="WordDocuments/changingpermissionsforusingtheportfoliotemplatestool.htm" target="right"><![CDATA[Changing Permissions for Using the Portfolio Templates Tool]]><contextids /></topic>
+    <topic id="198" tId="886" url="WordDocuments/changingpermissionsforusingtheportfoliostool.htm" target="right"><![CDATA[Changing Permissions for Using the Portfolios Tool]]><contextids /></topic>
+    <topic id="199" tId="354" url="WordDocuments/changingpermissionsforusingtheresourcestool.htm" target="right"><![CDATA[Changing Permissions for Using the Resources Tool]]><contextids /></topic>
+    <topic id="200" tId="893" url="WordDocuments/changingpermissionsforusingthestylestool.htm" target="right"><![CDATA[Changing Permissions for Using the Styles Tool]]><contextids /></topic>
+    <topic id="201" tId="393" url="WordDocuments/changingpermissionsforusingthewikitool.htm" target="right"><![CDATA[Changing Permissions for Using the Wiki Tool]]><contextids /></topic>
+    <topic id="202" tId="919" url="WordDocuments/changingpermissionsforusingthewizardstool.htm" target="right"><![CDATA[Changing Permissions for Using the Wizards Tool]]><contextids /></topic>
+    <topic id="203" tId="1627" url="WordDocuments/changingpermissionsinthesettingstemplate.htm" target="right"><![CDATA[Changing Permissions in the Settings Template]]><contextids /></topic>
+    <topic id="204" tId="512" url="WordDocuments/changingquestions.htm" target="right"><![CDATA[Changing Questions]]><contextids /></topic>
+    <topic id="205" tId="724" url="WordDocuments/changingsectionassignmentsstudentmemberships.htm" target="right"><![CDATA[Changing Section Assignments: Student Memberships]]><contextids /></topic>
+    <topic id="206" tId="726" url="WordDocuments/changingstudentoptions.htm" target="right"><![CDATA[Changing Student Options]]><contextids /></topic>
+    <topic id="207" tId="1626" url="WordDocuments/changingtemplatesettings.htm" target="right"><![CDATA[Changing Template Settings]]><contextids /></topic>
+    <topic id="208" tId="346" url="WordDocuments/changingthecontentofanuploadedfile.htm" target="right"><![CDATA[Changing the Content of an Uploaded File]]><contextids /></topic>
+    <topic id="209" tId="341" url="WordDocuments/changingthecontentofresources.htm" target="right"><![CDATA[Changing the Content of Resources]]><contextids /></topic>
+    <topic id="210" tId="448" url="WordDocuments/changingthedisplay.htm" target="right"><![CDATA[Changing the Display]]><contextids /></topic>
+    <topic id="211" tId="313" url="WordDocuments/changingthedisplayonthelessonshomepage.htm" target="right"><![CDATA[Changing the Display on the Lessons Home Page]]><contextids /></topic>
+    <topic id="212" tId="171" url="WordDocuments/changingtheorderinwhichcategoriesaredisplayed.htm" target="right"><![CDATA[Changing the Order in Which Categories Are Displayed]]><contextids /></topic>
+    <topic id="213" tId="910" url="WordDocuments/changingtheorderofcategoriesorpages.htm" target="right"><![CDATA[Changing the Order of Categories or Pages]]><contextids /></topic>
+    <topic id="214" tId="176" url="WordDocuments/changingtheorderofforums.htm" target="right"><![CDATA[Changing the Order of Forums]]><contextids /></topic>
+    <topic id="215" tId="218" url="WordDocuments/changingtheorderofforumsandtopics.htm" target="right"><![CDATA[Changing the Order of Forums and Topics]]><contextids /></topic>
+    <topic id="216" tId="942" url="WordDocuments/changingtheorderofparts.htm" target="right"><![CDATA[Changing the Order of Parts]]><contextids /></topic>
+    <topic id="217" tId="1441" url="WordDocuments/changingtheorderofquestions1.htm" target="right"><![CDATA[Changing the Order of Questions]]><contextids /></topic>
+    <topic id="218" tId="1575" url="WordDocuments/changingtheorderoftools.htm" target="right"><![CDATA[Changing the Order of Tools]]><contextids /></topic>
+    <topic id="219" tId="353" url="WordDocuments/changingtypesofresourcesallowed.htm" target="right"><![CDATA[Changing Types of Resources Allowed]]><contextids /></topic>
+    <topic id="220" tId="342" url="WordDocuments/changingurlshtmlpagessimpletextdocumentsandformitems.htm" target="right"><![CDATA[Changing URLs, HTML Pages, Simple Text Documents, and Form Items]]><contextids /></topic>
+    <topic id="221" tId="137" url="WordDocuments/changingyourdefaultchatroom.htm" target="right"><![CDATA[Changing Your Default Chat Room]]><contextids /></topic>
+    <topic id="222" tId="241" url="WordDocuments/changingyourdefaultsettings.htm" target="right"><![CDATA[Changing Your Default Settings]]><contextids /></topic>
+    <topic id="223" tId="699" url="WordDocuments/changingyourpasswordandaccountdetails.htm" target="right"><![CDATA[Changing Your Password and Account Details]]><contextids /></topic>
+    <topic id="224" tId="1700" url="WordDocuments/changingyoursitelinks.htm" target="right"><![CDATA[Changing Your Site Links]]><contextids /></topic>
+    <topic id="225" tId="186" url="WordDocuments/changingyouruserprofile.htm" target="right"><![CDATA[Changing Your User Profile]]><contextids /></topic>
+    <topic id="226" tId="134" url="WordDocuments/chatroom.htm" target="right"><![CDATA[Chat Room]]><contextids /></topic>
+    <topic id="227" tId="1327" url="WordDocuments/checkingsitequota.htm" target="right"><![CDATA[Checking Site Quota]]><contextids /></topic>
+    <topic id="228" tId="7" url="WordDocuments/clefundamentals.htm" target="right"><![CDATA[CLE Fundamentals]]><contextids /></topic>
+    <topic id="229" tId="14" url="WordDocuments/clegateway.htm" target="right"><![CDATA[CLE Gateway]]><contextids /></topic>
+    <topic id="230" tId="140" url="WordDocuments/clearinghistoryforachatroom.htm" target="right"><![CDATA[Clearing History for a Chat Room]]><contextids /></topic>
+    <topic id="231" tId="1497" url="WordDocuments/clog.htm" target="right"><![CDATA[Clog]]><contextids /></topic>
+    <topic id="232" tId="444" url="WordDocuments/closingandreopeningevaluations.htm" target="right"><![CDATA[Closing and Reopening Evaluations]]><contextids /></topic>
+    <topic id="233" tId="445" url="WordDocuments/closingevaluationsearly.htm" target="right"><![CDATA[Closing Evaluations Early]]><contextids /></topic>
+    <topic id="234" tId="1704" url="WordDocuments/collapsingthetoolmenu.htm" target="right"><![CDATA[Collapsing the Tool Menu]]><contextids /></topic>
+    <topic id="235" tId="98" url="WordDocuments/communicationtools.htm" target="right"><![CDATA[Communication Tools]]><contextids /></topic>
+    <topic id="236" tId="921" url="WordDocuments/completingandattachingforms1.htm" target="right"><![CDATA[Completing and Attaching Forms]]><contextids /></topic>
+    <topic id="237" tId="835" url="WordDocuments/completingandattachingforms.htm" target="right"><![CDATA[Completing and Attaching Forms]]><contextids /></topic>
+    <topic id="238" tId="898" url="WordDocuments/componentsofwizards.htm" target="right"><![CDATA[Components of Wizards]]><contextids /></topic>
+    <topic id="239" tId="1562" url="WordDocuments/configuringabasicltitool.htm" target="right"><![CDATA[Configuring a Basic LTI Tool]]><contextids /></topic>
+    <topic id="240" tId="488" url="WordDocuments/configuringsettingsforanassessment.htm" target="right"><![CDATA[Configuring Settings for an Assessment]]><contextids /></topic>
+    <topic id="241" tId="1130" url="WordDocuments/configuringthespreadsheetview.htm" target="right"><![CDATA[Configuring the Spreadsheet View]]><contextids /></topic>
+    <topic id="242" tId="716" url="WordDocuments/considerations.htm" target="right"><![CDATA[Considerations]]><contextids /></topic>
+    <topic id="243" tId="523" url="WordDocuments/contactingstudents.htm" target="right"><![CDATA[Contacting Students]]><contextids /></topic>
+    <topic id="244" tId="267" url="WordDocuments/contenttools.htm" target="right"><![CDATA[Content Tools]]><contextids /></topic>
+    <topic id="245" tId="1601" url="WordDocuments/copyingameeting.htm" target="right"><![CDATA[Copying a meeting]]><contextids /></topic>
+    <topic id="246" tId="541" url="WordDocuments/copyingapoolorsubpool.htm" target="right"><![CDATA[Copying a Pool or Subpool]]><contextids /></topic>
+    <topic id="247" tId="547" url="WordDocuments/copyingaquestionfromaquestionpooltoanassessment.htm" target="right"><![CDATA[Copying a Question from a Question Pool to an Assessment]]><contextids /></topic>
+    <topic id="248" tId="350" url="WordDocuments/copyingaresource.htm" target="right"><![CDATA[Copying a Resource]]><contextids /></topic>
+    <topic id="249" tId="863" url="WordDocuments/copyingatemplate.htm" target="right"><![CDATA[Copying a Template]]><contextids /></topic>
+    <topic id="250" tId="943" url="WordDocuments/copyingallquestionsinaparttoaquestionpool.htm" target="right"><![CDATA[Copying All Questions in a Part to a Question Pool]]><contextids /></topic>
+    <topic id="251" tId="545" url="WordDocuments/copyingandmovingquestionsbetweenpoolssubpools.htm" target="right"><![CDATA[Copying and Moving Questions Between Pools/Subpools]]><contextids /></topic>
+    <topic id="252" tId="424" url="WordDocuments/copyingquestionsandheaders.htm" target="right"><![CDATA[Copying Questions and Headers]]><contextids /></topic>
+    <topic id="253" tId="431" url="WordDocuments/copyingtemplates.htm" target="right"><![CDATA[Copying Templates]]><contextids /></topic>
+    <topic id="254" tId="1688" url="WordDocuments/coursesitehomepage1.htm" target="right"><![CDATA[Course Site Home Page]]><contextids /></topic>
+    <topic id="255" tId="23" url="WordDocuments/coursesites.htm" target="right"><![CDATA[Course Sites]]><contextids /></topic>
+    <topic id="256" tId="1499" url="WordDocuments/creatingablogpost.htm" target="right"><![CDATA[Creating a Blog Post]]><contextids /></topic>
+    <topic id="257" tId="1439" url="WordDocuments/creatingacalculatedquestion.htm" target="right"><![CDATA[Creating a Calculated Question]]><contextids /></topic>
+    <topic id="258" tId="1668" url="WordDocuments/creatingacoursesite1.htm" target="right"><![CDATA[Creating a Course Site]]><contextids /></topic>
+    <topic id="259" tId="1670" url="WordDocuments/creatingacoursesitefromatemplate1.htm" target="right"><![CDATA[Creating a Course Site from a Template]]><contextids /></topic>
+    <topic id="260" tId="1438" url="WordDocuments/creatingafileuploadquestion.htm" target="right"><![CDATA[Creating a File Upload Question]]><contextids /></topic>
+    <topic id="261" tId="1433" url="WordDocuments/creatingafillintheblankquestion.htm" target="right"><![CDATA[Creating a Fill-in-the-Blank Question]]><contextids /></topic>
+    <topic id="262" tId="255" url="WordDocuments/creatingafolder.htm" target="right"><![CDATA[Creating a Folder]]><contextids /></topic>
+    <topic id="263" tId="412" url="WordDocuments/creatingagradereport.htm" target="right"><![CDATA[Creating a Grade Report]]><contextids /></topic>
+    <topic id="264" tId="1131" url="WordDocuments/creatingagradebook.htm" target="right"><![CDATA[Creating a Gradebook]]><contextids /></topic>
+    <topic id="265" tId="459" url="WordDocuments/creatingagradebookitem.htm" target="right"><![CDATA[Creating a Gradebook Item]]><contextids /></topic>
+    <topic id="266" tId="1435" url="WordDocuments/creatingamatchingquestion.htm" target="right"><![CDATA[Creating a Matching Question]]><contextids /></topic>
+    <topic id="267" tId="823" url="WordDocuments/creatingamatrix.htm" target="right"><![CDATA[Creating a Matrix]]><contextids /></topic>
+    <topic id="268" tId="1430" url="WordDocuments/creatingamultiplechoicequestion.htm" target="right"><![CDATA[Creating a Multiple Choice Question]]><contextids /></topic>
+    <topic id="269" tId="404" url="WordDocuments/creatinganewassignment.htm" target="right"><![CDATA[Creating a New Assignment]]><contextids /></topic>
+    <topic id="270" tId="1434" url="WordDocuments/creatinganumericresponsequestion.htm" target="right"><![CDATA[Creating a Numeric Response Question]]><contextids /></topic>
+    <topic id="271" tId="872" url="WordDocuments/creatingaportfolio.htm" target="right"><![CDATA[Creating a Portfolio]]><contextids /></topic>
+    <topic id="272" tId="873" url="WordDocuments/creatingaportfoliobasedonyourowndesign.htm" target="right"><![CDATA[Creating a Portfolio Based on Your Own Design]]><contextids /></topic>
+    <topic id="273" tId="1674" url="WordDocuments/creatingaportfoliosite1.htm" target="right"><![CDATA[Creating a Portfolio Site]]><contextids /></topic>
+    <topic id="274" tId="1676" url="WordDocuments/creatingaportfoliositefromatemplate.htm" target="right"><![CDATA[Creating a Portfolio Site from a Template]]><contextids /></topic>
+    <topic id="275" tId="1671" url="WordDocuments/creatingaprojectsite1.htm" target="right"><![CDATA[Creating a Project Site]]><contextids /></topic>
+    <topic id="276" tId="1569" url="WordDocuments/creatingaprojectsiteforconnections.htm" target="right"><![CDATA[Creating a Project Site For Connections]]><contextids /></topic>
+    <topic id="277" tId="1673" url="WordDocuments/creatingaprojectsitefromatemplate.htm" target="right"><![CDATA[Creating a Project Site from a Template]]><contextids /></topic>
+    <topic id="278" tId="548" url="WordDocuments/creatingarandomdrawassessmententirelyfromaquestionpool.htm" target="right"><![CDATA[Creating a Random-Draw Assessment Entirely from a Question Pool]]><contextids /></topic>
+    <topic id="279" tId="1432" url="WordDocuments/creatingashortansweressayquestion.htm" target="right"><![CDATA[Creating a Short Answer/Essay Question]]><contextids /></topic>
+    <topic id="280" tId="256" url="WordDocuments/creatingasubfolder.htm" target="right"><![CDATA[Creating a Subfolder]]><contextids /></topic>
+    <topic id="281" tId="1431" url="WordDocuments/creatingasurveyquestion.htm" target="right"><![CDATA[Creating a Survey Question]]><contextids /></topic>
+    <topic id="282" tId="1584" url="WordDocuments/creatingasurveyquestionwithamatrixofchoices.htm" target="right"><![CDATA[Creating a Survey Question with a Matrix of Choices]]><contextids /></topic>
+    <topic id="283" tId="365" url="WordDocuments/creatingasyllabusitem.htm" target="right"><![CDATA[Creating a Syllabus Item]]><contextids /></topic>
+    <topic id="284" tId="855" url="WordDocuments/creatingatemplate.htm" target="right"><![CDATA[Creating a Template]]><contextids /></topic>
+    <topic id="285" tId="1436" url="WordDocuments/creatingatruefalsequestion.htm" target="right"><![CDATA[Creating a True/False Question]]><contextids /></topic>
+    <topic id="286" tId="101" url="WordDocuments/creatinganannouncement.htm" target="right"><![CDATA[Creating an Announcement]]><contextids /></topic>
+    <topic id="287" tId="483" url="WordDocuments/creatinganassessmenttype.htm" target="right"><![CDATA[Creating an Assessment Type]]><contextids /></topic>
+    <topic id="288" tId="1427" url="WordDocuments/creatinganassessmentwithassessmentbuilder.htm" target="right"><![CDATA[Creating an Assessment with Assessment Builder]]><contextids /></topic>
+    <topic id="289" tId="1428" url="WordDocuments/creatinganassessmentwithmarkuptext.htm" target="right"><![CDATA[Creating an Assessment with Markup Text]]><contextids /></topic>
+    <topic id="290" tId="1437" url="WordDocuments/creatinganaudiorecordingquestion.htm" target="right"><![CDATA[Creating an Audio Recording Question]]><contextids /></topic>
+    <topic id="291" tId="200" url="WordDocuments/creatingandaddingafeedbackfile.htm" target="right"><![CDATA[Creating and Adding a Feedback File]]><contextids /></topic>
+    <topic id="292" tId="1426" url="WordDocuments/creatingandpublishingassessments.htm" target="right"><![CDATA[Creating and Publishing Assessments]]><contextids /></topic>
+    <topic id="293" tId="482" url="WordDocuments/creatingandworkingwithassessmenttypes.htm" target="right"><![CDATA[Creating and Working With Assessment Types]]><contextids /></topic>
+    <topic id="294" tId="183" url="WordDocuments/creatingandworkingwithuserprofiles.htm" target="right"><![CDATA[Creating and Working with User Profiles]]><contextids /></topic>
+    <topic id="295" tId="145" url="WordDocuments/creatingchatarchivesinresources.htm" target="right"><![CDATA[Creating Chat Archives in Resources]]><contextids /></topic>
+    <topic id="296" tId="433" url="WordDocuments/creatingevaluations.htm" target="right"><![CDATA[Creating Evaluations]]><contextids /></topic>
+    <topic id="297" tId="1186" url="WordDocuments/creatingoreditingyourblogprofile.htm" target="right"><![CDATA[Creating or Editing your Blog Profile]]><contextids /></topic>
+    <topic id="298" tId="300" url="WordDocuments/creatingsubsections.htm" target="right"><![CDATA[Creating Subsections]]><contextids /></topic>
+    <topic id="299" tId="201" url="WordDocuments/creatingthefile.htm" target="right"><![CDATA[Creating the File]]><contextids /></topic>
+    <topic id="300" tId="78" url="WordDocuments/customizingasitehomepage.htm" target="right"><![CDATA[Customizing a Site Home Page]]><contextids /></topic>
+    <topic id="301" tId="1326" url="WordDocuments/customizingemailarchive.htm" target="right"><![CDATA[Customizing Email Archive]]><contextids /></topic>
+    <topic id="302" tId="704" url="WordDocuments/customizingsitelinks.htm" target="right"><![CDATA[Customizing Site Links]]><contextids /></topic>
+    <topic id="303" tId="1707" url="WordDocuments/customizingthecalendarsection.htm" target="right"><![CDATA[Customizing the Calendar Section]]><contextids /></topic>
+    <topic id="304" tId="80" url="WordDocuments/customizingtherecentannouncementssection.htm" target="right"><![CDATA[Customizing the Recent Announcements Section]]><contextids /></topic>
+    <topic id="305" tId="81" url="WordDocuments/customizingtherecentchatmessagessection.htm" target="right"><![CDATA[Customizing the Recent Chat Messages Section]]><contextids /></topic>
+    <topic id="306" tId="79" url="WordDocuments/customizingthesiteinformationdisplay.htm" target="right"><![CDATA[Customizing the Site Information Display]]><contextids /></topic>
+    <topic id="307" tId="381" url="WordDocuments/defaulttext.htm" target="right"><![CDATA[Default Text]]><contextids /></topic>
+    <topic id="308" tId="1502" url="WordDocuments/deletingablogpost.htm" target="right"><![CDATA[Deleting a Blog Post]]><contextids /></topic>
+    <topic id="309" tId="1135" url="WordDocuments/deletingacategory.htm" target="right"><![CDATA[Deleting a Category]]><contextids /></topic>
+    <topic id="310" tId="909" url="WordDocuments/deletingacategoryorpage.htm" target="right"><![CDATA[Deleting a Category or Page]]><contextids /></topic>
+    <topic id="311" tId="1458" url="WordDocuments/deletingacertificate.htm" target="right"><![CDATA[Deleting a Certificate]]><contextids /></topic>
+    <topic id="312" tId="207" url="WordDocuments/deletingafeedbackfile.htm" target="right"><![CDATA[Deleting a Feedback File]]><contextids /></topic>
+    <topic id="313" tId="258" url="WordDocuments/deletingafolderorsubfolder.htm" target="right"><![CDATA[Deleting a Folder or Subfolder]]><contextids /></topic>
+    <topic id="314" tId="1543" url="WordDocuments/deletingaforum.htm" target="right"><![CDATA[Deleting a Forum]]><contextids /></topic>
+    <topic id="315" tId="813" url="WordDocuments/deletingaglossaryterm.htm" target="right"><![CDATA[Deleting a Glossary Term]]><contextids /></topic>
+    <topic id="316" tId="461" url="WordDocuments/deletingagradebookitem.htm" target="right"><![CDATA[Deleting a Gradebook Item]]><contextids /></topic>
+    <topic id="317" tId="846" url="WordDocuments/deletingalayout.htm" target="right"><![CDATA[Deleting a Layout]]><contextids /></topic>
+    <topic id="318" tId="160" url="WordDocuments/deletingamessage.htm" target="right"><![CDATA[Deleting a Message]]><contextids /></topic>
+    <topic id="319" tId="230" url="WordDocuments/deletingamessage1.htm" target="right"><![CDATA[Deleting a Message]]><contextids /></topic>
+    <topic id="320" tId="296" url="WordDocuments/deletingamodule.htm" target="right"><![CDATA[Deleting a Module]]><contextids /></topic>
+    <topic id="321" tId="295" url="WordDocuments/deletingamoduleorsection.htm" target="right"><![CDATA[Deleting a Module or Section]]><contextids /></topic>
+    <topic id="322" tId="944" url="WordDocuments/deletingapart.htm" target="right"><![CDATA[Deleting a Part]]><contextids /></topic>
+    <topic id="323" tId="321" url="WordDocuments/deletingapodcast.htm" target="right"><![CDATA[Deleting a Podcast]]><contextids /></topic>
+    <topic id="324" tId="263" url="WordDocuments/deletingapoll.htm" target="right"><![CDATA[Deleting a Poll]]><contextids /></topic>
+    <topic id="325" tId="879" url="WordDocuments/deletingaportfolio.htm" target="right"><![CDATA[Deleting a Portfolio]]><contextids /></topic>
+    <topic id="326" tId="1442" url="WordDocuments/deletingaquestion1.htm" target="right"><![CDATA[Deleting a Question]]><contextids /></topic>
+    <topic id="327" tId="348" url="WordDocuments/deletingaresource.htm" target="right"><![CDATA[Deleting a Resource]]><contextids /></topic>
+    <topic id="328" tId="297" url="WordDocuments/deletingasection.htm" target="right"><![CDATA[Deleting a Section]]><contextids /></topic>
+    <topic id="329" tId="721" url="WordDocuments/deletingasection1.htm" target="right"><![CDATA[Deleting a Section]]><contextids /></topic>
+    <topic id="330" tId="751" url="WordDocuments/deletingasite.htm" target="right"><![CDATA[Deleting a Site]]><contextids /></topic>
+    <topic id="331" tId="890" url="WordDocuments/deletingastyle.htm" target="right"><![CDATA[Deleting a Style]]><contextids /></topic>
+    <topic id="332" tId="867" url="WordDocuments/deletingatemplate.htm" target="right"><![CDATA[Deleting a Template]]><contextids /></topic>
+    <topic id="333" tId="1546" url="WordDocuments/deletingatopic.htm" target="right"><![CDATA[Deleting a Topic]]><contextids /></topic>
+    <topic id="334" tId="375" url="WordDocuments/deletingawebcontenttool.htm" target="right"><![CDATA[Deleting a Web Content Tool]]><contextids /></topic>
+    <topic id="335" tId="912" url="WordDocuments/deletingawizard.htm" target="right"><![CDATA[Deleting a Wizard]]><contextids /></topic>
+    <topic id="336" tId="103" url="WordDocuments/deletinganannouncement.htm" target="right"><![CDATA[Deleting an Announcement]]><contextids /></topic>
+    <topic id="337" tId="530" url="WordDocuments/deletinganassessment.htm" target="right"><![CDATA[Deleting an Assessment]]><contextids /></topic>
+    <topic id="338" tId="485" url="WordDocuments/deletinganassessmenttype.htm" target="right"><![CDATA[Deleting an Assessment Type]]><contextids /></topic>
+    <topic id="339" tId="406" url="WordDocuments/deletinganassignment.htm" target="right"><![CDATA[Deleting an Assignment]]><contextids /></topic>
+    <topic id="340" tId="987" url="WordDocuments/deletinganevent1.htm" target="right"><![CDATA[Deleting an Event]]><contextids /></topic>
+    <topic id="341" tId="173" url="WordDocuments/deletingcategories.htm" target="right"><![CDATA[Deleting Categories]]><contextids /></topic>
+    <topic id="342" tId="139" url="WordDocuments/deletingchatroommessages.htm" target="right"><![CDATA[Deleting Chat Room Messages]]><contextids /></topic>
+    <topic id="343" tId="791" url="WordDocuments/deletingevaluations.htm" target="right"><![CDATA[Deleting Evaluations]]><contextids /></topic>
+    <topic id="344" tId="925" url="WordDocuments/deletingformsandattachedwork1.htm" target="right"><![CDATA[Deleting Forms and Attached Work]]><contextids /></topic>
+    <topic id="345" tId="839" url="WordDocuments/deletingformsandattachedwork.htm" target="right"><![CDATA[Deleting Forms and Attached Work]]><contextids /></topic>
+    <topic id="346" tId="182" url="WordDocuments/deletingforums.htm" target="right"><![CDATA[Deleting Forums]]><contextids /></topic>
+    <topic id="347" tId="1210" url="WordDocuments/deletinggradebookitems.htm" target="right"><![CDATA[Deleting Gradebook Items]]><contextids /></topic>
+    <topic id="348" tId="253" url="WordDocuments/deletingmessages.htm" target="right"><![CDATA[Deleting Messages]]><contextids /></topic>
+    <topic id="349" tId="542" url="WordDocuments/deletingpools.htm" target="right"><![CDATA[Deleting Pools]]><contextids /></topic>
+    <topic id="350" tId="425" url="WordDocuments/deletingquestionsandheaders.htm" target="right"><![CDATA[Deleting Questions and Headers]]><contextids /></topic>
+    <topic id="351" tId="370" url="WordDocuments/deletingsyllabusitems.htm" target="right"><![CDATA[Deleting Syllabus Items]]><contextids /></topic>
+    <topic id="352" tId="432" url="WordDocuments/deletingtemplates.htm" target="right"><![CDATA[Deleting Templates]]><contextids /></topic>
+    <topic id="353" tId="167" url="WordDocuments/deletingtopics.htm" target="right"><![CDATA[Deleting Topics]]><contextids /></topic>
+    <topic id="354" tId="821" url="WordDocuments/designingamatrix.htm" target="right"><![CDATA[Designing a Matrix]]><contextids /></topic>
+    <topic id="355" tId="900" url="WordDocuments/designingawizard.htm" target="right"><![CDATA[Designing a Wizard]]><contextids /></topic>
+    <topic id="356" tId="1579" url="WordDocuments/disablingatool.htm" target="right"><![CDATA[Disabling a Tool]]><contextids /></topic>
+    <topic id="357" tId="146" url="WordDocuments/discussionforums.htm" target="right"><![CDATA[Discussion Forums]]><contextids /></topic>
+    <topic id="358" tId="184" url="WordDocuments/displayingauserprofile.htm" target="right"><![CDATA[Displaying a User Profile]]><contextids /></topic>
+    <topic id="359" tId="92" url="WordDocuments/displayingcopyrightalerts.htm" target="right"><![CDATA[Displaying Copyright Alerts]]><contextids /></topic>
+    <topic id="360" tId="1111" url="WordDocuments/displayingitemanalysis.htm" target="right"><![CDATA[Displaying Item Analysis]]><contextids /></topic>
+    <topic id="361" tId="311" url="WordDocuments/displayinglessons.htm" target="right"><![CDATA[Displaying Lessons]]><contextids /></topic>
+    <topic id="362" tId="264" url="WordDocuments/displayingpollresults.htm" target="right"><![CDATA[Displaying Poll Results]]><contextids /></topic>
+    <topic id="363" tId="525" url="WordDocuments/displayingquestionsandresponses.htm" target="right"><![CDATA[Displaying Questions and Responses]]><contextids /></topic>
+    <topic id="364" tId="528" url="WordDocuments/displayingstatistics.htm" target="right"><![CDATA[Displaying Statistics]]><contextids /></topic>
+    <topic id="365" tId="1638" url="WordDocuments/displayingstatisticsbytopic.htm" target="right"><![CDATA[Displaying Statistics by Topic]]><contextids /></topic>
+    <topic id="366" tId="1549" url="WordDocuments/displayingstatisticsbyuser.htm" target="right"><![CDATA[Displaying Statistics by User]]><contextids /></topic>
+    <topic id="367" tId="1548" url="WordDocuments/displayingstatisticsonuserparticipation1.htm" target="right"><![CDATA[Displaying Statistics on User Participation]]><contextids /></topic>
+    <topic id="368" tId="522" url="WordDocuments/displayingsubmissionstatus.htm" target="right"><![CDATA[Displaying Submission Status]]><contextids /></topic>
+    <topic id="369" tId="285" url="WordDocuments/displayingthelistofsectionsinamodule.htm" target="right"><![CDATA[Displaying the List of Sections in a Module]]><contextids /></topic>
+    <topic id="370" tId="286" url="WordDocuments/displayingthemanagingoptionsscreen.htm" target="right"><![CDATA[Displaying the Managing Options Screen]]><contextids /></topic>
+    <topic id="371" tId="1648" url="WordDocuments/displayingthestudentview1.htm" target="right"><![CDATA[Displaying the Student View]]><contextids /></topic>
+    <topic id="372" tId="518" url="WordDocuments/displayingtotalscores.htm" target="right"><![CDATA[Displaying Total Scores]]><contextids /></topic>
+    <topic id="373" tId="551" url="WordDocuments/displayingyourgradeandfeedback.htm" target="right"><![CDATA[Displaying Your Grade and Feedback]]><contextids /></topic>
+    <topic id="374" tId="877" url="WordDocuments/downloadingexportingaportfolio.htm" target="right"><![CDATA[Downloading (Exporting) a Portfolio]]><contextids /></topic>
+    <topic id="375" tId="208" url="WordDocuments/downloadingafeedbackfile.htm" target="right"><![CDATA[Downloading a Feedback File]]><contextids /></topic>
+    <topic id="376" tId="1653" url="WordDocuments/downloadingameetinginicalformat.htm" target="right"><![CDATA[Downloading a Meeting in iCal Format]]><contextids /></topic>
+    <topic id="377" tId="326" url="WordDocuments/downloadingapodcast.htm" target="right"><![CDATA[Downloading a Podcast]]><contextids /></topic>
+    <topic id="378" tId="1412" url="WordDocuments/downloadingallsubmissions.htm" target="right"><![CDATA[Downloading All Submissions]]><contextids /></topic>
+    <topic id="379" tId="526" url="WordDocuments/downloadingalluploadedfilesforfileuploadquestions.htm" target="right"><![CDATA[Downloading All Uploaded Files for File Upload Questions]]><contextids /></topic>
+    <topic id="380" tId="725" url="WordDocuments/downloadingandprintingsectionlists.htm" target="right"><![CDATA[Downloading and Printing Section Lists]]><contextids /></topic>
+    <topic id="381" tId="1424" url="WordDocuments/downloadingthenewitemtemplate.htm" target="right"><![CDATA[Downloading the New Item Template]]><contextids /></topic>
+    <topic id="382" tId="282" url="WordDocuments/dropbox.htm" target="right"><![CDATA[Drop Box]]><contextids /></topic>
+    <topic id="383" tId="293" url="WordDocuments/duplicatingamodule.htm" target="right"><![CDATA[Duplicating a Module]]><contextids /></topic>
+    <topic id="384" tId="351" url="WordDocuments/duplicatingaresource.htm" target="right"><![CDATA[Duplicating a Resource]]><contextids /></topic>
+    <topic id="385" tId="743" url="WordDocuments/duplicatingasite.htm" target="right"><![CDATA[Duplicating a Site]]><contextids /></topic>
+    <topic id="386" tId="407" url="WordDocuments/duplicatinganassignment.htm" target="right"><![CDATA[Duplicating an Assignment]]><contextids /></topic>
+    <topic id="387" tId="1720" url="WordDocuments/editingabasicltitool.htm" target="right"><![CDATA[Editing a Basic LTI Tool]]><contextids /></topic>
+    <topic id="388" tId="1184" url="WordDocuments/editingablogentry.htm" target="right"><![CDATA[Editing a Blog Entry]]><contextids /></topic>
+    <topic id="389" tId="1501" url="WordDocuments/editingablogpost.htm" target="right"><![CDATA[Editing a Blog Post]]><contextids /></topic>
+    <topic id="390" tId="1457" url="WordDocuments/editingacertificate.htm" target="right"><![CDATA[Editing a Certificate]]><contextids /></topic>
+    <topic id="391" tId="159" url="WordDocuments/editingamessage.htm" target="right"><![CDATA[Editing a Message]]><contextids /></topic>
+    <topic id="392" tId="291" url="WordDocuments/editingamodule.htm" target="right"><![CDATA[Editing a Module]]><contextids /></topic>
+    <topic id="393" tId="320" url="WordDocuments/editingapodcast.htm" target="right"><![CDATA[Editing a Podcast]]><contextids /></topic>
+    <topic id="394" tId="262" url="WordDocuments/editingapoll.htm" target="right"><![CDATA[Editing a Poll]]><contextids /></topic>
+    <topic id="395" tId="720" url="WordDocuments/editingasection.htm" target="right"><![CDATA[Editing a Section]]><contextids /></topic>
+    <topic id="396" tId="366" url="WordDocuments/editingasyllabusitem.htm" target="right"><![CDATA[Editing a Syllabus Item]]><contextids /></topic>
+    <topic id="397" tId="1576" url="WordDocuments/editingatoolname.htm" target="right"><![CDATA[Editing a Tool Name]]><contextids /></topic>
+    <topic id="398" tId="383" url="WordDocuments/editingawikipage.htm" target="right"><![CDATA[Editing a Wiki Page]]><contextids /></topic>
+    <topic id="399" tId="102" url="WordDocuments/editinganannouncement.htm" target="right"><![CDATA[Editing an Announcement]]><contextids /></topic>
+    <topic id="400" tId="832" url="WordDocuments/editinganddeletingfeedbackinmatrices.htm" target="right"><![CDATA[Editing and Deleting Feedback in Matrices]]><contextids /></topic>
+    <topic id="401" tId="918" url="WordDocuments/editinganddeletingfeedbackonwizards.htm" target="right"><![CDATA[Editing and Deleting Feedback on Wizards]]><contextids /></topic>
+    <topic id="402" tId="158" url="WordDocuments/editinganddeletingmessages.htm" target="right"><![CDATA[Editing and Deleting Messages]]><contextids /></topic>
+    <topic id="403" tId="1148" url="WordDocuments/editingcomments.htm" target="right"><![CDATA[Editing Comments]]><contextids /></topic>
+    <topic id="404" tId="790" url="WordDocuments/editingevaluations.htm" target="right"><![CDATA[Editing Evaluations]]><contextids /></topic>
+    <topic id="405" tId="1146" url="WordDocuments/editinggradesandcomments.htm" target="right"><![CDATA[Editing Grades and Comments]]><contextids /></topic>
+    <topic id="406" tId="464" url="WordDocuments/editinggradesforagradebookitem.htm" target="right"><![CDATA[Editing Grades for a Gradebook Item]]><contextids /></topic>
+    <topic id="407" tId="1188" url="WordDocuments/editingingoogledocs.htm" target="right"><![CDATA[Editing in Google Docs]]><contextids /></topic>
+    <topic id="408" tId="142" url="WordDocuments/editinginformationaboutachatroom.htm" target="right"><![CDATA[Editing Information about a Chat Room]]><contextids /></topic>
+    <topic id="409" tId="423" url="WordDocuments/editingquestionsandheaders.htm" target="right"><![CDATA[Editing Questions and Headers]]><contextids /></topic>
+    <topic id="410" tId="544" url="WordDocuments/editingquestionsinapoolorsubpool.htm" target="right"><![CDATA[Editing Questions in a Pool or Subpool]]><contextids /></topic>
+    <topic id="411" tId="1147" url="WordDocuments/editingscores.htm" target="right"><![CDATA[Editing Scores]]><contextids /></topic>
+    <topic id="412" tId="729" url="WordDocuments/editingsitedescriptionandotherinformation.htm" target="right"><![CDATA[Editing Site Description and Other Information]]><contextids /></topic>
+    <topic id="413" tId="430" url="WordDocuments/editingtemplates.htm" target="right"><![CDATA[Editing Templates]]><contextids /></topic>
+    <topic id="414" tId="709" url="WordDocuments/editingyourprofile.htm" target="right"><![CDATA[Editing Your Profile]]><contextids /></topic>
+    <topic id="415" tId="192" url="WordDocuments/emailarchive.htm" target="right"><![CDATA[Email Archive]]><contextids /></topic>
+    <topic id="416" tId="1570" url="WordDocuments/emailnotifications.htm" target="right"><![CDATA[Email Notifications]]><contextids /></topic>
+    <topic id="417" tId="386" url="WordDocuments/enteringacomment.htm" target="right"><![CDATA[Entering a Comment]]><contextids /></topic>
+    <topic id="418" tId="462" url="WordDocuments/enteringandeditinggrades.htm" target="right"><![CDATA[Entering and Editing Grades]]><contextids /></topic>
+    <topic id="419" tId="1141" url="WordDocuments/enteringgradesandcomments.htm" target="right"><![CDATA[Entering Grades and Comments]]><contextids /></topic>
+    <topic id="420" tId="1143" url="WordDocuments/enteringgradesandcommentsinstudentsummaryframes.htm" target="right"><![CDATA[Entering Grades and Comments in Student Summary Frames]]><contextids /></topic>
+    <topic id="421" tId="1142" url="WordDocuments/enteringgradesandcommentsinthespreadsheetframe.htm" target="right"><![CDATA[Entering Grades and Comments in the Spreadsheet Frame]]><contextids /></topic>
+    <topic id="422" tId="463" url="WordDocuments/enteringgradesforagradebookitem.htm" target="right"><![CDATA[Entering Grades for a Gradebook Item]]><contextids /></topic>
+    <topic id="423" tId="1144" url="WordDocuments/enteringscoresinastudentsummaryframe.htm" target="right"><![CDATA[Entering Scores in a Student Summary Frame]]><contextids /></topic>
+    <topic id="424" tId="786" url="WordDocuments/eportfoliotools.htm" target="right"><![CDATA[ePortfolio Tools]]><contextids /></topic>
+    <topic id="425" tId="789" url="WordDocuments/evaluatingsubmittedwork.htm" target="right"><![CDATA[Evaluating Submitted Work]]><contextids /></topic>
+    <topic id="426" tId="418" url="WordDocuments/evaluationsystem.htm" target="right"><![CDATA[Evaluation System]]><contextids /></topic>
+    <topic id="427" tId="787" url="WordDocuments/evaluations.htm" target="right"><![CDATA[Evaluations]]><contextids /></topic>
+    <topic id="428" tId="1205" url="WordDocuments/excusinggrades1.htm" target="right"><![CDATA[Excusing Grades]]><contextids /></topic>
+    <topic id="429" tId="806" url="WordDocuments/exportingaform.htm" target="right"><![CDATA[Exporting a Form]]><contextids /></topic>
+    <topic id="430" tId="816" url="WordDocuments/exportingaglossary.htm" target="right"><![CDATA[Exporting a Glossary]]><contextids /></topic>
+    <topic id="431" tId="828" url="WordDocuments/exportingamatrix.htm" target="right"><![CDATA[Exporting a Matrix]]><contextids /></topic>
+    <topic id="432" tId="714" url="WordDocuments/exportingaroster.htm" target="right"><![CDATA[Exporting a Roster]]><contextids /></topic>
+    <topic id="433" tId="865" url="WordDocuments/exportingatemplate.htm" target="right"><![CDATA[Exporting a Template]]><contextids /></topic>
+    <topic id="434" tId="915" url="WordDocuments/exportingawizard.htm" target="right"><![CDATA[Exporting a Wizard]]><contextids /></topic>
+    <topic id="435" tId="532" url="WordDocuments/exportinganassessment.htm" target="right"><![CDATA[Exporting an Assessment]]><contextids /></topic>
+    <topic id="436" tId="805" url="WordDocuments/exportingandimportingaform.htm" target="right"><![CDATA[Exporting and Importing a Form]]><contextids /></topic>
+    <topic id="437" tId="815" url="WordDocuments/exportingandimportingaglossary.htm" target="right"><![CDATA[Exporting and Importing a Glossary]]><contextids /></topic>
+    <topic id="438" tId="827" url="WordDocuments/exportingandimportingamatrix.htm" target="right"><![CDATA[Exporting and Importing a Matrix]]><contextids /></topic>
+    <topic id="439" tId="864" url="WordDocuments/exportingandimportingatemplate.htm" target="right"><![CDATA[Exporting and Importing a Template]]><contextids /></topic>
+    <topic id="440" tId="914" url="WordDocuments/exportingandimportingawizard.htm" target="right"><![CDATA[Exporting and Importing a Wizard]]><contextids /></topic>
+    <topic id="441" tId="531" url="WordDocuments/exportingandimportinganassessment.htm" target="right"><![CDATA[Exporting and Importing an Assessment]]><contextids /></topic>
+    <topic id="442" tId="168" url="WordDocuments/exportingandimportingtopics.htm" target="right"><![CDATA[Exporting and Importing Topics]]><contextids /></topic>
+    <topic id="443" tId="1615" url="WordDocuments/exportingcoursegrades1.htm" target="right"><![CDATA[Exporting Course Grades]]><contextids /></topic>
+    <topic id="444" tId="1166" url="WordDocuments/exportinggrades.htm" target="right"><![CDATA[Exporting Grades]]><contextids /></topic>
+    <topic id="445" tId="470" url="WordDocuments/exportinggradestodate.htm" target="right"><![CDATA[Exporting Grades to Date]]><contextids /></topic>
+    <topic id="446" tId="1652" url="WordDocuments/exportingmeetings.htm" target="right"><![CDATA[Exporting Meetings]]><contextids /></topic>
+    <topic id="447" tId="306" url="WordDocuments/exportingmodules.htm" target="right"><![CDATA[Exporting Modules]]><contextids /></topic>
+    <topic id="448" tId="936" url="WordDocuments/exportingrawdata.htm" target="right"><![CDATA[Exporting Raw Data]]><contextids /></topic>
+    <topic id="449" tId="449" url="WordDocuments/exportingresults.htm" target="right"><![CDATA[Exporting results]]><contextids /></topic>
+    <topic id="450" tId="521" url="WordDocuments/exportingstudentresponsesforanassessment.htm" target="right"><![CDATA[Exporting Student Responses for an Assessment]]><contextids /></topic>
+    <topic id="451" tId="937" url="WordDocuments/exportingtheformattedreport.htm" target="right"><![CDATA[Exporting the Formatted Report]]><contextids /></topic>
+    <topic id="452" tId="197" url="WordDocuments/feedback.htm" target="right"><![CDATA[Feedback]]><contextids /></topic>
+    <topic id="453" tId="198" url="WordDocuments/feedbackhomepage.htm" target="right"><![CDATA[Feedback Home Page]]><contextids /></topic>
+    <topic id="454" tId="1425" url="WordDocuments/finalgradessubmission.htm" target="right"><![CDATA[Final Grades Submission]]><contextids /></topic>
+    <topic id="455" tId="359" url="WordDocuments/findingyoursiteurl.htm" target="right"><![CDATA[Finding Your Site URL]]><contextids /></topic>
+    <topic id="456" tId="452" url="WordDocuments/forevaluatorstakinganevaluation.htm" target="right"><![CDATA[For Evaluators: Taking an Evaluation]]><contextids /></topic>
+    <topic id="457" tId="834" url="WordDocuments/forsiteparticipantscompletingamatrix.htm" target="right"><![CDATA[For Site Participants: Completing a Matrix]]><contextids /></topic>
+    <topic id="458" tId="920" url="WordDocuments/forsiteparticipantscompletingawizard.htm" target="right"><![CDATA[For Site Participants: Completing a Wizard]]><contextids /></topic>
+    <topic id="459" tId="1659" url="WordDocuments/forsiteparticipantsusingthesignuptool.htm" target="right"><![CDATA[For Site Participants: Using the Sign-up Tool]]><contextids /></topic>
+    <topic id="460" tId="1459" url="WordDocuments/forstudentsprintingacertificate.htm" target="right"><![CDATA[For Students: Printing a Certificate]]><contextids /></topic>
+    <topic id="461" tId="549" url="WordDocuments/forstudentstakinganassessment.htm" target="right"><![CDATA[For Students: Taking an Assessment]]><contextids /></topic>
+    <topic id="462" tId="1194" url="WordDocuments/forstudentsviewinggrades.htm" target="right"><![CDATA[For Students: Viewing Grades]]><contextids /></topic>
+    <topic id="463" tId="479" url="WordDocuments/forstudentsviewingthegradebook.htm" target="right"><![CDATA[For Students: Viewing the Gradebook]]><contextids /></topic>
+    <topic id="464" tId="310" url="WordDocuments/forstudentsworkingwithlessons.htm" target="right"><![CDATA[For Students: Working with Lessons]]><contextids /></topic>
+    <topic id="465" tId="793" url="WordDocuments/forms.htm" target="right"><![CDATA[Forms]]><contextids /></topic>
+    <topic id="466" tId="209" url="WordDocuments/forums.htm" target="right"><![CDATA[Forums]]><contextids /></topic>
+    <topic id="467" tId="250" url="WordDocuments/forwardingamessage.htm" target="right"><![CDATA[Forwarding a Message]]><contextids /></topic>
+    <topic id="468" tId="364" url="WordDocuments/generalview.htm" target="right"><![CDATA[General View]]><contextids /></topic>
+    <topic id="469" tId="754" url="WordDocuments/generatingandworkingwithsitestatisticsreports.htm" target="right"><![CDATA[Generating and Working with Site Statistics Reports]]><contextids /></topic>
+    <topic id="470" tId="809" url="WordDocuments/glossary.htm" target="right"><![CDATA[Glossary]]><contextids /></topic>
+    <topic id="471" tId="453" url="WordDocuments/gradebook.htm" target="right"><![CDATA[Gradebook]]><contextids /></topic>
+    <topic id="472" tId="1126" url="WordDocuments/gradebook2.htm" target="right"><![CDATA[Gradebook2]]><contextids /></topic>
+    <topic id="473" tId="1551" url="WordDocuments/gradingaforum.htm" target="right"><![CDATA[Grading a Forum]]><contextids /></topic>
+    <topic id="474" tId="1553" url="WordDocuments/gradingamessage.htm" target="right"><![CDATA[Grading a Message]]><contextids /></topic>
+    <topic id="475" tId="1552" url="WordDocuments/gradingatopic.htm" target="right"><![CDATA[Grading a Topic]]><contextids /></topic>
+    <topic id="476" tId="1174" url="WordDocuments/gradingbycategoryforumortopic.htm" target="right"><![CDATA[Grading by Category, Forum, or Topic]]><contextids /></topic>
+    <topic id="477" tId="1550" url="WordDocuments/gradingparticipationindiscussions1.htm" target="right"><![CDATA[Grading Participation in Discussions]]><contextids /></topic>
+    <topic id="478" tId="519" url="WordDocuments/gradingshortansweressayandfileuploadquestions.htm" target="right"><![CDATA[Grading Short Answer/Essay and File Upload Questions]]><contextids /></topic>
+    <topic id="479" tId="878" url="WordDocuments/hidingaportfolio.htm" target="right"><![CDATA[Hiding a Portfolio]]><contextids /></topic>
+    <topic id="480" tId="1578" url="WordDocuments/hidingatool.htm" target="right"><![CDATA[Hiding a Tool]]><contextids /></topic>
+    <topic id="481" tId="144" url="WordDocuments/hidingchatmessages.htm" target="right"><![CDATA[Hiding Chat Messages]]><contextids /></topic>
+    <topic id="482" tId="1621" url="WordDocuments/hidingrecipientgroups.htm" target="right"><![CDATA[Hiding Recipient Groups]]><contextids /></topic>
+    <topic id="483" tId="1701" url="WordDocuments/hidingsites1.htm" target="right"><![CDATA[Hiding Sites]]><contextids /></topic>
+    <topic id="484" tId="1023" url="WordDocuments/homepage.htm" target="right"><![CDATA[Home Page]]><contextids /></topic>
+    <topic id="485" tId="807" url="WordDocuments/importingaform.htm" target="right"><![CDATA[Importing a Form]]><contextids /></topic>
+    <topic id="486" tId="817" url="WordDocuments/importingaglossary.htm" target="right"><![CDATA[Importing a Glossary]]><contextids /></topic>
+    <topic id="487" tId="829" url="WordDocuments/importingamatrix.htm" target="right"><![CDATA[Importing a Matrix]]><contextids /></topic>
+    <topic id="488" tId="866" url="WordDocuments/importingatemplate.htm" target="right"><![CDATA[Importing a Template]]><contextids /></topic>
+    <topic id="489" tId="916" url="WordDocuments/importingawizard.htm" target="right"><![CDATA[Importing a Wizard]]><contextids /></topic>
+    <topic id="490" tId="533" url="WordDocuments/importinganassessment.htm" target="right"><![CDATA[Importing an Assessment]]><contextids /></topic>
+    <topic id="491" tId="538" url="WordDocuments/importinganassessmentasaquestionpool.htm" target="right"><![CDATA[Importing an Assessment as a Question Pool]]><contextids /></topic>
+    <topic id="492" tId="939" url="WordDocuments/importinganuploadeditemintothegradebook.htm" target="right"><![CDATA[Importing an Uploaded Item into the Gradebook]]><contextids /></topic>
+    <topic id="493" tId="129" url="WordDocuments/importingcalendarevents.htm" target="right"><![CDATA[Importing Calendar Events]]><contextids /></topic>
+    <topic id="494" tId="465" url="WordDocuments/importinggrades.htm" target="right"><![CDATA[Importing Grades]]><contextids /></topic>
+    <topic id="495" tId="466" url="WordDocuments/importinggradesforexistingitems.htm" target="right"><![CDATA[Importing Grades for Existing Items]]><contextids /></topic>
+    <topic id="496" tId="467" url="WordDocuments/importinggradesforitemsnotyetinthegradebook.htm" target="right"><![CDATA[Importing Grades for Items Not Yet in the Gradebook]]><contextids /></topic>
+    <topic id="497" tId="1213" url="WordDocuments/importinggradesingradebook2.htm" target="right"><![CDATA[Importing Grades in Gradebook2]]><contextids /></topic>
+    <topic id="498" tId="1582" url="WordDocuments/importinggroups.htm" target="right"><![CDATA[Importing Groups]]><contextids /></topic>
+    <topic id="499" tId="744" url="WordDocuments/importingmaterialfromanothersite.htm" target="right"><![CDATA[Importing Material from another Site]]><contextids /></topic>
+    <topic id="500" tId="307" url="WordDocuments/importingmodules.htm" target="right"><![CDATA[Importing Modules]]><contextids /></topic>
+    <topic id="501" tId="1040" url="WordDocuments/importingusersfromanothersite.htm" target="right"><![CDATA[Importing Users from another Site]]><contextids /></topic>
+    <topic id="502" tId="324" url="WordDocuments/informationforsiteparticipants.htm" target="right"><![CDATA[Information for Site Participants]]><contextids /></topic>
+    <topic id="503" tId="973" url="WordDocuments/insertingalinktoananchor.htm" target="right"><![CDATA[Inserting a Link to an Anchor]]><contextids /></topic>
+    <topic id="504" tId="974" url="WordDocuments/insertingalinktoanemailaddress.htm" target="right"><![CDATA[Inserting a Link to an Email Address]]><contextids /></topic>
+    <topic id="505" tId="1587" url="WordDocuments/insertingalinktoanexternalsite.htm" target="right"><![CDATA[Inserting a Link to an External Site]]><contextids /></topic>
+    <topic id="506" tId="1586" url="WordDocuments/insertingalinktoaniteminassignmentsforumsortestsquizzes.htm" target="right"><![CDATA[Inserting a Link to an item in Assignments, Forums or Tests & Quizzes]]><contextids /></topic>
+    <topic id="507" tId="1588" url="WordDocuments/insertingalinktoaniteminresources.htm" target="right"><![CDATA[Inserting a Link to an Item in Resources]]><contextids /></topic>
+    <topic id="508" tId="1590" url="WordDocuments/insertingavideo.htm" target="right"><![CDATA[Inserting a Video]]><contextids /></topic>
+    <topic id="509" tId="1589" url="WordDocuments/insertinganimage.htm" target="right"><![CDATA[Inserting an Image]]><contextids /></topic>
+    <topic id="510" tId="1591" url="WordDocuments/insertingflash.htm" target="right"><![CDATA[Inserting Flash]]><contextids /></topic>
+    <topic id="511" tId="400" url="WordDocuments/instructoractivities.htm" target="right"><![CDATA[Instructor Activities]]><contextids /></topic>
+    <topic id="512" tId="8" url="WordDocuments/introducingthecle.htm" target="right"><![CDATA[Introducing the CLE]]><contextids /></topic>
+    <topic id="513" tId="701" url="WordDocuments/joiningandunjoiningpublicsites.htm" target="right"><![CDATA[Joining and Unjoining Public Sites]]><contextids /></topic>
+    <topic id="514" tId="1100" url="WordDocuments/jsmathcontrolpanel.htm" target="right"><![CDATA[jsMath Control Panel]]><contextids /></topic>
+    <topic id="515" tId="378" url="WordDocuments/keyfeaturesofthewikitool.htm" target="right"><![CDATA[Key Features of the Wiki Tool]]><contextids /></topic>
+    <topic id="516" tId="881" url="WordDocuments/leavingacomment.htm" target="right"><![CDATA[Leaving a Comment]]><contextids /></topic>
+    <topic id="517" tId="1180" url="WordDocuments/leavingcommentsforblogentries.htm" target="right"><![CDATA[Leaving Comments for Blog Entries]]><contextids /></topic>
+    <topic id="518" tId="283" url="WordDocuments/lessons.htm" target="right"><![CDATA[Lessons]]><contextids /></topic>
+    <topic id="519" tId="1449" url="WordDocuments/linkedaccounts.htm" target="right"><![CDATA[Linked Accounts]]><contextids /></topic>
+    <topic id="520" tId="1330" url="WordDocuments/linkinganassignmenttoamatrixcell.htm" target="right"><![CDATA[Linking an Assignment to a Matrix Cell]]><contextids /></topic>
+    <topic id="521" tId="1196" url="WordDocuments/linkingdirectlytoamessage.htm" target="right"><![CDATA[Linking Directly to a Message]]><contextids /></topic>
+    <topic id="522" tId="985" url="WordDocuments/listofevents.htm" target="right"><![CDATA[List of Events]]><contextids /></topic>
+    <topic id="523" tId="1605" url="WordDocuments/lockinganddeletingtimeslotsforameeting.htm" target="right"><![CDATA[Locking and Deleting Time Slots for a Meeting]]><contextids /></topic>
+    <topic id="524" tId="165" url="WordDocuments/lockingorunlockingtopics.htm" target="right"><![CDATA[Locking or Unlocking Topics]]><contextids /></topic>
+    <topic id="525" tId="54" url="WordDocuments/loggingin.htm" target="right"><![CDATA[Logging In]]><contextids /></topic>
+    <topic id="526" tId="238" url="WordDocuments/mailtool.htm" target="right"><![CDATA[Mailtool]]><contextids /></topic>
+    <topic id="527" tId="735" url="WordDocuments/managingaccess.htm" target="right"><![CDATA[Managing Access]]><contextids /></topic>
+    <topic id="528" tId="169" url="WordDocuments/managingcategories.htm" target="right"><![CDATA[Managing Categories]]><contextids /></topic>
+    <topic id="529" tId="882" url="WordDocuments/managingcommentsonyourportfolio.htm" target="right"><![CDATA[Managing Comments on Your Portfolio]]><contextids /></topic>
+    <topic id="530" tId="299" url="WordDocuments/managingcontent.htm" target="right"><![CDATA[Managing Content]]><contextids /></topic>
+    <topic id="531" tId="122" url="WordDocuments/managingevents.htm" target="right"><![CDATA[Managing Events]]><contextids /></topic>
+    <topic id="532" tId="174" url="WordDocuments/managingforums.htm" target="right"><![CDATA[Managing Forums]]><contextids /></topic>
+    <topic id="533" tId="731" url="WordDocuments/managinggroups.htm" target="right"><![CDATA[Managing Groups]]><contextids /></topic>
+    <topic id="534" tId="1598" url="WordDocuments/managinggroupscreatedforameeting.htm" target="right"><![CDATA[Managing Groups Created for a Meeting]]><contextids /></topic>
+    <topic id="535" tId="1599" url="WordDocuments/managingmeetings.htm" target="right"><![CDATA[Managing Meetings]]><contextids /></topic>
+    <topic id="536" tId="736" url="WordDocuments/managingparticipants.htm" target="right"><![CDATA[Managing Participants]]><contextids /></topic>
+    <topic id="537" tId="1654" url="WordDocuments/managingparticipantsforameeting.htm" target="right"><![CDATA[Managing Participants for a Meeting]]><contextids /></topic>
+    <topic id="538" tId="1506" url="WordDocuments/managingprofileconnections.htm" target="right"><![CDATA[Managing Profile Connections]]><contextids /></topic>
+    <topic id="539" tId="718" url="WordDocuments/managingsections.htm" target="right"><![CDATA[Managing Sections]]><contextids /></topic>
+    <topic id="540" tId="1299" url="WordDocuments/managingthedisplayofsubmissions.htm" target="right"><![CDATA[Managing the Display of Submissions]]><contextids /></topic>
+    <topic id="541" tId="164" url="WordDocuments/managingtopics.htm" target="right"><![CDATA[Managing Topics]]><contextids /></topic>
+    <topic id="542" tId="298" url="WordDocuments/managingyourlessons.htm" target="right"><![CDATA[Managing Your Lessons]]><contextids /></topic>
+    <topic id="543" tId="227" url="WordDocuments/markingmessagesasread1.htm" target="right"><![CDATA[Marking Messages as Read]]><contextids /></topic>
+    <topic id="544" tId="1301" url="WordDocuments/markingmessagesasreadorunread.htm" target="right"><![CDATA[Marking Messages as Read or Unread]]><contextids /></topic>
+    <topic id="545" tId="819" url="WordDocuments/matrices.htm" target="right"><![CDATA[Matrices]]><contextids /></topic>
+    <topic id="546" tId="700" url="WordDocuments/membership.htm" target="right"><![CDATA[Membership]]><contextids /></topic>
+    <topic id="547" tId="126" url="WordDocuments/mergingandunmergingcalendars.htm" target="right"><![CDATA[Merging and Unmerging Calendars]]><contextids /></topic>
+    <topic id="548" tId="106" url="WordDocuments/mergingannouncements.htm" target="right"><![CDATA[Merging Announcements]]><contextids /></topic>
+    <topic id="549" tId="127" url="WordDocuments/mergingcalendars.htm" target="right"><![CDATA[Merging Calendars]]><contextids /></topic>
+    <topic id="550" tId="105" url="WordDocuments/mergingunmergingannouncements.htm" target="right"><![CDATA[Merging/Unmerging Announcements]]><contextids /></topic>
+    <topic id="551" tId="1683" url="WordDocuments/messageoftheday1.htm" target="right"><![CDATA[Message of the Day]]><contextids /></topic>
+    <topic id="552" tId="242" url="WordDocuments/messages.htm" target="right"><![CDATA[Messages]]><contextids /></topic>
+    <topic id="553" tId="1687" url="WordDocuments/messagesforumsnotifications1.htm" target="right"><![CDATA[Messages & Forums Notifications]]><contextids /></topic>
+    <topic id="554" tId="1547" url="WordDocuments/moderatingdiscussions1.htm" target="right"><![CDATA[Moderating Discussions]]><contextids /></topic>
+    <topic id="555" tId="392" url="WordDocuments/monitoringactivityonapage.htm" target="right"><![CDATA[Monitoring Activity on a Page]]><contextids /></topic>
+    <topic id="556" tId="251" url="WordDocuments/movingamessagetoanotherfolder.htm" target="right"><![CDATA[Moving a Message to another Folder]]><contextids /></topic>
+    <topic id="557" tId="911" url="WordDocuments/movingapageorcategorytoanotherlevelorcategory.htm" target="right"><![CDATA[Moving a Page or Category to Another Level or Category]]><contextids /></topic>
+    <topic id="558" tId="540" url="WordDocuments/movingapoolorsubpool.htm" target="right"><![CDATA[Moving a Pool or Subpool]]><contextids /></topic>
+    <topic id="559" tId="349" url="WordDocuments/movingaresource.htm" target="right"><![CDATA[Moving a Resource]]><contextids /></topic>
+    <topic id="560" tId="388" url="WordDocuments/movingfrompagetopage.htm" target="right"><![CDATA[Moving from Page to Page]]><contextids /></topic>
+    <topic id="561" tId="252" url="WordDocuments/movingmultiplemessagestofromafolder.htm" target="right"><![CDATA[Moving Multiple Messages To/From a Folder]]><contextids /></topic>
+    <topic id="562" tId="308" url="WordDocuments/movingsections.htm" target="right"><![CDATA[Moving Sections]]><contextids /></topic>
+    <topic id="563" tId="166" url="WordDocuments/movingtopics.htm" target="right"><![CDATA[Moving Topics]]><contextids /></topic>
+    <topic id="564" tId="1657" url="WordDocuments/movingreplacingorswappingparticipantsinatimeslot.htm" target="right"><![CDATA[Moving, replacing, or swapping participants in a time slot]]><contextids /></topic>
+    <topic id="565" tId="15" url="WordDocuments/myworkspace.htm" target="right"><![CDATA[My Workspace]]><contextids /></topic>
+    <topic id="566" tId="1684" url="WordDocuments/myworkspaceinformation1.htm" target="right"><![CDATA[My Workspace Information]]><contextids /></topic>
+    <topic id="567" tId="1191" url="WordDocuments/navigatingthegradebook2userinterface.htm" target="right"><![CDATA[Navigating the Gradebook2 User Interface]]><contextids /></topic>
+    <topic id="568" tId="1697" url="WordDocuments/navigatingtoasite.htm" target="right"><![CDATA[Navigating to a Site]]><contextids /></topic>
+    <topic id="569" tId="1698" url="WordDocuments/navigatingtoatoolinasite.htm" target="right"><![CDATA[Navigating to a Tool in a Site]]><contextids /></topic>
+    <topic id="570" tId="1699" url="WordDocuments/navigatingwiththeusermenu.htm" target="right"><![CDATA[Navigating with the User Menu]]><contextids /></topic>
+    <topic id="571" tId="978" url="WordDocuments/navigationbuttonsandlinks.htm" target="right"><![CDATA[Navigation Buttons and Links]]><contextids /></topic>
+    <topic id="572" tId="314" url="WordDocuments/news.htm" target="right"><![CDATA[News]]><contextids /></topic>
+    <topic id="573" tId="991" url="WordDocuments/otheroptionsforsendingaprivatemessage.htm" target="right"><![CDATA[Other Options for Sending a Private Message]]><contextids /></topic>
+    <topic id="574" tId="474" url="WordDocuments/overridinganautocalculatedcoursegrade.htm" target="right"><![CDATA[Overriding an Auto-calculated Course Grade]]><contextids /></topic>
+    <topic id="575" tId="1156" url="WordDocuments/overridingautocalculatedcoursegrades.htm" target="right"><![CDATA[Overriding Auto-calculated Course Grades]]><contextids /></topic>
+    <topic id="576" tId="1496" url="WordDocuments/overridingclogpreferences.htm" target="right"><![CDATA[Overriding Clog Preferences]]><contextids /></topic>
+    <topic id="577" tId="1375" url="WordDocuments/overridingmatricesandwizardspreferences.htm" target="right"><![CDATA[Overriding Matrices and Wizards Preferences]]><contextids /></topic>
+    <topic id="578" tId="1593" url="WordDocuments/overviewoffmathmenus.htm" target="right"><![CDATA[Overview of fMath Menus]]><contextids /></topic>
+    <topic id="579" tId="77" url="WordDocuments/pagingthroughandsearchinglonglists.htm" target="right"><![CDATA[Paging through and Searching Long Lists]]><contextids /></topic>
+    <topic id="580" tId="225" url="WordDocuments/participatinginadiscussion.htm" target="right"><![CDATA[Participating in a Discussion]]><contextids /></topic>
+    <topic id="581" tId="53" url="WordDocuments/performingcommontasks.htm" target="right"><![CDATA[Performing Common Tasks]]><contextids /></topic>
+    <topic id="582" tId="870" url="WordDocuments/planningaportfolio.htm" target="right"><![CDATA[Planning a Portfolio]]><contextids /></topic>
+    <topic id="583" tId="317" url="WordDocuments/podcasts.htm" target="right"><![CDATA[Podcasts]]><contextids /></topic>
+    <topic id="584" tId="259" url="WordDocuments/polls.htm" target="right"><![CDATA[Polls]]><contextids /></topic>
+    <topic id="585" tId="842" url="WordDocuments/portfoliolayouts.htm" target="right"><![CDATA[Portfolio Layouts]]><contextids /></topic>
+    <topic id="586" tId="1694" url="WordDocuments/portfoliositehomepage1.htm" target="right"><![CDATA[Portfolio Site Home Page]]><contextids /></topic>
+    <topic id="587" tId="35" url="WordDocuments/portfoliosites.htm" target="right"><![CDATA[Portfolio Sites]]><contextids /></topic>
+    <topic id="588" tId="850" url="WordDocuments/portfoliotemplates.htm" target="right"><![CDATA[Portfolio Templates]]><contextids /></topic>
+    <topic id="589" tId="869" url="WordDocuments/portfolios.htm" target="right"><![CDATA[Portfolios]]><contextids /></topic>
+    <topic id="590" tId="155" url="WordDocuments/postingamorecomplexmessage.htm" target="right"><![CDATA[Posting a More Complex Message]]><contextids /></topic>
+    <topic id="591" tId="228" url="WordDocuments/postingareply.htm" target="right"><![CDATA[Posting a Reply]]><contextids /></topic>
+    <topic id="592" tId="154" url="WordDocuments/postingasimplemessage.htm" target="right"><![CDATA[Posting a Simple Message]]><contextids /></topic>
+    <topic id="593" tId="1567" url="WordDocuments/postingastatusupdate1.htm" target="right"><![CDATA[Posting a Status Update]]><contextids /></topic>
+    <topic id="594" tId="138" url="WordDocuments/postingchatmessages.htm" target="right"><![CDATA[Posting Chat Messages]]><contextids /></topic>
+    <topic id="595" tId="153" url="WordDocuments/postingmessages.htm" target="right"><![CDATA[Posting Messages]]><contextids /></topic>
+    <topic id="596" tId="1568" url="WordDocuments/postingwallmessages.htm" target="right"><![CDATA[Posting Wall Messages]]><contextids /></topic>
+    <topic id="597" tId="703" url="WordDocuments/preferences.htm" target="right"><![CDATA[Preferences]]><contextids /></topic>
+    <topic id="598" tId="798" url="WordDocuments/preliminarysteps.htm" target="right"><![CDATA[Preliminary Steps]]><contextids /></topic>
+    <topic id="599" tId="854" url="WordDocuments/preparingtocreateatemplate.htm" target="right"><![CDATA[Preparing to Create a Template]]><contextids /></topic>
+    <topic id="600" tId="1423" url="WordDocuments/preparingyourimportfileforupload.htm" target="right"><![CDATA[Preparing Your Import File for Upload]]><contextids /></topic>
+    <topic id="601" tId="1444" url="WordDocuments/previewinganassessment1.htm" target="right"><![CDATA[Previewing an Assessment]]><contextids /></topic>
+    <topic id="602" tId="913" url="WordDocuments/previewingandpublishingawizard.htm" target="right"><![CDATA[Previewing and Publishing a Wizard]]><contextids /></topic>
+    <topic id="603" tId="438" url="WordDocuments/previewingevaluations.htm" target="right"><![CDATA[Previewing Evaluations]]><contextids /></topic>
+    <topic id="604" tId="422" url="WordDocuments/previewingquestionsandheaders.htm" target="right"><![CDATA[Previewing Questions and Headers]]><contextids /></topic>
+    <topic id="605" tId="428" url="WordDocuments/previewingtemplates.htm" target="right"><![CDATA[Previewing Templates]]><contextids /></topic>
+    <topic id="606" tId="979" url="WordDocuments/printingacalendar.htm" target="right"><![CDATA[Printing a Calendar]]><contextids /></topic>
+    <topic id="607" tId="1603" url="WordDocuments/printingameeting.htm" target="right"><![CDATA[Printing a Meeting]]><contextids /></topic>
+    <topic id="608" tId="713" url="WordDocuments/printingaroster.htm" target="right"><![CDATA[Printing a Roster]]><contextids /></topic>
+    <topic id="609" tId="367" url="WordDocuments/printingasyllabus.htm" target="right"><![CDATA[Printing a Syllabus]]><contextids /></topic>
+    <topic id="610" tId="294" url="WordDocuments/printinglessons.htm" target="right"><![CDATA[Printing Lessons]]><contextids /></topic>
+    <topic id="611" tId="312" url="WordDocuments/printinglessons1.htm" target="right"><![CDATA[Printing Lessons]]><contextids /></topic>
+    <topic id="612" tId="1195" url="WordDocuments/printingordownloadinganassessment.htm" target="right"><![CDATA[Printing or Downloading an Assessment]]><contextids /></topic>
+    <topic id="613" tId="708" url="WordDocuments/profile.htm" target="right"><![CDATA[Profile]]><contextids /></topic>
+    <topic id="614" tId="1572" url="WordDocuments/profileimagesettings.htm" target="right"><![CDATA[Profile Image Settings]]><contextids /></topic>
+    <topic id="615" tId="1691" url="WordDocuments/projectsitehomepage1.htm" target="right"><![CDATA[Project Site Home Page]]><contextids /></topic>
+    <topic id="616" tId="29" url="WordDocuments/projectsites.htm" target="right"><![CDATA[Project Sites]]><contextids /></topic>
+    <topic id="617" tId="301" url="WordDocuments/promotingsubsections.htm" target="right"><![CDATA[Promoting Subsections]]><contextids /></topic>
+    <topic id="618" tId="831" url="WordDocuments/providingformativefeedbackonamatrix.htm" target="right"><![CDATA[Providing Formative Feedback on a Matrix]]><contextids /></topic>
+    <topic id="619" tId="917" url="WordDocuments/providingformativefeedbackonawizard.htm" target="right"><![CDATA[Providing Formative Feedback on a Wizard]]><contextids /></topic>
+    <topic id="620" tId="802" url="WordDocuments/publishingaform.htm" target="right"><![CDATA[Publishing a Form]]><contextids /></topic>
+    <topic id="621" tId="804" url="WordDocuments/publishingaformglobally.htm" target="right"><![CDATA[Publishing a Form Globally]]><contextids /></topic>
+    <topic id="622" tId="814" url="WordDocuments/publishingaglossarytermglobally.htm" target="right"><![CDATA[Publishing a Glossary Term Globally]]><contextids /></topic>
+    <topic id="623" tId="848" url="WordDocuments/publishingalayoutglobally.htm" target="right"><![CDATA[Publishing a Layout Globally]]><contextids /></topic>
+    <topic id="624" tId="1706" url="WordDocuments/publishingasite.htm" target="right"><![CDATA[Publishing a Site]]><contextids /></topic>
+    <topic id="625" tId="892" url="WordDocuments/publishingastyleglobally.htm" target="right"><![CDATA[Publishing a Style Globally]]><contextids /></topic>
+    <topic id="626" tId="861" url="WordDocuments/publishingatemplate.htm" target="right"><![CDATA[Publishing a Template]]><contextids /></topic>
+    <topic id="627" tId="1445" url="WordDocuments/publishinganassessment1.htm" target="right"><![CDATA[Publishing an Assessment]]><contextids /></topic>
+    <topic id="628" tId="391" url="WordDocuments/puttingawatchonawikipage.htm" target="right"><![CDATA[Putting a Watch on a Wiki Page]]><contextids /></topic>
+    <topic id="629" tId="446" url="WordDocuments/reopeningevaluations.htm" target="right"><![CDATA[Re-Opening Evaluations]]><contextids /></topic>
+    <topic id="630" tId="303" url="WordDocuments/reactivatingarchivedmodules.htm" target="right"><![CDATA[Reactivating Archived Modules]]><contextids /></topic>
+    <topic id="631" tId="188" url="WordDocuments/readingandworkingwithmessagesyouhavereceiveddiscussionforumstool.htm" target="right"><![CDATA[Reading and Working with Messages You Have Received (Discussion Forums tool)]]><contextids /></topic>
+    <topic id="632" tId="148" url="WordDocuments/readingmessages.htm" target="right"><![CDATA[Reading Messages]]><contextids /></topic>
+    <topic id="633" tId="247" url="WordDocuments/readingmessages2.htm" target="right"><![CDATA[Reading Messages]]><contextids /></topic>
+    <topic id="634" tId="1644" url="WordDocuments/readingmessagesinaconversation.htm" target="right"><![CDATA[Reading Messages in a Conversation]]><contextids /></topic>
+    <topic id="635" tId="194" url="WordDocuments/readingmessagesintheemailarchive.htm" target="right"><![CDATA[Reading Messages in the Email Archive]]><contextids /></topic>
+    <topic id="636" tId="1685" url="WordDocuments/recentannouncements1.htm" target="right"><![CDATA[Recent Announcements]]><contextids /></topic>
+    <topic id="637" tId="1199" url="WordDocuments/recentlyvisitedpages.htm" target="right"><![CDATA[Recently Visited Pages]]><contextids /></topic>
+    <topic id="638" tId="368" url="WordDocuments/redirectingyoursyllabus.htm" target="right"><![CDATA[Redirecting your Syllabus]]><contextids /></topic>
+    <topic id="639" tId="837" url="WordDocuments/reflectingonyourwork.htm" target="right"><![CDATA[Reflecting on Your Work]]><contextids /></topic>
+    <topic id="640" tId="923" url="WordDocuments/reflectingonyourwork1.htm" target="right"><![CDATA[Reflecting on Your Work]]><contextids /></topic>
+    <topic id="641" tId="41" url="WordDocuments/relationshipsamongportfoliotools.htm" target="right"><![CDATA[Relationships among Portfolio Tools]]><contextids /></topic>
+    <topic id="642" tId="409" url="WordDocuments/releasingallgradesatonce.htm" target="right"><![CDATA[Releasing All Grades at Once]]><contextids /></topic>
+    <topic id="643" tId="1185" url="WordDocuments/removingablogentry.htm" target="right"><![CDATA[Removing a Blog Entry]]><contextids /></topic>
+    <topic id="644" tId="132" url="WordDocuments/removingafield.htm" target="right"><![CDATA[Removing a Field]]><contextids /></topic>
+    <topic id="645" tId="734" url="WordDocuments/removingagroup.htm" target="right"><![CDATA[Removing a Group]]><contextids /></topic>
+    <topic id="646" tId="1656" url="WordDocuments/removingaparticipantfromatimeslotorwaitlist.htm" target="right"><![CDATA[Removing a participant from a time slot or wait list]]><contextids /></topic>
+    <topic id="647" tId="1577" url="WordDocuments/removingatool.htm" target="right"><![CDATA[Removing a Tool]]><contextids /></topic>
+    <topic id="648" tId="1334" url="WordDocuments/removinganassociatedsite.htm" target="right"><![CDATA[Removing an Associated Site]]><contextids /></topic>
+    <topic id="649" tId="1312" url="WordDocuments/removinganimage.htm" target="right"><![CDATA[Removing an Image]]><contextids /></topic>
+    <topic id="650" tId="1450" url="WordDocuments/removingcleaccesstoagoogleaccount.htm" target="right"><![CDATA[Removing CLE Access to a Google Account]]><contextids /></topic>
+    <topic id="651" tId="443" url="WordDocuments/removingevaluations.htm" target="right"><![CDATA[Removing Evaluations]]><contextids /></topic>
+    <topic id="652" tId="738" url="WordDocuments/removingparticipants.htm" target="right"><![CDATA[Removing Participants]]><contextids /></topic>
+    <topic id="653" tId="546" url="WordDocuments/removingquestionsfromapoolorsubpool.htm" target="right"><![CDATA[Removing Questions from a Pool or Subpool]]><contextids /></topic>
+    <topic id="654" tId="1667" url="WordDocuments/removingrosters1.htm" target="right"><![CDATA[Removing Rosters]]><contextids /></topic>
+    <topic id="655" tId="304" url="WordDocuments/reorderingmodules.htm" target="right"><![CDATA[Reordering Modules]]><contextids /></topic>
+    <topic id="656" tId="352" url="WordDocuments/reorderingresources.htm" target="right"><![CDATA[Reordering Resources]]><contextids /></topic>
+    <topic id="657" tId="305" url="WordDocuments/reorderingsections.htm" target="right"><![CDATA[Reordering Sections]]><contextids /></topic>
+    <topic id="658" tId="369" url="WordDocuments/reorderingsyllabusitems.htm" target="right"><![CDATA[Reordering Syllabus Items]]><contextids /></topic>
+    <topic id="659" tId="1315" url="WordDocuments/reorderingtheannouncementlist.htm" target="right"><![CDATA[Reordering the Announcement List]]><contextids /></topic>
+    <topic id="660" tId="403" url="WordDocuments/reorderingtheassignmentlist.htm" target="right"><![CDATA[Reordering the Assignment List]]><contextids /></topic>
+    <topic id="661" tId="249" url="WordDocuments/replyingtoamessage.htm" target="right"><![CDATA[Replying to a Message]]><contextids /></topic>
+    <topic id="662" tId="803" url="WordDocuments/requestingthataformbepublishedglobally.htm" target="right"><![CDATA[Requesting that a Form Be Published Globally]]><contextids /></topic>
+    <topic id="663" tId="847" url="WordDocuments/requestingthatalayoutbepublishedglobally.htm" target="right"><![CDATA[Requesting that a Layout Be Published Globally]]><contextids /></topic>
+    <topic id="664" tId="327" url="WordDocuments/resources.htm" target="right"><![CDATA[Resources]]><contextids /></topic>
+    <topic id="665" tId="156" url="WordDocuments/respondingtoaspecificmessage.htm" target="right"><![CDATA[Responding to a Specific Message]]><contextids /></topic>
+    <topic id="666" tId="1508" url="WordDocuments/restoringdeletedposts.htm" target="right"><![CDATA[Restoring Deleted Posts]]><contextids /></topic>
+    <topic id="667" tId="245" url="WordDocuments/restrictingallowingsendingtoemailaddresses.htm" target="right"><![CDATA[Restricting/Allowing Sending to Email Addresses]]><contextids /></topic>
+    <topic id="668" tId="1300" url="WordDocuments/resubmittinganassignment.htm" target="right"><![CDATA[Resubmitting an Assignment]]><contextids /></topic>
+    <topic id="669" tId="550" url="WordDocuments/resumetakingasavedassessment.htm" target="right"><![CDATA[Resume Taking a Saved Assessment]]><contextids /></topic>
+    <topic id="670" tId="529" url="WordDocuments/retractingapublishedassessment.htm" target="right"><![CDATA[Retracting a Published Assessment]]><contextids /></topic>
+    <topic id="671" tId="61" url="WordDocuments/returningtoasiteortoolhomepage.htm" target="right"><![CDATA[Returning to a Site or Tool Home Page]]><contextids /></topic>
+    <topic id="672" tId="1212" url="WordDocuments/revertingbacktoautocalculatedcoursegrades.htm" target="right"><![CDATA[Reverting Back to Auto-calculated Course Grades]]><contextids /></topic>
+    <topic id="673" tId="750" url="WordDocuments/revisingasite.htm" target="right"><![CDATA[Revising a Site]]><contextids /></topic>
+    <topic id="674" tId="986" url="WordDocuments/revisinganevent1.htm" target="right"><![CDATA[Revising an Event]]><contextids /></topic>
+    <topic id="675" tId="733" url="WordDocuments/revisinganexistinggroup.htm" target="right"><![CDATA[Revising an Existing Group]]><contextids /></topic>
+    <topic id="676" tId="838" url="WordDocuments/revisingyourwork.htm" target="right"><![CDATA[Revising Your Work]]><contextids /></topic>
+    <topic id="677" tId="924" url="WordDocuments/revisingyourwork1.htm" target="right"><![CDATA[Revising Your Work]]><contextids /></topic>
+    <topic id="678" tId="1689" url="WordDocuments/rolesandpermissionsincoursesites1.htm" target="right"><![CDATA[Roles and Permissions in Course Sites]]><contextids /></topic>
+    <topic id="679" tId="1695" url="WordDocuments/rolesandpermissionsinportfoliosites1.htm" target="right"><![CDATA[Roles and Permissions in Portfolio Sites]]><contextids /></topic>
+    <topic id="680" tId="1692" url="WordDocuments/rolesandpermissionsinprojectsites1.htm" target="right"><![CDATA[Roles and Permissions in Project Sites]]><contextids /></topic>
+    <topic id="681" tId="12" url="WordDocuments/rolesandpermissionsinthecle.htm" target="right"><![CDATA[Roles and Permissions in the CLE]]><contextids /></topic>
+    <topic id="682" tId="710" url="WordDocuments/roster.htm" target="right"><![CDATA[Roster]]><contextids /></topic>
+    <topic id="683" tId="390" url="WordDocuments/savingapageinwordorpdfformat.htm" target="right"><![CDATA[Saving a Page in Word or PDF Format]]><contextids /></topic>
+    <topic id="684" tId="94" url="WordDocuments/search.htm" target="right"><![CDATA[Search]]><contextids /></topic>
+    <topic id="685" tId="152" url="WordDocuments/searchingforatopic.htm" target="right"><![CDATA[Searching for a Topic]]><contextids /></topic>
+    <topic id="686" tId="387" url="WordDocuments/searchingforcontent.htm" target="right"><![CDATA[Searching for Content]]><contextids /></topic>
+    <topic id="687" tId="1314" url="WordDocuments/searchingusersandrequestingconnections.htm" target="right"><![CDATA[Searching Users and Requesting Connections]]><contextids /></topic>
+    <topic id="688" tId="715" url="WordDocuments/sections.htm" target="right"><![CDATA[Sections]]><contextids /></topic>
+    <topic id="689" tId="287" url="WordDocuments/seeingmodulesfromastudentsperspective.htm" target="right"><![CDATA[Seeing Modules from a Student's Perspective]]><contextids /></topic>
+    <topic id="690" tId="885" url="WordDocuments/seeingwhohasviewedyourportfolio.htm" target="right"><![CDATA[Seeing Who Has Viewed Your Portfolio]]><contextids /></topic>
+    <topic id="691" tId="60" url="WordDocuments/selectingatool.htm" target="right"><![CDATA[Selecting a Tool]]><contextids /></topic>
+    <topic id="692" tId="90" url="WordDocuments/selectinganitemfromresourcesforuseineportfolios.htm" target="right"><![CDATA[Selecting an Item from Resources for Use in ePortfolios]]><contextids /></topic>
+    <topic id="693" tId="1722" url="WordDocuments/selectingmultipleitemsfromalistfield1.htm" target="right"><![CDATA[Selecting Multiple Items from a List Field]]><contextids /></topic>
+    <topic id="694" tId="730" url="WordDocuments/selectingtoolsforyoursite.htm" target="right"><![CDATA[Selecting Tools for Your Site]]><contextids /></topic>
+    <topic id="695" tId="244" url="WordDocuments/sendingamessage.htm" target="right"><![CDATA[Sending a Message]]><contextids /></topic>
+    <topic id="696" tId="189" url="WordDocuments/sendingaprivatemessage.htm" target="right"><![CDATA[Sending a Private Message]]><contextids /></topic>
+    <topic id="697" tId="185" url="WordDocuments/sendingaprivatemessagefromyouruserprofile.htm" target="right"><![CDATA[Sending a Private Message from Your User Profile]]><contextids /></topic>
+    <topic id="698" tId="157" url="WordDocuments/sendingaprivatemessagewhilewithinadiscussion.htm" target="right"><![CDATA[Sending a Private Message while within a Discussion]]><contextids /></topic>
+    <topic id="699" tId="240" url="WordDocuments/sendinganemail.htm" target="right"><![CDATA[Sending an Email]]><contextids /></topic>
+    <topic id="700" tId="1658" url="WordDocuments/sendinganemailtomeetingparticipants.htm" target="right"><![CDATA[Sending an email to meeting participants]]><contextids /></topic>
+    <topic id="701" tId="187" url="WordDocuments/sendingandreceivingprivatemessages.htm" target="right"><![CDATA[Sending and Receiving Private Messages]]><contextids /></topic>
+    <topic id="702" tId="193" url="WordDocuments/sendingmailtoallsiteparticipants.htm" target="right"><![CDATA[Sending Mail to All Site Participants]]><contextids /></topic>
+    <topic id="703" tId="1313" url="WordDocuments/settinganimageasyourprofileimage.htm" target="right"><![CDATA[Setting an Image as Your Profile Image]]><contextids /></topic>
+    <topic id="704" tId="108" url="WordDocuments/settingannouncementsoptions.htm" target="right"><![CDATA[Setting Announcements Options]]><contextids /></topic>
+    <topic id="705" tId="1509" url="WordDocuments/settingclogpermissions.htm" target="right"><![CDATA[Setting Clog Permissions]]><contextids /></topic>
+    <topic id="706" tId="477" url="WordDocuments/settinggradedisplayandconversionoptions.htm" target="right"><![CDATA[Setting Grade Display and Conversion Options]]><contextids /></topic>
+    <topic id="707" tId="1160" url="WordDocuments/settinggraderpermissions.htm" target="right"><![CDATA[Setting Grader Permissions]]><contextids /></topic>
+    <topic id="708" tId="1198" url="WordDocuments/settingmailtoolpermissions.htm" target="right"><![CDATA[Setting Mailtool Permissions]]><contextids /></topic>
+    <topic id="709" tId="705" url="WordDocuments/settingnotificationpreferences.htm" target="right"><![CDATA[Setting Notification Preferences]]><contextids /></topic>
+    <topic id="710" tId="1507" url="WordDocuments/settingnotificationpreferencesfortheclogtool.htm" target="right"><![CDATA[Setting Notification Preferences for the Clog Tool]]><contextids /></topic>
+    <topic id="711" tId="1332" url="WordDocuments/settingnotificationpreferencesforthematricestool.htm" target="right"><![CDATA[Setting Notification Preferences for the Matrices Tool]]><contextids /></topic>
+    <topic id="712" tId="1337" url="WordDocuments/settingnotificationpreferencesforthewizardstool.htm" target="right"><![CDATA[Setting Notification Preferences for the Wizards Tool]]><contextids /></topic>
+    <topic id="713" tId="1609" url="WordDocuments/settingpermissionsforthesignuptool.htm" target="right"><![CDATA[Setting Permissions for the Sign-up Tool]]><contextids /></topic>
+    <topic id="714" tId="309" url="WordDocuments/settingpreferences.htm" target="right"><![CDATA[Setting Preferences]]><contextids /></topic>
+    <topic id="715" tId="1320" url="WordDocuments/settingpreferencesintheprofiletool.htm" target="right"><![CDATA[Setting Preferences in the Profile Tool]]><contextids /></topic>
+    <topic id="716" tId="1124" url="WordDocuments/settingprivacycontrols.htm" target="right"><![CDATA[Setting Privacy Controls]]><contextids /></topic>
+    <topic id="717" tId="1614" url="WordDocuments/settingungradeditemstozero.htm" target="right"><![CDATA[Setting Ungraded Items to Zero]]><contextids /></topic>
+    <topic id="718" tId="178" url="WordDocuments/settingupgrading.htm" target="right"><![CDATA[Setting up Grading]]><contextids /></topic>
+    <topic id="719" tId="1176" url="WordDocuments/settingupgradingbycategory.htm" target="right"><![CDATA[Setting up Grading by Category]]><contextids /></topic>
+    <topic id="720" tId="988" url="WordDocuments/settingupgradingbyforum.htm" target="right"><![CDATA[Setting up Grading by Forum]]><contextids /></topic>
+    <topic id="721" tId="989" url="WordDocuments/settingupgradingbytopic.htm" target="right"><![CDATA[Setting up Grading by Topic]]><contextids /></topic>
+    <topic id="722" tId="990" url="WordDocuments/settingupgradingforcommentsonlynoscoring.htm" target="right"><![CDATA[Setting up Grading for Comments Only (No Scoring)]]><contextids /></topic>
+    <topic id="723" tId="1132" url="WordDocuments/settingupthegradebook.htm" target="right"><![CDATA[Setting up the Gradebook]]><contextids /></topic>
+    <topic id="724" tId="1650" url="WordDocuments/settingupturnitin.htm" target="right"><![CDATA[Setting up Turnitin]]><contextids /></topic>
+    <topic id="725" tId="1397" url="WordDocuments/settingupwebdavinmacos103orearlier.htm" target="right"><![CDATA[Setting up WebDAV in Mac OS 10.3 or Earlier]]><contextids /></topic>
+    <topic id="726" tId="1396" url="WordDocuments/settingupwebdavinmacos104orlater.htm" target="right"><![CDATA[Setting up WebDAV in Mac OS 10.4 or Later]]><contextids /></topic>
+    <topic id="727" tId="1395" url="WordDocuments/settingupwebdavinwindows7andwindowsvista.htm" target="right"><![CDATA[Setting up WebDAV in Windows 7 and Windows Vista]]><contextids /></topic>
+    <topic id="728" tId="360" url="WordDocuments/settingupwebdavinwindowsxp.htm" target="right"><![CDATA[Setting up WebDAV in Windows XP]]><contextids /></topic>
+    <topic id="729" tId="476" url="WordDocuments/settingupyourgradebook.htm" target="right"><![CDATA[Setting up Your Gradebook]]><contextids /></topic>
+    <topic id="730" tId="1187" url="WordDocuments/settinguserpermissions.htm" target="right"><![CDATA[Setting User Permissions]]><contextids /></topic>
+    <topic id="731" tId="707" url="WordDocuments/settingyourlanguagepreference.htm" target="right"><![CDATA[Setting Your Language Preference]]><contextids /></topic>
+    <topic id="732" tId="1336" url="WordDocuments/settingyournotificationpreferences.htm" target="right"><![CDATA[Setting Your Notification Preferences]]><contextids /></topic>
+    <topic id="733" tId="1338" url="WordDocuments/settingyournotificationpreferences1.htm" target="right"><![CDATA[Setting Your Notification Preferences]]><contextids /></topic>
+    <topic id="734" tId="755" url="WordDocuments/settingyourpreferences.htm" target="right"><![CDATA[Setting Your Preferences]]><contextids /></topic>
+    <topic id="735" tId="1376" url="WordDocuments/settingyourprivacystatus.htm" target="right"><![CDATA[Setting Your Privacy Status]]><contextids /></topic>
+    <topic id="736" tId="706" url="WordDocuments/settingyourtimezone.htm" target="right"><![CDATA[Setting Your Time Zone]]><contextids /></topic>
+    <topic id="737" tId="1095" url="WordDocuments/sharingaquestionpool.htm" target="right"><![CDATA[Sharing a Question Pool]]><contextids /></topic>
+    <topic id="738" tId="876" url="WordDocuments/sharingyourportfolio.htm" target="right"><![CDATA[Sharing Your Portfolio]]><contextids /></topic>
+    <topic id="739" tId="1595" url="WordDocuments/signup.htm" target="right"><![CDATA[Sign-up]]><contextids /></topic>
+    <topic id="740" tId="1661" url="WordDocuments/signingupforameeting.htm" target="right"><![CDATA[Signing up for a meeting]]><contextids /></topic>
+    <topic id="741" tId="727" url="WordDocuments/siteeditor.htm" target="right"><![CDATA[Site Editor]]><contextids /></topic>
+    <topic id="742" tId="745" url="WordDocuments/sitesetup.htm" target="right"><![CDATA[Site Setup]]><contextids /></topic>
+    <topic id="743" tId="752" url="WordDocuments/sitestatistics.htm" target="right"><![CDATA[Site Statistics]]><contextids /></topic>
+    <topic id="744" tId="74" url="WordDocuments/sortingandfiltering.htm" target="right"><![CDATA[Sorting and Filtering]]><contextids /></topic>
+    <topic id="745" tId="82" url="WordDocuments/specifyingemailnotificationoptions.htm" target="right"><![CDATA[Specifying Email Notification Options]]><contextids /></topic>
+    <topic id="746" tId="435" url="WordDocuments/specifyingsettingsanddates.htm" target="right"><![CDATA[Specifying Settings and Dates]]><contextids /></topic>
+    <topic id="747" tId="161" url="WordDocuments/startinganewtopic.htm" target="right"><![CDATA[Starting a New Topic]]><contextids /></topic>
+    <topic id="748" tId="289" url="WordDocuments/step1addingamodulepage.htm" target="right"><![CDATA[Step 1: Adding a Module Page]]><contextids /></topic>
+    <topic id="749" tId="856" url="WordDocuments/step1addingthetemplatename.htm" target="right"><![CDATA[Step 1: Adding the Template Name]]><contextids /></topic>
+    <topic id="750" tId="824" url="WordDocuments/step1creatingtheframework.htm" target="right"><![CDATA[Step 1: Creating the Framework]]><contextids /></topic>
+    <topic id="751" tId="902" url="WordDocuments/step1creatingthewizard.htm" target="right"><![CDATA[Step 1: Creating the Wizard]]><contextids /></topic>
+    <topic id="752" tId="290" url="WordDocuments/step2addingcontentsections.htm" target="right"><![CDATA[Step 2: Adding Content Sections]]><contextids /></topic>
+    <topic id="753" tId="903" url="WordDocuments/step2addingwizardsupport.htm" target="right"><![CDATA[Step 2: Adding Wizard Support]]><contextids /></topic>
+    <topic id="754" tId="825" url="WordDocuments/step2settingupcells.htm" target="right"><![CDATA[Step 2: Setting up Cells]]><contextids /></topic>
+    <topic id="755" tId="857" url="WordDocuments/step2specifyingthelayout.htm" target="right"><![CDATA[Step 2: Specifying the Layout]]><contextids /></topic>
+    <topic id="756" tId="904" url="WordDocuments/step3addingpagestoasequentialwizard.htm" target="right"><![CDATA[Step 3: Adding Pages to a Sequential Wizard]]><contextids /></topic>
+    <topic id="757" tId="858" url="WordDocuments/step3addingtherequiredformsandotheritems.htm" target="right"><![CDATA[Step 3: Adding the Required Forms and Other Items]]><contextids /></topic>
+    <topic id="758" tId="826" url="WordDocuments/step3publishingthematrix.htm" target="right"><![CDATA[Step 3: Publishing the Matrix]]><contextids /></topic>
+    <topic id="759" tId="905" url="WordDocuments/step4addingcategoriessubcategoriesandpagestoahierarchicalwizard.htm" target="right"><![CDATA[Step 4: Adding Categories, Subcategories, and Pages to a Hierarchical Wizard]]><contextids /></topic>
+    <topic id="760" tId="859" url="WordDocuments/step4selectingsupportingfiles.htm" target="right"><![CDATA[Step 4: Selecting Supporting Files]]><contextids /></topic>
+    <topic id="761" tId="860" url="WordDocuments/step5finishingwhenusingpassthroughxsl.htm" target="right"><![CDATA[Step 5: Finishing When Using passthrough.xsl]]><contextids /></topic>
+    <topic id="762" tId="414" url="WordDocuments/studentactivities.htm" target="right"><![CDATA[Student Activities]]><contextids /></topic>
+    <topic id="763" tId="887" url="WordDocuments/styles.htm" target="right"><![CDATA[Styles]]><contextids /></topic>
+    <topic id="764" tId="1649" url="WordDocuments/submittingonbehalfofastudent.htm" target="right"><![CDATA[Submitting on Behalf of a Student]]><contextids /></topic>
+    <topic id="765" tId="926" url="WordDocuments/submittingyourworkforevaluation1.htm" target="right"><![CDATA[Submitting Your Work for Evaluation]]><contextids /></topic>
+    <topic id="766" tId="840" url="WordDocuments/submittingyourworkforevaluation.htm" target="right"><![CDATA[Submitting Your Work for Evaluation]]><contextids /></topic>
+    <topic id="767" tId="121" url="WordDocuments/subscribingtoexternalcalendars.htm" target="right"><![CDATA[Subscribing to External Calendars]]><contextids /></topic>
+    <topic id="768" tId="325" url="WordDocuments/subscribingtotherssfeed.htm" target="right"><![CDATA[Subscribing to the RSS Feed]]><contextids /></topic>
+    <topic id="769" tId="891" url="WordDocuments/suggestingglobalpublicationofastyle.htm" target="right"><![CDATA[Suggesting Global Publication of a Style]]><contextids /></topic>
+    <topic id="770" tId="363" url="WordDocuments/syllabus.htm" target="right"><![CDATA[Syllabus]]><contextids /></topic>
+    <topic id="771" tId="1651" url="WordDocuments/synchronizinggroupmembershipforameeting.htm" target="right"><![CDATA[Synchronizing Group Membership for a Meeting]]><contextids /></topic>
+    <topic id="772" tId="1063" url="WordDocuments/testsquizzes.htm" target="right"><![CDATA[Tests & Quizzes]]><contextids /></topic>
+    <topic id="773" tId="795" url="WordDocuments/theformstoolandtheresourcestool.htm" target="right"><![CDATA[The Forms Tool and the Resources Tool]]><contextids /></topic>
+    <topic id="774" tId="852" url="WordDocuments/theportfoliotemplatestoolandtheresourcestool.htm" target="right"><![CDATA[The Portfolio Templates Tool and the Resources Tool]]><contextids /></topic>
+    <topic id="775" tId="358" url="WordDocuments/thingsyoumustknowbeforesettingupwebdav.htm" target="right"><![CDATA[Things You Must Know Before Setting up WebDAV]]><contextids /></topic>
+    <topic id="776" tId="22" url="WordDocuments/toolsavailableinmyworkspace.htm" target="right"><![CDATA[Tools Available in My Workspace]]><contextids /></topic>
+    <topic id="777" tId="1690" url="WordDocuments/toolsincoursesites1.htm" target="right"><![CDATA[Tools in Course Sites]]><contextids /></topic>
+    <topic id="778" tId="1696" url="WordDocuments/toolsinportfoliosites1.htm" target="right"><![CDATA[Tools in Portfolio Sites]]><contextids /></topic>
+    <topic id="779" tId="1693" url="WordDocuments/toolsinprojectsites1.htm" target="right"><![CDATA[Tools in Project Sites]]><contextids /></topic>
+    <topic id="780" tId="13" url="WordDocuments/toolsinthecle.htm" target="right"><![CDATA[Tools in the CLE]]><contextids /></topic>
+    <topic id="781" tId="1607" url="WordDocuments/trackingattendanceforameeting.htm" target="right"><![CDATA[Tracking Attendance for a Meeting]]><contextids /></topic>
+    <topic id="782" tId="246" url="WordDocuments/turningautoforwardingonandoff.htm" target="right"><![CDATA[Turning Auto Forwarding On and Off]]><contextids /></topic>
+    <topic id="783" tId="1571" url="WordDocuments/twitterintegration.htm" target="right"><![CDATA[Twitter Integration]]><contextids /></topic>
+    <topic id="784" tId="9" url="WordDocuments/typesofsitesinthecle.htm" target="right"><![CDATA[Types of Sites in the CLE]]><contextids /></topic>
+    <topic id="785" tId="896" url="WordDocuments/typesofwizards.htm" target="right"><![CDATA[Types of Wizards]]><contextids /></topic>
+    <topic id="786" tId="702" url="WordDocuments/unjoiningapublicsite.htm" target="right"><![CDATA[Unjoining a Public Site]]><contextids /></topic>
+    <topic id="787" tId="107" url="WordDocuments/unmergingannouncements.htm" target="right"><![CDATA[Unmerging Announcements]]><contextids /></topic>
+    <topic id="788" tId="128" url="WordDocuments/unmergingcalendars.htm" target="right"><![CDATA[Unmerging Calendars]]><contextids /></topic>
+    <topic id="789" tId="206" url="WordDocuments/updatingafeedbackfile.htm" target="right"><![CDATA[Updating a Feedback File]]><contextids /></topic>
+    <topic id="790" tId="938" url="WordDocuments/uploadinganewitemwithgrades.htm" target="right"><![CDATA[Uploading a New Item with Grades]]><contextids /></topic>
+    <topic id="791" tId="1413" url="WordDocuments/uploadingallsubmissions.htm" target="right"><![CDATA[Uploading All Submissions]]><contextids /></topic>
+    <topic id="792" tId="1164" url="WordDocuments/uploadingandimportinggrades.htm" target="right"><![CDATA[Uploading and Importing Grades]]><contextids /></topic>
+    <topic id="793" tId="357" url="WordDocuments/uploadingdownloadingmultipleresources.htm" target="right"><![CDATA[Uploading/Downloading Multiple Resources]]><contextids /></topic>
+    <topic id="794" tId="874" url="WordDocuments/usingatemplatetocreateaportfolio.htm" target="right"><![CDATA[Using a Template to Create a Portfolio]]><contextids /></topic>
+    <topic id="795" tId="248" url="WordDocuments/usingadvancedsearch.htm" target="right"><![CDATA[Using Advanced Search]]><contextids /></topic>
+    <topic id="796" tId="1362" url="WordDocuments/usingautocreatesections.htm" target="right"><![CDATA[Using Auto Create Sections]]><contextids /></topic>
+    <topic id="797" tId="1475" url="WordDocuments/usinglatexwiththewiriseditor.htm" target="right"><![CDATA[Using LaTeX with the WIRIS Editor]]><contextids /></topic>
+    <topic id="798" tId="1574" url="WordDocuments/usingpageorder.htm" target="right"><![CDATA[Using Page Order]]><contextids /></topic>
+    <topic id="799" tId="1705" url="WordDocuments/usingthehelptool1.htm" target="right"><![CDATA[Using the Help Tool]]><contextids /></topic>
+    <topic id="800" tId="1344" url="WordDocuments/usingthematricestoolforsiteassociation.htm" target="right"><![CDATA[Using the Matrices Tool for Site Association]]><contextids /></topic>
+    <topic id="801" tId="65" url="WordDocuments/usingtherichtexteditor.htm" target="right"><![CDATA[Using the Rich Text Editor]]><contextids /></topic>
+    <topic id="802" tId="384" url="WordDocuments/usingwikimarkuplanguage.htm" target="right"><![CDATA[Using Wiki Markup Language]]><contextids /></topic>
+    <topic id="803" tId="800" url="WordDocuments/viewingaform.htm" target="right"><![CDATA[Viewing a Form]]><contextids /></topic>
+    <topic id="804" tId="880" url="WordDocuments/viewingaportfolioanditscomments.htm" target="right"><![CDATA[Viewing a Portfolio and Its Comments]]><contextids /></topic>
+    <topic id="805" tId="711" url="WordDocuments/viewingaroster.htm" target="right"><![CDATA[Viewing a Roster]]><contextids /></topic>
+    <topic id="806" tId="1081" url="WordDocuments/viewingaturnitinreport.htm" target="right"><![CDATA[Viewing a Turnitin Report]]><contextids /></topic>
+    <topic id="807" tId="1152" url="WordDocuments/viewingallstudentscoresforagivenitem.htm" target="right"><![CDATA[Viewing All Student Scores for a Given Item]]><contextids /></topic>
+    <topic id="808" tId="1331" url="WordDocuments/viewinganassignmentlinkedtoamatrix.htm" target="right"><![CDATA[Viewing an Assignment Linked to a Matrix]]><contextids /></topic>
+    <topic id="809" tId="535" url="WordDocuments/viewingandfindingquestionpoolsandsubpools.htm" target="right"><![CDATA[Viewing and Finding Question Pools and Subpools]]><contextids /></topic>
+    <topic id="810" tId="1298" url="WordDocuments/viewingandgradingsubmissions.htm" target="right"><![CDATA[Viewing and Grading Submissions]]><contextids /></topic>
+    <topic id="811" tId="1123" url="WordDocuments/viewingandmanagingconnections.htm" target="right"><![CDATA[Viewing and Managing Connections]]><contextids /></topic>
+    <topic id="812" tId="1503" url="WordDocuments/viewingandmanagingotherblogposts.htm" target="right"><![CDATA[Viewing and Managing Other Blog Posts]]><contextids /></topic>
+    <topic id="813" tId="1182" url="WordDocuments/viewingandmanagingyourblogentries.htm" target="right"><![CDATA[Viewing and Managing Your Blog Entries]]><contextids /></topic>
+    <topic id="814" tId="1500" url="WordDocuments/viewingandmanagingyourblogposts.htm" target="right"><![CDATA[Viewing and Managing Your Blog Posts]]><contextids /></topic>
+    <topic id="815" tId="447" url="WordDocuments/viewingandworkingwithevaluationresults.htm" target="right"><![CDATA[Viewing and Working with Evaluation Results]]><contextids /></topic>
+    <topic id="816" tId="136" url="WordDocuments/viewinganotherchatroom.htm" target="right"><![CDATA[Viewing Another Chat Room]]><contextids /></topic>
+    <topic id="817" tId="415" url="WordDocuments/viewingassignmentsandgrades.htm" target="right"><![CDATA[Viewing Assignments and Grades]]><contextids /></topic>
+    <topic id="818" tId="1214" url="WordDocuments/viewingblogsofotherusers.htm" target="right"><![CDATA[Viewing Blogs of Other Users]]><contextids /></topic>
+    <topic id="819" tId="980" url="WordDocuments/viewingcalendareventdetail.htm" target="right"><![CDATA[Viewing Calendar Event Detail]]><contextids /></topic>
+    <topic id="820" tId="110" url="WordDocuments/viewingcalendars.htm" target="right"><![CDATA[Viewing Calendars]]><contextids /></topic>
+    <topic id="821" tId="1154" url="WordDocuments/viewingcoursegradestodate.htm" target="right"><![CDATA[Viewing Course Grades to Date]]><contextids /></topic>
+    <topic id="822" tId="199" url="WordDocuments/viewingfeedbackasastudent.htm" target="right"><![CDATA[Viewing Feedback (as a Student)]]><contextids /></topic>
+    <topic id="823" tId="203" url="WordDocuments/viewingfeedbackasaninstructor.htm" target="right"><![CDATA[Viewing Feedback (as an Instructor)]]><contextids /></topic>
+    <topic id="824" tId="204" url="WordDocuments/viewingfeedbackforallparticipants.htm" target="right"><![CDATA[Viewing Feedback for All Participants]]><contextids /></topic>
+    <topic id="825" tId="205" url="WordDocuments/viewingfeedbackforoneparticipant.htm" target="right"><![CDATA[Viewing Feedback for One Participant]]><contextids /></topic>
+    <topic id="826" tId="927" url="WordDocuments/viewingfeedbackonyourwork1.htm" target="right"><![CDATA[Viewing Feedback on Your Work]]><contextids /></topic>
+    <topic id="827" tId="841" url="WordDocuments/viewingfeedbackonyourwork.htm" target="right"><![CDATA[Viewing Feedback on Your Work]]><contextids /></topic>
+    <topic id="828" tId="1158" url="WordDocuments/viewinggradebookhistory.htm" target="right"><![CDATA[Viewing Gradebook History]]><contextids /></topic>
+    <topic id="829" tId="1159" url="WordDocuments/viewinggradebookstatistics.htm" target="right"><![CDATA[Viewing Gradebook Statistics]]><contextids /></topic>
+    <topic id="830" tId="1150" url="WordDocuments/viewinggrades1.htm" target="right"><![CDATA[Viewing Grades]]><contextids /></topic>
+    <topic id="831" tId="455" url="WordDocuments/viewinggrades.htm" target="right"><![CDATA[Viewing Grades]]><contextids /></topic>
+    <topic id="832" tId="417" url="WordDocuments/viewinggradesandcomments.htm" target="right"><![CDATA[Viewing Grades and Comments]]><contextids /></topic>
+    <topic id="833" tId="456" url="WordDocuments/viewinggradesforagivenitem.htm" target="right"><![CDATA[Viewing Grades for a Given Item]]><contextids /></topic>
+    <topic id="834" tId="457" url="WordDocuments/viewinggradesforthecoursetodate.htm" target="right"><![CDATA[Viewing Grades for the Course to Date]]><contextids /></topic>
+    <topic id="835" tId="1153" url="WordDocuments/viewinggradesinastudentsummaryframe.htm" target="right"><![CDATA[Viewing Grades in a Student Summary Frame]]><contextids /></topic>
+    <topic id="836" tId="1151" url="WordDocuments/viewinggradesinthespreadsheetframe.htm" target="right"><![CDATA[Viewing Grades in the Spreadsheet Frame]]><contextids /></topic>
+    <topic id="837" tId="458" url="WordDocuments/viewinggradesbystudent.htm" target="right"><![CDATA[Viewing Grades, by Student]]><contextids /></topic>
+    <topic id="838" tId="1335" url="WordDocuments/viewinglinkedassignments.htm" target="right"><![CDATA[Viewing Linked Assignments]]><contextids /></topic>
+    <topic id="839" tId="315" url="WordDocuments/viewingnews.htm" target="right"><![CDATA[Viewing News]]><contextids /></topic>
+    <topic id="840" tId="389" url="WordDocuments/viewingpageinformation.htm" target="right"><![CDATA[Viewing Page Information]]><contextids /></topic>
+    <topic id="841" tId="712" url="WordDocuments/viewingpicturesinaroster.htm" target="right"><![CDATA[Viewing Pictures in a Roster]]><contextids /></topic>
+    <topic id="842" tId="1505" url="WordDocuments/viewingprofiles.htm" target="right"><![CDATA[Viewing Profiles]]><contextids /></topic>
+    <topic id="843" tId="1647" url="WordDocuments/viewingtheassignmentlistbystudent1.htm" target="right"><![CDATA[Viewing the Assignment List by Student]]><contextids /></topic>
+    <topic id="844" tId="329" url="WordDocuments/viewingthelistandaccessingfoldercontent.htm" target="right"><![CDATA[Viewing the List and Accessing Folder Content]]><contextids /></topic>
+    <topic id="845" tId="401" url="WordDocuments/viewingthelistandfindinganassignment.htm" target="right"><![CDATA[Viewing the List and Finding an Assignment]]><contextids /></topic>
+    <topic id="846" tId="1080" url="WordDocuments/viewingturnitinreports.htm" target="right"><![CDATA[Viewing Turnitin Reports]]><contextids /></topic>
+    <topic id="847" tId="1635" url="WordDocuments/viewinguserprofilesintheforumstool.htm" target="right"><![CDATA[Viewing User Profiles in the Forums Tool]]><contextids /></topic>
+    <topic id="848" tId="1703" url="WordDocuments/viewinguserspresentinasite.htm" target="right"><![CDATA[Viewing Users Present in a Site]]><contextids /></topic>
+    <topic id="849" tId="163" url="WordDocuments/viewingyourgrades.htm" target="right"><![CDATA[Viewing Your Grades]]><contextids /></topic>
+    <topic id="850" tId="59" url="WordDocuments/viewingyoursiteasauserinanotherrole.htm" target="right"><![CDATA[Viewing Your Site as a User in Another Role]]><contextids /></topic>
+    <topic id="851" tId="265" url="WordDocuments/voting.htm" target="right"><![CDATA[Voting]]><contextids /></topic>
+    <topic id="852" tId="150" url="WordDocuments/watchingatopic.htm" target="right"><![CDATA[Watching a Topic]]><contextids /></topic>
+    <topic id="853" tId="1197" url="WordDocuments/watchingforums.htm" target="right"><![CDATA[Watching Forums]]><contextids /></topic>
+    <topic id="854" tId="371" url="WordDocuments/webcontent.htm" target="right"><![CDATA[Web Content]]><contextids /></topic>
+    <topic id="855" tId="377" url="WordDocuments/whatcanwedowithwikis.htm" target="right"><![CDATA[What Can We Do with Wikis?]]><contextids /></topic>
+    <topic id="856" tId="382" url="WordDocuments/wheretobegin.htm" target="right"><![CDATA[Where to Begin]]><contextids /></topic>
+    <topic id="857" tId="897" url="WordDocuments/whouseswizards.htm" target="right"><![CDATA[Who Uses Wizards]]><contextids /></topic>
+    <topic id="858" tId="1573" url="WordDocuments/widgetsettings.htm" target="right"><![CDATA[Widget Settings]]><contextids /></topic>
+    <topic id="859" tId="376" url="WordDocuments/wiki.htm" target="right"><![CDATA[Wiki]]><contextids /></topic>
+    <topic id="860" tId="894" url="WordDocuments/wizards.htm" target="right"><![CDATA[Wizards]]><contextids /></topic>
+    <topic id="861" tId="416" url="WordDocuments/workingonandsubmittinganassignment.htm" target="right"><![CDATA[Working on and Submitting an Assignment]]><contextids /></topic>
+    <topic id="862" tId="997" url="WordDocuments/workingwithasinglecitation.htm" target="right"><![CDATA[Working with a Single Citation]]><contextids /></topic>
+    <topic id="863" tId="343" url="WordDocuments/workingwithcitationlists.htm" target="right"><![CDATA[Working with Citation Lists]]><contextids /></topic>
+    <topic id="864" tId="420" url="WordDocuments/workingwithevaluationquestionsandheaders.htm" target="right"><![CDATA[Working with Evaluation Questions and Headers]]><contextids /></topic>
+    <topic id="865" tId="254" url="WordDocuments/workingwithfolders.htm" target="right"><![CDATA[Working with Folders]]><contextids /></topic>
+    <topic id="866" tId="1308" url="WordDocuments/workingwithimages.htm" target="right"><![CDATA[Working with Images]]><contextids /></topic>
+    <topic id="867" tId="1139" url="WordDocuments/workingwithitemscreatedinothertools.htm" target="right"><![CDATA[Working with Items Created in Other Tools]]><contextids /></topic>
+    <topic id="868" tId="1099" url="WordDocuments/workingwithjsmath.htm" target="right"><![CDATA[Working with jsMath]]><contextids /></topic>
+    <topic id="869" tId="66" url="WordDocuments/workingwithlinks.htm" target="right"><![CDATA[Working with Links]]><contextids /></topic>
+    <topic id="870" tId="73" url="WordDocuments/workingwithlists.htm" target="right"><![CDATA[Working with Lists]]><contextids /></topic>
+    <topic id="871" tId="1594" url="WordDocuments/workingwithmathmlandlatexinfmath.htm" target="right"><![CDATA[Working with MathML and LaTeX in fMath]]><contextids /></topic>
+    <topic id="872" tId="1319" url="WordDocuments/workingwithmessages.htm" target="right"><![CDATA[Working with Messages]]><contextids /></topic>
+    <topic id="873" tId="191" url="WordDocuments/workingwithmessagesyouhavesent.htm" target="right"><![CDATA[Working with Messages You Have Sent]]><contextids /></topic>
+    <topic id="874" tId="996" url="WordDocuments/workingwithmultipleitemsconcurrently.htm" target="right"><![CDATA[Working with Multiple Items Concurrently]]><contextids /></topic>
+    <topic id="875" tId="534" url="WordDocuments/workingwithquestionpools.htm" target="right"><![CDATA[Working with Question Pools]]><contextids /></topic>
+    <topic id="876" tId="1446" url="WordDocuments/workingwithstudentsubmissions.htm" target="right"><![CDATA[Working with Student Submissions]]><contextids /></topic>
+    <topic id="877" tId="426" url="WordDocuments/workingwithtemplates.htm" target="right"><![CDATA[Working with Templates]]><contextids /></topic>
+    <topic id="878" tId="1592" url="WordDocuments/workingwiththefmatheditor.htm" target="right"><![CDATA[Working with the fMath Editor]]><contextids /></topic>
+    <topic id="879" tId="1128" url="WordDocuments/workingwiththegradebooktab.htm" target="right"><![CDATA[Working with the Gradebook Tab]]><contextids /></topic>
+    <topic id="880" tId="1129" url="WordDocuments/workingwiththespreadsheetframe.htm" target="right"><![CDATA[Working with the Spreadsheet Frame]]><contextids /></topic>
+    <topic id="881" tId="1155" url="WordDocuments/workingwiththestudentview.htm" target="right"><![CDATA[Working with the Student View]]><contextids /></topic>
+    <topic id="882" tId="1468" url="WordDocuments/workingwiththewiriseditor.htm" target="right"><![CDATA[Working with the WIRIS Editor]]><contextids /></topic>
+    <topic id="883" tId="1086" url="WordDocuments/workingwithvisitsactivityandresourcessummaries.htm" target="right"><![CDATA[Working with Visits, Activity, and Resources Summaries]]><contextids /></topic>
+</topics>

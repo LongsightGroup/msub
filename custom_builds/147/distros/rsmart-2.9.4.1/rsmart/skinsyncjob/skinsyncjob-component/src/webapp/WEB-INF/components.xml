@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="skinSyncJob" class="com.rsmart.skinsync.job.SkinSyncJob" init-method="init">
+        <property name="adminUser" value="admin"/>
+        <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
+        <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
+        <property name="skinFileSystemService" ref="nl.edia.sakai.tool.skinmanager.SkinFileSystemService"/>
+        <property name="skinArchiveService" ref="nl.edia.sakai.tool.skinmanager.SkinArchiveService"/>
+        <property name="skinService" ref="nl.edia.sakai.tool.skinmanager.SkinService"/>
+    </bean>
+
+    <bean id="skinSyncJobWrapper" class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper" init-method="init">
+        <property name="beanId">
+            <value>skinSyncJob</value>
+        </property>
+        <property name="jobName">
+            <value>Skin Synchronization</value>
+        </property>
+        <property name="schedulerManager">
+            <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/>
+        </property>
+    </bean>
+
+    <!--bean id="skinSyncScheduling" class="org.sakaiproject.component.app.scheduler.jobs.SpringInitialJobSchedule">
+        <property name="jobBeanWrapper">
+            <ref bean="skinSyncJobWrapper"/>
+        </property>
+        <property name="jobName" value="Skin Synchronization"/>
+        <property name="triggerName" value="Every 5 minutes"/>
+        <property name="cronExpression" value="0 0/5 * 1/1 * ? *"/>
+    </bean-->
+</beans>

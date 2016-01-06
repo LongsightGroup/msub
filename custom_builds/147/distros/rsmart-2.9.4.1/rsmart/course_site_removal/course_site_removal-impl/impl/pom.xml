@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>course_site_removal-base</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>2.9.3</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+  <name>Rsmart Course Site Removal Service Implementation</name>
+  <groupId>com.rsmart</groupId>
+  <artifactId>rsmart-course_site_removal-impl</artifactId>
+  <organization>
+    <name>The rSmart Group</name>
+    <url>http://www.rsmart.com/</url>
+  </organization>
+  <inceptionYear>2000</inceptionYear>
+  <packaging>jar</packaging>
+  <properties>
+    <deploy.target/>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-component-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-util</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>rsmart-common-api</artifactId>
+      <version>${sakai.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>rsmart-course_site_removal-api</artifactId>
+      <version>${sakai.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.4</version>
+    </dependency>
+      <dependency>
+          <groupId>org.opensymphony.quartz</groupId>
+          <artifactId>quartz</artifactId>
+      </dependency>
+
+<!--org.sakaiprojectsakai-authz-api${sakai.version}-->
+<!--org.sakaiprojectsakai-component${sakai.version}-->
+<!--org.sakaiprojectsakai-component-api${sakai.version}-->
+   <dependency>
+      <groupId>org.sakaiproject.edu-services.course-management</groupId>
+      <artifactId>coursemanagement-api</artifactId>
+        <version>${sakai.edu-services.version}</version>
+    </dependency>
+<!--org.sakaiprojectsakai-entity-api${sakai.version}-->
+<!--org.sakaiprojectsakai-entity-util${sakai.version}-->
+    <dependency>
+      <groupId>org.sakaiproject.metaobj</groupId>
+      <artifactId>sakai-metaobj-api</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+<!--org.sakaiprojectsakai-site-api${sakai.version}-->
+<!--org.sakaiprojectsakai-tool-api${sakai.version}-->
+<!--org.sakaiprojectsakai-user-api${sakai.version}-->
+<!--org.sakaiprojectsakai-user-util${sakai.version}-->
+<!--org.sakaiprojectsakai-util${sakai.version}-->
+<!--org.sakaiprojectsakai-util-api${sakai.version}-->
+    <dependency>
+      <groupId>${sakai.hibernate.groupId}</groupId>
+      <artifactId>${sakai.hibernate.artifactId}</artifactId>
+      <version>${sakai.hibernate.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${sakai.spring.groupId}</groupId>
+      <artifactId>${sakai.spring.artifactId}</artifactId>
+      <version>${sakai.spring.version}</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <sourceDirectory>src/java</sourceDirectory>
+  </build>
+</project>

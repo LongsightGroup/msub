@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+   <pomVersion>3</pomVersion>
+   <extend>../../master/project.xml</extend>
+   <id>mesa-virtual_classroom-tool</id>
+   <groupId>mesa</groupId>
+   <name>Virtual Classroom Tool</name>
+   <currentVersion>${mesa.rsmart.version}</currentVersion>
+   <organization>
+      <name>The rSmart Group</name>
+      <url>http://www.rsmart.com/</url>
+   </organization>
+   <inceptionYear>2002</inceptionYear>
+
+   <properties>
+      <deploy.type>war</deploy.type>
+   </properties>
+
+   <dependencies>
+      <dependency>
+          <groupId>mesa</groupId>
+          <artifactId>mesa-common</artifactId>
+          <version>${mesa.rsmart.version}</version>
+         <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+          <groupId>mesa</groupId>
+          <artifactId>mesa-common-api</artifactId>
+          <version>${mesa.rsmart.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>mesa</groupId>
+         <artifactId>mesa-virtual_classroom-api</artifactId>
+         <version>${mesa.rsmart.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai</artifactId>
+         <version>${sakai.plugin.version}</version>
+         <type>plugin</type>
+      </dependency>
+
+      <dependency>
+        <groupId>sakaiproject</groupId>
+        <artifactId>sakai-component</artifactId>
+        <version>${sakai.version}</version>
+      </dependency>
+
+
+      <!-- this jar file contains the pager class used by the sakai pager jsf tag which displays next and previous arrows -->
+      <!-- to allow users to page through meetings -->
+      <dependency>
+         <groupId>osp</groupId>
+         <artifactId>osp-common-tool-lib</artifactId>
+         <version>${osp.version}</version>
+         <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+        <groupId>sakaiproject</groupId>
+        <artifactId>sakai-legacy-service</artifactId>
+        <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>sakaiproject</groupId>
+        <artifactId>sakai-legacy-util</artifactId>
+        <version>${sakai.version}</version>
+        <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+        <groupId>sakaiproject</groupId>
+        <artifactId>sakai-tool</artifactId>
+        <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>sakaiproject</groupId>
+        <artifactId>sakai-metaobj-api</artifactId>
+        <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-metaobj-impl</artifactId>
+         <version>${sakai.version}</version>
+         <properties>
+            <war.bundle>true</war.bundle>
+         </properties>
+      </dependency>
+
+      <dependency>
+          <groupId>sakaiproject</groupId>
+          <artifactId>sakai-metaobj-tool-lib</artifactId>
+          <version>${sakai.version}</version>
+          <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-util-i18n</artifactId>
+         <version>${sakai.version}</version>
+         <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+        <groupId>sakaiproject</groupId>
+        <artifactId>sakai-session</artifactId>
+        <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-util-web</artifactId>
+         <version>${sakai.version}</version>
+         <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+        <groupId>aopalliance</groupId>
+        <artifactId>aopalliance</artifactId>
+        <version>1.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>tomcat</groupId>
+        <artifactId>catalina</artifactId>
+        <version>5.5.9</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cglib</groupId>
+        <artifactId>cglib-full</artifactId>
+        <version>2.0.2</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-beanutils</groupId>
+        <artifactId>commons-beanutils</artifactId>
+        <version>1.7.0</version>
+        <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>1.2</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>3.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-dbcp</groupId>
+        <artifactId>commons-dbcp</artifactId>
+        <version>1.2</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-digester</groupId>
+        <artifactId>commons-digester</artifactId>
+        <version>1.6</version>
+        <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.0.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-pool</groupId>
+        <artifactId>commons-pool</artifactId>
+        <version>1.2</version>
+      </dependency>
+
+      <dependency>
+         <groupId>commons-validator</groupId>
+         <artifactId>commons-validator</artifactId>
+         <version>1.3.0</version>
+         <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+        <groupId>ehcache</groupId>
+        <artifactId>ehcache</artifactId>
+        <version>1.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>hibernate</groupId>
+        <artifactId>hibernate</artifactId>
+        <version>2.1.8</version>
+      </dependency>
+
+      <dependency>
+        <groupId>jdom</groupId>
+        <artifactId>jdom</artifactId>
+        <version>1.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>jta</groupId>
+        <artifactId>jta</artifactId>
+        <version>1.0.1b</version>
+      </dependency>
+
+      <dependency>
+        <groupId>portlet-api</groupId>
+        <artifactId>portlet-api</artifactId>
+        <version>1.0.1</version>
+        <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+        <groupId>servletapi</groupId>
+        <artifactId>servletapi</artifactId>
+        <version>2.3</version>
+      </dependency>
+
+      <dependency>
+        <groupId>springframework</groupId>
+        <artifactId>spring</artifactId>
+        <version>${sakai.spring.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>taglibs</groupId>
+        <artifactId>standard</artifactId>
+        <version>1.1.2</version>
+         <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+      <dependency>
+         <groupId>velocity</groupId>
+         <artifactId>velocity</artifactId>
+         <version>1.3.1</version>
+         <properties><war.bundle>true</war.bundle></properties>
+      </dependency>
+
+   </dependencies>
+
+   <build>
+      <!-- java source -->
+      <sourceDirectory>src/java</sourceDirectory>
+      <unitTestSourceDirectory>src/test/java</unitTestSourceDirectory>
+
+      <resources>
+          <resource>
+             <directory>src/bundle</directory>
+             <includes>
+                <include>**/*.properties</include>
+                <include>**/*.xml</include>
+             </includes>
+          </resource>
+          <resource>
+             <directory>src/java</directory>
+             <includes>
+                <include>**/*.hbm.xml</include>
+             </includes>
+          </resource>
+      </resources>
+   </build>
+</project>

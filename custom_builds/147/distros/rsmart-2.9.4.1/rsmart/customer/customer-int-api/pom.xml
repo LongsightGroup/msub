@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>rsmart-customer</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>2.9.3</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <name>rSmart Customer Integration API</name>
+  <artifactId>customer-int-api</artifactId>
+  <packaging>jar</packaging>
+  <properties>
+    <deploy.target>shared</deploy.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-component-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-util</artifactId>
+    </dependency>
+<!--org.sakaiprojectsakai-user-api${sakai.version}-->
+<!--
+      sakai-site-impl is a part of the kernel implementation, dependency removed
+      org.sakaiprojectsakai-site-impl${sakai.version}-->
+<!--org.sakaiprojectsakai-db-api${sakai.version}-->
+<!--org.sakaiprojectsakai-entity-api${sakai.version}-->
+<!--org.sakaiprojectsakai-entity-util${sakai.version}-->
+      <dependency>
+      <groupId>org.sakaiproject.scheduler</groupId>
+      <artifactId>scheduler-api</artifactId>
+    </dependency>
+<!--org.sakaiprojectsakai-component${sakai.version}-->
+<!--org.sakaiprojectsakai-user-api${sakai.version}-->
+<!--org.sakaiprojectsakai-tool-api${sakai.version}-->
+<!--
+      sakai-db-impl is a part of the kernel implementation, dependency removed
+      org.sakaiprojectsakai-db-impl${sakai.version}-->
+<!--org.sakaiprojectsakai-db-storage${sakai.version}-->
+
+    <dependency>
+      <groupId>org.sakaiproject.assignment</groupId>
+      <artifactId>sakai-assignment-api</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+<!--org.sakaiprojectsakai-email-api${sakai.version}-->
+<!--org.sakaiprojectsakai-site-api${sakai.version}-->
+<!--org.sakaiprojectsakai-authz-api${sakai.version}-->
+<!--org.sakaiprojectsakai-util-api${sakai.version}-->
+<!--org.sakaiprojectsakai-component-api${sakai.version}-->
+<!--org.sakaiprojectsakai-content-api${sakai.version}-->
+    <dependency>
+      <groupId>${sakai.spring.groupId}</groupId>
+      <artifactId>${sakai.spring.artifactId}</artifactId>
+      <version>${sakai.spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${sakai.hibernate.groupId}</groupId>
+      <artifactId>hibernate</artifactId>
+      <version>3.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>activation</groupId>
+      <artifactId>activation</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+      <dependency>
+          <groupId>org.opensymphony.quartz</groupId>
+          <artifactId>quartz</artifactId>
+      </dependency>
+      <dependency>
+      <groupId>net.sf.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>1.8</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>${basedir}/src/sql</directory>
+        <includes>
+          <include>**/*.sql</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.xsl</include>
+          <include>**/*.properties</include>
+        </includes>
+        <excludes>
+          <exclude>**/web.xml</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <sourceDirectory>src/java</sourceDirectory>
+  </build>
+</project>

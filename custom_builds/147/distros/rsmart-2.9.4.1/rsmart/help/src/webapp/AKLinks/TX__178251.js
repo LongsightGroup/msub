@@ -1,0 +1,1 @@
+﻿d2hStoreMenuItems("TX__178251", [["WordDocuments/customizingthecalendarsection.htm", "right", "Customizing the Calendar Section"],["WordDocuments/customizingtherecentannouncementssection.htm", "right", "Customizing the Recent Announcements Section"]]);

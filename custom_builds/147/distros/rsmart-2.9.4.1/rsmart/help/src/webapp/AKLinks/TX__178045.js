@@ -1,0 +1,1 @@
+﻿d2hStoreMenuItems("TX__178045", [["WordDocuments/overridinganautocalculatedcoursegrade.htm", "right", "Overriding an Auto-calculated Course Grade"],["WordDocuments/settingungradeditemstozero.htm", "right", "Setting Ungraded Items to Zero"]]);

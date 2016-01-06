@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean id="org.sakaiproject.decryption.hibernate.AdditionalHibernateMappings"
+          class="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl">
+        <property name="mappingResources">
+            <list>
+                <value>com/rsmart/generate/hibernate/GeneratedTokens.hbm.xml</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="com.rsmart.decryption.api.DecryptionUtilityService" class="com.rsmart.decryption.impl.DecryptionUtility"
+          singleton="true"
+          init-method="init">
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService"/>
+        <property name="queryUtilityService" ref="com.rsmart.generate.util.QueryUtilityService"/>
+
+    </bean>
+    <bean id="com.rsmart.decryption.api.GeneratedTokenService" class="com.rsmart.decryption.impl.GenerateTokenImpl"
+          singleton="true" init-method="init">
+
+        <property name="tokenGeneratedService"
+                  ref="com.rsmart.generate.token.hibernate.impl.TokenGeneratedImpl.target"/>
+    </bean>
+
+    <bean id="com.rsmart.generate.token.hibernate.impl.TokenGeneratedImpl.target"
+          class="com.rsmart.generate.tokens.impl.TokenGeneratedImpl"
+          singleton="true" init-method="init" lazy-init="true">
+        <property name="sessionFactory" ref="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/>
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService"/>
+
+    </bean>
+
+    <bean id="com.rsmart.generate.util.QueryUtilityService" class="com.rsmart.generate.util.QueryUtility">
+        <constructor-arg index="0" type="javax.sql.DataSource" ref="javax.sql.DataSource"></constructor-arg>
+    </bean>
+   <bean id="com.rsmart.decryption.DecryptionService"
+          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+          singleton="true" lazy-init="true">
+        <property name="transactionManager">
+            <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
+        </property>
+        <property name="target">
+            <ref bean="com.rsmart.generate.token.hibernate.impl.TokenGeneratedImpl.target"/>
+        </property>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="com.rsmart.decryption.impl.RsmartDecyptionDeleteJob" class="com.rsmart.decryption.impl.RsmartDecyptionDeleteJob">
+            <property name="authzGroupService" ref="org.sakaiproject.authz.api.AuthzGroupService" />
+            <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager" />
+            <property name="tokenGeneratedService" ref="com.rsmart.generate.token.hibernate.impl.TokenGeneratedImpl.target"/>
+           </bean>
+
+    <bean id="com.rsmart.decryption.job"
+		class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
+		init-method="init">
+		<property name="beanId" value="com.rsmart.decryption.impl.RsmartDecyptionDeleteJob"/>
+		<property name="jobName" value="Clean up generated_tokens table for session Decryption Functionality"/>
+		<property name="schedulerManager" ref="org.sakaiproject.api.app.scheduler.SchedulerManager"/>
+	</bean>
+
+</beans>

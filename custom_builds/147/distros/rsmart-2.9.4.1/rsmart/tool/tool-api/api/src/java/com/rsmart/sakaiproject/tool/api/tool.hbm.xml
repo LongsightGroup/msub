@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.rsmart.sakaiproject.tool.api">
+
+   <class name="DbTool" table="rsn_tool" lazy="false" batch-size="1">
+      <id name="id" length="36" type="org.sakaiproject.metaobj.shared.IdType" column="id">
+         <generator class="org.sakaiproject.metaobj.shared.IdentifiableIdGenerator"/>
+      </id>
+
+      <property name="toolId" type="string" column="tool_id" not-null="true" unique="true"/>
+      <property name="title" type="string" column="tool_title" not-null="true" unique="false"/>
+      <property name="description" type="string" column="tool_description" not-null="false" unique="false"/>
+      <property name="home" type="string" column="tool_home" not-null="false" unique="false"/>
+      <property name="accessSecurity" type="string" column="access_security" not-null="false" unique="false"/>
+
+      <set name="categories" table="rsn_tool_categories" lazy="false" cascade="all">
+         <key column="tool_id" />
+         <element column="tool_category" type="string"/>
+      </set>
+
+      <set name="keywords" table="rsn_tool_keywords" lazy="false" cascade="all">
+         <key column="tool_id" />
+         <element column="tool_category" type="string"/>
+      </set>
+
+      <map name="mutableConfig" lazy="false" table="rsn_tool_mutable_config" cascade="all-delete-orphan" >
+         <key column="tool_id"/>
+         <map-key column="prop_key" type="string" />
+         <element column="prop_value" type="string"/>
+      </map>
+      
+      <map name="finalConfig" lazy="false" table="rsn_tool_final_config" cascade="all-delete-orphan" >
+         <key column="tool_id"/>
+         <map-key column="prop_key" type="string" />
+         <element column="prop_value" type="string"/>
+      </map>
+
+   </class>
+   
+</hibernate-mapping>

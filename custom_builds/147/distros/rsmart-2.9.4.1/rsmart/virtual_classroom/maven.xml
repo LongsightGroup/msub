@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--sakai2 -->
+<project
+	default="sakai:build">
+  <modules>
+    <module>api</module>
+    <module>api-impl</module>
+   <module>adapter</module> 
+   <module>tool</module>  
+   <module>component</module>
+  </modules>
+</project>

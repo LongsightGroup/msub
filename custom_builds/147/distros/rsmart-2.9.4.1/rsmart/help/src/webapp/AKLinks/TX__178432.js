@@ -1,0 +1,1 @@
+﻿d2hStoreMenuItems("TX__178432", [["WordDocuments/deletingamessage1.htm", "right", "Deleting a Message"],["WordDocuments/linkingdirectlytoamessage.htm", "right", "Linking Directly to a Message"]]);
