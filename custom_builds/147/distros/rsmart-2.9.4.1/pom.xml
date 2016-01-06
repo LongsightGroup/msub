@@ -109,7 +109,6 @@
                 <module>jstl-shared-deploy</module>
                 <module>access</module>
                 <module>alias</module>
-                <module>ambrosia</module>
                 <module>announcement</module>
                 <module>archive</module>
                 <module>assignment</module>
@@ -117,7 +116,6 @@
                 <module>basiclti</module>
                 <!--module>blog</module-->
 		<module>blogwow</module>
-                <module>bigbluebutton</module>
                 <module>calendar</module>
                 <module>chat</module>
                 <module>citations</module>
@@ -138,7 +136,6 @@
                 <module>entitybroker</module>
                 <module>EntityBrowser</module>
                 <module>etudes-util</module>
-                <module>evaluation</module>
                 <!--module>formbuilder</module-->
                 <!--module>gmt</module-->
 		<module>external-calendaring-service</module>
@@ -147,18 +144,13 @@
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>hybrid</module>
-                <module>iclicker</module>
-                <module>itunesu-tool</module>
-		<module>jforum</module> 
                 <module>jobscheduler</module>
                 <module>jsf</module>
-                <module>kaltura</module>
                 <module>lessonbuilder</module>
                 <module>linktool</module>
                 <module>login</module>
                 <module>mailarchive</module>
                 <module>mailsender</module>
-                <module>melete</module>
                 <module>memory</module>
                 <module>message</module>
                 <module>messageservice</module>
@@ -179,20 +171,15 @@
                 <module>profile</module>
                 <module>profile2</module>
 
-                <module>reference</module>
-
                 <module>rights</module>
                 <module>roster</module>
                 <!--module>roster2</module-->
-                <module>rsmart</module>
                 <module>rwiki</module>
-                <module>sakora</module>
                 <module>sam</module>
 
                 <module>search</module>
                 <module>sections</module>
                 <module>shortenedurl</module>
-                <module>skin-manager</module>
                 <module>signup</module>
                 <module>site</module>
                 <module>site-manage</module>
@@ -208,6 +195,19 @@
                 <module>webservices</module>
                 <module>usermembership</module>
                 <module>sakai-wicket</module>
+                <!--
+                <module>evaluation</module>
+                <module>bigbluebutton</module>
+                <module>ambrosia</module>
+                <module>skin-manager</module>
+                <module>melete</module>
+		<module>jforum</module> 
+                <module>iclicker</module>
+                <module>itunesu-tool</module>
+                <module>reference</module>
+                <module>kaltura</module>
+                <module>rsmart</module>
+                <module>sakora</module>
                 <module>warehouse</module>
                 <module>reports</module>
                 <module>reset-pass</module>
@@ -215,6 +215,7 @@
                 <module>turnitin/contentreview-impl</module>
                 <module>scoring-service</module>
 		<module>irubric</module>
+                -->
             </modules>
         </profile>
         <profile>
