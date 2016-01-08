@@ -12,44 +12,12 @@
   <artifactId>rsn-base</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>grade-exporter</module>
-    <!--module>virtual_classroom</module-->
-    <!-- module>antivirus</module -->
-    <module>brands</module>
-    <module>mvel</module>
     <module>certification</module>
     <module>common</module>
-    <module>component</module>
-    <module>content</module>
-    <module>course_site_publish</module>
-    <module>course_site_removal</module>
     <module>customer</module>
-    <module>emailTemplate</module>
-    <module>gateway</module>
-    <module>google-content</module>
-    <module>integration</module>
-    <module>meleteDocs</module>
-    <module>mssql</module>
-    <module>oauth</module>
-    <module>osp</module>
-    <module>shibboleth_filter</module>
-    <module>preauth_filter</module>
-    <module>support-tool</module>
-    <module>tool</module>
     <module>user</module>
     <module>util</module>
-    <!--module>warehouse</module-->
-    <module>upgrade</module>
-    <!--module>scorm</module-->
-    <!--module>message-bundle-service</module-->
-    <module>providers</module>        
     <module>user-data-service</module>
-    <module>gradebook2-export</module>
-    <module>skinsyncjob</module>
-    <module>smarthinking</module>
-    <module>rsmart-Decryption</module>
-    <module>turningpoint-job</module>
-    <module>entitybroker</module>
   </modules>
     <dependencyManagement>
         <dependencies>
