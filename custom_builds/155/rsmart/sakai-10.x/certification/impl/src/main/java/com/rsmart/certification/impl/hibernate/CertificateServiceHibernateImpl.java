@@ -62,7 +62,6 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.Date;
@@ -821,12 +820,12 @@ public class CertificateServiceHibernateImpl
     public InputStream getTemplateFileInputStream(final String resourceId)
     	throws TemplateReadException
 	{
-	    FileInputStream
+	    InputStream
 	        fis = null;
 	
 	    try
 	    {
-	        fis = (FileInputStream) doSecureCertificateService(new SecureCertificateServiceCallback()
+	        fis = (InputStream) doSecureCertificateService(new SecureCertificateServiceCallback()
 	        {
 	            public Object doSecureAction() throws Exception
 	            {
