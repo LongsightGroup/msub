@@ -78,7 +78,6 @@ userauditservice -r 319565        https://source.sakaiproject.org/svn/msub/rsmar
 usermembership -r 319554          https://source.sakaiproject.org/svn/msub/rsmart.com/usermembership/branches/10.4.x
 warehouse -r 319556               https://source.sakaiproject.org/svn/msub/rsmart.com/warehouse/branches/10.4.x
 web -r 319558                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/10.4.x
-webservices -r 319559             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/10.4.x
 
 # MailArchive requires a custom ANI anti-virus JAR
 mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/10.4.x
@@ -89,6 +88,7 @@ mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmar
 # Use the community branches for bug fixes not in rsmart branches
 content                            https://source.sakaiproject.org/svn/content/branches/sakai-10.x
 velocity                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/velocity/10.4.x
+webservices                        https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 # Longsight mods
 kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/kernel/sakai10.x_custom
@@ -97,3 +97,4 @@ msgcntr                           https://source.sakaiproject.org/svn/msub/longs
 assignment                        https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
+#shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
