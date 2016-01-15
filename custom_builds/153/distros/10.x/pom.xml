@@ -122,6 +122,7 @@
                 <module>rsmart</module>
                 <module>cloud-content</module>
                 <module>clog</module>
+                <module>blogwow</module>
             </modules>
         </profile>
         <profile>
