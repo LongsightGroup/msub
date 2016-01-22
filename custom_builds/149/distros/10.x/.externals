@@ -82,7 +82,7 @@ etudes-util  https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 
 # 46910 issues with null SUBMITTER_ID
-assignment -r 322487 https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
+assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
 
 # rSmart needs metaobj 
 metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
