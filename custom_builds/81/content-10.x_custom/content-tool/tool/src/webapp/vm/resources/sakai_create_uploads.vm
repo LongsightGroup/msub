@@ -151,16 +151,30 @@
 				#end
 			#elseif($model.isUserSite())
 			#else
-				<p class="shorttext">
-					<label for="notify_DnD">
-						$tlang.getString("gen.email1")
-					</label>	
-					<select name="notify_DnD" id="notify_DnD">
-						<option value="r">$tlang.getString("gen.email2")</option>
-						<option value="o">$tlang.getString("gen.email3")</option>
-						<option value="n" selected="selected">$tlang.getString("gen.email4")</option>
-					</select>
-				</p>	
+                <table>
+                    #if($availability_is_enabled)
+                        <tr>
+                            <td><strong>$tlang.getString("avail.title")</strong></td>
+                            <td style="padding-left: 20px;">
+                                $tlang.getString("avail.uploaded") &nbsp; &nbsp;
+                                <input type="radio" name="hidden" id="hidden_false" value="false" #if(!$upload_visibility_hidden)checked="checked" #end/>
+                                <label for="hidden_false">$tlang.getString("avail.show40")</label>
+                                <input type="radio" name="hidden" id="hidden_true" value="true" #if($upload_visibility_hidden)checked="checked" #end/>
+                                <label for="hidden_true">$tlang.getString("avail.hide40")</label>
+                            </td>
+                        </tr>
+                    #end
+                    <tr>
+                        <td><label for="notify_DnD">$tlang.getString("gen.email1")</label></td>
+                        <td style="padding-left: 20px;">
+                            <select name="notify_DnD" id="notify_DnD">
+                                <option value="r">$tlang.getString("gen.email2")</option>
+                                <option value="o">$tlang.getString("gen.email3")</option>
+                                <option value="n" selected="selected">$tlang.getString("gen.email4")</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
 			#end
 		#end
 		<p class="act">
@@ -233,6 +247,7 @@ Dropzone.options.fileUploader = {
 
 	  this.on("sending", function(file, xhr, formData) {
 		formData.append("fullPath",file.fullPath);
+        formData.append("hidden", document.querySelector('input[name="hidden"]:checked').value);
       });
       
       this.on("error", function(file, message, xhr) {
