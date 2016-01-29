@@ -30,9 +30,9 @@ calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
 chat https://source.sakaiproject.org/svn/chat/branches/sakai-10.x
 citations https://source.sakaiproject.org/svn/citations/branches/sakai-10.x
 config https://source.sakaiproject.org/svn/config/branches/sakai-10.x
-content https://source.sakaiproject.org/svn/content/branches/sakai-10.x
+content https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/81/content-10.x_custom
 courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
-dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
+dav https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/81/dav-10.x_custom
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-10.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-10.x
 lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
