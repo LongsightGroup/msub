@@ -33,7 +33,7 @@
         <ref bean="emailArchiveInstructorGuide"/>
         <ref bean="externalToolLTIInstructorGuide"/>
         <ref bean="forumsInstructorGuide"/>
-        <ref bean="gradebookInstructorGuide"/>
+        <ref bean="gradebook2InstructorGuide"/>
         <ref bean="lessonsInstructorGuide"/>
         <ref bean="messagesInstructorGuide"/>
         <ref bean="newsInstructorGuide"/>
@@ -1113,22 +1113,40 @@
       <value>/sakai_screensteps_forumsInstructorGuide/How-do-I-watch-or-subscribe-to-forums-.html</value>
     </property>
   </bean>
-  <bean id="gradebookInstructorGuide" class="org.sakaiproject.component.app.help.model.CategoryBean">
+  <bean id="gradebook2InstructorGuide" class="org.sakaiproject.component.app.help.model.CategoryBean">
     <property name="name">
-      <value>Gradebook</value>
+      <value>Gradebook2</value>
     </property>
     <property name="resources">
       <list>
         <ref bean="whatistheGradebook"/>
-        <ref bean="howdoIsetupmyGradebook"/>
-        <ref bean="howdoIadditemstotheGradebook"/>
-        <ref bean="howdoIenterandoreditgradesintheGradebook"/>
-        <ref bean="howdoIexportgradesfromtheGradebook"/>
-        <ref bean="howdoIimportgradesintotheGradebook"/>
-        <ref bean="howdoIoverrideacoursegrade"/>
-        <ref bean="howdoIsetallungradeditemstozero"/>
-        <ref bean="howdoesextracreditwork"/>
-        <ref bean="howaregradescalculated"/>
+        <ref bean="howdoinavgb2"/>
+        <ref bean="nonweightgb2"/>
+        <ref bean="nonweightcatgb2"/>
+        <ref bean="weightedcatgb2"/>
+        <ref bean="specifytagb2"/>
+        <ref bean="commentsspreadgb2"/>
+        <ref bean="enterbyitemgb2"/>
+        <ref bean="ecgb2"/>
+        <ref bean="eccatgb2"/>
+        <ref bean="ecweightcatgb2"/>
+        <ref bean="droplowestgb2"/>
+        <ref bean="samigogb2"/>
+        <ref bean="asngb2"/>
+        <ref bean="forumsgb2"/>
+        <ref bean="gb2template"/>
+        <ref bean="excelgb2"/>
+        <ref bean="gb2student"/>
+        <ref bean="studentsreleasedgb2"/>
+        <ref bean="exportgb2"/>
+        <ref bean="strikegb2"/>
+        <ref bean="overgb2"/>
+        <ref bean="statsgb2"/>
+        <ref bean="viewgradegb2"/>
+        <ref bean="reordergb2"/>
+        <ref bean="excludegb2"/>
+        <ref bean="editscalegb2"/>
+        <ref bean="gb2history"/>
       </list>
     </property>
   </bean>
@@ -1137,114 +1155,313 @@
       <value>whatistheGradebook</value>
     </property>
     <property name="name">
-      <value>What is the Gradebook?</value>
+      <value>What is the Gradebook2 Tool?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/What-is-the-Gradebook-.html</value>
+      <value>/gb2/What-is-the-Gradebook2-tool-.html</value>
     </property>
     <property name="defaultForTool">
-      <value>sakai.gradebook.tool</value>
+      <value>sakai.gradebook.gwt.rpc</value>
     </property>
   </bean>
-  <bean id="howdoIsetupmyGradebook" class="org.sakaiproject.component.app.help.model.ResourceBean">
+  <bean id="howdoinavgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
     <property name="docId">
-      <value>howdoIsetupmyGradebook</value>
+      <value>howdoinavgb2</value>
     </property>
     <property name="name">
-      <value>How do I set up my Gradebook?</value>
+      <value>How do I navigate the Gradebook2 tool?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/How-do-I-set-up-my-Gradebook-.html</value>
+      <value>/gb2/How-do-I-navigate-the-Gradebook2-tool-.html</value>
     </property>
   </bean>
-  <bean id="howdoIadditemstotheGradebook" class="org.sakaiproject.component.app.help.model.ResourceBean">
+  <bean id="nonweightgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
     <property name="docId">
-      <value>howdoIadditemstotheGradebook</value>
+      <value>nonweightgb2</value>
     </property>
     <property name="name">
-      <value>How do I add items to the Gradebook?</value>
+      <value>How do I create a non-weighted gradebook in the Gradebook2 tool?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/How-do-I-add-items-to-the-Gradebook-.html</value>
+      <value>/gb2/How-do-I-create-a-non-weighted-gradebook-in-the-Gradebook2-tool-.html</value>
     </property>
   </bean>
-  <bean id="howdoIenterandoreditgradesintheGradebook" class="org.sakaiproject.component.app.help.model.ResourceBean">
+  <bean id="nonweightcatgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
     <property name="docId">
-      <value>howdoIenterandoreditgradesintheGradebook</value>
+      <value>nonweightcatgb2</value>
     </property>
     <property name="name">
-      <value>How do I enter and/or edit grades in the Gradebook?</value>
+      <value>How do I create non-weighted categories in Gradebook2?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/How-do-I-enter-and-or-edit-grades-in-the-Gradebook-.html</value>
+      <value>/gb2/How-do-I-create-non-weighted-categories-in-Gradebook2-.html</value>
     </property>
   </bean>
-  <bean id="howdoIexportgradesfromtheGradebook" class="org.sakaiproject.component.app.help.model.ResourceBean">
+  <bean id="weightedcatgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
     <property name="docId">
-      <value>howdoIexportgradesfromtheGradebook</value>
+      <value>weightedcatgb2</value>
     </property>
     <property name="name">
-      <value>How do I export grades from the Gradebook?</value>
+      <value>How do I create weighted categories in Gradebook2?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/How-do-I-export-grades-from-the-Gradebook-.html</value>
+      <value>/gb2/How-do-I-create-weighted-categories-in-Gradebook2-.html</value>
     </property>
   </bean>
-  <bean id="howdoIimportgradesintotheGradebook" class="org.sakaiproject.component.app.help.model.ResourceBean">
+  <bean id="specifytagb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
     <property name="docId">
-      <value>howdoIimportgradesintotheGradebook</value>
+      <value>specifytagb2</value>
     </property>
     <property name="name">
-      <value>How do I import grades into the Gradebook?</value>
+      <value>How do I specify TA grading permissions in the Gradebook2 tool?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/How-do-I-import-grades-into-the-Gradebook-.html</value>
+      <value>/gb2/How-do-I-specify-TA-grading-permissions-in-the-Gradebook2-tool-.html</value>
     </property>
   </bean>
-  <bean id="howdoIoverrideacoursegrade" class="org.sakaiproject.component.app.help.model.ResourceBean">
+  <bean id="commentsspreadgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
     <property name="docId">
-      <value>howdoIoverrideacoursegrade</value>
+      <value>commentsspreadgb2</value>
     </property>
     <property name="name">
-      <value>How do I override a course grade?</value>
+      <value>How do I add grades and comments to the Gradebook2 spreadsheet?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/How-do-I-override-a-course-grade-.html</value>
+      <value>/gb2/How-do-I-add-grades-and-comments-to-the-Gradebook2-spreadsheet-.html</value>
     </property>
   </bean>
-  <bean id="howdoIsetallungradeditemstozero" class="org.sakaiproject.component.app.help.model.ResourceBean">
+  <bean id="enterbyitemgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
     <property name="docId">
-      <value>howdoIsetallungradeditemstozero</value>
+      <value>enterbyitemgb2</value>
     </property>
     <property name="name">
-      <value>How do I set all ungraded items to zero?</value>
+      <value>How do I view and enter grades/comments for an item by group/section in Gradebook2?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/How-do-I-set-all-ungraded-items-to-zero-.html</value>
+      <value>/gb2/How-do-I-view-and-enter-grades-comments-for-an-item-by-group-section-in-Gradebook2-.html</value>
     </property>
   </bean>
-  <bean id="howdoesextracreditwork" class="org.sakaiproject.component.app.help.model.ResourceBean">
+  <bean id="ecgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
     <property name="docId">
-      <value>howdoesextracreditwork</value>
+      <value>ecgb2</value>
     </property>
     <property name="name">
-      <value>How does extra credit work?</value>
+      <value>How do I add extra credit to a non-weighted Gradebook2?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/How-does-extra-credit-work-.html</value>
+      <value>/gb2/How-do-I-add-extra-credit-to-a-non-weighted-Gradebook2-.html</value>
     </property>
   </bean>
-  <bean id="howaregradescalculated" class="org.sakaiproject.component.app.help.model.ResourceBean">
+  <bean id="eccatgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
     <property name="docId">
-      <value>howaregradescalculated</value>
+      <value>eccatgb2</value>
     </property>
     <property name="name">
-      <value>How are grades calculated?</value>
+      <value>How do I add extra credit to non-weighted categories in Gradebook2?</value>
     </property>
     <property name="location">
-      <value>/sakai_screensteps_gradebookInstructorGuide/How-are-grades-calculated-.html</value>
+      <value>/gb2/How-do-I-add-extra-credit-to-non-weighted-categories-in-Gradebook2-.html</value>
     </property>
   </bean>
+  <bean id="ecweightcatgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>ecweightcatgb2</value>
+    </property>
+    <property name="name">
+      <value>How do I add extra credit to weighted categories in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-add-extra-credit-to-weighted-categories-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="droplowestgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>droplowestgb2</value>
+    </property>
+    <property name="name">
+      <value>How do I drop the lowest grade(s) from a category in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-drop-the-lowest-grade-s--from-a-category-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="samigogb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>samigogb2</value>
+    </property>
+    <property name="name">
+      <value>How do I connect the Tests &amp; Quizzes tool to Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-connect-the-Test---Quizzes-tool-to-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="asngb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>asngb2</value>
+    </property>
+    <property name="name">
+      <value>How do I connect the Assignments tool to Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-connect-the-Assignments-tool-to-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="forumsgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>forumsgb2</value>
+    </property>
+    <property name="name">
+      <value>How do I connect the Forums tool to Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-connect-the-Forums-tool-to-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="gb2template" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>gb2template</value>
+    </property>
+    <property name="name">
+      <value>How do I download a Gradebook2 template?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-download-a-Gradebook2-template-.html</value>
+    </property>
+  </bean>
+  <bean id="excelgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>excelgb2</value>
+    </property>
+    <property name="name">
+      <value>How do I Import grades from an Excel (.csv) file into Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-Import-grades-from-an-Excel--.csv--file-into-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="gb2student" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>gb2student</value>
+    </property>
+    <property name="name">
+      <value>How do I view the Gradebook2 as a student?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-view-the-Gradebook2-as-a-student-.html</value>
+    </property>
+  </bean>
+  <bean id="studentsreleasedgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>studentsreleasedgb2</value>
+    </property>
+    <property name="name">
+      <value>Why are students not seeing released grades in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/Why-are-students-not-seeing-released-grades-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="exportgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>exportgb2</value>
+    </property>
+    <property name="name">
+      <value>How do I export the Gradebook2 grades?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-export-the-Gradebook2-grades-.html</value>
+    </property>
+  </bean>
+  <bean id="strikegb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>strikegb2</value>
+    </property>
+    <property name="name">
+      <value>Why are some item scores displayed in red with a strikethrough in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/Why-are-some-item-scores-displayed-in-red-with-a-strikethrough-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="overgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>overgb2</value>
+    </property>
+    <property name="name">
+      <value>How do I override the course grade in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-override-the-course-grade-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="statsgb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>statsgb2</value>
+    </property>
+    <property name="name">
+      <value>How do I view grade statistics in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-view-grade-statistics-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="viewgradegb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>viewgradegb2</value>
+    </property>
+    <property name="name">
+      <value>How do I view/grade/comment by student in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-view-grade-comment-by-student-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="reordergb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>reordergb2</value>
+    </property>
+    <property name="name">
+      <value>How do I reorder items or categories in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-reorder-items-or-categories-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="excludegb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>excludegb2</value>
+    </property>
+    <property name="name">
+      <value>How do I exclude an individual student from a graded item in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-exclude-an-individual-student-from-a-graded-item-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="editscalegb2" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>editscalegb2</value>
+    </property>
+    <property name="name">
+      <value>How do I edit the Letter Grade Scale in Gradebook2?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-edit-the-Letter-Grade-Scale-in-Gradebook2-.html</value>
+    </property>
+  </bean>
+  <bean id="gb2history" class="org.sakaiproject.component.app.help.model.ResourceBean">
+    <property name="docId">
+      <value>gb2history</value>
+    </property>
+    <property name="name">
+      <value>How do I view the Gradebook2 history?</value>
+    </property>
+    <property name="location">
+      <value>/gb2/How-do-I-view-the-Gradebook2-history-.html</value>
+    </property>
+  </bean>
+
   <bean id="lessonsInstructorGuide" class="org.sakaiproject.component.app.help.model.CategoryBean">
     <property name="name">
       <value>Lessons</value>
