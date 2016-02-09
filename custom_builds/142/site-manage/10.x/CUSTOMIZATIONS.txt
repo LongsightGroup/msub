@@ -3,3 +3,4 @@ ND-33: Import from Site modifications
  * SAK-28993: https://jira.sakaiproject.org/secure/attachment/42217/SAK-28993.patch
  * SAK-29159: https://github.com/sakaiproject/sakai/pull/294
 SAK-22432 Template descriptions are not copied
+SAK-29873 ND-83 pre-req for SAK-29952

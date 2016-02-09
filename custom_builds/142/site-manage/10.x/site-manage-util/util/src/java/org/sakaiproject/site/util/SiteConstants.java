@@ -48,4 +48,8 @@ public class SiteConstants {
 	public final static String SITE_TYPE_MYWORKSPACE = "site_type_myworkspace";
 	
 	public final static String SITE_TYPE_ALL = "site_type_all";
+
+	public final static String SITE_ACTIVE = "pubView";
+
+	public final static String SITE_INACTIVE = "inactive";
 }

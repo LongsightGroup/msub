@@ -1458,6 +1458,11 @@ public class SiteAction extends PagedResourceActionII {
 			if (state.getAttribute(STATE_VIEW_SELECTED) == null) {
 				state.setAttribute(STATE_VIEW_SELECTED, SiteConstants.SITE_TYPE_ALL);
 			}
+
+			if (ServerConfigurationService.getBoolean("sitesetup.show.unpublished", false) && !SecurityService.isSuperUser()) {
+				views.put(SiteConstants.SITE_ACTIVE, rb.getString("java.myActive"));
+				views.put(SiteConstants.SITE_INACTIVE, rb.getString("java.myInactive"));
+			}
 			
 			// sort the keys in the views lookup
 			List<String> viewKeys = Collections.list(views.keys());
@@ -2813,7 +2818,7 @@ public class SiteAction extends PagedResourceActionII {
 			boolean addMissingTools = isAddMissingToolsOnImportEnabled();
 			
 			//helper var to hold the list we use for the selectedTools context variable, as we use it for the alternate toolnames too
-			List<String> selectedTools = new ArrayList<>();
+			List<String> selectedTools = new ArrayList<String>();
 			
 			if(addMissingTools) {
 				selectedTools = allImportableToolIdsInOriginalSites;
@@ -2830,7 +2835,7 @@ public class SiteAction extends PagedResourceActionII {
 			Map<String,Set<String>> toolNames = this.getToolNames(selectedTools, importSites);
 			
 			//filter this list so its just the alternate ones and turn it into a string for the UI
-			Map<String,String> alternateToolTitles = new HashMap<>();
+			Map<String,String> alternateToolTitles = new HashMap<String, String>();
 			for(MyTool myTool : allTools) {
 				String toolId = myTool.getId();
 				String toolTitle = myTool.getTitle();
@@ -2950,7 +2955,7 @@ public class SiteAction extends PagedResourceActionII {
 			boolean addMissingTools = isAddMissingToolsOnImportEnabled();
 			
 			//helper var to hold the list we use for the selectedTools context variable, as we use it for the alternate toolnames too
-			List<String> selectedTools = new ArrayList<>();
+			List<String> selectedTools = new ArrayList<String>();
 			
 			if(addMissingTools) {
 				
@@ -4559,6 +4564,14 @@ public class SiteAction extends PagedResourceActionII {
 
 				String view = (String) state.getAttribute(STATE_VIEW_SELECTED);
 				if (view != null) {
+
+					org.sakaiproject.site.api.SiteService.SelectionType selectionType;
+					if (ServerConfigurationService.getBoolean("sitesetup.show.unpublished", false)) {
+						selectionType = org.sakaiproject.site.api.SiteService.SelectionType.MEMBER;
+					} else {
+						selectionType = org.sakaiproject.site.api.SiteService.SelectionType.ACCESS;
+					}
+
 					if (view.equals(SiteConstants.SITE_TYPE_ALL)) {
 						view = null;
 						// add my workspace if any
@@ -4573,7 +4586,7 @@ public class SiteAction extends PagedResourceActionII {
 						}
 						size += SiteService
 								.countSites(
-										org.sakaiproject.site.api.SiteService.SelectionType.ACCESS,
+										selectionType,
 										null, search, termProp);
 					} else if (view.equals(SiteConstants.SITE_TYPE_MYWORKSPACE)) {
 						// get the current user MyWorkspace site
@@ -4583,11 +4596,20 @@ public class SiteAction extends PagedResourceActionII {
 							size++;
 						} catch (IdUnusedException e) {
 						}
+					} else if (view.equals(SiteConstants.SITE_ACTIVE)) {
+						view = null;
+						size += SiteService.countSites(
+							org.sakaiproject.site.api.SiteService.SelectionType.PUBVIEW,
+								view, search, termProp);
+					} else if (view.equals(SiteConstants.SITE_INACTIVE)) {
+						view = null;
+						size += SiteService.countSites(
+										org.sakaiproject.site.api.SiteService.SelectionType.INACTIVE_ONLY,
+										null, search, termProp);
 					} else {
 						// search for specific type of sites
-						size += SiteService
-								.countSites(
-										org.sakaiproject.site.api.SiteService.SelectionType.ACCESS,
+						size += SiteService.countSites(
+										selectionType,
 										view, search, termProp);
 					}
 				}
@@ -4689,6 +4711,15 @@ public class SiteAction extends PagedResourceActionII {
 				}
 				String view = (String) state.getAttribute(STATE_VIEW_SELECTED);
 				if (view != null) {
+
+					org.sakaiproject.site.api.SiteService.SelectionType selectionType;
+
+					if (ServerConfigurationService.getBoolean("sitesetup.show.unpublished", false)) {
+						selectionType = org.sakaiproject.site.api.SiteService.SelectionType.MEMBER;
+					} else {
+						selectionType = org.sakaiproject.site.api.SiteService.SelectionType.ACCESS;
+					}
+
 					if (view.equals(SiteConstants.SITE_TYPE_ALL)) {
 						view = null;
 						// add my workspace if any
@@ -4704,7 +4735,7 @@ public class SiteAction extends PagedResourceActionII {
 						rv
 								.addAll(SiteService
 										.getSites(
-												org.sakaiproject.site.api.SiteService.SelectionType.ACCESS,
+												selectionType,
 												null, search, termProp, sortType,
 												new PagingPosition(first, last)));
 					}
@@ -4714,12 +4745,20 @@ public class SiteAction extends PagedResourceActionII {
 							rv.add(SiteService.getSite(SiteService.getUserSiteId(userId)));
 						} catch (IdUnusedException e) {
 						}
+					} else if (view.equals(SiteConstants.SITE_ACTIVE)) {
+						rv.addAll(SiteService.getSites(org.sakaiproject.site.api.SiteService.SelectionType.PUBVIEW,
+								null, search, termProp, sortType,
+								new PagingPosition(first, last)));
+					} else if (view.equals(SiteConstants.SITE_INACTIVE)) {
+						rv.addAll(SiteService.getSites(org.sakaiproject.site.api.SiteService.SelectionType.INACTIVE_ONLY,
+								null, search, termProp, sortType,
+								new PagingPosition(first, last)));
 					} else {
 						rv.addAll(SiteService
-										.getSites(
-												org.sakaiproject.site.api.SiteService.SelectionType.ACCESS,
-												view, search, termProp, sortType,
-												new PagingPosition(first, last)));
+								.getSites(
+										selectionType,
+										view, search, termProp, sortType,
+										new PagingPosition(first, last)));
 					}
 				}
 

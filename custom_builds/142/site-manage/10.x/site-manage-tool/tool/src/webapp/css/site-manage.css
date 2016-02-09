@@ -823,3 +823,7 @@ background: linear-gradient(to bottom, #884e2c 0%,#6b3d21 100%);
     top:5px;
     right:5px;
 }
+/* SAK-29873 */
+.unpublishedLabel {
+    opacity:0.2;
+}
