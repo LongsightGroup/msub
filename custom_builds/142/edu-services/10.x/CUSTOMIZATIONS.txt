@@ -1,2 +1,4 @@
 ND-75 apply irubric patch
  * https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/patches/sakai-10.2/edu-services.diff
+ND-83 unpublish courses xx dates after term ends
+ * SAK-29952 https://github.com/sakaiproject/sakai/pull/1165

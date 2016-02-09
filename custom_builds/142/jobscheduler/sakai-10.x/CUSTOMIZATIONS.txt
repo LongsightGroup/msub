@@ -1,0 +1,3 @@
+ND-83 auto-unpublish courses
+ * SAK-29952 https://github.com/sakaiproject/sakai/pull/1165/files 
+   * plus sam manual modification to address this open issue: https://jira.sakaiproject.org/browse/SAK-30309
