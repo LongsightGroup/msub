@@ -5,10 +5,12 @@
 
   <bean id="org.sakaiproject.content.api.FileSystemHandler.swift" class="coza.opencollab.sakai.cloudcontent.SwiftFileSystemHandler"
         init-method="init" destroy-method="destroy" lazy-init="true">
+		<property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
   </bean>
 
   <bean id="org.sakaiproject.content.api.FileSystemHandler.blobstore" class="coza.opencollab.sakai.cloudcontent.BlobStoreFileSystemHandler"
         init-method="init" destroy-method="destroy" lazy-init="true">
+		<property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
   </bean>
 
 </beans>
