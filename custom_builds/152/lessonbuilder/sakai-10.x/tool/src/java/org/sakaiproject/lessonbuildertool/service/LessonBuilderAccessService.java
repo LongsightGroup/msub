@@ -32,8 +32,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.StringTokenizer;
 import java.util.Vector;
+import java.util.TimeZone;
+import java.text.SimpleDateFormat;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
@@ -109,6 +112,10 @@ public class LessonBuilderAccessService {
 	public static final String ATTR_SESSION = "sakai.session";
    
 	public static final String COPYRIGHT_ACCEPTED_REFS_ATTR = "Access.Copyright.Accepted";
+
+	// This is the date format for Last-Modified header
+	public static final String RFC1123_DATE = "EEE, dd MMM yyyy HH:mm:ss zzz";
+	public static final Locale LOCALE_US = Locale.US;
 
 	LessonBuilderAccessAPI lessonBuilderAccessAPI = null;
 
@@ -679,9 +686,72 @@ public class LessonBuilderAccessService {
 
 							// from contenthosting
 
+							res.addHeader("Cache-Control", "must-revalidate, private");
+							res.addHeader("Expires", "-1");
+							ResourceProperties rp = resource.getProperties();
+							long lastModTime = 0;
+
+							try {
+							    Time modTime = rp.getTimeProperty(ResourceProperties.PROP_MODIFIED_DATE);
+							    lastModTime = modTime.getTime();
+							} catch (Exception e1) {
+							    M_log.info("Could not retrieve modified time for: " + resource.getId());
+							}
+							
+							// KNL-1316 tell the browser when our file was last modified for caching reasons
+							if (lastModTime > 0) {
+							    SimpleDateFormat rfc1123Date = new SimpleDateFormat(RFC1123_DATE, LOCALE_US);
+							    rfc1123Date.setTimeZone(TimeZone.getTimeZone("GMT"));
+							    res.addHeader("Last-Modified", rfc1123Date.format(lastModTime));
+							}
+
+							// KNL-1316 let's see if the user already has a cached copy. Code copied and modified from Tomcat DefaultServlet.java
+							long headerValue = req.getDateHeader("If-Modified-Since");
+							if (headerValue != -1 && (lastModTime < headerValue + 1000)) {
+							    // The entity has not been modified since the date specified by the client. This is not an error case.
+							    res.setStatus(HttpServletResponse.SC_NOT_MODIFIED);
+							    return; 
+							}
+
+				// If there is a direct link to the asset, no sense streaming it.
+				// Send the asset directly to the load-balancer or to the client
+				URI directLinkUri = contentHostingService.getTheDirectLink(resource);
+
 		        ArrayList<Range> ranges = parseRange(req, res, len);
 
-		        if (req.getHeader("Range") == null || (ranges == null) || (ranges.isEmpty())) {
+		        if (directLinkUri != null || req.getHeader("Range") == null || (ranges == null) || (ranges.isEmpty())) {
+						res.addHeader("Accept-Ranges", "none");
+						res.setContentType(contentType);
+						res.addHeader("Content-Disposition", disposition);
+						
+						// http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4187336
+ 						if (len <= Integer.MAX_VALUE){
+ 							res.setContentLength((int)len);
+ 						} else {
+ 							res.addHeader("Content-Length", Long.toString(len));
+ 						}
+
+
+					// Bypass loading the asset and just send the user a link to it.
+					if (directLinkUri != null) {
+						if (ServerConfigurationService.getBoolean("cloud.content.sendfile", false)) {
+							int hostLength = new String(directLinkUri.getScheme() + "://" + directLinkUri.getHost()).length();
+							String linkPath = "/sendfile" + directLinkUri.toString().substring(hostLength);
+							if (M_log.isDebugEnabled()) {
+								M_log.debug("X-Sendfile: " + linkPath);
+							}
+
+							// Nginx uses X-Accel-Redirect and Apache and others use X-Sendfile
+							res.addHeader("X-Accel-Redirect", linkPath);
+							res.addHeader("X-Sendfile", linkPath);
+							return;
+						}
+						else if (ServerConfigurationService.getBoolean("cloud.content.directurl", true)) {
+							String directUri = directLinkUri.toString();
+							res.sendRedirect(directUri);
+							return;
+						}
+					}
 		        	
 					// stream the content using a small buffer to keep memory managed
 					InputStream content = null;
@@ -695,16 +765,6 @@ public class LessonBuilderAccessService {
 							throw new IdUnusedException(ref.getReference());
 						}
 	
-						res.setContentType(contentType);
-						res.addHeader("Content-Disposition", disposition);
-						res.addHeader("Accept-Ranges", "bytes");
-						// http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4187336
- 						if (len <= Integer.MAX_VALUE){
- 							res.setContentLength((int)len);
- 						} else {
- 							res.addHeader("Content-Length", Long.toString(len));
- 						}
-
 						// set the buffer of the response to match what we are reading from the request
 						if (len < STREAM_BUFFER_SIZE)
 						{
