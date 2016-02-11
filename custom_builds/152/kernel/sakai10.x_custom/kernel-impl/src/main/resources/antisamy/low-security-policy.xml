@@ -98,6 +98,7 @@
     <regexp name="positiveLength" value="((\+)?0|(\+)?([0-9]+(\.[0-9]+)?)(em|ex|px|in|cm|mm|pt|pc))" />
     <regexp name="percentage" value="(-|\+)?([0-9]+(\.[0-9]+)?)%" />
     <regexp name="positivePercentage" value="(\+)?([0-9]+(\.[0-9]+)?)%" />
+    <regexp name="ISO8601DateTime" value="([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?" />
 
     <regexp name="absolute-size" value="(xx-small|x-small|small|medium|large|x-large|xx-large)" />
     <regexp name="relative-size" value="(larger|smaller)" />
@@ -1365,12 +1366,9 @@
             </attribute>
             <attribute name="name"/>
             <attribute name="target" onInvalid="filterTag">
-                <literal-list>
-                    <literal value="_blank"/>
-                    <literal value="_top"/>
-                    <literal value="_self"/>
-                    <literal value="_parent"/>
-                </literal-list>
+                <regexp-list>
+                    <regexp name="basicAlphaNumeric"/>
+                </regexp-list>
             </attribute>
         </tag>
 
@@ -1395,21 +1393,12 @@
             </attribute>
             <attribute name="media"/>
         </tag>
-        
+
         <tag name="span" action="validate">
+            <!-- https://jira.sakaiproject.org/browse/KNL-1065 -->
             <attribute name="rel">
-                <regexp-list>                                    
-                    <regexp name="anything"/>                                
-                </regexp-list>
-            </attribute>
-            <attribute name="data-mathml">
-                <regexp-list>                                    
-                    <regexp name="anything"/>                                
-                </regexp-list>
-            </attribute>
-            <attribute name="data">
-                <regexp-list>                                    
-                    <regexp name="anything"/>                                
+                <regexp-list>
+                    <regexp name="anything"/>
                 </regexp-list>
             </attribute>
         </tag>
@@ -1417,6 +1406,7 @@
         <tag name="div" action="validate">
             <attribute name="align"/>
         </tag>
+
 
         <!-- HTML5 audio video source tags -->
         <tag name="video" action="validate">
@@ -1570,7 +1560,14 @@
             <attribute name="vspace">
                 <regexp-list>
                     <regexp name="number"/>
-                </regexp-list>          
+                </regexp-list>
+            </attribute>
+
+            <!-- https://jira.sakaiproject.org/browse/KNL-1061 -->
+            <attribute name="data-mathml">
+              <regexp-list>
+                <regexp name="anything" />
+              </regexp-list>
             </attribute>
         </tag>
 
@@ -1913,7 +1910,33 @@
                 </regexp-list>
             </attribute>
         </tag>
-        
+
+        <!-- https://jira.sakaiproject.org/browse/KNL-1065 -->
+        <tag name="ins" action="validate">
+            <attribute name="cite">
+                <regexp-list>
+                    <regexp name="anything" />
+                </regexp-list>
+            </attribute>
+            <attribute name="datetime">
+                <regexp-list>
+                    <regexp name="ISO8601DateTime" />
+                </regexp-list>
+            </attribute>
+        </tag>
+        <tag name="del" action="validate">
+            <attribute name="cite">
+                <regexp-list>
+                    <regexp name="anything" />
+                </regexp-list>
+            </attribute>
+            <attribute name="datetime">
+                <regexp-list>
+                    <regexp name="ISO8601DateTime" />
+                </regexp-list>
+            </attribute>
+        </tag>
+
         <!-- https://jira.sakaiproject.org/browse/KNL-1071 -->
         <tag name="address" action="validate"/>
         <!-- Indicates an abbreviated form (e.g., WWW, HTTP, URI, Mass., etc.). -->
