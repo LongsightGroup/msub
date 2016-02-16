@@ -22,3 +22,6 @@ Updated 11/17/2014 svn merge "^/sam/branches/sakai-10.x"
 Updated 11/24/2014 svn merge "^/sam/branches/sakai-10.x"
 
 (Branch update - Updated 60 branch to FB on 12/15/2014)
+
+SAM-2242
+  * SAM-2259 question pool columns and indexes
