@@ -26,4 +26,5 @@ Updated 11/24/2014 svn merge "^/sam/branches/sakai-10.x"
 SAM-2242: question pool performance (02/16/2015)
   * SAM-2350 add/edit part mods just to make merging easier
     * svn merge -c 315813  ^/sam/branches/sakai-10.x
+  * SAM-2463 fetch pool sizes r318812
   * SAM-2259 question pool columns and indexes
