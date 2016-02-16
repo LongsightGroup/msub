@@ -29,3 +29,4 @@ SAM-2242: question pool performance (02/16/2015)
   * SAM-2463 fetch pool sizes r318812
   * SAM-2491 r321167 batch fetch on answer feedback
   * SAM-2259 question pool columns and indexes
+  * SAM-2514 fix re shared pools r318813
