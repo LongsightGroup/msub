@@ -85,10 +85,7 @@ scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/providers/sakai-10.x_jldap-auth-caching_custom
 kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20150320/
 lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/lessonbuilder/lessonbuilder-10.x_custom
-
-#GIT Projects
-#git_project bigbluebutton-sakai/bbb-tool
-
+bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
 
 #shell_command sed -i 's/<version>10<\/version>/<version>10-SNAPSHOT<\/version>/g' scorm/pom.xml
 #shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
@@ -99,12 +96,3 @@ lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/custom_buil
 #shell_command sed -i 's/Media Gallery/Loyola Media/g' kaltura/src/main/webapp/tools/sakai.kaltura.xml
 #shell_command find itunesu-tool/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
 #shell_command find adobeconnect/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
-#Big Blue Button (Make sure to cd back):
-#shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
-#shell_command cd bigbluebutton-sakai/bbb-tool
-#shell_command mvn versions:update-parent
-#shell_command cat pom.xml | sed "s/<entitybroker\.version>.*<\/entitybroker\.version>/<entitybroker\.version>1.5.4-SNAPSHOT<\/entitybroker\.version>/g" > pom2.xml
-#shell_command mv pom2.xml pom.xml
-#shell_command cat pom.xml | sed "s/<entitybroker-utils\.version>.*<\/entitybroker-utils\.version>/<entitybroker-utils\.version>1.5.4-SNAPSHOT<\/entitybroker-utils\.version>/g" > pom2.xml
-#shell_command mv pom2.xml pom.xml
-#shell_command cd ../..
