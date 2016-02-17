@@ -117,9 +117,11 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>content-review/contentreview-impl</module>
+                <!--
                 <module>kaltura</module>
                 <module>wicket-for-scorm</module>
                 <module>scorm</module>
+                -->
             </modules>
         </profile>
         <profile>
