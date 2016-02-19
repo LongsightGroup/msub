@@ -98,6 +98,7 @@ gcalendar https://source.sakaiproject.org/contrib/umich/google/gcalendar/trunk
 
 #POM CHANGES
 #shell_command cd samigo;patch -p0 < ../ND-SAMIGO.patch;cd ../
+#shell_command find gcalendar/ -name \*.java -exec sed -i 's/@Override/ /g' {} \;
 #shell_command find gcalendar/ -name pom.xml -exec sed -i 's/9-SNAPSHOT/10-SNAPSHOT/g' {} \;
 #shell_command find gcalendar/ -name pom.xml -exec sed -i 's/2.9.2/10-SNAPSHOT/g' {} \;
 #shell_command find gcalendar/ -name pom.xml -exec sed -i 's/sakai.shortenedurl.version/sakai.version/g' {} \;
