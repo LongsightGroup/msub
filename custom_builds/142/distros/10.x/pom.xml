@@ -124,6 +124,8 @@
                 <module>irubric-tool</module>
                 <module>gradebook2</module>
                 <module>gradebook-export</module>
+                <module>google-auth-impl</module>
+                <module>gcalendar</module>
             </modules>
         </profile>
         <profile>

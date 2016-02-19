@@ -92,8 +92,16 @@ irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irub
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-tool
 gradebook2 https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x/
 
+# Google calendar
+google-auth-impl https://source.sakaiproject.org/contrib/umich/google/google-auth-impl/trunk
+gcalendar https://source.sakaiproject.org/contrib/umich/google/gcalendar/trunk
+
 #POM CHANGES
 #shell_command cd samigo;patch -p0 < ../ND-SAMIGO.patch;cd ../
+#shell_command find gcalendar/ -name pom.xml -exec sed -i 's/9-SNAPSHOT/10-SNAPSHOT/g' {} \;
+#shell_command find gcalendar/ -name pom.xml -exec sed -i 's/2.9.2/10-SNAPSHOT/g' {} \;
+#shell_command find gcalendar/ -name pom.xml -exec sed -i 's/sakai.shortenedurl.version/sakai.version/g' {} \;
+#shell_command find google-auth-impl/ -name pom.xml -exec sed -i 's/10.0-SNAPSHOT/10-SNAPSHOT/g' {} \;
 #shell_command find msgcntr/ -name pom.xml -exec sed -i 's/11-SNAPSHOT/10-SNAPSHOT/g' {} \;
 #shell_command cd kernel/;patch -p2 < ../294.patch;cd ../
 #
