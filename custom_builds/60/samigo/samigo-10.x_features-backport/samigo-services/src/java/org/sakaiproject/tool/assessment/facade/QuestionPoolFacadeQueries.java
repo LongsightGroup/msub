@@ -631,7 +631,7 @@ public class QuestionPoolFacadeQueries
           // pool that item is attached to
           ArrayList metaList = new ArrayList();
           for (int j=0; j<list.size(); j++){
-            String itemId = ((QuestionPoolItemData)list.get(j)).getItemId();
+            Long itemId = ((QuestionPoolItemData)list.get(j)).getItemId();
             String query = "from ItemMetaData as meta where meta.item.itemId=? and meta.label=?";
             Object [] values = {Long.valueOf(itemId), ItemMetaDataIfc.POOLID};
     	    List m = getHibernateTemplate().find(query, values);
@@ -796,7 +796,7 @@ public class QuestionPoolFacadeQueries
    * @param itemId DOCUMENTATION PENDING
    * @param poolId DOCUMENTATION PENDING
    */
-  public void removeItemFromPool(String itemId, Long poolId) {
+  public void removeItemFromPool(Long itemId, Long poolId) {
     QuestionPoolItemData qpi = new QuestionPoolItemData(poolId, itemId);
     int retryCount = PersistenceService.getInstance().getPersistenceHelper().getRetryCount().intValue();
     while (retryCount > 0){
@@ -817,7 +817,7 @@ public class QuestionPoolFacadeQueries
    * @param itemId DOCUMENTATION PENDING
    * @param poolId DOCUMENTATION PENDING
    */
-  public void moveItemToPool(String itemId, Long sourceId, Long destId) {
+  public void moveItemToPool(Long itemId, Long sourceId, Long destId) {
     QuestionPoolItemData qpi = new QuestionPoolItemData(sourceId, itemId);
     int retryCount = PersistenceService.getInstance().getPersistenceHelper().getRetryCount().intValue();
     while (retryCount > 0){
@@ -1236,7 +1236,7 @@ public class QuestionPoolFacadeQueries
     Iterator iter = itemDataArray.iterator();
     while (iter.hasNext()){
       ItemDataIfc itemData = (ItemDataIfc) iter.next();
-      set.add(new QuestionPoolItemData(questionPoolId, itemData.getItemIdString(), (ItemData) itemData));
+      set.add(new QuestionPoolItemData(questionPoolId, itemData.getItemId(), (ItemData) itemData));
     }
     return set;
   }

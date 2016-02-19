@@ -1243,7 +1243,7 @@ public String getAddOrEdit()
 					// just to skip that item. One could argue for a warning
 					// message.
 					if (!hasItemInDestPool(sourceItemId, destId)) {
-						delegate.moveItemToPool(sourceItemId,
+						delegate.moveItemToPool(new Long(sourceItemId),
 								new Long(sourceId), new Long(destId));
 					}
 				}
@@ -1342,9 +1342,8 @@ public String getAddOrEdit()
 						// just to skip that item. One could argue for a warning
 						// message.
 						if (!hasItemInDestPool(sourceItemId, destId)) {
-							String copyItemFacadeId = questionPoolService
-									.copyItemFacade(sourceItem.getData())
-									.toString();
+							Long copyItemFacadeId = questionPoolService
+									.copyItemFacade(sourceItem.getData());
 							delegate.addItemToPool(copyItemFacadeId, new Long(
 									destId));
 						}
@@ -1385,7 +1384,7 @@ public String getAddOrEdit()
 					Iterator iter2 = itemSet.iterator();
 					while (iter2.hasNext()) {
 			            ItemDataIfc sourceItem = (ItemDataIfc)iter2.next();
-			            String sourceItemId = delegate.copyItemFacade(sourceItem).toString();
+			            Long sourceItemId = delegate.copyItemFacade(sourceItem);
 		                delegate.addItemToPool(sourceItemId, new Long(destId));
 					}
 				} catch (Exception e) {
@@ -1408,7 +1407,7 @@ public String getAddOrEdit()
      {
 
        ItemFacade itemfacade = (ItemFacade) iter.next();
-       String itemid = itemfacade.getItemIdString();
+       Long itemid = itemfacade.getItemId();
        QuestionPoolService delegate = new QuestionPoolService();
        delegate.removeQuestionFromPool(itemid, new Long(sourceId));
 
