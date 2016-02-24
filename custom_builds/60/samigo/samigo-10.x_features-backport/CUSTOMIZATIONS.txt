@@ -31,3 +31,4 @@ SAM-2242: question pool performance (02/16/2015)
   * SAM-2259 question pool columns and indexes
   * SAM-2514 fix re shared pools r318813
   * SAM-2496 Cannot add questions to question pools
+  * SAM-2459 Samigo is checking the retract date even though the late submissions are not accepted
