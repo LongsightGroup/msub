@@ -199,6 +199,10 @@ public class CleCourseMemberProcesssor extends ServiceProcessor {
                             logger.error("Skipping record: " + clem.getUserName() + ", " +"Site '" + courseNum + "' does not have a role named '" + clem.getRole() + "'");
                             continue;
                         }
+
+                        // Longsight customization #47358 if user cant be fetched from LDAP do not drop the user
+                        usermap.put(clem.getUserName().toLowerCase(), Boolean.TRUE);
+
                         try {
                             user = uds.getUserByEid(clem.getUserName());
                         } catch (UserNotDefinedException e) {
@@ -216,7 +220,6 @@ public class CleCourseMemberProcesssor extends ServiceProcessor {
                         if (user != null) {
                             xrl.setFirstLastEidEmailSiteRole(user.getFirstName(), user.getLastName(),
                                     user.getEid(),user.getEmail(),courseNum,clem.getRole());
-                            usermap.put(user.getId(), Boolean.TRUE);
                             state.incrementRecordCnt();
 
                             // Find membership
@@ -261,7 +264,7 @@ public class CleCourseMemberProcesssor extends ServiceProcessor {
 					while (iter.hasNext()) {
 						member = (Member) iter.next();
 
-						if (usermap.get(member.getUserId()) == null
+						if (usermap.get(member.getUserEid().toLowerCase()) == null
 								&& isRemoveRole(member.getRole().getId())) {
 							site.removeMember(member.getUserId());
 							state.incrementDeleteCnt();
