@@ -88,3 +88,4 @@ rsmart                           https://source.sakaiproject.org/svn/msub/rsmart
 #
 #shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
+#shell_command sed -i 's/ sessionId="meleteEditor" / /g' melete/melete-app/src/webapp/melete/addmodulesections.jsp
