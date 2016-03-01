@@ -116,12 +116,14 @@
                 <module>usermembership</module>
                 <module>velocity</module>
                 <module>web</module>
-                <module>webservices</module>
-                <module>blogwow</module>
                 <module>gradebook2</module>
+                <module>blogwow</module>
                 <module>gradebook-export</module>
                 <module>google-auth-impl</module>
                 <module>gcalendar</module>
+                <!--
+                <module>webservices</module>
+                -->
             </modules>
         </profile>
         <profile>
