@@ -126,6 +126,7 @@
                 <module>gradebook-export</module>
                 <module>google-auth-impl</module>
                 <module>gcalendar</module>
+                <module>SakaiXAPI-Provider</module>
             </modules>
         </profile>
         <profile>

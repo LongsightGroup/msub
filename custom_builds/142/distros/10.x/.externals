@@ -92,6 +92,9 @@ irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irub
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-tool
 gradebook2 https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x/
 
+# XAPI
+SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/trunk
+
 # Google calendar
 google-auth-impl https://source.sakaiproject.org/contrib/umich/google/google-auth-impl/trunk
 gcalendar https://source.sakaiproject.org/contrib/umich/google/gcalendar/trunk
