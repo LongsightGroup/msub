@@ -76,6 +76,7 @@ cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/custom_buil
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 etudes-util  https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
 
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 gradebook2 -r 87658              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/10.4.x

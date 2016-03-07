@@ -126,6 +126,7 @@
                 <module>rsmart/user-data-service</module>
                 <module>rsmart/customer</module>
                 <module>cloud-content</module>
+                <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
         </profile>
         <profile>
