@@ -22,6 +22,7 @@
 package org.sakaiproject.util.impl;
 
 import junit.framework.TestCase;
+import junit.framework.Assert;
 import org.sakaiproject.component.api.ServerConfigurationService;
 import org.sakaiproject.component.cover.ComponentManager;
 import org.sakaiproject.component.impl.BasicConfigurationService;
@@ -51,6 +52,7 @@ public class FormattedTextTest extends TestCase {
 	private static final int [] MAX_LENGTHS = new int[]{25,50,15,8,25,50,125};
 	private static final String [] CUT_SEPARATORS = new String[]{" ...","...","{..}"," ...","...","{..}","......"};
 	
+    private static final boolean BLANK_DEFAULT = true;
     public static String TEST1 = "<a href=\"blah.html\" style=\"font-weight:bold;\">blah</a><div>hello there</div>";
     public static String TEST2 = "<span>this is my span</span><script>alert('oh noes, a XSS attack!');</script><div>hello there from a div</div>";
     FormattedTextImpl formattedText;
@@ -90,6 +92,8 @@ public class FormattedTextTest extends TestCase {
         formattedText = new FormattedTextImpl();
         formattedText.setServerConfigurationService(serverConfigurationService);
         formattedText.setSessionManager(sessionManager);
+        formattedText.setDefaultAddBlankTargetToLinks(BLANK_DEFAULT);
+
         formattedText.init();
     }
 
@@ -740,6 +744,27 @@ public class FormattedTextTest extends TestCase {
         assertTrue( result.contains("src=\"//www.youtube.com/v/JNSK0647wJI"));
     }
 
+    public void testKNL_1407() {
+        // https://jira.sakaiproject.org/browse/KNL-1407
+        String strFromBrowser = null;
+        String result = null;
+        StringBuilder errorMessages = null;
+        strFromBrowser = "<video width=\"320\" height=\"240\"> <source type=\"video/mp4\" src=\"http://localhost:8080/access/content/group/3c1af5f8-10f0-4e12-99b6-43a2427c5fc6/Test1/test1.mp4\" ><track src=\"http://localhost:8080/access/content/group/3c1af5f8-10f0-4e12-99b6-43a2427c5fc6/Test1/captions_file.vtt\" label=\"English\" kind=\"captions\" srclang=\"en-us\" default > </video>";
+
+        errorMessages = new StringBuilder();
+        result = formattedText.processFormattedText(strFromBrowser, errorMessages);
+        Assert.assertNotNull(result);
+        Assert.assertFalse(errorMessages.toString(), errorMessages.length() > 0);
+        Assert.assertTrue( result.contains("<video"));
+        Assert.assertTrue( result.contains("<track"));
+        Assert.assertTrue( result.contains("src=\"http://localhost:8080/access/content/group/3c1af5f8-10f0-4e12-99b6-43a2427c5fc6/Test1/test1.mp4"));
+        Assert.assertTrue( result.contains("src=\"http://localhost:8080/access/content/group/3c1af5f8-10f0-4e12-99b6-43a2427c5fc6/Test1/captions_file.vtt"));
+        Assert.assertTrue( result.contains("kind=\"captions"));
+        Assert.assertTrue( result.contains("srclang=\"en-us"));
+        Assert.assertTrue( result.contains("label=\"English"));
+        Assert.assertTrue( result.contains("default"));
+    }
+
     public void testValidateURL() {
         // https://jira.sakaiproject.org/browse/KNL-1100
         boolean result = false;
@@ -844,6 +869,32 @@ public class FormattedTextTest extends TestCase {
     public void testALongUrlFromNyTimes() {
         assertEquals("<a href=\"http://www.nytimes.com/mem/MWredirect.html?MW=http://custom.marketwatch.com/custom/nyt-com/html-companyprofile.asp&symb=LLNW\">http://www.nytimes.com/mem/MWredirect.html?MW=http://custom.marketwatch.com/custom/nyt-com/html-companyprofile.asp&amp;symb=LLNW</a>",
                 formattedText.encodeUrlsAsHtml(formattedText.escapeHtml("http://www.nytimes.com/mem/MWredirect.html?MW=http://custom.marketwatch.com/custom/nyt-com/html-companyprofile.asp&symb=LLNW")));
+    }
+
+    public void testHrefWithSpace() {
+      StringBuilder errorMessages = new StringBuilder();
+      formattedText.setDefaultAddBlankTargetToLinks(false);
+
+      assertEquals("<a href=\"http://localhost:8080/access/content/public/Home Page.htm\">Test Search Space</a>",
+          formattedText.processFormattedText("<a href=\"http://localhost:8080/access/content/public/Home Page.htm\">Test Search Space</a>", errorMessages));
+      
+      assertEquals("<a href=\"https://www.example.com/access/content/public/Home Page.htm\">Test Search Space</a>",
+          formattedText.processFormattedText("<a href=\"https://www.example.com/access/content/public/Home Page.htm\">Test Search Space</a>", errorMessages));
+
+      formattedText.setDefaultAddBlankTargetToLinks(BLANK_DEFAULT);
+    }
+
+    public void testHrefWithPlus() {
+      StringBuilder errorMessages = new StringBuilder();
+      formattedText.setDefaultAddBlankTargetToLinks(false);
+      
+      assertEquals("<a href=\"http://localhost:8080/access/content/public/Home+Page.htm\">Test Search Plus</a>",
+          formattedText.processFormattedText("<a href=\"http://localhost:8080/access/content/public/Home+Page.htm\">Test Search Plus</a>", errorMessages));
+
+      assertEquals("<a href=\"https://www.example.com/access/content/public/Home+Page.htm\">Test Search Plus</a>",
+          formattedText.processFormattedText("<a href=\"https://www.example.com/access/content/public/Home+Page.htm\">Test Search Plus</a>", errorMessages));
+
+      formattedText.setDefaultAddBlankTargetToLinks(BLANK_DEFAULT);
     }
 
     public void testKNL_1253() {
