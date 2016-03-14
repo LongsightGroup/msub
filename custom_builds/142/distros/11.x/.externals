@@ -83,7 +83,7 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
 
 #customizations:
-blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/trunk
+blogwow https://github.com/sakaicontrib/blogwow/trunk
 config https://github.com/LongsightGroup/sakai/branches/142-11.x/config
 #kaltura https://github.com/sakaiproject/sakai/branches/11.x/msub/unicon.net/kaltura/tags/20150320/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
@@ -100,12 +100,13 @@ google-auth-impl https://source.sakaiproject.org/contrib/umich/google/google-aut
 gcalendar https://source.sakaiproject.org/contrib/umich/google/gcalendar/trunk
 
 #POM CHANGES
-#shell_command find gcalendar/ -name \*.java -exec sed -i 's/@Override/ /g' {} \;
+#shell_command find gcalendar/ -name \*.java -exec sed -i 's/@Override/d' {} \;
 #shell_command find gcalendar/ -name pom.xml -exec sed -i 's/9-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find gcalendar/ -name pom.xml -exec sed -i 's/2.9.2/11-SNAPSHOT/g' {} \;
 #shell_command find gcalendar/ -name pom.xml -exec sed -i 's/sakai.shortenedurl.version/sakai.version/g' {} \;
+#shell_command find gcalendar/ -name pom.xml -exec sed -i 's/org.sakaiproject.authz.cover.AuthzGroupService/d' {} \;
 #shell_command find google-auth-impl/ -name pom.xml -exec sed -i 's/10.0-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find gradebook2/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
-#shell_command find blogwow/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
