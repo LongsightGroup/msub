@@ -101,10 +101,10 @@ gcalendar https://source.sakaiproject.org/contrib/umich/google/gcalendar/trunk
 
 #POM CHANGES
 #shell_command find gcalendar/ -name \*.java -exec sed -i '/@Override/d' {} \;
+#shell_command find gcalendar/ -name \*.java -exec sed -i '/org.sakaiproject.authz.cover.AuthzGroupService/d' {} \;
 #shell_command find gcalendar/ -name pom.xml -exec sed -i 's/9-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find gcalendar/ -name pom.xml -exec sed -i 's/2.9.2/11-SNAPSHOT/g' {} \;
 #shell_command find gcalendar/ -name pom.xml -exec sed -i 's/sakai.shortenedurl.version/sakai.version/g' {} \;
-#shell_command find gcalendar/ -name pom.xml -exec sed -i '/org.sakaiproject.authz.cover.AuthzGroupService/d' {} \;
 #shell_command find google-auth-impl/ -name pom.xml -exec sed -i 's/10.0-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
