@@ -96,8 +96,8 @@ gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branch
 gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 
 # Google calendar
-google-auth-impl https://source.sakaiproject.org/contrib/umich/google/google-auth-impl/trunk
-gcalendar https://source.sakaiproject.org/contrib/umich/google/gcalendar/trunk
+google-auth-impl https://github.com/sakaicontrib/google-auth-impl/trunk
+gcalendar https://github.com/sakaicontrib/gcalendar/trunk
 
 #POM CHANGES
 #shell_command find gcalendar/ -name \*.java -exec sed -i '/@Override/d' {} \;
