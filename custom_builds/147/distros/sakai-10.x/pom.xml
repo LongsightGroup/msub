@@ -127,6 +127,7 @@
                 <module>rsmart/customer</module>
                 <module>cloud-content</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
+                <module>jforum</module>
             </modules>
         </profile>
         <profile>
