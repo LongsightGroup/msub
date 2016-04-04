@@ -126,6 +126,7 @@
                 <module>bigbluebutton-sakai/bbb-tool</module>
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
+                <module>kaltura</module>
             </modules>
         </profile>
         <profile>
