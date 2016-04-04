@@ -122,6 +122,7 @@
                 <module>gcalendar</module>
                 <module>gradebook2</module>
                 <module>webservices</module>
+                <module>kaltura</module>
             </modules>
         </profile>
         <profile>
