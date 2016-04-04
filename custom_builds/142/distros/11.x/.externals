@@ -93,7 +93,7 @@ gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branch
 # iRubric customizations ND-75
 #irubric-core https://github.com/contrib/irubric/trunk/sakai-10/irubric-core
 #irubric-tool https://github.com/contrib/irubric/trunk/sakai-10/irubric-tool
-gradebook2 https://github.com/ottenhoff/gradebook2/branches/GRBK-1450
+#gradebook2 https://github.com/ottenhoff/gradebook2/branches/GRBK-1450
 
 # Google calendar
 google-auth-impl https://github.com/sakaicontrib/google-auth-impl/trunk
