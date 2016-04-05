@@ -1,78 +1,10 @@
-# Core Sakai capabilities
-access https://github.com/edtell/founders/trunk/access
-alias https://github.com/edtell/founders/trunk/alias
-archive https://github.com/edtell/founders/trunk/archive
-authz https://github.com/edtell/founders/trunk/authz
-chat https://github.com/edtell/founders/trunk/chat
-citations https://github.com/edtell/founders/trunk/citations
-config https://github.com/edtell/founders/trunk/config
-content https://github.com/edtell/founders/trunk/content
-dav https://github.com/edtell/founders/trunk/dav
-gradebook https://github.com/edtell/founders/trunk/gradebook
-help https://github.com/edtell/founders/trunk/help
-linktool https://github.com/edtell/founders/trunk/linktool
-login https://github.com/edtell/founders/trunk/login
-master https://github.com/edtell/founders/trunk/master
-memory https://github.com/edtell/founders/trunk/memory
-metaobj https://github.com/edtell/founders/trunk/metaobj
-osp https://github.com/edtell/founders/trunk/osp
-pack https://github.com/edtell/founders/trunk/pack
-podcasts https://github.com/edtell/founders/trunk/podcasts
-postem https://github.com/edtell/founders/trunk/postem
-providers https://github.com/edtell/founders/trunk/providers
-reference https://github.com/edtell/founders/trunk/reference
-rights https://github.com/edtell/founders/trunk/rights
-roster https://github.com/edtell/founders/trunk/roster
-rwiki https://github.com/edtell/founders/trunk/rwiki
-sections https://github.com/edtell/founders/trunk/sections
-site-manage https://github.com/edtell/founders/trunk/site-manage
-syllabus https://github.com/edtell/founders/trunk/syllabus
-textarea https://github.com/edtell/founders/trunk/textarea
-tool https://github.com/edtell/founders/trunk/tool
-user https://github.com/edtell/founders/trunk/user
-usermembership https://github.com/edtell/founders/trunk/usermembership
-warehouse https://github.com/edtell/founders/trunk/warehouse
-web https://github.com/edtell/founders/trunk/web
 
-# Indie services
-kernel https://github.com/edtell/founders/trunk/kernel
-common https://github.com/edtell/founders/trunk/common
-content-review https://github.com/edtell/founders/trunk/content-review
-edu-services https://github.com/edtell/founders/trunk/edu-services
-emailtemplateservice https://github.com/edtell/founders/trunk/emailtemplateservice
-entitybroker https://github.com/edtell/founders/trunk/entitybroker
-jsf https://github.com/edtell/founders/trunk/jsf
-sakai-mock https://github.com/edtell/founders/trunk/sakai-mock
-webservices https://github.com/edtell/founders/trunk/webservices
+#shell_command git clone https://github.com/edtell/founders.git
 
-# Indie tools
-basiclti https://github.com/edtell/founders/trunk/basiclti
-jobscheduler https://github.com/edtell/founders/trunk/jobscheduler
-lessonbuilder https://github.com/edtell/founders/trunk/lessonbuilder
-mailsender https://github.com/edtell/founders/trunk/mailsender
-msgcntr https://github.com/edtell/founders/trunk/msgcntr
-polls https://github.com/edtell/founders/trunk/polls
-profile https://github.com/edtell/founders/trunk/profile
-profile2 https://github.com/edtell/founders/trunk/profile2
-reset-pass https://github.com/edtell/founders/trunk/reset-pass
-samigo https://github.com/edtell/founders/trunk/samigo
-search https://github.com/edtell/founders/trunk/search
-shortenedurl https://github.com/edtell/founders/trunk/shortenedurl
-sitestats https://github.com/edtell/founders/trunk/sitestats
-
-announcement https://github.com/edtell/founders/trunk/announcement
-assignment https://github.com/edtell/founders/trunk/assignment
-calendar https://github.com/edtell/founders/trunk/calendar
-courier https://github.com/edtell/founders/trunk/courier
-mailarchive https://github.com/edtell/founders/trunk/mailarchive
-message https://github.com/edtell/founders/trunk/message
-portal https://github.com/edtell/founders/trunk/portal
-presence https://github.com/edtell/founders/trunk/presence
-site https://github.com/edtell/founders/trunk/site
-taggable https://github.com/edtell/founders/trunk/taggable
-velocity https://github.com/edtell/founders/trunk/velocity
-
-# Edtell custom
-student-report https://github.com/edtell/founders/trunk/student-report
-rsmart https://github.com/edtell/founders/trunk/rsmart
-gradebook2 https://github.com/edtell/founders/trunk/gradebook2
+#GIT Projects
+#git_project kernel
+#git_project samigo
+#git_project rsmart
+#git_project gradebook2
+#git_project assignment
+#git_project assignment2
