@@ -88,7 +88,7 @@ blogwow https://github.com/sakaicontrib/blogwow/trunk
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
-#da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk
+da_evalprovider https://github.com/LongsightGroup/da_evalprovider/trunk
 #content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 #login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-10.x_googleplus_and_saml
