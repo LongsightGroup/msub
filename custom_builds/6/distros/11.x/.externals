@@ -92,12 +92,9 @@ evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 #content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 #login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-10.x_googleplus_and_saml
-#user https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6/user/user-10.x_custom
+user https://github.com/LongsightGroup/sakai/branches/6-11.x/user
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 #iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.5
-
-#Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
 #POM Changes
 #shell_command sed -i 's/2.9.2/10-SNAPSHOT/g' iclicker/pom.xml
