@@ -1,5 +1,5 @@
 
-#shell_command git clone https://github.com/edtell/founders.git
+#shell_command git clone git@github.com:edtell/founders.git
 
 #GIT Projects
 #git_project kernel
