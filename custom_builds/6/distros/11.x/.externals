@@ -98,7 +98,6 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 #POM Changes
 #shell_command sed -i 's/2.9.2/10-SNAPSHOT/g' iclicker/pom.xml
-#shell_command sed -i 's/1.4-SNAPSHOT/10-SNAPSHOT/g' da_evalprovider/pom.xml
 #shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
 #shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
