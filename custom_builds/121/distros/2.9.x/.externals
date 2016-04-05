@@ -1,7 +1,5 @@
 
-#shell_command git init
-#shell_command git remote add origin git@github.com:edtell/founders.git
-#shell_command git pull origin master
+#shell_command git init && git remote add origin git@github.com:edtell/founders.git && git pull origin master
 
 #GIT Projects
 #git_project kernel
