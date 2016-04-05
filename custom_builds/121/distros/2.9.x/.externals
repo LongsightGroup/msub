@@ -55,7 +55,7 @@ polls https://github.com/edtell/founders/trunk/polls
 profile https://github.com/edtell/founders/trunk/profile
 profile2 https://github.com/edtell/founders/trunk/profile2
 reset-pass https://github.com/edtell/founders/trunk/reset-pass
-samigo https://github.com/edtell/founders/trunk/sam
+samigo https://github.com/edtell/founders/trunk/samigo
 search https://github.com/edtell/founders/trunk/search
 shortenedurl https://github.com/edtell/founders/trunk/shortenedurl
 sitestats https://github.com/edtell/founders/trunk/sitestats
@@ -74,3 +74,5 @@ velocity https://github.com/edtell/founders/trunk/velocity
 
 # Edtell custom
 student-report https://github.com/edtell/founders/trunk/student-report
+rsmart https://github.com/edtell/founders/trunk/rsmart
+gradebook2 https://github.com/edtell/founders/trunk/gradebook2
