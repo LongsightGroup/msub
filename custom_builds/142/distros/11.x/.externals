@@ -91,8 +91,8 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/sakai-11.x
 
 # iRubric customizations ND-75
-#irubric-core https://github.com/contrib/irubric/trunk/sakai-10/irubric-core
-#irubric-tool https://github.com/contrib/irubric/trunk/sakai-10/irubric-tool
+irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-core/
+irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-tool/
 #gradebook2 https://github.com/ottenhoff/gradebook2/branches/GRBK-1450
 
 # Google calendar
