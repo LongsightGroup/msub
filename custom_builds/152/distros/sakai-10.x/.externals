@@ -36,7 +36,7 @@ jsf -r 319513                     https://source.sakaiproject.org/svn/msub/rsmar
 kaltura -r 319514                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/10.4.x
 login -r 319517                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/10.4.x
 mailsender -r 319519              https://source.sakaiproject.org/svn//msub/rsmart.com/mailsender/branches/10.4.x
-master                            https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.4.x
+master                            https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.6.x
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 memory -r 319521                  https://source.sakaiproject.org/svn/msub/rsmart.com/memory/branches/10.4.x
 message -r 319522                 https://source.sakaiproject.org/svn/msub/rsmart.com/message/branches/10.4.x
@@ -99,3 +99,4 @@ assignment                        https://source.sakaiproject.org/svn/msub/longs
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find profile2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
+#shell_command find master/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
