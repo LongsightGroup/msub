@@ -38,8 +38,8 @@ jforum -r 87148                  https://source.sakaiproject.org/contrib/rsmart/
 jobscheduler -r 314545            https://source.sakaiproject.org/svn/msub/rsmart.com/jobscheduler/branches/2.9.x
 jsf -r 314546                     https://source.sakaiproject.org/svn/msub/rsmart.com/jsf/branches/2.9.x
 kaltura -r 314547                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/2.9.x
-kernel -r 316141                  https://source.sakaiproject.org/svn/msub/rsmart.com/kernel/branches/2.9.x
-lessonbuilder -r 314549           https://source.sakaiproject.org/svn/msub/rsmart.com/lessonbuilder/branches/2.9.x
+#kernel -r 316141                  https://source.sakaiproject.org/svn/msub/rsmart.com/kernel/branches/2.9.x
+#lessonbuilder -r 314549           https://source.sakaiproject.org/svn/msub/rsmart.com/lessonbuilder/branches/2.9.x
 linktool -r 314550                https://source.sakaiproject.org/svn/msub/rsmart.com/linktool/branches/2.9.x
 login -r 314551                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/2.9.x
 mailarchive -r 314552             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/2.9.x
@@ -92,9 +92,21 @@ was -r 314590                     https://source.sakaiproject.org/svn/msub/rsmar
 web -r 314591                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/2.9.x
 webservices -r 314592             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.x
 
-# Build tools
+# rSmart tools
 kernel-deploy		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/kernel-deploy
 jstl-shared-deploy	https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/jstl-shared-deploy
 rsmart			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/rsmart
 scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/scoring-service
 irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/irubric
+
+# Shell Commands
+#shell_command find jforum/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
+#shell_command find kernel/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
+#shell_command find master/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
+#shell_command find providers/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
+#shell_command find rsmart/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
+
+# Customizations
+kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/163/kernel
+cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/163/cloud-content
+lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/163/lessonbuilder

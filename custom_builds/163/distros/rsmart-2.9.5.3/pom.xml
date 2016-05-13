@@ -102,9 +102,9 @@
                 </file>
             </activation>
             <modules>
+                <module>master</module>
                 <module>kernel</module>
                 <module>kernel-deploy</module>
-                <module>master</module>
                 <!--module>core-deploy</module-->
                 <module>jstl-shared-deploy</module>
                 <module>access</module>
@@ -121,6 +121,7 @@
                 <module>chat</module>
                 <module>citations</module>
                 <module>clog</module>
+                <module>cloud-content</module>
                 <module>common</module>
                 <module>config</module>
                 <module>config-viewer</module>
@@ -136,7 +137,7 @@
                 <module>emailtemplateservice</module>
                 <module>entitybroker</module>
                 <module>EntityBrowser</module>
-                <module>etudes-util</module>
+                <!--module>etudes-util</module-->
                 <module>evaluation</module>
                 <!--module>formbuilder</module-->
                 <!--module>gmt</module-->
@@ -157,7 +158,7 @@
                 <module>login</module>
                 <module>mailarchive</module>
                 <module>mailsender</module>
-                <module>melete</module>
+                <!--module>melete</module-->
                 <module>memory</module>
                 <module>message</module>
                 <module>messageservice</module>
