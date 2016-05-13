@@ -31,9 +31,9 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.SocketException;
 import java.net.URI;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -42,6 +42,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
@@ -222,6 +223,9 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 
 	private boolean m_useSmartSort = true;
 
+	// This is the date format for Last-Modified header
+	public static final String RFC1123_DATE = "EEE, dd MMM yyyy HH:mm:ss zzz";
+
 	static
 	{
 		ROOT_COLLECTIONS.add(COLLECTION_SITE);
@@ -235,6 +239,7 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 
 	/** Optional path to external file system file store for body binary. */
 	protected String m_bodyPath = null;
+	protected String m_bodyPathDeleted = null;
 
 	/** Optional set of folders just within the m_bodyPath to distribute files among. */
 	protected String[] m_bodyVolumes = null;
@@ -532,6 +537,17 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 	public void setBodyPath(String value)
 	{
 		m_bodyPath = value;
+	}
+
+	/**
+	 * Configuration: set the external file system path for body storage for deleted files. 
+	 * 
+	 * @param value
+	 *        The complete path to the root of the external file system storage area for resource body bytes of deleted resources.
+	 */
+	public void setBodyPathDeleted(String value)
+	{
+		m_bodyPathDeleted = value;
 	}
 
 	/**
@@ -841,7 +857,6 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 
 			// set the action
 			dbNoti.setAction(new DropboxNotification());
-
 
 			StringBuilder buf = new StringBuilder();
 			if (m_bodyVolumes != null)
@@ -2007,7 +2022,7 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		}
 
 	} // addProperties
-
+	
 	/**********************************************************************************************************************************************************************************************************************************************************
 	 * Collections
 	 *********************************************************************************************************************************************************************************************************************************************************/
@@ -2396,6 +2411,31 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		}
 
 	} // getAllEntities
+
+	/**
+	 * Access a List of all the deleted ContentResource objects in this path (and below) which the current user has access.
+	 * 
+	 * @param id
+	 *        A collection id.
+	 * @return a List of the ContentResource objects.
+	 * @throws PermissionException 
+	 * @throws TypeException 
+	 * @throws IdUnusedException 
+	 */
+	public List getAllDeletedResources(String id)
+	{
+		try {
+			ContentCollection collection = getCollection(id);
+			return m_storage.getDeletedResources(collection);
+		} catch (IdUnusedException iue) {
+			M_log.warn("getAllDeletedResources: cannot retrieve collection for : " + id);
+		} catch (TypeException te) {
+			M_log.warn("getAllDeletedResources: resource with id: " + id + " not a collection");
+		} catch (PermissionException pe) {
+			M_log.warn("getAllDeletedResources: access to resource with id: " + id + " failed : " + pe);
+		}
+		return new ArrayList(0);
+	} // getAllDeletedResources
 
 
 	/**
@@ -3099,14 +3139,14 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		}
 	}
 
-	protected void cacheEntities(List<ContentEntity> entities)
+	protected void cacheEntities(List<? extends ContentEntity> entities)
 	{
 		if(entities == null)
 		{
 			return;
 		}
 
-		for(ContentEntity entity : (List<ContentEntity>) entities)
+		for(ContentEntity entity : entities)
 		{
 			if(entity == null)
 			{
@@ -4186,6 +4226,38 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 	 *            if the resource is locked by someone else.
 	 * @return the ContentResource object found.
 	 */
+	public ContentResourceEdit editDeletedResource(String id) throws PermissionException, IdUnusedException, TypeException, InUseException
+	{
+	  // check security 
+//      if ( ! allowUpdateResource(id) )
+//		   throw new PermissionException(SessionManager.getCurrentSessionUserId(), 
+//                                       AUTH_RESOURCE_WRITE_ANY, getReference(id));
+
+		// ignore the cache - get the collection with a lock from the info store
+		BaseResourceEdit resource = (BaseResourceEdit) m_storage.editDeletedResource(id);
+		if (resource == null) throw new InUseException(id);
+
+		resource.setEvent(EVENT_RESOURCE_WRITE);
+
+		return resource;
+
+	} // editResource
+
+	/**
+	 * Access the resource with this resource id, locked for update. For non-collection resources only. Must commitEdit() to make official, or cancelEdit() when done! The resource content and properties are accessible from the returned Resource object.
+	 * 
+	 * @param id
+	 *        The id of the resource.
+	 * @exception PermissionException
+	 *            if the user does not have permissions to read the resource or read through any containing collection.
+	 * @exception IdUnusedException
+	 *            if the resource id is not found.
+	 * @exception TypeException
+	 *            if the resource is a collection.
+	 * @exception InUseException
+	 *            if the resource is locked by someone else.
+	 * @return the ContentResource object found.
+	 */
 	protected ContentResourceEdit editResourceForDelete(String id) throws PermissionException, IdUnusedException, TypeException, InUseException
 	{
 		// check security (throws if not permitted)
@@ -4404,10 +4476,23 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 	 * @exception InUseException
 	 *            if the resource is locked by someone else.
 	 */
-	public void removeResource(String id) throws PermissionException, IdUnusedException, TypeException, InUseException
+	public void removeResource(String id) throws PermissionException, IdUnusedException, 
+		TypeException, InUseException
+	
 	{
 		BaseResourceEdit edit = (BaseResourceEdit) editResourceForDelete(id);
-		removeResource(edit);
+		try
+		{
+			removeResource(edit);
+		}
+		finally
+		{
+			// If the edit wasn't committed unlock the resource.
+			if (edit.isActiveEdit())
+			{
+				cancelResource(edit);
+			}
+		}
 
 	} // removeResource
 
@@ -4455,9 +4540,15 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 
 		// htripath -store the metadata information into a delete table
 		// assumed uuid is not null as checkExplicitLock(id) throws exception when null
-		String uuid = this.getUuid(id);
-		String userId = sessionManager.getCurrentSessionUserId().trim();
-		addResourceToDeleteTable(edit, uuid, userId);
+
+		try {
+			String uuid = this.getUuid(id);
+			String userId = sessionManager.getCurrentSessionUserId().trim();
+			addResourceToDeleteTable(edit, uuid, userId);
+			edit.setContentLength(0);  // we stop removing it entry from the DB 
+		} catch (ServerOverloadException soe) {
+			M_log.debug("removeResource: could not save deleted resource, restore for this resource is not possible " + soe );  
+		}
 
 		// complete the edit
 		m_storage.removeResource(edit, removeContent);
@@ -4497,7 +4588,145 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 
 	} // removeResource
 
+	public void removeDeletedResource(String id) throws PermissionException, IdUnusedException, TypeException, InUseException
+	{
+		BaseResourceEdit edit = (BaseResourceEdit) editDeletedResource(id); 
+		removeDeletedResource(edit);
+	
+	} // removeResource
+	
+	/**
+	 * Remove a resource from the deleted table.
+	 * 
+	 * @param edit
+	 *        The ContentResourceEdit object to remove.
+	 * @exception PermissionException
+	 *            if the user does not have permissions to read a containing collection, or to remove this resource.
+	 */
+	public void removeDeletedResource(ContentResourceEdit edit) throws PermissionException
+	{
+		// check for closed edit
+		if (!edit.isActiveEdit())
+		{
+			Exception e = new Exception();
+			M_log.warn("removeDeletedResource(): closed ContentResourceEdit", e);
+			return;
+		}
 
+		// check security (throws if not permitted)
+//		if ( ! allowRemoveResource(edit.getId()) )
+//		   throw new PermissionException(SessionManager.getCurrentSessionUserId(), 
+//                                       AUTH_RESOURCE_REMOVE_ANY, edit.getReference());
+//
+
+		// complete the edit
+		m_storage.removeDeletedResource(edit);
+
+		// close the edit object
+		((BaseResourceEdit) edit).closeEdit();
+		
+		((BaseResourceEdit) edit).setRemoved();
+
+		// remove old version of this edit from thread-local cache
+		threadLocalManager.set("findResource@" + edit.getId(), null);
+
+		// remove any realm defined for this resource
+		try
+		{
+			m_authzGroupService.removeAuthzGroup(m_authzGroupService.getAuthzGroup(edit.getReference()));
+		}
+		catch (AuthzPermissionException e)
+		{
+			M_log.debug("removeResource: removing realm for : " + edit.getReference() + " : " + e);
+		}
+		catch (GroupNotDefinedException ignore)
+		{
+			M_log.debug("removeResource: removing realm for : " + edit.getReference() + " : " + ignore);
+		}
+
+	} // removeDeletedResource
+
+	public void restoreResource(String id) throws PermissionException, IdUsedException, IdUnusedException,
+		IdInvalidException,	InconsistentException, OverQuotaException, ServerOverloadException, 
+		TypeException, InUseException
+	{
+		ContentResourceEdit deleResource;
+		try {
+			deleResource = editDeletedResource(id);
+		} catch (IdUnusedException iue) {
+			M_log.error("restoreResource: cannot locate deleted resource " + id, iue);
+			throw iue;
+		} catch (TypeException te) {
+			M_log.error("restoreResource: invalid type " + id, te);
+			throw te;
+		} catch (InUseException ie) {
+			M_log.error("restoreResource: resource in use " + id, ie);
+			throw ie;
+		} catch (PermissionException pe) {
+			M_log.error("restoreResource: access to resource not permitted" + id, pe);
+			throw pe;			
+		}
+		ContentResourceEdit newResource;
+		try {
+			newResource = addResource(id);
+		} catch (IdUsedException iue) {
+			M_log.error("restoreResource: cannot restore resource " + id, iue);
+			throw iue;
+		}
+		newResource.setContentType(deleResource.getContentType());
+		newResource.setContentLength(deleResource.getContentLength());
+		newResource.setResourceType(deleResource.getResourceType());
+		newResource.setAvailability(deleResource.isHidden(), deleResource.getReleaseDate(),deleResource.getRetractDate());
+		newResource.setContent(m_storage.streamDeletedResourceBody(deleResource));
+		try {
+			addProperties(newResource.getPropertiesEdit(), deleResource.getProperties());
+			commitResource(newResource);
+			
+		} catch (ServerOverloadException e) {
+			M_log.debug("ServerOverloadException " + e);
+			try
+			{
+				removeResource(newResource.getId());
+			}
+			catch(Exception e1)
+			{
+				// ignore -- no need to remove the resource if it doesn't exist
+				M_log.debug("Unable to remove partially completed resource: " + newResource.getId() + "\n" + e1); 
+			}
+			throw e;
+		} catch (OverQuotaException e) {
+			M_log.debug("OverQuotaException " + e);
+			try
+			{
+				removeResource(newResource.getId());
+			}
+			catch(Exception e1)
+			{
+				// ignore -- no need to remove the resource if it doesn't exist
+				M_log.debug("Unable to remove partially completed resource: " + newResource.getId() + "\n" + e1); 
+			}
+			throw e;
+		} 
+		try {
+			// If you're storing the file in DB this breaks as it removes the restored file.
+			removeDeletedResource(deleResource);
+			// close the edit object
+			((BaseResourceEdit) deleResource).closeEdit();
+		} catch (PermissionException pe) {
+			M_log.error("restoreResource: access to resource not permitted" + id, pe);
+			try
+			{
+				removeResource(newResource.getId());
+			}
+			catch(Exception e1)
+			{
+				// ignore -- no need to remove the resource if it doesn't exist
+				M_log.debug("Unable to remove partially completed resource: " + deleResource.getId() + "\n" + e1); 
+			}
+			throw pe;			
+		} 
+	}
+	
 	/**
 	 * Store the resource in a separate delete table
 	 * 
@@ -4508,22 +4737,46 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 	 * @exception ServerOverloadException
 	 *            if server is configured to save resource body in filesystem and attempt to read from filesystem fails.
 	 */
-	public void addResourceToDeleteTable(ContentResourceEdit edit, String uuid, String userId) throws PermissionException
+	public void addResourceToDeleteTable(ContentResourceEdit edit, String uuid, String userId) throws PermissionException, ServerOverloadException
 	{
+		if (m_bodyPathDeleted == null) {
+			return;
+		}
 		String id = edit.getId();
 		String content_type = edit.getContentType();
 
+		String resource_type = edit.getResourceType();
 
 		// KNL-245 do not read the resource body, as this is not subsequently written out
 		
 		ResourceProperties properties = edit.getProperties();
 
-		addDeleteResource(id, content_type, null, properties, uuid, userId,
+		InputStream content = null;
+		try
+		{
+			content = edit.streamContent();
+			addDeleteResource(id, 
+				content_type, content, resource_type, edit.getReleaseDate(), edit.getRetractDate(), 
+				properties, uuid, userId,
 				NotificationService.NOTI_OPTIONAL);
+		}
+		finally
+		{
+			if (content != null)
+			{
+				try
+				{
+					content.close();
+				}
+				catch (IOException e)
+				{
+					M_log.warn("Failed to close when saving deleted content stream.", e);
+				}
+			}
+		}
 	}
 
-	public ContentResource addDeleteResource(String id, String type, byte[] content, ResourceProperties properties, String uuid,
-			String userId, int priority) throws PermissionException
+	public ContentResource addDeleteResource(String id, String type, InputStream inputStream, String resourceType, Time releaseDate, Time retractDate, ResourceProperties properties, String uuid, String userId, int priority) throws PermissionException, ServerOverloadException
 			{
 		id = (String) fixTypeAndId(id, type).get("id");
 		// resource must also NOT end with a separator characters (fix it)
@@ -4534,6 +4787,15 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		// check security-unlock to add record
 		unlock(AUTH_RESOURCE_ADD, id);
 
+		// In the future we may wish to allow multiple copies of the file in the recycle bin.
+		// Remove Deleted Resource prevents id collision as #restoreResource(String) doesn't allow you to
+		// specify which version of a file you want to restore.
+		try {
+			removeDeletedResource(id);
+		} catch (Exception ex) {
+			// There is no collision
+		}
+		
 		// reserve the resource in storage - it will fail if the id is in use
 		BaseResourceEdit edit = (BaseResourceEdit) m_storage.putDeleteResource(id, uuid, userId);
 		// added for NPE static code review -AZ
@@ -4548,14 +4810,17 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		edit.setEvent(EVENT_RESOURCE_ADD);
 
 		edit.setContentType(type);
-		if (content != null)
+		edit.setResourceType(resourceType);
+		edit.setReleaseDate(releaseDate);
+		edit.setRetractDate(retractDate);
+		if (inputStream != null)
 		{
-			edit.setContent(content);
+			edit.setContent(inputStream);
 		}
 		addProperties(edit.getPropertiesEdit(), properties);
 
 		// complete the edit - update xml which contains properties xml and store the file content
-		m_storage.commitDeleteResource(edit, uuid);
+		m_storage.commitDeletedResource(edit, uuid);
 
 		// close the edit object
 		((BaseResourceEdit) edit).closeEdit();
@@ -6579,11 +6844,31 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		{
 			throw new EntityCopyrightException(ref.getReference());
 		}
+		
+		// Set some headers to tell browsers to revalidate and check for updated files
+		res.addHeader("Cache-Control", "must-revalidate, private");
+		res.addHeader("Expires", "-1");
 
 		try
 		{
 			long len = resource.getContentLength();
 			String contentType = resource.getContentType();
+			ResourceProperties rp = resource.getProperties();
+			long lastModTime = 0;
+
+			try {
+				Time modTime = rp.getTimeProperty(ResourceProperties.PROP_MODIFIED_DATE);
+				lastModTime = modTime.getTime();
+			} catch (Exception e1) {
+				M_log.info("Could not retrieve modified time for: " + resource.getId());
+			}
+			
+			// KNL-1316 tell the browser when our file was last modified for caching reasons
+			if (lastModTime > 0) {
+				SimpleDateFormat rfc1123Date = new SimpleDateFormat(RFC1123_DATE);
+				rfc1123Date.setTimeZone(TimeZone.getTimeZone("GMT"));
+				res.addHeader("Last-Modified", rfc1123Date.format(lastModTime));
+			}
 
 			// for url content type, encode a redirect to the body URL
 			if (contentType.equalsIgnoreCase(ResourceProperties.TYPE_URL))
@@ -6622,7 +6907,6 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 				            || lcct.contains("html") || lcct.contains("script") ) && 
 				            m_serverConfigurationService.getBoolean(SECURE_INLINE_HTML, true)) {
 				        // increased checks to handle more mime-types - https://jira.sakaiproject.org/browse/KNL-749
-						ResourceProperties rp = resource.getProperties();
 
 						boolean fileInline = false;
 						boolean folderInline = false;
@@ -6667,11 +6951,49 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 					contentType = contentType + "; charset=" + encoding;
 				}
 
-				ArrayList<Range> ranges = parseRange(req, res, len);
-				res.addHeader("Accept-Ranges", "bytes");
-				res.addHeader("Cache-Control", "max-age=0, no-cache, no-store");
+				// KNL-1316 let's see if the user already has a cached copy. Code copied and modified from Tomcat DefaultServlet.java
+				long headerValue = req.getDateHeader("If-Modified-Since");
+				if (headerValue != -1 && (lastModTime < headerValue + 1000)) {
+					// The entity has not been modified since the date specified by the client. This is not an error case.
+					res.setStatus(HttpServletResponse.SC_NOT_MODIFIED);
+					return; 
+				}
 
-		        if (req.getHeader("Range") == null || (ranges == null) || (ranges.isEmpty())) {
+				// If there is a direct link to the asset, no sense streaming it.
+				// Send the asset directly to the load-balancer or to the client
+				URI directLinkUri = m_storage.getDirectLink(resource);
+
+				ArrayList<Range> ranges = parseRange(req, res, len);
+				if (directLinkUri != null || req.getHeader("Range") == null || (ranges == null) || (ranges.isEmpty())) {
+					res.addHeader("Accept-Ranges", "none");
+					res.setContentType(contentType);
+					res.addHeader("Content-Disposition", disposition);
+					// http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4187336
+					if (len <= Integer.MAX_VALUE) {
+						res.setContentLength((int)len);
+					} else {
+						res.addHeader("Content-Length", Long.toString(len));
+					}
+
+					// Bypass loading the asset and just send the user a link to it.
+					if (directLinkUri != null) {
+						if (m_serverConfigurationService.getBoolean("cloud.content.sendfile", false)) {
+							int hostLength = new String(directLinkUri.getScheme() + "://" + directLinkUri.getHost()).length();
+							String linkPath = "/sendfile" + directLinkUri.toString().substring(hostLength);
+							if (M_log.isDebugEnabled()) {
+								M_log.debug("X-Sendfile: " + linkPath);
+							}
+
+							// Nginx uses X-Accel-Redirect and Apache and others use X-Sendfile
+							res.addHeader("X-Accel-Redirect", linkPath);
+							res.addHeader("X-Sendfile", linkPath);
+							return;
+						}
+						else if (m_serverConfigurationService.getBoolean("cloud.content.directurl", true)) {
+							res.sendRedirect(directLinkUri.toString());
+							return;
+						}
+					}
 		        	
 					// stream the content using a small buffer to keep memory managed
 					InputStream content = null;
@@ -6692,15 +7014,6 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 							}
 						}
 	
-						res.setContentType(contentType);
-						res.addHeader("Content-Disposition", disposition);
-						// http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4187336
- 						if (len <= Integer.MAX_VALUE){
- 							res.setContentLength((int)len);
- 						} else {
- 							res.addHeader("Content-Length", Long.toString(len));
- 						}
-
 						// set the buffer of the response to match what we are reading from the request
 						if (len < STREAM_BUFFER_SIZE)
 						{
@@ -6748,9 +7061,9 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		        } 
 		        else 
 		        {
-		        	// Output partial content. Adapted from Apache Tomcat 5.5.27 DefaultServlet.java
-		        	
-		        	res.setStatus(HttpServletResponse.SC_PARTIAL_CONTENT);
+		            // Output partial content. Adapted from Apache Tomcat 5.5.27 DefaultServlet.java
+		            res.addHeader("Accept-Ranges", "bytes");
+		            res.setStatus(HttpServletResponse.SC_PARTIAL_CONTENT);
 
 		            if (ranges.size() == 1) {
 
@@ -8826,7 +9139,13 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 			collection = findCollection(id);
 			// Limit size per user inside dropbox
 			if (edit.getId().startsWith(COLLECTION_DROPBOX)) {
-				collection = findCollection(id + parts[3] + Entity.SEPARATOR);
+				try {
+					// if successful, the context is already a valid user id
+					userDirectoryService.getUser(parts[3]);
+					collection = findCollection(id + parts[3] + Entity.SEPARATOR);
+				} catch (UserNotDefinedException tryEid) {
+					// Nothing to do
+				}
 			}
 		}
 		catch (TypeException ignore)
@@ -11183,9 +11502,9 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		 * 
 		 * @return a List of the full objects of the members of the collection.
 		 */
-		public List getMemberResources()
+		public List<ContentEntity> getMemberResources()
 		{
-			List mbrs = (List) threadLocalManager.get("members@" + this.m_id);
+			List<ContentEntity> mbrs = (List<ContentEntity>) threadLocalManager.get("members@" + this.m_id);
 			if(mbrs == null)
 			{
 				mbrs = new ArrayList();
@@ -12970,6 +13289,13 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		public void open();
 
 		/**
+		 * Get a direct link to the asset so it doesn't have to be streamed.
+		 * @param resource
+		 * @return URI or null if no direct link is available
+		 */
+		public URI getDirectLink(ContentResource resource);
+
+		/**
 		 * Get a count of all members of a collection, where 'member' means the collection
 		 * is the immediate parent of the item.  The count is not recursive and it will 
 		 * include all resources and collections whose immediate parent is the collection
@@ -13011,7 +13337,7 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		/**
 		 * Get a list of all getCollections within a collection.
 		 */
-		public List getCollections(ContentCollection collection);
+		public List<ContentCollectionEdit> getCollections(ContentCollection collection);
 
 		/**
 		 * Keep a new collection.
@@ -13052,7 +13378,7 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		/**
 		 * Get a list of all resources within a collection.
 		 */
-		public List getResources(ContentCollection collection);
+		public List<ContentResourceEdit> getResources(ContentCollection collection);
 
 		/**
 		 * 
@@ -13104,6 +13430,14 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		 */
 		public byte[] getResourceBody(ContentResource resource) throws ServerOverloadException;
 
+		/*
+		 * Stream the resource's body for deleted resource.
+		 * 
+		 * @exception ServerOverloadException
+		 *            if server is configured to save resource body in filesystem and an error occurs while trying to access the filesystem.
+		 */
+		public InputStream streamDeletedResourceBody(ContentResource resource) throws ServerOverloadException;
+
 		/**
 		 * Stream the resource's body.
 		 * 
@@ -13116,13 +13450,19 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		 * Return a single character representing the access mode of the resource or collection identified by the parameter, or null if not found.
 		 * @param id
 		 * @return A character identifying the access mode for the content entity, one of 's' for site, 'p' for public or 'g' for group.
+		 * @throws ServerOverloadException 
+
 		 */
 		//public char getAccessMode(String id);
 
 		// htripath-storing into shadow table before deleting the resource
-		public void commitDeleteResource(ContentResourceEdit edit, String uuid);
+		public void commitDeletedResource(ContentResourceEdit edit, String uuid) throws ServerOverloadException;
 
 		public ContentResourceEdit putDeleteResource(String resourceId, String uuid, String userId);
+
+		public List getDeletedResources(ContentCollection collection);      
+		public ContentResourceEdit editDeletedResource(String resourceId);      
+		public void removeDeletedResource(ContentResourceEdit edit); 
 
 		/**
 		 * Retrieve a collection of ContentResource objects pf a particular resource-type.  The collection will 
@@ -13697,6 +14037,11 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
             extractZipArchive.extractArchive(resourceId);
         }
     }
+
+    /* Longsight custom for URI to solve Lessons resource delivery issues */
+	public URI getTheDirectLink(ContentResource resource) {
+		return m_storage.getDirectLink(resource);
+	}
 
 } // BaseContentService
 
