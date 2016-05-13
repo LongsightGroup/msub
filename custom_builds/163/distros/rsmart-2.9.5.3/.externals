@@ -91,3 +91,10 @@ warehouse -r 314589               https://source.sakaiproject.org/svn/msub/rsmar
 was -r 314590                     https://source.sakaiproject.org/svn/msub/rsmart.com/was/branches/2.9.x
 web -r 314591                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/2.9.x
 webservices -r 314592             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.x
+
+# Build tools
+kernel-deploy		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/kernel-deploy
+jstl-shared-deploy	https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/jstl-shared-deploy
+rsmart			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/rsmart
+scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/scoring-service
+irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/irubric
