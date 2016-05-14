@@ -103,13 +103,15 @@
             </activation>
             <modules>
                 <module>master</module>
+                <module>rsmart/rsmart-Decryption/api</module>
+                <module>rsmart/antivirus/api</module>
                 <module>kernel</module>
                 <module>kernel-deploy</module>
                 <!--module>core-deploy</module-->
                 <module>jstl-shared-deploy</module>
                 <module>access</module>
                 <module>alias</module>
-                <module>ambrosia</module>
+                <!--module>ambrosia</module-->
                 <module>announcement</module>
                 <module>archive</module>
                 <module>assignment</module>
@@ -184,7 +186,6 @@
                 <module>rights</module>
                 <module>roster</module>
                 <!--module>roster2</module-->
-                <!--module>rsmart</module-->
                 <module>rwiki</module>
                 <!--module>sakora</module-->
                 <module>sam</module>

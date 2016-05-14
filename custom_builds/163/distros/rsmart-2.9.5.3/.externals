@@ -100,11 +100,7 @@ scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/
 irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.3-M1/irubric
 
 # Shell Commands
-#shell_command find jforum/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
-#shell_command find kernel/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
-#shell_command find master/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
-#shell_command find providers/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
-#shell_command find rsmart/ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
 
 # Customizations
 kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/163/kernel
