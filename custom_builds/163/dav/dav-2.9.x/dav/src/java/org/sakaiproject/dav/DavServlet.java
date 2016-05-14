@@ -148,7 +148,6 @@ import org.sakaiproject.exception.OverQuotaException;
 import org.sakaiproject.exception.PermissionException;
 import org.sakaiproject.exception.ServerOverloadException;
 import org.sakaiproject.exception.TypeException;
-import org.sakaiproject.thread_local.cover.ThreadLocalManager;
 import org.sakaiproject.time.api.Time;
 import org.sakaiproject.time.api.TimeBreakdown;
 import org.sakaiproject.time.cover.TimeService;
@@ -270,6 +269,11 @@ public class DavServlet extends HttpServlet
 	 * Size of buffer for streaming downloads
 	 */
 	protected static final int STREAM_BUFFER_SIZE = 102400;
+
+	/**
+	 *  Max Size for xml property streams 4K 
+	 */
+	protected static final int MAX_XML_STREAM_LENGTH = 4096;
 
         // can be called on id with or withing adjustid, since
         // the prefixes we check for are not adjusted
@@ -1033,10 +1037,6 @@ public class DavServlet extends HttpServlet
 					throw new AuthenticationException("missing required fields");
 				}
 
-                ThreadLocalManager.set("NONAUTH_OVERRIDE", Boolean.TRUE);
-
-                M_log.debug ("set NONAUTH_OVERRIDE flag");
-
 				Authentication a = AuthenticationManager.authenticate(e);
 
 				// No need to log in again if UsageSession is not null, active, and the eid is the
@@ -1047,6 +1047,7 @@ public class DavServlet extends HttpServlet
 						&& !UsageSessionService.login(a, req, UsageSessionService.EVENT_LOGIN_DAV))
 				{
 					// login failed
+					res.addHeader("WWW-Authenticate","Basic realm=\"DAV\"");
 					res.sendError(401);
 					return;
 				}
@@ -1054,17 +1055,15 @@ public class DavServlet extends HttpServlet
 			catch (AuthenticationException ex)
 			{
 				// not authenticated
+				res.addHeader("WWW-Authenticate","Basic realm=\"DAV\"");
 				res.sendError(401);
 				return;
 			}
-            finally
-            {
-                ThreadLocalManager.set("NONAUTH_OVERRIDE", Boolean.FALSE);
-            }
 		}
 		else
 		{
 			// user name missing, so can't authenticate
+			res.addHeader("WWW-Authenticate","Basic realm=\"DAV\"");
 			res.sendError(401);
 			return;
 		}
@@ -1426,8 +1425,8 @@ public class DavServlet extends HttpServlet
 				return null;
 			}
 			if (M_log.isDebugEnabled()) M_log.debug("DirContextSAKAI.list getting collection members and iterator");
-			List<Entity> members = collection.getMemberResources();
-			Iterator<Entity> it = members.iterator();
+			List members = collection.getMemberResources();
+			Iterator it = members.iterator();
 			return it;
 		}
 	}
@@ -1499,6 +1498,8 @@ public class DavServlet extends HttpServlet
 				}
 				modificationDate = props.getTimeProperty(ResourceProperties.PROP_MODIFIED_DATE).getTime();
 				eTag = modificationDate + "+" + eTag;
+				// SAK-26593 if you don't clean the eTag you may send invalid XML to client
+				eTag = MD5Encoder.encode(md5Helper.digest(eTag.getBytes()));
 				if (M_log.isDebugEnabled()) M_log.debug("Path=" + path + " eTag=" + eTag);
 				creationDate = props.getTimeProperty(ResourceProperties.PROP_CREATION_DATE).getTime();
 				resourceLink = mbr.getUrl();
@@ -1591,6 +1592,7 @@ public class DavServlet extends HttpServlet
 		    if (header.toUpperCase().contains(agent.toUpperCase())) {
 		        if (M_log.isInfoEnabled()) M_log.info("Redirecting DAV access because this is a browser." + header);
 		        resp.sendRedirect("/access/content" + adjustId(path));
+		        return;
 		    }
 		}
 
@@ -1944,19 +1946,20 @@ public class DavServlet extends HttpServlet
 		if(parts.length == 4 && parts[1].equals("group-user")){
 			try
 			{
-				// if successful, the context is already a valid user EID
-				UserDirectoryService.getUserByEid(parts[3]);
+				// try using it as an ID
+				resourceName = UserDirectoryService.getUserEid(parts[3]);
 			}
 			catch (UserNotDefinedException tryId)
 			{
 				try
 				{
-					// try using it as an ID
-					resourceName = UserDirectoryService.getUserEid(parts[3]);
+					// if successful, the context is already a valid user EID
+					UserDirectoryService.getUserByEid(parts[3]);
 				}
 				catch (UserNotDefinedException notId)
 				{
 					// if context was not a valid ID, leave it alone
+					M_log.warn("getResourceNameSAKAI could not find either id or eid: " + parts[3]);
 				}
 			}
 		 }
@@ -2025,7 +2028,12 @@ public class DavServlet extends HttpServlet
 
 		int contentLength = req.getContentLength();
 
-		if (contentLength > 0)
+		if (contentLength > MAX_XML_STREAM_LENGTH)
+		{
+			resp.sendError(HttpServletResponse.SC_REQUEST_ENTITY_TOO_LARGE);
+			return;				
+		}
+		else if (contentLength > 0)
 		{
 
 			byte[] byteContent = new byte[contentLength];
@@ -2320,7 +2328,12 @@ public class DavServlet extends HttpServlet
 	    Hashtable<String,String> spaces = new Hashtable<String, String>();
 
 	    // read the xml document
-	    if (contentLength > 0) {
+	    if (contentLength > MAX_XML_STREAM_LENGTH)
+		{
+			resp.sendError(HttpServletResponse.SC_REQUEST_ENTITY_TOO_LARGE );
+			return;				
+		}
+		else if (contentLength > 0) {
 
 		byte[] byteContent = new byte[contentLength];
 		InputStream inputStream = req.getInputStream();
