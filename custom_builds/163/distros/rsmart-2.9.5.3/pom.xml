@@ -117,7 +117,7 @@
                 <module>assignment</module>
                 <module>authz</module>
                 <module>basiclti</module>
-                <module>bigbluebutton</module>
+                <!--module>bigbluebutton</module-->
 		<module>blogwow</module>
                 <module>calendar</module>
                 <module>chat</module>
