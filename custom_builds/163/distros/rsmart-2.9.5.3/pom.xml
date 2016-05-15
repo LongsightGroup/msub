@@ -48,17 +48,14 @@
                 <module>kernel</module>
                 <module>kernel-deploy</module>
                 <module>hybrid</module>
-                <!--module>core-deploy</module-->
                 <module>jstl-shared-deploy</module>
                 <module>access</module>
                 <module>alias</module>
-                <!--module>ambrosia</module-->
                 <module>announcement</module>
                 <module>archive</module>
                 <module>assignment</module>
                 <module>authz</module>
                 <module>basiclti</module>
-                <!--module>bigbluebutton</module-->
 		<module>blogwow</module>
                 <module>calendar</module>
                 <module>chat</module>
@@ -71,27 +68,19 @@
                 <module>content</module>
                 <module>content-review</module>
                 <module>courier</module>
-		<!-- <module>dashboard</module> -->
-                <!--module>datapoint</module-->
                 <module>dav</module>
-		<!-- <module>delegatedaccess</module> -->
                 <module>edia-sakai-utils</module>
                 <module>edu-services</module>
                 <module>emailtemplateservice</module>
                 <module>entitybroker</module>
                 <module>EntityBrowser</module>
-                <!--module>etudes-util</module-->
                 <module>evaluation</module>
-                <!--module>formbuilder</module-->
-                <!--module>gmt</module-->
 		<module>external-calendaring-service</module>
                 <module>gradebook</module>
-                <!--module>gradebook2</module-->
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>iclicker</module>
                 <module>itunesu-tool</module>
-		<!--module>jforum</module--> 
                 <module>jobscheduler</module>
                 <module>jsf</module>
                 <module>kaltura</module>
@@ -100,16 +89,11 @@
                 <module>login</module>
                 <module>mailarchive</module>
                 <module>mailsender</module>
-                <!--module>melete</module-->
                 <module>memory</module>
                 <module>message</module>
                 <module>messageservice</module>
                 <module>metaobj</module>
                 <module>msgcntr</module>
-
-                <!--module>mneme</module-->
-                <!--module>opensyllabus</module-->
-
                 <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
@@ -119,14 +103,9 @@
                 <module>presence</module>
                 <module>profile</module>
                 <module>profile2</module>
-
-                <module>reference</module>
-
                 <module>rights</module>
                 <module>roster</module>
-                <!--module>roster2</module-->
                 <module>rwiki</module>
-                <!--module>sakora</module-->
                 <module>sam</module>
 
                 <module>search</module>
@@ -140,12 +119,10 @@
 
                 <module>syllabus</module>
                 <module>textarea</module>
-		<!-- <module>tbook</module> -->
                 <module>tool</module>
                 <module>user</module>
                 <module>velocity</module>
                 <module>web</module>
-                <!--module>webservices</module-->
                 <module>usermembership</module>
                 <module>sakai-wicket</module>
                 <module>warehouse</module>
@@ -154,7 +131,30 @@
                 <module>taggable</module>
                 <module>turnitin/contentreview-impl</module>
                 <module>scoring-service</module>
-		<module>irubric</module>
+                <module>irubric</module>
+ 
+                <!--
+                <module>reference</module>
+                <module>roster2</module>
+                <module>sakora</module>
+                <module>webservices</module>
+		<module>tbook</module>
+
+		<module>jforum</module> 
+                <module>gradebook2</module>
+                <module>etudes-util</module>
+                <module>formbuilder</module>
+                <module>gmt</module>
+		<<module>dashboard</module>
+                <module>datapoint</module>
+                <module>bigbluebutton</module>
+                <module>ambrosia</module>
+                <module>core-deploy</module>
+		<<module>delegatedaccess</module>
+                <module>melete</module>
+                <module>mneme</module>
+                <module>opensyllabus</module>
+                -->
             </modules>
         </profile>
         <profile>
