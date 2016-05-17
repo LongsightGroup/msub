@@ -81,15 +81,11 @@ melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m
 portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/portal/portal-10.x_custom
 profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/profile2/10.x-custom
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
+bbb-tool https://github.com/blindsidenetworks/bigbluebutton-sakai/branches/10.x/bbb-tool
+kaltura https://github.com/kaltura/sakai-extension/trunk
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
-
-#Big Blue Button:
-#shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
-#shell_command cd bigbluebutton-sakai
-#shell_command git apply bigbluebutton-sakai10x.patch
-#shell_command cd ..
 
 #VeriCite
 #shell_command cd content-review
@@ -99,7 +95,6 @@ samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x
 #shell_command cd ../..
 
 #GIT Projects
-#git_project bigbluebutton-sakai/bbb-tool
 #git_project content-review/contentreview-impl-vericite
 
 #shell_command sed -i 's/2.9-SNAPSHOT/10-SNAPSHOT/g' adobeconnect/pom.xml

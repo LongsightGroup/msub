@@ -122,7 +122,8 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>warehouse</module>
-                <!--module>bigbluebutton-sakai/bbb-tool</module-->
+                <module>kaltura</module>
+                <!--module>bbb-tool</module-->
             </modules>
         </profile>
         <profile>
