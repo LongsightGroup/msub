@@ -164,13 +164,13 @@ public class JLDAPDirectoryProvider implements UserDirectoryProvider, LdapConnec
 	 * 
 	 * @see LdapAttributeMapper
 	 */
-	private Map<String,String> attributeMappings;
+	protected Map<String,String> attributeMappings;
 
 	/** Handles LDAPConnection allocation */
-	private LdapConnectionManager ldapConnectionManager;
+	protected LdapConnectionManager ldapConnectionManager;
 
 	/** Handles LDAP attribute mappings and encapsulates filter writing */
-	private LdapAttributeMapper ldapAttributeMapper;
+	protected LdapAttributeMapper ldapAttributeMapper;
 	
 	/** Currently limited to allowing/disallowing searches for particular user EIDs.
 	 * Implements things like user EID blacklists. */
