@@ -117,11 +117,14 @@
                 <module>webservices</module>
 
                 <module>cloud-content</module>
-                <module>jforum</module>
-                <module>gradebook2</module>
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>bbb-tool</module>
+
+<!--
+                <module>gradebook2</module>
+                <module>jforum</module>
+-->
             </modules>
         </profile>
         <profile>

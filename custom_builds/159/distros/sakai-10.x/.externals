@@ -28,7 +28,6 @@ basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
 chat https://source.sakaiproject.org/svn/chat/branches/sakai-10.x
 citations https://source.sakaiproject.org/svn/citations/branches/sakai-10.x
-config https://source.sakaiproject.org/svn/config/branches/sakai-10.x
 content https://source.sakaiproject.org/svn/content/branches/sakai-10.x
 courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
@@ -67,7 +66,6 @@ tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
 user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
-web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT -Dsakai.jdk.version=1.7
 
@@ -76,12 +74,18 @@ cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/custom_buil
 lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/sakai-10.x-s3
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/159/providers/sakai-10.x
+config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/159/config/sakai-10.x
+web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/159/web/sakai-10.x
 
-jforum                           https://source.sakaiproject.org/contrib/longsight/jforum/10.x
-gradebook2 -r 87580              https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x
+#jforum                           https://source.sakaiproject.org/contrib/longsight/jforum/10.x
+#gradebook2 -r 87580              https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x
 etudes-util                      https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 bbb-tool                         https://github.com/blindsidenetworks/bigbluebutton-sakai/branches/10.x/bbb-tool
 
 #shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command sed -i 's/ sessionId="meleteEditor" / /g' melete/melete-app/src/webapp/melete/addmodulesections.jsp
+#shell_command find site-manage/ -name \*.properties -exec sed -i 's/Other Official Participants/Other URI Participants/g' {} \;
+#shell_command find site-manage/ -name \*.properties -exec sed -i 's/Official Email Address or Username/URI Emplid or Student ID Number or Official URI email address/g' {} \;
+#shell_command find site-manage/ -name \*.properties -exec sed -i 's/Non-official Participant/Non-URI Participant/g' {} \;
+#shell_command find site-manage/ -name \*.properties -exec sed -i 's/COM101/ECON101/g' {} \;
