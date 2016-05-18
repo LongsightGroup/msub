@@ -21,6 +21,14 @@
 
     <filter-mapping>
         <filter-name>sakai.request</filter-name>
+        <servlet-name>uri.librarylink.annotatedurl</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>sakai.request</filter-name>
         <servlet-name>sakai.iframe.myworkspace</servlet-name>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
@@ -122,6 +130,20 @@
         <load-on-startup>1</load-on-startup>
      </servlet>
      
+     <servlet>
+        <servlet-name>
+           uri.librarylink.annotatedurl
+        </servlet-name>
+        <servlet-class>
+            org.sakaiproject.web.tool.IFrameAction
+        </servlet-class>
+        <init-param>
+            <param-name>template</param-name>
+            <param-value>web/chef_iframe</param-value>            
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+     </servlet>
+
      <servlet>
         <servlet-name>
            sakai.iframe.annotatedurl
