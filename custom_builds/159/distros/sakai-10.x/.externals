@@ -4,7 +4,6 @@
 master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 
 # Core services
-kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
@@ -17,7 +16,6 @@ jobscheduler https://source.sakaiproject.org/svn/jobscheduler/branches/sakai-10.
 jsf https://source.sakaiproject.org/svn/jsf/branches/sakai-10.x
 sakai-mock https://source.sakaiproject.org/svn/sakai-mock/branches/sakai-10.x
 userauditservice https://source.sakaiproject.org/svn/userauditservice/branches/sakai-10.x
-webservices https://source.sakaiproject.org/svn/webservices/branches/sakai-10.x
 
 # Core Sakai Tools
 access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
@@ -36,7 +34,6 @@ courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-10.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-10.x
-lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
 login https://source.sakaiproject.org/svn/login/branches/sakai-10.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
@@ -44,7 +41,6 @@ memory https://source.sakaiproject.org/svn/memory/branches/sakai-10.x
 message https://source.sakaiproject.org/svn/message/branches/sakai-10.x
 metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/sakai-10.x
-osp https://source.sakaiproject.org/svn/osp/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
 polls https://source.sakaiproject.org/svn/polls/branches/sakai-10.x
@@ -52,8 +48,6 @@ portal https://source.sakaiproject.org/svn/portal/branches/sakai-10.x
 postem https://source.sakaiproject.org/svn/postem/branches/sakai-10.x
 presence https://source.sakaiproject.org/svn/presence/branches/sakai-10.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/sakai-10.x
-providers https://source.sakaiproject.org/svn/providers/branches/sakai-10.x
-reference https://source.sakaiproject.org/svn/reference/branches/sakai-10.x
 reset-pass https://source.sakaiproject.org/svn/reset-pass/branches/sakai-10.x
 rights https://source.sakaiproject.org/svn/rights/branches/sakai-10.x
 roster2 https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
@@ -73,5 +67,21 @@ tool https://source.sakaiproject.org/svn/tool/branches/sakai-10.x
 user https://source.sakaiproject.org/svn/user/branches/sakai-10.x
 usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai-10.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
-warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
+
+#mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT -Dsakai.jdk.version=1.7
+
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
+lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/sakai-10.x-s3
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/159/providers/sakai-10.x
+
+jforum                           https://source.sakaiproject.org/contrib/longsight/jforum/10.x
+gradebook2 -r 87580              https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x
+etudes-util                      https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
+melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
+bbb-tool                         https://github.com/blindsidenetworks/bigbluebutton-sakai/branches/10.x/bbb-tool
+
+#shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
+#shell_command sed -i 's/ sessionId="meleteEditor" / /g' melete/melete-app/src/webapp/melete/addmodulesections.jsp
