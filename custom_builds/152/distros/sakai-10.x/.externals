@@ -57,8 +57,9 @@ rights -r 319537                  https://source.sakaiproject.org/svn/msub/rsmar
 roster2 -r 319538                 https://source.sakaiproject.org/svn/msub/rsmart.com/roster2/branches/10.4.x
 rwiki -r 319539                   https://source.sakaiproject.org/svn/msub/rsmart.com/rwiki/branches/10.4.x
 sakai-mock -r 319540              https://source.sakaiproject.org/svn/msub/rsmart.com/sakai-mock/branches/10.4.x
-sakora -r 87664                  https://source.sakaiproject.org/contrib/rsmart/msub/sakora/branches/10.4.x
-sam                               https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/samigo/samigo-10.4.x
+sakora -r 87664                   https://source.sakaiproject.org/contrib/rsmart/msub/sakora/branches/10.4.x
+#sam                               https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/samigo/samigo-10.4.x
+sam 				  https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
 search -r 319542                  https://source.sakaiproject.org/svn/msub/rsmart.com/search/branches/10.4.x
 sections -r 319543                https://source.sakaiproject.org/svn/msub/rsmart.com/sections/branches/10.4.x
 shortenedurl -r 319544            https://source.sakaiproject.org/svn/msub/rsmart.com/shortenedurl/branches/10.4.x
@@ -80,6 +81,8 @@ web -r 319558                     https://source.sakaiproject.org/svn/msub/rsmar
 
 # MailArchive requires a custom ANI anti-virus JAR
 mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/10.4.x
+
+sam https://source.sakaiproject.org/svn/sam/branches/sakai-10.x
 
 # Longsight disabled spellchecker; disabled to speed up build
 #reference                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/reference/sakai10.x_custom
