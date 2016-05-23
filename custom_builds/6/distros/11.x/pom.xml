@@ -120,6 +120,7 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>da_evalprovider</module>
+                <module>attendance</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->

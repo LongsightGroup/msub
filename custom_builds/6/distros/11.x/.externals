@@ -75,7 +75,6 @@ syllabus https://github.com/sakaiproject/sakai/branches/11.x/syllabus
 taggable https://github.com/sakaiproject/sakai/branches/11.x/taggable
 textarea https://github.com/sakaiproject/sakai/branches/11.x/textarea
 tool https://github.com/sakaiproject/sakai/branches/11.x/tool
-user https://github.com/sakaiproject/sakai/branches/11.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/11.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 web https://github.com/sakaiproject/sakai/branches/11.x/web
@@ -95,6 +94,7 @@ user https://github.com/LongsightGroup/sakai/branches/6-11.x/user
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 #iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.5
 bigbluebutton-sakai https://github.com/blindsidenetworks/bigbluebutton-sakai/branches/11.x
+attendance https://github.com/UDayton/attendance/trunk
 
 #POM Changes
 #shell_command sed -i 's/2.9.2/11-SNAPSHOT/g' iclicker/pom.xml
