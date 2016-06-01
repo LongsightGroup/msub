@@ -12,7 +12,7 @@ emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/br
 entitybroker https://source.sakaiproject.org/svn/entitybroker/branches/sakai-10.x
 external-calendaring-service https://source.sakaiproject.org/svn/external-calendaring-service/branches/sakai-10.x/ 
 hierarchy https://source.sakaiproject.org/svn/hierarchy/branches/sakai-10.x/
-jobscheduler https://source.sakaiproject.org/svn/jobscheduler/branches/sakai-10.x
+jobscheduler -r 322958 https://source.sakaiproject.org/svn/jobscheduler/branches/sakai-10.x
 jsf https://source.sakaiproject.org/svn/jsf/branches/sakai-10.x
 sakai-mock https://source.sakaiproject.org/svn/sakai-mock/branches/sakai-10.x
 userauditservice https://source.sakaiproject.org/svn/userauditservice/branches/sakai-10.x
