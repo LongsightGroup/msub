@@ -43,8 +43,9 @@
     <regexp name="htmlTitle" value="[\p{L}\p{N}\s\-_',:\[\]!\./\\\(\)&amp;]*" /> <!-- force non-empty with a '+' at the end instead of '*' -->
     <regexp name="htmlClass" value="[a-zA-Z0-9\s,\-_]+" />
 
-    <regexp name="onsiteURL" value="([\p{L}\p{N}\\\.\#@\$%\+&amp;;\-_~,\?=/!]+|\#(\w)+)" />
-    <regexp name="offsiteURL" value="(\s)*((ht|f)tp(s?)://|mailto:)[\p{L}\p{N}]+[\p{L}\p{N}\p{Zs}\.\#@\$%\+&amp;;:\-_~,\?=/!\(\)]*(\s)*" />
+    <!-- The single space in this regex is from KNL-1346 -->
+    <regexp name="onsiteURL" value="([\p{L}\p{N}\\\.\#@\$% \+&amp;;\-_~,\?=/!]+|\#(\w)+)" />
+    <regexp name="offsiteURL" value="(\s)*((ht|f)tp(s?)://|mailto:)[\p{L}\p{N}]+[\p{L}\p{N}\p{Zs}\.\#@\$% \+&amp;;:\-_~,\?=/!\(\)]*(\s)*" />
 
     <regexp name="boolean" value="^$|(true|false)" />
     <regexp name="singlePrintable" value="[a-zA-Z0-9]{1}" /> <!-- \w allows the '_' character -->
@@ -119,7 +120,7 @@
         Add in your site (e.g. "new.site.host.com/path": with escaped ".": "new\.site\.host\.com/path|"
         Like shown here: (new\.site\.host\.com/path|download\.macromedia\.com/pub|
     -->
-    <regexp name="flashSites" value="(((https?:)?//(download\.macromedia\.com/pub|www\.macromedia\.com/(go|shockwave)|c\.brightcove\.com/services|gamevideos\.1up\.com/swf|(www\.)?youtube(\-nocookie)?\.com/(v|embed)|(www\.)?youtu\.be|(www\.|player\.)?vimeo\.com|www\.gametrailers\.com|videomedia\.ign\.com/ev|image\.com\.com/gamespot|www\.hulu\.com/embed|embed\.break\.com|player\.ordienetworks\.com/flash|www\.adultswim\.com/video/vplayer|www\.dailymotion\.com/swf|www\.ustream\.tv/flash/video|cdn-i\.dmdentertainment\.com|media\.mtvnservices\.com|www\.justin\.tv/widgets|www\.viddler\.com/(player|simple_on_site)|static\.twitter\.com/flash|www\.gamepro\.com/bin|cdn\.knightlab\.com|(www|cdnapisec|cdnapi)\.kaltura\.com/p|www\.divshare\.com/flash|www\.facebook\.com/v)/.*)|(/library/(?!.*\.\.[/|\\]).*)/.+)" />
+    <regexp name="flashSites" value="(((https?:)?//(download\.macromedia\.com/pub|www\.macromedia\.com/(go|shockwave)|c\.brightcove\.com/services|gamevideos\.1up\.com/swf|(www\.)?youtube(\-nocookie)?\.com/(v|embed)|(www\.)?youtu\.be|(www\.|player\.)?vimeo\.com|www\.gametrailers\.com|videomedia\.ign\.com/ev|image\.com\.com/gamespot|www\.hulu\.com/embed|embed\.break\.com|player\.ordienetworks\.com/flash|www\.adultswim\.com/video/vplayer|www\.dailymotion\.com/swf|www\.ustream\.tv/flash/video|cdn-i\.dmdentertainment\.com|media\.mtvnservices\.com|www\.justin\.tv/widgets|www\.viddler\.com/(player|simple_on_site)|static\.twitter\.com/flash|www\.gamepro\.com/bin|cdn\.knightlab\.com|(www|cdnapisec|cdnapi)\.sharestream\.com/p|(www|cdnapisec|cdnapi)\.kaltura\.com/p|www\.divshare\.com/flash|www\.facebook\.com/v)/.*)|(/library/(?!.*\.\.[/|\\]).*)/.+)" />
 
     <!-- This is a basic alphanumeric and punctuation string -->
     <regexp name="basicAlphaNumeric" value="^[a-zA-Z0-9\s\-_.\?!,]*$" />
@@ -1054,6 +1055,20 @@
                 <regexp name="onsiteURL"/>
             </regexp-list>
         </attribute>
+
+        <!-- custom attribute to support ShareStream LTI -->
+        <attribute name="sharestream-lti-url" description="used by the IMG tag inside of CKEditor to support ShareStream LTI media embedding">
+            <regexp-list>
+                <regexp name="anything" />
+            </regexp-list>
+        </attribute>
+
+        <!-- custom attribute to support Kaltura LTI -->
+        <attribute name="kaltura-lti-url" description="used by the IMG tag inside of CKEditor to support Kaltura LTI media embedding">
+            <regexp-list>
+                <regexp name="anything" />
+            </regexp-list>
+         </attribute>
     </common-attributes>
 
 
@@ -1554,6 +1569,42 @@
                 </regexp-list>
             </attribute>
         </tag>
+        
+        <tag name="track" action="validate">
+            <attribute name="label" onInvalid="removeTag">
+                <regexp-list>
+                    <regexp name="anything" />
+                </regexp-list>
+            </attribute>
+            <attribute name="srclang" onInvalid="removeTag">
+                <regexp-list>
+                    <regexp name="anything" />
+                </regexp-list>
+            </attribute>
+            <attribute name="kind" onInvalid="removeTag">
+                <literal-list>
+                    <literal value="captions"/>
+                    <literal value="chapters"/>
+                    <literal value="descriptions"/>
+                    <literal value="metadata"/>
+                    <literal value="subtitles"/>
+                </literal-list>
+            </attribute>
+            <attribute name="src" onInvalid="removeTag">
+                <regexp-list>
+                    <regexp name="onsiteURL"/>
+                    <regexp name="offsiteURL"/>
+                </regexp-list>
+            </attribute>
+            <attribute name="default">
+                <literal-list>
+                    <literal value="default"/>
+                </literal-list>
+                <regexp-list>
+                    <regexp name="boolean"/>
+                </regexp-list>
+            </attribute>
+        </tag>
 
         <!-- Image & image related tags -->
         <tag name="img" action="validate">
@@ -1589,6 +1640,10 @@
                 <regexp name="anything" />
               </regexp-list>
             </attribute>
+
+            <!-- KNL-1426 sharestream and kaltura -->
+            <attribute name="sharestream-lti-url"/>
+            <attribute name="kaltura-lti-url"/>
         </tag>
 
         <!-- no way to do this safely without hooking up the same code to @import to embed the remote stylesheet (malicious user could change offsite resource to be malicious after validation -->

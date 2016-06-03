@@ -65,6 +65,8 @@ public class NotificationService
 
 	public static java.lang.String SECURE_REMOVE_NOTIFICATION = org.sakaiproject.event.api.NotificationService.SECURE_REMOVE_NOTIFICATION;
 
+	public static final int NOTI_IGNORE = -1; // SAK-30200 direct Sakai 10.x modification to avoid API changes
+
 	public static int NOTI_NONE = org.sakaiproject.event.api.NotificationService.NOTI_NONE;
 
 	public static int NOTI_REQUIRED = org.sakaiproject.event.api.NotificationService.NOTI_REQUIRED;
