@@ -117,6 +117,7 @@
                 <module>bigbluebutton-sakai/bbb-tool</module>
 		<module>evaluation</module>
 		<module>da_evalprovider</module>
+		<module>cloud-content</module>
 	<!--	<module>kaltura</module> -->
             </modules>
         </profile>
