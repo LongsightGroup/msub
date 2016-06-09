@@ -1,1 +1,4 @@
 EST-22 Lesson inactive alert
+LSNBLDR-455 When importing from cartridge HTML should be inline rather than linked
+ * https://github.com/sakaiproject/sakai/commit/a5f3382a978bd2767bac04996220650276549f22.patch
+ * https://github.com/sakaiproject/sakai/commit/74b53028222b97ed97cf92ca065f059e71433590.patch
