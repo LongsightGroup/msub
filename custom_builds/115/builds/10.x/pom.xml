@@ -120,6 +120,7 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>gradebook-export</module>
+                <module>cloud-content</module>
             </modules>
         </profile>
         <profile>
