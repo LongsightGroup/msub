@@ -4,7 +4,6 @@
 master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 
 # Core services
-kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
@@ -17,7 +16,6 @@ jobscheduler https://source.sakaiproject.org/svn/jobscheduler/branches/sakai-10.
 jsf https://source.sakaiproject.org/svn/jsf/branches/sakai-10.x
 sakai-mock https://source.sakaiproject.org/svn/sakai-mock/branches/sakai-10.x
 userauditservice https://source.sakaiproject.org/svn/userauditservice/branches/sakai-10.x
-webservices https://source.sakaiproject.org/svn/webservices/branches/sakai-10.x
 
 # Core Sakai Tools
 access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
@@ -77,25 +75,15 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 # CUSTOMIZATIONS:
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/10.x
 
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x/
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
-#samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_features-backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10
-
-#Big Blue Button:
-#shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
-#shell_command cd bigbluebutton-sakai/bbb-tool
-#shell_command mvn versions:update-parent
-#shell_command cat pom.xml | sed "s/<entitybroker\.version>.*<\/entitybroker\.version>/<entitybroker\.version>1.5.4-SNAPSHOT<\/entitybroker\.version>/g" > pom2.xml
-#shell_command mv pom2.xml pom.xml
-#shell_command cat pom.xml | sed "s/<entitybroker-utils\.version>.*<\/entitybroker-utils\.version>/<entitybroker-utils\.version>1.5.4-SNAPSHOT<\/entitybroker-utils\.version>/g" > pom2.xml
-#shell_command mv pom2.xml pom.xml
-
-#GIT Projects
-#git_project bigbluebutton-sakai/bbb-tool
