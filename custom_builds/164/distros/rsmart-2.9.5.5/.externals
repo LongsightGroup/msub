@@ -102,6 +102,8 @@ irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5
 # Shell Commands
 #shell_command find ./ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/5.0.4/5.0.6/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/maven.rsmart.com/repo1.maven.org/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/maven.anisakai.com/repo1.maven.org/g' {} \;
 #shell_command find ./kernel -name pom.xml -exec sed -i 's/0.0.5-SNAPSHOT/0.0.5/g' {} \;
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/turningpoint-job/d' {} \;
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/google-content/d' {} \;
