@@ -108,7 +108,7 @@ irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/gradebook2-export/d' {} \;
 
 # Customizations
-kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/kernel
+kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/kernel/2.9.x
 cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/cloud-content
 lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/lessonbuilder
 dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/dav/dav-2.9.x
