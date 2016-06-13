@@ -44,4 +44,12 @@ public class ServerOverloadException extends Exception
 	{
 		return super.toString() + " id=" + m_id;
 	}
+
+	/**
+	 * Constructor setting exception message and the cause of the exception.
+	 */
+	public ServerOverloadException(String message, Throwable t)
+	{
+		super(message, t);
+	}
 }

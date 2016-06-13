@@ -436,7 +436,7 @@
             <id>rsmart</id>
             <name>Maven Repository Switchboard</name>
             <layout>default</layout>
-            <url>http://maven.rsmart.com/maven</url>
+            <url>http://maven.anisakai.com/maven</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
