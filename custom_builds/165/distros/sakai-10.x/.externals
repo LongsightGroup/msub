@@ -1,3 +1,5 @@
+master                            https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.6.x
+
 access -r 319487                  https://source.sakaiproject.org/svn/msub/rsmart.com/access/branches/10.4.x
 alias -r 319488                   https://source.sakaiproject.org/svn/msub/rsmart.com/alias/branches/10.4.x
 ambrosia -r 87651                https://source.sakaiproject.org/contrib/rsmart/msub/ambrosia/branches/10.4.x
@@ -37,7 +39,6 @@ jsf -r 319513                     https://source.sakaiproject.org/svn/msub/rsmar
 kaltura -r 319514                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/10.4.x
 login -r 319517                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/10.4.x
 mailsender -r 319519              https://source.sakaiproject.org/svn//msub/rsmart.com/mailsender/branches/10.4.x
-master -r 319520                  https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.4.x
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 memory -r 319521                  https://source.sakaiproject.org/svn/msub/rsmart.com/memory/branches/10.4.x
 message -r 319522                 https://source.sakaiproject.org/svn/msub/rsmart.com/message/branches/10.4.x
