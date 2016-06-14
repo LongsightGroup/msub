@@ -1,0 +1,2 @@
+SAK-30325 custom work to deliver the asset directly to Nginx via X-Accel-Redirect bypassing the JVM
+ * hopefully Lessons will be addressed before Sakai 11
