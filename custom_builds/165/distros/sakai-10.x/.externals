@@ -59,7 +59,7 @@ roster2 -r 319538                 https://source.sakaiproject.org/svn/msub/rsmar
 rwiki -r 319539                   https://source.sakaiproject.org/svn/msub/rsmart.com/rwiki/branches/10.4.x
 sakai-mock -r 319540              https://source.sakaiproject.org/svn/msub/rsmart.com/sakai-mock/branches/10.4.x
 sakora -r 87664                   https://source.sakaiproject.org/contrib/rsmart/msub/sakora/branches/10.4.x
-sam                               https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/samigo/samigo-10.4.x
+sam -r 322002                     https://source.sakaiproject.org/svn/msub/rsmart.com/sam/branches/10.4.x
 search -r 319542                  https://source.sakaiproject.org/svn/msub/rsmart.com/search/branches/10.4.x
 sections -r 319543                https://source.sakaiproject.org/svn/msub/rsmart.com/sections/branches/10.4.x
 shortenedurl -r 319544            https://source.sakaiproject.org/svn/msub/rsmart.com/shortenedurl/branches/10.4.x
@@ -89,9 +89,9 @@ mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmar
 webservices                        https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 # Longsight mods
-kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/kernel/sakai10.x_custom
-cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
-lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/lessonbuilder/sakai-10.x
+kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/165/kernel/sakai10.x_custom
+cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/165/cloud-content/sakai10.x_custom
+lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/165/lessonbuilder/sakai-10.x
 msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
 assignment                        https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch
 
