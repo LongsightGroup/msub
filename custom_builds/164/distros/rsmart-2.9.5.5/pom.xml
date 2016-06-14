@@ -63,7 +63,6 @@
                 <module>cloud-content</module>
                 <module>common</module>
                 <module>config</module>
-                <!--module>config-viewer</module-->
                 <module>content</module>
                 <module>content-review</module>
                 <module>courier</module>
@@ -72,7 +71,6 @@
                 <module>edu-services</module>
                 <module>emailtemplateservice</module>
                 <module>entitybroker</module>
-                <module>EntityBrowser</module>
                 <module>evaluation</module>
 		<module>external-calendaring-service</module>
                 <module>gradebook</module>
@@ -130,6 +128,7 @@
                 <module>irubric</module>
  
                 <!--
+                <module>EntityBrowser</module>
                 <module>iclicker</module>
                 <module>kaltura</module>
                 <module>itunesu-tool</module>
@@ -155,6 +154,7 @@
                 <module>mneme</module>
                 <module>opensyllabus</module>
                 -->
+                <!--module>config-viewer</module-->
             </modules>
         </profile>
         <profile>
