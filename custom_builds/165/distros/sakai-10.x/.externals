@@ -50,7 +50,7 @@ polls -r 319528                   https://source.sakaiproject.org/svn/msub/rsmar
 portal -r 319529                  https://source.sakaiproject.org/svn/msub/rsmart.com/portal/branches/10.4.x
 postem -r 319530                  https://source.sakaiproject.org/svn/msub/rsmart.com/postem/branches/10.4.x
 presence -r 319531                https://source.sakaiproject.org/svn/msub/rsmart.com/presence/branches/10.4.x
-profile2 			  https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/branches/10.6.x
+profile2 -r 320597                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/branches/10.4.x
 providers -r 319533               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/branches/10.4.x
 reports -r 319535                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/branches/10.4.x
 reset-pass -r 319536              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/branches/10.4.x
@@ -97,5 +97,3 @@ assignment                        https://source.sakaiproject.org/svn/msub/longs
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
-#shell_command find profile2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
-#shell_command find master/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
