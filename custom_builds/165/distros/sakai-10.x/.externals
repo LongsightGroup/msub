@@ -13,6 +13,7 @@ clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/
 citations -r 319496               https://source.sakaiproject.org/svn/msub/rsmart.com/citations/branches/10.4.x
 common -r 319497                  https://source.sakaiproject.org/svn/msub/rsmart.com/common/branches/10.4.x
 config -r 319498                  https://source.sakaiproject.org/svn/msub/rsmart.com/config/branches/10.4.x
+content -r 319499                 https://source.sakaiproject.org/svn/msub/rsmart.com/content/branches/10.4.x
 content-review -r 319500          https://source.sakaiproject.org/svn/msub/rsmart.com/content-review/branches/10.4.x
 courier -r 319501                 https://source.sakaiproject.org/svn/msub/rsmart.com/courier/branches/10.4.x
 dav -r 319502                     https://source.sakaiproject.org/svn/msub/rsmart.com/dav/branches/10.4.x
@@ -36,7 +37,7 @@ jsf -r 319513                     https://source.sakaiproject.org/svn/msub/rsmar
 kaltura -r 319514                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/10.4.x
 login -r 319517                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/10.4.x
 mailsender -r 319519              https://source.sakaiproject.org/svn//msub/rsmart.com/mailsender/branches/10.4.x
-master                            https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.6.x
+master -r 319520                  https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.4.x
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 memory -r 319521                  https://source.sakaiproject.org/svn/msub/rsmart.com/memory/branches/10.4.x
 message -r 319522                 https://source.sakaiproject.org/svn/msub/rsmart.com/message/branches/10.4.x
@@ -75,6 +76,7 @@ turnitin -r 87666                https://source.sakaiproject.org/contrib/rsmart/
 user -r 319553                    https://source.sakaiproject.org/svn/msub/rsmart.com/user/branches/10.4.x
 userauditservice -r 319565        https://source.sakaiproject.org/svn/msub/rsmart.com/userauditservice/branches/10.4.x
 usermembership -r 319554          https://source.sakaiproject.org/svn/msub/rsmart.com/usermembership/branches/10.4.x
+velocity -r 319555                https://source.sakaiproject.org/svn/msub/rsmart.com/velocity/branches/10.4.x
 warehouse -r 319556               https://source.sakaiproject.org/svn/msub/rsmart.com/warehouse/branches/10.4.x
 web -r 319558                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/10.4.x
 
@@ -84,9 +86,6 @@ mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmar
 # Longsight disabled spellchecker; disabled to speed up build
 #reference                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/reference/sakai10.x_custom
 
-# Use the community branches for bug fixes not in rsmart branches
-content                            https://source.sakaiproject.org/svn/content/branches/sakai-10.x
-velocity                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/velocity/10.4.x
 webservices                        https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 # Longsight mods
