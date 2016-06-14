@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <packaging>pom</packaging>
+  <artifactId>rsmart-osp-common</artifactId>
+  <parent>
+    <artifactId>rsmart-osp</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>10.4</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <name>rsmart-osp-common</name>
+  <groupId>com.rsmart</groupId>
+  <organization>
+    <name>OSP</name>
+    <url>http://theospi.org/</url>
+  </organization>
+  <inceptionYear>2004</inceptionYear>
+  <modules>
+    <module>api</module>
+    <module>api-impl</module>
+    <module>component</module>
+  </modules>
+</project>
