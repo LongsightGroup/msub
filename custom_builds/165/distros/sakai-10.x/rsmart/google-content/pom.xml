@@ -35,11 +35,11 @@
     <module>tool</module>
   </modules>
 
-    <repositories>
-        <repository>
-            <id>svn.apache.org</id>
-            <name>Maven Repository for Apache</name>
-            <url>http://mandubian-mvn.googlecode.com/svn/trunk/mandubian-mvn/repository</url>
-        </repository>
-    </repositories>
+  <repositories>
+    <repository>
+      <id>burtsev-net-maven</id>
+      <name>Burtsev.Net Maven Repository</name>
+      <url>http://maven.burtsev.net</url>
+    </repository>
+  </repositories>
 </project>

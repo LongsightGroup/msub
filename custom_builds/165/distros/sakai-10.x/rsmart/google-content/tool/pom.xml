@@ -95,16 +95,16 @@
     </dependency>
 
     <dependency>
-      <groupId>com.google.gdata</groupId>
+      <groupId>com.google.gdata.gdata-java-client</groupId>
       <artifactId>gdata-docs-3.0</artifactId>
-      <version>1.41.5</version>
+      <version>1.42.0</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.google.gdata</groupId>
+      <groupId>com.google.gdata.gdata-java-client</groupId>
       <artifactId>gdata-media-1.0</artifactId>
-      <version>1.41.5</version>
+      <version>1.42.0</version>
       <scope>provided</scope>
     </dependency>
 
