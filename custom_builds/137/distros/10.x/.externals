@@ -81,9 +81,13 @@ login https://source.sakaiproject.org/svn/login/branches/sakai-10.x
 #preauth_filter https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/trunk/rsmart/preauth_filter
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 
+# S3 Content
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/10.x
+
 # LS-188 crazy melete
 #archive https://source.sakaiproject.org/svn/msub/longsight.com/archive/archive-10.x_backport
-kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-10.x_backport/
+#kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-10.x_backport/
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-10.x_backport
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes/etudes-util-1.0.25/
 ltiContact https://source.sakaiproject.org/contrib/longsight/etudes/ltiContact-1.2/
