@@ -16,8 +16,8 @@
 
 package com.rsmart.content.google.entity.access;
 
-import com.google.api.client.util.ByteStreams;
-import com.google.api.services.drive.model.File;
+import com.shadedgoogle.api.client.util.ByteStreams;
+import com.shadedgoogle.api.services.drive.model.File;
 import com.rsmart.content.google.api.GoogleDocsException;
 import com.rsmart.content.google.api.GoogleDocsServiceNotConfiguredException;
 import org.sakaiproject.authz.cover.SecurityService;

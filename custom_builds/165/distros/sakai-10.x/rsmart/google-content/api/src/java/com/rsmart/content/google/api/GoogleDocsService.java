@@ -16,7 +16,7 @@
 
 package com.rsmart.content.google.api;
 
-import com.google.api.services.drive.Drive;
+import com.shadedgoogle.api.services.drive.Drive;
 import com.rsmart.oauth.api.OAuthTokenService;
 import com.rsmart.oauth.api.OAuthToken;
 

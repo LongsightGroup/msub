@@ -16,8 +16,8 @@
 
 package com.rsmart.content.google.entity;
 
-import com.google.api.client.http.GenericUrl;
-import com.google.api.services.drive.model.File;
+import com.shadedgoogle.api.client.http.GenericUrl;
+import com.shadedgoogle.api.services.drive.model.File;
 import com.rsmart.content.google.api.GoogleDocumentType;
 import org.sakaiproject.content.api.ContentResource;
 import org.sakaiproject.content.api.ContentEntity;
