@@ -86,7 +86,6 @@ lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuild
 
 # LS-188 crazy melete
 #archive https://source.sakaiproject.org/svn/msub/longsight.com/archive/archive-10.x_backport
-#kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-10.x_backport/
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-10.x_backport
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes/etudes-util-1.0.25/
 ltiContact https://source.sakaiproject.org/contrib/longsight/etudes/ltiContact-1.2/
