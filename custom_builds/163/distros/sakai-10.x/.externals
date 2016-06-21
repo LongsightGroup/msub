@@ -86,3 +86,4 @@ bbb-tool                         https://github.com/blindsidenetworks/bigbluebut
 
 #shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command sed -i 's/ sessionId="meleteEditor" / /g' melete/melete-app/src/webapp/melete/addmodulesections.jsp
+#shell_command find master/ -name pom.xml -exec sed -i 's/https:\/\/maven.sencha.com\/repo\/commercial-release/http:\/\/nexus.sakaiproject.org:8081\/nexus\/content\/groups\/public/g' {} \;
