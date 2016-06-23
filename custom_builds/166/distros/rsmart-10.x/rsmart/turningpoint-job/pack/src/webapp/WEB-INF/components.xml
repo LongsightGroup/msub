@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2011 The rSmart Group
+  ~
+  ~ The contents of this file are subject to the Mozilla Public License
+  ~ Version 1.1 (the "License"); you may not use this file except in
+  ~ compliance with the License. You may obtain a copy of the License at
+  ~ http://www.mozilla.org/MPL/
+  ~
+  ~ Software distributed under the License is distributed on an "AS IS"
+  ~ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  ~ License for the specific language governing rights and limitations
+  ~ under the License.
+  ~
+  ~ Contributor(s): mukul
+  -->
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+
+    <bean id="turningPoint.AdditionalHibernateMappings"
+          class="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl">
+        <property name="mappingResources">
+            <list>
+                <value>com/rsmart/turningpoint/impl/hibernate/DeviceIdMapping.hbm.xml</value>
+            </list>
+        </property>
+    </bean>    
+
+    <bean id="com.rsmart.turningpoint.api.TurningPointJobService"
+          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+        <property name="transactionManager">
+            <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
+        </property>
+        <property name="target">
+            <ref bean="com.rsmart.turningpoint.api.TurningPointJobService.wrapped"/>
+        </property>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="addAwardCriteria">PROPAGATION_REQUIRES_NEW</prop>
+                <prop key="setDocumentTemplate">PROPAGATION_REQUIRES_NEW</prop>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="com.rsmart.turningpoint.api.TurningPointJobService.wrapped"
+          class="com.rsmart.turningpoint.service.hibernate.TurningPointJobServiceImpl"
+          init-method="init">
+        <property name="sessionFactory" ref="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/>
+        <property name="userDirectoryService" ref="org.sakaiproject.user.api.UserDirectoryService"/>
+    </bean>
+
+</beans>
