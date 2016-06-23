@@ -1,1 +1,0 @@
-* SAK-30325 deliver the direct link to the file instead of loading the file into JVM heap
