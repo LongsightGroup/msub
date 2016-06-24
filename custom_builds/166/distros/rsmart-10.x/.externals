@@ -94,7 +94,7 @@ kernel                            https://source.sakaiproject.org/svn/msub/longs
 cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/cloud-content/sakai10.x_custom
 lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/lessonbuilder/sakai-10.x
 msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
-assignment                        https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch
+assignment -r 321780              https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
