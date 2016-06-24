@@ -5,7 +5,7 @@ master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 
 # Core services
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
-content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
+#content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
 emailtemplateservice https://source.sakaiproject.org/svn/emailtemplateservice/branches/sakai-10.x
 entitybroker https://source.sakaiproject.org/svn/entitybroker/branches/sakai-10.x
@@ -20,7 +20,7 @@ access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
 alias https://source.sakaiproject.org/svn/alias/branches/sakai-10.x
 announcement https://source.sakaiproject.org/svn/announcement/branches/sakai-10.x
 archive https://source.sakaiproject.org/svn/archive/branches/sakai-10.x
-assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
+#assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
 authz https://source.sakaiproject.org/svn/authz/branches/sakai-10.x
 basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
@@ -69,9 +69,11 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 #mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT -Dsakai.jdk.version=1.7
 
 #customizations:
+assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport/
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/kernel/10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/config/10.x
+content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 kaltura https://github.com/LongsightGroup/sakai-extension/branches/nd-10.x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
@@ -114,3 +116,18 @@ gcalendar https://source.sakaiproject.org/contrib/umich/google/gcalendar/trunk
 #It's possible the PacificInstitutionalAdvisor will fail, so the easiest fix is to remove that and remove it from the bean.
 messageservice https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/branches/10.2.x
 gradebook2-export https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/trunk/rsmart/gradebook2-export
+
+
+#VeriCite
+#shell_command cd content-review
+#shell_command cat contentreview-federated/pack/src/webapp/WEB-INF/components.xml | sed "s/<ref bean=\"org.sakaiproject.contentreview.service.ContentReviewServiceTii\"\/>/<ref bean=\"org.sakaiproject.contentreview.service.ContentReviewServiceVeriCite\"\/>/g" > contentreview-federated/pack/src/webapp/WEB-INF/components.xml.2
+#shell_command mv contentreview-federated/pack/src/webapp/WEB-INF/components.xml.2 contentreview-federated/pack/src/webapp/WEB-INF/components.xml
+#shell_command git clone -b 2.0 https://github.com/LongsightGroup/contentreview-impl-vericite.git
+#shell_command cd contentreview-impl-vericite
+#shell_command git apply sakai10x.patch
+#shell_command cd ../..
+
+#GIT Projects
+#git_project content-review/contentreview-impl-vericite
+
+
