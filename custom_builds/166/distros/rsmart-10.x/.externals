@@ -1,4 +1,4 @@
-ter                            https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.6.x
+master                            https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.6.x
 
 access -r 319487                  https://source.sakaiproject.org/svn/msub/rsmart.com/access/branches/10.4.x
 alias -r 319488                   https://source.sakaiproject.org/svn/msub/rsmart.com/alias/branches/10.4.x
