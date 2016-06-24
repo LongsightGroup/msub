@@ -83,7 +83,7 @@
                 <module>evaluation</module>
 		        <module>external-calendaring-service</module>
                 <module>gradebook</module>
-                <module>gradebook2</module>
+                <!--module>gradebook2</module-->
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>iclicker</module>
@@ -141,7 +141,6 @@
                 <module>usermembership</module>
                 <module>reset-pass</module>
                 <module>taggable</module>
-                <module>turnitin/contentreview-impl</module>
 		        <module>irubric</module>
             </modules>
         </profile>
