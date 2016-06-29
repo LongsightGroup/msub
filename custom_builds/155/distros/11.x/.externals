@@ -92,10 +92,4 @@ scorm                            https://github.com/LongsightGroup/SCORMCloud_Sa
 scorm/SCORMCloud_JavaLibrary     https://github.com/LongsightGroup/SCORMCloud_JavaLibrary/trunk
 
 #POM Changes
-#shell_command sed -i 's/2.9.2/11-SNAPSHOT/g' iclicker/pom.xml
-#shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
-
-#VeriCite
-#shell_command cd content-review
-#shell_command git clone -b 2.0 https://github.com/vericite/contentreview-impl-vericite.git
