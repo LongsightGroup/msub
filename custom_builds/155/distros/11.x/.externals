@@ -12,6 +12,7 @@ entitybroker https://github.com/sakaiproject/sakai/branches/11.x/entitybroker
 external-calendaring-service https://github.com/sakaiproject/sakai/branches/11.x/external-calendaring-service/
 hierarchy https://github.com/sakaiproject/sakai/branches/11.x/hierarchy
 jsf https://github.com/sakaiproject/sakai/branches/11.x/jsf
+user https://github.com/sakaiproject/sakai/branches/11.x/user
 userauditservice https://github.com/sakaiproject/sakai/branches/11.x/userauditservice
 
 # Core Sakai Tools
@@ -83,7 +84,6 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
 
 #customizations
-evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 clog https://github.com/sakaicontrib/clog/branches/11.x
 gradebook2 https://github.com/sakaicontrib/gradebook2
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
