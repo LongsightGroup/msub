@@ -111,7 +111,7 @@ gcalendar https://github.com/sakaicontrib/gcalendar/trunk
 
 #VeriCite
 #shell_command cd content-review
-#shell_command cat contentreview-federated/pack/src/webapp/WEB-INF/components.xml | sed sed "s/-->/--><ref bean=\"org.sakaiproject.contentreview.service.ContentReviewServiceVeriCite\"\/>/g" > contentreview-federated/pack/src/webapp/WEB-INF/components.xml.2
+#shell_command cat contentreview-federated/pack/src/webapp/WEB-INF/components.xml | sed "s/-->/--><ref bean=\"org.sakaiproject.contentreview.service.ContentReviewServiceVeriCite\"\/>/g" > contentreview-federated/pack/src/webapp/WEB-INF/components.xml.2
 #shell_command mv contentreview-federated/pack/src/webapp/WEB-INF/components.xml.2 contentreview-federated/pack/src/webapp/WEB-INF/components.xml
 #shell_command git clone -b 2.0 https://github.com/LongsightGroup/contentreview-impl-vericite.git
 #shell_command cd ..
