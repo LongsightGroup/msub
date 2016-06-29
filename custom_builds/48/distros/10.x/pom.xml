@@ -122,6 +122,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>bigbluebutton-sakai/bbb-tool</module>
+                <module>cloud-content</module>
             </modules>
         </profile>
         <profile>
