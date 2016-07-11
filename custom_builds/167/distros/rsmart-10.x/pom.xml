@@ -124,7 +124,7 @@
                 <module>search</module>
                 <module>sections</module>
                 <module>shortenedurl</module>
-                <module>skin-manager</module>
+                <!-- module>skin-manager</module -->
                 <module>signup</module>
                 <module>site</module>
                 <module>site-manage</module>
