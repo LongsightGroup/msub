@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>rsmart-upgrade</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>10.4</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>rsmart-upgrade-component</artifactId>
+  <groupId>com.rsmart</groupId>
+  <name>rSmart Upgrader Component</name>
+  <organization>
+    <name>The rSmart Group</name>
+    <url>http://www.rsmart.com/</url>
+  </organization>
+  <inceptionYear>2006</inceptionYear>
+  <packaging>sakai-component</packaging>
+  <properties>
+    <deploy.target>components</deploy.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>rsmart-upgrade-impl</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/resources</directory>
+      </resource>
+    </resources>
+  </build>
+</project>

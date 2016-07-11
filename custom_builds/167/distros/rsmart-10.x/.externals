@@ -1,0 +1,103 @@
+master                            https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/10.6.x
+
+access -r 319487                  https://source.sakaiproject.org/svn/msub/rsmart.com/access/branches/10.4.x
+alias -r 319488                   https://source.sakaiproject.org/svn/msub/rsmart.com/alias/branches/10.4.x
+ambrosia -r 87651                https://source.sakaiproject.org/contrib/rsmart/msub/ambrosia/branches/10.4.x
+announcement -r 319489            https://source.sakaiproject.org/svn/msub/rsmart.com/announcement/branches/10.4.x
+archive -r 319490                 https://source.sakaiproject.org/svn/msub/rsmart.com/archive/branches/10.4.x
+authz -r 319492                   https://source.sakaiproject.org/svn/msub/rsmart.com/authz/branches/10.4.x
+basiclti -r 319493                https://source.sakaiproject.org/svn/msub/rsmart.com/basiclti/branches/10.4.x
+bigbluebutton -r 356           https://github.com/asahinet/bigbluebutton-sakai/branches/master/bbb-tool
+blogwow -r 87652                 https://source.sakaiproject.org/contrib/rsmart/msub/blogwow/branches/10.4.x
+calendar -r 319494                https://source.sakaiproject.org/svn/msub/rsmart.com/calendar/branches/10.4.x
+chat -r 319495                    https://source.sakaiproject.org/svn/msub/rsmart.com/chat/branches/10.4.x
+clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/10.4.x
+citations -r 319496               https://source.sakaiproject.org/svn/msub/rsmart.com/citations/branches/10.4.x
+common -r 319497                  https://source.sakaiproject.org/svn/msub/rsmart.com/common/branches/10.4.x
+config -r 319498                  https://source.sakaiproject.org/svn/msub/rsmart.com/config/branches/10.4.x
+content -r 319499                 https://source.sakaiproject.org/svn/msub/rsmart.com/content/branches/10.4.x
+content-review -r 319500          https://source.sakaiproject.org/svn/msub/rsmart.com/content-review/branches/10.4.x
+courier -r 319501                 https://source.sakaiproject.org/svn/msub/rsmart.com/courier/branches/10.4.x
+dav -r 319502                     https://source.sakaiproject.org/svn/msub/rsmart.com/dav/branches/10.4.x
+delegatedaccess -r 319503         https://source.sakaiproject.org/svn/msub/rsmart.com/delegatedaccess/branches/10.4.x
+edia-sakai-utils -r 87655        https://source.sakaiproject.org/contrib/rsmart/msub/edia-sakai-utils/branches/10.4.x
+edu-services -r 319504            https://source.sakaiproject.org/svn/msub/rsmart.com/edu-services/branches/10.4.x
+emailtemplateservice -r 319505    https://source.sakaiproject.org/svn/msub/rsmart.com/emailtemplateservice/branches/10.4.x
+entitybroker -r 319506            https://source.sakaiproject.org/svn/msub/rsmart.com/entitybroker/branches/10.4.x
+etudes-util -r 87656             https://source.sakaiproject.org/contrib/rsmart/msub/etudes-util/branches/10.4.x
+external-calendaring-service -r 319507 https://source.sakaiproject.org/svn/msub/rsmart.com/external-calendaring-service/branches/10.4.x
+evaluation -r 87657              https://source.sakaiproject.org/contrib/rsmart/msub/evaluation/branches/10.4.x
+gradebook -r 319508               https://source.sakaiproject.org/svn/msub/rsmart.com/gradebook/branches/10.4.x
+gradebook2 -r 87658              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/10.4.x
+help -r 319509                    https://source.sakaiproject.org/svn/msub/rsmart.com/help/branches/10.4.x
+hierarchy -r 319510               https://source.sakaiproject.org/svn/msub/rsmart.com/hierarchy/branches/10.4.x
+itunesu-tool -r 87659            https://source.sakaiproject.org/contrib/rsmart/msub/itunesu-tool/branches/10.4.x
+iclicker -r 87660                https://source.sakaiproject.org/contrib/rsmart/msub/iclicker/branches/10.4.x
+jforum -r 87661                  https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/10.4.x
+jobscheduler -r 319512            https://source.sakaiproject.org/svn/msub/rsmart.com/jobscheduler/branches/10.4.x
+jsf -r 319513                     https://source.sakaiproject.org/svn/msub/rsmart.com/jsf/branches/10.4.x
+kaltura -r 319514                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/10.4.x
+login -r 319517                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/10.4.x
+mailsender -r 319519              https://source.sakaiproject.org/svn//msub/rsmart.com/mailsender/branches/10.4.x
+melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
+memory -r 319521                  https://source.sakaiproject.org/svn/msub/rsmart.com/memory/branches/10.4.x
+message -r 319522                 https://source.sakaiproject.org/svn/msub/rsmart.com/message/branches/10.4.x
+messageservice -r 87663          https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/branches/10.4.x
+metaobj -r 319523                 https://source.sakaiproject.org/svn/msub/rsmart.com/metaobj/branches/10.4.x
+osp -r 319525                     https://source.sakaiproject.org/svn/msub/rsmart.com/osp/branches/10.4.x
+pack -r 319526                    https://source.sakaiproject.org/svn/msub/rsmart.com/pack/branches/10.4.x 
+podcasts -r 319527                https://source.sakaiproject.org/svn/msub/rsmart.com/podcasts/branches/10.4.x
+polls -r 319528                   https://source.sakaiproject.org/svn/msub/rsmart.com/polls/branches/10.4.x
+portal -r 319529                  https://source.sakaiproject.org/svn/msub/rsmart.com/portal/branches/10.4.x
+postem -r 319530                  https://source.sakaiproject.org/svn/msub/rsmart.com/postem/branches/10.4.x
+presence -r 319531                https://source.sakaiproject.org/svn/msub/rsmart.com/presence/branches/10.4.x
+profile2 -r 320597                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/branches/10.4.x
+providers -r 319533               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/branches/10.4.x
+reports -r 319535                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/branches/10.4.x
+reset-pass -r 319536              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/branches/10.4.x
+rights -r 319537                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/branches/10.4.x
+roster2 -r 319538                 https://source.sakaiproject.org/svn/msub/rsmart.com/roster2/branches/10.4.x
+rwiki -r 319539                   https://source.sakaiproject.org/svn/msub/rsmart.com/rwiki/branches/10.4.x
+sakai-mock -r 319540              https://source.sakaiproject.org/svn/msub/rsmart.com/sakai-mock/branches/10.4.x
+sakora -r 87664                   https://source.sakaiproject.org/contrib/rsmart/msub/sakora/branches/10.4.x
+sam -r 322002                     https://source.sakaiproject.org/svn/msub/rsmart.com/sam/branches/10.4.x
+search -r 319542                  https://source.sakaiproject.org/svn/msub/rsmart.com/search/branches/10.4.x
+sections -r 319543                https://source.sakaiproject.org/svn/msub/rsmart.com/sections/branches/10.4.x
+shortenedurl -r 319544            https://source.sakaiproject.org/svn/msub/rsmart.com/shortenedurl/branches/10.4.x
+signup -r 319545                  https://source.sakaiproject.org/svn/msub/rsmart.com/signup/branches/10.4.x 
+site -r 319546                    https://source.sakaiproject.org/svn/msub/rsmart.com/site/branches/10.4.x
+site-manage -r 319547             https://source.sakaiproject.org/svn/msub/rsmart.com/site-manage/branches/10.4.x
+sitestats -r 319548               https://source.sakaiproject.org/svn/msub/rsmart.com/sitestats/branches/10.4.x
+skin-manager -r 87665            https://source.sakaiproject.org/contrib/rsmart/msub/skin-manager/branches/10.4.x
+syllabus -r 321596                https://source.sakaiproject.org/svn/msub/rsmart.com/syllabus/branches/10.4.x
+taggable -r 319550                https://source.sakaiproject.org/svn/msub/rsmart.com/taggable/branches/10.4.x
+textarea -r 319551                https://source.sakaiproject.org/svn/msub/rsmart.com/textarea/branches/10.4.x
+tool -r 319552                    https://source.sakaiproject.org/svn/msub/rsmart.com/tool/branches/10.4.x
+turnitin -r 87666                https://source.sakaiproject.org/contrib/rsmart/msub/turnitin/branches/10.4.x
+user -r 319553                    https://source.sakaiproject.org/svn/msub/rsmart.com/user/branches/10.4.x
+userauditservice -r 319565        https://source.sakaiproject.org/svn/msub/rsmart.com/userauditservice/branches/10.4.x
+usermembership -r 319554          https://source.sakaiproject.org/svn/msub/rsmart.com/usermembership/branches/10.4.x
+velocity -r 319555                https://source.sakaiproject.org/svn/msub/rsmart.com/velocity/branches/10.4.x
+warehouse -r 319556               https://source.sakaiproject.org/svn/msub/rsmart.com/warehouse/branches/10.4.x
+web -r 319558                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/10.4.x
+
+# MailArchive requires a custom ANI anti-virus JAR
+mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/10.4.x
+
+# Longsight disabled spellchecker; disabled to speed up build
+#reference                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/reference/sakai10.x_custom
+
+webservices                        https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+
+# Longsight mods
+kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/kernel/sakai10.x_custom
+cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/cloud-content/sakai10.x_custom
+lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/lessonbuilder/sakai-10.x
+msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
+assignment -r 321780              https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch
+
+#shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
+#shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
+#shell_command find profile2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
+#shell_command find master/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
+#shell_command find master/ -name pom.xml -exec sed -i 's/https:\/\/maven.sencha.com\/repo\/commercial-release/http:\/\/nexus.sakaiproject.org:8081\/nexus\/content\/groups\/public/g' {} \;
