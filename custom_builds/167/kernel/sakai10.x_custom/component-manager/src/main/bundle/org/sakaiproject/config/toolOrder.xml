@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolOrder>
+<category name="course">
+<tool id="sakai.iframe.myworkspace"/>
+<tool id="sakai.iframe.site"/>
+<tool id="sakai.synoptic.chat"/>
+<tool id="sakai.synoptic.discussion"/>
+<tool id="sakai.synoptic.announcement"/>
+<tool id="home" selected="true"/>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.course.Communication">
+<name><![CDATA[Communication]]></name>
+<tool id="sakai.announcements"/>
+<tool id="sakai.schedule"/>
+<tool id="sakai.jforum.tool"/>
+<tool id="sakai.messages"/>
+<tool id="sakai.forums"/>
+<tool id="sakai.mailtool"/>
+<tool id="sakai.mailbox"/>
+<tool id="sakai.chat"/>
+<tool id="rsmart.virtual_classroom.tool"/>
+<tool id="sakai.blogwow"/>
+<tool id="sakai.clog"/>
+<tool id="sakai.poll"/>
+<tool id="sakai.bbb"/>
+<tool id="sakai-elluminate"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.course.Course_Tools">
+<name><![CDATA[Course Tools]]></name>
+<tool id="sakai.syllabus"/>
+<tool id="sakai.melete"/>
+<tool id="sakai.resources"/>
+<tool id="sakai.assignment.grades"/>
+<tool id="sakai.samigo"/>
+<tool id="sakai.mneme"/>
+<tool id="sakai.dropbox"/>
+<tool id="sakai.gradebook.tool"/>
+<tool id="sakai.gradebook.gwt.rpc"/>
+<tool id="sakai.postem"/>
+<tool id="sakai.podcasts"/>
+<tool id="sakai.rwiki"/>
+<tool id="sakai.news"/>
+<tool id="sakai.iframe"/>
+<tool id="sakai.basiclti"/>
+<tool id="sakai.kaltura"/>
+<tool id="sakai.turningtool"/>
+<tool id="sakai.signup"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.course.Site_Management">
+<name><![CDATA[Site Management]]></name>
+<tool id="sakai.siteinfo" required="true"/>
+<tool id="sakai.sections"/>
+<tool id="sakai.sitestats"/>
+<tool id="edia.sakai.selector"/>
+<tool id="sakai.site.roster"/>
+<tool id="sakai.search"/>
+</toolCategory>
+</category>
+<category name="portfolio">
+<tool id="sakai.iframe.myworkspace"/>
+<tool id="sakai.iframe.site"/>
+<tool id="sakai.synoptic.chat"/>
+<tool id="sakai.synoptic.discussion"/>
+<tool id="sakai.synoptic.announcement"/>
+<tool id="home" selected="true"/>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.portfolio.Communication">
+<name><![CDATA[Communication]]></name>
+<tool id="sakai.announcements"/>
+<tool id="sakai.schedule"/>
+<tool id="sakai.mailtool"/>
+<tool id="sakai.mailbox"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.portfolio.Portfolio_Tools">
+<name><![CDATA[Portfolio Tools]]></name>
+<tool id="sakai.resources"/>
+<tool id="osp.glossary"/>
+<tool id="osp.matrix"/>
+<tool id="osp.wizard"/>
+<tool id="osp.presentation"/>
+<tool id="sakai.assignment.grades"/>
+<tool id="sakai.news"/>
+<tool id="sakai.iframe"/>
+<tool id="sakai.basiclti"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.portfolio.Site_Management">
+<name><![CDATA[Site Management]]></name>
+<tool id="sakai.siteinfo" required="true"/>
+<tool id="osp.evaluation"/>
+<tool id="sakai.metaobj"/>
+<tool id="osp.presTemplate"/>
+<tool id="osp.presLayout"/>
+<tool id="osp.style"/>
+<tool id="sakai.site.roster"/>
+<tool id="edia.sakai.selector"/>
+<tool id="sakai.search"/>
+</toolCategory>
+</category>
+<category name="project">
+<tool id="sakai.iframe.myworkspace"/>
+<tool id="sakai.iframe.site"/>
+<tool id="sakai.synoptic.chat"/>
+<tool id="sakai.synoptic.discussion"/>
+<tool id="sakai.synoptic.announcement"/>
+<tool id="home" selected="true"/>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.project.Communication">
+<name><![CDATA[Communication]]></name>
+<tool id="sakai.announcements"/>
+<tool id="sakai.schedule"/>
+<tool id="sakai.jforum.tool"/>
+<tool id="sakai.messages"/>
+<tool id="sakai.forums"/>
+<tool id="sakai.mailtool"/>
+<tool id="sakai.mailbox"/>
+<tool id="sakai.chat"/>
+<tool id="rsmart.virtual_classroom.tool"/>
+<tool id="sakai.blogwow"/>
+<tool id="sakai.clog"/>
+<tool id="sakai.bbb"/>
+<tool id="sakai-elluminate"/>
+<tool id="sakai.poll"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.project.Project_Tools">
+<name><![CDATA[Project Tools]]></name>
+<tool id="sakai.melete"/>
+<tool id="sakai.resources"/>
+<tool id="sakai.dropbox"/>
+<tool id="sakai.podcasts"/>
+<tool id="sakai.rwiki"/>
+<tool id="sakai.news"/>
+<tool id="sakai.iframe"/>
+<tool id="sakai.basiclti"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.project.Site_Management">
+<name><![CDATA[Site Management]]></name>
+<tool id="sakai.siteinfo" required="true"/>
+<tool id="sakai.sections"/>
+<tool id="sakai.sitestats"/>
+<tool id="sakai.site.roster"/>
+<tool id="edia.sakai.selector"/>
+<tool id="sakai.search"/>
+</toolCategory>
+</category>
+<category name="portfolioAdmin">
+<tool id="sakai.iframe.myworkspace"/>
+<tool id="sakai.iframe.site"/>
+<tool id="sakai.synoptic.chat"/>
+<tool id="sakai.synoptic.discussion"/>
+<tool id="sakai.synoptic.announcement"/>
+<tool id="home" selected="true"/>
+<tool id="sakai.schedule"/>
+<tool id="sakai.announcements"/>
+<tool id="sakai.resources"/>
+<tool id="sakai.mailbox"/>
+<tool id="osp.presTemplate"/>
+<tool id="osp.presLayout"/>
+<tool id="osp.style"/>
+<tool id="osp.glossary"/>
+<tool id="sakai.metaobj"/>
+<tool id="osp.matrix"/>
+<tool id="osp.wizard"/>
+<tool id="sakai.sitesetup"/>
+<tool id="sakai.usermembership"/>
+<tool id="sakai.search"/>
+</category>
+<category name="aw">
+<tool id="sakai.iframe.myworkspace"/>
+<tool id="sakai.iframe.site"/>
+<tool id="sakai.synoptic.chat"/>
+<tool id="sakai.synoptic.discussion"/>
+<tool id="sakai.synoptic.announcement"/>
+<tool id="home" selected="true"/>
+<tool id="sakai.search"/>
+<tool id="sakai.users"/>
+<tool id="sakai.sites"/>
+<tool id="sakai.realms"/>
+<tool id="sakai.aliases"/>
+<tool id="sakai.resources"/>
+<tool id="sakai.configviewer"/>
+<tool id="sakai.announcements"/>
+<tool id="sakai.sitesetup"/>
+<tool id="sakai.archive"/>
+<tool id="edia.sakai.skinmanager"/>
+<tool id="sakai.memory"/>
+<tool id="sakai.online"/>
+<tool id="sakai.scheduler"/>
+<tool id="sakai.su"/>
+<tool id="sakai.usermembership"/>
+<tool id="rsmart.customizer"/>
+<tool id="sakai.emailtemplateservice"/>
+<tool id="sakai.rsf.evaluation"/>
+<tool id="com.rsmart.oauth.provider"/>
+<tool id="com.rsmart.oauth.token"/>
+</category>
+<category name="myworkspacebuserdguest">
+<tool id="sakai.iframe.myworkspace"/>
+<tool id="sakai.iframe.site"/>
+<tool id="sakai.synoptic.chat"/>
+<tool id="sakai.synoptic.discussion"/>
+<tool id="sakai.synoptic.announcement"/>
+<tool id="home" selected="true"/>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.myworkspacebuserdguest.My_Communications">
+<name><![CDATA[My Communications]]></name>
+<tool id="sakai.schedule"/>
+<tool id="sakai.announcements"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.myworkspacebuserdguest.My_Tools">
+<name><![CDATA[My Tools]]></name>
+<tool id="sakai.resources"/>
+<tool id="sakai.news"/>
+<tool id="sakai.iframe"/>
+<tool id="sakai.search"/>
+<tool id="osp.presentation"/>
+<tool id="sakai.rsf.evaluation"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.myworkspacebuserdguest.My_Settings">
+<name><![CDATA[My Settings]]></name>
+<tool id="sakai.profile"/>
+<tool id="sakai.profile2"/>
+<tool id="sakai.membership"/>
+<tool id="sakai.preferences"/>
+<tool id="sakai.singleuser"/>
+<tool id="sakai.sitesetup"/>
+</toolCategory>
+</category>
+<category name="myworkspacebuserdregistered">
+<tool id="sakai.iframe.myworkspace"/>
+<tool id="sakai.iframe.site"/>
+<tool id="sakai.synoptic.chat"/>
+<tool id="sakai.synoptic.discussion"/>
+<tool id="sakai.synoptic.announcement"/>
+<tool id="home" selected="true"/>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.myworkspacebuserdregistered.My_Communications">
+<name><![CDATA[My Communications]]></name>
+<tool id="sakai.schedule"/>
+<tool id="sakai.announcements"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.myworkspacebuserdregistered.My_Tools">
+<name><![CDATA[My Tools]]></name>
+<tool id="sakai.resources"/>
+<tool id="osp.presentation"/>
+<tool id="osp.matrix"/>
+<tool id="sakai.news"/>
+<tool id="sakai.iframe"/>
+<tool id="sakai.search"/>
+<tool id="sakai.rsf.evaluation"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.myworkspacebuserdregistered.My_Settings">
+<name><![CDATA[My Settings]]></name>
+<tool id="sakai.profile"/>
+<tool id="sakai.profile2"/>
+<tool id="sakai.membership"/>
+<tool id="sakai.preferences"/>
+<tool id="sakai.singleuser"/>
+<tool id="com.rsmart.oauth.token"/>
+<tool id="sakai.sitesetup"/>
+</toolCategory>
+</category>
+<category name="myworkspacebuserdmaintain">
+<tool id="sakai.iframe.myworkspace"/>
+<tool id="sakai.iframe.site"/>
+<tool id="sakai.synoptic.chat"/>
+<tool id="sakai.synoptic.discussion"/>
+<tool id="sakai.synoptic.announcement"/>
+<tool id="home" selected="true"/>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.myworkspacebuserdmaintain.My_Communications">
+<name><![CDATA[My Communications]]></name>
+<tool id="sakai.schedule"/>
+<tool id="sakai.announcements"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.myworkspacebuserdmaintain.My_Tools">
+<name><![CDATA[My Tools]]></name>
+<tool id="sakai.resources"/>
+<tool id="osp.presentation"/>
+<tool id="osp.matrix"/>
+<tool id="sakai.news"/>
+<tool id="sakai.iframe"/>
+<tool id="sakai.search"/>
+<tool id="sakai.rsf.evaluation"/>
+</toolCategory>
+<toolCategory id="org.theospi.portfolio.portal.model.ToolCategory.myworkspacebuserdmaintain.My_Settings">
+<name><![CDATA[My Settings]]></name>
+<tool id="sakai.profile"/>
+<tool id="sakai.profile2"/>
+<tool id="sakai.membership"/>
+<tool id="sakai.preferences"/>
+<tool id="sakai.singleuser"/>
+<tool id="com.rsmart.oauth.token"/>
+<tool id="sakai.sitesetup"/>
+</toolCategory>
+</category>
+<category name="myworkspacetadmin">
+<tool id="sakai.iframe.myworkspace"/>
+<tool id="sakai.iframe.site"/>
+<tool id="sakai.synoptic.chat"/>
+<tool id="sakai.synoptic.discussion"/>
+<tool id="sakai.synoptic.announcement"/>
+<tool id="home" selected="true"/>
+<tool id="sakai.search"/>
+<tool id="sakai.users"/>
+<tool id="sakai.aliases"/>
+<tool id="sakai.sites"/>
+<tool id="sakai.realms"/>
+<tool id="sakai.sitesetup"/>
+<tool id="sakai.announcements"/>
+<tool id="sakai.resources"/>
+<tool id="sakai.configviewer"/>
+<tool id="sakai.archive"/>
+<tool id="edia.sakai.skinmanager"/>
+<tool id="sakai.rutgers.linktool"/>
+<tool id="sakai.online"/>
+<tool id="sakai.memory"/>
+<tool id="sakai.scheduler"/>
+<tool id="sakai.su"/>
+<tool id="sakai.usermembership"/>
+<tool id="rsmart.customizer"/>
+<tool id="sakai.emailtemplateservice"/>
+<tool id="sakai.rsf.evaluation"/>
+<tool id="com.rsmart.oauth.provider"/>
+<tool id="com.rsmart.oauth.token"/>
+</category>
+</toolOrder>
