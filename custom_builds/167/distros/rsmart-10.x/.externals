@@ -90,9 +90,9 @@ mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmar
 webservices                        https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 # Longsight mods
-kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/kernel/sakai10.x_custom
-cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/cloud-content/sakai10.x_custom
-lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/lessonbuilder/sakai-10.x
+kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/167/kernel/sakai10.x_custom
+cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/167/cloud-content/sakai10.x_custom
+lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/167/lessonbuilder/sakai-10.x
 msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
 assignment -r 321780              https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch
 
