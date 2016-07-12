@@ -4,7 +4,6 @@
 master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 
 # Core services
-kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
@@ -35,7 +34,6 @@ courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-10.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-10.x
-lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
 login https://source.sakaiproject.org/svn/login/branches/sakai-10.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
@@ -70,7 +68,12 @@ usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
-#customizations:
+#s3 Content
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/10.x
+lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/sakai-10.x-s3
+
+# CUSTOMIZATIONS:
 attendance https://github.com/UDayton/attendance/branches/10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
