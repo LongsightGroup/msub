@@ -74,7 +74,7 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #s3 Content
-kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/78/kernel
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x_backport-aws-s3
 cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/10.x
 lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/sakai-10.x-s3
 
