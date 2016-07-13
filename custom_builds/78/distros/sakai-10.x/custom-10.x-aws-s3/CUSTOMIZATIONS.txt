@@ -1,0 +1,7 @@
+KNL-1268 allow cloud-content
+KNL-1252 "Hard" Delete
+ * SAK-30325 deliver the file directly to Nginx via X-Accel-Redirect and keep the file out of the JVM heap
+   * https://github.com/sakaiproject/sakai/pull/1691
+   * SAK-30455 make sure to record content.read events
+KNL-1436 auto-restart the ClusterEventTracking thread
+   * https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/2607.patch
