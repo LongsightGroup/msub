@@ -126,7 +126,7 @@
                 <module>turnitin/contentreview-impl</module>
                 <module>scoring-service</module>
                 <module>irubric</module>
- 
+                <module>certification</module>
                 <!--
                 <module>EntityBrowser</module>
                 <module>iclicker</module>
