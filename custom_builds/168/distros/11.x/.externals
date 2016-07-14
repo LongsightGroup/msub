@@ -84,6 +84,6 @@ web https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/web
 webservices https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/webservices
 
 # Customizations
-commons	https://github.com/sakaicontrib/branches/11.x/commons
+commons	https://github.com/sakaicontrib/commons/branches/11.x
 sakai-widgets https://github.com/NoodlePartners/sakai-widgets/branches/longsight-deploy
 #shell_command git clone https://github.com/steveswinsburg/student-engagement.git
