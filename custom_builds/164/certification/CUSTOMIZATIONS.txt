@@ -1,0 +1,1 @@
+* Fix certification for S3 by changing FileInputStream to InputStream
