@@ -119,7 +119,6 @@
                 <module>web</module>
                 <module>usermembership</module>
                 <module>sakai-wicket</module>
-                <module>reports</module>
                 <module>reset-pass</module>
                 <module>taggable</module>
                 <module>turnitin/contentreview-impl</module>
@@ -133,6 +132,7 @@
                 <module>certification</module>
                 <!--
                 <module>osp</module>
+                <module>reports</module>
                 <module>warehouse</module>
                 <module>EntityBrowser</module>
                 <module>iclicker</module>
