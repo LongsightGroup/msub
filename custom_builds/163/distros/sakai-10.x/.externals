@@ -89,7 +89,7 @@ providers			 https://source.sakaiproject.org/svn/msub/longsight.com/providers/sa
 
 # rSmart needs metaobj
 metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
-rsmart                           https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/10.4.1.1-M2/rsmart
+rsmart                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/distros/sakai-10.x/rsmart/pom.xml
 
 #shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
