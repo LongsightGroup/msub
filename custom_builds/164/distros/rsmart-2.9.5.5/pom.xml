@@ -44,6 +44,7 @@
             <modules>
                 <module>master</module>
                 <module>rsmart/rsmart-Decryption</module>
+                <module>rsmart/antivirus</module>
                 <module>kernel</module>
                 <module>kernel-deploy</module>
                 <module>hybrid</module>
