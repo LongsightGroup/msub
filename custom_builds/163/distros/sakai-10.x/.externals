@@ -40,7 +40,6 @@ mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
 memory https://source.sakaiproject.org/svn/memory/branches/sakai-10.x
 message https://source.sakaiproject.org/svn/message/branches/sakai-10.x
-metaobj https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/sakai-10.x
 pack https://source.sakaiproject.org/svn/pack/branches/sakai-10.x
 podcasts https://source.sakaiproject.org/svn/podcasts/branches/sakai-10.x
@@ -88,6 +87,11 @@ melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/
 bbb-tool                         https://github.com/blindsidenetworks/bigbluebutton-sakai/branches/10.x/bbb-tool
 providers			 https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 
+# rSmart needs metaobj
+metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
+rsmart                           https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/10.4.1.1-M2/rsmart
+
+#shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find cloud-content/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command sed -i 's/ sessionId="meleteEditor" / /g' melete/melete-app/src/webapp/melete/addmodulesections.jsp
 #shell_command find master/ -name pom.xml -exec sed -i 's/https:\/\/maven.sencha.com\/repo\/commercial-release/http:\/\/nexus.sakaiproject.org:8081\/nexus\/content\/groups\/public/g' {} \;
