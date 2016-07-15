@@ -43,8 +43,7 @@
             </activation>
             <modules>
                 <module>master</module>
-                <module>providers</module>
-                <module>rsmart</module>
+                <module>rsmart/rsmart-Decryption</module>
                 <module>kernel</module>
                 <module>kernel-deploy</module>
                 <module>hybrid</module>
@@ -80,6 +79,7 @@
                 <module>jsf</module>
                 <module>lessonbuilder</module>
                 <module>linktool</module>
+                <module>rsmart/shibboleth_filter</module>
                 <module>login</module>
                 <module>mailarchive</module>
                 <module>mailsender</module>
@@ -126,6 +126,11 @@
                 <module>turnitin/contentreview-impl</module>
                 <module>scoring-service</module>
                 <module>irubric</module>
+                <module>providers</module>
+                <module>rsmart/util</module>
+                <module>rsmart/user</module>
+                <module>rsmart/user-data-service</module>
+                <module>rsmart/common</module>
                 <module>certification</module>
                 <!--
                 <module>EntityBrowser</module>

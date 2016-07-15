@@ -100,7 +100,18 @@ rsmart			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-
 scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/scoring-service
 irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/irubric
 
+# Customizations
+kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/kernel/2.9.x
+cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/cloud-content
+lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/lessonbuilder
+dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/dav/dav-2.9.x
+
+#mavenoptions:-P2.9 -Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.jdk.version=1.7
+
 # Shell Commands
+#shell_command find ./ -name pom.xml -exec sed -i 's/${project.parent.version}/2.9.3/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/${parent.version}/2.9.3/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/${sakai.version}/2.9.3/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/5.0.4/5.0.6/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/maven.anisakai.com/repo1.maven.org/g' {} \;
@@ -108,9 +119,4 @@ irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/turningpoint-job/d' {} \;
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/google-content/d' {} \;
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/gradebook2-export/d' {} \;
-
-# Customizations
-kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/kernel/2.9.x
-cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/cloud-content
-lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/lessonbuilder
-dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/dav/dav-2.9.x
+#shell_command find ./rsmart/ -name pom.xml -exec sed -i '/grade-exporter/d' {} \;
