@@ -89,7 +89,6 @@
                 <module>messageservice</module>
                 <module>metaobj</module>
                 <module>msgcntr</module>
-                <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
 
@@ -120,7 +119,6 @@
                 <module>web</module>
                 <module>usermembership</module>
                 <module>sakai-wicket</module>
-                <module>warehouse</module>
                 <module>reports</module>
                 <module>reset-pass</module>
                 <module>taggable</module>
@@ -134,6 +132,8 @@
                 <module>rsmart/common</module>
                 <module>certification</module>
                 <!--
+                <module>osp</module>
+                <module>warehouse</module>
                 <module>EntityBrowser</module>
                 <module>iclicker</module>
                 <module>kaltura</module>
