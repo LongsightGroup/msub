@@ -10,7 +10,6 @@ basiclti -r 314529                https://source.sakaiproject.org/svn/msub/rsmar
 bigbluebutton 	        	  https://github.com/asahinet/bigbluebutton-sakai/branches/2.9.x/bbb-tool
 blogwow -r 87137                 https://source.sakaiproject.org/contrib/rsmart/msub/blogwow/branches/2.9.x
 calendar -r 314530                https://source.sakaiproject.org/svn/msub/rsmart.com/calendar/branches/2.9.x
-certification                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/certification
 chat -r 314531                    https://source.sakaiproject.org/svn/msub/rsmart.com/chat/branches/2.9.x
 clog -r 87702                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/2.9.x
 citations -r 314532               https://source.sakaiproject.org/svn/msub/rsmart.com/citations/branches/2.9.x
@@ -120,3 +119,6 @@ dav                     https://source.sakaiproject.org/svn/msub/longsight.com/c
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/google-content/d' {} \;
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/gradebook2-export/d' {} \;
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/grade-exporter/d' {} \;
+#shell_command cd ./rsmart/certification
+#shell_command svn merge -c 322463 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-10.x/certification
+#shell_command cd ../../

@@ -129,7 +129,7 @@
                 <module>rsmart/user</module>
                 <module>rsmart/user-data-service</module>
                 <module>rsmart/common</module>
-                <module>certification</module>
+                <module>rsmart/certification</module>
                 <!--
                 <module>osp</module>
                 <module>reports</module>
