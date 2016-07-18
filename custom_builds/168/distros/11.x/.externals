@@ -28,7 +28,6 @@ citations https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy
 cloud-content https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/cloud-content
 cmprovider https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/cmprovider
 config https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/config
-content-review https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/content-review
 content https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/content
 courier https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/courier
 dashboard https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/dashboard
@@ -86,4 +85,4 @@ webservices https://github.com/NoodlePartners/sakai_work/branches/longsight-depl
 # Customizations
 commons	https://github.com/sakaicontrib/commons/branches/11.x
 sakai-widgets https://github.com/NoodlePartners/sakai-widgets/branches/longsight-deploy
-#shell_command git clone https://github.com/steveswinsburg/student-engagement.git
+student-engagement https://github.com/steveswinsburg/student-engagement/trunk
