@@ -119,6 +119,7 @@
                 <module>commons</module>
                 <module>sakai-widgets</module>
                 <module>student-engagement</module>
+                <module>content-review/contentreview-impl-vericite</module>
             </modules>
         </profile>
         <profile>

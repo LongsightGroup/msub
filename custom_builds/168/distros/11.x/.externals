@@ -86,4 +86,7 @@ commons	https://github.com/sakaicontrib/commons/branches/11.x
 sakai-widgets https://github.com/NoodlePartners/sakai-widgets/branches/longsight-deploy
 student-engagement https://github.com/steveswinsburg/student-engagement/trunk
 
+# VeriCite
+content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
+
 #shell_command find ./ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
