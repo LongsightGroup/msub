@@ -56,6 +56,7 @@ portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
+providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 reference https://github.com/sakaiproject/sakai/branches/11.x/reference
 reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
 rights https://github.com/sakaiproject/sakai/branches/11.x/rights
@@ -75,6 +76,7 @@ syllabus https://github.com/sakaiproject/sakai/branches/11.x/syllabus
 taggable https://github.com/sakaiproject/sakai/branches/11.x/taggable
 textarea https://github.com/sakaiproject/sakai/branches/11.x/textarea
 tool https://github.com/sakaiproject/sakai/branches/11.x/tool
+user https://github.com/sakaiproject/sakai/branches/11.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/11.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 web https://github.com/sakaiproject/sakai/branches/11.x/web
@@ -83,24 +85,7 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
 
 #customizations
-blogwow https://github.com/sakaicontrib/blogwow/trunk
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
-da_evalprovider https://github.com/LongsightGroup/da_evalprovider/trunk
-providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
-#login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-10.x_googleplus_and_saml
-user https://github.com/LongsightGroup/sakai/branches/6-11.x/user
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
-#iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.5
-bigbluebutton-sakai https://github.com/blindsidenetworks/bigbluebutton-sakai/branches/11.x
-attendance https://github.com/UDayton/attendance/trunk
-
-#POM Changes
-#shell_command sed -i 's/2.9.2/11-SNAPSHOT/g' iclicker/pom.xml
-#shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
-#shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
-
-#VeriCite
-#shell_command cd content-review
-#shell_command git clone -b 2.0 https://github.com/vericite/contentreview-impl-vericite.git
