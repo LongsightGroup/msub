@@ -120,6 +120,8 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>evaluation</module>
+                <module>certification</module>
+                <module>gradebook2</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
