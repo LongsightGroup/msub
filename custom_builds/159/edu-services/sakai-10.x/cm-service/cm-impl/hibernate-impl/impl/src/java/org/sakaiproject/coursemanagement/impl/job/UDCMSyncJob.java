@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Set;
@@ -18,6 +20,7 @@ import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 import org.jdom.xpath.XPath;
+import org.sakaiproject.component.api.ServerConfigurationService;
 import org.sakaiproject.coursemanagement.impl.CourseSetCmImpl;
 import org.sakaiproject.coursemanagement.api.AcademicSession;
 import org.sakaiproject.coursemanagement.api.CanonicalCourse;
@@ -31,6 +34,7 @@ import org.sakaiproject.coursemanagement.api.Meeting;
 import org.sakaiproject.coursemanagement.api.Membership;
 import org.sakaiproject.coursemanagement.api.Section;
 import org.sakaiproject.coursemanagement.api.exception.IdNotFoundException;
+import org.sakaiproject.email.api.EmailService;
 
 /**
  * This class simply tries to load a URL first before it gets the resource from
@@ -42,6 +46,8 @@ import org.sakaiproject.coursemanagement.api.exception.IdNotFoundException;
 public class UDCMSyncJob extends ClassPathCMSyncJob
 {
     private static final Log log = LogFactory.getLog(UDCMSyncJob.class);
+    private EmailService emailService;
+    private ServerConfigurationService serverConfigurationService;
 
     /**
      * {@inheritDoc}
@@ -149,6 +155,11 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
                     if(log.isWarnEnabled()) 
                         log.warn("Course Set not found: " + csEid + 
                                 " or Course Offering not found: " + coEid, e);
+                    String from = "\"<no-reply@" + serverConfigurationService.getServerName() + ">\"";
+                    String to = serverConfigurationService.getString("cmjob.error.email", serverConfigurationService.getString("portal.error.email"));
+                    StringWriter sw = new StringWriter();
+                    e.printStackTrace(new PrintWriter(sw));
+                    emailService.send(from, to, this.getClass().getName() + " Warning - IdNotFoundException", sw.toString(), null, null, null);
                 }
             }
             if(log.isInfoEnabled()) log.info("Finished Reconciling CourseSet -Course Offering Links");
@@ -157,5 +168,13 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
             log.error(jde);
         }
         if(log.isInfoEnabled()) log.info("Finished reconciling CourseSet Links in " + (System.currentTimeMillis()-start) + " ms");
+    }
+
+    public void setEmailService(EmailService emailService) {
+        this.emailService = emailService;
+    }
+
+    public void setServerConfigurationService(ServerConfigurationService serverConfigurationService) {
+        this.serverConfigurationService = serverConfigurationService;
     }
 }

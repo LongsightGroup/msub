@@ -185,6 +185,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2131.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2131"
@@ -215,6 +217,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2131.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2131"
@@ -246,6 +250,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2136.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2136"
@@ -276,6 +282,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2136.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2136"
@@ -307,6 +315,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2139.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2139"
@@ -337,6 +347,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2139.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2139"
@@ -368,6 +380,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2140.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2140"
@@ -398,6 +412,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2140.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2140"
@@ -429,6 +445,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2141.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2141"
@@ -459,6 +477,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2141.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2141"
@@ -490,6 +510,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2146.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2146"
@@ -520,6 +542,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2146.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2146"
@@ -551,6 +575,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2149.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2149"
@@ -581,6 +607,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2149.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2149"
@@ -612,6 +640,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2150.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2150"
@@ -642,6 +672,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2150.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2150"
@@ -673,6 +705,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2151.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2151"
@@ -703,6 +737,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2151.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2151"
@@ -734,6 +770,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2156.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2156"
@@ -764,6 +802,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2156.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2156"
@@ -795,6 +835,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2155.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2155"
@@ -825,6 +867,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2155.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2155"
@@ -856,6 +900,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2169.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2169"
@@ -886,6 +932,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2169.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2169"
@@ -918,6 +966,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2168.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2168"
@@ -948,6 +998,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2168.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2168"
@@ -980,6 +1032,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2160.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2160"
@@ -1010,6 +1064,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2160.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2160"
@@ -1042,6 +1098,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2161.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2161"
@@ -1072,6 +1130,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2161.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2161"
@@ -1104,6 +1164,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2162.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2162"
@@ -1134,6 +1196,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2162.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2162"
@@ -1166,6 +1230,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2166.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2166"
@@ -1196,6 +1262,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2166.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2166"
@@ -1227,6 +1295,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-2165.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJob2165"
@@ -1257,6 +1327,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-2165.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJob2165"
@@ -1290,6 +1362,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/test-Oink.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMTestSyncJobUCS101"
@@ -1320,6 +1394,8 @@
             <!-- location of xml files generated from PeopleSoft -->
             <value>/sakaimisc/peoplesoft_xml/full-Oink.xml</value>
         </property>
+        <property name="emailService" ref="org.sakaiproject.email.api.EmailService" />
+        <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService" />
     </bean>
     <!-- this is the helper that will register the above bean with the job scheduler -->
     <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.UDCMSyncJobUCS101"
