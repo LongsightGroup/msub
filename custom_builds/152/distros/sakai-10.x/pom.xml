@@ -116,6 +116,7 @@
                 <module>rsmart</module>
                 <module>webservices</module>
                 <module>reports</module>
+                <module>skin-manager</module>
                 -->
                 <module>rights</module>
                 <module>roster2</module>
@@ -125,7 +126,6 @@
                 <module>search</module>
                 <module>sections</module>
                 <module>shortenedurl</module>
-                <module>skin-manager</module>
                 <module>signup</module>
                 <module>site</module>
                 <module>site-manage</module>
