@@ -117,9 +117,8 @@
                 <module>web</module>
                 <module>webservices</module>
 
-                <module>etudes-util</module>
-                <module>melete</module>
                 <module>evaluation</module>
+                <module>content-review/contentreview-impl-vericite</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->

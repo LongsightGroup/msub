@@ -82,10 +82,9 @@ velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 web https://github.com/sakaiproject/sakai/branches/11.x/web
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
+#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.jdk.version=1.8
 
 #customizations
-melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
-etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
+content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
