@@ -123,6 +123,8 @@
                 <module>gradebook2</module>
                 <module>jforum</module>
 
+                <module>kaltura</module>
+                <module>evaluation</module>
                 <module>rsmart/common</module>
                 <module>rsmart/util</module>
                 <module>rsmart/user</module>
