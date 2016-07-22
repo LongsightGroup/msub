@@ -56,7 +56,6 @@ portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
-providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 reference https://github.com/sakaiproject/sakai/branches/11.x/reference
 reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
 rights https://github.com/sakaiproject/sakai/branches/11.x/rights
@@ -76,7 +75,6 @@ syllabus https://github.com/sakaiproject/sakai/branches/11.x/syllabus
 taggable https://github.com/sakaiproject/sakai/branches/11.x/taggable
 textarea https://github.com/sakaiproject/sakai/branches/11.x/textarea
 tool https://github.com/sakaiproject/sakai/branches/11.x/tool
-user https://github.com/sakaiproject/sakai/branches/11.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/11.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 web https://github.com/sakaiproject/sakai/branches/11.x/web
@@ -88,3 +86,6 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
+
+user https://github.com/LongsightGroup/sakai/branches/103-11.x/user
+providers https://github.com/LongsightGroup/sakai/branches/103-11.x/providers
