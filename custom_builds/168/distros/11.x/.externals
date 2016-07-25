@@ -90,3 +90,4 @@ student-engagement https://github.com/steveswinsburg/student-engagement/trunk
 content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/<version>11.0<\/version>/<version>11-SNAPSHOT<\/version>/g' {} \;
