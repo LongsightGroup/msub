@@ -120,9 +120,9 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>bbb-tool</module>
-                <module>gradebook2</module>
+                <!--module>gradebook2</module-->
                 <module>jforum</module>
-
+                <module>content-review/contentreview-impl</module>
                 <module>kaltura</module>
                 <module>evaluation</module>
                 <module>rsmart/common</module>
