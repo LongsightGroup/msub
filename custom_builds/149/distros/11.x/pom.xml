@@ -120,6 +120,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>evaluation</module>
+                <module>rsmart</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
