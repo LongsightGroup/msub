@@ -79,9 +79,9 @@ user https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/user
 usermembership https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/usermembership
 velocity https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/velocity
 web https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/web
-webservices https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/webservices
 
 # Customizations
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 commons	https://github.com/sakaicontrib/commons/branches/11.x
 sakai-widgets https://github.com/NoodlePartners/sakai-widgets/branches/longsight-deploy
 student-engagement https://github.com/steveswinsburg/student-engagement/trunk
