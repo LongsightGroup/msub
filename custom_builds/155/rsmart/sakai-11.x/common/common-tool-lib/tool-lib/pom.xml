@@ -65,19 +65,10 @@
     </dependency>
 <!--org.sakaiprojectsakai-authz-api${sakai.version}-->
 <!--org.sakaiprojectsakai-util-api${sakai.version}-->
-    <dependency>
-      <groupId>org.sakaiproject.metaobj</groupId>
-      <artifactId>sakai-metaobj-api</artifactId>
-    </dependency>
 <!--org.sakaiprojectsakai-user-api${sakai.version}-->
       <dependency>
       <groupId>org.sakaiproject.scheduler</groupId>
       <artifactId>scheduler-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.sakaiproject.metaobj</groupId>
-      <artifactId>sakai-metaobj-tool-lib</artifactId>
-        <version>${sakai.version}</version>
     </dependency>
 <!--org.sakaiprojectsakai-site-api${sakai.version}-->
 <!--org.sakaiprojectsakai-entity-api${sakai.version}-->
