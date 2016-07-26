@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright 2011 The rSmart Group
+  ~
+  ~ The contents of this file are subject to the Mozilla Public License
+  ~ Version 1.1 (the "License"); you may not use this file except in
+  ~ compliance with the License. You may obtain a copy of the License at
+  ~ http://www.mozilla.org/MPL/
+  ~
+  ~ Software distributed under the License is distributed on an "AS IS"
+  ~ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  ~ License for the specific language governing rights and limitations
+  ~ under the License.
+  ~
+  ~ Contributor(s): duffy
+  -->
+
+<project>
+   <pomVersion>3</pomVersion>
+   <extend>../../../../master/project.xml</extend>
+   <name>Rsmart Common Tool Lib</name>
+   <groupId>rSmart</groupId>
+   <id>rsmart-common</id>
+   <currentVersion>${sakai.version}</currentVersion>
+   <organization>
+      <name>rsmart</name>
+      <url>http://rsmart.com/</url>
+   </organization>
+   <inceptionYear>2000</inceptionYear>
+
+   <properties>
+      <deploy.type>jar</deploy.type>
+   </properties>
+
+   <dependencies>
+      <dependency>
+         <groupId>jsf</groupId>
+         <artifactId>jsf-api</artifactId>
+         <version>1.1.01</version>
+         <url>http://java.sun.com/j2ee/javaserverfaces/</url>
+      </dependency>
+
+      <dependency>
+         <groupId>quartz</groupId>
+         <artifactId>quartz</artifactId>
+         <version>1.4.0</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-comp-shared-scheduler</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-authz-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-util-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-metaobj-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-user-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-scheduler-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-metaobj-tool-lib</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-site-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-entity-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-tool-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-util</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-component</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>${sakai.spring.groupId}</groupId>
+        <artifactId>${sakai.spring.artifactId}</artifactId>
+        <version>${sakai.spring.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>commons-logging</groupId>
+         <artifactId>commons-logging</artifactId>
+         <version>1.0.4</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-event-api</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>servletapi</groupId>
+         <artifactId>servletapi</artifactId>
+         <version>2.4</version>
+      </dependency>
+
+      <dependency>
+         <groupId>jspapi</groupId>
+         <artifactId>jsp-api</artifactId>
+         <version>2.0</version>
+      </dependency>
+
+      <dependency>
+         <groupId>sakaiproject</groupId>
+         <artifactId>sakai-metaobj-impl</artifactId>
+         <version>${sakai.version}</version>
+      </dependency>
+
+   </dependencies>
+
+   <build>
+      <sourceDirectory>src/java</sourceDirectory>
+      <resources>
+         <resource>
+            <directory>src/bundle</directory>
+            <includes><include>**/*.properties</include></includes>
+         </resource>
+         <resource>
+            <directory>${basedir}/src</directory>
+            <includes>
+               <include>META-INF/*.tld</include>
+               <include>META-INF/*.xml</include>
+            </includes>
+         </resource>
+      </resources>
+   </build>
+</project>

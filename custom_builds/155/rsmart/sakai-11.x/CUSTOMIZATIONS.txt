@@ -1,0 +1,3 @@
+* Limit what gets built
+* Fix certification for S3 by changing FileInputStream to InputStream
+* #47358 dont drop users that can't be found right this second because maybe the LDAP connection is down

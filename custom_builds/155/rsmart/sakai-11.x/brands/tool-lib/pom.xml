@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.rsmart</groupId>
+    <artifactId>rsmart-brands</artifactId>
+    <version>10-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <name>Brands Tool Library</name>
+  <groupId>com.rsmart</groupId>
+  <artifactId>brands-tool-lib</artifactId>
+  <organization>
+    <name>rsmart</name>
+    <url>http://rsmart.com/</url>
+  </organization>
+  <inceptionYear>2004</inceptionYear>
+  <packaging>jar</packaging>
+  <properties>
+    <deploy.target/>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-component-manager</artifactId>
+    </dependency>
+<!--org.sakaiproject${sakai.version}sakai-util-api-->
+<!--org.sakaiprojectsakai-component${sakai.version}-->
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>brands-api</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>servletapi</groupId>
+      <artifactId>servletapi</artifactId>
+      <version>2.4-20040521</version>
+    </dependency>
+<!--org.sakaiprojectsakai-tool-api${sakai.version}-->
+<!--org.sakaiprojectsakai-tool-servlet${sakai.version}-->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.4</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.0</version>
+<!--url: http://jakarta.apache.org/commons/fileupload/ -->
+<!--properties:  deploy.target: shared -->
+    </dependency>
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/bundle</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>${basedir}/src</directory>
+        <includes>
+          <include>META-INF/*.tld</include>
+          <include>META-INF/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
+<!-- java source -->
+    <sourceDirectory>src/java</sourceDirectory>
+  </build>
+</project>

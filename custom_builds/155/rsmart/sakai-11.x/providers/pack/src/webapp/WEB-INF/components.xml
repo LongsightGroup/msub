@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+    <bean id="com.rsmart.sakai.providers.JdbcUserProvider" class="com.rsmart.sakai.providers.JdbcUserProvider" init-method="init">
+        <property name="dataSource" ref="com.rsmart.sakai.providers.JdbcUserProvider.dataSource"/>
+        <property name="memoryService" ref="org.sakaiproject.memory.api.MemoryService"/>
+    </bean>
+
+    <bean id="com.rsmart.sakai.providers.JdbcUserProvider.dataSource"
+          parent="javax.sql.BaseDataSource">
+    </bean>
+
+    <bean id="com.rsmart.sakai.providers.UserPropertyDisplayAdvisor"
+          class="com.rsmart.sakai.providers.UserPropertyDisplayAdvisor" init-method="init" singleton="true">
+        <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager"/>
+        <property name="serverConfigurationService">
+            <ref bean="org.sakaiproject.component.api.ServerConfigurationService"/>
+        </property>
+        <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
+        <property name="userDisplayQueries" ref="com.rsmart.sakai.providers.util.UserDisplayQueries"></property>
+    </bean>
+
+    <bean id="com.rsmart.sakai.providers.EmailDisplayAdvisor"
+          class="com.rsmart.sakai.providers.EmailDisplayAdvisor" init-method="init" singleton="true">
+    </bean>
+
+    <bean id="com.rsmart.sakai.providers.util.UserDisplayQueries"
+          class="com.rsmart.sakai.providers.util.UserDisplayQueries">
+        <constructor-arg index="0" type="javax.sql.DataSource" ref="javax.sql.DataSource"></constructor-arg>
+    </bean>
+
+    <bean id="org.sakaiproject.user.api.ContextualUserDisplayService" init-method="init"
+          class="com.rsmart.sakai.providers.ContextualUserDisplayServiceProxy"/>
+
+    <bean id="com.rsmart.sakai.providers.JenzabarUDP" class="com.rsmart.sakai.providers.JenzabarUDP">
+        <property name="logonUrl" value="https://webreg.ucoa.org/rest/services/public/util/NTSWebLoginIF/loginWS"/>
+        <property name="uds">
+            <ref bean="org.sakaiproject.user.api.UserDirectoryService"/>
+        </property>
+    </bean>
+</beans>

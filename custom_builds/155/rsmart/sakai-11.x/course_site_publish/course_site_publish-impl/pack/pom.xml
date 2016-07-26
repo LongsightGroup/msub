@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>course_site_publish-base</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>10-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+  <name>Rsmart Course Site Publish Service Component</name>
+  <groupId>com.rsmart</groupId>
+  <artifactId>rsmart-course_site_publish-pack</artifactId>
+  <organization>
+    <name>The rSmart Group</name>
+    <url>http://www.rsmart.com/</url>
+  </organization>
+  <inceptionYear>2000</inceptionYear>
+  <packaging>sakai-component</packaging>
+  <properties>
+    <deploy.target>components</deploy.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>rsmart-course_site_publish-impl</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <resources/>
+<!-- java source -->
+  </build>
+</project>

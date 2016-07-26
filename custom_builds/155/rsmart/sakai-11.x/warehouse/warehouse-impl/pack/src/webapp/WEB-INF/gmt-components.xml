@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+
+   <bean id="org.sakaiproject.warehouse.service.PropertyAccess.linkActivityAccess"
+      class="com.rsmart.warehouse.sakai.gmt.TaggableActivityPropAccess">
+      <property name="propertyName" value="activityRef"/>
+      <property name="taggingManager" 
+                ref="org.sakaiproject.taggable.api.TaggingManager"/>
+      <property name="taggingProvider" 
+                ref="org.sakaiproject.gmt.tagging.api.GmtTaggingProvider"/>
+   </bean>
+   
+   <bean id="org.sakaiproject.warehouse.service.PropertyAccess.ratingItemAccess"
+      class="com.rsmart.warehouse.sakai.gmt.TaggableItemPropAccess">
+      <property name="propertyName" value="itemRef"/>
+      <property name="taggingManager" 
+                ref="org.sakaiproject.taggable.api.TaggingManager"/>
+      <property name="taggingProvider" 
+                ref="org.sakaiproject.gmt.tagging.api.GmtTaggingProvider"/>
+   </bean>
+   
+   <bean id="org.sakaiproject.warehouse.service.WarehouseTask.gmt"
+      class="com.rsmart.warehouse.sakai.gmt.GmtWarehouseTask"
+      init-method="init" singleton="true">
+      <property name="dataSource">
+         <ref bean="org.sakaiproject.warehouse.service.DataWarehouseManager.dataSource" />
+      </property>
+      <property name="dataWarehouseManager">
+         <ref bean="org.sakaiproject.warehouse.service.DataWarehouseManager" />
+      </property>
+      <property name="tableDdlResource">
+         <value>/com/rsmart/warehouse/sakai/gmt.xml</value>
+      </property>
+      <property name="gmtService">
+         <ref bean="org.sakaiproject.gmt.api.GmtService" />
+      </property>
+      <property name="task">
+         <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnGoalSets" />
+      </property>
+   </bean>
+   
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnGoalSets"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>title</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>description</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>suggestedBy</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>context</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>published</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="complexFields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>goalsList</value>
+                     </property>
+                  </bean>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnGoals"/>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>insert into dw_gmt_goal_set
+            (GOAL_SET_ID, TITLE, DESCRIPTION, SUGGESTED_BY, CONTEXT_ID, PUBLISHED) values
+            (?,?,?,?,?,?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_gmt_goal_set</value>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnGoals"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.NestedPropertyAccess">
+               <property name="propertyPath">
+                  <value>goalSet.id</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.WrappedBeanPropertyAccess">
+               <property name="propertyName" value="parentGoal"/>
+               <property name="childAccess">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>id</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>title</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>description</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="complexFields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <bean class="com.rsmart.warehouse.sakai.gmt.LinksFromGoalPropAccess">
+                     <property name="gmtService">
+                        <ref bean="org.sakaiproject.gmt.api.GmtService" />
+                     </property>
+                  </bean>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnGmtLinks"/>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>insert into dw_gmt_goal
+            (GOAL_ID, GOAL_SET_ID, PARENT_GOAL_ID, TITLE, DESCRIPTION) values
+            (?, ?, ?, ?, ?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_gmt_goal</value>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnGmtLinks"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.NestedPropertyAccess">
+               <property name="propertyPath">
+                  <value>goal.id</value>
+               </property>
+            </bean>
+            <bean parent="org.sakaiproject.warehouse.service.PropertyAccess.linkActivityAccess">
+               <property name="nestedProperty">
+                  <bean class="com.rsmart.warehouse.sakai.gmt.IdPropertyAccess">
+                     <property name="propertyName" value="object"/>
+                  </bean>
+               </property>
+            </bean>
+            <bean parent="org.sakaiproject.warehouse.service.PropertyAccess.linkActivityAccess">
+               <property name="nestedProperty">
+                  <bean parent="org.sakaiproject.warehouse.service.PropertyAccess.baseRefString">
+                     <property name="propertyName" value="reference"/>
+                     <property name="nestedProperty">
+                        <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                           <property name="propertyName" value="type"/>
+                        </bean>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>visible</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>locked</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>exportString</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>rubric</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>rationale</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="complexFields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <bean class="com.rsmart.warehouse.sakai.gmt.RatingsFromLinkPropAccess">
+                     <property name="gmtService">
+                        <ref bean="org.sakaiproject.gmt.api.GmtService" />
+                     </property>
+                  </bean>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnGmtRatings"/>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>insert into dw_gmt_link
+            (LINK_ID, GOAL_ID, ACTIVITY_ID, ACTIVITY_TYPE, VISIBLE, LOCKED, EXPORT_STRING, RUBRIC, RATIONALE) values
+            (?, ?, ?, ?, ?, ?, ?, ?, ?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_gmt_link</value>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnGmtRatings"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.NestedPropertyAccess">
+               <property name="propertyPath">
+                  <value>link.id</value>
+               </property>
+            </bean>
+            <bean parent="org.sakaiproject.warehouse.service.PropertyAccess.ratingItemAccess">
+               <property name="nestedProperty">
+                  <bean class="com.rsmart.warehouse.sakai.gmt.IdPropertyAccess">
+                     <property name="propertyName" value="object"/>
+                  </bean>
+               </property>
+            </bean>
+            <bean parent="org.sakaiproject.warehouse.service.PropertyAccess.ratingItemAccess">
+               <property name="nestedProperty">
+                  <bean parent="org.sakaiproject.warehouse.service.PropertyAccess.baseRefString">
+                     <property name="propertyName" value="reference"/>
+                     <property name="nestedProperty">
+                        <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                           <property name="propertyName" value="type"/>
+                        </bean>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean parent="org.sakaiproject.warehouse.service.PropertyAccess.ratingItemAccess">
+               <property name="nestedProperty">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>userId</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>rating</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>comment</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>insert into dw_gmt_rating
+            (RATING_ID, LINK_ID, ITEM_ID, ITEM_TYPE, ITEM_USER, RATING, RATING_COMMENT) values
+            (?, ?, ?, ?, ?, ?, ?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_gmt_rating</value>
+      </property>
+   </bean>
+
+</beans>
