@@ -10,7 +10,7 @@
       <artifactId>virtual-classroom-base</artifactId>
       <groupId>com.rsmart</groupId>
       <relativePath>../pom.xml</relativePath>
-      <version>10-SNAPSHOT</version>
+      <version>11-SNAPSHOT</version>
     </parent>
    <repositories>
       <repository>
@@ -53,7 +53,7 @@
      <dependency>
        <groupId>com.rsmart</groupId>
        <artifactId>virtual-classroom-api</artifactId>
-       <version>10-SNAPSHOT</version>
+       <version>11-SNAPSHOT</version>
        <scope>provided</scope>        
      </dependency>
     <dependency>

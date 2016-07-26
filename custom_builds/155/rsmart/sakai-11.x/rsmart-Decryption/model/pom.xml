@@ -7,13 +7,13 @@
     <parent>
         <groupId>com.rsmart</groupId>
         <artifactId>rsmart-decryption</artifactId>
-        <version>10-SNAPSHOT</version>
+        <version>11-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <name>rsmart-decryption-model</name>
     <groupId>com.rsmart</groupId>
     <artifactId>rsmart-decryption-model</artifactId>
-    <version>10-SNAPSHOT</version>
+    <version>11-SNAPSHOT</version>
     <properties>
         <deploy.target>shared</deploy.target>
     </properties>
