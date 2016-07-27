@@ -19,21 +19,6 @@
       </property>
    </bean>
 
-       <bean id="com.rsmart.sis.scheduler.job.RsnUserSyncJob"
-      class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
-      singleton="true" init-method="init">
-      <property name="beanId">
-         <value>rsnUserSyncJob</value>
-      </property>
-      <property name="jobName">
-         <value>RsnUser Synchronization</value>
-      </property>
-      <property name="schedulerManager">
-         <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager" />
-      </property>
-   </bean>
-
-
     <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration.configurable"
           class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobBeanWrapper"
           singleton="true" init-method="init">
@@ -91,15 +76,6 @@
                 </bean>
             </set>
         </property>
-    </bean>
-
-    <bean id="rsnUserSyncJob" class="com.rsmart.customer.integration.job.RsnUserSyncJob" init-method="init">
-		<property name="adminUser" value="admin"/>
-        <property name="sessionManager"  ref="org.sakaiproject.tool.api.SessionManager"/>
-        <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
-		<property name="sqlService"  ref="org.sakaiproject.db.api.SqlService"/>
-        <property name="uds" ref="org.sakaiproject.user.api.UserDirectoryService"/>
-        <property name="userDataService" ref="com.rsmart.userdataservice.UserDataService"/>
     </bean>
 
    <bean id="customerIntegrationJob" class="com.rsmart.customer.integration.job.IntegrationJob" init-method="init">
@@ -395,18 +371,6 @@
 			<value>yyyy-MM-dd</value>
 		</property>
    </bean>
-
-    <bean id="com.rsmart.customer.integration.oae.OAEBasicLTIProcessor" class="com.rsmart.customer.integration.oae.OAEBasicLTIProcessor" init-method="init">
-        <property name="siteService">
-            <ref bean="org.sakaiproject.site.api.SiteService"/>
-        </property>
-        <property name="siteHelper">
-            <ref bean="com.rsmart.customer.integration.util.SiteHelper"/>
-        </property>
-        <property name="sectionManager">
-            <ref bean="org.sakaiproject.section.api.SectionManager"/>
-        </property>
-    </bean>
 
     <bean id="quartzEventsPurgeJob" class="com.rsmart.customer.integration.job.QuartzEventsPurgeJob">
         <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
