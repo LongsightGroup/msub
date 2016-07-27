@@ -84,4 +84,4 @@ iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.5
 #etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 #melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 login https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/68/login/sakai-10.x
-bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk
+bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
