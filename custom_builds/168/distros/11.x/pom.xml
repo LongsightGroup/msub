@@ -120,6 +120,7 @@
                 <module>sakai-widgets</module>
                 <module>student-engagement</module>
                 <module>content-review/contentreview-impl-vericite</module>
+                <module>reference</module>
             </modules>
         </profile>
         <profile>
