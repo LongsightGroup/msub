@@ -122,6 +122,7 @@
                 <module>evaluation</module>
                 <module>certification</module>
                 <module>gradebook2</module>
+                <module>rsmart</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
