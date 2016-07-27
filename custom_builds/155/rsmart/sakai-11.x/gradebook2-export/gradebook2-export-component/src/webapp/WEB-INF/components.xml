@@ -4,7 +4,7 @@
 
    <bean id="com.gradebook2.export.institutional.advisor.SGUInstitutionalAdvisor"
           class="com.gradebook2.export.institutional.advisor.SGUInstitutionalAdvisor"
-          singleton="true">
+          scope="singleton">
         <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager"/>
       <!--  <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>   -->
         <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
@@ -18,7 +18,7 @@
     
     <bean id="com.gradebook2.export.institutional.advisor.SantaCruzInstitutionalAdvisor"
           class="com.gradebook2.export.institutional.advisor.SantaCruzInstitutionalAdvisor"
-          singleton="true">
+          scope="singleton">
         <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager"/>
         <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
         <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
@@ -40,7 +40,7 @@
    </bean>
 	 <bean id="com.gradebook2.export.institutional.advisor.PacificInstitutionalAdvisor"
           class="com.gradebook2.export.institutional.advisor.PacificInstitutionalAdvisor"
-          singleton="true">
+          scope="singleton">
         <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager"/>
         <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
         <property name="finalGradeSubmissionPath" value="gradebook_export"/>
@@ -52,7 +52,7 @@
     </bean>
     <bean id="com.gradebook2.export.institutional.advisor.GradebookExportPublisher"
     		class="com.gradebook2.export.institutional.advisor.GradebookExportPublisher"
-    		singleton="true">
+    		scope="singleton">
     	<property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
         <property name="serverConfigurationService"
                   ref="org.sakaiproject.component.api.ServerConfigurationService"></property>

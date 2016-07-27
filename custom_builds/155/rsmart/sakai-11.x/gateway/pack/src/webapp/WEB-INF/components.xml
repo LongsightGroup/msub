@@ -23,7 +23,7 @@
    <!-- the following controls the default tools that show up on the gateway site -->
 <!--   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
          dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayNewAccount"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="label">
          <value>I'm a new user, sign me up!</value>
       </property>
@@ -49,7 +49,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption"
          dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.gatewayNewAccount" lazy-init="default"
-         singleton="true">
+         scope="singleton">
       <property name="toolId">
          <value>sakai.createuser</value>
       </property>
@@ -67,7 +67,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
          dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewaySites"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="label">
          <value><![CDATA[Search Public Courses & Projects]]></value>
       </property>
@@ -93,7 +93,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption"
          dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.gatewaySites" lazy-init="default"
-         singleton="true">
+         scope="singleton">
       <property name="toolId">
          <value>sakai.sitebrowser</value>
       </property>
@@ -112,7 +112,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
          dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayAbout"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="label">
          <value>About</value>
       </property>
@@ -137,7 +137,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
          dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayAck"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="label">
          <value>Acknowledgements</value>
       </property>
@@ -162,7 +162,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
          dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayAccount"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="label">
          <value>New Account</value>
       </property>
@@ -188,7 +188,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
          dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayFeatures"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="label">
          <value>Features</value>
       </property>
@@ -213,7 +213,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
          dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayTraining"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="label">
          <value>Training</value>
       </property>
@@ -238,7 +238,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption"
          dependency-check="default" id="org.theospi.portfolio.admin.model.IntegrationOption.gatewayWelcome"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="label">
          <value>Welcome</value>
       </property>
@@ -264,7 +264,7 @@
 
    <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolPageIntegrationPlugin"
          dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.gateway.pages"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="siteService">
          <ref bean="org.sakaiproject.site.api.SiteService"/>
       </property>
@@ -289,7 +289,7 @@
       </property>
    </bean>
 
-    <bean abstract="false" autowire="default" class="com.rsmart.sakai.osp.integration.service.RsmartSakaiIntegrationServiceImpl" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationService.rsmart.gateway" lazy-init="default" singleton="true">
+    <bean abstract="false" autowire="default" class="com.rsmart.sakai.osp.integration.service.RsmartSakaiIntegrationServiceImpl" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationService.rsmart.gateway" lazy-init="default" scope="singleton">
       <property name="integrationPlugins">
          <list>
             <value>org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.gateway.pages</value>

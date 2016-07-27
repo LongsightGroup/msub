@@ -23,7 +23,7 @@
 	
    <bean id="com.rsmart.sakaiproject.component.impl.ToolOrderDbSupport" 
          class="com.rsmart.sakaiproject.component.impl.ToolOrderDbSupport" 
-         singleton="true">
+         scope="singleton">
       <property name="sessionFactory">
          <ref bean="org.sakaiproject.springframework.orm.hibernate.LocalSessionFactory.toolOrder"/>
       </property>
@@ -34,7 +34,7 @@
 			class="com.rsmart.sakaiproject.component.impl.DbConfigurationService"
 			init-method="init"
 			destroy-method="destroy"
-			singleton="true">
+			scope="singleton">
 
       <property name="threadLocalManager" ref="org.sakaiproject.thread_local.api.ThreadLocalManager" />
       <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager" />
@@ -49,7 +49,7 @@
    
    <bean id="com.rsmart.sakaiproject.component.api.UpdatableServerConfigurationService.tx"
       class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
-      singleton="true">
+      scope="singleton">
       <property name="transactionManager">
         <ref bean="org.sakaiproject.springframework.orm.hibernate.LocalTransactionManager.toolOrder"/>
       </property>

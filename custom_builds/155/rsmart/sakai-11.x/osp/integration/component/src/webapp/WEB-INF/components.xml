@@ -2,7 +2,7 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans default-autowire="no" default-dependency-check="none" default-lazy-init="false">
 
-   <bean abstract="false" autowire="default" class="com.rsmart.sakai.osp.integration.service.CleanupToolsIntegrationPlugin" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.cleanupTools" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="com.rsmart.sakai.osp.integration.service.CleanupToolsIntegrationPlugin" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.cleanupTools" lazy-init="default" scope="singleton">
 <property name="active" value="true"/>
 <property name="description" value="cleanup tools"/>
 <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
@@ -182,7 +182,7 @@
 
 
 
-   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.SiteIntegrationPlugin" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.rsmartSites" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.SiteIntegrationPlugin" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.rsmartSites" lazy-init="default" scope="singleton">
 <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
 <property name="title" value="Site Creation"/>
 <property name="description" value="Plugin to create sites"/>
@@ -331,7 +331,7 @@
 
 
 
-   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolPageIntegrationPlugin" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.rsmartPages" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolPageIntegrationPlugin" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.rsmartPages" lazy-init="default" scope="singleton">
 <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
 <property name="toolManager" ref="org.sakaiproject.tool.api.ActiveToolManager"/>
 <property name="title" value=""/>
@@ -446,7 +446,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.rsmart.home.page.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.rsmart.home.page.0">
 <property name="label">
 <value>user site home page</value>
 </property>
@@ -470,7 +470,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.rsmart.home.page.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.rsmart.home.page.0">
 <property name="label">
 <value>user site home page</value>
 </property>
@@ -494,7 +494,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.rsmart.home.page.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.rsmart.home.page.0">
 <property name="label">
 <value>user site home page</value>
 </property>
@@ -518,7 +518,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.schedule.1">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.schedule.1">
 <property name="label">
 <value>site page</value>
 </property>
@@ -540,7 +540,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.announcements.2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.announcements.2">
 <property name="label">
 <value>site page</value>
 </property>
@@ -562,7 +562,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.resources.1">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.resources.1">
 <property name="label">
 <value>site page</value>
 </property>
@@ -584,7 +584,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.news.2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.news.2">
 <property name="label">
 <value>site page</value>
 </property>
@@ -606,7 +606,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.iframe.3">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.iframe.3">
 <property name="label">
 <value>site page</value>
 </property>
@@ -628,7 +628,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.search.4">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.search.4">
 <property name="label">
 <value>site page</value>
 </property>
@@ -650,7 +650,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.osp.presentation.5">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.osp.presentation.5">
 <property name="label">
 <value>site page</value>
 </property>
@@ -672,7 +672,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.rsf.evaluation.6">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.rsf.evaluation.6">
 <property name="label">
 <value>site page</value>
 </property>
@@ -694,7 +694,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.profile.1">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.profile.1">
 <property name="label">
 <value>site page</value>
 </property>
@@ -716,7 +716,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.profile2.2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.profile2.2">
 <property name="label">
 <value>site page</value>
 </property>
@@ -738,7 +738,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.membership.3">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.membership.3">
 <property name="label">
 <value>site page</value>
 </property>
@@ -760,7 +760,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.preferences.4">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.preferences.4">
 <property name="label">
 <value>site page</value>
 </property>
@@ -782,7 +782,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.singleuser.5">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.singleuser.5">
 <property name="label">
 <value>site page</value>
 </property>
@@ -804,7 +804,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.sitesetup.6">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.guest.sakai.sitesetup.6">
 <property name="label">
 <value>site page</value>
 </property>
@@ -826,7 +826,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.schedule.1">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.schedule.1">
 <property name="label">
 <value>site page</value>
 </property>
@@ -848,7 +848,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.announcements.2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.announcements.2">
 <property name="label">
 <value>site page</value>
 </property>
@@ -870,7 +870,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.resources.1">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.resources.1">
 <property name="label">
 <value>site page</value>
 </property>
@@ -892,7 +892,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.osp.presentation.2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.osp.presentation.2">
 <property name="label">
 <value>site page</value>
 </property>
@@ -914,7 +914,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.osp.matrix.3">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.osp.matrix.3">
 <property name="label">
 <value>site page</value>
 </property>
@@ -936,7 +936,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.news.4">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.news.4">
 <property name="label">
 <value>site page</value>
 </property>
@@ -958,7 +958,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.iframe.5">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.iframe.5">
 <property name="label">
 <value>site page</value>
 </property>
@@ -980,7 +980,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.search.6">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.search.6">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1002,7 +1002,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.rsf.evaluation.7">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.rsf.evaluation.7">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1024,7 +1024,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.profile.1">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.profile.1">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1046,7 +1046,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.profile2.2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.profile2.2">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1068,7 +1068,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.membership.3">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.membership.3">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1090,7 +1090,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.preferences.4">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.preferences.4">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1112,7 +1112,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.singleuser.5">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.singleuser.5">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1134,7 +1134,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.com.rsmart.oauth.token.6">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.com.rsmart.oauth.token.6">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1156,7 +1156,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.sitesetup.7">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.registered.sakai.sitesetup.7">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1178,7 +1178,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.schedule.1">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.schedule.1">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1200,7 +1200,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.announcements.2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.announcements.2">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1222,7 +1222,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.resources.1">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.resources.1">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1244,7 +1244,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.osp.presentation.2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.osp.presentation.2">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1266,7 +1266,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.osp.matrix.3">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.osp.matrix.3">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1288,7 +1288,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.news.4">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.news.4">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1310,7 +1310,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.iframe.5">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.iframe.5">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1332,7 +1332,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.search.6">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.search.6">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1354,7 +1354,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.rsf.evaluation.7">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.rsf.evaluation.7">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1376,7 +1376,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.profile.1">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.profile.1">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1398,7 +1398,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.profile2.2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.profile2.2">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1420,7 +1420,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.membership.3">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.membership.3">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1442,7 +1442,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.preferences.4">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.preferences.4">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1464,7 +1464,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.singleuser.5">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.singleuser.5">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1486,7 +1486,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.com.rsmart.oauth.token.6">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.com.rsmart.oauth.token.6">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1508,7 +1508,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.sitesetup.7">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.buser.maintain.sakai.sitesetup.7">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1530,7 +1530,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.search.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.search.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1552,7 +1552,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.users.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.users.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1574,7 +1574,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.aliases.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.aliases.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1596,7 +1596,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.sites.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.sites.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1618,7 +1618,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.realms.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.realms.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1640,7 +1640,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.sitesetup.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.sitesetup.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1662,7 +1662,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.rsmart.motd.announcements.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.rsmart.motd.announcements.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1684,7 +1684,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.resources.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.resources.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1706,7 +1706,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.configviewer.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.configviewer.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1728,7 +1728,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.archive.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.archive.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1750,7 +1750,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.edia.sakai.skinmanager.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.edia.sakai.skinmanager.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1772,7 +1772,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.rutgers.linktool.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.rutgers.linktool.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1794,7 +1794,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.online.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.online.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1816,7 +1816,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.memory.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.memory.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1838,7 +1838,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.scheduler.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.scheduler.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1860,7 +1860,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.su.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.su.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1882,7 +1882,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.usermembership.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.usermembership.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1904,7 +1904,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.emailtemplateservice.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.emailtemplateservice.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1926,7 +1926,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.rsf.evaluation.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.sakai.rsf.evaluation.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1948,7 +1948,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.com.rsmart.oauth.provider.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.com.rsmart.oauth.provider.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1970,7 +1970,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.com.rsmart.oauth.token.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.tadmin.com.rsmart.oauth.token.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -1992,7 +1992,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.search.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.search.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2014,7 +2014,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.users.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.users.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2036,7 +2036,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.sites.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.sites.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2058,7 +2058,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.realms.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.realms.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2080,7 +2080,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.aliases.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.aliases.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2102,7 +2102,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.resources.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.resources.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2124,7 +2124,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.configviewer.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.configviewer.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2146,7 +2146,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.rsmart.motd.announcements.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.rsmart.motd.announcements.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2168,7 +2168,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.sitesetup.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.sitesetup.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2190,7 +2190,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.archive.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.archive.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2212,7 +2212,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.edia.sakai.skinmanager.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.edia.sakai.skinmanager.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2234,7 +2234,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.memory.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.memory.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2256,7 +2256,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.online.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.online.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2278,7 +2278,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.scheduler.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.scheduler.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2300,7 +2300,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.su.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.su.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2322,7 +2322,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.usermembership.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.usermembership.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2344,7 +2344,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.emailtemplateservice.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.emailtemplateservice.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2366,7 +2366,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.rsf.evaluation.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.sakai.rsf.evaluation.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2388,7 +2388,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.com.rsmart.oauth.provider.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.com.rsmart.oauth.provider.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2410,7 +2410,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.com.rsmart.oauth.token.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.badmin.com.rsmart.oauth.token.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2432,7 +2432,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.schedule.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.schedule.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2454,7 +2454,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.announcements.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.announcements.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2476,7 +2476,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.resources.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.resources.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2498,7 +2498,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.mailbox.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.mailbox.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2520,7 +2520,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.presTemplate.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.presTemplate.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2542,7 +2542,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.presLayout.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.presLayout.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2564,7 +2564,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.style.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.style.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2586,7 +2586,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.glossary.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.glossary.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2608,7 +2608,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.metaobj.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.metaobj.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2630,7 +2630,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.matrix.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.matrix.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2652,7 +2652,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.wizard.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.osp.wizard.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2674,7 +2674,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.sitesetup.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.sitesetup.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2696,7 +2696,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.usermembership.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.usermembership.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2718,7 +2718,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.search.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.sakai.search.0">
 <property name="label">
 <value>site page</value>
 </property>
@@ -2740,7 +2740,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.rsmart.home.page.0">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.PageOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.model.IntegrationOption.rsmartPage.bsite.template.portfolioAdmin.rsmart.home.page.0">
 <property name="label">
 <value>user site home page</value>
 </property>
@@ -2763,7 +2763,7 @@
 </list>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.home.page">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.home.page">
 <property name="toolId">
 <value>rsmart.home.page</value>
 </property>
@@ -2779,7 +2779,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.singleuser">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.singleuser">
 <property name="toolId">
 <value>sakai.singleuser</value>
 </property>
@@ -2796,7 +2796,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.aliases">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.aliases">
 <property name="toolId">
 <value>sakai.aliases</value>
 </property>
@@ -2810,7 +2810,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.announcements">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.announcements">
 <property name="toolId">
 <value>sakai.announcements</value>
 </property>
@@ -2830,7 +2830,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.assignment.grades">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.assignment.grades">
 <property name="toolId">
 <value>sakai.assignment.grades</value>
 </property>
@@ -2850,7 +2850,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.schedule">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.schedule">
 <property name="toolId">
 <value>sakai.schedule</value>
 </property>
@@ -2868,7 +2868,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.chat">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.chat">
 <property name="toolId">
 <value>sakai.chat</value>
 </property>
@@ -2891,7 +2891,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.citation.tool">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.citation.tool">
 <property name="toolId">
 <value>sakai.citation.tool</value>
 </property>
@@ -2905,7 +2905,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.configviewer">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.configviewer">
 <property name="toolId">
 <value>sakai.configviewer</value>
 </property>
@@ -2919,7 +2919,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.jforum.tool">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.jforum.tool">
 <property name="toolId">
 <value>sakai.jforum.tool</value>
 </property>
@@ -2935,7 +2935,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.dropbox">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.dropbox">
 <property name="toolId">
 <value>sakai.dropbox</value>
 </property>
@@ -2951,7 +2951,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mailbox">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mailbox">
 <property name="toolId">
 <value>sakai.mailbox</value>
 </property>
@@ -2970,7 +2970,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.evaluation">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.evaluation">
 <property name="toolId">
 <value>osp.evaluation</value>
 </property>
@@ -2988,7 +2988,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.postem">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.postem">
 <property name="toolId">
 <value>sakai.postem</value>
 </property>
@@ -3002,7 +3002,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.metaobj">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.metaobj">
 <property name="toolId">
 <value>sakai.metaobj</value>
 </property>
@@ -3021,7 +3021,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.forums">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.forums">
 <property name="toolId">
 <value>sakai.forums</value>
 </property>
@@ -3037,7 +3037,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.glossary">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.glossary">
 <property name="toolId">
 <value>osp.glossary</value>
 </property>
@@ -3055,7 +3055,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.gradebook.tool">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.gradebook.tool">
 <property name="toolId">
 <value>sakai.gradebook.tool</value>
 </property>
@@ -3071,7 +3071,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.help">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.help">
 <property name="toolId">
 <value>sakai.help</value>
 </property>
@@ -3087,7 +3087,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.scheduler">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.scheduler">
 <property name="toolId">
 <value>sakai.scheduler</value>
 </property>
@@ -3101,7 +3101,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.melete">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.melete">
 <property name="toolId">
 <value>sakai.melete</value>
 </property>
@@ -3115,7 +3115,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rutgers.linktool">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rutgers.linktool">
 <property name="toolId">
 <value>sakai.rutgers.linktool</value>
 </property>
@@ -3133,7 +3133,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mailtool">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mailtool">
 <property name="toolId">
 <value>sakai.mailtool</value>
 </property>
@@ -3151,7 +3151,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.matrix">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.matrix">
 <property name="toolId">
 <value>osp.matrix</value>
 </property>
@@ -3169,7 +3169,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.membership">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.membership">
 <property name="toolId">
 <value>sakai.membership</value>
 </property>
@@ -3185,7 +3185,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.memory">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.memory">
 <property name="toolId">
 <value>sakai.memory</value>
 </property>
@@ -3199,7 +3199,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.messages">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.messages">
 <property name="toolId">
 <value>sakai.messages</value>
 </property>
@@ -3215,7 +3215,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.motd.announcements">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.motd.announcements">
 <property name="toolId">
 <value>sakai.announcements</value>
 </property>
@@ -3232,7 +3232,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.news">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.news">
 <property name="toolId">
 <value>sakai.news</value>
 </property>
@@ -3250,7 +3250,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.online">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.online">
 <property name="toolId">
 <value>sakai.online</value>
 </property>
@@ -3264,7 +3264,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.podcasts">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.podcasts">
 <property name="toolId">
 <value>sakai.podcasts</value>
 </property>
@@ -3281,7 +3281,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.poll">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.poll">
 <property name="toolId">
 <value>sakai.poll</value>
 </property>
@@ -3295,7 +3295,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presLayout">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presLayout">
 <property name="toolId">
 <value>osp.presLayout</value>
 </property>
@@ -3313,7 +3313,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presTemplate">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presTemplate">
 <property name="toolId">
 <value>osp.presTemplate</value>
 </property>
@@ -3331,7 +3331,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presentation">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.presentation">
 <property name="toolId">
 <value>osp.presentation</value>
 </property>
@@ -3348,7 +3348,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.preferences">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.preferences">
 <property name="toolId">
 <value>sakai.preferences</value>
 </property>
@@ -3362,7 +3362,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile">
 <property name="toolId">
 <value>sakai.profile</value>
 </property>
@@ -3376,7 +3376,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.realms">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.realms">
 <property name="toolId">
 <value>sakai.realms</value>
 </property>
@@ -3392,7 +3392,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.resources">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.resources">
 <property name="toolId">
 <value>sakai.resources</value>
 </property>
@@ -3414,7 +3414,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.search">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.search">
 <property name="toolId">
 <value>sakai.search</value>
 </property>
@@ -3431,7 +3431,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sections">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sections">
 <property name="toolId">
 <value>sakai.sections</value>
 </property>
@@ -3447,7 +3447,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.archive">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.archive">
 <property name="toolId">
 <value>sakai.archive</value>
 </property>
@@ -3461,7 +3461,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.siteinfo">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.siteinfo">
 <property name="toolId">
 <value>sakai.siteinfo</value>
 </property>
@@ -3483,7 +3483,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.site.roster">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.site.roster">
 <property name="toolId">
 <value>sakai.site.roster</value>
 </property>
@@ -3497,7 +3497,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitebrowser">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitebrowser">
 <property name="toolId">
 <value>sakai.sitebrowser</value>
 </property>
@@ -3514,7 +3514,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitesetup">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitesetup">
 <property name="toolId">
 <value>sakai.sitesetup</value>
 </property>
@@ -3535,7 +3535,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitestats">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitestats">
 <property name="toolId">
 <value>sakai.sitestats</value>
 </property>
@@ -3552,7 +3552,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitestats.admin">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sitestats.admin">
 <property name="toolId">
 <value>sakai.sitestats.admin</value>
 </property>
@@ -3568,7 +3568,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sites">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.sites">
 <property name="toolId">
 <value>sakai.sites</value>
 </property>
@@ -3584,7 +3584,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.edia.sakai.skinmanager">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.edia.sakai.skinmanager">
 <property name="toolId">
 <value>edia.sakai.skinmanager</value>
 </property>
@@ -3601,7 +3601,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.edia.sakai.selector">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.edia.sakai.selector">
 <property name="toolId">
 <value>edia.sakai.selector</value>
 </property>
@@ -3618,7 +3618,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.style">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.style">
 <property name="toolId">
 <value>osp.style</value>
 </property>
@@ -3635,7 +3635,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.su">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.su">
 <property name="toolId">
 <value>sakai.su</value>
 </property>
@@ -3649,7 +3649,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.syllabus">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.syllabus">
 <property name="toolId">
 <value>sakai.syllabus</value>
 </property>
@@ -3663,7 +3663,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.samigo">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.samigo">
 <property name="toolId">
 <value>sakai.samigo</value>
 </property>
@@ -3677,7 +3677,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.users">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.users">
 <property name="toolId">
 <value>sakai.users</value>
 </property>
@@ -3693,7 +3693,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.usermembership">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.usermembership">
 <property name="toolId">
 <value>sakai.usermembership</value>
 </property>
@@ -3712,7 +3712,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iframe">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iframe">
 <property name="toolId">
 <value>sakai.iframe</value>
 </property>
@@ -3732,7 +3732,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rwiki">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rwiki">
 <property name="toolId">
 <value>sakai.rwiki</value>
 </property>
@@ -3750,7 +3750,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.wizard">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.osp.wizard">
 <property name="toolId">
 <value>osp.wizard</value>
 </property>
@@ -3767,7 +3767,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.virtual_classroom.tool">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsmart.virtual_classroom.tool">
 <property name="toolId">
 <value>rsmart.virtual_classroom.tool</value>
 </property>
@@ -3783,7 +3783,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mneme">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.mneme">
 <property name="toolId">
 <value>sakai.mneme</value>
 </property>
@@ -3797,7 +3797,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile2">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.profile2">
 <property name="toolId">
 <value>sakai.profile2</value>
 </property>
@@ -3813,7 +3813,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsn.linktool.pentaho">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.rsn.linktool.pentaho">
 <property name="toolId">
 <value>rsn.linktool.pentaho</value>
 </property>
@@ -3831,7 +3831,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.blogwow">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.blogwow">
 <property name="toolId">
 <value>sakai.blogwow</value>
 </property>
@@ -3845,7 +3845,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsf.evaluation">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.rsf.evaluation">
 <property name="toolId">
 <value>sakai.rsf.evaluation</value>
 </property>
@@ -3859,7 +3859,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.emailtemplateservice">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.emailtemplateservice">
 <property name="toolId">
 <value>sakai.emailtemplateservice</value>
 </property>
@@ -3873,7 +3873,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.gradebook.gwt.rpc">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.gradebook.gwt.rpc">
 <property name="toolId">
 <value>sakai.gradebook.gwt.rpc</value>
 </property>
@@ -3890,7 +3890,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iTunesU">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.iTunesU">
 <property name="toolId">
 <value>sakai.iTunesU</value>
 </property>
@@ -3911,7 +3911,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.basiclti">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.basiclti">
 <property name="toolId">
 <value>sakai.basiclti</value>
 </property>
@@ -3961,7 +3961,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.provider">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.provider">
 <property name="toolId">
 <value>com.rsmart.oauth.provider</value>
 </property>
@@ -3975,7 +3975,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.token">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.com.rsmart.oauth.token">
 <property name="toolId">
 <value>com.rsmart.oauth.token</value>
 </property>
@@ -3989,7 +3989,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.bbb">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.bbb">
 <property name="toolId">
 <value>sakai.bbb</value>
 </property>
@@ -4003,7 +4003,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.kaltura">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.kaltura">
 <property name="toolId">
 <value>sakai.kaltura</value>
 </property>
@@ -4017,7 +4017,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai-elluminate">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai-elluminate">
 <property name="toolId">
 <value>sakai-elluminate</value>
 </property>
@@ -4033,7 +4033,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.turningtool">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.turningtool">
 <property name="toolId">
 <value>sakai.turningtool</value>
 </property>
@@ -4047,7 +4047,7 @@
 <props/>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.signup">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.signup">
 <property name="toolId">
 <value>sakai.signup</value>
 </property>
@@ -4063,7 +4063,7 @@
 </props>
 </property>
 </bean>
-<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" singleton="true" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.clog">
+<bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" lazy-init="default" scope="singleton" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sakai.clog">
 <property name="toolId">
 <value>sakai.clog</value>
 </property>
@@ -6622,7 +6622,7 @@
 
 
 
-   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMOTD" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMOTD" lazy-init="default" scope="singleton">
       <property name="toolId">
          <value>sakai.motd</value>
       </property>
@@ -6639,7 +6639,7 @@
          </props>
       </property>
    </bean>
-   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSInfo" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSInfo" lazy-init="default" scope="singleton">
       <property name="toolId" value="sakai.iframe.myworkspace"/>
       <property name="title" value="My Workspace Information"/>
       <property name="layoutHints" value="1,0"/>
@@ -6649,7 +6649,7 @@
          </props>
       </property>
    </bean>
-   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSCal" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.sharedTemplateMyWSCal" lazy-init="default" scope="singleton">
       <property name="toolId" value="sakai.summary.calendar"/>
       <property name="title" value="Calendar"/>
       <property name="layoutHints" value="0,1"/>
@@ -6658,7 +6658,7 @@
          </props>
       </property>
    </bean>
-   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.portfolioAdminTemplateAnnouncement" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.portfolioAdminTemplateAnnouncement" lazy-init="default" scope="singleton">
       <property name="toolId">
          <value>sakai.synoptic.announcement</value>
       </property>
@@ -6676,7 +6676,7 @@
          </props>
       </property>
    </bean>
-   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.portfolioAdminTemplateSiteInfo" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.portfolioAdminTemplateSiteInfo" lazy-init="default" scope="singleton">
       <property name="toolId" value="sakai.iframe.site"/>
       <property name="title" value="Worksite Information"/>
       <property name="layoutHints" value="0,0"/>
@@ -6686,7 +6686,7 @@
          </props>
       </property>
    </bean>
-   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.adminResources" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="org.theospi.portfolio.admin.service.ToolOption" dependency-check="default" id="org.theospi.portfolio.admin.service.ToolOption.rsmart.adminResources" lazy-init="default" scope="singleton">
       <property name="toolId">
          <value>sakai.resources</value>
       </property>
@@ -6708,7 +6708,7 @@
       </property>
    </bean>
 
-   <bean abstract="false" autowire="default" class="com.rsmart.sakai.osp.integration.service.RsmartSakaiIntegrationServiceImpl" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationService.rsmart" lazy-init="default" singleton="true">
+   <bean abstract="false" autowire="default" class="com.rsmart.sakai.osp.integration.service.RsmartSakaiIntegrationServiceImpl" dependency-check="default" id="org.theospi.portfolio.admin.intf.SakaiIntegrationService.rsmart" lazy-init="default" scope="singleton">
       <property name="integrationPlugins">
          <list>
             <value>org.theospi.portfolio.admin.intf.SakaiIntegrationPlugin.rsmartSites</value>

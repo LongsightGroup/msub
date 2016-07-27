@@ -23,7 +23,7 @@
    
    <bean id="org.sakaiproject.warehouse.service.WarehouseTask.gmt"
       class="com.rsmart.warehouse.sakai.gmt.GmtWarehouseTask"
-      init-method="init" singleton="true">
+      init-method="init" scope="singleton">
       <property name="dataSource">
          <ref bean="org.sakaiproject.warehouse.service.DataWarehouseManager.dataSource" />
       </property>

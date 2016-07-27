@@ -12,7 +12,7 @@
     </bean>
 
     <bean id="com.rsmart.sakai.providers.UserPropertyDisplayAdvisor"
-          class="com.rsmart.sakai.providers.UserPropertyDisplayAdvisor" init-method="init" singleton="true">
+          class="com.rsmart.sakai.providers.UserPropertyDisplayAdvisor" init-method="init" scope="singleton">
         <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager"/>
         <property name="serverConfigurationService">
             <ref bean="org.sakaiproject.component.api.ServerConfigurationService"/>
@@ -22,7 +22,7 @@
     </bean>
 
     <bean id="com.rsmart.sakai.providers.EmailDisplayAdvisor"
-          class="com.rsmart.sakai.providers.EmailDisplayAdvisor" init-method="init" singleton="true">
+          class="com.rsmart.sakai.providers.EmailDisplayAdvisor" init-method="init" scope="singleton">
     </bean>
 
     <bean id="com.rsmart.sakai.providers.util.UserDisplayQueries"

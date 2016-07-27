@@ -16,7 +16,7 @@
 
    <bean id="com.rsmart.sakaiproject.tool.impl.DbActiveToolDbSupport" 
          class="com.rsmart.sakaiproject.tool.impl.DbActiveToolDbSupport" 
-         singleton="true">
+         scope="singleton">
       <property name="sessionFactory">
          <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/>
       </property>
@@ -29,7 +29,7 @@
          class="com.rsmart.sakaiproject.tool.impl.DbActiveToolManager"
          init-method="init"
          destroy-method="destroy"
-         singleton="true">
+         scope="singleton">
 
       <lookup-method name="sessionManager" bean="org.sakaiproject.tool.api.SessionManager" />
       <lookup-method name="functionManager" bean="org.sakaiproject.authz.api.FunctionManager" />

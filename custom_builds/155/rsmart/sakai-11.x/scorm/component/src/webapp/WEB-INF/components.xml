@@ -6,7 +6,7 @@
    <bean id="org.sakaiproject.content.api.ResourceType.scorm"
       class="com.rsmart.scorm.ScormContentType"
       init-method="init"
-      singleton="true">
+      scope="singleton">
       <property name="resourceTypeRegistry">
          <ref bean="org.sakaiproject.content.api.ResourceTypeRegistry" />
       </property>
@@ -15,7 +15,7 @@
    <bean id="org.sakaiproject.entity.api.EntityProducer.scorm"
       class="com.rsmart.scorm.ScormEntityProducer"
       init-method="init"
-      singleton="true">
+      scope="singleton">
       <property name="httpAccess" ref="org.sakaiproject.entity.api.HttpAccess.icodeon"/>
    </bean>
 

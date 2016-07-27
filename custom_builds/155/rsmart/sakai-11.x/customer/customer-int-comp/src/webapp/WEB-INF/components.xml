@@ -7,7 +7,7 @@
 
    <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration"
       class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
-      singleton="true" init-method="init">
+      scope="singleton" init-method="init">
       <property name="beanId">
          <value>customerIntegrationJob</value>
       </property>
@@ -21,7 +21,7 @@
 
     <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration.configurable"
           class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobBeanWrapper"
-          singleton="true" init-method="init">
+          scope="singleton" init-method="init">
        <property name="beanId">
           <value>customerIntegrationJob</value>
        </property>

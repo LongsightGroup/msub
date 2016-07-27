@@ -15,7 +15,7 @@
 
    <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.ospRepositoryMigration"
       class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
-      singleton="true" init-method="init">
+      scope="singleton" init-method="init">
       <property name="beanId" ><value>org.theospi.portfolio.migration.ImportRepositoryZip</value>        </property>
       <property name="jobName"><value>OSP 2.0 Repository Migration</value>                               </property>
       <property name="schedulerManager"><ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/></property>
@@ -25,7 +25,7 @@
    <bean id="org.theospi.portfolio.migration.OspMigrationJob"
       class="org.theospi.portfolio.migration.OspMigrationJob"
       init-method="init"
-      singleton="true">
+      scope="singleton">
       <property name="dataSource"><ref bean="javax.sql.DataSource"/></property>
       <property name="tableMap">
          <map>
@@ -138,7 +138,7 @@
 
    <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.OspMigrationJob"
       class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
-      singleton="true" init-method="init">
+      scope="singleton" init-method="init">
       <property name="beanId"          ><value>org.theospi.portfolio.migration.OspMigrationJob</value>   </property>
       <property name="jobName"         ><value>OSP 2.1 - 2.2 Migration Job</value>                       </property>
       <property name="schedulerManager"><ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/></property>
@@ -155,7 +155,7 @@
 
    <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.ospFormPropertyUpdate"
       class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
-      singleton="true" init-method="init">
+      scope="singleton" init-method="init">
       <property name="beanId" ><value>org.theospi.portfolio.migration.UpdateFormPropsJob</value>         </property>
       <property name="jobName"><value>OSP 2.0 Form Property Update</value>                               </property>
       <property name="schedulerManager"><ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/></property>

@@ -5,7 +5,7 @@
   <!--
     <bean id="org.sakaiproject.content.api.ContentHostingService"
           class="org.springframework.aop.framework.ProxyFactoryBean"
-        singleton="true">
+        scope="singleton">
         <property name="proxyTargetClass" value="true"/>
         <property name="autodetectInterfaces" value="false" />
         <property name="proxyInterfaces">
@@ -41,7 +41,7 @@
     <bean id="com.rsmart.sakaiproject.content.impl.ContentLoaderService"
          class="com.rsmart.sakaiproject.content.impl.ContentLoaderService"
          init-method="init"
-         singleton="true">
+         scope="singleton">
 
         <property name="securityService"><ref bean="org.sakaiproject.authz.api.SecurityService"/></property>
         <property name="contentHosting"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>

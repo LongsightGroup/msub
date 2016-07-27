@@ -13,14 +13,14 @@
         </property>
     </bean>
     <bean id="com.rsmart.decryption.api.DecryptionUtilityService" class="com.rsmart.decryption.impl.DecryptionUtility"
-          singleton="true"
+          scope="singleton"
           init-method="init">
         <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService"/>
         <property name="queryUtilityService" ref="com.rsmart.generate.util.QueryUtilityService"/>
 
     </bean>
     <bean id="com.rsmart.decryption.api.GeneratedTokenService" class="com.rsmart.decryption.impl.GenerateTokenImpl"
-          singleton="true" init-method="init">
+          scope="singleton" init-method="init">
 
         <property name="tokenGeneratedService"
                   ref="com.rsmart.generate.token.hibernate.impl.TokenGeneratedImpl.target"/>
@@ -28,7 +28,7 @@
 
     <bean id="com.rsmart.generate.token.hibernate.impl.TokenGeneratedImpl.target"
           class="com.rsmart.generate.tokens.impl.TokenGeneratedImpl"
-          singleton="true" init-method="init" lazy-init="true">
+          scope="singleton" init-method="init" lazy-init="true">
         <property name="sessionFactory" ref="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/>
         <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService"/>
 
@@ -39,7 +39,7 @@
     </bean>
    <bean id="com.rsmart.decryption.DecryptionService"
           class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
-          singleton="true" lazy-init="true">
+          scope="singleton" lazy-init="true">
         <property name="transactionManager">
             <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
         </property>

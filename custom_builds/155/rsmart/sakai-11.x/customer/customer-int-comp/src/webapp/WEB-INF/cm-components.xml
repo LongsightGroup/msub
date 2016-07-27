@@ -8,7 +8,7 @@
 
     <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration.course-management.configurable"
           class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobBeanWrapper"
-          singleton="true" init-method="init">
+          scope="singleton" init-method="init">
        <property name="beanId">
           <value>courseManagementIntegrationJob</value>
        </property>

@@ -45,7 +45,7 @@
 
    <bean id="org.sakaiproject.coursemanagement.impl.provider.CourseManagementGroupProvider.configurable"
          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
-         singleton="true" lazy-init="false">
+         scope="singleton" lazy-init="false">
       <property name="transactionManager">
          <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
       </property>

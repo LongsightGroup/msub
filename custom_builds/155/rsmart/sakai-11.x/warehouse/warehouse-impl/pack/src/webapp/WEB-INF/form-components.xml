@@ -18,7 +18,7 @@
    </bean>
    <bean id="org.theospi.portfolio.warehouse.intf.WarehouseTask.resources.forms.evaluation.levels"
       class="com.rsmart.warehouse.sakai.form.WarehouseEvaluationLevelsTask"
-      init-method="init" singleton="true">
+      init-method="init" scope="singleton">
       <property name="dataSource">                          <ref bean="org.sakaiproject.warehouse.service.DataWarehouseManager.dataSource"/>                      </property>
       <property name="dataWarehouseManager">                <ref bean="org.sakaiproject.warehouse.service.DataWarehouseManager"/>                                 </property>
       <property name="matrixManager">                       <ref bean="matrixManager"/>                                                                             </property>
@@ -52,7 +52,7 @@
    </bean>
    <bean id="org.theospi.portfolio.warehouse.intf.WarehouseTask.resources.forms.evaluation"
       class="com.rsmart.warehouse.sakai.form.BaseWarehouseFormTask"
-      init-method="init" singleton="true">
+      init-method="init" scope="singleton">
 
       <property name="dataSource">                          <ref bean="org.sakaiproject.warehouse.service.DataWarehouseManager.dataSource"/>               </property>
       <property name="dataWarehouseManager">                <ref bean="org.sakaiproject.warehouse.service.DataWarehouseManager"/>                          </property>

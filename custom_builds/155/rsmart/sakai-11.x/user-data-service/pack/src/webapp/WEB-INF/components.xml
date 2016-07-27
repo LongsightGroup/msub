@@ -13,7 +13,7 @@
     </bean>
     <bean id="com.rsmart.userdataservice.impl.UserDataServiceImpl.target"
          class="com.rsmart.userdataservice.impl.UserDataServiceImpl"
-         singleton="true" init-method="init" lazy-init="true">
+         scope="singleton" init-method="init" lazy-init="true">
       <property name="sessionFactory"><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/></property>
       <!-- <property name="userData" ref="com.rsmart.userdataservice.UserDataService"/> -->
 
@@ -22,7 +22,7 @@
     
    <bean id="com.rsmart.userdataservice.UserDataService"
          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
-         singleton="true" lazy-init="true">
+         scope="singleton" lazy-init="true">
          <property name="transactionManager">
            <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
          </property>

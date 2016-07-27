@@ -37,7 +37,7 @@
 
     <!-- loads all the spring xml configuration files for this web app; p. 274                    -->
     <!-- by default, it will load all the files specified in /WEB-INF/applicationContext.xml      -->
-    <listener><listener-class>org.sakaiproject.util.ContextLoaderListener</listener-class></listener>
+    <listener><listener-class>org.sakaiproject.util.SakaiContextLoaderListener</listener-class></listener>
 
     <!-- central controller servlet for the spring mvc framework; p. 272                          -->
     <!-- the name of this servlet causes spring to look for an xml bean configuration file in the -->

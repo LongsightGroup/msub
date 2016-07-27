@@ -8,7 +8,7 @@
         class="com.rsmart.smarthinking.SmarthinkingEntityProducer"
 		init-method="init"
         destroy-method="destroy"
-        singleton="true">
+        scope="singleton">
     </bean>
 
 </beans>

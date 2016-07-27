@@ -22,7 +22,7 @@
     <bean id="org.sakaiproject.content.api.ResourceType.google"
        class="com.rsmart.content.google.type.GoogleDocumentTypeImpl"
        init-method="init"
-       singleton="true">
+       scope="singleton">
        <property name="resourceTypeRegistry">
           <ref bean="org.sakaiproject.content.api.ResourceTypeRegistry" />
        </property>
@@ -31,7 +31,7 @@
     <bean id="com.rsmart.content.google.api.GoogleDocsService"
        class="com.rsmart.content.google.service.GoogleDocsServiceImpl"
        init-method="safeInit"
-       singleton="true">
+       scope="singleton">
        <property name="OAuthTokenService" ref="com.rsmart.oauth.api.OAuthTokenService"/>
         <!--
             This value MUST match the google.oauth.provider.providerName below
@@ -51,7 +51,7 @@
     <bean id="com.rsmart.content.google.entity.GoogleDocsEntityProducer"
        class="com.rsmart.content.google.entity.GoogleDocsEntityProducer"
        init-method="init"
-       singleton="true">
+       scope="singleton">
        <property name="googleDocsService"
                  ref="com.rsmart.content.google.api.GoogleDocsService"/>
        <property name="httpAccess">

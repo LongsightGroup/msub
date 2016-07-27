@@ -21,7 +21,7 @@
    <!-- global hibernate transaction proxy bean -->
    <bean id="com.rsmart.virtual_classroom.intf.VirtualClassroomService"
       class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
-      singleton="true">
+      scope="singleton">
       <property name="transactionManager"><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/></property>
       <property name="target"            ><ref bean="com.rsmart.virtual_classroom.intf.VirtualClassroomService.target"       /></property>
       <property name="transactionAttributes">
@@ -36,7 +36,7 @@
       class="com.rsmart.virtual_classroom.service.elluminate.ElluminateVirtualClassroomServiceImpl"
       init-method="init"
       destroy-method="destroy"
-      singleton="true">
+      scope="singleton">
       <property name="sessionFactory"            ><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory" /></property>   <!-- global hibernate transaction manager       -->
       <property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>   <!-- provides access to sakai.properties values -->
       <property name="calendarService"           ><ref bean="org.sakaiproject.calendar.api.CalendarService"            /></property>   <!-- used to add events to the user's calendar  -->
@@ -71,7 +71,7 @@
             <entry key="virtualClassroom">
                <bean id="org.theospi.portfolio.security.mgt.ToolPermissionManager.virtualClassroom"
                   class="org.theospi.portfolio.security.model.SimpleSitePermissionManager"
-                   singleton="true" init-method="init">
+                   scope="singleton" init-method="init">
 
                   <property name="idManager"><ref bean="idManager"/></property>
                   <property name="permissionManager">

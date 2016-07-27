@@ -34,7 +34,7 @@
 
     <bean id="org.theospi.portfolio.shared.mgt.AdditionalXmlHome.assignment"
           class="org.theospi.portfolio.shared.mgt.AdditionalXmlHome"
-          init-method="init" singleton="true">
+          init-method="init" scope="singleton">
         <property name="xmlHomeFactory">
             <ref bean="xmlHomeFactory"/>
         </property>
@@ -49,7 +49,7 @@
 
     <bean id="org.theospi.portfolio.shared.mgt.AdditionalFinder.baseAssignment"
           class="org.theospi.portfolio.shared.mgt.AdditionalFinder"
-          init-method="init" singleton="true">
+          init-method="init" scope="singleton">
         <property name="artifactFinderManager">
             <ref bean="artifactFinderManager"/>
         </property>

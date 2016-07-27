@@ -5,7 +5,7 @@
     <!--bean abstract="false" autowire="default"
          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
          dependency-check="default" id="com.rsmart.supporttool.api.EventService"
-         lazy-init="default" singleton="true">
+         lazy-init="default" scope="singleton">
       <property name="transactionManager">
         <ref bean="org.springframework.jdbc.datasource.DataSourceTransactionManager"/>
       </property>
@@ -23,7 +23,7 @@
    <bean
          id="com.rsmart.supporttool.api.EventService"
          class="com.rsmart.supporttool.impl.EventServiceImpl"
-         singleton="true">
+         scope="singleton">
        <constructor-arg index="0" type="javax.sql.DataSource" ref="javax.sql.DataSource"></constructor-arg>
        <constructor-arg index="1" type="org.sakaiproject.db.api.SqlService"  ref="org.sakaiproject.db.api.SqlService"/>
    </bean>
