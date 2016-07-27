@@ -95,3 +95,4 @@ rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/
 #shell_command find rsmart/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find rsmart/ -type f -exec sed -i 's/singleton="true"/scope="singleton"/g' {} \;
 #shell_command find rsmart/ -type f -exec sed -i 's/util.ContextLoaderListener/util.SakaiContextLoaderListener/g' {} \;
+#shell_command sed -i 's/ sessionId="meleteEditor" / /g' melete/melete-app/src/webapp/melete/addmodulesections.jsp
