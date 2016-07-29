@@ -39,9 +39,8 @@
 
         <!-- generic DAO -->
         <dependency>
-            <groupId>org.sakaiproject</groupId>
+            <groupId>org.sakaiproject.genericdao</groupId>
             <artifactId>generic-dao</artifactId>
-            <version>0.9.18</version>
         </dependency>
 
         <!-- Spring and Hibernate dependencies. -->
@@ -123,6 +122,10 @@
         </dependency>
 
         <!-- testing dependencies -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
         <dependency>
             <groupId>hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
