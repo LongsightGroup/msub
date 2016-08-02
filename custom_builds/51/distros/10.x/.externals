@@ -83,7 +83,7 @@ gradebook https://source.sakaiproject.org/svn/msub/longsight.com/gradebook/grade
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/51/site-manage/branches/sakai-10.x
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/edu-services/edu-services-10.x_iRubric
 bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
-kaltura https://github.com/kaltura/sakai-extension/trunk
+kaltura https://github.com/kaltura/sakai-extension/branches/10x
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
