@@ -170,14 +170,21 @@
    -->
 
                 <!-- Example of HTTP metadata without Extended Metadata -->
+                <bean class="org.springframework.security.saml.metadata.ExtendedMetadataDelegate">
+                  <constructor-arg>
                 <bean class="org.opensaml.saml2.metadata.provider.HTTPMetadataProvider">
                     <constructor-arg>
                         <value type="java.lang.String">https://sts.stlawu.edu/federationmetadata/2007-06/federationmetadata.xml</value>
                     </constructor-arg>
                     <constructor-arg>
-                        <value type="int">86400</value>
+                        <value type="int">60000</value>
                     </constructor-arg>
                     <property name="parserPool" ref="parserPool"/>
+                </bean>
+                  </constructor-arg>
+                  <constructor-arg>
+                    <bean class="org.springframework.security.saml.metadata.ExtendedMetadata"/>
+                  </constructor-arg>
                 </bean>
                 
                 <!-- Example of file system metadata without Extended Metadata -->
