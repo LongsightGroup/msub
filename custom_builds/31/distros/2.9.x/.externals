@@ -7,7 +7,7 @@ chat https://source.sakaiproject.org/svn/chat/branches/sakai-2.9.x
 citations https://source.sakaiproject.org/svn/citations/branches/sakai-2.9.x
 config https://source.sakaiproject.org/svn/config/branches/sakai-2.9.x
 content https://source.sakaiproject.org/svn/content/branches/sakai-2.9.x
-dav https://source.sakaiproject.org/svn/dav/branches/sakai-2.9.x
+#dav https://source.sakaiproject.org/svn/dav/branches/sakai-2.9.x
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-2.9.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-2.9.x
 linktool https://source.sakaiproject.org/svn/linktool/branches/sakai-2.9.x
@@ -47,9 +47,9 @@ sakai-mock https://source.sakaiproject.org/svn/sakai-mock/branches/sakai-mock-2.
 # Indie tools
 basiclti https://source.sakaiproject.org/svn/basiclti/branches/basiclti-2.1.x
 jobscheduler https://source.sakaiproject.org/svn/jobscheduler/branches/jobscheduler-2.9.x
-lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/lessonbuilder-1.4.x
+#lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/lessonbuilder-1.4.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/1.7
-msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/msgcntr-3.0.x
+#msgcntr https://source.sakaiproject.org/svn/msgcntr/branches/msgcntr-3.0.x
 polls https://source.sakaiproject.org/svn/polls/branches/polls-1.5.x
 profile https://source.sakaiproject.org/svn/profile/branches/profile-2.9.x
 profile2 https://source.sakaiproject.org/svn/profile2/branches/profile2-1.5.x
@@ -70,8 +70,6 @@ site https://source.sakaiproject.org/svn/site/branches/site-2.9.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/taggable-2.9.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
-kernel https://source.sakaiproject.org/svn/kernel/branches/kernel-1.3.x/
-
 #Customizations:
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x/
 EntityBrowser https://source.sakaiproject.org/contrib/asu/EntityBrowser/
@@ -85,11 +83,18 @@ samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
+# s3 content
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-1.3.x-aws-s3
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/2.9.x
+lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/163/lessonbuilder
+dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/163/dav/dav-2.9.x
+
 #Patcher options: "mavenoptions: <options>"
 #Evaluation needs -Psakai2.9
 #mavenoptions:-Psakai2.9 -Dsakai.msgcntr.version=3.0.4-SNAPSHOT
 
 #Pom Changes
+#shell_command find ./ -name pom.xml -exec sed -i 's/2.9.3/2.9-SNAPSHOT/g' {} \;
 #shell_command sed -i 's/2.5.4/2.9-SNAPSHOT/g' hierarchy/pom.xml
 #shell_command sed -i 's/2.8-SNAPSHOT/2.9-SNAPSHOT/g' evaluation/pom.xml
 #shell_command sed -i 's/2.6.0RC1-SNAPSHOT/2.9-SNAPSHOT/g' EntityBrowser/pom.xml EntityBrowser/tool/pom.xml

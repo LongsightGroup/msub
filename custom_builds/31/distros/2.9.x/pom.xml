@@ -127,13 +127,16 @@
                 <module>velocity</module>
                 <module>warehouse</module>
                 <module>web</module>
-            	<!-- Custom -->
+
+                <module>cloud-content</module>
+            	<!-- Custom
 		<module>etudes-util</module>
 		<module>hierarchy</module>
 		<module>blogwow</module>
                 <module>EntityBrowser</module>
 		<module>evaluation</module>
 		<module>melete</module>
+                -->
 	    </modules>
         </profile>
         <profile>
