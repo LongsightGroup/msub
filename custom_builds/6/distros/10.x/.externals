@@ -79,6 +79,7 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 #customizations
 assignment -r321585 https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport
+attendance https://github.com/UDayton/attendance/branches/10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 da_evalprovider https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk
 #evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
