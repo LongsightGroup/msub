@@ -75,7 +75,6 @@
                 <module>profile</module>
                 <module>profile2</module>
                 <module>reset-pass</module>
-                <module>samigo</module>
                 <module>search</module>
                 <module>shortenedurl</module>
                 <module>sitestats</module>
@@ -130,6 +129,7 @@
 
                 <module>cloud-content</module>
             	<!-- Custom
+                <module>samigo</module>
 		<module>etudes-util</module>
 		<module>hierarchy</module>
 		<module>blogwow</module>
