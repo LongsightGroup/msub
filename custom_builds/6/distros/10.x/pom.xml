@@ -124,6 +124,7 @@
                 <module>melete</module>
                 <!-- module>iclicker</module -->
                 <!--module>bigbluebutton-sakai/bbb-tool</module -->
+                <module>attendance</module>
             </modules>
         </profile>
         <profile>
