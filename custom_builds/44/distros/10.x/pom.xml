@@ -64,6 +64,7 @@
                 <module>config</module>
                 <module>content</module>
                 <module>content-review</module>
+                <module>cloud-content</module>
                 <module>courier</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
