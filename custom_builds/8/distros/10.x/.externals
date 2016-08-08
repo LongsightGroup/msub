@@ -4,7 +4,7 @@
 master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 
 # Core services
-kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
+#kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
@@ -36,7 +36,7 @@ courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-10.x
 help https://source.sakaiproject.org/svn/help/branches/sakai-10.x
-lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
+#lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
 login https://source.sakaiproject.org/svn/login/branches/sakai-10.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
@@ -83,6 +83,10 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 qna https://source.sakaiproject.org/contrib/qna/branches/sakai-10.x/
 sms https://source.sakaiproject.org/contrib/longsight/sms/sms-sakai10.x-datepicker/
 
+#s3 Content
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/10.x
+lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/sakai-10.x-s3
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
