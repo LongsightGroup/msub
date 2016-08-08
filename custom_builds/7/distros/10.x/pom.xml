@@ -115,6 +115,7 @@
                 <module>web</module>
                 <module>webservices</module>
 
+                <module>cloud-content</module>
                 <module>blogwow</module>
                 <module>etudes-util</module>
                 <module>ltiContact</module>

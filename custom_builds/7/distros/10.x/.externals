@@ -30,7 +30,7 @@ content https://source.sakaiproject.org/svn/content/branches/sakai-10.x
 courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
 #kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
-lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
+#lessonbuilder https://source.sakaiproject.org/svn/lessonbuilder/branches/sakai-10.x/
 login https://source.sakaiproject.org/svn/login/branches/sakai-10.x
 mailarchive https://source.sakaiproject.org/svn/mailarchive/branches/sakai-10.x
 mailsender https://source.sakaiproject.org/svn/mailsender/branches/sakai-10.x
@@ -69,7 +69,6 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 #mavenoptions:-Psakai-10 
 
 #customizations:
-kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/kernel/kernel-10.x_custom
 assignment https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/assignment/assignment-10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 config https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/config/config-10.x_custom
@@ -85,6 +84,11 @@ etudes-util https://source.sakaiproject.org/contrib/longsight/etudes/etudes-util
 ltiContact https://source.sakaiproject.org/contrib/longsight/etudes/ltiContact-1.2/
 melete https://source.sakaiproject.org/contrib/longsight/melete/melete-2.9.9-uindy/
 help https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/help/10.x
+
+# S3 content
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/7/kernel/kernel-10.x_custom
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/10.x
+lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/sakai-10.x-s3
 
 #Big Blue Button:
 #shell_command git clone https://github.com/blindsidenetworks/bigbluebutton-sakai/
