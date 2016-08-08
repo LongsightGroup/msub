@@ -6,3 +6,4 @@ Updating to latest 10.x 07/17/2015 svn merge "^/kernel/branches/sakai-10.x"
 Updating to latest 10.x 12/22/2015 svn merge "^/kernel/branches/sakai-10.x"
 --- Merging r320203 through r322194 into '.':
 
+* svn merge -r321285:324718 ^/msub/longsight.com/kernel/sakai-10.x-aws-s3

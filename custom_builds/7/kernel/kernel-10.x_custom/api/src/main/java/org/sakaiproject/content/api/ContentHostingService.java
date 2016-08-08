@@ -22,6 +22,7 @@
 package org.sakaiproject.content.api;
 
 import java.io.InputStream;
+import java.net.URI;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
@@ -1974,6 +1975,8 @@ public interface ContentHostingService extends EntityProducer
 	 * @param resourceId The zip file resource that we want to expand
 	 */
 	public void expandZippedResource(String resourceId) throws Exception;
+
+	public URI getTheDirectLink(ContentResource resource);
 
 	/**
 	 * Expand macros in a URL
