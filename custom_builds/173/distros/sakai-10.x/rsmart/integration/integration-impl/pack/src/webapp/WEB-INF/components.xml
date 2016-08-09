@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+   <!-- create other implementation of UserDirectoryProvider as beans with
+   names other than "org.sakaiproject.user.api.UserDirectoryProvider".  then, in
+   sakai.properties, you can put
+   realDirectoryProviderName@org.sakaiproject.user.api.UserDirectoryProvider=<provider id to use>
+   -->
+<!--
+   <bean id="org.sakaiproject.user.api.UserDirectoryProvider"
+      class="com.rsmart.sakaiproject.integration.user.impl.ListableUserDirectoryProvider">
+   </bean>
+-->
+
+   <bean id="customEditorConfigurer"
+      class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+       <property name="customEditors">
+           <map>
+               <entry key="java.util.Date">
+                   <bean class="org.springframework.beans.propertyeditors.CustomDateEditor">
+                       <constructor-arg index="0">
+                           <bean class="java.text.SimpleDateFormat">
+                               <constructor-arg value="dd/MM/yyyy"/>
+                           </bean>
+                       </constructor-arg>
+                       <constructor-arg index="1" value="false"/>
+         </bean>
+               </entry>
+           </map>
+       </property>
+   </bean>
+   
+   <bean id="org.sakaiproject.coursemanagement.api.CourseManagementService.properties" 
+      class="com.rsmart.sakaiproject.integration.coursemanagement.impl.CourseManagementServiceTermProperties"
+      init-method="init">
+       <property name="cmService" ref="org.sakaiproject.coursemanagement.impl.CourseManagementServiceFederatedImpl"/>
+       <property name="cmAdmin" ref="org.sakaiproject.coursemanagement.api.CourseManagementAdministration"></property>
+       <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"></property>
+       <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"></property>
+   </bean>
+
+   <bean id="com.rsmart.sakaiproject.integration.coursemanagement.impl.DummyGroupProvider"
+         class="com.rsmart.sakaiproject.integration.coursemanagement.impl.DummyGroupProvider" />
+
+   <bean id="org.sakaiproject.coursemanagement.impl.provider.CourseManagementGroupProvider.configurable"
+         class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+         singleton="true" lazy-init="false">
+      <property name="transactionManager">
+         <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
+      </property>
+      <property name="transactionAttributes">
+         <props>
+            <prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+         </props>
+      </property>
+      <property name="target">
+         <bean class="com.rsmart.sakaiproject.integration.coursemanagement.impl.ConfigurableGroupProvider"
+               init-method="init"
+               destroy-method="destroy">
+            <property name="dependantObjects">
+               <list>
+                  <ref bean="org.sakaiproject.coursemanagement.api.CourseManagementService"/>
+               </list>
+            </property>
+            <property name="serverConfigurationService" 
+                      ref="org.sakaiproject.component.api.ServerConfigurationService"/>
+         </bean>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.sitemanage.api.SiteInfoComposer"
+         class="com.rsmart.sakaiproject.integration.coursemanagement.impl.SiteInfoComposerProxy" init-method="init">
+        <property name="siteInfoComposer">
+            <bean class="com.rsmart.sakaiproject.integration.coursemanagement.impl.DefaultSiteInfoComposer" init-method="init">
+                <property name="courseManagementService" ref="org.sakaiproject.coursemanagement.api.CourseManagementService"/>
+            </bean>
+        </property>
+   </bean>
+
+    <bean id="com.rsmart.sakaiproject.integration.coursemanagement.impl.SectionAggregationSiteInfoComposer"
+          class="com.rsmart.sakaiproject.integration.coursemanagement.impl.SectionAggregationSiteInfoComposer">
+        <property name="courseManagementService" ref="org.sakaiproject.coursemanagement.api.CourseManagementService"/>
+        <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
+        <property name="authzGroupService" ref="org.sakaiproject.authz.api.AuthzGroupService"/>
+        <property name="groupProvider" ref="org.sakaiproject.authz.api.GroupProvider"/>
+    </bean>
+
+</beans>

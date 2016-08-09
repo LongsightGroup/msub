@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.rsmart.customer.integration.model.CleMembership" table="clemembership" mutable="true">
+
+		<id name="id" length="36" type="java.lang.String" column="id">
+			<generator class="uuid.hex" />
+		</id>
+
+		<property name="userName" type="java.lang.String" column="username"
+			not-null="true" length="100" />
+			
+		<property name="courseNumber" type="java.lang.String"
+			column="coursenumber" not-null="true" length="100" />
+			
+		<property name="role" type="java.lang.String"
+			column="role" not-null="true" length="32" />
+
+      <property name="active" type="boolean" column="active" not-null="true"  />
+
+   </class>
+</hibernate-mapping>

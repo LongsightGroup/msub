@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 rel. 3 U (http://www.altova.com) by George (The rSmart Group) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="reflection_2exp">
+		<xs:annotation>
+			<xs:documentation source="ospi.label">Reflection</xs:documentation>
+			<xs:documentation source="ospi.inlinedescription"/>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="expectation1" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="ospi.label">Expectation 1</xs:documentation>
+						<xs:documentation source="ospi.inlinedescription">Select the first set of evidence from this cell by using the drop down box below. Describe the context in which you created this evidence and explain why you chose it to demonstrate your understanding of this criterion.</xs:documentation>
+						<xs:documentation source="ospi.isOnlyLabel">true</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:double"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="evidence" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="ospi.label">Select Evidence</xs:documentation>
+						<xs:documentation source="ospi.inlinedescription">Select your evidence for this expectation. Describe the context in which you created this evidence.</xs:documentation>
+						<xs:documentation source="ospi.isRichText">true</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="5000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="reflection" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="ospi.label">Reflection</xs:documentation>
+						<xs:documentation source="ospi.inlinedescription">How does the work you chose demonstrate your progress toward meeting this criterion?</xs:documentation>
+						<xs:documentation source="ospi.isRichText">true</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="5000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="expectation2" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="ospi.label">Expectation 2</xs:documentation>
+						<xs:documentation source="ospi.inlinedescription">Select the second set of evidence from this cell by using the drop down box below. Describe the context in which you created this evidence and explain why you chose it to demonstrate your understanding of this criterion.</xs:documentation>
+						<xs:documentation source="ospi.isOnlyLabel">true</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:double"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="evidence2" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="ospi.label">Select Evidence</xs:documentation>
+						<xs:documentation source="ospi.inlinedescription">Select your evidence for this expectation. Describe the context in which you created this evidence.</xs:documentation>
+						<xs:documentation source="ospi.isRichText">true</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="5000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="reflection2" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="ospi.label">Reflection</xs:documentation>
+						<xs:documentation source="ospi.inlinedescription">How does the work you chose demonstrate your progress toward meeting this criterion?</xs:documentation>
+						<xs:documentation source="ospi.isRichText">true</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="5000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="goals">
+					<xs:annotation>
+						<xs:documentation source="ospi.label">Your Goals</xs:documentation>
+						<xs:documentation source="ospi.inlinedescription">How has your understanding of your educational, career, and/or personal goals changed as a result of your work in meeting this criterion.</xs:documentation>
+						<xs:documentation source="ospi.isRichText">true</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="5000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
