@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="Web Content" description="Use Web Content to display a web site outside the system to your site participants." id="sakai.iframe">
+
+      <configuration name="source" value=""/>
+      <configuration name="height" value="600px"/>
+
+      <configuration name="reset.button" value="true"/>
+
+
+      <configuration name="functions.require"/>
+
+
+  		
+		<configuration name="allowMultipleInstances" value="true"/>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="portfolio"/>
+<category name="project"/>
+<category name="myworkspacebuserdguest"/>
+<category name="myworkspacebuserdregistered"/>
+<category name="myworkspacebuserdmaintain"/>
+</tool>
+
+</registration>

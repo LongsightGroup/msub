@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="rSmart Support" description="Direct link to The rSmart Support Network." id="sakai.iframe.rsn">
+
+      <configuration name="source" value="http://rsn.rsmart.com/"/>
+      <configuration name="height" value="600px"/>
+
+      <configuration name="reset.button" type="final" value="false"/>
+
+
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="aw"/>
+<category name="myworkspacetadmin"/>
+</tool>
+
+</registration>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="News" description="Use News to display a dynamic news source to site participants." id="sakai.news">
+
+      <configuration name="channel-url" value="http://www.sakaiproject.org/cms/index2.php?option=com_rss&amp;feed=RSS2.0&amp;no_html=1"/>
+
+
+      <configuration name="functions.require"/>
+		
+		
+		<configuration name="allowMultipleInstances" value="true"/>
+
+
+      
+      
+      
+      
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="portfolio"/>
+<category name="project"/>
+<category name="myworkspacebuserdguest"/>
+<category name="myworkspacebuserdregistered"/>
+<category name="myworkspacebuserdmaintain"/>
+</tool>
+
+</registration>
