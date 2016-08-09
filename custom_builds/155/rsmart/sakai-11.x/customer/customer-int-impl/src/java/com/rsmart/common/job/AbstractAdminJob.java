@@ -73,7 +73,8 @@ abstract public class AbstractAdminJob implements Job {
 		      List<JobExecutionContext> jobs = jobExecutionContext.getScheduler().getCurrentlyExecutingJobs();
 		      for (JobExecutionContext job : jobs) {
 		    	  // compare using job name but ensure its a different instance than the current one
-		    	  if (job.getJobDetail().getKey().equals(jobExecutionContext.getJobDetail().getKey())) {
+		    	  if (job.getJobDetail().getKey().equals(jobExecutionContext.getJobDetail().getKey())
+		    	        && !job.getFireInstanceId().equals(jobExecutionContext.getFireInstanceId())) {
 		    		  jobRunning = true;
 		    	  }
 		      }
