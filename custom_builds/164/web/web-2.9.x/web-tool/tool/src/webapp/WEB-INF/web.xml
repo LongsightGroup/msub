@@ -69,6 +69,14 @@
        <dispatcher>INCLUDE</dispatcher>
    </filter-mapping>
 
+    <filter-mapping>
+        <filter-name>sakai.request</filter-name>
+        <servlet-name>usa.policies</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
+
    <!-- ${rsmart.filter-mapping.opensessioninview} -->
 
    <!-- the vm handling servlet : used direct by name, not by URL path -->
@@ -197,6 +205,7 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+
     <listener>
         <listener-class>org.sakaiproject.util.ToolListener</listener-class>
     </listener>
