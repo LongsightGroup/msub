@@ -89,7 +89,6 @@ usermembership -r 314587          https://source.sakaiproject.org/svn/msub/rsmar
 velocity -r 314588                https://source.sakaiproject.org/svn/msub/rsmart.com/velocity/branches/2.9.x
 warehouse -r 314589               https://source.sakaiproject.org/svn/msub/rsmart.com/warehouse/branches/2.9.x
 was -r 314590                     https://source.sakaiproject.org/svn/msub/rsmart.com/was/branches/2.9.x
-web -r 314591                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/2.9.x
 webservices -r 314592             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.x
 
 # rSmart tools
@@ -99,11 +98,14 @@ rsmart			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-
 scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/scoring-service
 irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/irubric
 
-# Customizations
+# Cloud content
 kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/kernel/2.9.x
 cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/cloud-content
 lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/lessonbuilder
 dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/dav/dav-2.9.x
+
+# Customizations
+web                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/web/web-2.9.x
 
 #mavenoptions:-P2.9 -Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.jdk.version=1.7
 
