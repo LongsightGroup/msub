@@ -208,7 +208,7 @@
     <!-- SAML Authentication Provider responsible for validating of received SAML messages -->
     <bean id="samlAuthenticationProvider" class="org.springframework.security.saml.SAMLAuthenticationProvider">
         <!-- OPTIONAL property: can be used to store/load user data after login -->
-        <property name="forcePrincipalAsString" value="true" />
+        <property name="forcePrincipalAsString" value="false" />
         <property name="userDetails">
             <bean class="org.sakaiproject.login.filter.EppnSamlFilter" />
         </property>
