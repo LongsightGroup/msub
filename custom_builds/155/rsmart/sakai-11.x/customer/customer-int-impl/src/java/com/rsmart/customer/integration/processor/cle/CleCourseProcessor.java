@@ -50,7 +50,6 @@ import org.sakaiproject.site.api.ToolConfiguration;
 import org.sakaiproject.thread_local.cover.ThreadLocalManager;
 import org.sakaiproject.tool.cover.ToolManager;
 import org.sakaiproject.user.api.UserDirectoryService;
-import org.sakaiproject.util.ArrayUtil;
 
 /**
  * Sis Course Processor
@@ -614,7 +613,7 @@ public class CleCourseProcessor extends BaseCsvFileProcessor {
 				EntityTransferrer et = (EntityTransferrer) ep;
 
 				// if this producer claims this tool id
-				if (ArrayUtil.contains(et.myToolIds(), toolId)) {
+				if (arrayUtilContains(et.myToolIds(), toolId)) {
 
 
                     ThreadLocalManager.set("sakai:ToolComponent:current.placement", new org.sakaiproject.util.Placement(null,toolId,null,null,toContext,null));
@@ -843,5 +842,33 @@ public class CleCourseProcessor extends BaseCsvFileProcessor {
 
     public void setUpdateLongDescription(boolean updateLongDescription) {
         this.updateLongDescription = updateLongDescription;
+    }
+
+    /**                                                                                                                                                                                                                  
+     * Search for an object in an array.
+     *                                
+     * @param target               
+     *        The target array    
+     * @param search             
+     *        The object to search for. 
+     * @return true if search is "in" (equal to any object in) the target, false if not
+     */                                                                               
+    public static boolean arrayUtilContains(Object[] target, Object search)                   
+    {
+        if ((target == null) || (search == null)) return false;
+        if (target.length == 0) return false;
+        try
+        {
+            for (int i = 0; i < target.length; i++)
+            {
+                if (search.equals(target[i])) return true;
+            }
+        }
+        catch (Exception e)
+        {
+            return false;                                                                                                                                                                                                
+        }
+
+        return false;
     }
 }
