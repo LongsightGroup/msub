@@ -120,7 +120,9 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>evaluation</module>
-                <module>rsmart</module>
+                <module>da_evalprovider</module>
+                <module>blogwow</module>
+                <module>bbb-tool</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
