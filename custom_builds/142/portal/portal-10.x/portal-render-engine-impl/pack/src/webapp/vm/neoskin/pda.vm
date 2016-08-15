@@ -79,7 +79,11 @@ ${responseHead}
 ## If there's some extra header code defined, included it here
 ${includeExtraHead}
 </head>
+#if ( ${bufferedResponse} && ${responseBodyOnloadContents} )
+<body class="portalBodyPDA" onload="${responseBodyOnloadContents}">
+#else
 <body class="portalBodyPDA">
+#end
 #if ( $pageTop )
 	<script type="text/javascript">
 	var sakaiPortalWindow = "";

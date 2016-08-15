@@ -101,6 +101,8 @@ public class PDAHandler extends SiteHandler
 	// private static final String IFRAME_SUPPRESS_DEFAULT = ":all:sakai.profile2:sakai.synoptic.messagecenter:sakai.sitestats:sakai.sitestats.admin";
 	// SAK-25494 with the post bufffer check now working, it seems as though we can inline everything
 	private static final String IFRAME_SUPPRESS_DEFAULT = ":all:";
+
+	private static final String ONLOAD_CONTENTS = "(?i)onload *= *\"(.*?)\"";
 	
 	public PDAHandler()
 	{
@@ -354,6 +356,7 @@ public class PDAHandler extends SiteHandler
 					Map<String,String> bufferMap = (Map<String,String>) BC;
 					rcontext.put("responseHead", (String) bufferMap.get("responseHead"));
 					rcontext.put("responseBody", (String) bufferMap.get("responseBody"));
+					rcontext.put("responseBodyOnloadContents", (String) bufferMap.get("responseBodyOnloadContents"));
 				}
 
 				// Add any device specific information to the context
@@ -499,12 +502,27 @@ public class PDAHandler extends SiteHandler
 		String responseStr = bufferedResponse.getInternalBuffer();
 		if (responseStr == null || responseStr.length() < 1) return Boolean.FALSE;
 
+		Pattern pattern = Pattern.compile(ONLOAD_CONTENTS);
+
 		String responseStrLower = responseStr.toLowerCase();
 		int headStart = responseStrLower.indexOf("<head");
 		headStart = findEndOfTag(responseStrLower, headStart);
 		int headEnd = responseStrLower.indexOf("</head");
 		int bodyStart = responseStrLower.indexOf("<body");
+		int bodyTagStart = bodyStart;
 		bodyStart = findEndOfTag(responseStrLower, bodyStart);
+		int bodyTagEnd = bodyStart;
+
+		String bodyTag = responseStr.substring(bodyTagStart, bodyTagEnd);
+
+		Matcher OnloadContentsiMatcher = pattern.matcher(bodyTag);
+
+		String OnloadContents = "";
+
+		if (OnloadContentsiMatcher.find()) 
+		{
+			OnloadContents = OnloadContentsiMatcher.group(1);
+		}
 
 		// Some tools (Blogger for example) have multiple 
 		// head-body pairs - browsers seem to not care much about
@@ -515,6 +533,7 @@ public class PDAHandler extends SiteHandler
 		// If there is no body end at all or it is before the body 
 		// start tag we simply - take the rest of the response
 		if ( bodyEnd < bodyStart ) bodyEnd = responseStrLower.length() - 1;
+
 
 		String tidAllow = ServerConfigurationService.getString(IFRAME_SUPPRESS_PROP, IFRAME_SUPPRESS_DEFAULT);
 		if( tidAllow.indexOf(":debug:") >= 0 )
@@ -532,9 +551,12 @@ public class PDAHandler extends SiteHandler
 				System.out.println(headString);
 				System.out.println(" ---- Body --- ");
 				System.out.println(bodyString);
+				System.out.println(" ---- Body Onload Contents--- ");
+				System.out.println(OnloadContents);
 			}
 			m.put("responseHead", headString);
 			m.put("responseBody", bodyString);
+			m.put("responseBodyOnloadContents", OnloadContents);
 			return m;
 		}
 		return bufferedResponse;

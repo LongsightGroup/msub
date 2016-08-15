@@ -43,7 +43,11 @@
         #end
         ${includeExtraHead}
     </head>
+    #if ( ${bufferedResponse} && ${responseBodyOnloadContents} )
+    <body class="portalBodyPDA" onload="${responseBodyOnloadContents}">
+    #else
     <body class="portalBodyPDA">
+    #end
         <!-- START VM pda.vm -->
         #if ( $pageTop )
             <script>
