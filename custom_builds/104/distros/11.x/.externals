@@ -78,16 +78,15 @@ user https://github.com/sakaiproject/sakai/branches/11.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/11.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 web https://github.com/sakaiproject/sakai/branches/11.x/web
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
+providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
 
 #customizations:
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 blogwow https://github.com/sakaicontrib/blogwow/trunk
-providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 bbb-tool https://github.com/blindsidenetworks/bigbluebutton-sakai/branches/11.x/bbb-tool
 
 #POM CHANGES
-#shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
