@@ -1,0 +1,94 @@
+#Sakai CLE Externals
+# Updating: svn propset svn:externals -F .externals .
+# Corporate POM
+master https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/master
+
+# Core services
+common https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/common
+content-review https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/content-review
+delegatedaccess https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/delegatedaccess
+emailtemplateservice https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/emailtemplateservice
+entitybroker https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/entitybroker
+external-calendaring-service https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/external-calendaring-service/
+hierarchy https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/hierarchy
+jsf https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/jsf
+userauditservice https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/userauditservice
+
+# Core Sakai Tools
+access https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/access
+alias https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/alias
+announcement https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/announcement
+archive https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/archive
+assignment https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/assignment
+authz https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/authz
+basiclti https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/basiclti
+calendar https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/calendar
+chat https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/chat
+citations https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/citations
+cloud-content https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/cloud-content
+cmprovider https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/cmprovider
+config https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/config
+content https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/content
+courier https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/courier
+dashboard https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/dashboard
+dav https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/dav
+deploy https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/deploy
+edu-services https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/edu-services
+feedback https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/feedback
+gradebook https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/gradebook
+gradebookng https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/gradebookng
+help https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/help
+jobscheduler https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/jobscheduler
+kernel https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/kernel
+lessonbuilder https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/lessonbuilder
+login https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/login
+mailarchive https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/mailarchive
+mailsender https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/mailsender
+memory https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/memory
+message https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/message
+msgcntr https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/msgcntr
+oauth https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/oauth
+pack https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/pack
+pasystem https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/pasystem
+podcasts https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/podcasts
+polls https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/polls
+portal https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/portal
+postem https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/postem
+presence https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/presence
+profile2 https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/profile2
+providers https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/providers
+reference https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/reference
+reset-pass https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/reset-pass
+rights https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/rights
+roster2 https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/roster2
+rsf https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/rsf
+rwiki https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/rwiki
+samigo https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/samigo
+search https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/search
+sections https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/sections
+shortenedurl https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/shortenedurl
+simple-rss-portlet https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/simple-rss-portlet
+signup https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/signup
+site https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/site
+site-manage https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/site-manage
+sitestats https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/sitestats
+syllabus https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/syllabus
+taggable https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/taggable
+textarea https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/textarea
+tool https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/tool
+user https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/user
+usermembership https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/usermembership
+velocity https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/velocity
+web https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/web
+
+# Customizations
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
+commons	https://github.com/sakaicontrib/commons/branches/11.x
+sakai-widgets https://github.com/NoodlePartners/sakai-widgets/branches/longsight-deploy
+student-engagement https://github.com/steveswinsburg/student-engagement/trunk
+
+# VeriCite
+content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
+
+#shell_command find ./ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/<version>11.0<\/version>/<version>11-SNAPSHOT<\/version>/g' {} \;
