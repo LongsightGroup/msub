@@ -116,9 +116,6 @@
                 <module>web</module>
                 <module>webservices</module>
 
-                <module>commons</module>
-                <module>sakai-widgets</module>
-                <module>student-engagement</module>
                 <module>content-review/contentreview-impl-vericite</module>
                 <module>reference</module>
             </modules>
@@ -146,7 +143,6 @@
                 <module>content</module>
                 <module>content-review</module>
                 <module>courier</module>
-                <module>dashboard</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
                 <module>deploy</module>
