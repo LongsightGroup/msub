@@ -91,3 +91,19 @@ warehouse -r 308759               https://source.sakaiproject.org/svn/msub/rsmar
 was -r 308760                     https://source.sakaiproject.org/svn/msub/rsmart.com/was/branches/2.9.4.x
 web -r 308761                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/2.9.4.x
 webservices -r 311071             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.4.x
+
+# rSmart tools
+kernel-deploy		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/kernel-deploy
+jstl-shared-deploy	https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/jstl-shared-deploy
+rsmart			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/rsmart
+scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/scoring-service
+irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/irubric
+
+
+# Customizations
+kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/kernel/2.9.x
+cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/cloud-content
+lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/lessonbuilder
+dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/dav/dav-2.9.x
+
+#mavenoptions:-P2.9 -Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.jdk.version=1.7
