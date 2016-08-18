@@ -19,7 +19,7 @@ config-viewer -r 86167           https://source.sakaiproject.org/contrib/rsmart/
 content -r 310661                 https://source.sakaiproject.org/svn/msub/rsmart.com/content/branches/2.9.4.x
 content-review -r 308706          https://source.sakaiproject.org/svn/msub/rsmart.com/content-review/branches/2.9.4.x
 courier -r 308707                 https://source.sakaiproject.org/svn/msub/rsmart.com/courier/branches/2.9.4.x
-dav -r 308708                     https://source.sakaiproject.org/svn/msub/rsmart.com/dav/branches/2.9.4.x
+#dav -r 308708                     https://source.sakaiproject.org/svn/msub/rsmart.com/dav/branches/2.9.4.x
 edia-sakai-utils -r 86168        https://source.sakaiproject.org/contrib/rsmart/msub/edia-sakai-utils/branches/2.9.4.x
 edu-services -r 308709            https://source.sakaiproject.org/svn/msub/rsmart.com/edu-services/branches/2.9.4.x
 emailtemplateservice -r 308710    https://source.sakaiproject.org/svn/msub/rsmart.com/emailtemplateservice/branches/2.9.4.x
@@ -38,8 +38,8 @@ jforum -r 86176                  https://source.sakaiproject.org/contrib/rsmart/
 jobscheduler -r 308715            https://source.sakaiproject.org/svn/msub/rsmart.com/jobscheduler/branches/2.9.4.x
 jsf -r 308716                     https://source.sakaiproject.org/svn/msub/rsmart.com/jsf/branches/2.9.4.x
 kaltura -r 308717                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/2.9.4.x
-kernel -r 308900                  https://source.sakaiproject.org/svn/msub/rsmart.com/kernel/branches/2.9.4.x
-lessonbuilder -r 311073           https://source.sakaiproject.org/svn/msub/rsmart.com/lessonbuilder/branches/2.9.4.x
+#kernel -r 308900                  https://source.sakaiproject.org/svn/msub/rsmart.com/kernel/branches/2.9.4.x
+#lessonbuilder -r 311073           https://source.sakaiproject.org/svn/msub/rsmart.com/lessonbuilder/branches/2.9.4.x
 linktool -r 308720                https://source.sakaiproject.org/svn/msub/rsmart.com/linktool/branches/2.9.4.x
 login -r 308721                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/2.9.4.x
 mailarchive -r 308722             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/2.9.4.x
@@ -101,9 +101,9 @@ irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7
 
 
 # Customizations
-kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/kernel/2.9.x
-cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/cloud-content
-lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/lessonbuilder
-dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/dav/dav-2.9.x
+kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-2.9.x/kernel/2.9.x
+cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-2.9.x/cloud-content
+lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-2.9.x/lessonbuilder
+dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-2.9.x/dav/dav-2.9.x
 
 #mavenoptions:-P2.9 -Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.jdk.version=1.7
