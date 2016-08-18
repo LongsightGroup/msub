@@ -78,7 +78,7 @@ web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/159/web
 edu-services https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/159/edu-services/sakai-10.x
 
 jforum                           https://source.sakaiproject.org/contrib/longsight/jforum/10.x
-gradebook2 -r 87580              https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x
+gradebook2                       https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-10.x
 etudes-util                      https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 bbb-tool                         https://github.com/sakaicontrib/bbb-tool/branches/10.x
