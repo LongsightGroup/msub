@@ -121,10 +121,8 @@
                 <module>melete</module>
                 <module>bbb-tool</module>
 
-<!--
                 <module>gradebook2</module>
                 <module>jforum</module>
--->
             </modules>
         </profile>
         <profile>
