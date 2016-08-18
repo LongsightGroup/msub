@@ -144,7 +144,7 @@
                 <!--module>gmt</module-->
 		<module>external-calendaring-service</module>
                 <module>gradebook</module>
-                <module>gradebook2</module>
+                <!--module>gradebook2</module-->
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>hybrid</module>
