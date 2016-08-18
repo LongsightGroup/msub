@@ -101,9 +101,9 @@ irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7
 
 
 # Customizations
-kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/kernel/2.9.x
+kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/kernel
 cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/cloud-content
 lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/lessonbuilder
-dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/dav/dav-2.9.x
+dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/dav
 
 #mavenoptions:-P2.9 -Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.jdk.version=1.7
