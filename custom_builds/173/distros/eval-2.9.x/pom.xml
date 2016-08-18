@@ -84,7 +84,7 @@
                 <module>portal</module>
                 <module>presence/presence-api/api</module>
                 <!-- <module>jobscheduler/scheduler-api</module> -->
-                <module>reference/library</module>
+                <!--module>reference/library</module-->
                 <module>site</module>
                 <module>site-manage</module>
                 <module>tool</module>
@@ -109,22 +109,22 @@
                 <module>jstl-shared-deploy</module>
                 <module>access</module>
                 <module>alias</module>
-                <module>ambrosia</module>
+                <!--module>ambrosia</module-->
                 <module>announcement</module>
                 <module>archive</module>
                 <module>assignment</module>
                 <module>authz</module>
                 <module>basiclti</module>
                 <!--module>blog</module-->
-		<module>blogwow</module>
-                <module>bigbluebutton</module>
+		<!--module>blogwow</module-->
+                <!--module>bigbluebutton</module-->
                 <module>calendar</module>
                 <module>chat</module>
                 <module>citations</module>
-                <module>clog</module>
+                <!--module>clog</module-->
                 <module>common</module>
                 <module>config</module>
-                <module>config-viewer</module>
+                <!--module>config-viewer</module-->
                 <module>content</module>
                 <module>content-review</module>
                 <module>courier</module>
@@ -136,8 +136,8 @@
                 <module>edu-services</module>
                 <module>emailtemplateservice</module>
                 <module>entitybroker</module>
-                <module>EntityBrowser</module>
-                <module>etudes-util</module>
+                <!--module>EntityBrowser</module-->
+                <!--module>etudes-util</module-->
                 <module>evaluation</module>
                 <!--module>formbuilder</module-->
                 <!--module>gmt</module-->
@@ -148,8 +148,8 @@
                 <module>hierarchy</module>
                 <module>hybrid</module>
                 <module>iclicker</module>
-                <module>itunesu-tool</module>
-		<module>jforum</module> 
+                <!--module>itunesu-tool</module-->
+		<!--module>jforum</module--> 
                 <module>jobscheduler</module>
                 <module>jsf</module>
                 <module>kaltura</module>
@@ -158,7 +158,7 @@
                 <module>login</module>
                 <module>mailarchive</module>
                 <module>mailsender</module>
-                <module>melete</module>
+                <!--module>melete</module-->
                 <module>memory</module>
                 <module>message</module>
                 <module>messageservice</module>
@@ -179,7 +179,7 @@
                 <module>profile</module>
                 <module>profile2</module>
 
-                <module>reference</module>
+                <!--module>reference</module-->
 
                 <module>rights</module>
                 <module>roster</module>
@@ -189,7 +189,7 @@
                 <module>sakora</module>
                 <module>sam</module>
 
-                <module>search</module>
+                <!--module>search</module-->
                 <module>sections</module>
                 <module>shortenedurl</module>
                 <module>skin-manager</module>
@@ -205,7 +205,7 @@
                 <module>user</module>
                 <module>velocity</module>
                 <module>web</module>
-                <module>webservices</module>
+                <!--module>webservices</module-->
                 <module>usermembership</module>
                 <module>sakai-wicket</module>
                 <module>warehouse</module>
@@ -214,7 +214,7 @@
                 <module>taggable</module>
                 <module>turnitin/contentreview-impl</module>
                 <module>scoring-service</module>
-		<module>irubric</module>
+		<!--module>irubric</module-->
             </modules>
         </profile>
         <profile>
