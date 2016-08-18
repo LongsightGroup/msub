@@ -75,6 +75,7 @@
                 <module>authz</module>
                 <module>config</module>
                 <module>content</module>
+                <module>cloud-content</module>
                 <module>courier</module>
                 <module>dav</module>
                 <module>login</module>
