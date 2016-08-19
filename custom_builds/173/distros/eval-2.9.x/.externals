@@ -107,3 +107,17 @@ lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_bui
 dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/dav
 
 #mavenoptions:-P2.9 -Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.jdk.version=1.7
+
+
+# Shell Commands
+#shell_command find ./ -name pom.xml -exec sed -i 's/${project.parent.version}/2.9.3/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/${parent.version}/2.9.3/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/${sakai.version}/2.9.3/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/maven.rsmart.com/maven.anisakai.com/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/5.0.4/5.0.6/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/maven.anisakai.com/repo1.maven.org/g' {} \;
+#shell_command find ./kernel -name pom.xml -exec sed -i 's/0.0.5-SNAPSHOT/0.0.5/g' {} \;
+#shell_command find ./rsmart/ -name pom.xml -exec sed -i '/turningpoint-job/d' {} \;
+#shell_command find ./rsmart/ -name pom.xml -exec sed -i '/google-content/d' {} \;
+#shell_command find ./rsmart/ -name pom.xml -exec sed -i '/gradebook2-export/d' {} \;
+#shell_command find ./rsmart/ -name pom.xml -exec sed -i '/grade-exporter/d' {} \;
