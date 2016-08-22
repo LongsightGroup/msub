@@ -160,19 +160,19 @@ public class LoginTool extends HttpServlet
             // kill the portal path cookie
             String portalPath = ServerConfigurationService.getString("portalPath");
 
-            Cookie c = new Cookie( RequestFilter.SESSION_COOKIE, "-");
+            Cookie c = new Cookie( "JSESSIONID", "-");
             c.setPath(portalPath);
             c.setMaxAge(0);
             res.addCookie((Cookie) c.clone());
 
             // now the root path (sakai-session) cookie
-            c = new Cookie( RequestFilter.SESSION_COOKIE, "-");
+            c = new Cookie( "JSESSIONID", "-");
             c.setPath("/");
             c.setMaxAge(0);
             res.addCookie((Cookie) c.clone());
 
             /// add one more to kill the cookie set by container login path redirect
-            c = new Cookie(RequestFilter.SESSION_COOKIE, "-");
+            c = new Cookie("JSESSIONID", "-");
             c.setPath("/sakai-login-tool");
             c.setMaxAge(0);
             res.addCookie(c);
