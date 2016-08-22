@@ -32,13 +32,17 @@
     </filter>
 
     <filter>
-        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-name>Spring Delegated Filter</filter-name>
         <filter-class>org.sakaiproject.login.springframework.SafeDelegatingFilterProxy</filter-class>
+        <init-param>
+            <param-name>targetBeanName</param-name>
+            <param-value>org.springframework.security.util.FilterChainProxy</param-value>
+        </init-param>
     </filter>
 
     <filter-mapping>
-        <filter-name>springSecurityFilterChain</filter-name>
-        <url-pattern>/container/*</url-pattern>
+        <filter-name>Spring Delegated Filter</filter-name>
+        <url-pattern>/container</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
         <dispatcher>INCLUDE</dispatcher>
@@ -54,6 +58,7 @@
 
     <filter-mapping>
         <filter-name>sakai.request.container</filter-name>
+        <servlet-name>sakai.login.saml</servlet-name>
         <servlet-name>sakai.login.container</servlet-name>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
@@ -81,10 +86,22 @@
     </servlet>
 
     <servlet>
+        <servlet-name>sakai.login.saml</servlet-name>
+        <servlet-class>org.sakaiproject.login.tool.SAMLLogin</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
         <servlet-name>sakai.login.container</servlet-name>
         <servlet-class>org.sakaiproject.login.tool.ContainerLogin</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sakai.login.saml</servlet-name>
+        <url-pattern>/saml/*</url-pattern>
+    </servlet-mapping>
+
 
 	<!-- map the container login, and then cause it to trigger container authentication -->
     <servlet-mapping>

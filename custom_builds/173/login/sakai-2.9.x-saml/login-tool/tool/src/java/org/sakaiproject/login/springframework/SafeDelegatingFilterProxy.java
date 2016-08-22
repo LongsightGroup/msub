@@ -36,17 +36,27 @@ public class SafeDelegatingFilterProxy extends DelegatingFilterProxy {
         // make sure context is valid and bean exists before enabling this filter
         synchronized (this.delegateMonitor) {
             WebApplicationContext wac = findWebApplicationContext();
-            if (wac != null) {
-                if (wac.containsBean(getTargetBeanName())) {
-                    super.initFilterBean();
-                    enabled = true;
-                } else {
-                    log.info("Can't find a bean with name: " + getTargetBeanName() + ", safely disable proxying");
-                }
+            if (validContext(wac)) {
+                super.initFilterBean();
+                enabled = true;
             } else {
-                log.warn("Can't find web application context");
+                log.info("can't find a valid Spring context or a bean with name: " + getTargetBeanName() +
+                        " so no servlet filter proxying for you!");
             }
         }
+    }
+
+    private boolean validContext(WebApplicationContext wac) {
+        if (wac != null) {
+            try {
+                wac.getBean(getTargetBeanName(), Filter.class);
+                log.debug("setup checks out, enabling servlet filter proxing");
+                return true;
+            } catch (Exception e) {
+                log.debug(e.getMessage(), e);
+            }
+        }
+        return false;
     }
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)
@@ -57,6 +67,7 @@ public class SafeDelegatingFilterProxy extends DelegatingFilterProxy {
         }
 
         filterChain.doFilter(request, response);
+
     }
 
     @Override

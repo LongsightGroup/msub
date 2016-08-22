@@ -167,19 +167,19 @@ public class SkinnableLogin extends HttpServlet implements Login {
             // kill the portal path cookie
             String portalPath = serverConfigurationService.getString("portalPath");
 
-            Cookie c = new Cookie( "JSESSIONID", "-");
+            Cookie c = new Cookie( RequestFilter.SESSION_COOKIE, "-");
             c.setPath(portalPath);
             c.setMaxAge(0);
             res.addCookie((Cookie) c.clone());
 
             // now the root path (sakai-session) cookie
-            c = new Cookie( "JSESSIONID", "-");
+            c = new Cookie( RequestFilter.SESSION_COOKIE, "-");
             c.setPath("/");
             c.setMaxAge(0);
             res.addCookie((Cookie) c.clone());
 
             /// add one more to kill the cookie set by container login path redirect
-            c = new Cookie("JSESSIONID", "-");
+            c = new Cookie(RequestFilter.SESSION_COOKIE, "-");
             c.setPath("/sakai-login-tool");
             c.setMaxAge(0);
             res.addCookie(c);
