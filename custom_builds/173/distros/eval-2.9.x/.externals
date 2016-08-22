@@ -41,7 +41,6 @@ kaltura -r 308717                 https://source.sakaiproject.org/svn/msub/rsmar
 #kernel -r 308900                  https://source.sakaiproject.org/svn/msub/rsmart.com/kernel/branches/2.9.4.x
 #lessonbuilder -r 311073           https://source.sakaiproject.org/svn/msub/rsmart.com/lessonbuilder/branches/2.9.4.x
 linktool -r 308720                https://source.sakaiproject.org/svn/msub/rsmart.com/linktool/branches/2.9.4.x
-login -r 308721                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/2.9.4.x
 mailarchive -r 308722             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/2.9.4.x
 mailsender -r 86177              https://source.sakaiproject.org/contrib//rsmart/msub//mailsender/branches/2.9.4.x
 master -r 308723                  https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/2.9.4.x
@@ -99,15 +98,16 @@ rsmart			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-
 scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/scoring-service
 irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/irubric
 
-
-# Customizations
+# s3
 kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/kernel
 cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/cloud-content
 lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/lessonbuilder
 dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/dav
 
-#mavenoptions:-P2.9 -Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.jdk.version=1.7
+# Customizations
+login                   https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/login/sakai-2.9.x-saml
 
+#mavenoptions:-P2.9 -Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.jdk.version=1.7
 
 # Shell Commands
 #shell_command find ./ -name pom.xml -exec sed -i 's/${project.parent.version}/2.9.3/g' {} \;
