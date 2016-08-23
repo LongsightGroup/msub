@@ -118,6 +118,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>blogwow</module>
+                <module>attendance</module>
             </modules>
         </profile>
         <profile>
