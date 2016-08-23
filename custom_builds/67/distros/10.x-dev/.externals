@@ -79,12 +79,14 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 adobeconnect https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/2.9.x
 itunesu-tool https://source.sakaiproject.org/contrib/itunesu/trunk/itunesu-tool/
-wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/branches/sakai-2.9
-scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/sakai-10/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/providers/sakai-10.x_jldap-auth-caching_custom
-kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20150320/
 lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/lessonbuilder/lessonbuilder-10.x_custom
 bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
+
+# Commented out because of build errors
+#kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20150320/
+#wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/branches/sakai-2.9
+#scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/sakai-10/
 
 #shell_command sed -i 's/<version>10<\/version>/<version>10-SNAPSHOT<\/version>/g' scorm/pom.xml
 #shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
