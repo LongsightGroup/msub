@@ -37,7 +37,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
@@ -1871,6 +1870,24 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		p.addProperty(ResourceProperties.PROP_CONTENT_TYPE, r.getContentType());
 
 		p.addProperty(ResourceProperties.PROP_IS_COLLECTION, "false");
+
+		if (StringUtils.isBlank(p.getProperty(ResourceProperties.PROP_COPYRIGHT_CHOICE))) {
+			String copyright = m_serverConfigurationService.getString("copyright.type.default", "not_determined");
+			// if copyright is null don't set a default copyright
+			if (copyright != null) {
+				String[] copyrightTypes = m_serverConfigurationService.getStrings("copyright.types");
+				if (copyrightTypes != null && copyrightTypes.length > 0) {
+					List<String> l = Arrays.asList(copyrightTypes);
+					if (l.contains(copyright)) {
+						p.addProperty(ResourceProperties.PROP_COPYRIGHT_CHOICE, copyright);
+					} else {
+						M_log.warn("Cannot set the default copyright " + copyright + " on " + r.getId() + " does not match any copyright types");
+					}
+				} else {
+					M_log.warn("Cannot set the default copyright " + copyright + " on " + r.getId() + " no copyright types are defined");
+				}
+			}
+		}
 
 	} // addLiveResourceProperties
 
@@ -13978,7 +13995,8 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
                 throw new OverQuotaException(resource.getReference());
             }
             // zip files are not too large to extract so do the extract
-			extractZipArchive.extractArchive(resourceId);
+            extractZipArchive.extractArchive(resourceId);
+            cancelResource(resource); //commitResource(resource); // KNL-1220
         }
     }
     
@@ -13987,7 +14005,6 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 	private static final String MACRO_USER_EID            = "${USER_EID}";
 	private static final String MACRO_USER_FIRST_NAME     = "${USER_FIRST_NAME}";
 	private static final String MACRO_USER_LAST_NAME      = "${USER_LAST_NAME}";
-	private static final String MACRO_SESSION_ID          = "${SESSION_ID}";
 
 	private static final String MACRO_DEFAULT_ALLOWED = "${USER_ID},${USER_EID},${USER_FIRST_NAME},${USER_LAST_NAME}";
 
@@ -14004,7 +14021,7 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
      * 
      * See SAK-23587
      */
-    private String expandMacros(String url) {
+    public String expandMacros(String url) {
     	
     	if(M_log.isDebugEnabled()){
     		M_log.debug("Original url: " + url);
@@ -14051,10 +14068,6 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 			if (macroName.equals(MACRO_USER_LAST_NAME)) {
 				return userDirectoryService.getCurrentUser().getLastName();
 			}
-			if (macroName.equals(MACRO_SESSION_ID)) {
-				return sessionManager.getCurrentSession().getId();
-			}
-
 		}
 		catch (Exception e) {
 			M_log.error("Error resolving macro:" + macroName + ": " + e.getClass() + ": " + e.getCause());
