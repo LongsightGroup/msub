@@ -2419,13 +2419,17 @@ public class SimplePageBean {
 		return "success";
 	}
 
-
+	//This will be called from the UI
 	public String deleteOrphanPages() {
 	    if (getEditPrivs() != 0)
 	    	return "permission-failed";
 	    if (!checkCsrf())
-		return "permission-failed";
+	    	return "permission-failed";
+	    return deleteOrphanPagesInternal();
+	}
 
+	//This is an internal call that expects you will check permissions before calling it
+	public String deleteOrphanPagesInternal() {
 	    // code is mostly from PagePickerProducer
 	    // list we're going to display
 	    List<PagePickerProducer.PageEntry> entries = new ArrayList<PagePickerProducer.PageEntry> ();
@@ -2435,6 +2439,9 @@ public class SimplePageBean {
 
 	    // all pages
 	    List<SimplePage> pages = simplePageToolDao.getSitePages(getCurrentSiteId());
+	    if (pages==null) {
+	    	return "no-pages-in-site";
+	    }
 	    for (SimplePage p: pages)
 		pageMap.put(p.getPageId(), p);
 
@@ -2473,7 +2480,7 @@ public class SimplePageBean {
 		return "permission-failed";
 
 	    String siteId = getCurrentSiteId();
-
+	    log.debug("Found "+ selectedEntities.length + " pages to delete");
 	    for (int i = 0; i < selectedEntities.length; i++) {
 		deletePage(siteId, Long.valueOf(selectedEntities[i]));
 		if ((i % 10) == 0) {
