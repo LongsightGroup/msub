@@ -120,7 +120,9 @@
                 <module>webservices</module>
                 <module>blogwow</module>
                 <module>evaluation</module>
-                <module>bigbluebutton-sakai/bbb-tool</module>
+                <module>etudes-util</module>
+                <module>jforum</module>
+                <module>melete</module>
             </modules>
         </profile>
         <profile>
