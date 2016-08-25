@@ -77,6 +77,7 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
 
 # CUSTOMIZATIONS
+gradebook2			 https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-10.x
 etudes-util                      https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 jforum                           https://source.sakaiproject.org/contrib/longsight/jforum/10.x
 melete				 https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x/
