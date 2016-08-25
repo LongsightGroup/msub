@@ -75,6 +75,8 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
+#mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT -Dsakai.jdk.version=1.7
+
 
 # CUSTOMIZATIONS
 gradebook2			 https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-10.x
@@ -86,6 +88,3 @@ evaluation 			 https://source.sakaiproject.org/contrib/evaluation/branches/sakai
 site-manage 			 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_features-backport
 webservices 			 https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 bigbluebutton-sakai/bbb-tool 	 https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
-
-#Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-10
