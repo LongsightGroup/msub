@@ -2425,10 +2425,12 @@ public class SimplePageBean {
 	    	return "permission-failed";
 	    if (!checkCsrf())
 	    	return "permission-failed";
-	    return deleteOrphanPagesInternal();
+	    deleteOrphanPagesInternal();
+	    return deletePages();
 	}
 
 	//This is an internal call that expects you will check permissions before calling it
+	//Public because it's accessed from entity producer
 	public String deleteOrphanPagesInternal() {
 	    // code is mostly from PagePickerProducer
 	    // list we're going to display
@@ -2452,7 +2454,7 @@ public class SimplePageBean {
 
 	    // this adds everything you can find from top level pages to entries
 	    for (SimplePageItem sitePageItem : sitePages) {
-		// System.out.println("findallpages " + sitePageItem.getName() + " " + true);
+		log.debug("findallpages " + sitePageItem.getName() + " " + true);
 		pagePickerProducer().findAllPages(sitePageItem, entries, pageMap, topLevelPages, sharedPages, 0, true);
 	    }
 		    
@@ -2468,17 +2470,22 @@ public class SimplePageBean {
 		// do the deletetion
 		// selectedEntities is the argument for deletePages
 		selectedEntities = orphans.toArray(selectedEntities);
-		deletePages();
+		deletePagesInternal();
 	    }	    
 	    return "success";
 	}
 
+	//External method for deleting pages for the tool CSRF protected
 	public String deletePages() {
-	    if (getEditPrivs() != 0)
-	    	return "permission-failed";
-	    if (!checkCsrf())
-		return "permission-failed";
-
+		if (getEditPrivs() != 0)
+			return "permission-failed";
+		if (!checkCsrf())
+			return "permission-failed";
+		return deletePagesInternal();
+	}
+	
+	//Service method for deleting pages
+	protected String deletePagesInternal() {
 	    String siteId = getCurrentSiteId();
 	    log.debug("Found "+ selectedEntities.length + " pages to delete");
 	    for (int i = 0; i < selectedEntities.length; i++) {
