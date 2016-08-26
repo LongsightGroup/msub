@@ -89,5 +89,6 @@ bbb-tool                         https://github.com/sakaicontrib/bbb-tool/branch
 #shell_command find site-manage/ -name \*.properties -exec sed -i 's/Official Email Address or Username/URI Emplid or Student ID Number or Official URI email address/g' {} \;
 #shell_command find site-manage/ -name \*.properties -exec sed -i 's/Non-official Participant/Non-URI Participant/g' {} \;
 #shell_command find site-manage/ -name \*.properties -exec sed -i 's/COM101/ECON101/g' {} \;
+#shell_command sed -i 's/<category name="project" \/>/<category name="project" \/><configuration name="functions.require" value="site.upd"\/>/g' melete/melete-app/src/webapp/tools/sakai.melete.xml
 #shell_command sed -i 's/<category name="project" \/>/<category name="project" \/><configuration name="functions.require" value="site.upd"\/>/g' gradebook2/war/tools/sakai.gradebook.gwt.rpc.xml
 #shell_command find jforum/jforum-tool/src/webapp/tools/ -name \*.xml -exec sed -i 's/<configuration name="reset.button"/<configuration name="functions.require" value="site.upd"\/><configuration name="reset.button"/g' {} \; 
