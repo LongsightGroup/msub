@@ -197,6 +197,16 @@ public class URIJLDAPDirectoryProvider extends JLDAPDirectoryProvider implements
             M_log.debug("getUserByOprid(): [oprid = " + oprid + "]");
         }
 
+        LdapUserData cachedUserData = getCachedUserEntry(oprid);
+        boolean foundCachedUserData = cachedUserData != null;
+
+        if ( foundCachedUserData ) {
+            if ( M_log.isDebugEnabled() ) {
+                M_log.debug("getUserByOprid(): found cached user [oprid = " + oprid + "]");
+            }
+            return cachedUserData;
+        }
+
         String filter = getFindUserByOpridFilter(oprid);
         if ( M_log.isDebugEnabled() ) {
             M_log.debug("getUserByOprid(): [filter = " + filter + "]");
