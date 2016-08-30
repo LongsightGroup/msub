@@ -57,20 +57,12 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
     {
         InputStream is = null;
         //URL url;
-        log.error("NOT ERROR: loading file: " + this.classPathToXml);
+        log.info("UDCMSyncJob: loading file: " + this.classPathToXml);
         try
         {
             File file = new File(this.classPathToXml);
             is = new FileInputStream(file);
-            //url = new URL(this.classPathToXml);
-            //log.error("NOT ERROR: url is well formed, loading");
-            //is = url.openStream();
-            //log.error("NOT ERROR: stream opened! (is file loaded?");
-        }/*
-        catch (MalformedURLException e1)
-        {
-            log.error("NOT ERROR: url is badly formed", e1);
-        }*/
+        }
         catch (IOException e)
         {
             log.error("IO Exception loading xml input stream:", e);
@@ -82,8 +74,7 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
     protected void updateCourseOfferingMembers(Element membersElement,
             CourseOffering courseOffering)
     {
-        if (log.isInfoEnabled()) 
-            log.info("skipping course offering updates since they are handled sakai-side only!");
+        log.info("skipping course offering updates since they are handled sakai-side only!");
     }
     /*
     protected void reconcileAcademicSessions(Document doc) {
@@ -96,13 +87,13 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
     {
 
         long start = System.currentTimeMillis();
-        if(log.isInfoEnabled()) log.info("Reconciling CourseSet Links");
+        log.info("Reconciling CourseSet Links");
         
         try {
-            if(log.isInfoEnabled()) log.info("Reconciling CourseSet - Canonical Course Links");
+            log.info("Reconciling CourseSet - Canonical Course Links");
             XPath docsPath = XPath.newInstance("/cm-data/canonical-course-set-links/canonical-course-set-link");
             List items = docsPath.selectNodes(doc);
-            if(log.isInfoEnabled()) log.info("Found " + items.size() + " canonical course->sets to reconcile");
+            log.info("Found " + items.size() + " canonical course->sets to reconcile");
 
             // Add or update each of the course offerings specified in the xml
             for(Iterator iter = items.iterator(); iter.hasNext();)
@@ -110,17 +101,16 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
                 Element element = (Element)iter.next();
                 String canEid = element.getChildText("canonical-course-eid");
                 String csEid = element.getChildText("course-set-eid");
-                if(log.isDebugEnabled()) log.debug("Linking canonical course " + 
-                        canEid + " to course set " + csEid);
+                log.debug("Linking canonical course " + canEid + " to course set " + csEid);
                 
                 if(!cmService.isCourseSetDefined(csEid))
                 {
-                    if(log.isWarnEnabled()) log.warn("Course Set not found: " + csEid);;
+                    log.warn("Course Set not found: " + csEid);;
                     continue;
                 }
                 if (!cmService.isCanonicalCourseDefined(canEid))
                 {
-                    if(log.isWarnEnabled()) log.warn("Canonical course not found: " + canEid);;
+                    log.warn("Canonical course not found: " + canEid);;
                     continue;
                 }
                 CanonicalCourse can = cmService.getCanonicalCourse(canEid);
@@ -129,13 +119,13 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
                     cmAdmin.addCanonicalCourseToCourseSet(csEid,canEid);
             }
             
-            if(log.isInfoEnabled()) log.info("Finished Reconciling CourseSet - Canonical Course Links");
+            log.info("Finished Reconciling CourseSet - Canonical Course Links");
             
-            if(log.isInfoEnabled()) log.info("Reconciling CourseSet -Course Offering Links");
+            log.info("Reconciling CourseSet -Course Offering Links");
             
             docsPath = XPath.newInstance("/cm-data/course-offering-set-links/course-offering-set-link");
             items = docsPath.selectNodes(doc);
-            if(log.isInfoEnabled()) log.info("Found " + items.size() + " course offering->sets to reconcile");
+            log.info("Found " + items.size() + " course offering->sets to reconcile");
 
             // Add or update each of the course offerings specified in the xml
             for(Iterator iter = items.iterator(); iter.hasNext();)
@@ -143,8 +133,7 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
                 Element element = (Element)iter.next();
                 String coEid = element.getChildText("course-offering-eid");
                 String csEid = element.getChildText("course-set-eid");
-                if(log.isDebugEnabled()) log.debug("Linking course offering " + 
-                        coEid + " to course set " + csEid);             
+                log.debug("Linking course offering " + coEid + " to course set " + csEid);
                 try
                 {
                     if (!cmService.isCourseOfferingInCourseSet(csEid,coEid))
@@ -152,9 +141,7 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
                 }
                 catch (IdNotFoundException e)
                 {
-                    if(log.isWarnEnabled()) 
-                        log.warn("Course Set not found: " + csEid + 
-                                " or Course Offering not found: " + coEid, e);
+                    log.warn("Course Set not found: " + csEid + " or Course Offering not found: " + coEid, e);
                     String from = "\"<no-reply@" + serverConfigurationService.getServerName() + ">\"";
                     String to = serverConfigurationService.getString("cmjob.error.email", serverConfigurationService.getString("portal.error.email"));
                     StringWriter sw = new StringWriter();
@@ -162,12 +149,12 @@ public class UDCMSyncJob extends ClassPathCMSyncJob
                     emailService.send(from, to, this.getClass().getName() + " Warning - IdNotFoundException", sw.toString(), null, null, null);
                 }
             }
-            if(log.isInfoEnabled()) log.info("Finished Reconciling CourseSet -Course Offering Links");
+            log.info("Finished Reconciling CourseSet -Course Offering Links");
             
         } catch (JDOMException jde) {
             log.error(jde);
         }
-        if(log.isInfoEnabled()) log.info("Finished reconciling CourseSet Links in " + (System.currentTimeMillis()-start) + " ms");
+        log.info("Finished reconciling CourseSet Links in " + (System.currentTimeMillis()-start) + " ms");
     }
 
     public void setEmailService(EmailService emailService) {
