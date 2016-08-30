@@ -6,3 +6,4 @@ Adding custom classes from https://source.sakaiproject.org/svn/msub/rsmart.com/k
 SAK-29873 ND-83 pre-req for SAK-29952
 
 KNL-1451 - Support for metadata (or LRS Statements) to events
+KNL-1454, KNL-1460, KNL-1461 patches for LRS updates
