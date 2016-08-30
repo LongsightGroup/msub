@@ -1,0 +1,1 @@
+KNL-1451 - Add support for metadata (or LRS Statements) to events

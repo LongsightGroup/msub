@@ -26,7 +26,7 @@ basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
 chat https://source.sakaiproject.org/svn/chat/branches/sakai-10.x
 citations https://source.sakaiproject.org/svn/citations/branches/sakai-10.x
-content https://source.sakaiproject.org/svn/content/branches/sakai-10.x
+content https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/sitestats/10.x 
 courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
 gradebook https://source.sakaiproject.org/svn/gradebook/branches/sakai-10.x
@@ -54,7 +54,7 @@ sections https://source.sakaiproject.org/svn/sections/branches/sakai-10.x
 shortenedurl https://source.sakaiproject.org/svn/shortenedurl/branches/sakai-10.x
 signup https://source.sakaiproject.org/svn/signup/branches/sakai-10.x/
 site https://source.sakaiproject.org/svn/site/branches/sakai-10.x
-sitestats https://source.sakaiproject.org/svn/sitestats/branches/sakai-10.x
+sitestats https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/142/sitestats/10.x
 syllabus https://source.sakaiproject.org/svn/syllabus/branches/sakai-10.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/sakai-10.x
 textarea https://source.sakaiproject.org/svn/textarea/branches/sakai-10.x

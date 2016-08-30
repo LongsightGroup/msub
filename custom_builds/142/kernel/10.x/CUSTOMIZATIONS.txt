@@ -4,3 +4,5 @@ missing tools
 Adding custom classes from https://source.sakaiproject.org/svn/msub/rsmart.com/kernel/branches/10.2.x/ to support GB2 export
 
 SAK-29873 ND-83 pre-req for SAK-29952
+
+KNL-1451 - Support for metadata (or LRS Statements) to events
