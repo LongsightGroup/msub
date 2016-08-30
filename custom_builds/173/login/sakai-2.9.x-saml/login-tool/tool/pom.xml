@@ -41,7 +41,7 @@
         <dependency>
           <groupId>com.rsmart</groupId>
           <artifactId>ucnetid-lookup-web</artifactId>
-          <version>${sakai.version}</version>
+          <version>2.9.3</version>
           <!--scope>provided</scope-->
         </dependency>
         <dependency>
@@ -119,13 +119,13 @@
         <dependency>
           <groupId>org.sakaiproject</groupId>
           <artifactId>sakai-ucd-enterprise-data-service-api</artifactId>
-          <version>${sakai.version}</version>
+          <version>2.9.3</version>
           <scope>provided</scope>
         </dependency>
         <dependency>
           <groupId>org.sakaiproject</groupId>
           <artifactId>sakai-ucd-enterprise-data-service-impl</artifactId>
-          <version>${sakai.version}</version>
+          <version>2.9.3</version>
         </dependency>
       </dependencies>
     </profile>
@@ -317,13 +317,13 @@
 <!--
       This has been relocated to sakai-kernel-util
       org.sakaiproject.kernel.utilsakai-util-->
-<!--org.sakaiprojectsakai-authz-api${sakai.version}-->
-<!--org.sakaiprojectsakai-tool-api${sakai.version}-->
-<!--org.sakaiprojectsakai-component-api${sakai.version}-->
-<!--org.sakaiprojectsakai-event-api${sakai.version}-->
-<!--org.sakaiprojectsakai-user-api${sakai.version}-->
-<!--org.sakaiprojectsakai-util${sakai.version}-->
-<!--org.sakaiprojectsakai-user-util${sakai.version}-->
+<!--org.sakaiprojectsakai-authz-api2.9.3-->
+<!--org.sakaiprojectsakai-tool-api2.9.3-->
+<!--org.sakaiprojectsakai-component-api2.9.3-->
+<!--org.sakaiprojectsakai-event-api2.9.3-->
+<!--org.sakaiprojectsakai-user-api2.9.3-->
+<!--org.sakaiprojectsakai-util2.9.3-->
+<!--org.sakaiprojectsakai-user-util2.9.3-->
 <!--javax.servletservlet-api${sakai.servletapi.version}-->
     <dependency>
       <groupId>commons-logging</groupId>

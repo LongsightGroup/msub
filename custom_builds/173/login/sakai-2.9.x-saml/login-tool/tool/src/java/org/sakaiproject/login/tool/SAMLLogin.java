@@ -89,11 +89,13 @@ public class SAMLLogin extends HttpServlet
 			SAMLInit.initialize();
 			IdPConfig idpConfig = new IdPConfig(new File(samlConfigLocation + File.separator + SAML_IDP_CONFIG_FILE));
 			SPConfig spConfig = new SPConfig(new File(samlConfigLocation + File.separator + SAML_SP_CONFIG_FILE));
-			byte[] keyBytes = Files.readAllBytes(new File(samlConfigLocation + File.separator + SAML_SP_PRIVATE_KEY_FILE).toPath());
-			PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(keyBytes);
-			KeyFactory kf = KeyFactory.getInstance("RSA");
-			PrivateKey pkey = kf.generatePrivate(spec);
-			spConfig.setPrivateKey(pkey);
+			try {
+				byte[] keyBytes = Files.readAllBytes(new File(samlConfigLocation + File.separator + SAML_SP_PRIVATE_KEY_FILE).toPath());
+				PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(keyBytes);
+				KeyFactory kf = KeyFactory.getInstance("RSA");
+				PrivateKey pkey = kf.generatePrivate(spec);
+				spConfig.setPrivateKey(pkey);
+			} catch (Exception e) { M_log.warn("Could not set private key", e); }
 			samlClient = new SAMLClient(spConfig, idpConfig);
 		} catch (SAMLException e) {
 			M_log.warn("Could not initialize SAML", e);
