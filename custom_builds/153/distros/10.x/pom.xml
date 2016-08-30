@@ -118,11 +118,13 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>metaobj</module>
-                <module>gradebook2</module>
                 <module>rsmart</module>
                 <module>cloud-content</module>
                 <module>clog</module>
                 <module>blogwow</module>
+                <!--
+                <module>gradebook2</module>
+                -->
             </modules>
         </profile>
         <profile>
