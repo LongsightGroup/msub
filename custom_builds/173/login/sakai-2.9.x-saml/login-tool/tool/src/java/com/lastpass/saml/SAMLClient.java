@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  *
- * Copyright (c) 2014 LastPass, Inc.
+ * Copyright (c) 2014-2015 LastPass, Inc.
  */
 package com.lastpass.saml;
 
@@ -24,6 +24,7 @@ import org.opensaml.saml2.core.Conditions;
 import org.opensaml.saml2.core.AuthnStatement;
 import org.opensaml.saml2.core.AuthnRequest;
 import org.opensaml.saml2.core.Assertion;
+import org.opensaml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml2.core.Issuer;
 import org.opensaml.saml2.core.Audience;
 import org.opensaml.saml2.core.AudienceRestriction;
@@ -34,6 +35,8 @@ import org.opensaml.saml2.core.SubjectConfirmationData;
 import org.opensaml.saml2.core.AttributeStatement;
 import org.opensaml.saml2.core.Attribute;
 
+import org.opensaml.saml2.encryption.Decrypter;
+
 import org.opensaml.common.SAMLObjectBuilder;
 
 import org.opensaml.xml.parse.BasicParserPool;
@@ -41,6 +44,10 @@ import org.opensaml.xml.io.MarshallingException;
 import org.opensaml.xml.security.credential.BasicCredential;
 import org.opensaml.xml.signature.SignatureValidator;
 import org.opensaml.xml.signature.Signature;
+import org.opensaml.xml.encryption.InlineEncryptedKeyResolver;
+import org.opensaml.xml.encryption.DecryptionException;
+import org.opensaml.xml.security.credential.BasicCredential;
+import org.opensaml.xml.security.keyinfo.StaticKeyInfoCredentialResolver;
 import org.opensaml.xml.validation.ValidationException;
 import org.opensaml.xml.XMLObjectBuilderFactory;
 import org.opensaml.xml.XMLObject;
@@ -60,6 +67,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.zip.Deflater;
 
 import javax.xml.bind.DatatypeConverter;
@@ -94,7 +102,7 @@ public class SAMLClient
     private BasicParserPool parsers;
 
     /* do date comparisons +/- this many seconds */
-    private static final int slack = 300;
+    private static final int slack = (int) TimeUnit.MINUTES.toSeconds(5);
 
     /**
      * Create a new SAMLClient, using the IdPConfig for
@@ -163,12 +171,49 @@ public class SAMLClient
         }
     }
 
+    /**
+     * Decrypt an assertion using the privkey stored in SPConfig.
+     */
+    private Assertion decrypt(EncryptedAssertion encrypted)
+        throws DecryptionException
+    {
+        if (spConfig.getPrivateKey() == null)
+            throw new DecryptionException("Encrypted assertion found but no SP key available");
+        BasicCredential cred = new BasicCredential();
+        cred.setPrivateKey(spConfig.getPrivateKey());
+        StaticKeyInfoCredentialResolver resolver =
+            new StaticKeyInfoCredentialResolver(cred);
+        Decrypter decrypter =
+            new Decrypter(null, resolver, new InlineEncryptedKeyResolver());
+        decrypter.setRootInNewDocument(true);
+
+        return decrypter.decrypt(encrypted);
+    }
+
+    /**
+     * Retrieve all supplied assertions, decrypting any encrypted
+     * assertions if necessary.
+     */
+    private List<Assertion> getAssertions(Response response)
+        throws DecryptionException
+    {
+        List<Assertion> assertions = new ArrayList<Assertion>();
+        assertions.addAll(response.getAssertions());
+
+        for (EncryptedAssertion e : response.getEncryptedAssertions()) {
+            assertions.add(decrypt(e));
+        }
+
+        return assertions;
+    }
+
     private void validate(Response response)
         throws ValidationException
     {
-        // signature must match our SP's signature.
+        // response signature must match IdP's key, if present
         Signature sig = response.getSignature();
-        sigValidator.validate(sig);
+        if (sig != null)
+            sigValidator.validate(sig);
 
         // response must be successful
         if (response.getStatus() == null ||
@@ -190,16 +235,23 @@ public class SAMLClient
         DateTime issueInstant = response.getIssueInstant();
 
         if (issueInstant != null) {
-            if (issueInstant.isBefore(now.minusDays(1).minusSeconds(slack)))
+            if (issueInstant.isBefore(now.minusSeconds(slack)))
                 throw new ValidationException(
                     "Response IssueInstant is in the past");
 
-            if (issueInstant.isAfter(now.plusDays(1).plusSeconds(slack)))
+            if (issueInstant.isAfter(now.plusSeconds(slack)))
                 throw new ValidationException(
                     "Response IssueInstant is in the future");
         }
 
-        for (Assertion assertion: response.getAssertions()) {
+        List<Assertion> assertions = null;
+        try {
+            assertions = getAssertions(response);
+        } catch (DecryptionException e) {
+            throw new ValidationException(e);
+        }
+
+        for (Assertion assertion: assertions) {
 
             // Assertion must be signed correctly
             if (!assertion.isSigned())
@@ -216,11 +268,14 @@ public class SAMLClient
                     "Assertion should contain an AuthnStatement");
             }
             for (AuthnStatement as: assertion.getAuthnStatements()) {
-                DateTime exp = as.getSessionNotOnOrAfter().plusSeconds(slack);
-                if (exp != null &&
-                    (now.isEqual(exp) || now.isAfter(exp)))
-                    throw new ValidationException(
-                        "AuthnStatement has expired");
+                DateTime sessionTime = as.getSessionNotOnOrAfter();
+                if (sessionTime != null) {
+                    DateTime exp = sessionTime.plusSeconds(slack);
+                    if (exp != null &&
+                            (now.isEqual(exp) || now.isAfter(exp)))
+                        throw new ValidationException(
+                                "AuthnStatement has expired");
+                }
             }
 
             if (assertion.getConditions() == null) {
@@ -231,11 +286,11 @@ public class SAMLClient
             // Assertion IssueInstant must be within a day
             DateTime instant = assertion.getIssueInstant();
             if (instant != null) {
-                if (instant.isBefore(now.minusDays(1).minusSeconds(slack)))
+                if (instant.isBefore(now.minusSeconds(slack)))
                     throw new ValidationException(
                         "Response IssueInstant is in the past");
 
-                if (instant.isAfter(now.plusDays(1).plusSeconds(slack)))
+                if (instant.isAfter(now.plusSeconds(slack)))
                     throw new ValidationException(
                         "Response IssueInstant is in the future");
             }
@@ -431,12 +486,19 @@ public class SAMLClient
             throw new SAMLException(e);
         }
 
+        List<Assertion> assertions = null;
+        try {
+            assertions = getAssertions(response);
+        } catch (DecryptionException e) {
+            throw new SAMLException(e);
+        }
+
         // we only look at first assertion
-        if (response.getAssertions().size() != 1) {
+        if (assertions.size() != 1) {
             throw new SAMLException(
                 "Response should have a single assertion.");
         }
-        Assertion assertion = response.getAssertions().get(0);
+        Assertion assertion = assertions.get(0);
 
         Subject subject = assertion.getSubject();
         if (subject == null) {

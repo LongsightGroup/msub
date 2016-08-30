@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.nio.file.Files;
+import java.security.*;
+import java.security.spec.*;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -46,6 +49,7 @@ public class SAMLLogin extends HttpServlet
 	
 	private static final String SAML_IDP_CONFIG_FILE = "idp-metadata.xml";
 	private static final String SAML_SP_CONFIG_FILE = "sp-metadata.xml";
+	private static final String SAML_SP_PRIVATE_KEY_FILE = "private-key.txt";
 	
 	private String defaultReturnUrl;
 	private SAMLClient samlClient;
@@ -85,6 +89,11 @@ public class SAMLLogin extends HttpServlet
 			SAMLInit.initialize();
 			IdPConfig idpConfig = new IdPConfig(new File(samlConfigLocation + File.separator + SAML_IDP_CONFIG_FILE));
 			SPConfig spConfig = new SPConfig(new File(samlConfigLocation + File.separator + SAML_SP_CONFIG_FILE));
+			byte[] keyBytes = Files.readAllBytes(new File(samlConfigLocation + File.separator + SAML_SP_PRIVATE_KEY_FILE).toPath());
+			PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(keyBytes);
+			KeyFactory kf = KeyFactory.getInstance("RSA");
+			PrivateKey pkey = kf.generatePrivate(spec);
+			spConfig.setPrivateKey(pkey);
 			samlClient = new SAMLClient(spConfig, idpConfig);
 		} catch (SAMLException e) {
 			M_log.warn("Could not initialize SAML", e);

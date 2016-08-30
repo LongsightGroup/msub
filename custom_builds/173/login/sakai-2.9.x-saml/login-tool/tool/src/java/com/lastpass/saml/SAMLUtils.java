@@ -22,6 +22,7 @@ import java.security.SecureRandom;
 public class SAMLUtils
 {
     private static final char[] hexes = "0123456789abcdef".toCharArray();
+
     private static String hexEncode(byte[] b)
     {
         char[] out = new char[b.length * 2];
@@ -43,6 +44,6 @@ public class SAMLUtils
         SecureRandom sr = new SecureRandom();
         byte[] bytes = new byte[32];
         sr.nextBytes(bytes);
-        return hexEncode(bytes);
+        return "_" + hexEncode(bytes);
     }
 }

@@ -19,6 +19,7 @@ package com.lastpass.saml;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.InputStream;
 
 import org.opensaml.Configuration;
 import org.opensaml.xml.parse.BasicParserPool;
@@ -27,6 +28,7 @@ import org.opensaml.saml2.metadata.EntityDescriptor;
 import org.opensaml.saml2.metadata.SPSSODescriptor;
 import org.opensaml.saml2.metadata.AssertionConsumerService;
 import org.opensaml.common.xml.SAMLConstants;
+import java.security.PrivateKey;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -44,20 +46,63 @@ public class SPConfig
     /** Where the assertions are sent */
     private String acs;
 
+    /** Private key used for decrypting assertions */
+    private PrivateKey privateKey;
+
     /**
      * Construct a new, empty SPConfig.
      */
     public SPConfig()
     {
-    }
 
+    }
     /**
      * Construct a new SPConfig from a metadata XML file.
      *
-     * @param metadataFile File where the matadata lives
+     * @param metadataFile File where the metadata lives
+     *
+     * @throws SAMLException if an error condition occurs while trying to parse and process
+     *              the metadata
      */
     public SPConfig(File metadataFile)
         throws SAMLException
+    {
+        FileInputStream inputStream;
+        try {
+            inputStream = new FileInputStream(metadataFile);
+        }
+        catch (java.io.IOException e) {
+            throw new SAMLException(e);
+        }
+
+        try {
+            init(inputStream);
+        } finally {
+            try {
+                inputStream.close();
+            }
+            catch (java.io.IOException e) {
+                //Ignore
+            }
+        }
+    }
+
+    /**
+     * Construct a new SPConfig from a metadata XML input stream.
+     *
+     * @param inputStream  An input stream containing a metadata XML document
+     *
+     * @throws SAMLException if an error condition occurs while trying to parse and process
+     *              the metadata
+     */
+    public SPConfig(InputStream inputStream)
+        throws SAMLException
+    {
+        init(inputStream);
+    }
+
+    private void init(InputStream inputStream)
+            throws SAMLException
     {
         BasicParserPool parsers = new BasicParserPool();
         parsers.setNamespaceAware(true);
@@ -65,7 +110,7 @@ public class SPConfig
         EntityDescriptor edesc;
 
         try {
-            Document doc = parsers.parse(new FileInputStream(metadataFile));
+            Document doc = parsers.parse(inputStream);
             Element root = doc.getDocumentElement();
 
             UnmarshallerFactory unmarshallerFactory =
@@ -79,9 +124,6 @@ public class SPConfig
             throw new SAMLException(e);
         }
         catch (org.opensaml.xml.io.UnmarshallingException e) {
-            throw new SAMLException(e);
-        }
-        catch (java.io.IOException e) {
             throw new SAMLException(e);
         }
 
@@ -140,5 +182,21 @@ public class SPConfig
     public String getAcs()
     {
         return this.acs;
+    }
+
+    /**
+     * Set private key used for decrypting assertions.
+     */
+    public void setPrivateKey(PrivateKey privateKey)
+    {
+        this.privateKey = privateKey;
+    }
+
+    /**
+     * Get private key used for decrypting assertions.
+     */
+    public PrivateKey getPrivateKey()
+    {
+        return this.privateKey;
     }
 }

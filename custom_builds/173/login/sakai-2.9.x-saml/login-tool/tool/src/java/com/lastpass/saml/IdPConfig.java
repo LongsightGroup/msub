@@ -24,6 +24,7 @@ import java.security.cert.CertificateException;
 import java.io.File;
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
+import java.io.InputStream;
 
 import org.opensaml.Configuration;
 import org.opensaml.xml.parse.BasicParserPool;
@@ -62,10 +63,50 @@ public class IdPConfig
     /**
      * Construct a new IdpConfig from a metadata XML file.
      *
-     * @param metadataFile File where the matadata lives
+     * @param metadataFile File where the metadata lives
+     *
+     * @throws SAMLException if an error condition occurs while trying to parse and process
+     *              the metadata
      */
     public IdPConfig(File metadataFile)
         throws SAMLException
+    {
+        FileInputStream inputStream;
+        try {
+            inputStream = new FileInputStream(metadataFile);        
+        } 
+        catch (java.io.IOException e) {
+            throw new SAMLException(e);
+        }
+        
+        try {
+            init(inputStream);
+        } finally {
+            try {
+                inputStream.close();
+            }
+            catch (java.io.IOException e) {
+                //Ignore
+            }
+        }
+    }
+
+    /**
+     * Construct a new IdpConfig from a metadata XML input stream.
+     *
+     * @param inputStream An input stream containing a metadata XML document
+     *
+     * @throws SAMLException if an error condition occurs while trying to parse and process
+     *              the metadata
+     */
+    public IdPConfig(InputStream inputStream)
+        throws SAMLException
+    {
+        init(inputStream);
+    }
+
+    private void init(InputStream inputStream)
+            throws SAMLException
     {
         BasicParserPool parsers = new BasicParserPool();
         parsers.setNamespaceAware(true);
@@ -73,7 +114,7 @@ public class IdPConfig
         EntityDescriptor edesc;
 
         try {
-            Document doc = parsers.parse(new FileInputStream(metadataFile));
+            Document doc = parsers.parse(inputStream);
             Element root = doc.getDocumentElement();
 
             UnmarshallerFactory unmarshallerFactory =
@@ -88,10 +129,7 @@ public class IdPConfig
         }
         catch (org.opensaml.xml.io.UnmarshallingException e) {
             throw new SAMLException(e);
-        }
-        catch (java.io.IOException e) {
-            throw new SAMLException(e);
-        }
+        }        
 
         // fetch idp information
         IDPSSODescriptor idpDesc = edesc.getIDPSSODescriptor(
