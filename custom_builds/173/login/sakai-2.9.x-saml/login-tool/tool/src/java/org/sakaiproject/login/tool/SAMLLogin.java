@@ -1,12 +1,15 @@
 package org.sakaiproject.login.tool;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.nio.file.Files;
 import java.security.*;
 import java.security.spec.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -49,7 +52,7 @@ public class SAMLLogin extends HttpServlet
 	
 	private static final String SAML_IDP_CONFIG_FILE = "idp-metadata.xml";
 	private static final String SAML_SP_CONFIG_FILE = "sp-metadata.xml";
-	private static final String SAML_SP_PRIVATE_KEY_FILE = "private-key.txt";
+	private static final String SAML_SP_PRIVATE_KEY_FILE = "samlKeystore.jks";
 	
 	private String defaultReturnUrl;
 	private SAMLClient samlClient;
@@ -90,10 +93,10 @@ public class SAMLLogin extends HttpServlet
 			IdPConfig idpConfig = new IdPConfig(new File(samlConfigLocation + File.separator + SAML_IDP_CONFIG_FILE));
 			SPConfig spConfig = new SPConfig(new File(samlConfigLocation + File.separator + SAML_SP_CONFIG_FILE));
 			try {
-				byte[] keyBytes = Files.readAllBytes(new File(samlConfigLocation + File.separator + SAML_SP_PRIVATE_KEY_FILE).toPath());
-				PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(keyBytes);
-				KeyFactory kf = KeyFactory.getInstance("RSA");
-				PrivateKey pkey = kf.generatePrivate(spec);
+				FileInputStream is = new FileInputStream(samlConfigLocation + File.separator + SAML_SP_PRIVATE_KEY_FILE);
+				KeyStore keystore = KeyStore.getInstance(KeyStore.getDefaultType());
+				keystore.load(is, "changeit".toCharArray());
+				PrivateKey pkey = (PrivateKey) keystore.getKey("ucsc", "changeit".toCharArray());
 				spConfig.setPrivateKey(pkey);
 			} catch (Exception e) { M_log.warn("Could not set private key", e); }
 			samlClient = new SAMLClient(spConfig, idpConfig);
@@ -134,7 +137,24 @@ public class SAMLLogin extends HttpServlet
 
 		try {
 		    aset = samlClient.validateResponse(authresponse);
-		    username = aset.getNameId();
+		    Map<String, List<String>> map = aset.getAttributes();
+		    for (Map.Entry<String, List<String>> entry : map.entrySet()) {
+		    	String key = entry.getKey();
+		    	if ("urn:oid:1.3.6.1.4.1.5923.1.1.1.6".equals(key)) {
+		    		List<String> list = entry.getValue();
+		                  M_log.debug("key: " + key + ";val: " + java.util.Arrays.toString(list.toArray()));
+                                for (String val : list) {
+		                    M_log.debug("Found username: " + key + ";val: " + val);
+		                    int index = "@".indexOf(val);
+                                    if (index > -1) {
+                                        username = val.substring(0, index).toLowerCase();
+                                    }
+                                    else {
+                                        username = val.toLowerCase();
+                                    }
+                                }
+                        }
+                    }
 		    if (M_log.isDebugEnabled()) M_log.debug("Attempting SAML login of username=" + username);
 		    u = userDirectoryService.getUserByEid(username);
 		} catch (SAMLException e) {
