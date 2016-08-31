@@ -145,7 +145,7 @@ public class SAMLLogin extends HttpServlet
 		                  M_log.debug("key: " + key + ";val: " + java.util.Arrays.toString(list.toArray()));
                                 for (String val : list) {
 		                    M_log.debug("Found username: " + key + ";val: " + val);
-		                    int index = "@".indexOf(val);
+		                    int index = val.indexOf("@");
                                     if (index > -1) {
                                         username = val.substring(0, index).toLowerCase();
                                     }
