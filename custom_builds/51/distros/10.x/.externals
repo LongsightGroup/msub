@@ -76,6 +76,7 @@ etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/e
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 
+attendance https://github.com/UDayton/attendance/branches/10.x
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-core
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-10/irubric-tool
 assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_iRubric/
