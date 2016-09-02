@@ -86,7 +86,7 @@ jforum                           https://source.sakaiproject.org/contrib/longsig
 gradebook2 -r 87580              https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x
 etudes-util                      https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
-bbb-tool                         https://github.com/blindsidenetworks/bigbluebutton-sakai/branches/10.x/bbb-tool
+bbb-tool                         https://github.com/sakaicontrib/bbb-tool/branches/10.x/
 providers			 https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 
 # rSmart needs metaobj
