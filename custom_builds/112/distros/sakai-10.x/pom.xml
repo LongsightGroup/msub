@@ -123,6 +123,7 @@
                 <module>batch-user-creation</module>
                 <module>clog</module>
                 <module>content-review/contentreview-impl</module>
+                <module>cloud-content</module>
                 
             </modules>
         </profile>
