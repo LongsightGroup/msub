@@ -81,7 +81,7 @@ gradebook-export https://source.sakaiproject.org/svn/msub/longsight.com/gradeboo
 sakai-mock https://source.sakaiproject.org/svn/msub/longsight.com/sakai-mock/sakai-mock-10.x_backport
 #samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/60/samigo/samigo-10.x_features-backport
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
-site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_custom
+site-manage -r 325045 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 # Additional tools
@@ -96,7 +96,7 @@ bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sak
 sis_integration https://github.com/LongsightGroup/ceipa-sis_integration/trunk
 
 # Cloud-content s3
-kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x_backport-aws-s3
 cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/10.x
 lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/sakai-10.x-s3
 
