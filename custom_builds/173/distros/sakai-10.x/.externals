@@ -81,6 +81,8 @@ velocity -r 319555                https://source.sakaiproject.org/svn/msub/rsmar
 warehouse -r 319556               https://source.sakaiproject.org/svn/msub/rsmart.com/warehouse/branches/10.4.x
 web -r 319558                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/10.4.x
 
+#mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10.4 -Dsakai.common.version=10.4 -Dsakai.jdk.version=1.7
+
 # MailArchive requires a custom ANI anti-virus JAR
 mailarchive -r 319518             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/10.4.x
 
@@ -104,3 +106,5 @@ login				  https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/
 #shell_command find gradebook2/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find profile2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
 #shell_command find master/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
+
+
