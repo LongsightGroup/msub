@@ -1,0 +1,12 @@
+
+#shell_command git clone -b longsight-aws git@github.com:longsightgroup/wfu-sakai.git && mv wfu-sakai/source/* ./
+
+#GIT Projects
+#git_project cloud-content
+#git_project content
+#git_project common
+#git_project dav
+#git_project kernel
+#git_project lessonbuilder
+#git_project samigo
+#git_project site-manage
