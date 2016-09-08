@@ -28,7 +28,7 @@ etudes-util -r 87656             https://source.sakaiproject.org/contrib/rsmart/
 external-calendaring-service -r 319507 https://source.sakaiproject.org/svn/msub/rsmart.com/external-calendaring-service/branches/10.4.x
 evaluation -r 87657              https://source.sakaiproject.org/contrib/rsmart/msub/evaluation/branches/10.4.x
 gradebook -r 319508               https://source.sakaiproject.org/svn/msub/rsmart.com/gradebook/branches/10.4.x
-gradebook2 -r 87658              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/10.4.x
+gradebook2                        https://github.com/LongsightGroup/gradebook2/branches/ucsc-10.x
 help -r 319509                    https://source.sakaiproject.org/svn/msub/rsmart.com/help/branches/10.4.x
 hierarchy -r 319510               https://source.sakaiproject.org/svn/msub/rsmart.com/hierarchy/branches/10.4.x
 itunesu-tool -r 87659            https://source.sakaiproject.org/contrib/rsmart/msub/itunesu-tool/branches/10.4.x
