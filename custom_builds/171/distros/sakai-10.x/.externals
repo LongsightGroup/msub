@@ -28,7 +28,6 @@ basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
 chat https://source.sakaiproject.org/svn/chat/branches/sakai-10.x
 citations https://source.sakaiproject.org/svn/citations/branches/sakai-10.x
-config https://source.sakaiproject.org/svn/config/branches/sakai-10.x
 content https://source.sakaiproject.org/svn/content/branches/sakai-10.x
 courier https://source.sakaiproject.org/svn/courier/branches/sakai-10.x
 dav https://source.sakaiproject.org/svn/dav/branches/sakai-10.x
@@ -89,3 +88,4 @@ evaluation 			 https://source.sakaiproject.org/contrib/evaluation/branches/sakai
 site-manage 			 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_features-backport
 webservices 			 https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 bigbluebutton-sakai/bbb-tool 	 https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
+config                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/171/config/sakai-10.x
