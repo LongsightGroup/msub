@@ -73,6 +73,7 @@ velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-10.x
 
 #customizations:
+attendance https://github.com/UDayton/attendance/branches/10.x
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
