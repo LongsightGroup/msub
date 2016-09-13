@@ -77,6 +77,7 @@ blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches
 clog https://source.sakaiproject.org/contrib/longsight/clog/sakai-10.x
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+kaltura https://github.com/kaltura/sakai-extension/branches/10x
 portal https://source.sakaiproject.org/svn/msub/longsight.com/portal/portal-10.x_custom
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
