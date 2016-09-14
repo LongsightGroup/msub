@@ -5,6 +5,7 @@ master https://github.com/sakaiproject/sakai/branches/11.x/master
 
 # Core services
 common https://github.com/sakaiproject/sakai/branches/11.x/common
+content-review https://github.com/sakaiproject/sakai/branches/11.x/content-review
 delegatedaccess https://github.com/sakaiproject/sakai/branches/11.x/delegatedaccess
 emailtemplateservice https://github.com/sakaiproject/sakai/branches/11.x/emailtemplateservice
 entitybroker https://github.com/sakaiproject/sakai/branches/11.x/entitybroker
