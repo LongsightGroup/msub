@@ -85,6 +85,7 @@ jforum                           https://source.sakaiproject.org/contrib/longsig
 melete				 https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x/
 blogwow 			 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x/
 evaluation 			 https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
+clog                             https://source.sakaiproject.org/contrib/longsight/clog/sakai-10.x/
 site-manage 			 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_features-backport
 webservices 			 https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 bigbluebutton-sakai/bbb-tool 	 https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool

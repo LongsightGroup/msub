@@ -124,6 +124,7 @@
                 <module>etudes-util</module>
                 <module>jforum</module>
                 <module>melete</module>
+                <module>clog</module>
             </modules>
         </profile>
         <profile>
