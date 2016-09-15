@@ -72,7 +72,6 @@
                 <module>entitybroker</module>
                 <module>external-calendaring-service</module>
                 <module>gradebook</module>
-                <module>gradebook2</module>
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>jobscheduler</module>
@@ -119,12 +118,15 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
+                <!--
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>etudes-util</module>
                 <module>jforum</module>
                 <module>melete</module>
                 <module>clog</module>
+                <module>gradebook2</module>
+                -->
             </modules>
         </profile>
         <profile>
