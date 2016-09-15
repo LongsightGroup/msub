@@ -27,12 +27,10 @@
       <artifactId>sakai-sample-provider</artifactId>
     </dependency>
 <!-- -->
-<!-- Needed for the JLDAP Provider
 		<dependency>
 			<groupId>org.sakaiproject</groupId>
 			<artifactId>sakai-jldap-provider</artifactId>
 		</dependency>
-		-->
 <!-- Needed for the Kerberos Provider
 		<dependency>
 			<groupId>org.sakaiproject</groupId>
