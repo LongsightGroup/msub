@@ -76,7 +76,7 @@ web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 # Backports
 lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/LSNBLDR-222-10.x
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport/
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
+webservices -r323092 https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 
 # Customizations
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-10.x
