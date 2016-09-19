@@ -301,7 +301,17 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
 						
 		} else if(StringUtils.equals(officialImageSource, ProfileConstants.OFFICIAL_IMAGE_SETTING_PROVIDER)){
 			String data = getOfficialImageEncoded(userUuid);
-			if(StringUtils.isBlank(data)) {
+			if(StringUtils.startWith(data, "http")) {
+                                String search = sakaiProxy.getServerConfigurationParameter("profile2.official.image.secure.search", "");
+                                String replace = sakaiProxy.getServerConfigurationParameter("profile2.official.image.secure.replace", "");
+                                if (StringUtils.isNotBlank(search) && StringUtils.isNotBlank(replace)) {
+                                        data = StringUtils.replace(data, search, replace);
+                                }
+				byte[] imageUrlBytes = this.getUrlAsBytes(data);
+				image.setUploadedImage(imageUrlBytes);
+				image.setOfficialImageUrl(null);
+                        }
+			else if(StringUtils.isBlank(data)) {
 				image.setExternalImageUrl(defaultImageUrl);
 			} else {
 				image.setOfficialImageEncoded(data);
@@ -941,17 +951,19 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
 	 */
 	private byte[] getUrlAsBytes(String url) {
 		byte[] data = null;
+                InputStream inputStream;
 		try {
 			URL u = new URL(url);
 			URLConnection uc = u.openConnection();
 			uc.setReadTimeout(5000); //5 sec timeout
-			InputStream inputStream = uc.getInputStream();
+			inputStream = uc.getInputStream();
 			
 			data = IOUtils.toByteArray(inputStream);
 
 		} catch (Exception e) {
 			log.error("Failed to retrieve url bytes: " + e.getClass() + ": " + e.getMessage());
 		} 
+                finally { IOUtils.closeQuietly(inputStream); }
 		return data;
 	}
 	
