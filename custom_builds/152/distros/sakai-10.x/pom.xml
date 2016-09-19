@@ -58,11 +58,9 @@
                 <module>ambrosia</module>
                 <module>announcement</module>
                 <module>archive</module>
-                <module>assignment</module>
                 <module>authz</module>
                 <module>basiclti</module>
 		        <module>blogwow</module>
-                <!-- module>bigbluebutton</module -->
                 <module>calendar</module>
                 <module>chat</module>
                 <module>citations</module>
@@ -72,7 +70,6 @@
                 <module>content</module>
                 <module>content-review</module>
                 <module>courier</module>
-		        <!-- <module>dashboard</module> -->
                 <module>dav</module>
 		        <module>delegatedaccess</module>
                 <module>edia-sakai-utils</module>
@@ -83,7 +80,6 @@
                 <module>evaluation</module>
 		        <module>external-calendaring-service</module>
                 <module>gradebook</module>
-                <!--module>gradebook2</module-->
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>iclicker</module>
@@ -104,7 +100,11 @@
                 <module>postem</module>
                 <module>presence</module>
                 <module>profile2</module>
+                <!-- module>bigbluebutton</module -->
+		        <!-- <module>dashboard</module> -->
+                <!--module>gradebook2</module-->
                 <!--
+                <module>assignment</module>
 	        <module>jforum</module>
                 <module>login</module>
                 <module>metaobj</module>
