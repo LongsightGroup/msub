@@ -31,7 +31,6 @@ cmprovider https://github.com/sakaiproject/sakai/branches/11.x/cmprovider
 config https://github.com/sakaiproject/sakai/branches/11.x/config
 content https://github.com/sakaiproject/sakai/branches/11.x/content
 courier https://github.com/sakaiproject/sakai/branches/11.x/courier
-dashboard https://github.com/sakaiproject/sakai/branches/11.x/dashboard
 dav https://github.com/sakaiproject/sakai/branches/11.x/dav
 deploy https://github.com/sakaiproject/sakai/branches/11.x/deploy
 edu-services https://github.com/sakaiproject/sakai/branches/11.x/edu-services
@@ -57,6 +56,7 @@ portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
+providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 reference https://github.com/sakaiproject/sakai/branches/11.x/reference
 reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
 rights https://github.com/sakaiproject/sakai/branches/11.x/rights
@@ -84,12 +84,13 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
 
 #customizations
-clog https://github.com/sakaicontrib/clog/branches/11.x
-providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
+clog                             https://github.com/sakaicontrib/clog/branches/11.x
+webservices                      https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
+rsmart                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-11.x
 scorm                            https://github.com/LongsightGroup/SCORMCloud_SakaiPlugin/trunk
 scorm/SCORMCloud_JavaLibrary     https://github.com/LongsightGroup/SCORMCloud_JavaLibrary/trunk
+gradebook2                       https://github.com/sakaicontrib/gradebook2/trunk
 
 #POM Changes
 #shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
-#shell_command git clone https://github.com/sakaicontrib/gradebook2.git
+#shell_command sed -i 's/ sessionId="meleteEditor" / /g' melete/melete-app/src/webapp/melete/addmodulesections.jsp

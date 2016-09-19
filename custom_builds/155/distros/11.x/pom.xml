@@ -60,7 +60,6 @@
                 <module>content</module>
                 <module>content-review</module>
                 <module>courier</module>
-                <module>dashboard</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
                 <module>deploy</module>
@@ -117,7 +116,10 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
+
                 <module>clog</module>
+                <module>rsmart</module>
+                <module>gradebook2</module>
                 <!--module>scorm</module-->
             </modules>
         </profile>
