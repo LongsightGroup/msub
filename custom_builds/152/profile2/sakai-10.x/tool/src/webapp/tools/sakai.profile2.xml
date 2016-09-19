@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+	<tool title="Profile2" description="Edit your Profile, search for people with common interests, view their profile and add them as friends." id="sakai.profile2">
+
+      	
+
+		<configuration name="functions.require"/> 
+		
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="myworkspacebuserdguest"/>
+<category name="myworkspacebuserdregistered"/>
+<category name="myworkspacebuserdmaintain"/>
+</tool>
+</registration>
