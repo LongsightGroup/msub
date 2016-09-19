@@ -117,7 +117,7 @@
                 <module>webservices</module>
 
                 <module>rsmart</module>
-                <module>rsmart/certification</module>
+                <module>certification</module>
                 <module>gradebook2</module>
                 <module>etudes-util</module>
                 <module>melete</module>
