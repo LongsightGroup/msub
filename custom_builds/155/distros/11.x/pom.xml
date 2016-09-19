@@ -70,7 +70,6 @@
                 <module>feedback</module>
                 <module>gradebook</module>
                 <module>gradebookng</module>
-                <module>gradebook2</module>
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>jobscheduler</module>
