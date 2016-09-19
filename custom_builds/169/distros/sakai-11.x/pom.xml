@@ -116,13 +116,11 @@
                 <module>web</module>
                 <module>webservices</module>
 
-                <module>certification</module>
                 <module>rsmart</module>
+                <module>rsmart/certification</module>
                 <module>gradebook2</module>
-                <!--
                 <module>etudes-util</module>
                 <module>melete</module>
-                -->
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
