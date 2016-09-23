@@ -120,6 +120,7 @@
                 <module>evaluation</module>
                 <module>bigbluebutton-sakai</module>
                 <module>adobeconnect</module>
+                <module>kaltura</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
