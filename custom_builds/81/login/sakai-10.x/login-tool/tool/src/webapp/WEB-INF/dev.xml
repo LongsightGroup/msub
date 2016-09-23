@@ -64,10 +64,10 @@
         <constructor-arg type="java.lang.String" value="changeit"/>
         <constructor-arg>
             <map>
-                <entry key="stlawuprodkey" value="changeit"/>
+                <entry key="ttuhscdevkey" value="changeit"/>
             </map>
         </constructor-arg>
-        <constructor-arg type="java.lang.String" value="stlawuprodkey"/>
+        <constructor-arg type="java.lang.String" value="ttuhscdevkey"/>
     </bean>
 
     <!-- Entry point to initialize authentication, default values taken from properties file -->
@@ -136,8 +136,8 @@
 			               <property name="sslSecurityProfile" value="pkix"/>
 			               <property name="sslHostnameVerification" value="default"/>
 			               <property name="signMetadata" value="false"/>
-			               <property name="signingKey" value="stlawuprodkey"/>
-			               <property name="encryptionKey" value="stlawuprodkey"/>
+			               <property name="signingKey" value="ttuhscdevkey"/>
+			               <property name="encryptionKey" value="ttuhscdevkey"/>
 			               <property name="requireArtifactResolveSigned" value="false"/>
 			               <property name="requireLogoutRequestSigned" value="false"/>
 			               <property name="requireLogoutResponseSigned" value="false"/>
@@ -174,7 +174,7 @@
                   <constructor-arg>
                 <bean class="org.opensaml.saml2.metadata.provider.HTTPMetadataProvider">
                     <constructor-arg>
-                        <value type="java.lang.String">https://sts.stlawu.edu/federationmetadata/2007-06/federationmetadata.xml</value>
+                        <value type="java.lang.String">https://msidp.ttuhsc.edu/federationmetadata/2007-06/federationmetadata.xml</value>
                     </constructor-arg>
                     <constructor-arg>
                         <value type="int">60000</value>
@@ -202,7 +202,7 @@
         <!-- OPTIONAL used when one of the metadata files contains information about this service provider -->
         <!-- <property name="hostedSPName" value=""/> -->
         <!-- OPTIONAL property: can tell the system which IDP should be used for authenticating user by default. -->
-        <property name="defaultIDP" value="http://sts.stlawu.edu/adfs/services/trust"/>
+        <property name="defaultIDP" value="http://msidp.ttuhsc.edu/adfs/services/trust"/>
     </bean>
 
     <!-- SAML Authentication Provider responsible for validating of received SAML messages -->
