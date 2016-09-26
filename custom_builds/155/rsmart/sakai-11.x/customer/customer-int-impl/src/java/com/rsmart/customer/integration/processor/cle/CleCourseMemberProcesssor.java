@@ -188,6 +188,20 @@ public class CleCourseMemberProcesssor extends ServiceProcessor {
 					// Search
 					List members = cleMembershipDao.findCleMembership(courseNum);
 
+					// Longsight custom get all members in one burst
+					Set<String> eidsToFetch = new HashSet<String>();
+					for (int j = 0; j < members.size(); j++) {
+						clem = (CleMembership) members.get(j);
+						eidsToFetch.add(clem.getUserName());
+					}
+
+					Map<String, User> eidToUserMap = new HashMap<String, User>();
+					List<User> sakaiUsers = uds.getUsersByEids(eidsToFetch);
+					for (User user : sakaiUsers) {
+						eidToUserMap.put(user.getEid(), user);
+					}
+					// End Longsight custom batch fetch
+
 					for (int j = 0; j < members.size(); j++) {
                         ExtendedReportingLine xrl = new ExtendedReportingLine();
                         member = null;
@@ -204,7 +218,7 @@ public class CleCourseMemberProcesssor extends ServiceProcessor {
                         usermap.put(clem.getUserName().toLowerCase(), Boolean.TRUE);
 
                         try {
-                            user = uds.getUserByEid(clem.getUserName());
+                            user = eidToUserMap.get(clem.getUserName());
                         } catch (UserNotDefinedException e) {
                                 logger.error(clem.getUserName() + " Not A Valid User");
                                 state.appendError(clem.getUserName() + " Not A Valid User");
