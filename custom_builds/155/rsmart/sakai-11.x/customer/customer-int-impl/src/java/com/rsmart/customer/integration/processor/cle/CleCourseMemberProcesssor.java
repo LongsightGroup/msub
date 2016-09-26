@@ -197,8 +197,8 @@ public class CleCourseMemberProcesssor extends ServiceProcessor {
 
 					Map<String, User> eidToUserMap = new HashMap<String, User>();
 					List<User> sakaiUsers = uds.getUsersByEids(eidsToFetch);
-					for (User user : sakaiUsers) {
-						eidToUserMap.put(user.getEid(), user);
+					for (User tempUser : sakaiUsers) {
+						eidToUserMap.put(tempUser.getEid(), tempUser);
 					}
 					// End Longsight custom batch fetch
 
