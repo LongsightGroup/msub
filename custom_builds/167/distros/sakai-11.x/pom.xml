@@ -118,9 +118,7 @@
                 <module>clog</module>
                 <module>evaluation</module>
 
-                <!--
                 <module>gradebook2</module>
-                -->
                 <module>rsmart</module>
             </modules>
         </profile>

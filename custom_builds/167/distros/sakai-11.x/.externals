@@ -84,7 +84,7 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 
 #customizations
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
-#gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
+gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-11.x
 content-review https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/170/content-review/sakai-11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
