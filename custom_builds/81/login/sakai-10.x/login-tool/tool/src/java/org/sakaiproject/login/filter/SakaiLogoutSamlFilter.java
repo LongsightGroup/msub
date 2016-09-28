@@ -1,8 +1,5 @@
 package org.sakaiproject.login.filter;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
 import org.sakaiproject.event.api.UsageSessionService;
 import org.sakaiproject.tool.api.Session;
 import org.sakaiproject.tool.api.SessionManager;
@@ -16,13 +13,20 @@ import javax.servlet.http.HttpServletResponse;
  * Performs a logout of Sakai invalidating the {@link Session}
  * if {@link #isInvalidateSakaiSession()} is {@code true} and the session is not {@code null}.
  */
-@Slf4j
 public class SakaiLogoutSamlFilter extends SecurityContextLogoutHandler {
 
-    @Setter private UsageSessionService usageSessionService;
-    @Setter private SessionManager sessionManager;
+    private UsageSessionService usageSessionService;
+    private SessionManager sessionManager;
 
-    @Getter @Setter private boolean invalidateSakaiSession = true;
+    public void setUsageSessionService(UsageSessionService usageSessionService) {
+        this.usageSessionService = usageSessionService;
+    }
+
+    public void setSessionManager(SessionManager sessionManager) {
+        this.sessionManager = sessionManager;
+    }
+
+    private boolean invalidateSakaiSession = true;
 
     /**
      * Requires the request to be passed in.
@@ -39,7 +43,7 @@ public class SakaiLogoutSamlFilter extends SecurityContextLogoutHandler {
             Session session = sessionManager.getCurrentSession();
 
             if (session != null) {
-                log.debug("SAML logout invalidating sakai session: {}", session.getId());
+                //log.debug("SAML logout invalidating sakai session: {}", session.getId());
                 usageSessionService.logout();
             }
         }
