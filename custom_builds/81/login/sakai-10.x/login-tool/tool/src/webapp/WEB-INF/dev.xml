@@ -170,6 +170,8 @@
                     </constructor-arg>
                     <constructor-arg>
                         <bean class="org.springframework.security.saml.metadata.ExtendedMetadata">
+		               <property name="requireLogoutRequestSigned" value="true"/>
+		               <property name="requireLogoutResponseSigned" value="true"/>
                         </bean>
                     </constructor-arg>
                   <property name="metadataTrustCheck" value="false"/>
@@ -244,7 +246,7 @@
         <property name="usageSessionService" ref="org.sakaiproject.event.api.UsageSessionService"/>
         <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
         <property name="invalidateHttpSession" value="true"/>
-        <property name="invalidateSakaiSession" value="true"/>
+        <!-- property name="invalidateSakaiSession" value="true"/-->
         <property name="clearAuthentication" value="true"/>
     </bean>
 
