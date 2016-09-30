@@ -307,11 +307,11 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
                                 if (StringUtils.isNotBlank(search) && StringUtils.isNotBlank(replace)) {
                                         data = StringUtils.replace(data, search, replace);
                                 }
+                                log.debug("Profile provider image: " + data);
 				byte[] imageUrlBytes = this.getUrlAsBytes(data);
 				image.setUploadedImage(imageUrlBytes);
 				image.setOfficialImageUrl(null);
-                        }
-			else if(StringUtils.isBlank(data)) {
+			} else if(StringUtils.isBlank(data)) {
 				image.setExternalImageUrl(defaultImageUrl);
 			} else {
 				image.setOfficialImageEncoded(data);
