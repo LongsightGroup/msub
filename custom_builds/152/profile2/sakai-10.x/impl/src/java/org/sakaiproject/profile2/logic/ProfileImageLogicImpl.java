@@ -301,6 +301,7 @@ public class ProfileImageLogicImpl implements ProfileImageLogic {
 						
 		} else if(StringUtils.equals(officialImageSource, ProfileConstants.OFFICIAL_IMAGE_SETTING_PROVIDER)){
 			String data = getOfficialImageEncoded(userUuid);
+                        if (log.isDebugEnabled()) log.debug("Profile data: " + StringUtils.left(data, 300));
 			if(StringUtils.startsWith(data, "http")) {
                                 String search = sakaiProxy.getServerConfigurationParameter("profile2.official.image.secure.search", "");
                                 String replace = sakaiProxy.getServerConfigurationParameter("profile2.official.image.secure.replace", "");
