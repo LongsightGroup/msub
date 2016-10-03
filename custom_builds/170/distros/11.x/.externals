@@ -69,7 +69,6 @@ shortenedurl https://github.com/sakaiproject/sakai/branches/11.x/shortenedurl
 simple-rss-portlet https://github.com/sakaiproject/sakai/branches/11.x/simple-rss-portlet
 signup https://github.com/sakaiproject/sakai/branches/11.x/signup
 site https://github.com/sakaiproject/sakai/branches/11.x/site
-site-manage https://github.com/sakaiproject/sakai/branches/11.x/site-manage
 sitestats https://github.com/sakaiproject/sakai/branches/11.x/sitestats
 syllabus https://github.com/sakaiproject/sakai/branches/11.x/syllabus
 taggable https://github.com/sakaiproject/sakai/branches/11.x/taggable
@@ -93,5 +92,8 @@ certification https://github.com/LongsightGroup/certification/branches/uwo-11
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-11.x
 content-review https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/170/content-review/sakai-11.x
 clog https://github.com/sakaicontrib/clog/branches/11.x
+
+#marist changes
+site-manage https://github.com/jd3538/Marist-Sakai-11.x/branches/Marist-Sakai-11.x
 
 #shell_command find certification/ -type f -exec sed -i 's/util.ContextLoaderListener/util.SakaiContextLoaderListener/g' {} \;
