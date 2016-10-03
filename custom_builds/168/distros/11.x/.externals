@@ -83,7 +83,7 @@ web https://github.com/NoodlePartners/sakai_work/branches/longsight-deploy/web
 
 # Customizations
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
-commons	https://github.com/sakaicontrib/commons/branches/11.x
+commons	https://github.com/NoodlePartners/commons/branches/longsight-deploy
 sakai-widgets https://github.com/NoodlePartners/sakai-widgets/branches/longsight-deploy
 student-engagement https://github.com/NoodlePartnersVOPM/student-engagement/branches/longsight-deploy
 
