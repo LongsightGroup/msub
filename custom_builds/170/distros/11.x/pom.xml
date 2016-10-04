@@ -121,9 +121,9 @@
                 <module>melete</module>
                 <module>evaluation</module>
                 <module>clog</module>
+                <module>certification</module>
                 <!--
                 <module>rsmart</module>
-                <module>certification</module>
                 <module>gradebook2</module>
                 -->
             </modules>
