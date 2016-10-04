@@ -121,6 +121,7 @@
                 <module>student-engagement</module>
                 <module>content-review/contentreview-impl-vericite</module>
                 <module>reference</module>
+                <module>snap-poll</module>
             </modules>
         </profile>
         <profile>
