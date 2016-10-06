@@ -25,7 +25,7 @@ public class RsmartDecyptionDeleteJob implements Job {
 
 
     public void execute(JobExecutionContext context) throws JobExecutionException {
-        String jobName = context.getJobDetail().getName();
+        String jobName = context.getJobDetail().getKey().getName();
         if (jobName != null) {
             this.execute();
         }

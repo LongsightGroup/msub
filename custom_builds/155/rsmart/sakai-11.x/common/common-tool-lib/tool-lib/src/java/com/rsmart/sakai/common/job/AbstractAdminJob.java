@@ -73,7 +73,7 @@ abstract public class AbstractAdminJob implements Job {
 		      List<JobExecutionContext> jobs = jobExecutionContext.getScheduler().getCurrentlyExecutingJobs();
 		      for (JobExecutionContext job : jobs) {
 		    	  // compare using job name but ensure its a different instance than the current one
-		    	  if (job.getJobDetail().getName().equals(jobExecutionContext.getJobDetail().getName()) 
+		    	  if (job.getJobDetail().getKey().getName().equals(jobExecutionContext.getJobDetail().getKey()) 
 		    			  && !job.getTrigger().getFireInstanceId().equals(jobExecutionContext.getTrigger().getFireInstanceId())) {
 		    		  jobRunning = true;
 		    	  }
@@ -85,7 +85,7 @@ abstract public class AbstractAdminJob implements Job {
 		Date now = new Date();
 
 		if (jobRunning) {
-			logger.warn("There's another instance of job " + jobExecutionContext.getJobDetail().getName() 
+			logger.warn("There's another instance of job " + jobExecutionContext.getJobDetail().getKey() 
 					+ " running, cancelling this instance " + jobExecutionContext.getTrigger().getFireInstanceId());
 		} else {
 			executeInternal(jobExecutionContext);

@@ -39,7 +39,7 @@ public class GradeExporterQuartzJob implements Job {
 	protected GradeExporter exporter;
 
 	public void execute(JobExecutionContext context) throws JobExecutionException {
-		String jobName = context.getJobDetail().getName();
+		String jobName = context.getJobDetail().getKey().getName();
 		if (jobName != null) {
 			String[] splitJobName = termEidPattern.split(jobName);
 			if (splitJobName.length == 2) {
