@@ -14,6 +14,7 @@
   <modules>
     <module>customer</module>
     <module>user</module>
+    <module>rsmart-Decryption</module>
     <module>util</module>
     <module>user-data-service</module>
   </modules>

@@ -2,7 +2,7 @@ package com.gradebook2.export.validation;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  * Time: 1:38:57 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Gradebook2Impl extends SimpleJdbcTemplate{
+public class Gradebook2Impl extends JdbcTemplate{
 
     private static final Log log = LogFactory.getLog(Gradebook2Impl.class);
 

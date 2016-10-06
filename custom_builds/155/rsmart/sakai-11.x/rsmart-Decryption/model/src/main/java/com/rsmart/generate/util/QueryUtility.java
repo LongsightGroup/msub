@@ -1,6 +1,6 @@
 package com.rsmart.generate.util;
 
-import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Map;
  * Time: 2:24 PM
  * To change this template use File | Settings | File Templates.
  */
-public class QueryUtility extends SimpleJdbcTemplate implements QueryUtilityService{
+public class QueryUtility extends JdbcTemplate implements QueryUtilityService{
 
     private static final String USER_ID="USER_ID";
     public QueryUtility(DataSource source){
