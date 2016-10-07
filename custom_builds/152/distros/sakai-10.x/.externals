@@ -52,7 +52,6 @@ presence -r 319531                https://source.sakaiproject.org/svn/msub/rsmar
 reports -r 319535                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/branches/10.4.x
 reset-pass -r 319536              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/branches/10.4.x
 rights -r 319537                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/branches/10.4.x
-roster2 -r 319538                 https://source.sakaiproject.org/svn/msub/rsmart.com/roster2/branches/10.4.x
 rwiki -r 319539                   https://source.sakaiproject.org/svn/msub/rsmart.com/rwiki/branches/10.4.x
 sakai-mock -r 319540              https://source.sakaiproject.org/svn/msub/rsmart.com/sakai-mock/branches/10.4.x
 sakora -r 87664                   https://source.sakaiproject.org/contrib/rsmart/msub/sakora/branches/10.4.x
@@ -96,6 +95,7 @@ providers                         https://source.sakaiproject.org/svn/msub/longs
 
 # RWU Custom mods
 profile2 			  https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/profile2/sakai-10.x
+roster2                           https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
 
 
 #VeriCite
@@ -112,6 +112,7 @@ profile2 			  https://source.sakaiproject.org/svn/msub/longsight.com/custom_buil
 #git_project content-review/contentreview-impl-vericite
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
+#shell_command find roster2/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find profile2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
