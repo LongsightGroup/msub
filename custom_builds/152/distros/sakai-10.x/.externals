@@ -95,7 +95,7 @@ providers                         https://source.sakaiproject.org/svn/msub/longs
 
 # RWU Custom mods
 profile2 			  https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/profile2/sakai-10.x
-roster2                           https://source.sakaiproject.org/svn/roster2/branches/sakai-10.x
+roster2                           https://source.sakaiproject.org/svn/msub/rsmart.com/roster2/branches/10.6.x
 
 
 #VeriCite
@@ -112,8 +112,8 @@ roster2                           https://source.sakaiproject.org/svn/roster2/br
 #git_project content-review/contentreview-impl-vericite
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
-#shell_command find roster2/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find profile2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
+#shell_command find roster2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
 #shell_command find master/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
