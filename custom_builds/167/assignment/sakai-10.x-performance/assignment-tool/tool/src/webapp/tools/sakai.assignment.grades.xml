@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="Assignments" description="Use to create and submit text-based assignments." id="sakai.assignment.grades">
+		<configuration name="showNumSubmissionColumn" value="TRUE"/>
+		
+		<configuration name="groupAware" value="true"/>
+
+
+      <configuration name="pagesize" value="200"/>
+      <configuration name="withGrades" type="final" value="TRUE"/>
+      <configuration name="help.id" type="final" value="sakai.assignment"/>
+
+
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="portfolio"/>
+</tool>
+
+</registration>
