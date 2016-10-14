@@ -31,10 +31,15 @@
         <security:custom-filter after="BASIC_AUTH_FILTER" ref="samlFilter"/>
     </security:http>
 
+    <bean id="containerRedirectStrategy" class="org.springframework.security.web.DefaultRedirectStrategy">
+        <property name="contextRelative" value="true"/>
+    </bean>
+
     <!-- Handler deciding where to redirect user after successful login -->
     <bean id="successRedirectHandler"
           class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
         <property name="defaultTargetUrl" value="/portal"/>
+        <property name="redirectStrategy" ref="containerRedirectStrategy"/>
     </bean>
 
     <!-- Handler deciding where to redirect user after failed login -->
@@ -42,11 +47,13 @@
           class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
         <property name="useForward" value="true"/>
         <property name="defaultFailureUrl" value="/portal/xlogin"/>
+        <property name="redirectStrategy" ref="containerRedirectStrategy"/>
     </bean>
 
     <!-- Handler for successful logout -->
     <bean id="successLogoutHandler" class="org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler">
         <property name="defaultTargetUrl" value="/portal"/>
+        <property name="redirectStrategy" ref="containerRedirectStrategy"/>
     </bean>
 
     <security:authentication-manager alias="authenticationManager">
@@ -147,7 +154,6 @@
 			    </bean>
 
                 <!-- Example of classpath metadata with Extended Metadata -->
-<!--
                 <bean class="org.springframework.security.saml.metadata.ExtendedMetadataDelegate">
                     <constructor-arg>
                         <bean class="org.opensaml.saml2.metadata.provider.ResourceBackedMetadataProvider">
@@ -156,7 +162,7 @@
                             </constructor-arg>
                             <constructor-arg>
                                 <bean class="org.opensaml.util.resource.FilesystemResource">
-                                    <constructor-arg value="sakai/saml/incommon.xml"/>
+                                    <constructor-arg value="sakai/saml/idp.xml"/>
                                 </bean>
                             </constructor-arg>
                             <property name="parserPool" ref="parserPool"/>
@@ -164,12 +170,15 @@
                     </constructor-arg>
                     <constructor-arg>
                         <bean class="org.springframework.security.saml.metadata.ExtendedMetadata">
+		               <property name="requireLogoutRequestSigned" value="true"/>
+		               <property name="requireLogoutResponseSigned" value="true"/>
                         </bean>
                     </constructor-arg>
+                  <property name="metadataTrustCheck" value="false"/>
                 </bean>
-   -->
 
                 <!-- Example of HTTP metadata without Extended Metadata -->
+<!--
                 <bean class="org.springframework.security.saml.metadata.ExtendedMetadataDelegate">
                   <constructor-arg>
                 <bean class="org.opensaml.saml2.metadata.provider.HTTPMetadataProvider">
@@ -187,6 +196,7 @@
                   </constructor-arg>
                   <property name="metadataTrustCheck" value="false"/>
                 </bean>
+   -->
                 
                 <!-- Example of file system metadata without Extended Metadata -->
                 <!--
@@ -232,9 +242,12 @@
     </bean>
 
     <!-- Logout handler terminating local session -->
-    <bean id="logoutHandler"
-          class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler">
-        <property name="invalidateHttpSession" value="false"/>
+    <bean id="logoutHandler" class="org.sakaiproject.login.filter.SakaiLogoutSamlFilter">
+        <property name="usageSessionService" ref="org.sakaiproject.event.api.UsageSessionService"/>
+        <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
+        <property name="invalidateHttpSession" value="true"/>
+        <!-- property name="invalidateSakaiSession" value="true"/-->
+        <property name="clearAuthentication" value="true"/>
     </bean>
 
     <!-- Override default logout processing filter with the one processing SAML messages -->
