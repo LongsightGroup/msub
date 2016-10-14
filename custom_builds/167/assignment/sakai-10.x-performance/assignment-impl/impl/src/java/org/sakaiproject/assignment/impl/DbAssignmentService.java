@@ -25,8 +25,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.sakaiproject.assignment.api.Assignment;
@@ -477,7 +480,7 @@ public class DbAssignmentService extends BaseAssignmentService
 
 			Map<User, AssignmentSubmission> userSubmissionMap = new HashMap<>();
 
-			if (CollectionUtils.isEmpty(users))
+			if (users == null || users.isEmpty())
 			{
 				return userSubmissionMap;
 			}
