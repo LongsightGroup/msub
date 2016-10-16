@@ -7,3 +7,6 @@ SAK-29873 ND-83 pre-req for SAK-29952
 
 KNL-1451 - Support for metadata (or LRS Statements) to events
 KNL-1454, KNL-1460, KNL-1461 patches for LRS updates
+
+KNL-1475 performance from sub-select in getUsersIsAllowed found after AWS transition
+ * https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/3488.patch
