@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+	<tool title="Site Stats Admin" description="" id="sakai.sitestats.admin">
+    	
+    	
+		
+		
+		<configuration name="functions.require" value="sitestats.admin.view"/>
+		
+	</tool>
+</registration>

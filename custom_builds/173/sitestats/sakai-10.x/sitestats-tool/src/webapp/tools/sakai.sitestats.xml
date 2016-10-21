@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+	<tool title="Site Statistics" description="Use Site Statistics to view statistics on your site by user, event or resource." id="sakai.sitestats">
+    	
+    	
+		
+
+		
+		<configuration name="roles.allow" value="maintain,Instructor"/>
+		
+		
+		
+		<configuration name="functions.require" value="sitestats.view"/> 		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="course"/>
+<category name="project"/>
+</tool>
+</registration>
