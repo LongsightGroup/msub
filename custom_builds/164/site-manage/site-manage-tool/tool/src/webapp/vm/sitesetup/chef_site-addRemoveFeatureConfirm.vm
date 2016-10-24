@@ -169,7 +169,7 @@
 				#if (!$!oldLtiTools.containsKey($ltiToolId))
 					## highlight for newly selected lti tools
 					<span class="highlight">
-						$ltiToolTitle ($ltiToolProperties.get("title"))
+						$ltiToolTitle ($ltiToolValues.get("title"))
 					</span>
 				#else
 					## existing lti tools
