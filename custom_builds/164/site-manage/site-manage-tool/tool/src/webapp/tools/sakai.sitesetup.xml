@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+
+   <tool title="Site Setup" description="Use Site Setup to create, edit and delete sites." id="sakai.sitesetup">
+
+
+      <configuration name="siteTypes" value="course,project,portfolio"/>
+
+
+      <configuration name="defaultSiteType" value="project"/>
+
+      <configuration name="publicChangeableSiteTypes" value="project"/>
+
+      <configuration name="publicSiteTypes" value="course"/>
+
+      <configuration name="privateSiteTypes" value=""/>
+
+      <configuration name="site_mode" type="final" value="sitesetup"/>
+
+
+      
+      
+      
+      
+      
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category name="portfolioAdmin"/>
+<category name="aw"/>
+<category name="myworkspacebuserdguest"/>
+<category name="myworkspacebuserdregistered"/>
+<category name="myworkspacebuserdmaintain"/>
+<category name="myworkspacetadmin"/>
+</tool>
+
+</registration>
