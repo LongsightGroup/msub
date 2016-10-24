@@ -40,7 +40,6 @@ help https://github.com/sakaiproject/sakai/branches/11.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
-login https://github.com/sakaiproject/sakai/branches/11.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/11.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/11.x/mailsender
 memory https://github.com/sakaiproject/sakai/branches/11.x/memory
@@ -55,7 +54,6 @@ portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
-reference https://github.com/sakaiproject/sakai/branches/11.x/reference
 reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
 rights https://github.com/sakaiproject/sakai/branches/11.x/rights
 roster2 https://github.com/sakaiproject/sakai/branches/11.x/roster2
@@ -86,7 +84,7 @@ providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 #customizations:
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 blogwow https://github.com/sakaicontrib/blogwow/trunk
-bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
+login https://github.com/LongsightGroup/sakai/branches/81-11.x/login
 
 #POM CHANGES
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
