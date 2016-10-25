@@ -9,6 +9,7 @@
 #git_project kernel
 #git_project lessonbuilder
 #git_project portal
+#git_project reference
 #git_project samigo
 #git_project site-manage
 #git_project syllabus
