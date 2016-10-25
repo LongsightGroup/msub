@@ -67,7 +67,6 @@ shortenedurl -r 319544            https://source.sakaiproject.org/svn/msub/rsmar
 signup -r 319545                  https://source.sakaiproject.org/svn/msub/rsmart.com/signup/branches/10.4.x 
 site -r 319546                    https://source.sakaiproject.org/svn/msub/rsmart.com/site/branches/10.4.x
 site-manage -r 319547             https://source.sakaiproject.org/svn/msub/rsmart.com/site-manage/branches/10.4.x
-sitestats -r 319548               https://source.sakaiproject.org/svn/msub/rsmart.com/sitestats/branches/10.4.x
 skin-manager -r 87665            https://source.sakaiproject.org/contrib/rsmart/msub/skin-manager/branches/10.4.x
 syllabus -r 321596                https://source.sakaiproject.org/svn/msub/rsmart.com/syllabus/branches/10.4.x
 taggable -r 319550                https://source.sakaiproject.org/svn/msub/rsmart.com/taggable/branches/10.4.x
@@ -95,6 +94,7 @@ cloud-content                     https://source.sakaiproject.org/svn/msub/longs
 lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/167/lessonbuilder/sakai-10.x
 msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
 assignment                        https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/167/assignment/sakai-10.x-performance
+sitestats                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/sitestats/sakai-10.x/
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
