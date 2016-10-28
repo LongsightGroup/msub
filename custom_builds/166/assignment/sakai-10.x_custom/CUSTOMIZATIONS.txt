@@ -5,3 +5,5 @@ Branched from r319491 of rsmart assignment branches 10.4.x
      * svn merge -c 319067,319588,320133 ^/assignment/branches/sakai-10.x
    * SAK-29752 assignments / download all - upload all - release grade links broken
      * svn merge -c320334
+
+50229: custom warning text 

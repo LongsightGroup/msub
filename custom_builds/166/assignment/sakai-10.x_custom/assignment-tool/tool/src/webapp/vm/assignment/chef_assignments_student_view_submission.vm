@@ -926,6 +926,7 @@ function submitform(id)
 						$tlang.getString("gen.youmus")
 					</p>
 				#end
+<div id="learnersedgewarning">Prior to submitting, please be sure ALL required coursework for this module is attached (.pdf) or typed in the text box. Once you have submitted, you will be unable to make modifications.</div>
 				<div
 					#if ($!deleted.equalsIgnoreCase("true") || !$!canSubmit)
 					 class="act">
