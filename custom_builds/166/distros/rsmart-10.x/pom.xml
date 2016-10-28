@@ -74,7 +74,6 @@
 		        <!-- <module>dashboard</module> -->
                 <module>dav</module>
 		        <module>delegatedaccess</module>
-                <module>edia-sakai-utils</module>
                 <module>edu-services</module>
                 <module>emailtemplateservice</module>
                 <module>entitybroker</module>
@@ -85,8 +84,6 @@
                 <!--module>gradebook2</module-->
                 <module>help</module>
                 <module>hierarchy</module>
-                <module>iclicker</module>
-                <module>itunesu-tool</module>
                 <module>jobscheduler</module>
                 <module>jsf</module>
                 <module>kaltura</module>
@@ -104,6 +101,8 @@
                 <module>presence</module>
                 <module>profile2</module>
                 <!--
+                <module>iclicker</module>
+                <module>itunesu-tool</module>
 	        <module>jforum</module>
                 <module>login</module>
                 <module>metaobj</module>
@@ -115,6 +114,8 @@
                 <module>rsmart</module>
                 <module>webservices</module>
                 <module>reports</module>
+                <module>skin-manager</module>
+                <module>edia-sakai-utils</module>
                 -->
                 <module>rights</module>
                 <module>roster2</module>
@@ -124,7 +125,6 @@
                 <module>search</module>
                 <module>sections</module>
                 <module>shortenedurl</module>
-                <module>skin-manager</module>
                 <module>signup</module>
                 <module>site</module>
                 <module>site-manage</module>
