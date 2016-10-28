@@ -118,6 +118,7 @@
                 <module>blogwow</module>
                 <module>webservices</module>
                 <module>bbb-tool</module>
+                <module>content-review/contentreview-impl</module>
             </modules>
         </profile>
         <profile>

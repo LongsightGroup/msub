@@ -87,6 +87,7 @@ providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
+content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/trunk/contentreview-impl/
 
 #POM CHANGES
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
