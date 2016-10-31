@@ -72,8 +72,8 @@ public class StatsAggregateJobImpl implements StatefulJob {
 	private final static String ORACLE_CONTEXT_COLUMN  = ",CONTEXT";
 	private String MYSQL_GET_EVENT					= "select " + MYSQL_DEFAULT_COLUMNS + MYSQL_CONTEXT_COLUMN + " " +
 														"from SAKAI_EVENT e join SAKAI_SESSION s on e.SESSION_ID=s.SESSION_ID " +
-														"where EVENT_ID >= ? and EVENT_ID < ? " +
-														"order by EVENT_ID asc ";
+														"where EVENT_ID >= ? " +
+														"order by EVENT_ID asc LIMIT ?";
 	private String ORACLE_GET_EVENT					= "SELECT * FROM ( " +
 														"SELECT " +
 															" ROW_NUMBER() OVER (ORDER BY EVENT_ID ASC) AS rn, " +
@@ -268,7 +268,7 @@ public class StatsAggregateJobImpl implements StatefulJob {
 					if(offset == 0)
 						offset = eventIdLowerLimit;
 					st.setLong(1, offset);					// MySQL >= startId	
-					st.setLong(2, sqlBlockSize + offset);	// MySQL < endId
+					st.setLong(2, sqlBlockSize);			// MySQL limit
 				}else{
 					st.setLong(1, eventIdLowerLimit);		// Oracle lower limit	
 					st.setLong(2, offset);					// Oracle offset
@@ -336,10 +336,8 @@ public class StatsAggregateJobImpl implements StatefulJob {
 				firstEventIdProcessedInBlock = -1;
 				if(processedCounter >= getMaxEventsPerRun()){
 					break;
-				}else if(processedCounter + sqlBlockSize < getMaxEventsPerRun()){
-					offset += sqlBlockSize;	
 				}else{
-					offset += getMaxEventsPerRun() - processedCounter;
+					offset += sqlBlockSize;	
 				}
 			}
 
