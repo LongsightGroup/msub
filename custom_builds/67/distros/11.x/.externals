@@ -89,7 +89,7 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/6
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 bigbluebutton-sakai https://github.com/sakaicontrib/bbb-tool/branches/11.x
 adobeconnect https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/11.x
-kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20150320/
+kaltura https://github.com/ern/sakai-extension/branches/SAK-99
 
 #POM Changes
 #shell_command sed -i 's/2.9.2/11-SNAPSHOT/g' iclicker/pom.xml
