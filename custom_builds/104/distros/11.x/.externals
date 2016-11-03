@@ -5,7 +5,6 @@ master https://github.com/sakaiproject/sakai/branches/11.x/master
 
 # Core services
 common https://github.com/sakaiproject/sakai/branches/11.x/common
-content-review https://github.com/sakaiproject/sakai/branches/11.x/content-review
 delegatedaccess https://github.com/sakaiproject/sakai/branches/11.x/delegatedaccess
 emailtemplateservice https://github.com/sakaiproject/sakai/branches/11.x/emailtemplateservice
 entitybroker https://github.com/sakaiproject/sakai/branches/11.x/entitybroker
@@ -88,6 +87,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
+content-review https://github.com/LongsightGroup/sakai/branches/104-11.x/content-review
 
 #POM CHANGES
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
