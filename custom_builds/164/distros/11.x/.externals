@@ -77,7 +77,6 @@ tool https://github.com/sakaiproject/sakai/branches/11.x/tool
 user https://github.com/sakaiproject/sakai/branches/11.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/11.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
-web https://github.com/sakaiproject/sakai/branches/11.x/web
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
@@ -88,4 +87,5 @@ gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-11.x
 content-review https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/170/content-review/sakai-11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
+web https://github.com/LongsightGroup/sakai/branches/164-11.x/web
 clog https://github.com/sakaicontrib/clog/branches/11.x
