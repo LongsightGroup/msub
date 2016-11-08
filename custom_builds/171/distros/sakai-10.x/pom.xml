@@ -127,6 +127,7 @@
                 <module>clog</module>
                 <module>gradebook2</module>
                 -->
+                <module>kaltura-kaf</module>
             </modules>
         </profile>
         <profile>
