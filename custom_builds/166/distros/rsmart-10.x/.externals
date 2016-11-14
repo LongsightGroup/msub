@@ -16,7 +16,6 @@ citations -r 319496               https://source.sakaiproject.org/svn/msub/rsmar
 common -r 319497                  https://source.sakaiproject.org/svn/msub/rsmart.com/common/branches/10.4.x
 config -r 319498                  https://source.sakaiproject.org/svn/msub/rsmart.com/config/branches/10.4.x
 content -r 319499                 https://source.sakaiproject.org/svn/msub/rsmart.com/content/branches/10.4.x
-content-review -r 319500          https://source.sakaiproject.org/svn/msub/rsmart.com/content-review/branches/10.4.x
 courier -r 319501                 https://source.sakaiproject.org/svn/msub/rsmart.com/courier/branches/10.4.x
 dav -r 319502                     https://source.sakaiproject.org/svn/msub/rsmart.com/dav/branches/10.4.x
 delegatedaccess -r 319503         https://source.sakaiproject.org/svn/msub/rsmart.com/delegatedaccess/branches/10.4.x
@@ -73,7 +72,6 @@ syllabus -r 321596                https://source.sakaiproject.org/svn/msub/rsmar
 taggable -r 319550                https://source.sakaiproject.org/svn/msub/rsmart.com/taggable/branches/10.4.x
 textarea -r 319551                https://source.sakaiproject.org/svn/msub/rsmart.com/textarea/branches/10.4.x
 tool -r 319552                    https://source.sakaiproject.org/svn/msub/rsmart.com/tool/branches/10.4.x
-turnitin -r 87666                https://source.sakaiproject.org/contrib/rsmart/msub/turnitin/branches/10.4.x
 user -r 319553                    https://source.sakaiproject.org/svn/msub/rsmart.com/user/branches/10.4.x
 userauditservice -r 319565        https://source.sakaiproject.org/svn/msub/rsmart.com/userauditservice/branches/10.4.x
 usermembership -r 319554          https://source.sakaiproject.org/svn/msub/rsmart.com/usermembership/branches/10.4.x
@@ -94,7 +92,11 @@ kernel                            https://source.sakaiproject.org/svn/msub/longs
 cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/cloud-content/sakai10.x_custom
 lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/166/lessonbuilder/sakai-10.x
 msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
-assignment -r 321780              https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch
+
+# Sensitive assignments
+assignment -r 321010              https://source.sakaiproject.org/svn/msub/rsmart.com/assignment/branches/10.4.x
+content-review -r 320591          https://source.sakaiproject.org/svn/msub/rsmart.com/content-review/branches/10.4.x
+turnitin -r 87756                https://source.sakaiproject.org/contrib/rsmart/msub/turnitin/branches/10.4.x
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
