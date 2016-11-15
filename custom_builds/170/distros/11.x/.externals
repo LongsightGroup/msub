@@ -94,6 +94,7 @@ content-review https://source.sakaiproject.org/svn/msub/longsight.com/custom_bui
 clog https://github.com/sakaicontrib/clog/branches/11.x
 
 #marist changes
+attendance https://github.com/jd3538/Marist-Sakai-11.x/branches/Marist-Sakai-11.x/attendance
 site-manage https://github.com/jd3538/Marist-Sakai-11.x/branches/Marist-Sakai-11.x/site-manage
 
 #shell_command find certification/ -type f -exec sed -i 's/util.ContextLoaderListener/util.SakaiContextLoaderListener/g' {} \;
