@@ -42,7 +42,7 @@ mailsender -r 319519              https://source.sakaiproject.org/svn//msub/rsma
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 memory -r 319521                  https://source.sakaiproject.org/svn/msub/rsmart.com/memory/branches/10.4.x
 message -r 319522                 https://source.sakaiproject.org/svn/msub/rsmart.com/message/branches/10.4.x
-messageservice -r 87663          https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/branches/10.4.x
+#messageservice -r 87663          https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/branches/10.4.x
 metaobj -r 319523                 https://source.sakaiproject.org/svn/msub/rsmart.com/metaobj/branches/10.4.x
 osp -r 319525                     https://source.sakaiproject.org/svn/msub/rsmart.com/osp/branches/10.4.x
 pack -r 319526                    https://source.sakaiproject.org/svn/msub/rsmart.com/pack/branches/10.4.x 
