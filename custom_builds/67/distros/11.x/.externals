@@ -87,17 +87,17 @@ blogwow https://github.com/sakaicontrib/blogwow/trunk
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/67/providers/sakai-10.x_jldap-auth-caching_custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
-bigbluebutton-sakai https://github.com/sakaicontrib/bbb-tool/branches/11.x
 adobeconnect https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/11.x
 kaltura https://github.com/ern/sakai-extension/branches/SAK-99
+wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/branches/sakai-2.9
+scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/sakai-10/
 
 #POM Changes
-#shell_command sed -i 's/2.9.2/11-SNAPSHOT/g' iclicker/pom.xml
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
-#shell_command sed -i 's/<version>10<\/version>/<version>10-SNAPSHOT<\/version>/g' scorm/pom.xml
-#shell_command sed -i 's/2.9.3/10-SNAPSHOT/g' wicket-for-scorm/pom.xml
-#shell_command sed -i 's/2.9-SNAPSHOT/10-SNAPSHOT/g' adobeconnect/pom.xml
+#shell_command sed -i 's/<version>10<\/version>/<version>11-SNAPSHOT<\/version>/g' scorm/pom.xml
+#shell_command sed -i 's/2.9.3/11-SNAPSHOT/g' wicket-for-scorm/pom.xml
+#shell_command sed -i 's/2.9-SNAPSHOT/11-SNAPSHOT/g' adobeconnect/pom.xml
 #shell_command sed -i 's/3.0.0/3.0.1/g' scorm/pom.xml
 #shell_command sed -i 's/Media Gallery/Loyola Media/g' kaltura/src/main/webapp/tools/sakai.kaltura.xml
 #shell_command find ./ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
