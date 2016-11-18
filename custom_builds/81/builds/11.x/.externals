@@ -88,3 +88,5 @@ login https://github.com/LongsightGroup/sakai/branches/81-11.x/login
 
 #POM CHANGES
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command cd content-review; git clone -b 2.0 https://github.com/vericite/contentreview-impl-vericite.git
+
