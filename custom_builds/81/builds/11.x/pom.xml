@@ -59,7 +59,6 @@
                 <module>cloud-content</module>
                 <module>content</module>
                 <module>content-review</module>
-                <module>content-review/contentreview-impl-vericite</module>
                 <module>courier</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
@@ -117,6 +116,7 @@
                 <module>web</module>
                 <module>blogwow</module>
                 <module>webservices</module>
+                <module>vericite</module>
             </modules>
         </profile>
         <profile>

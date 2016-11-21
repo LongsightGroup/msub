@@ -85,8 +85,7 @@ providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 login https://github.com/LongsightGroup/sakai/branches/81-11.x/login
+vericite  https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 
 #POM CHANGES
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
-#shell_command cd content-review; git clone -b 2.0 https://github.com/vericite/contentreview-impl-vericite.git contentreview-impl-vericite
-
