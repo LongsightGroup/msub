@@ -80,7 +80,7 @@ portal https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/po
 profile2 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/3/profile2/10.x-custom
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 bbb-tool https://github.com/blindsidenetworks/bigbluebutton-sakai/branches/10.x/bbb-tool
-kaltura https://github.com/kaltura/sakai-extension/trunk
+kaltura https://github.com/kaltura/sakai-extension/branches/10.x
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
