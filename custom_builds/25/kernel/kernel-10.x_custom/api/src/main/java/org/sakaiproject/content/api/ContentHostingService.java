@@ -22,6 +22,7 @@
 package org.sakaiproject.content.api;
 
 import java.io.InputStream;
+import java.net.URI;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
@@ -1984,5 +1985,7 @@ public interface ContentHostingService extends EntityProducer
 	 */
 
 	public String expandMacros(String url);
+
+	public URI getTheDirectLink(ContentResource resource);
 
 }

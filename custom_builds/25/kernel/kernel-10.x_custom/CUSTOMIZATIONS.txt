@@ -21,3 +21,6 @@ SAK-23555 Create new events that differentiate the site.upd event
 LS-188 crazy corruption of some private meleteDoc assets so re-read using IOUtils
 KNL-1385 wrap calls to advisors in try/catch to avoid an advisor preventing a save
  * https://github.com/sakaiproject/sakai/pull/1175
+
+AWS S3 
+ * svn merge -r321286:325480 https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3

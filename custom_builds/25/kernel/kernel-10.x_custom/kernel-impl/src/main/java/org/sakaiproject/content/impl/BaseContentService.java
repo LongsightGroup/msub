@@ -6983,7 +6983,7 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 				{
 					contentType = contentType + "; charset=" + encoding;
 				}
-				
+
 				// KNL-1316 let's see if the user already has a cached copy. Code copied and modified from Tomcat DefaultServlet.java
 				long headerValue = req.getDateHeader("If-Modified-Since");
 				if (headerValue != -1 && (lastModTime < headerValue + 1000)) {
@@ -6992,11 +6992,47 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 					return; 
 				}
 
-				ArrayList<Range> ranges = parseRange(req, res, len);
-				res.addHeader("Accept-Ranges", "bytes");
+				// If there is a direct link to the asset, no sense streaming it.
+				// Send the asset directly to the load-balancer or to the client
+				URI directLinkUri = m_storage.getDirectLink(resource);
 
-		        if (req.getHeader("Range") == null || (ranges == null) || (ranges.isEmpty())) {
-		        	
+				ArrayList<Range> ranges = parseRange(req, res, len);
+				if (directLinkUri != null || req.getHeader("Range") == null || (ranges == null) || (ranges.isEmpty())) {
+					res.addHeader("Accept-Ranges", "none");
+					res.setContentType(contentType);
+					res.addHeader("Content-Disposition", disposition);
+
+					// http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4187336
+					if (len <= Integer.MAX_VALUE) {
+						res.setContentLength((int)len);
+					} else {
+						res.addHeader("Content-Length", Long.toString(len));
+					}
+					
+					// SAK-30455: Track event now so the direct link still records a content.read
+					eventTrackingService.post(eventTrackingService.newEvent(EVENT_RESOURCE_READ, resource.getReference(null), false));
+
+					// Bypass loading the asset and just send the user a link to it.
+					if (directLinkUri != null) {
+						if (m_serverConfigurationService.getBoolean("cloud.content.sendfile", false)) {
+							int hostLength = new String(directLinkUri.getScheme() + "://" + directLinkUri.getHost()).length();
+							String linkPath = "/sendfile" + directLinkUri.toString().substring(hostLength);
+							if (M_log.isDebugEnabled()) {
+								M_log.debug("X-Sendfile: " + linkPath);
+							}
+
+							// Nginx uses X-Accel-Redirect and Apache and others use X-Sendfile
+							res.addHeader("X-Accel-Redirect", linkPath);
+							res.addHeader("X-Sendfile", linkPath);
+							return;
+						}
+						else if (m_serverConfigurationService.getBoolean("cloud.content.directurl", true)) {
+							String directUri = directLinkUri.toString();
+							res.sendRedirect(directUri);
+							return;
+						}
+					}
+
 					// stream the content using a small buffer to keep memory managed
 					InputStream content = null;
 					OutputStream out = null;
@@ -7008,15 +7044,7 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 						{
 							throw new IdUnusedException(ref.getReference());
 						}
-	
-						res.setContentType(contentType);
-						res.addHeader("Content-Disposition", disposition);
-						// http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4187336
- 						if (len <= Integer.MAX_VALUE){
- 							res.setContentLength((int)len);
- 						} else {
- 							res.addHeader("Content-Length", Long.toString(len));
- 						}
+
 
 						// set the buffer of the response to match what we are reading from the request
 						if (len < STREAM_BUFFER_SIZE)
@@ -7058,16 +7086,13 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 							}
 						}
 					}
-					
-					// Track event - only for full reads
-					eventTrackingService.post(eventTrackingService.newEvent(EVENT_RESOURCE_READ, resource.getReference(null), false));
 
 		        } 
 		        else 
 		        {
-		        	// Output partial content. Adapted from Apache Tomcat 5.5.27 DefaultServlet.java
-		        	
-		        	res.setStatus(HttpServletResponse.SC_PARTIAL_CONTENT);
+		            // Output partial content. Adapted from Apache Tomcat 5.5.27 DefaultServlet.java
+		            res.addHeader("Accept-Ranges", "bytes");
+		            res.setStatus(HttpServletResponse.SC_PARTIAL_CONTENT);
 
 		            if (ranges.size() == 1) {
 
@@ -13261,6 +13286,13 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
 		public void open();
 
 		/**
+		 * Get a direct link to the asset so it doesn't have to be streamed.
+		 * @param resource
+		 * @return URI or null if no direct link is available
+		 */
+		public URI getDirectLink(ContentResource resource);
+
+		/**
 		 * Get a count of all members of a collection, where 'member' means the collection
 		 * is the immediate parent of the item.  The count is not recursive and it will 
 		 * include all resources and collections whose immediate parent is the collection
@@ -14144,6 +14176,11 @@ SiteContentAdvisorProvider, SiteContentAdvisorTypeRegistry, EntityTransferrerRef
     	
     	
     }
+
+	/* Longsight custom for URI to solve Lessons resource delivery issues */
+	public URI getTheDirectLink(ContentResource resource) {
+		return m_storage.getDirectLink(resource);
+	}
 
 } // BaseContentService
 

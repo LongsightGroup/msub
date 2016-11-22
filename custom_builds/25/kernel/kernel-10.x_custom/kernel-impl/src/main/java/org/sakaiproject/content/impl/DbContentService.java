@@ -30,6 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -2301,6 +2302,34 @@ public class DbContentService extends BaseContentService
             {
                 out();
             }
+        }
+        
+        /**
+         * Return a URI containing a direct link to the asset.
+         * 
+         * @param rootFolder
+         * @param resource
+         * @return URI representing a direct link to the asset or null
+         */
+        public URI getDirectLink(ContentResource resource)
+        {
+                try {
+                        // SAK-30325 - HTML items not being BaseResourceEdits causes a
+                        // ClassCastException here, which gets swallowed and turned into a 404.
+                        // This is an ugly hack because of the necessary casting here (to get m_filePath).
+                        // This is another case where the nested classes and fuzzy boundaries causes
+                        // rather sloppy object orientation. A more complete treatment would reevaluate
+                        // the interfaces, remove the Edits, and extract these classes and casts.
+                        if (resource instanceof WrappedContentResource || !(resource instanceof BaseResourceEdit)) {
+                                return null;
+                        }
+                        return fileSystemHandler.getAssetDirectLink(((BaseResourceEdit) resource).m_id, m_bodyPath, ((BaseResourceEdit) resource).m_filePath);
+                }
+        	catch (IOException e) {
+        		M_log.debug("No direct link available for resource: " + resource.getId());
+        	}
+        	
+        	return null;
         }
 
         /**
