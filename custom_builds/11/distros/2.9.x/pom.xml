@@ -222,6 +222,7 @@
                 
                 <!-- Experimental -->
                 <module>hybrid</module>
+                <module>cloud-content</module>
                 <!-- <module>roster2</module> -->
             </modules>
         </profile>

@@ -35,7 +35,6 @@ warehouse https://source.sakaiproject.org/svn/warehouse/branches/sakai-2.9.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-2.9.x
 
 # Indie services
-kernel https://source.sakaiproject.org/svn/kernel/branches/kernel-1.3.x
 common https://source.sakaiproject.org/svn/common/branches/common-1.2.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/contentreview-2.9.x
 #edu-services https://source.sakaiproject.org/svn/edu-services/branches/edu-services-1.2.x
@@ -72,10 +71,7 @@ site https://source.sakaiproject.org/svn/site/branches/site-2.9.x
 taggable https://source.sakaiproject.org/svn/taggable/branches/taggable-2.9.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
-
-# Indie experimental
 hybrid https://source.sakaiproject.org/svn/hybrid/branches/hybrid-1.2.x
-
 
 blogwow https://source.sakaiproject.org/contrib/programmerscafe/blogwow/branches/sakai-2.9.x/
 etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak29x
@@ -90,6 +86,10 @@ signup https://source.sakaiproject.org/contrib/signup/branches/2-9-x
 site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-2.9.x_features-backport/
 textarea https://source.sakaiproject.org/svn/msub/longsight.com/textarea/textarea-2.9.x_backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
+
+# AWS
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/kernel-1.3.x-aws-s3/
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/2.9.x/
 
 #Patcher options: "mavenoptions: <options>"
 #Evaluation needs -Psakai2.9
