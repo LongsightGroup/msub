@@ -723,9 +723,45 @@ public class LessonBuilderAccessService {
 							    return; 
 							}
 
+				// If there is a direct link to the asset, no sense streaming it.
+				// Send the asset directly to the load-balancer or to the client
+				URI directLinkUri = contentHostingService.getTheDirectLink(resource);
+
 		        ArrayList<Range> ranges = parseRange(req, res, len);
 
-		        if (req.getHeader("Range") == null || (ranges == null) || (ranges.isEmpty())) {
+		        if (directLinkUri != null || req.getHeader("Range") == null || (ranges == null) || (ranges.isEmpty())) {
+						res.addHeader("Accept-Ranges", "none");
+						res.setContentType(contentType);
+						res.addHeader("Content-Disposition", disposition);
+						
+						// http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4187336
+ 						if (len <= Integer.MAX_VALUE){
+ 							res.setContentLength((int)len);
+ 						} else {
+ 							res.addHeader("Content-Length", Long.toString(len));
+ 						}
+
+
+					// Bypass loading the asset and just send the user a link to it.
+					if (directLinkUri != null) {
+						if (ServerConfigurationService.getBoolean("cloud.content.sendfile", false)) {
+							int hostLength = new String(directLinkUri.getScheme() + "://" + directLinkUri.getHost()).length();
+							String linkPath = "/sendfile" + directLinkUri.toString().substring(hostLength);
+							if (M_log.isDebugEnabled()) {
+								M_log.debug("X-Sendfile: " + linkPath);
+							}
+
+							// Nginx uses X-Accel-Redirect and Apache and others use X-Sendfile
+							res.addHeader("X-Accel-Redirect", linkPath);
+							res.addHeader("X-Sendfile", linkPath);
+							return;
+						}
+						else if (ServerConfigurationService.getBoolean("cloud.content.directurl", true)) {
+							String directUri = directLinkUri.toString();
+							res.sendRedirect(directUri);
+							return;
+						}
+					}
 		        	
 					// stream the content using a small buffer to keep memory managed
 					InputStream content = null;
@@ -739,17 +775,6 @@ public class LessonBuilderAccessService {
 							throw new IdUnusedException(ref.getReference());
 						}
 	
-						res.setContentType(contentType);
-						res.addHeader("Content-Disposition", disposition);
-						res.addHeader("Accept-Ranges", "bytes");
-						
-						// http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4187336
- 						if (len <= Integer.MAX_VALUE){
- 							res.setContentLength((int)len);
- 						} else {
- 							res.addHeader("Content-Length", Long.toString(len));
- 						}
-
 						// set the buffer of the response to match what we are reading from the request
 						if (len < STREAM_BUFFER_SIZE)
 						{
