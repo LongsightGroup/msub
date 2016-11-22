@@ -118,6 +118,7 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>gradebook-export</module>
+                <module>cloud-content</module>
               <!--  <module>bigbluebutton-sakai/bbb-tool</module> -->
             </modules>
         </profile>
