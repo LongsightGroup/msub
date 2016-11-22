@@ -1,0 +1,23 @@
+2014-11-19 - svn merge "^/kernel/branches/sakai-10.x" 
+  --- Merging r313756 through r315589 into '.':
+2014-12-16 - svn merge "^/kernel/branches/sakai-10.x" 
+  --- Merging r315590 through r316085 into '.':
+2015-06-23 - svn merge "^/kernel/branches/sakai-10.x" 
+  --- Merging r316196 through r319919 into '.':
+2015-10-26 - svn merge "^/kernel/branches/sakai-10.x" 
+  --- Merging r320225 through r321618 into '.':
+2016-07-05 - svn merge "^/kernel/branches/sakai-10.x" 
+  --- Merging r321732 through r324453 into '.':
+2016-09-29 - svn merge "^/kernel/branches/sakai-10.x" 
+  --- Merging r324454 through r325159 into '.':
+2016-11-11 - svn merge "^/kernel/branches/sakai-10.x" 
+  --- Merging r325166 through r325414 into '.':
+
+
+KNL-1210 SAK-25867 Improvements to Site Archive tool
+KNL-1252 "Hard" Delete
+SAK-23555 Create new events that differentiate the site.upd event
+
+LS-188 crazy corruption of some private meleteDoc assets so re-read using IOUtils
+KNL-1385 wrap calls to advisors in try/catch to avoid an advisor preventing a save
+ * https://github.com/sakaiproject/sakai/pull/1175
