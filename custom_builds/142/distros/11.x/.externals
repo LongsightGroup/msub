@@ -86,7 +86,7 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 config https://github.com/LongsightGroup/sakai/branches/142-11.x/config
 login https://github.com/LongsightGroup/sakai/branches/142-11.x/login
-kaltura https://github.com/LongsightGroup/sakai-extension/branches/nd-11.x
+kaltura https://github.com/kaltura/sakai-extension/trunk
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/sakai-11.x
