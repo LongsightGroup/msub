@@ -93,7 +93,7 @@ site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/s
 #syllabus https://source.sakaiproject.org/svn/msub/longsight.com/syllabus/syllabus-10.x_backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
 
-kernel https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/25/kernel/kernel-10.x_custom
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x_backport-aws-s3
 cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/10.x/
 lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuilder/sakai-10.x-s3/
 
