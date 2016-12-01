@@ -45,10 +45,6 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.sakaiproject.kernel</groupId>
-            <artifactId>sakai-component-manager</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.rsmart</groupId>
             <artifactId>rsmart-decryption-model</artifactId>
             <version>${sakai.version}</version>
