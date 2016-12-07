@@ -51,7 +51,6 @@ pack https://github.com/sakaiproject/sakai/branches/11.x/pack
 pasystem https://github.com/sakaiproject/sakai/branches/11.x/pasystem
 podcasts https://github.com/sakaiproject/sakai/branches/11.x/podcasts
 polls https://github.com/sakaiproject/sakai/branches/11.x/polls
-portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
@@ -89,5 +88,6 @@ blogwow https://github.com/sakaicontrib/blogwow/trunk
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
+portal https://github.com/LongsightGroup/portal/branches/29-11.x
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
