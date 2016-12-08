@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>rsmart-user</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>10-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+  <name>rsmart-user-pack</name>
+  <groupId>com.rsmart</groupId>
+  <artifactId>rsmart-user-pack</artifactId>
+  <inceptionYear>2006</inceptionYear>
+  <packaging>sakai-component</packaging>
+  <properties>
+    <deploy.target>components</deploy.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-util</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>rsmart-user-impl</artifactId>
+      <version>${sakai.version}</version>
+<!--properties:  war.bundle: true -->
+    </dependency>
+<!--
+      sakai-user-impl is a part of the kernel implementation, dependency removed
+      org.sakaiprojectsakai-user-impl${sakai.version}-->
+<!--org.sakaiprojectsakai-db-storage${sakai.version}-->
+<!--org.sakaiprojectsakai-entity-util${sakai.version}-->
+<!--org.sakaiprojectsakai-util${sakai.version}-->
+<!--org.sakaiprojectsakai-user-util${sakai.version}-->
+  </dependencies>
+  <build>
+    <resources/>
+<!-- java source -->
+    <sourceDirectory>src/java</sourceDirectory>
+  </build>
+</project>

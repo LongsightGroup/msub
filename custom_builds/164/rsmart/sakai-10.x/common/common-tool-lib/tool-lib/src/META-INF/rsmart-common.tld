@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+  ~ Copyright 2011 The rSmart Group
+  ~
+  ~ The contents of this file are subject to the Mozilla Public License
+  ~ Version 1.1 (the "License"); you may not use this file except in
+  ~ compliance with the License. You may obtain a copy of the License at
+  ~ http://www.mozilla.org/MPL/
+  ~
+  ~ Software distributed under the License is distributed on an "AS IS"
+  ~ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  ~ License for the specific language governing rights and limitations
+  ~ under the License.
+  ~
+  ~ Contributor(s): duffy
+  -->
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+   <tlib-version>1.0</tlib-version>
+   <jsp-version>2.0</jsp-version>
+   <short-name>rsmart common</short-name>
+   <uri>http://rsmart.com/common</uri>
+   <description>rsmart common tag library</description>
+
+   <tag>
+      <name>dateSelect</name>
+      <tag-class>com.rsmart.sakai.common.web.tag.RsmartDateSelectTag</tag-class>
+      <body-content>JSP</body-content>
+      <description>The standard way to setup a date selection widget.
+      Creates a drop-down date selection, as well as a pop-up date selection
+      </description>
+      <attribute>
+          <name>yearSelectId</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+         <description>The name and id attribute of the year selection dropdown list (html SELECT tag)</description>
+      </attribute>
+      <attribute>
+          <name>monthSelectId</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+         <description>The name and id attribute of the month selection dropdown list (html SELECT tag)</description>
+      </attribute>
+      <attribute>
+          <name>hourSelectId</name>
+          <required>false</required>
+          <rtexprvalue>true</rtexprvalue>
+         <description>The name and id attribute of the hour selection dropdown list (html SELECT tag)</description>
+      </attribute>
+      <attribute>
+          <name>minuteSelectId</name>
+          <required>false</required>
+          <rtexprvalue>true</rtexprvalue>
+         <description>The name and id attribute of the minute selection dropdown list (html SELECT tag)</description>
+      </attribute>
+      <attribute>
+          <name>minuteInterval</name>
+          <required>false</required>
+          <rtexprvalue>true</rtexprvalue>
+         <description>The number of minutes to skip when building minute drop down. Defaults to 15</description>
+      </attribute>
+      <attribute>
+          <name>daySelectId</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+         <description>The name and id attribute of the day selection dropdown list (html SELECT tag)</description>
+      </attribute>
+      <attribute>
+          <name>earliestYear</name>
+          <required>false</required>
+          <rtexprvalue>true</rtexprvalue>
+         <description>The earliest year to display in the year dropdown (2002 for example)</description>
+      </attribute>
+      <attribute>
+          <name>latestYear</name>
+          <required>false</required>
+          <rtexprvalue>true</rtexprvalue>
+         <description>The latest year to display in the year dropdown (2005 for examlple)</description>
+      </attribute>
+      <attribute>
+         <name>showTime</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>show time, otherwise only date in selectable</description>
+      </attribute>
+      <attribute>
+         <name>dateSpanId</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>the javascript id used around the date dropdowns, nice for showing/hiding the date from javascript</description>
+      </attribute>
+      <attribute>
+         <name>hideDate</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>hide date, only time in selectable</description>
+      </attribute>
+      <attribute>
+         <name>showAmPm</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>show hours with am/pm, default is true.  Set to false to show hours in miliarty style</description>
+      </attribute>
+      <attribute>
+         <name>defaultNow</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>if set to true dates will preset to the current time, if no selected date is given.  This is set to false by default.</description>
+      </attribute>
+      <attribute>
+          <name>selected</name>
+          <required>false</required>
+          <rtexprvalue>true</rtexprvalue>
+         <description>The date selected</description>
+      </attribute>
+   </tag>
+
+   <tag>
+      <name>duration</name>
+      <tag-class>com.rsmart.sakai.common.web.tag.DurationTag</tag-class>
+      <body-content>empty</body-content>
+      <description>
+         Displays a long number which represents a duration in ms as a string.
+         This is an internationalized tag, and uses several message strings (those of the form duration_xxxxx) from the Messages.properties resource bundle.
+      </description>
+      <attribute>
+         <name>value</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+   </tag>
+
+   <tag>
+      <name>filterGroup</name>
+      <tag-class>com.rsmart.sakai.common.web.tag.FilterGroupTag</tag-class>
+      <body-content>JSP</body-content>
+      <description>surrounds a group of listFilter tags to support multiple filter components</description>
+      <attribute>
+         <name>filterUrl</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description></description>
+      </attribute>
+      <attribute>
+         <name>className</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>the name of the stylesheet class</description>
+      </attribute>
+      <attribute>
+         <name>filterButtonKey</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>the property file key for the filter button name</description>
+      </attribute>
+      <attribute>
+         <name>showClearButton</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>show the clear button or not, default is set to false</description>
+      </attribute>
+      <attribute>
+         <name>clearButtonKey</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>the property file key for the clear button name</description>
+      </attribute>
+   </tag>
+
+   <tag>
+      <name>header</name>
+      <tag-class>com.rsmart.sakai.common.web.tag.HeaderTag</tag-class>
+      <body-content>empty</body-content>
+      <description>generates html output that is common to all jsp files in a header.
+                   this includes the opening html tag, head tags and included javacript, and optionally, the start body tag.
+      </description>
+      <attribute>
+         <name>generate_opening_body_tag</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>whether to generate the opening body tag.  The default value is true.</description>
+      </attribute>
+   </tag>
+
+   <tag>
+      <name>listFilter</name>
+      <tag-class>com.rsmart.sakai.common.web.tag.FilterDropDownTag</tag-class>
+      <body-content>JSP</body-content>
+      <description>puts a drop down filter on the page</description>
+      <attribute>
+         <name>filterUrl</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description></description>
+      </attribute>
+      <attribute>
+         <name>className</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description></description>
+      </attribute>
+      <attribute>
+         <name>filters</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>ass sphincter says what</description>
+      </attribute>
+      <attribute>
+         <name>showAllFilter</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>show the -all- option in the filter which removes any filter</description>
+      </attribute>
+      <attribute>
+         <name>filterButtonKey</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>the property file key for the filter button name</description>
+      </attribute>
+      <attribute>
+         <name>showFilterButton</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>if true, a button is shown which the user can click on to submit the filter.  if false, javascript is generated to automatically submit the filter.</description>
+      </attribute>
+       <attribute>
+          <name>localizeValues</name>
+          <required>false</required>
+          <rtexprvalue>true</rtexprvalue>
+          <description>if true, values are interpreted as keys to bundle data.  if false, name values displays as is.</description>
+       </attribute>
+
+   </tag>
+
+   <tag>
+      <name>listFilterTextBox</name>
+      <tag-class>com.rsmart.sakai.common.web.tag.FilterTextBoxTag</tag-class>
+      <body-content>JSP</body-content>
+      <description>puts a dropdown and textbox filter on the page</description>
+      <attribute>
+         <name>filterUrl</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description></description>
+      </attribute>
+      <attribute>
+         <name>className</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description></description>
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description></description>
+      </attribute>
+      <attribute>
+         <name>maxlength</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description></description>
+      </attribute>
+      <attribute>
+         <name>filterButtonKey</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>the property file key for the filter button name</description>
+      </attribute>
+   </tag>
+
+   <tag>
+      <name>listScroll</name>
+      <tag-class>com.rsmart.sakai.common.web.tag.RsmartListScrollTag</tag-class>
+      <body-content>empty</body-content>
+      <description>
+         places controls on the jsp page (next, previous, first, last, etc.) and manages the viewing of a collection of data.
+         it also displays the range of the collection which is currently being displayed, such as viewing 120-140 of 267.
+         it makes these numbers available to the jsp page in the variables listed below.
+      </description>
+      <variable>
+           <name-given>list_scroll_begin_index</name-given>
+           <variable-class>java.lang.Integer</variable-class>
+           <declare>true</declare>
+           <scope>NESTED</scope>
+           <description>beginning index within the data collection that is being displayed.</description>
+      </variable>
+      <variable>
+           <name-given>list_scroll_end_index</name-given>
+           <variable-class>java.lang.Integer</variable-class>
+           <declare>true</declare>
+           <scope>NESTED</scope>
+           <description>ending index within the data collection that is being displayed.</description>
+      </variable>
+      <variable>
+           <name-given>list_scroll_total_index</name-given>
+           <variable-class>java.lang.Integer</variable-class>
+           <declare>true</declare>
+           <scope>NESTED</scope>
+           <description>total size of the data collection that is being displayed.</description>
+      </variable>
+      <variable>
+           <name-given>list_scroll_page_size</name-given>
+           <variable-class>java.lang.Integer</variable-class>
+           <declare>true</declare>
+           <scope>NESTED</scope>
+           <description>the number of rows of the data collection that is displayed on each page.</description>
+      </variable>
+      <attribute>
+         <name>listScroll</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>listUrl</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>className</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>showDropdown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+          <attribute>
+         <name>dropdownOptions</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>Semicolon delimited values</description>
+      </attribute>
+   </tag>
+
+   <tag>
+      <name>sakai_session</name>
+      <tag-class>com.rsmart.sakai.common.web.tag.SakaiSessionTag</tag-class>
+      <body-content>empty</body-content>
+      <description>places the sakai session attribute specified by this tags name attribute into the http session.</description>
+      <variable>
+           <name-from-attribute>attribute</name-from-attribute>
+           <variable-class>java.lang.Object</variable-class>
+           <declare>true</declare>
+           <scope>AT_END</scope>
+           <description>the name of the sakai session attribute which will be placed into the standard http session.</description>
+      </variable>
+      <attribute>
+         <name>attribute</name>
+         <required>true</required>
+         <rtexprvalue>false</rtexprvalue>
+         <type>java.lang.String</type>
+         <description>the name of the sakai session attribute which will be placed into the standard http session.</description>
+      </attribute>
+   </tag>
+
+   <tag>
+      <name>sort</name>
+      <tag-class>com.rsmart.sakai.common.web.tag.ListSortTag</tag-class>
+      <body-content>empty</body-content>
+      <description>Used for sorting</description>
+      <variable>
+         <name-given>list_scroll_begin_index</name-given>
+         <variable-class>java.lang.Integer</variable-class>
+         <declare>true</declare>
+         <scope>NESTED</scope>
+         <description>beginning index within the data collection that is being displayed.</description>
+      </variable>
+      <attribute>
+         <name>name</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>an internal name for the column</description>
+      </attribute>
+      <attribute>
+         <name>displayName</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>name of the column on the page (UI)</description>
+      </attribute>
+      <attribute>
+         <name>className</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>CSS class</description>
+      </attribute>
+      <attribute>
+         <name>sortUrl</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+         <description>url of the jsp list page</description>
+      </attribute>
+   </tag>
+
+
+   <tag>
+     <name>timeZones</name>
+     <tag-class>com.rsmart.sakai.common.web.tag.TimeZonesTag</tag-class>
+     <body-content>JSP</body-content>
+     <attribute>
+       <name>id</name>
+       <required>true</required>
+       <rtexprvalue>false</rtexprvalue>
+     </attribute>
+     <attribute>
+       <name>locale</name>
+       <required>false</required>
+       <rtexprvalue>false</rtexprvalue>
+     </attribute>
+     <attribute>
+       <name>localeRef</name>
+       <required>false</required>
+       <rtexprvalue>false</rtexprvalue>
+     </attribute>
+     <attribute>
+       <name>style</name>
+       <required>false</required>
+       <rtexprvalue>false</rtexprvalue>
+     </attribute>
+   </tag>
+</taglib>

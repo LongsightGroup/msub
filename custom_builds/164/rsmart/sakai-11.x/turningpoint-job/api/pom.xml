@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>turningpoint-job</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>11-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <name>TurningPoint Job API</name>
+  <artifactId>turningpoint-job-api</artifactId>
+  <packaging>jar</packaging>
+  <properties>
+    <deploy.target>shared</deploy.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-api</artifactId>
+      <version>${sakai.kernel.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.rsmart</groupId>
+        <artifactId>rsmart-common-tool-lib</artifactId>
+        <version>${sakai.version}</version>
+    </dependency>
+      <dependency>
+          <groupId>org.quartz-scheduler</groupId>
+          <artifactId>quartz</artifactId>
+      </dependency>
+
+  </dependencies>
+  <build>
+    <sourceDirectory>${basedir}/src/java</sourceDirectory>
+  </build>
+  
+</project>

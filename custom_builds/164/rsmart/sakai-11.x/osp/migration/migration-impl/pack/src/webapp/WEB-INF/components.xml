@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+
+   <!-- configuration of the quartz job which migrates osp 2.0.x repository content to osp 2.1 resources -->
+   <bean id="org.theospi.portfolio.migration.ImportRepositoryZip"
+      class="org.theospi.portfolio.migration.ImportRepositoryZip">
+
+      <property name="contentHostingService"     ><ref bean="org.sakaiproject.content.api.ContentHostingService"       /></property>
+      <property name="securityService"           ><ref bean="org.sakaiproject.authz.api.SecurityService"               /></property>
+      <property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>
+      <property name="sessionManager"            ><ref bean="org.sakaiproject.tool.api.SessionManager"                 /></property>
+   </bean>
+
+   <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.ospRepositoryMigration"
+      class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
+      scope="singleton" init-method="init">
+      <property name="beanId" ><value>org.theospi.portfolio.migration.ImportRepositoryZip</value>        </property>
+      <property name="jobName"><value>OSP 2.0 Repository Migration</value>                               </property>
+      <property name="schedulerManager"><ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/></property>
+   </bean>
+
+
+   <bean id="org.theospi.portfolio.migration.OspMigrationJob"
+      class="org.theospi.portfolio.migration.OspMigrationJob"
+      init-method="init"
+      scope="singleton">
+      <property name="dataSource"><ref bean="javax.sql.DataSource"/></property>
+      <property name="tableMap">
+         <map>
+            <entry key="osp_authz_simple"><value>osp20_authz_simple</value></entry>
+
+            <entry key="osp_help_glossary"          > <value>osp20_help_glossary</value>           </entry>
+            <entry key="osp_help_glossary_desc"     > <value>osp20_help_glossary_desc</value>      </entry>
+
+            <entry key="osp_structured_artifact_def"> <value>osp20_structured_artifact_def</value> </entry>
+
+            <entry key="osp_scaffolding"            > <value>osp20_scaffolding</value>             </entry>
+            <entry key="osp_matrix_label"           > <value>osp20_matrix_label</value>            </entry>
+            <entry key="osp_scaffolding_criteria"   > <value>osp20_scaffolding_criteria</value>    </entry>
+            <entry key="osp_scaffolding_levels"     > <value>osp20_scaffolding_levels</value>      </entry>
+            <entry key="osp_scaffolding_cell"       > <value>osp20_scaffolding_cell</value>        </entry>
+
+            <entry key="osp_presentation_template"  > <value>osp20_presentation_template</value>   </entry>
+            <entry key="osp_presentation_item_def"  > <value>osp20_presentation_item_def</value>   </entry>
+            <entry key="osp_template_file_ref"      > <value>osp20_template_file_ref</value>       </entry>
+            <entry key="osp_pres_itemdef_mimetype"  > <value>osp20_pres_itemdef_mimetype</value>   </entry>
+
+            <entry key="osp_presentation"           > <value>osp20_presentation</value>            </entry>
+            <entry key="osp_presentation_comment"   > <value>osp20_presentation_comment</value>    </entry>
+            <entry key="osp_presentation_log"       > <value>osp20_presentation_log</value>        </entry>
+            <entry key="osp_presentation_item"      > <value>osp20_presentation_item</value>       </entry>
+
+            <entry key="osp_matrix_tool"            > <value>osp20_matrix_tool</value>             </entry>
+            <entry key="osp_matrix"                 > <value>osp20_matrix</value>                  </entry>
+            <entry key="osp_matrix_cell"            > <value>osp20_matrix_cell</value>             </entry>
+            <entry key="osp_cell_attachment"        > <value>osp20_cell_attachment</value>         </entry>
+
+            <entry key="osp_reflection"             > <value>osp20_reflection</value>              </entry>
+            <entry key="osp_reflection_item"        > <value>osp20_reflection_item</value>         </entry>
+            <entry key="osp_expectation"            > <value>osp20_expectation</value>             </entry>
+            <entry key="osp_reviewer_item"          > <value>osp20_reviewer_item</value>           </entry>
+         </map>
+      </property>
+      <property name="authzToolFunctions">
+         <list>
+            <bean id="org.theospi.portfolio.presentation.PresentationFunctionConstants.DELETE_TEMPLATE"    class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.presentation.PresentationFunctionConstants.EDIT_TEMPLATE"      class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.presentation.PresentationFunctionConstants.COPY_TEMPLATE"      class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.presentation.PresentationFunctionConstants.PUBLISH_TEMPLATE"   class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.presentation.PresentationFunctionConstants.CREATE_TEMPLATE"    class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.presentation.PresentationFunctionConstants.EXPORT_TEMPLATE"    class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+
+            <bean id="org.theospi.portfolio.matrix.MatrixFunctionConstants.REVIEW_MATRIX"                  class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.matrix.MatrixFunctionConstants.EVALUATE_MATRIX"                class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.matrix.MatrixFunctionConstants.CREATE_SCAFFOLDING"             class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.matrix.MatrixFunctionConstants.EXPORT_SCAFFOLDING"             class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.matrix.MatrixFunctionConstants.USE_SCAFFOLDING"                class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+            <bean id="org.theospi.portfolio.matrix.MatrixFunctionConstants.PUBLISH_SCAFFOLDING"            class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+         </list>
+      </property>
+      <property name="matrixForms">
+         <list>
+            <bean class="org.theospi.portfolio.migration.FormWrapper">
+               <property name="idValue"><value>reflection_with_2_expectations_form</value></property>
+               <property name="description"><value>reflection form with two expectations and an intellectual growth field.</value></property>
+               <property name="documentRoot"><value>reflection_2exp</value></property>
+               <property name="xsdFileLocation"><value>/org/theospi/portfolio/migration/forms/reflection_with_2_expectations_form.xsd</value></property>
+               <property name="siteId"><value></value></property>
+               <property name="externalType"><value>?expectation_2_form</value></property>
+               <property name="instruction"><value></value></property>
+            </bean>
+            <bean class="org.theospi.portfolio.migration.FormWrapper">
+               <property name="idValue"><value>reflection_with_3_expectations_form</value></property>
+               <property name="description"><value>reflection form with three expectations and an intellectual growth field.</value></property>
+               <property name="documentRoot"><value>reflection_3exp</value></property>
+               <property name="xsdFileLocation"><value>/org/theospi/portfolio/migration/forms/reflection_with_3_expectations_form.xsd</value></property>
+               <property name="siteId"><value></value></property>
+               <property name="externalType"><value>?expectation_3_form</value></property>
+               <property name="instruction"><value></value></property>
+            </bean>
+            <bean class="org.theospi.portfolio.migration.FormWrapper">
+               <property name="idValue"><value>evaluation_form</value></property>
+               <property name="description"><value>evaluation form</value></property>
+               <property name="documentRoot"><value>evaluation</value></property>
+               <property name="xsdFileLocation"><value>/org/theospi/portfolio/migration/forms/evaluation_form.xsd</value></property>
+               <property name="siteId"><value></value></property>
+               <property name="externalType"><value>?evaluation_form</value></property>
+               <property name="instruction"><value></value></property>
+            </bean>
+            <bean class="org.theospi.portfolio.migration.FormWrapper">
+               <property name="idValue"><value>feedback_form</value></property>
+               <property name="description"><value>feedback form</value></property>
+               <property name="documentRoot"><value>feedback</value></property>
+               <property name="xsdFileLocation"><value>/org/theospi/portfolio/migration/forms/feedback_form.xsd</value></property>
+               <property name="siteId"><value></value></property>
+               <property name="externalType"><value>?feedback_form</value></property>
+               <property name="instruction"><value></value></property>
+            </bean>
+         </list>
+      </property>
+      <property name="agentManager"                       ><ref bean="agentManager"/>                                            </property>
+      <property name="authzManager"                       ><ref bean="authzManager"/>                                            </property>
+      <property name="contentHosting"                     ><ref bean="org.sakaiproject.content.api.ContentHostingService"/>      </property>
+      <property name="defaultScaffoldingBean"             ><ref bean="defaultScaffoldingBean"/>                                  </property>
+      <property name="glossaryManager"                    ><ref bean="glossary"/>                                                </property>
+      <property name="guidanceManager"                    ><ref bean="org.theospi.portfolio.guidance.mgt.GuidanceManager"/>      </property>
+      <property name="idManager"                          ><ref bean="idManager"/>                                               </property>
+      <property name="matrixManager"                      ><ref bean="matrixManager"/>                                           </property>
+      <property name="presentationManager"                ><ref bean="presentationManager"/>                                     </property>
+      <property name="reviewManager"                      ><ref bean="org.theospi.portfolio.review.mgt.ReviewManager"/>          </property>
+      <property name="securityService"                    ><ref bean="org.sakaiproject.authz.api.SecurityService"/>              </property>
+      <property name="siteService"                        ><ref bean="org.sakaiproject.site.api.SiteService"/>                   </property>
+      <property name="structuredArtifactDefinitionManager"><ref bean="structuredArtifactDefinitionManager"/>                     </property>
+      <property name="workflowManager"                    ><ref bean="org.theospi.portfolio.workflow.mgt.WorkflowManager"/>      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.OspMigrationJob"
+      class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
+      scope="singleton" init-method="init">
+      <property name="beanId"          ><value>org.theospi.portfolio.migration.OspMigrationJob</value>   </property>
+      <property name="jobName"         ><value>OSP 2.1 - 2.2 Migration Job</value>                       </property>
+      <property name="schedulerManager"><ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/></property>
+   </bean>
+
+
+
+   <!-- configuration of the quartz job which sets the resource "sakai:reference-root" property to "metaobj" for all of the newly imported osp 2.0.x repository content -->
+   <bean id="org.theospi.portfolio.migration.UpdateFormPropsJob"
+      class="org.theospi.portfolio.migration.UpdateFormPropsJob">
+      <property name="contentHostingService"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>
+      <property name="sessionManager"       ><ref bean="org.sakaiproject.tool.api.SessionManager"          /></property>
+   </bean>
+
+   <bean id="org.sakaiproject.api.app.scheduler.JobBeanWrapper.ospFormPropertyUpdate"
+      class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
+      scope="singleton" init-method="init">
+      <property name="beanId" ><value>org.theospi.portfolio.migration.UpdateFormPropsJob</value>         </property>
+      <property name="jobName"><value>OSP 2.0 Form Property Update</value>                               </property>
+      <property name="schedulerManager"><ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/></property>
+   </bean>
+
+</beans>

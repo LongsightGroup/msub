@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.rsmart</groupId>
+        <artifactId>support-tool</artifactId>
+        <version>10-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <packaging>jar</packaging>
+    <groupId>com.rsmart</groupId>
+    <artifactId>support-tool-api</artifactId>
+    <version>${sakai.version}</version>
+    <name>support-tool-api</name>
+
+    <build>
+    <resources>
+      <resource>
+        <directory>src/bundle</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/java</directory>
+        <includes>
+          <include>**/*.hbm.xml</include>
+        </includes>
+      </resource>
+    </resources>
+    <sourceDirectory>src/java</sourceDirectory>
+    </build>
+
+   <properties>
+       <deploy.target>shared</deploy.target>
+   </properties>
+</project>

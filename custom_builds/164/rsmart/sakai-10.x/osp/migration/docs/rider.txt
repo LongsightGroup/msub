@@ -1,0 +1,92 @@
+notes:
+osp 2.0 -> sakai 1.5.0
+osp 2.1 -> sakai 2.1.2
+osp 2.2 -> sakai 2.2.0
+osp 2.4 -> sakai 2.4
+osp 2.5 -> sakai 2.5
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+to export the repository from osp 2.0.1
+
+download the osp 2.0.1 source and then from the root directory:
+1. edit src/resources/hibernate.properties and set the jdbc properties to point to a local copy of the osp 2.0.1 database
+2. copy the schools /usr/local/sakai to your local hard drive
+3. edit build.xml
+   find <target name="single-test" near line 776
+   change <junit printsummary="yes" haltonfailure="no"> to <junit printsummary="yes" haltonfailure="no" outputtoformatters="false" showoutput="true">
+4. set the environment variable SINGLETEST=TestExport
+5. run "build single-test" from the command line
+6. this will produce a file named "ospi-export.zip"
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+to import the repository zip file into osp 2.1
+
+1. add the migration sources files to the src/osp/migration directory and rebuild and redeploy osp 2.1.
+2. set the "osp_repository_zip_file" property in sakai.properties to point to the zip file created from running the junit test in osp 2.0.1 described above
+   ex: osp_repository_zip_file=/dev/projects/osp/2.1/data/ospi-export.zip
+5. start tomcat
+6. add the job scheduler to the admin worksite
+   go to the admin page and click on the "Sites" tool
+   click on ~admin
+   click on "Pages" Button at bottom of page
+   click on "New Page" link at top of page
+   enter "Job Scheduler" in the title. then click on "Tools" button
+   click on "New Tool" link at top of page
+   click the radio button for "Job Scheduler Based On Quartz (sakai.scheduler)"
+   click "Save"
+7. using the newly added job scheduler tool, create the "OSP 2.0 Repository Migration" job and run it.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+glossary
+
+the glossary content is contained in two tables, osp_help_glossary and osp_help_glossary_desc.
+these tables are virtuall unchanged between osp 2.0 and sakai 2.5, the only difference being the id columns are now 36 characters in length instead of 32.
+thus, the only thing that needs to be done to convert the glossary data is to run the following sql commands:
+
+alter table osp_help_glossary      modify id varchar(36);
+alter table osp_help_glossary_desc modify id varchar(36);
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+to run the osp migration quartz job,
+
+1. set the property "osp.migration.developer" to false in sakai.properties.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+form data
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+jan extension: 290
+    home: 651-642-9069
+    cell: 207-841-6262
+
+1. Global worksite in osp 2.0.1 => Portfolio Admin in 2.5
+2. Portfolio Layouts has 3 layouts  - available out of the box or created?
+   Styles has 1 Hot Red
+3. move MyWorkspace repository folder for each user
+   ex: login as user _rsmart2
+       move repoository folder _rsmart2 to sakai 2.5
+   ignore worksite folders for now
+4. move data structure instance data - not data structure (form, portfolio template, etc.)
+5. in osp 2.0.1, in the matrix, the association with the file lives in the matrix.
+   in sakai 2.5,
+6. in osp 2.0, in the matrix tool, files associated with a cell appear twice (click on the cell - you see the files at the top
+   and also in the Reflection Section.  In sakai 2.5, the second association is not needed, so there is no need to migrate this 2nd association
+   and no reviewer stuff (forms, data, etc.)
+7. the three reflection rich text editor fields found in osp 2.0 are found in a single form in sakai 2.5.
+8. Presentations tool in osp 2.0 is called Porfolios in Sakai 2.5
+9. Reflections in osp 2.0 don't come over to the portfolio in sakai 2.5 - but do come over to the reflection form (3 rte fields) in the matrix
+
+
+no feedback   form
+no evaluation form
+
+*rider specific* activities form -> ccp worksite
+
+matrix form mapping from osp 2.0 - sakai 2.5
+evidence            - statement of goal
+connect             - evidence
+intellectual growth - impact of goal
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+running the OSP 2.0 Form Property Update quartz job
+
+when a user submits a cell in a matrix for evaluation, a row will be added to the content_resource_lock table which prevents anyone from modifying
+the submitted resources associated with that cell.  This causes exceptions to be thrown when trying to add the "sakai:reference-root" property
+with a value of "metaobj" to the resource.
+
+CLE-2469, CLE-2453, CLE-2468

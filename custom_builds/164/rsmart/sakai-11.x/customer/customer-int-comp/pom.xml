@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>rsmart-customer</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>11-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <name>rSmart Customer Integration Component</name>
+  <artifactId>customer-int-component</artifactId>
+  <packaging>sakai-component</packaging>
+  <properties>
+    <deploy.target>components</deploy.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>customer-int-impl</artifactId>
+      <version>${sakai.version}</version>
+<!--properties:  war.bundle: true -->
+    </dependency>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>customer-int-api</artifactId>
+      <version>${sakai.version}</version>
+      <scope>provided</scope>
+<!--properties:  war.bundle: true -->
+    </dependency>
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4</version>
+<!--properties:  war.bundle: true -->
+    </dependency>
+    <dependency>
+      <groupId>net.sf.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>1.8</version>
+<!--properties:  war.bundle: true -->
+    </dependency>
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>${basedir}/src/sql</directory>
+        <includes>
+          <include>**/*.sql</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+        <excludes>
+          <exclude>**/web.xml</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>src/resources</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.xsl</include>
+        </includes>
+      </resource>
+    </resources>
+    <sourceDirectory>src/java</sourceDirectory>
+  </build>
+</project>
