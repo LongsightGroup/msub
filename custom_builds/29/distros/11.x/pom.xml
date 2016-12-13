@@ -119,6 +119,7 @@
                 <module>blogwow</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>bbb-tool</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
