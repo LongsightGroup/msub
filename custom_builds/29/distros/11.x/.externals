@@ -90,5 +90,6 @@ etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
 portal https://github.com/LongsightGroup/sakai/branches/40-11.x/portal
 bbb-tool https://github.com/sakaicontrib/bbb-tool/trunk
+attendance https://github.com/UDayton/attendance/branches/10.x
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
