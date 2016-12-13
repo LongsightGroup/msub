@@ -1,5 +1,5 @@
 
-#shell_command git clone git@github.com:WakeForestSakai/sakai_with_commits.git && mv wfu-sakai/source/* ./
+#shell_command git clone git@github.com:longsightgroup/wfu-sakai.git && mv wfu-sakai/source/* ./
 
 #GIT Projects
 #git_project cloud-content
