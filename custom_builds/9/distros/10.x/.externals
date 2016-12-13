@@ -4,7 +4,6 @@
 master https://source.sakaiproject.org/svn/master/branches/sakai-10.x
 
 # Core services
-kernel https://source.sakaiproject.org/svn/kernel/branches/sakai-10.x
 common https://source.sakaiproject.org/svn/common/branches/sakai-10.x
 content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
 delegatedaccess https://source.sakaiproject.org/svn/delegatedaccess/branches/sakai-10.x/
@@ -81,6 +80,9 @@ evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 web https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/9/web/web-10.x
 da_evalprovider -r 87818 https://source.sakaiproject.org/contrib/longsight/da_evalprovider/trunk
+
+kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3/
+cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/cloud-content/10.x/
 
 #Big Blue Button:
 #shell_command git clone https://github.com/LongsightGroup/bigbluebutton-sakai/
