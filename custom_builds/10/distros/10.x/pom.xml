@@ -121,10 +121,12 @@
 		<module>linktool</module>
 		<module>melete</module>
 	<!--	<module>scorm</module>  -->
-	<!--	<module>wicket-for-scorm</module> -->
+        <!--	<module>wicket-for-scorm</module> -->
+        <!--
 		<module>bigbluebutton-sakai/bbb-tool</module>
                 <module>qna</module>
                 <module>sms</module>
+        -->
             </modules>
         </profile>
         <profile>
