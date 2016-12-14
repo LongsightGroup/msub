@@ -86,7 +86,7 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai
 qna https://source.sakaiproject.org/contrib/qna/branches/sakai-10.x
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-10.x_features-backport
 scorm https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/branches/sakai-10/
-sms https://source.sakaiproject.org/contrib/sms/sms/trunk/
+sms -r87854 https://source.sakaiproject.org/contrib/sms/sms/trunk/
 wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-scorm/branches/sakai-2.9
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 
