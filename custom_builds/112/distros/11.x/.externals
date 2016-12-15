@@ -40,7 +40,6 @@ help https://github.com/sakaiproject/sakai/branches/11.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
-login https://github.com/sakaiproject/sakai/branches/11.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/11.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/11.x/mailsender
 memory https://github.com/sakaiproject/sakai/branches/11.x/memory
@@ -84,7 +83,7 @@ web https://github.com/sakaiproject/sakai/branches/11.x/velocity
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
 
 #customizations
-clog https://github.com/sakaicontrib/clog/branches/11.x/velocity
+clog https://github.com/sakaicontrib/clog/branches/11.x/clog
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 batch-user-creation https://source.sakaiproject.org/contrib/longsight/batch-user-creation-tool/trunk/
 sis_integration https://github.com/LongsightGroup/ceipa-sis_integration/trunk
