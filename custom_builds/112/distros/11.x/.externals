@@ -92,3 +92,4 @@ bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
 
 #shell_command find batch-user-creation/ -name pom.xml -exec sed -i 's/2.7.1/11-SNAPSHOT/g' {} \;
 #shell_command find batch-user-creation/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
+#shell_command find ./ -type f -exec sed -i 's/singleton="true"/scope="singleton"/g' {} \;
