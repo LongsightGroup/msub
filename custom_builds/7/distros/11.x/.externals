@@ -91,3 +91,4 @@ content-review https://source.sakaiproject.org/svn/msub/longsight.com/custom_bui
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 
 #shell_command sed -i 's/ sessionId="meleteEditor" / /g' melete/melete-app/src/webapp/melete/addmodulesections.jsp
+#shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
