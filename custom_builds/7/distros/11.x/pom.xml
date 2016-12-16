@@ -119,7 +119,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>evaluation</module>
-                <module>rsmart</module>
+                <module>blogwow</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
