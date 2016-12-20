@@ -89,6 +89,7 @@ batch-user-creation https://source.sakaiproject.org/contrib/longsight/batch-user
 sis_integration https://github.com/LongsightGroup/ceipa-sis_integration/trunk
 login https://github.com/LongsightGroup/sakai/branches/112-11.x/login
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
+content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 
 #shell_command find batch-user-creation/ -name pom.xml -exec sed -i 's/2.7.1/11-SNAPSHOT/g' {} \;
 #shell_command find batch-user-creation/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
