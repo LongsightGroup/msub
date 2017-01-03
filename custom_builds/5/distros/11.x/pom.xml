@@ -119,6 +119,7 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>qna</module>
+                <module>sms</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->

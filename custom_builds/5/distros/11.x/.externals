@@ -88,6 +88,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 qna https://source.sakaiproject.org/contrib/qna/trunk
+sms https://source.sakaiproject.org/contrib/sms/sms/trunk
 #etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 #melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 
