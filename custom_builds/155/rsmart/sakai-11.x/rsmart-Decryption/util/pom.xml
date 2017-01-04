@@ -12,7 +12,7 @@
     <artifactId>rsmart-decryption-util</artifactId>
     <name>rsmart-decryption-util</name>
     <packaging>jar</packaging>
-    <version>${sakai.version}</version>
+    <version>11-SNAPSHOT</version>
 
     <build>
         <plugins>
