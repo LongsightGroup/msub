@@ -217,14 +217,14 @@ public class CleCourseMemberProcesssor extends ServiceProcessor {
                         // Longsight customization #47358 if user cant be fetched from LDAP do not drop the user
                         usermap.put(clem.getUserName().toLowerCase(), Boolean.TRUE);
 
-                        if (eidToUserMap.containsKey(clem.getUserName())) {
-                            user = eidToUserMap.get(clem.getUserName());
+                        if (eidToUserMap.containsKey(clem.getUserName().toLowerCase())) {
+                            user = eidToUserMap.get(clem.getUserName().toLowerCase());
                         } else {
                                 logger.error(clem.getUserName() + " Not A Valid User");
                                 state.appendError(clem.getUserName() + " Not A Valid User");
                                 state.incrementErrorCnt();
                                 state.incrementProcessedCnt();
-                                xrl.eid = clem.getUserName();
+                                xrl.eid = clem.getUserName().toLowerCase();
                                 xrl.role = clem.getRole();
                                 xrl.siteId = courseNum;
                                 xrl.notes = "User not found";
