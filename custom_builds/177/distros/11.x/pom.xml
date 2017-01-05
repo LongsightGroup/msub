@@ -119,7 +119,6 @@
                 <module>webservices</module>
                 <module>blogwow</module>
                 <module>evaluation</module>
-                <module>attendance</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
