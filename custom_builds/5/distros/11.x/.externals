@@ -91,6 +91,7 @@ qna https://source.sakaiproject.org/contrib/qna/trunk
 sms https://source.sakaiproject.org/contrib/sms/sms/trunk
 #etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 #melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
+attendance https://github.com/UDayton/attendance/trunk
 
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;

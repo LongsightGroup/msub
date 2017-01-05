@@ -120,6 +120,7 @@
                 <module>evaluation</module>
                 <module>qna</module>
                 <module>sms</module>
+                <module>attendance</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
