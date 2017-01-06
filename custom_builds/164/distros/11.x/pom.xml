@@ -59,6 +59,7 @@
                 <module>cloud-content</module>
                 <module>content</module>
                 <module>content-review</module>
+                <module>content-review/turnitin</module>
                 <module>courier</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
@@ -123,6 +124,8 @@
                 <module>blogwow</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>irubric-core</module>
+                <module>irubric-tool</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
