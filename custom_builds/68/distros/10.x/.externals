@@ -85,3 +85,5 @@ iclicker https://source.sakaiproject.org/contrib/iclicker/tags/iclicker-1.5
 #melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 login https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/68/login/sakai-10.x
 bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
+
+#shell_command sed '/"project"/d' roster2/src/webapp/tools/sakai.site.roster.xml
