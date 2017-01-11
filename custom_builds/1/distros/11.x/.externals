@@ -88,8 +88,8 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
 
 config https://github.com/LongsightGroup/sakai/branches/1-11.x/config
-content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 content-review https://github.com/LongsightGroup/sakai/branches/1-11.x/content-review
+content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 login https://github.com/LongsightGroup/sakai/branches/1-11.x/login
 mailarchive https://github.com/LongsightGroup/sakai/branches/1-11.x/mailarchive
 
