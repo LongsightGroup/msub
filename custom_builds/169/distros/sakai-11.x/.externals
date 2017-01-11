@@ -92,4 +92,3 @@ etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 #gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 certification https://github.com/LongsightGroup/certification/branches/uwo-11
 
-#shell_command sed -i 's/name="functions.require" value="site.visit"/name="functions.require" value="site.upd"/g' site-manage/site-manage-tool/tool/src/webapp/tools/sakai.siteinfo.xml
