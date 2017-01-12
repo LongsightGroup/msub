@@ -142,6 +142,7 @@
                 <module>taggable</module>
                 <module>turnitin/contentreview-impl</module>
 		        <module>irubric</module>
+		        <module>mediasite</module>
             </modules>
         </profile>
         <profile>

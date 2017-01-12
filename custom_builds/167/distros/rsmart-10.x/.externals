@@ -95,6 +95,7 @@ lessonbuilder                     https://source.sakaiproject.org/svn/msub/longs
 msgcntr                           https://source.sakaiproject.org/svn/msub/longsight.com/msgcntr/sakai10.x-ani-branch
 assignment -r 321780              https://source.sakaiproject.org/svn/msub/longsight.com/assignment/sakai-10.x-ani-branch
 sitestats                         https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/sitestats/sakai-10.x/
+mediasite                         https://github.com/ottenhoff/mediasite/branches/10.x/sakai-mediasite
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
