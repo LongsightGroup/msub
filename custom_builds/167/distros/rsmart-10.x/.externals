@@ -99,6 +99,7 @@ mediasite                         https://github.com/ottenhoff/mediasite/branche
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
+#shell_command find mediasite/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find profile2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
 #shell_command find master/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
 #shell_command find master/ -name pom.xml -exec sed -i 's/https:\/\/maven.sencha.com\/repo\/commercial-release/http:\/\/nexus.sakaiproject.org:8081\/nexus\/content\/groups\/public/g' {} \;
