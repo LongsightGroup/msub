@@ -121,7 +121,7 @@
                 <module>evaluation</module>
                 <module>clog</module>
                 <module>attendance</module>
-                <module>rsmart</module>
+                <!--module>rsmart</module-->
                 <module>certification</module>
                 <module>gradebook2</module>
             </modules>
