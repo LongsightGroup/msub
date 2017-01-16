@@ -31,12 +31,12 @@ content https://github.com/sakaiproject/sakai/branches/11.x/content
 courier https://github.com/sakaiproject/sakai/branches/11.x/courier
 dav https://github.com/sakaiproject/sakai/branches/11.x/dav
 deploy https://github.com/sakaiproject/sakai/branches/11.x/deploy
-edu-services https://github.com/sakaiproject/sakai/branches/11.x/edu-services
+edu-services https://github.com/LongsightGroup/sakai/branches/170-11.x/edu-services
 feedback https://github.com/sakaiproject/sakai/branches/11.x/feedback
 gradebook https://github.com/sakaiproject/sakai/branches/11.x/gradebook
 gradebookng https://github.com/sakaiproject/sakai/branches/11.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/11.x/help
-jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
+jobscheduler https://github.com/LongsightGroup/sakai/branches/170-11.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
 login https://github.com/sakaiproject/sakai/branches/11.x/login
