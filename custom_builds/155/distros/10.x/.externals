@@ -78,7 +78,8 @@ site-manage https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/s
 help https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/help/sakai-10.x
 
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
-gradebook2 -r 87580              https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x
+# Faster Building
+#gradebook2 -r 87580              https://source.sakaiproject.org/contrib/longsight/gradebook2/gradebook2-nd-10.x
 clog -r 87653                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/10.4.x
 jforum                           https://source.sakaiproject.org/contrib/longsight/jforum/10.x
 
