@@ -120,7 +120,6 @@
                 <module>evaluation</module>
                 <module>adobeconnect</module>
                 <module>kaltura</module>
-                <module>wicket-for-scorm</module>
                 <module>scorm</module>
             </modules>
         </profile>
