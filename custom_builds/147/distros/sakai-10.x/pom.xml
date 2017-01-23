@@ -117,7 +117,7 @@
                 <module>content-review/contentreview-impl</module>
                 <module>etudes-util</module>
                 <module>melete</module>
-                <module>gradebook2</module>
+                <!--module>gradebook2</module-->
                 <module>evaluation</module>
                 <module>metaobj</module>
                 <module>rsmart/common</module>
