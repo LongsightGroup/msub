@@ -72,16 +72,23 @@ public class StatsAggregateJobImpl implements StatefulJob {
 	private final static String ORACLE_CONTEXT_COLUMN  = ",CONTEXT";
 	private String MYSQL_GET_EVENT					= "select " + MYSQL_DEFAULT_COLUMNS + MYSQL_CONTEXT_COLUMN + " " +
 														"from SAKAI_EVENT e join SAKAI_SESSION s on e.SESSION_ID=s.SESSION_ID " +
-														"where EVENT_ID >= ? " +
-														"order by EVENT_ID asc LIMIT ?";
-	private String ORACLE_GET_EVENT					= "SELECT * FROM ( " +
+														"where EVENT_ID >= ? and EVENT_ID < ? " +
+														"order by EVENT_ID asc ";
+	
+	// SAK-28967 - this query is very slow, replace it with the one below
+	/*private String ORACLE_GET_EVENT					= "SELECT * FROM ( " +
 														"SELECT " +
 															" ROW_NUMBER() OVER (ORDER BY EVENT_ID ASC) AS rn, " +
 															ORACLE_DEFAULT_COLUMNS + ORACLE_CONTEXT_COLUMN + " " +
 														"from SAKAI_EVENT e join SAKAI_SESSION s on e.SESSION_ID=s.SESSION_ID " +
 														"where EVENT_ID >= ? " +
 														") " +
-														"WHERE rn BETWEEN ? AND  ?";
+														"WHERE rn BETWEEN ? AND  ?";*/
+	
+	private String ORACLE_GET_EVENT = "SELECT " + ORACLE_DEFAULT_COLUMNS + ORACLE_CONTEXT_COLUMN +
+				" FROM sakai_event e JOIN sakai_session s ON e.session_id = s.SESSION_ID" +
+				" WHERE event_id >= ? AND event_id < ? ORDER BY event_id ASC";
+	
 	private String MYSQL_PAST_SITE_EVENTS			= "select " + MYSQL_DEFAULT_COLUMNS + MYSQL_CONTEXT_COLUMN + " " +
 														"from SAKAI_EVENT e join SAKAI_SESSION s on e.SESSION_ID=s.SESSION_ID " +
 														"where (CONTEXT = ? or (EVENT in ('pres.begin','pres.end') and REF = ?)) " +
@@ -263,17 +270,13 @@ public class StatsAggregateJobImpl implements StatefulJob {
 			for (int loops = 0; loops < 100; loops++) {
 				long counter = 0;
 
-				st.clearParameters();		
-				if(!isOracle){
-					if(offset == 0)
-						offset = eventIdLowerLimit;
-					st.setLong(1, offset);					// MySQL >= startId	
-					st.setLong(2, sqlBlockSize);			// MySQL limit
-				}else{
-					st.setLong(1, eventIdLowerLimit);		// Oracle lower limit	
-					st.setLong(2, offset);					// Oracle offset
-					st.setLong(3, sqlBlockSize + offset);	// Oracle limit	
+				// SAK-28967
+				if( offset == 0 ) {
+					offset = eventIdLowerLimit;
 				}
+				st.setLong( 1, offset );
+				st.setLong( 2, offset + sqlBlockSize );
+				
 				rs = st.executeQuery();
 				
 				while(rs.next()){
@@ -300,15 +303,15 @@ public class StatsAggregateJobImpl implements StatefulJob {
 							firstEventIdProcessed = jobRun.getStartEventId(); //was: lastProcessedEventId;
 						if(firstEventIdProcessedInBlock == -1)
 							firstEventIdProcessedInBlock = lastProcessedEventId;
-						processedCounter++;					
+						processedCounter++;
 					}catch(Exception e){
 						if(LOG.isDebugEnabled())
 							LOG.debug("Ignoring "+event+", "+ref+", "+date+", "+sessionUser+", "+sessionId+" due to: "+e.toString());
 					}
-					counter++;					
+					counter++;
 				}
 				rs.close();
-			
+				
 				// If we didn't see a single event, time to break out and wrap up this job
 				if (counter < 1) {
 					break;
@@ -334,10 +337,12 @@ public class StatsAggregateJobImpl implements StatefulJob {
 				}
 
 				firstEventIdProcessedInBlock = -1;
-				if(processedCounter >= getMaxEventsPerRun()){
+				if(processedCounter >= getMaxEventsPerRun()) {
 					break;
-				}else{
-					offset += sqlBlockSize;	
+				} else if(processedCounter + sqlBlockSize < getMaxEventsPerRun()) {
+					offset += sqlBlockSize;
+				} else {
+					offset += getMaxEventsPerRun() - processedCounter;
 				}
 			}
 
