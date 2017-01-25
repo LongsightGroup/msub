@@ -113,6 +113,7 @@ attendance https://github.com/UDayton/attendance/branches/10.x
 #GIT Projects
 #git_project content-review/contentreview-impl-vericite
 
+#shell_command find attendance/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find providers/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
