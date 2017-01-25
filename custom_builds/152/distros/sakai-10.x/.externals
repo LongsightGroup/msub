@@ -97,6 +97,8 @@ sitestats                         https://source.sakaiproject.org/svn/msub/longs
 profile2 			  https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/profile2/sakai-10.x
 roster2                           https://source.sakaiproject.org/svn/msub/rsmart.com/roster2/branches/10.6.x
 
+# Attendance Tool
+attendance https://github.com/UDayton/attendance/branches/10.x
 
 #VeriCite
 #shell_command cd content-review

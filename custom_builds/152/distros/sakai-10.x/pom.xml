@@ -437,6 +437,7 @@
 				<module>taggable/taggable-hbm/hbm</module>
 				<module>userauditservice/api</module>
 				<module>warehouse/warehouse-api/api</module>
+				<module>attendance</module>
 			</modules>
 		</profile>
         <profile>
