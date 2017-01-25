@@ -83,14 +83,12 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
 
 #customizations
-clog https://github.com/sakaicontrib/clog/branches/11.x/clog
+clog https://github.com/sakaicontrib/clog/branches/11.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 batch-user-creation https://source.sakaiproject.org/contrib/longsight/batch-user-creation-tool/trunk/
-sis_integration https://github.com/LongsightGroup/ceipa-sis_integration/trunk
 login https://github.com/LongsightGroup/sakai/branches/112-11.x/login
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
+#sis_integration https://github.com/LongsightGroup/ceipa-sis_integration/trunk
 
-#shell_command find batch-user-creation/ -name pom.xml -exec sed -i 's/2.7.1/11-SNAPSHOT/g' {} \;
-#shell_command find batch-user-creation/ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
 #shell_command find ./ -type f -exec sed -i 's/singleton="true"/scope="singleton"/g' {} \;

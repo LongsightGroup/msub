@@ -117,9 +117,11 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>clog</module>
+                <module>bbb-tool</module>
+<!--
                 <module>batch-user-creation</module>
                 <module>sis_integration</module>
-                <module>bbb-tool</module>
+-->
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
