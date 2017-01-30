@@ -12,27 +12,23 @@
     <artifactId>rsmart-decryption-impl</artifactId>
     <name>rsmart-decryption-impl</name>
     <packaging>jar</packaging>
-    <version>${sakai.version}</version>
+    <version>11-SNAPSHOT</version>
     <dependencies>
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.4</version>
         </dependency>
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
-            <version>3.2.1</version>
         </dependency>
         <dependency>
             <groupId>commons-digester</groupId>
             <artifactId>commons-digester</artifactId>
-            <version>1.6</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>1.4</version>
         </dependency>
         <dependency>
             <groupId>commons-logging</groupId>
@@ -41,13 +37,13 @@
         <dependency>
             <groupId>com.rsmart</groupId>
             <artifactId>rsmart-decryption-api</artifactId>
-            <version>${sakai.version}</version>
+            <version>11-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.rsmart</groupId>
             <artifactId>rsmart-decryption-model</artifactId>
-            <version>${sakai.version}</version>
+            <version>11-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
