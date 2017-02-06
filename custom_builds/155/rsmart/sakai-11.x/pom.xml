@@ -17,6 +17,7 @@
     <module>rsmart-Decryption</module>
     <module>util</module>
     <module>user-data-service</module>
+    <module>providers</module>
   </modules>
     <dependencyManagement>
         <dependencies>
