@@ -121,7 +121,7 @@ public class CleMembershipDaoImpl extends HibernateTemplate implements
 		
 		try {
 			connection = session.connection();
-			stmt = connection.prepareStatement("delete from clemembership");
+			stmt = connection.prepareStatement("truncate table clemembership");
 			cnt = stmt.executeUpdate();
 			connection.commit();
 		} catch (SQLException e) {
