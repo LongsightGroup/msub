@@ -124,9 +124,13 @@ public class IntegrationJob extends AbstractAdminJob {
 	 */
 	private void sendEmails( DataProcessor dp, ProcessorState state ) {
 		if( recipientList != null && recipientList.size() > 0 ) {
+			ArrayList<String> additionalHeaders = new ArrayList<String>();
+			additionalHeaders.add("Bcc: support@longsight.com"); 
+			additionalHeaders.add("X-Sakai-Sender: customer-integration"); 
+
 			try {				
 				for( int i=0; i<recipientList.size(); i++) {
-					emailService.send(fromAddress, recipientList.get(i).toString(), dp.getProcessorTitle(), dp.getReport(state), null, null, null);
+					emailService.send(fromAddress, recipientList.get(i).toString(), dp.getProcessorTitle(), dp.getReport(state), null, null, additionalHeaders);
 				}
 			}
 			catch(Exception err) {
