@@ -35,7 +35,6 @@ deploy https://github.com/sakaiproject/sakai/branches/11.x/deploy
 edu-services https://github.com/sakaiproject/sakai/branches/11.x/edu-services
 feedback https://github.com/sakaiproject/sakai/branches/11.x/feedback
 gradebook https://github.com/sakaiproject/sakai/branches/11.x/gradebook
-gradebookng https://github.com/sakaiproject/sakai/branches/11.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/11.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
@@ -86,6 +85,7 @@ blogwow https://github.com/sakaicontrib/blogwow/trunk
 login https://github.com/LongsightGroup/sakai/branches/81-11.x/login
 vericite  https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 samigo https://github.com/LongsightGroup/sakai/branches/81-11.x/samigo
+gradebookng https://github.com/LongsightGroup/sakai/branches/81-11.x/gradebookng
 
 #POM CHANGES
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
