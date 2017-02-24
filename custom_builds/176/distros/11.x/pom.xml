@@ -61,7 +61,6 @@
                 <module>content-review</module>
                 <module>vericite</module>
                 <module>courier</module>
-                <module>dashboard</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
                 <module>deploy</module>
