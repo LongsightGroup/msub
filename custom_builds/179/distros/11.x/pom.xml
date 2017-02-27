@@ -119,6 +119,9 @@
                 <module>blogwow</module>
                 <module>certification</module>
                 <module>rsmart</module>
+                <module>qna</module>
+                <module>sms</module>
+                <module>gradebook2</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
