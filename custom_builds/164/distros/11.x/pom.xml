@@ -123,8 +123,8 @@
                 <module>blogwow</module>
                 <module>etudes-util</module>
                 <module>melete</module>
-                <!--module>irubric-core</module>
-                <module>irubric-tool</module-->
+                <module>irubric-core</module>
+                <module>irubric-tool</module>
                 <module>certification</module>
                 <module>iclicker</module>
                 <module>kaltura</module>
