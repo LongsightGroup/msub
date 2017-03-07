@@ -88,12 +88,13 @@ evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 adobeconnect https://source.sakaiproject.org/contrib/longsight/adobeconnectpro-openmeetings-integration/11.x
 kaltura https://github.com/kaltura/sakai-extension/trunk
-scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/11.x
+scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/trunk
 content-review https://github.com/LongsightGroup/sakai/branches/67-11.x/content-review
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find scorm/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command sed -i 's/Media Gallery/Loyola Media/g' kaltura/src/main/webapp/tools/sakai.kaltura.xml
 #shell_command find ./ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
 
