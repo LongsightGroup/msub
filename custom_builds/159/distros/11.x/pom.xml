@@ -116,6 +116,7 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>bbb-tool</module>
+                <module>attendance</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
