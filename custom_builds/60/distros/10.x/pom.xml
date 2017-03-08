@@ -121,10 +121,10 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>blogwow</module>
-                <module>evaluation</module>
+                <!--module>evaluation</module>
                 <module>da_evalprovider</module>
                 <module>etudes-util</module>
-                <module>melete</module>
+                <module>melete</module-->
                 <module>content-review/contentreview-impl</module>
             </modules>
         </profile>
