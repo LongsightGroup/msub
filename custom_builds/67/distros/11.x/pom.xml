@@ -118,10 +118,12 @@
 
                 <module>blogwow</module>
                 <module>evaluation</module>
-                <module>adobeconnect</module>
                 <module>kaltura</module>
                 <module>scorm</module>
                 <module>content-review/turnitin</module>
+<!--
+                <module>adobeconnect</module>
+-->
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
