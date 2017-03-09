@@ -87,8 +87,6 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 clog                             https://github.com/sakaicontrib/clog/branches/11.x
 webservices                      https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 rsmart                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-11.x
-scorm                            https://github.com/LongsightGroup/SCORMCloud_SakaiPlugin/trunk
-scorm/SCORMCloud_JavaLibrary     https://github.com/LongsightGroup/SCORMCloud_JavaLibrary/trunk
 gradebook2                       https://github.com/sakaicontrib/gradebook2/trunk
 
 #POM Changes

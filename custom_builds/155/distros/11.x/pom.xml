@@ -119,7 +119,6 @@
                 <module>clog</module>
                 <module>rsmart</module>
                 <module>gradebook2</module>
-                <!--module>scorm</module-->
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
