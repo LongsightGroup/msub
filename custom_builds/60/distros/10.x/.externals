@@ -87,7 +87,7 @@ samigo https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/60/s
 #syllabus https://source.sakaiproject.org/svn/msub/longsight.com/syllabus/syllabus-10.x_backport
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
-content-review/contentreview-impl-vericite https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport
+content-review/contentreview-impl-vericite https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.1_vericite
 
 # S3 Content
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
