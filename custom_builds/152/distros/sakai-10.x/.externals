@@ -5,7 +5,6 @@ announcement -r 319489            https://source.sakaiproject.org/svn/msub/rsmar
 archive -r 319490                 https://source.sakaiproject.org/svn/msub/rsmart.com/archive/branches/10.4.x
 authz -r 319492                   https://source.sakaiproject.org/svn/msub/rsmart.com/authz/branches/10.4.x
 basiclti -r 319493                https://source.sakaiproject.org/svn/msub/rsmart.com/basiclti/branches/10.4.x
-bigbluebutton -r 356           https://github.com/asahinet/bigbluebutton-sakai/branches/master/bbb-tool
 blogwow -r 87652                 https://source.sakaiproject.org/contrib/rsmart/msub/blogwow/branches/10.4.x
 calendar -r 319494                https://source.sakaiproject.org/svn/msub/rsmart.com/calendar/branches/10.4.x
 chat -r 319495                    https://source.sakaiproject.org/svn/msub/rsmart.com/chat/branches/10.4.x
@@ -99,6 +98,7 @@ roster2                           https://source.sakaiproject.org/svn/msub/rsmar
 
 # Attendance Tool
 attendance https://github.com/UDayton/attendance/branches/10.x
+bbb-tool   https://github.com/sakaicontrib/bbb-tool/branches/10.x
 
 #VeriCite
 #shell_command cd content-review
