@@ -122,6 +122,7 @@
                 <module>melete</module>
                 <module>etudes-util</module>
                 <module>bbb-tool</module>
+                <module>content-review/turnitin</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->

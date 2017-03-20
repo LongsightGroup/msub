@@ -91,6 +91,7 @@ rsmart     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/
 bbb-tool   https://github.com/sakaicontrib/bbb-tool/branches/11.x/
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
+content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
