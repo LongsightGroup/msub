@@ -85,7 +85,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Additional tools
 blogwow https://github.com/sakaicontrib/blogwow/trunk
-certification https://github.com/LongsightGroup/certification/branches/uwo-11
+certification https://github.com/sakaicontrib/certification/branches/11.x
 gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 qna https://source.sakaiproject.org/contrib/qna/trunk
 sms https://source.sakaiproject.org/contrib/sms/sms/trunk
