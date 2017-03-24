@@ -95,7 +95,7 @@ content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnit
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find scorm/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
-#shell_command sed -i 's/Media Gallery/Loyola Media/g' kaltura/src/main/webapp/tools/sakai.kaltura.xml
+#shell_command sed -i 's/Media Gallery/Loyola Media/g' kaltura/media-gallery-tool/src/main/webapp/tools/kaltura.media.xml
 #shell_command find ./ -name pom.xml -exec sed -i 's/sakai.jsf.version/sakai.version/g' {} \;
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/10-SNAPSHOT/11-SNAPSHOT/g' {} \;
