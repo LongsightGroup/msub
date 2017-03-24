@@ -91,5 +91,7 @@ lessonbuilder https://source.sakaiproject.org/svn/msub/longsight.com/lessonbuild
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-10 -Detudes.util.version=1.0.17
 
+#shell_command cp -r ~/sakai-private/sipx-10x sipx
+#shell_command cd kernel;patch -p0 < ~/sakai-private/kernel-10x-sipx.patch
 #shell_command sed -i 's/1.8.0.7/1.8.0.10/g' evaluation/impl/pom.xml
 #shell_command cp rsn.linktool.mylibrary.xml linktool/src/webapp/tools/
