@@ -94,3 +94,4 @@ content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnit
 
 #POM CHANGES
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find bbb-tool/ -name pom.xml -exec sed -i 's/11.1/11-SNAPSHOT/g' {} \;
