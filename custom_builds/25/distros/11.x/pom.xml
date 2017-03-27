@@ -116,11 +116,13 @@
                 <module>web</module>
                 <module>webservices</module>
 
+                <module>blogwow</module>
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>evaluation</module>
                 <module>gradebook-export</module>
                 <module>bbb-tool</module>
+                <module>content-review/turnitin</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
