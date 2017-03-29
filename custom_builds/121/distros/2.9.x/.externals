@@ -1,5 +1,7 @@
 
-#shell_command git clone git@github.com:edtell/founders.git && mv founders/* ./
+#shell_command git clone git@github.com:edtell/founders.git
+#shell_command cd founders/;git reset --hard 0ca65727141d3815058cea2c0b7100fd171d7aa7;cd ../
+#shell_command mv founders/* ./
 
 #GIT Projects
 #git_project kernel
