@@ -121,8 +121,8 @@
                 <module>etudes-util</module>
                 <module>kaltura</module>
                 <module>content-review/turnitin</module>
-                <!--module>irubric-core</module>
-                <module>irubric-tool</module-->
+                <module>irubric-core</module>
+                <module>irubric-tool</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
