@@ -118,9 +118,11 @@
                 <module>blogwow</module>
                 <module>etudes-util</module>
                 <module>evaluation</module>
+<!--
                 <module>melete</module>
                 <module>qna</module>
                 <module>sms</module>        
+-->
     </modules>
         </profile>
         <profile>
