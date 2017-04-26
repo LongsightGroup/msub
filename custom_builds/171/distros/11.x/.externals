@@ -93,6 +93,6 @@ etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 kaltura https://github.com/kaltura/sakai-extension/trunk
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-11.x
 config https://github.com/LongsightGroup/sakai/branches/171-11.x/config
-providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/171/distros/11.x/
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
