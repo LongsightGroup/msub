@@ -54,7 +54,6 @@ portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
-providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 reference https://github.com/sakaiproject/sakai/branches/11.x/reference
 reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
 rights https://github.com/sakaiproject/sakai/branches/11.x/rights
@@ -94,5 +93,6 @@ etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 kaltura https://github.com/kaltura/sakai-extension/trunk
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-11.x
 config https://github.com/LongsightGroup/sakai/branches/171-11.x/config
+providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/171/distros/11.x/
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
