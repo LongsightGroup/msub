@@ -117,8 +117,6 @@
                 <module>web</module>
                 <module>blogwow</module>
                 <module>gradebook-export</module>
-                <module>google-auth-impl</module>
-                <module>gcalendar</module>
                 <module>webservices</module>
                 <module>kaltura</module>
                 <module>irubric-core</module>

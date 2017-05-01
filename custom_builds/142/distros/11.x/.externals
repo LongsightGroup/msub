@@ -97,15 +97,5 @@ gradebook2 https://github.com/ern/gradebook2/branches/GRBK-1459
 # XAPI
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/11.x
 
-# Google calendar
-google-auth-impl https://github.com/sakaicontrib/google-auth-impl/trunk
-gcalendar https://github.com/sakaicontrib/gcalendar/trunk
-
 #POM CHANGES
-#shell_command find gcalendar/ -name \*.java -exec sed -i '/@Override/d' {} \;
-#shell_command find gcalendar/ -name \*.java -exec sed -i '/org.sakaiproject.authz.cover.AuthzGroupService/d' {} \;
-#shell_command find gcalendar/ -name pom.xml -exec sed -i 's/9-SNAPSHOT/11-SNAPSHOT/g' {} \;
-#shell_command find gcalendar/ -name pom.xml -exec sed -i 's/2.9.2/11-SNAPSHOT/g' {} \;
-#shell_command find gcalendar/ -name pom.xml -exec sed -i 's/sakai.shortenedurl.version/sakai.version/g' {} \;
-#shell_command find google-auth-impl/ -name pom.xml -exec sed -i 's/10.0-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
