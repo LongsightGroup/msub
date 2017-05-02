@@ -1,0 +1,94 @@
+# Sakai CLE Externals
+# Updating: svn propset svn:externals -F .externals .
+# Corporate POM
+master https://github.com/sakaiproject/sakai/branches/11.x/master
+
+# Core services
+common https://github.com/sakaiproject/sakai/branches/11.x/common
+delegatedaccess https://github.com/sakaiproject/sakai/branches/11.x/delegatedaccess
+emailtemplateservice https://github.com/sakaiproject/sakai/branches/11.x/emailtemplateservice
+entitybroker https://github.com/sakaiproject/sakai/branches/11.x/entitybroker
+external-calendaring-service https://github.com/sakaiproject/sakai/branches/11.x/external-calendaring-service/
+hierarchy https://github.com/sakaiproject/sakai/branches/11.x/hierarchy
+jsf https://github.com/sakaiproject/sakai/branches/11.x/jsf
+userauditservice https://github.com/sakaiproject/sakai/branches/11.x/userauditservice
+
+# Core Sakai Tools
+access https://github.com/sakaiproject/sakai/branches/11.x/access
+alias https://github.com/sakaiproject/sakai/branches/11.x/alias
+announcement https://github.com/sakaiproject/sakai/branches/11.x/announcement
+archive https://github.com/sakaiproject/sakai/branches/11.x/archive
+assignment https://github.com/sakaiproject/sakai/branches/11.x/assignment
+authz https://github.com/sakaiproject/sakai/branches/11.x/authz
+basiclti https://github.com/sakaiproject/sakai/branches/11.x/basiclti
+calendar https://github.com/sakaiproject/sakai/branches/11.x/calendar
+chat https://github.com/sakaiproject/sakai/branches/11.x/chat
+citations https://github.com/sakaiproject/sakai/branches/11.x/citations
+cloud-content https://github.com/sakaiproject/sakai/branches/11.x/cloud-content
+cmprovider https://github.com/sakaiproject/sakai/branches/11.x/cmprovider
+config https://github.com/sakaiproject/sakai/branches/11.x/config
+content https://github.com/sakaiproject/sakai/branches/11.x/content
+content-review https://github.com/sakaiproject/sakai/branches/11.x/content-review
+courier https://github.com/sakaiproject/sakai/branches/11.x/courier
+dav https://github.com/sakaiproject/sakai/branches/11.x/dav
+deploy https://github.com/sakaiproject/sakai/branches/11.x/deploy
+edu-services https://github.com/sakaiproject/sakai/branches/11.x/edu-services
+feedback https://github.com/sakaiproject/sakai/branches/11.x/feedback
+gradebook https://github.com/sakaiproject/sakai/branches/11.x/gradebook
+gradebookng https://github.com/sakaiproject/sakai/branches/11.x/gradebookng
+help https://github.com/sakaiproject/sakai/branches/11.x/help
+jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
+kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
+lessonbuilder https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
+mailarchive https://github.com/sakaiproject/sakai/branches/11.x/mailarchive
+mailsender https://github.com/sakaiproject/sakai/branches/11.x/mailsender
+memory https://github.com/sakaiproject/sakai/branches/11.x/memory
+message https://github.com/sakaiproject/sakai/branches/11.x/message
+msgcntr https://github.com/sakaiproject/sakai/branches/11.x/msgcntr
+oauth https://github.com/sakaiproject/sakai/branches/11.x/oauth
+pack https://github.com/sakaiproject/sakai/branches/11.x/pack
+pasystem https://github.com/sakaiproject/sakai/branches/11.x/pasystem
+podcasts https://github.com/sakaiproject/sakai/branches/11.x/podcasts
+polls https://github.com/sakaiproject/sakai/branches/11.x/polls
+portal https://github.com/sakaiproject/sakai/branches/11.x/portal
+postem https://github.com/sakaiproject/sakai/branches/11.x/postem
+presence https://github.com/sakaiproject/sakai/branches/11.x/presence
+profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
+reference https://github.com/sakaiproject/sakai/branches/11.x/reference
+reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
+rights https://github.com/sakaiproject/sakai/branches/11.x/rights
+roster2 https://github.com/sakaiproject/sakai/branches/11.x/roster2
+rsf https://github.com/sakaiproject/sakai/branches/11.x/rsf
+rwiki https://github.com/sakaiproject/sakai/branches/11.x/rwiki
+samigo https://github.com/sakaiproject/sakai/branches/11.x/samigo
+search https://github.com/sakaiproject/sakai/branches/11.x/search
+sections https://github.com/sakaiproject/sakai/branches/11.x/sections
+shortenedurl https://github.com/sakaiproject/sakai/branches/11.x/shortenedurl
+simple-rss-portlet https://github.com/sakaiproject/sakai/branches/11.x/simple-rss-portlet
+signup https://github.com/sakaiproject/sakai/branches/11.x/signup
+site https://github.com/sakaiproject/sakai/branches/11.x/site
+site-manage https://github.com/sakaiproject/sakai/branches/11.x/site-manage
+sitestats https://github.com/sakaiproject/sakai/branches/11.x/sitestats
+syllabus https://github.com/sakaiproject/sakai/branches/11.x/syllabus
+taggable https://github.com/sakaiproject/sakai/branches/11.x/taggable
+textarea https://github.com/sakaiproject/sakai/branches/11.x/textarea
+tool https://github.com/sakaiproject/sakai/branches/11.x/tool
+user https://github.com/sakaiproject/sakai/branches/11.x/user
+usermembership https://github.com/sakaiproject/sakai/branches/11.x/usermembership
+velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
+web https://github.com/sakaiproject/sakai/branches/11.x/web
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
+
+#customizations
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
+evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
+blogwow https://github.com/sakaicontrib/blogwow/trunk
+melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
+etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
+login  https://github.com/LongsightGroup/sakai/branches/14-11.x/login
+content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
+
+#shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
