@@ -116,7 +116,8 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>blogwow</module>
-                <module>gradebook2</module>
+                <module>sakora-csv</module>
+                <module>vericite</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
