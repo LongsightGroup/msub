@@ -116,6 +116,7 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>gradebook2</module>
+                <module>blogwow</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->

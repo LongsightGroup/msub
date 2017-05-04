@@ -86,5 +86,6 @@ web https://github.com/LongsightGroup/sakai/branches/wfu-11.x/web
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
+blogwow https://github.com/sakaicontrib/blogwow/trunk
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
