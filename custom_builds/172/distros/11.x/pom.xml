@@ -115,8 +115,8 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>gradebook2</module>
                 <module>blogwow</module>
+                <module>gradebook2</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
