@@ -55,7 +55,6 @@ portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
-providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
 rights https://github.com/sakaiproject/sakai/branches/11.x/rights
 roster2 https://github.com/sakaiproject/sakai/branches/11.x/roster2
@@ -91,6 +90,7 @@ bbb-tool   https://github.com/sakaicontrib/bbb-tool/branches/11.x/
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching/
 
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
