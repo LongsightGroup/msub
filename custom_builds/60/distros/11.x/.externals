@@ -85,7 +85,7 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 config https://github.com/LongsightGroup/sakai/branches/60-11.x/config
-content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
+vericite  https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x

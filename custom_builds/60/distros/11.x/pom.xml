@@ -59,7 +59,6 @@
                 <module>cloud-content</module>
                 <module>content</module>
                 <module>content-review</module>
-                <module>content-review/turnitin</module>
                 <module>courier</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
@@ -121,6 +120,7 @@
                 <module>da_evalprovider</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>vericite</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
