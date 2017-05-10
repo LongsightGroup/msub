@@ -66,7 +66,6 @@ shortenedurl https://github.com/sakaiproject/sakai/branches/11.x/shortenedurl
 simple-rss-portlet https://github.com/sakaiproject/sakai/branches/11.x/simple-rss-portlet
 signup https://github.com/sakaiproject/sakai/branches/11.x/signup
 site https://github.com/sakaiproject/sakai/branches/11.x/site
-site-manage https://github.com/sakaiproject/sakai/branches/11.x/site-manage
 sitestats https://github.com/sakaiproject/sakai/branches/11.x/sitestats
 syllabus https://github.com/sakaiproject/sakai/branches/11.x/syllabus
 taggable https://github.com/sakaiproject/sakai/branches/11.x/taggable
@@ -82,6 +81,7 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 
 #customizations
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-11.x/lessonbuilder
+site-manage https://github.com/LongsightGroup/sakai/branches/67-11.x/site-manage
 providers https://github.com/LongsightGroup/sakai/branches/67-11.x/providers
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
