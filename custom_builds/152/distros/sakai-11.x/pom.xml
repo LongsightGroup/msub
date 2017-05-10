@@ -118,11 +118,12 @@
 
                 <module>etudes-util</module>
                 <module>melete</module>
-                <module>gradebook2</module>
                 <module>attendance</module>
                 <module>rsmart</module>
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
+                <module>blogwow</module>
+                <module>clog</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
