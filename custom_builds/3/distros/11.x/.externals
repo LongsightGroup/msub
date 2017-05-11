@@ -86,7 +86,7 @@ bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
-kaltura https://github.com/kaltura/sakai-extension/11x
+kaltura https://github.com/kaltura/sakai-extension/branches/11x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
 profile2 https://github.com/LongsightGroup/sakai/branches/3-11.x/profile2
 content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
