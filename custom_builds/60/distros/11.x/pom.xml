@@ -121,6 +121,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>vericite</module>
+                <module>attendance</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
