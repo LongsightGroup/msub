@@ -120,6 +120,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>kaltura</module>
+                <module>metaobj</module>
                 <module>osp</module>
             </modules>
         </profile>
