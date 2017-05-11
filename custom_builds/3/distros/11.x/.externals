@@ -96,3 +96,4 @@ osp https://github.com/clhedrick/sakai-contrib/trunk/osp/
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find osp/ -name pom.xml -exec sed -i 's/${sakai.commons-logging.version}/1.2/g' {} \;
+#shell_command find metaobj/ -name pom.xml -exec sed -i 's/ResourceEditor\(getApplicationContext\(\)/ResourceEditor\(/g' {} \;
