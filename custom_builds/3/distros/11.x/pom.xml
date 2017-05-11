@@ -120,6 +120,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>kaltura</module>
+                <module>osp</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
