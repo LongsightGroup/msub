@@ -82,7 +82,7 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
 
 #customizations
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
+webservices https://github.com/LongsightGroup/sakai/branches/171-11.x/webservices
 gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 clog https://github.com/sakaicontrib/clog/branches/11.x
