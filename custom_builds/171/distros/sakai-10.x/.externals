@@ -86,8 +86,8 @@ blogwow 			 https://source.sakaiproject.org/contrib/programmerscafe/blogwow/bran
 evaluation 			 https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 clog                             https://source.sakaiproject.org/contrib/longsight/clog/sakai-10.x/
 site-manage 			 https://source.sakaiproject.org/svn/msub/longsight.com/site-manage/site-manage-10.x_features-backport
-webservices 			 https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 bigbluebutton-sakai/bbb-tool 	 https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
 config                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/171/config/sakai-10.x
 providers                        https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
 kaltura-kaf                      https://github.com/kaltura/sakai-extension/branches/10x
+webservices 			 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/171/webservices/sakai-10.x_custom
