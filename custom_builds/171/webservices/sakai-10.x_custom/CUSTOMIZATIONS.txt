@@ -1,0 +1,7 @@
+LS-176: copy all Axis methods to CXF
+LS-177: make sure no method overrides in SakaiScript
+SAK-27503: backport from trunk to not deploy aopalliance and asm JARs
+EST-3: remove from jldap_immutable table
+SAK-29894 Add CXF test framework for testing sakai web services (partial)
+SAK-29946 use more efficient saveSiteMembership and saveGroupMembersh
+SAK-30172 add web service to hide resources for a site (partial no tests)

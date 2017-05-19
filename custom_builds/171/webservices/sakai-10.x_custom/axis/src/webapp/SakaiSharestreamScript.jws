@@ -1,0 +1,198 @@
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.axis.AxisFault;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.sakaiproject.component.api.ServerConfigurationService;
+import org.sakaiproject.component.cover.ComponentManager;
+import org.sakaiproject.event.api.EventTrackingService;
+import org.sakaiproject.site.api.Site;
+import org.sakaiproject.site.api.SiteService.SelectionType;
+import org.sakaiproject.site.api.SiteService.SortType;
+import org.sakaiproject.site.cover.SiteService;
+import org.sakaiproject.tool.api.Session;
+import org.sakaiproject.tool.api.SessionManager;
+import org.sakaiproject.user.api.User;
+import org.sakaiproject.user.api.UserDirectoryService;
+import org.sakaiproject.util.Xml;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+
+public class SakaiSharestreamScript{
+
+private static String EVENT_GETSESSION = "linktool.getsession";
+private static final Log LOG = LogFactory.getLog(SakaiSharestreamScript.class);
+private EventTrackingService eventTrackingService;
+private ServerConfigurationService serverConfigurationService;
+private SessionManager sessionManager;
+private UserDirectoryService userDirectoryService;
+
+/**
+* Setup dependencies
+*/
+public SakaiSharestreamScript(){
+	eventTrackingService = (EventTrackingService) ComponentManager.get(EventTrackingService.class.getName());
+    serverConfigurationService = (ServerConfigurationService) ComponentManager.get(ServerConfigurationService.class.getName());
+    sessionManager = (SessionManager) ComponentManager.get(SessionManager.class.getName());
+    userDirectoryService = (UserDirectoryService) ComponentManager.get(UserDirectoryService.class.getName());
+}
+	
+private Session establishSession(String id) throws AxisFault 
+{
+	Session s = sessionManager.getSession(id);
+	
+	if (s == null)
+	{
+		throw new AxisFault("Session "+id+" is not active");
+	}
+	s.setActive();
+	sessionManager.setCurrentSession(s);
+	return s;
+}
+
+  
+  /** 
+* Get a user's type (for their account)
+* 
+* @param	sessionid	the id of a valid session
+* @param	userid		the userid of the person you want the type for
+* @return				type if set or blank
+* @throws	AxisFault 
+* 
+*/ 
+public String getUserType( String sessionid, String userid ) throws AxisFault
+{
+	Session session = establishSession(sessionid);
+	try {
+		User user = userDirectoryService.getUserByEid(userid);
+		return user.getType();
+	} catch (Exception e) {  
+	 	LOG.warn("WS getUserType() failed for user: " + userid);
+		return "";
+	}
+	
+}
+
+// Return XML document listing all sites user has read or write access
+public String getSitesUserCanRead(String sessionid)
+	throws AxisFault
+{
+	Session s = establishSession(sessionid);
+	
+	try 
+	{
+		List allSites = SiteService.getSites(SelectionType.ACCESS, null, null,
+														  null, SortType.TITLE_ASC, null);
+		
+		
+		if (allSites == null || allSites.size() == 0 )
+			return "<list/>";
+
+		// combine two lists
+		//allSites.addAll( moreSites );
+		
+		Document dom = Xml.createDocument();
+		Node list = dom.createElement("list");
+		dom.appendChild(list);
+		
+		for (Iterator i = allSites.iterator(); i.hasNext();)
+		{
+		   Site site = (Site)i.next();
+			Node item = dom.createElement("item");
+			Node siteId = dom.createElement("siteId");
+			siteId.appendChild( dom.createTextNode(site.getId()) );
+			Node siteTitle = dom.createElement("siteTitle");
+			siteTitle.appendChild( dom.createTextNode(site.getTitle()) );
+			
+			item.appendChild(siteId);
+			item.appendChild(siteTitle);
+			list.appendChild(item);
+		}
+		
+		return Xml.writeDocumentToString(dom);
+	}
+	catch (Exception e) 
+	{
+		return "<exception/>";
+	}
+}
+
+
+// Return XML document listing all sites user has read or write access
+public String getSitesUserCanWrite(String sessionid)
+	throws AxisFault
+{
+	Session s = establishSession(sessionid);
+	
+	try 
+	{
+		
+		List allSites = SiteService.getSites(SelectionType.UPDATE, null, null,
+															null, SortType.TITLE_ASC, null);
+		
+		if (allSites == null || allSites.size() == 0 )
+			return "<list/>";
+
+		// combine two lists
+		//allSites.addAll( moreSites );
+		
+		Document dom = Xml.createDocument();
+		Node list = dom.createElement("list");
+		dom.appendChild(list);
+		
+		for (Iterator i = allSites.iterator(); i.hasNext();)
+		{
+		   Site site = (Site)i.next();
+			Node item = dom.createElement("item");
+			Node siteId = dom.createElement("siteId");
+			siteId.appendChild( dom.createTextNode(site.getId()) );
+			Node siteTitle = dom.createElement("siteTitle");
+			siteTitle.appendChild( dom.createTextNode(site.getTitle()) );
+			
+			item.appendChild(siteId);
+			item.appendChild(siteTitle);
+			list.appendChild(item);
+		}
+		
+		return Xml.writeDocumentToString(dom);
+	}
+	catch (Exception e) 
+	{
+		return "<exception/>";
+	}
+}
+
+public String makesession(String username) throws AxisFault {
+
+                User user = null;
+                LOG.info("Trying user : " + username);
+                try{
+                        //user = userDirectoryService.getUser(spec);
+                        user = userDirectoryService.getUserByEid(username);
+                } catch (Exception e) {
+                        throw new AxisFault(e.getClass().getName() + " : " + e.getMessage());
+                }
+
+                Session s = sessionManager.startSession();
+                if (s == null)
+                        throw new AxisFault("Unable to establish session");
+
+                s.setUserId(user.getId());
+                s.setUserEid(user.getEid());
+
+                String sessionid = null;
+                String userref = null;
+
+                if (s != null) {
+                        sessionid = s.getId();
+                        String userid = s.getUserId();
+                        userref = (userid != null) ? userDirectoryService.userReference(userid) : null;
+                }
+
+                // post the login event
+                eventTrackingService.post(eventTrackingService.newEvent(EVENT_GETSESSION, userref, true));
+				
+                return sessionid;
+        }
+}

@@ -1,0 +1,93 @@
+import org.apache.axis.AxisFault;
+import org.apache.axis.Constants;
+import org.apache.axis.MessageContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import org.sakaiproject.component.api.ServerConfigurationService;
+import org.sakaiproject.component.cover.ComponentManager;
+import org.sakaiproject.email.api.EmailService;
+import org.sakaiproject.tool.api.Session;
+import org.sakaiproject.tool.api.SessionManager;
+import org.sakaiproject.user.api.UserDirectoryService;
+
+
+ 
+public class SakaiEmail {
+	
+private static final Log LOG = LogFactory.getLog(SakaiEmail.class);
+
+private SessionManager sessionManager;
+private ServerConfigurationService serverConfigurationService;
+private UserDirectoryService userDirectoryService;
+private EmailService emailService;
+
+/**
+ * Setup dependencies
+ */
+public SakaiEmail() {
+	sessionManager = (SessionManager) ComponentManager.get(SessionManager.class.getName());
+	serverConfigurationService = (ServerConfigurationService) ComponentManager.get(ServerConfigurationService.class.getName());
+	userDirectoryService = (UserDirectoryService) ComponentManager.get(UserDirectoryService.class.getName());
+	emailService = (EmailService) ComponentManager.get(EmailService.class.getName());
+}
+	
+/**
+ * Get the Session related to the given sessionid
+ * @param sessionid		the id of the session to retrieve
+ * @return				the session, if it is active
+ * @throws AxisFault	if session is inactive
+ */
+private Session establishSession(String sessionid) throws AxisFault 
+{
+	Session s = sessionManager.getSession(sessionid);
+
+	if (s == null)
+	{
+		throw new AxisFault("Session \""+sessionid+"\" is not active");
+	}
+	s.setActive();
+	sessionManager.setCurrentSession(s);
+	return s;
+}
+
+/**
+ * Check if a session is active
+ * 
+ * @param sessionid			the id of the session to check
+ * @return					the sessionid if active, or "null" if not.
+ */
+public String checkSession(String sessionid) {
+	
+	Session s = sessionManager.getSession(sessionid);
+	
+	if (s == null){
+		return "null";
+	}
+	else{
+		return sessionid;
+	}
+}
+
+public String sendEmail(String sessionid, String toStr, String subject, String content) throws AxisFault
+{
+	Session session = establishSession(sessionid);
+	
+	if(!session.getUserId().equals(userDirectoryService.ADMIN_ID)) {
+		LOG.warn("WS sendEmail() failed. Restricted to admin user.");
+		throw new AxisFault("WS failed. Restricted to admin user.");
+	}
+	
+	try
+	{
+		String from = "no-reply@"+ serverConfigurationService.getServerName();
+		emailService.send(from, toStr, subject, content, null, null, null);
+	}catch(Exception e)
+	{
+		LOG.error("WS sendEmail(): " + e.getClass().getName() + " : " + e.getMessage());
+	 	return e.getClass().getName() + " : " + e.getMessage();
+	}
+	return "success";
+}
+
+}

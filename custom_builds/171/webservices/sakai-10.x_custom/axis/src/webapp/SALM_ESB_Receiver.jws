@@ -1,0 +1,619 @@
+import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Iterator;
+import org.sakaiproject.site.api.Group;
+import org.sakaiproject.authz.api.Role;
+import org.sakaiproject.authz.api.Member;
+import org.apache.axis.AxisFault;
+import org.apache.axis.Constants;
+import org.apache.axis.MessageContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.sakaiproject.component.api.ServerConfigurationService;
+import org.sakaiproject.component.cover.ComponentManager;
+import org.sakaiproject.event.api.UsageSessionService;
+import org.sakaiproject.tool.api.Session;
+import org.sakaiproject.tool.api.SessionManager;
+import org.sakaiproject.user.api.User;
+import org.sakaiproject.user.api.UserEdit;
+import org.sakaiproject.user.api.UserDirectoryService;
+import org.apache.commons.lang.StringUtils;
+import org.sakaiproject.authz.api.SecurityService;
+import org.sakaiproject.site.api.Site;
+import org.sakaiproject.site.api.SiteService;
+import org.sakaiproject.id.cover.IdManager;
+import org.sakaiproject.db.api.SqlService;
+import java.text.*;
+/**
+ *   <p><u><b>SALM_ESB_Receiver.jws</b></u></p>
+ *   
+ *   <p><b>Some code reproduced from SakaiScript.jws and SakaiLogin.jws</b></p>
+ *
+ *   <p>
+ *      Processes SALM SOAP requests from the Enterprise Service Bus (ESB)
+ *      designed to facilitate the automated joining of sites and site groups by Students
+ *      when enrolled in an offering with a site URI in EBS4.
+ *   </p>
+ *
+ *
+ * 	 @author  Shane Norton
+ *   @version 0.9 
+ *   @since   16-Oct-2014
+ *   @see 
+ *      <ul>
+ *          <li><a href="http://sp.nsi.det.nsw.edu.au/team/1290/1913/eLearning/Shared%20Documents/SALM%20Sakai%20integration/">SALM Sakai integration SharePoint Document Library</a></li>
+ *          <li><a href="https://itdwiki.det.nsw.edu.au/display/LMBR2/Sakai+Adapter">ITD Wiki - Sakai Adapter</a></li>
+ *          <li><a href="http://nightly2.sakaiproject.org/javadoc/sakai-javadoc/index.html">Sakai JavaDocs</a></li>
+ *          <li><a href="https://axis.apache.org/axis/java/apiDocs/">Apache Axis api JavaDocs</a></li>
+ *          <li><a href="http://collab.sakaiproject.org/mailman/listinfo/sakai-dev">sakai-dev e-mail list</a></li>
+ *          <li><a href="https://support.anisakai.com/home">ANI Support Portal</a></li>
+ *          <li><a href="http://anisakai.com/sakai-cle-releases/">ANI Sakai CLE Releases</a></li>
+ *          <li><a href="https://confluence.sakaiproject.org/display/WEBSVCS/How+to+use+the+Sakai+Web+Services">How to use the Sakai Web Services</a></li>
+ *      </ul>
+ */
+
+public class SALM_ESB_Receiver {
+	private static final Log LOG = LogFactory.getLog("SALM_ESB_Receiver");
+
+	// RegEx to extract site code from SakaiSiteURL
+	private static final Pattern ExtractSiteCode = Pattern.compile("^(http|https)://(.*)portal/site/~{0,1}(\\p{XDigit}{8,8}-\\p{XDigit}{4,4}-\\p{XDigit}{4,4}-\\p{XDigit}{4,4}-\\p{XDigit}{12,12})(.*)$");
+	private static final String faultActor = "http://testsakai.nthsydney.tafensw.edu.au/sakai-axis/SALM_ESB_Receiver.jws";
+	private ServerConfigurationService serverConfigurationService;
+	private SessionManager sessionManager;
+	private UsageSessionService usageSessionService;
+	private UserDirectoryService userDirectoryService;
+	private SecurityService securityService;
+	private SiteService siteService;
+   	private IdManager uuidV4;
+
+	private String sLOGPfx; //Log Entry Prefix
+	private String sLOGSfx; //Log Entry Suffix
+
+	public SALM_ESB_Receiver() {
+		serverConfigurationService = (ServerConfigurationService) ComponentManager.get(ServerConfigurationService.class.getName());
+		sessionManager = (SessionManager) ComponentManager.get(SessionManager.class.getName());
+		usageSessionService = (UsageSessionService) ComponentManager.get(UsageSessionService.class.getName());
+		userDirectoryService = (UserDirectoryService) ComponentManager.get(UserDirectoryService.class.getName());
+		securityService = (SecurityService) ComponentManager.get(SecurityService.class.getName());
+		siteService = (SiteService) ComponentManager.get(SiteService.class.getName());
+		//sqlService = (SqlService) ComponentManager.get(SqlService.class.getName());
+		uuidV4 = (IdManager) ComponentManager.get(IdManager.class.getName());
+	}
+
+	/**
+     * <p>Login with the supplied credentials and  call a <i>protected</i> method to join DECUsername to sakaiSiteURL if not already joined and set inactive. </p>
+     * <p><b>Uses <i>protected</i> methods in this class.</b> <br /><b>Some code is adapted from SakaiScript.jws and SakaiLogin.jws</b> supplied with Sakai </p>
+     * <ol>
+     *      <li>Verify request and abort on failure</li>
+     *      <li>Login and abort on failure</li>
+     *      <li>Get internal <i>user_id</i> for DECUsername and abort on failure</li>
+     *      <li>If <i>user_id</i> is not a member of Sakai Site with same active status then add <i>user_id</i> to Sakai Site and abort if this fails</li>
+     *      <li>If <i>getGroupId</i> is null then abort</li>
+     *      <li>If not <i>isSiteGroupMember</i> then <i>addMemberToSiteGroup</i></li>
+     * </ol>
+	 * @since 16-Oct-2014
+	 *
+	 * @param loginId		Sakai Username used to process the request,
+	 * @param loginPw		Sakai Password used to process the request
+	 * @param DECUsername	DEC Username to be joined to a Site in Sakai
+	 * @param sakaiSiteURL	Site URL in Sakai for DEC Username to be joined to (this is currently a String)
+	 * @param action		either <b>enrol</b> (<i>active=true</i>) or <b>suspend</b> (<i>active=false</i>).
+	 * @param trackingId	uuid to track message
+	 * @return				"ok" if successful
+	 * @throws AxisFault
+	 * @throws InterruptedException
+	 */
+
+	public String Process_SALM_ESB_Request(String loginId, String loginPw, String DECUsername, String sakaiSiteURL, String action, String groupName, String trackingId) throws AxisFault,InterruptedException {
+		MessageContext messageContext = MessageContext.getCurrentContext();
+		String user_id, group_Id,maskedPw = StringUtils.repeat("*", loginPw.length()),ipAddress = messageContext.getStrProp(Constants.MC_REMOTE_ADDR);	
+		
+        sLOGPfx = "ip=" + ipAddress + ", trackingId=" + trackingId + ", ";
+        LOG.info(sLOGPfx + "Description=SOAP Message Received" + ", loginId=[" + loginId + "], maskedPw=[" + maskedPw + "], DECUsername=[" + DECUsername + "], sakaiSiteURL=[" + sakaiSiteURL + "], action=[" + action + "], groupName=[" + groupName + "]");
+		
+		// ***** PART 1 - Verify the SOAP message
+		String site_Id=this.verifySALM_ESB_Request(loginId, loginPw, DECUsername, sakaiSiteURL, action, groupName, trackingId);
+		if (site_Id == null) {
+			throwAxisFaultAndLogout("Error with SOAP message - check log for details.",null);
+		}
+		// ***** PART 2 - Login into Sakai 
+		String sessionId = login(loginId, loginPw,ipAddress);
+		if (sessionId == null) {
+			throwAxisFaultAndLogout("Error logging in - check log for details.",null);
+		}
+		LOG.debug(sLOGPfx + "Description=Login by loginId [" + loginId + "] successful and session created");
+		
+		// ***** PART 3 - Retrieve internal user_id for DECUsername and create internal account if required
+		user_id = this.getUserId(DECUsername);
+		if (user_id == null) {		
+			throwAxisFaultAndLogout("Internal error - [" + DECUsername + "] already exists occurred during creation!",sessionId);
+		} else if (user_id.equals("")){
+			throwAxisFaultAndLogout("Exception occurred while creating user  [" + DECUsername + "]",sessionId);
+		}				
+		
+		// ***** PART 4 - If user_id is not a member of Sakai Site with same Active status then add user_id to Sakai Site and abort if this fails
+		if (this.isSiteMember(user_id, site_Id, action)) { // If the DECUsername is already a member of the sakaiSiteURL, log
+			LOG.debug(sLOGPfx +"Description=[" +  DECUsername + "] is already a member of [" + sakaiSiteURL + "] with action=[" + action + "]");
+		} else {
+			int ret=addMemberToSite(user_id, site_Id, action); // Otherwise try to add the DECUsername as a member of sakaiSiteURL
+			if (ret < 0) {
+				throwAxisFaultAndLogout("An Internal Error occurred while adding user to sakaiSiteURL, check log for more details",sessionId);
+			} else if (ret > 0) {
+				throwAxisFaultAndLogout("Unable to add user to sakaiSiteURL after " + ret + " attempts",sessionId);
+			}			
+		} 
+
+		LOG.debug(sLOGPfx + "Description=Added DECUsername [" + DECUsername + "] to sakaiSiteURL [" + sakaiSiteURL + "]" );
+
+		// ***** PART 5 - If getGroupId is null then abort
+		// getSiteGroupId retrieves groupId for existing group or creates a new siteGroup and returns the groupId for newly created siteGroup
+		group_Id = this.getSiteGroupId(site_Id, groupName);
+		if (group_Id == null) {
+			throwAxisFaultAndLogout("Exception while trying to find site group with SiteGroupId - check log for details",sessionId);
+		} else if (group_Id.equals("")){
+			throwAxisFaultAndLogout("Exception while saving Site with new group - check log for details",sessionId);
+		}
+		
+		// ***** PART 6 - If not isSiteGroupMember addMemberToSiteGroup
+		if (isSiteGroupMember(user_id, group_Id, site_Id,action)) {
+			LOG.debug(sLOGPfx + "Description=DECUsername [" + DECUsername + "] is already a member of SiteGroup [" + groupName + "]" );
+		} else {
+			addMemberToSiteGroup(user_id, site_Id, group_Id, action);
+			LOG.debug(sLOGPfx + "Description=Made DECUsername [" + DECUsername + "] a member of SiteGroup [" + groupName + "]");
+		}
+	return "ok";
+}
+
+	/**
+	 * <p>
+	 *      Checks to see if users eid can be found, if not found will create a user
+	 * </p> 
+	 * <p>Updated to use String UserDirectoryService.getUserId(eid)</p>
+	 * <b>Adapted from <code>getUserID</code> in SakaiScript.jws</b>
+	 * @param	eid			the login username (ie jsmith26) of the user you want the user ID for
+	 * @return  <ul>
+	 *              <li><i>user_id</i> if the user exists</li>
+	 *			    <li><b>null</b> if user exists when creating</li>
+	 *			    <li><b>""</b> if another exception is thrown when creating user.</li>
+     *          </ul>
+	 */
+	protected String getUserId(String eid) {
+		String user_id;
+
+		try { 
+			user_id = userDirectoryService.getUserId(eid); 
+		} 
+		catch (org.sakaiproject.user.api.UserNotDefinedException n) { 
+			// We need to create the user as it does not exist......
+			LOG.warn(sLOGPfx + "Description=User [" + eid + "] not found, creating....");
+			try {
+				String uuid=uuidV4.createUuid();
+				UserEdit DECUserEdit = userDirectoryService.addUser(uuid, eid);
+				DECUserEdit.setType("registered");
+				user_id = uuid;
+				userDirectoryService.commitEdit(DECUserEdit);
+			}
+
+			catch ( org.sakaiproject.user.api.UserAlreadyDefinedException u) {
+				LOG.error(sLOGPfx + "Description=Internal error - [" + eid + "] already exists occurred during creation!");
+				return null;
+			} 
+
+			catch (Exception e) {
+				LOG.error(sLOGPfx + "Description=Error creating Sakai user [" + eid + "]: " + e.getClass().getName() + " : " + e.getMessage() );
+				return "";
+			}		
+		} 
+		return user_id;
+	}
+
+    /**
+     * <p>Adapted from <code>login</code> SakaiLogin.jws</p>
+     * Checks the following: -
+     *  <ol>
+	 *      <li>webservices.allowlogin=true is set in the Sakai configuration</li>
+	 *      <li>the passed eid exists</li>
+	 *      <li>the passed eid has super user access</li>
+	 *      <li>the passed eid and pw authenticate successfully</li>
+	 *      <li>the Session is created successfully</li>
+	 *  </ol>
+	 * Then will add the authentication as a Sakai event and return a sessionId or an error string.
+     * @param eid		eid, eg jsmith26
+     * @param pw		password for the user
+	 * @param ipAddr 	IP address of the <i>requester</i> - is added to the event log
+     * @return			<ul>
+     *                      <li>session id</li>
+	 *              	    <li>"WS Disabled"  - Web Services Disabled</li>
+						    <li>"WS UserNotDefinedException" - User not found</li>
+						    <li>"WS SessionFailedToBeCreated" - failed to create session</li>
+						    <li>"WS Access Denied" - Not a super user</li>
+						    <li>"WS Authentication failed" - username and password combination incorrect</li>
+                        </ul>
+     */
+    protected String login(String eid, String pw, String ipAddr)  {
+   		String user_id;
+
+    	boolean allowLogin = serverConfigurationService.getBoolean("webservices.allowlogin", false);
+
+		if ( ! allowLogin ) {
+			LOG.error(sLOGPfx + "Description=Web Services in Sakai configuration is DISABLED");
+			return null;
+		}
+
+		//Only throws UserNotDefinedException
+		try { 
+			user_id = userDirectoryService.getUserId(eid);
+		} 
+		catch (org.sakaiproject.user.api.UserNotDefinedException e) {
+			LOG.error(sLOGPfx + "Description=[" + eid + "] was not found (UserNotDefinedException was thrown)");
+			return null;
+		}
+		
+		if (!(securityService.isSuperUser(user_id))) {
+			LOG.error(sLOGPfx + "Description=[" + eid + "] found but is not a super user");		
+			return null;
+		}		
+
+        User user = userDirectoryService.authenticate(eid,pw);
+
+        if ( user != null ) {
+                Session s = sessionManager.startSession();
+                sessionManager.setCurrentSession(s);
+
+                if (s == null) {
+					LOG.error(sLOGPfx + "Description=-[" + eid + "] successfully logged in but session failed to be created");
+					return null;
+                } else {
+
+                	// We do not care too much on the off-chance that this fails - folks simply won't show up in presence
+                	// and events won't be traceable back to people / IP Addresses - but if it fails - there is nothing
+                	// we can do anyway.
+
+                	usageSessionService.login(user_id, eid, ipAddr, this.getClass().getSimpleName() + ".jws", UsageSessionService.EVENT_LOGIN_WS);
+
+                	if (LOG.isDebugEnabled()) {
+                		LOG.debug("Description=[" + eid + "] logged in from [" + ipAddr + "] and session [" + s.getId() + "] was created");
+                	}
+                	return s.getId();
+                }
+        }
+		LOG.error(sLOGPfx + "Description=[" + eid + "] found but failed to authenticate");
+		return null;
+    }	
+
+	/**
+	 * <p>Logout of the given session</p>
+	 * <b>Reproduced from <code>logout</code> in SakaiLogin.jws</b>
+	 * @param sessionid		sessionid to logout 
+	 * @throws AxisFault
+	 * @throws InterruptedException
+	 */
+	protected void logout(String sessionid) throws AxisFault, InterruptedException {
+
+		Session s = sessionManager.getSession(sessionid);
+
+		if (s == null) {
+			LOG.warn(sLOGPfx + "Description=Failed to logout session for loginId as session is already inactive" );
+			throw new AxisFault("Session " + sessionid + " is not active");
+		}
+
+		sessionManager.setCurrentSession(s);
+		usageSessionService.logout();
+
+		return;
+	}
+
+	/**
+	 * <p>Add a user to a site with a given role</p>
+	 *
+	 * <b>Adapted from SakaiScript.jws</b>
+	 *  <ol>
+	 *     <li>Sets active=true if action is enrol, otherwise set active=false</li>
+	 *     <li>Sets role=Student if  Site Type is course, otherwise set role=Participant</li>
+	 *     <li>Add user_id to site</li>
+	 *     <li>Increment Count</li>
+	 *     <li>If (Count &lt;= 10) and is not a member of the site then go to 2 (work around for SAK-15334)</li>
+	 *  </ol>
+	 *
+	 * @param 	user_id		Sakai internal user_id for site
+	 * @param 	site_id 	the id of the site to add the user to
+	 * @param 	action		either <b>enrol</b> (<i>active=true</i>) or <b>suspend</b> (<i>active=false</i>).
+	 * @return				<ol><li>0 on success</li><li>-1 if an internal errors</li><li>Count if it fails after multiple retries</li></ol>
+	 *
+	 */
+	protected int addMemberToSite(String user_id, String site_id , String action) {
+		int Count=0;
+		String role = null;
+		
+		// If action is 'enrol' then active=true else active=false
+		String myaction = action.toLowerCase();
+		Boolean active = myaction.equals("enrol");		
+		while ((Count <= 10) && (!(this.isSiteMember(user_id,site_id,action)))) {
+			try {
+				Site site = siteService.getSite(site_id);
+				// Checked in earlier method that site type is either course or project
+				// if site type is "course" then role="Student" else role="Participant"				
+			    role=site.getType().equals("course") ? "Student" : "Participant";	
+				
+                LOG.error(sLOGPfx + "Role:" + role);
+				site.addMember(user_id, role , active, false);
+				siteService.save(site);
+			} catch ( org.sakaiproject.exception.IdUnusedException e) {
+				//LOG.error(sLOGPfx + "Unable to add DECUsername(" + eid + ") to Sakai site with siteId(" + siteid + ")" + e.getClass().getName() + " : " + e.getMessage() );
+				// Should be trapped in getSiteIdFromSiteURL method
+				LOG.error("Description=Internal Error: - Site not found that should be already trapped");
+				return -1;
+			}           
+			catch ( org.sakaiproject.exception.PermissionException e) {
+				// Should be trapped in login method
+				LOG.error("Description=Internal Error: Access denied that should be already trapped");
+				return -1;
+			}
+			Count++;
+		}
+		Count++;
+		
+		if (this.isSiteMember(user_id,site_id,action)) {
+			return 0;
+		} 
+
+		LOG.debug ("Description=Failed to add to site after [" + Count + "] retries");
+		return Count;		
+	}
+
+	/**
+	 *  Verify SOAP Message Request
+	 *  <ol>
+	 *	    <li>Checks that all message fields in the SOAP request are not  or null</li>
+	 *      <li>Checks that all message fields in the SOAP request are not empty string</li>
+	 *      <li>Checks that <i>action</i> is valid <b>enrol</b> or <b>suspend</b></li>
+	 *      <li>Check that the <i>sakaiSiteURL</i> matches regular expression used to extract the site code.</li>
+	 *      <li>Check that the <i>site_id</i> exists in Sakai</li>
+	 *  </ol>
+	 * @param loginId		Sakai Username used to process the request,
+	 * @param loginPw		Sakai Password used to process the request
+	 * @param DECUsername	DEC Username to be joined to a Site in Sakai
+	 * @param sakaiSiteURL	Site URL in Sakai for DEC Username to be joined to (this is currently a String)
+	 * @param action		either <b>enrol</b> (<i>active=true</i>) or <b>suspend</b> (<i>active=false</i>).
+	 * @param trackingId	uuid to track message
+	 *
+	 * @return <ul><li>site_id when successful</li><li>null when it fails</li></ul>
+	 **/
+	protected String verifySALM_ESB_Request(String loginId, String loginPw, String DECUsername, String sakaiSiteURL, String action, String groupName, String trackingId) throws AxisFault  {
+		//Check that any parameters are not null
+		// loginId, loginPw, DECUsername, sakaiSiteURL, action, groupName, trackingId
+		if ((loginId == null) || (loginPw == null) || (DECUsername == null) || (sakaiSiteURL == null) || (action == null) || (groupName == null)) { //|| (trackingId == null)
+			LOG.error(sLOGPfx + "Description=One or more message fields are null");
+			return null;
+		}
+		if ((loginId.trim().equals("")) || (loginPw.trim().equals("")) || (DECUsername.trim().equals("")) || (sakaiSiteURL.trim().equals("")) || (action.trim().equals("")) || (groupName.trim().equals(""))) { //|| (trackingId == null)
+			LOG.error(sLOGPfx + "Description=One or more message fields are an empty string");
+			return null;
+		}
+		// Verify action parameter is 'enrol' or 'suspend'
+		String myaction = action.toLowerCase(); // allows upper case variants.
+		if (!((myaction.equals("enrol")) || (myaction.equals("suspend")))) {
+			LOG.error(sLOGPfx + "Description=Invalid action (not 'enrol' or 'suspend')");
+			return null;
+		}
+
+		// Verify sakaiSiteURL is in a format where we can extract the site_id
+		Matcher m = ExtractSiteCode.matcher(sakaiSiteURL);
+		Site site;
+		if (!m.find()) {
+			LOG.error(sLOGPfx + "Description=Invalid URL Pattern in sakaiSiteURL");
+			return null;
+		}		
+		
+		String site_id = m.group(3).toString();
+
+		try {
+			site = siteService.getSite(site_id);
+			// LOG.warn ("Site.getType();" + site.getType());
+		} catch (Exception e) {
+			//LOG.error (sLOGPfx + "Unable to find Sakai Site with siteId ("+ siteid + ")" );
+			LOG.error(sLOGPfx + "Description=Unable to find Sakai site with sakaiSiteURL");
+			return null;
+		}
+        String siteType=site.getType();
+        if ((!(siteType.equals("course"))) && (!(siteType.equals("project")))) {
+            LOG.error(sLOGPfx + "Description=Site type [" + site.getType() + "] is not a course or project site");
+            return null;
+        }
+	
+		return site_id;
+	}
+
+	/**   
+	 * Checks to see if the user is a member of the site
+	 * <br /><b>Adapted from from SakaiScript.jws</b>
+	 *
+	 * @param 	userid		Sakai internal user_id for site
+	 * @param 	siteid 	the id of the site to check if the user_id is a member
+	 * @param   action		either <b>enrol</b> (<i>active=true</i>) or <b>suspend</b> (<i>active=false</i>).	 
+	 *
+	 * @return <b>true</b> if user is a site member with the same <i>active</i> status otherwise <b>false</b>
+	 **/
+	protected boolean isSiteMember(String userid, String siteid, String action) {
+		Member member;
+		
+		// If action is 'enrol' then active=true else active=false
+        String myaction = action.toLowerCase();
+        Boolean active = myaction.equals("enrol");
+
+		
+		
+		try {
+			Site site = siteService.getSite(siteid);
+			//String userid = userDirectoryService.getUserByEid(eid).getId();
+			member = site.getMember(userid);
+
+		//member = group.getMember(userid);
+
+		if ((member != null) && (member.isActive() == active)) {
+			return true;
+		}
+		
+		} catch (Exception e) {
+			return false;
+		}
+	return false;
+	}
+
+    /**i    
+	 *  Retrieve the Site Group groupId for passed site, or the Site Group does not exist create a new group and return the groupId
+	 *  <ol>
+	 *      <li>Find the group with the <i>groupTitle</i> of groupName</li>
+	 *	    <li>If group is not found, create a new SiteGroup</li>
+	 *	    <li>Return null if exceptions occur or otherwise return the SiteGroup groupId</li>
+	 *  </ol>
+	 * @param 	siteId 		the id of the site you want the group created in
+	 * @param 	groupName 	the name of the new group
+	 * @return  <ul>
+	 *              <li><b>null</b> if an exception is caught</li>
+	 *              <li>the site group <i>groupId</i></li>
+	 *          </ul>
+	 *
+	 */
+	 
+	private static final String GROUP_PROP_WSETUP_CREATED = "group_prop_wsetup_created";
+	protected String getSiteGroupId(String siteId, String groupName) {
+        Site site = null;
+		try {
+			site = siteService.getSite(siteId);
+			
+			// Check each siteGroup in site for group
+			for (Iterator iter = site.getGroups().iterator(); iter.hasNext();) {
+				Group group = (Group) iter.next();
+				if (groupName.equals(group.getTitle())) {
+					return group.getId();
+				}
+			}
+		} catch (Exception e) {
+			LOG.error("Description=WS getGroupsInSite(): " + e.getClass().getName() + " : " + e.getMessage());
+			return null;
+		}
+
+		// Unable to find group in Site, need to create a new one
+		// Appends date stamp in Site Description
+		String now = new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new Date());
+		Group group = null;
+		try {
+			group = site.addGroup();
+			group.setTitle(groupName);
+			group.setDescription("Created by Studespace SALM ESB Receiver V.9 on " + now);
+			group.getProperties().addProperty(GROUP_PROP_WSETUP_CREATED, Boolean.TRUE.toString());		
+			siteService.save(site);
+		} catch (Exception e) {
+			LOG.error(sLOGPfx + "Description=Exception occurred while saving site "  + e.getClass().getName() + " : " + e.getMessage());
+			return "";
+		}
+
+		LOG.debug(sLOGPfx + "Description=Created Sakai SiteGroup with groupTitle [" + groupName + "] and made member of siteId [" + siteId + "]" );
+		return group.getId();			
+	}
+	
+		/**   
+	 * Checks to see if the user is a member of the Sakai Site Group
+	 * <br /><b>Adapted from from SakaiScript.jws</b>
+	 *
+	 * @param userid		Sakai internal user_id for site
+	 * @param groupId		Sakai internal group_id for Site Group 
+	 * @param siteid 		Sakai internal id for the Site
+	 * @param action		either <b>enrol</b> (<i>active=true</i>) or <b>suspend</b> (<i>active=false</i>).	 
+	 *
+	 * @return <ul>
+	 *              <li><b>true</b> if user is a site group member with the same <i>active</i> status</li>
+	 *              <li> otherwise <b>false</b></li>
+	 *         </ul>
+	 **/
+	protected Boolean isSiteGroupMember (String userid, String groupId, String siteid, String action)  {
+		Member member;
+		Group group;
+		
+		// If action is 'enrol' then active=true else active=false
+        String myaction = action.toLowerCase();
+        Boolean active = myaction.equals("enrol");
+
+
+		try {
+			group =  siteService.getSite(siteid).getGroup(groupId);		
+		} catch (Exception e) {  
+			
+			LOG.warn("Description=WS getUserByEid() failed for user: "  );
+			return false;
+		}
+		
+		member = group.getMember(userid);
+
+		if ((member != null) && (member.isActive() == active)) {
+			return true;
+		}
+		
+		return false;
+	} 	
+
+	/**
+	 * Add member to specified worksite group
+	 *  
+	 * @param   userid      the internal userid of the member to add
+     * @param 	siteid 		the id of the site that the group is in
+	 * @param 	groupid 	the id of the group you want to add the user to
+     * @param   action      either <b>enrol</b> (<i>active=true</i>) or <b>suspend</b> (<i>active=false</i>).	 
+     * @return 	<ul>
+     *              <li><b>true</b> if successful</li>
+     *              <li><b>false</b> if an exception is caught</li>
+     *          </ul>
+	 *
+	 * TODO: This is not returning false if it fails (ie if user isn't in site to begin with). SAK-15334
+	 * Which has been addressed by checking in earlier methods which confirm the site is joined.
+	 **/
+	protected boolean addMemberToSiteGroup( String userid, String siteid, String groupid, String action) throws AxisFault {
+		// If action is 'enrol' then active=true else active=false
+		String myaction = action.toLowerCase();
+		Boolean active = myaction.equals("enrol");
+        String role = null;
+
+		try
+		{
+			Site site = siteService.getSite(siteid);
+			// Checked in earlier method that site type is either course or project
+			// if site type is "course" then role="Student" else role="Participant"
+			role=site.getType().equals("course") ? "Student" : "Participant";	
+			Group group = site.getGroup(groupid);
+			
+			if ( group == null )
+				return false;
+	
+			group.addMember(userid, role , active, false);
+			siteService.save(site);
+			return true;
+		}
+		catch (Exception e)
+		{
+			LOG.error("Description=WS addMemberToGroup(): " + e.getClass().getName() + " : " + e.getMessage());
+			return false;
+		}
+	}
+
+	/**
+     * <ol> 
+	 * <li>If the <i>sessionId</i> is not null then logs out of the session</li>
+	 * <li>Throw an <code>AxisFault</code> exception with the passed <i>message</i>. </li>
+	 * 
+	 * @param 	sessionId 	the id of a valid session or null if not logged in
+	 * @param 	message 	the message for the <code>AxisFault</code> exception.
+	 * @throws 	AxisFault   (<i>message</i)>)
+	 **/
+	
+	
+	protected void throwAxisFaultAndLogout(String message, String sessionId) throws AxisFault,InterruptedException {
+		AxisFault af = new AxisFault(message);
+		af.setFaultActor(faultActor);
+		if (sessionId != null) {
+			this.logout(sessionId);
+		}
+		throw af;		
+	}
+}
