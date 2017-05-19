@@ -80,6 +80,12 @@
         </jaxrs:serviceBeans>
     </jaxrs:server>
 
+    <jaxrs:server id="SALM_ESB_ReceiverRS" address="/rest/SALM_ESB_Receiver">
+        <jaxrs:serviceBeans>
+            <ref bean="org.sakaiproject.webservices.SALM_ESB_Receiver"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
     <jaxws:endpoint id="SakaiJob"
                     implementor="#org.sakaiproject.webservices.SakaiJob"
                     address="/soap/job"/>
@@ -131,6 +137,10 @@
         <jaxws:properties> <entry key="exceptionMessageCauseEnabled" value="true" /> <entry key="faultStackTraceEnabled" value="true" /> </jaxws:properties>
     </jaxws:endpoint>
 
+    <jaxws:endpoint id="SALM_ESB_Receiver"
+                    implementor="#org.sakaiproject.webservices.SALM_ESB_Receiver"
+                    address="/soap/SALM_ESB_Receiver"/>
+
     <bean id="org.sakaiproject.webservices.AbstractWebService" class="org.sakaiproject.webservices.AbstractWebService" init-method="init">
         <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService"/>
         <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
@@ -178,6 +188,9 @@
     <bean id="org.sakaiproject.webservices.WSLongsight" class="org.sakaiproject.webservices.WSLongsight" init-method="init" parent="org.sakaiproject.webservices.AbstractWebService" />
     <bean id="org.sakaiproject.webservices.MHAssignment" class="org.sakaiproject.webservices.MHAssignment" init-method="init" parent="org.sakaiproject.webservices.AbstractWebService">
         <property name="gradebookExternalAssessmentService" ref="org.sakaiproject.service.gradebook.GradebookExternalAssessmentService"/>
+    </bean>
+    <bean id="org.sakaiproject.webservices.SALM_ESB_Receiver" class="org.sakaiproject.webservices.SALM_ESB_Receiver" init-method="init" parent="org.sakaiproject.webservices.AbstractWebService" >
+        <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
     </bean>
 
 </beans>
