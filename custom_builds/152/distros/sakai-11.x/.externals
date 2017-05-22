@@ -54,7 +54,6 @@ polls https://github.com/sakaiproject/sakai/branches/11.x/polls
 portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
-profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
 providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 reference https://github.com/sakaiproject/sakai/branches/11.x/reference
 reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
@@ -91,6 +90,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 attendance https://github.com/sakaicontrib/attendance/trunk
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 clog https://github.com/sakaicontrib/clog/branches/11.x
+profile2 https://github.com/LongsightGroup/sakai/branches/152-11.x/profile2
 
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-11.x
 
