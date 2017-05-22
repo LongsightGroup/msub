@@ -124,6 +124,7 @@
                 <module>irubric-tool</module>
                 <module>blogwow</module>
                 <module>clog</module>
+                <module>vericite</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
