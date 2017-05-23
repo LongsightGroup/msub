@@ -55,7 +55,6 @@ portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
-reference https://github.com/sakaiproject/sakai/branches/11.x/reference
 reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
 rights https://github.com/sakaiproject/sakai/branches/11.x/rights
 roster2 https://github.com/sakaiproject/sakai/branches/11.x/roster2
@@ -79,12 +78,13 @@ velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 web https://github.com/sakaiproject/sakai/branches/11.x/web
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.jdk.version=1.8
+#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.jdk.version=1.8 -Dsakai.skin.customization.file=src/morpheus-master/sass/_cmcc.scss -Dsakai.skin.target=cmcc
 
 #customizations
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 
+reference https://github.com/LongsightGroup/sakai/branches/103-11.x/reference
 user https://github.com/LongsightGroup/sakai/branches/103-11.x/user
 providers https://github.com/LongsightGroup/sakai/branches/103-11.x/providers
