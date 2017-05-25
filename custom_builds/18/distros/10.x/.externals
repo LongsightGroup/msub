@@ -81,7 +81,7 @@ etudes-util https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/e
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 melete https://source.sakaiproject.org/svn/msub/longsight.com/melete/melete-2.9m16_sak10x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-10.x_jldap-auth-caching/
-kaltura https://github.com/kaltura/sakai-extension/branches/10x
+kaltura https://source.sakaiproject.org/svn/msub/unicon.net/kaltura/tags/20150320
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x/
 
 #s3 Content
