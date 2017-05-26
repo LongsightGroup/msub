@@ -196,9 +196,24 @@ public class CleCourseMemberProcesssor extends ServiceProcessor {
 					}
 
 					Map<String, User> eidToUserMap = new HashMap<String, User>();
-					List<User> sakaiUsers = uds.getUsersByEids(eidsToFetch);
-					for (User tempUser : sakaiUsers) {
-						eidToUserMap.put(tempUser.getEid().toLowerCase(), tempUser);
+					List<User> sakaiUsers = null;
+
+					try {
+						sakaiUsers = uds.getUsersByEids(eidsToFetch);
+					} catch (Exception e) {
+						// Try one more time to be sure this isn't temp LDAP issue
+						java.util.concurrent.TimeUnit.SECONDS.sleep(2);
+						try {
+							sakaiUsers = uds.getUsersByEids(eidsToFetch);
+						} catch (Exception ee) {
+							logger.error("Exception attempting to retrieve users uds.getUsersByEids", ee);
+						}
+					}
+
+					if (sakaiUsers != null) {
+						for (User tempUser : sakaiUsers) {
+							eidToUserMap.put(tempUser.getEid().toLowerCase(), tempUser);
+						}
 					}
 					// End Longsight custom batch fetch
 
