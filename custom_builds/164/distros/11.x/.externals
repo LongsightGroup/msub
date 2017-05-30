@@ -96,7 +96,7 @@ melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-core
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-tool
-certification https://github.com/LongsightGroup/certification/branches/uwo-11
+certification https://github.com/sakaicontrib/certification/branches/11.x
 kaltura https://github.com/kaltura/sakai-extension/trunk
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
