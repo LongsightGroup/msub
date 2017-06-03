@@ -88,4 +88,6 @@ content-review https://source.sakaiproject.org/svn/msub/longsight.com/custom_bui
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 clog https://github.com/sakaicontrib/clog/branches/11.x
 attendance https://github.com/sakaicontrib/attendance/trunk
-roster2 https://github.com/adrianfish/sakai/branches/SAK-32513
+roster2 https://github.com/adrianfish/sakai/branches/SAK-32513/roster2
+
+#shell_command find roster2/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
