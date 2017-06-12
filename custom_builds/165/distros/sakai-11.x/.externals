@@ -89,3 +89,7 @@ gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 clog https://github.com/sakaicontrib/clog/branches/11.x
+blogwow https://github.com/sakaicontrib/blogwow/trunk
+certification https://github.com/sakaicontrib/certification/branches/11.x
+
+#shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
