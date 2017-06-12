@@ -78,7 +78,7 @@ velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 web https://github.com/sakaiproject/sakai/branches/11.x/web
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.jdk.version=1.8 -Dsakai.skin.customization.file=reference/library/src/morpheus-master/sass/_cmcc.scss -Dsakai.skin.target=cmcc
+#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.jdk.version=1.8 -Dsakai.skin.target=cmcc
 
 #customizations
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
