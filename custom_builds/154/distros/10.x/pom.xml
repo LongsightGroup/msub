@@ -114,7 +114,7 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>content-review/contentreview-impl</module>
+                <module>content-review/contentreview-impl-vericite</module>
                 <module>etudes-util</module>
                 <module>melete</module>
                 <!--module>gradebook2</module-->
