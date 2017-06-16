@@ -21,7 +21,6 @@ access https://source.sakaiproject.org/svn/access/branches/sakai-10.x
 alias https://source.sakaiproject.org/svn/alias/branches/sakai-10.x
 announcement https://source.sakaiproject.org/svn/announcement/branches/sakai-10.x
 archive https://source.sakaiproject.org/svn/archive/branches/sakai-10.x
-assignment https://source.sakaiproject.org/svn/assignment/branches/sakai-10.x
 authz https://source.sakaiproject.org/svn/authz/branches/sakai-10.x
 basiclti https://source.sakaiproject.org/svn/basiclti/branches/sakai-10.x
 calendar https://source.sakaiproject.org/svn/calendar/branches/sakai-10.x
@@ -68,7 +67,9 @@ usermembership https://source.sakaiproject.org/svn/usermembership/branches/sakai
 velocity https://source.sakaiproject.org/svn/velocity/branches/sakai-10.x
 web https://source.sakaiproject.org/svn/web/branches/sakai-10.x
 
-content-review https://source.sakaiproject.org/svn/content-review/branches/sakai-10.x
+assignment https://source.sakaiproject.org/svn/msub/longsight.com/assignment/assignment-10.x_features-backport/
+content-review https://source.sakaiproject.org/svn/msub/longsight.com/content-review/contentreview-10.x_features-backport/
+content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 #content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
 cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
@@ -86,15 +87,12 @@ kaltura -r 319514                https://source.sakaiproject.org/svn/msub/rsmart
 # rSmart needs metaobj
 metaobj                          https://source.sakaiproject.org/svn/metaobj/branches/sakai-10.x
 rsmart                           https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/distros/sakai-10.x/rsmart
-#VeriCite
-#shell_command cd content-review
-#shell_command git clone https://github.com/LongsightGroup/contentreview-impl-vericite.git
-#shell_command cd contentreview-impl-vericite
+
+#shell_command cd content-review/contentreview-impl-vericite
 #shell_command git apply sakai10x.patch
 #shell_command cd ../..
 
 #mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10-SNAPSHOT -Dsakai.common.version=10-SNAPSHOT -Dsakai.jdk.version=1.7
-#
 #shell_command find rsmart/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find clog/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
 #shell_command find kaltura/ -name pom.xml -exec sed -i 's/10.4/10-SNAPSHOT/g' {} \;
