@@ -119,6 +119,7 @@
                 <module>blogwow</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>attendance</module>
                 <module>content-review/turnitin</module>
             </modules>
         </profile>
