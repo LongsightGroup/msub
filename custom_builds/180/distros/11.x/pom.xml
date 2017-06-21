@@ -118,6 +118,7 @@
                 <module>webservices</module>
                 <module>blogwow</module>
                 <module>attendance</module>
+                <module>evaluation</module>
                 <module>bbb-tool</module>
             </modules>
         </profile>

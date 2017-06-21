@@ -89,6 +89,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 bbb-tool  https://github.com/sakaicontrib/bbb-tool/branches/11.x
 attendance https://github.com/sakaicontrib/attendance/trunk
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
+evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
