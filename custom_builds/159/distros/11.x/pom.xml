@@ -117,6 +117,7 @@
                 <module>webservices</module>
                 <module>bbb-tool</module>
                 <module>attendance</module>
+                <module>gradebook-export</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
