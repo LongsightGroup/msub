@@ -38,7 +38,6 @@ gradebook https://github.com/sakaiproject/sakai/branches/11.x/gradebook
 gradebookng https://github.com/sakaiproject/sakai/branches/11.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/11.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
-kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
 login https://github.com/sakaiproject/sakai/branches/11.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/11.x/mailarchive
@@ -87,4 +86,7 @@ content-review/contentreview-impl-vericite https://github.com/vericite/contentre
 
 reference https://github.com/LongsightGroup/sakai/branches/103-11.x/reference
 user https://github.com/LongsightGroup/sakai/branches/103-11.x/user
+
+# Allow user to login with numeric id (essentially an AID)
+kernel https://github.com/LongsightGroup/sakai/branches/103-11.x/kernel
 providers https://github.com/LongsightGroup/sakai/branches/103-11.x/providers
