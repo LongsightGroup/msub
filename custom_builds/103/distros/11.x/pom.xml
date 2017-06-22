@@ -117,6 +117,7 @@
                 <module>webservices</module>
 
                 <module>evaluation</module>
+                <module>certification</module>
                 <module>content-review/contentreview-impl-vericite</module>
             </modules>
         </profile>
