@@ -125,6 +125,7 @@
                 <module>blogwow</module>
                 <module>clog</module>
                 <module>vericite</module>
+                <module>bbb-tool</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
