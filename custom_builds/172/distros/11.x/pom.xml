@@ -118,6 +118,7 @@
                 <module>blogwow</module>
                 <module>sakora-csv</module>
                 <module>vericite</module>
+                <module>assignment2</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
