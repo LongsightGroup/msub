@@ -118,6 +118,8 @@
                 <module>bbb-tool</module>
                 <module>attendance</module>
                 <module>gradebook-export</module>
+                <module>etudes-util</module>
+                <module>melete</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
