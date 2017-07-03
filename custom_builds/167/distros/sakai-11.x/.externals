@@ -91,4 +91,4 @@ clog https://github.com/sakaicontrib/clog/branches/11.x
 attendance https://github.com/sakaicontrib/attendance/trunk
 
 roster2 https://github.com/adrianfish/sakai/branches/SAK-32513/roster2
-reference https://github.com/LongsightGroup/sakai/branches/167-11.x/reference
+#reference https://github.com/LongsightGroup/sakai/branches/167-11.x/reference
