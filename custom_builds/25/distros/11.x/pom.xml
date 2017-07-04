@@ -92,6 +92,7 @@
                 <module>profile2</module>
                 <module>providers</module>
                 <module>reset-pass</module>
+                <module>reference</module>
                 <module>rights</module>
                 <module>roster2</module>
                 <module>rsf</module>
