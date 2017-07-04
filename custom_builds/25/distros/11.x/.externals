@@ -80,7 +80,7 @@ velocity https://github.com/LongsightGroup/sakai/branches/25-nyu-11.x/velocity
 web https://github.com/LongsightGroup/sakai/branches/25-nyu-11.x/web
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
+#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8 -Dsakai.skin.target=bradley
 
 #customizations
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
