@@ -81,7 +81,7 @@ velocity https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/velo
 web https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/web
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
+#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8 -Dsakai.skin.target=wfu
 
 #customizations
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
