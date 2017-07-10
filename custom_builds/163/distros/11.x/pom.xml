@@ -123,6 +123,7 @@
                 <module>bbb-tool</module>
                 <module>content-review/turnitin</module>
                 <module>da_evalprovider</module>
+                <module>kaltura</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
