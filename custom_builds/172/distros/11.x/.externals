@@ -89,7 +89,7 @@ sakora-csv https://github.com/WakeForestSakai/sakora-csv/trunk
 vericite  https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 assignment2 https://source.sakaiproject.org/contrib/assignment2/trunk/
 login https://github.com/WakeForestSakai/sakai-11/branches/11.x/login
-roster2 https://github.com/adrianfish/sakai/branches/SAK-32513/roster2
+roster2 https://github.com/WakeForestSakai/sakai-11/branches/SAK-32513/roster2
 
 #shell_command git clone git@github.com:WakeForestSakai/inotado.git
 
