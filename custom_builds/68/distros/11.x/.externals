@@ -87,7 +87,7 @@ blogwow https://github.com/sakaicontrib/blogwow/trunk
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 iclicker https://github.com/sakaicontrib/iclicker/branches/11.x
 login https://github.com/LongsightGroup/sakai/branches/68-11.x/login
-providers https://github.com/LongsightGroup/sakai/branches/68-11.x/providers
+providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/68/providers/sakai-10.x_jldap-auth-caching-custom
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
