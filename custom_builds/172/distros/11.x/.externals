@@ -90,6 +90,7 @@ sakora-csv https://github.com/WakeForestSakai/sakora-csv/trunk
 vericite  https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 assignment2 https://source.sakaiproject.org/contrib/assignment2/trunk/
 login https://github.com/WakeForestSakai/sakai-11/branches/11.x/login
+inotado https://github.com/WakeForestSakai/inotado/trunk
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find sakora-csv/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;

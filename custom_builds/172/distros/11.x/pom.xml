@@ -120,6 +120,7 @@
                 <module>sakora-csv</module>
                 <module>vericite</module>
                 <module>assignment2</module>
+                <module>inotado</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
