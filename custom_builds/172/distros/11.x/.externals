@@ -59,7 +59,6 @@ providers https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/pro
 reference https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/reference
 reset-pass https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/reset-pass
 rights https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/rights
-roster2 https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/roster2
 rsf https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/rsf
 rwiki https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/rwiki
 samigo https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/samigo
@@ -90,6 +89,7 @@ sakora-csv https://github.com/WakeForestSakai/sakora-csv/trunk
 vericite  https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 assignment2 https://source.sakaiproject.org/contrib/assignment2/trunk/
 login https://github.com/WakeForestSakai/sakai-11/branches/11.x/login
+roster2 https://github.com/sakaiproject/sakai/trunk/roster2
 
 #shell_command git clone git@github.com:WakeForestSakai/inotado.git
 
@@ -97,4 +97,5 @@ login https://github.com/WakeForestSakai/sakai-11/branches/11.x/login
 #git_project inotado
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find roster2/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find sakora-csv/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
