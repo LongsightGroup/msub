@@ -84,7 +84,7 @@ web https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/web
 
 #customizations
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
-blogwow https://github.com/sakaicontrib/blogwow/trunk
+blogwow https://github.com/WakeForestSakai/blogwow/trunk
 sakora-csv https://github.com/WakeForestSakai/sakora-csv/trunk
 vericite  https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 assignment2 https://source.sakaiproject.org/contrib/assignment2/trunk/
