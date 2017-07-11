@@ -8,7 +8,6 @@ common https://github.com/sakaiproject/sakai/branches/11.x/common
 content-review https://github.com/sakaiproject/sakai/branches/11.x/content-review
 delegatedaccess https://github.com/sakaiproject/sakai/branches/11.x/delegatedaccess
 emailtemplateservice https://github.com/sakaiproject/sakai/branches/11.x/emailtemplateservice
-entitybroker https://github.com/sakaiproject/sakai/branches/11.x/entitybroker
 external-calendaring-service https://github.com/sakaiproject/sakai/branches/11.x/external-calendaring-service/
 hierarchy https://github.com/sakaiproject/sakai/branches/11.x/hierarchy
 jsf https://github.com/sakaiproject/sakai/branches/11.x/jsf
@@ -89,4 +88,5 @@ user https://github.com/LongsightGroup/sakai/branches/103-11.x/user
 
 # Allow user to login with numeric id (essentially an AID)
 kernel https://github.com/LongsightGroup/sakai/branches/103-11.x/kernel
+entitybroker https://github.com/LongsightGroup/sakai/branches/103-11.x/entitybroker
 providers https://github.com/LongsightGroup/sakai/branches/103-11.x/providers
