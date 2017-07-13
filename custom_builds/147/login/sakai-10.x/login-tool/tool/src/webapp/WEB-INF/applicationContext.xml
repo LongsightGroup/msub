@@ -4,5 +4,5 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- We have not been able to get a SAML config working in TOMCAT_HOME/sakai/xlogin-context.xml. -->
-    <import resource="stlawu.xml" />
+    <import resource="${saml.env}.xml" />
 </beans>
