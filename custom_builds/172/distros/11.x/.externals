@@ -20,7 +20,6 @@ announcement https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/
 archive https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/archive
 assignment https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/assignment
 authz https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/authz
-basiclti https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/basiclti
 calendar https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/calendar
 chat https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/chat
 citations https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/citations
@@ -90,6 +89,7 @@ vericite  https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 assignment2 https://source.sakaiproject.org/contrib/assignment2/trunk/
 login https://github.com/WakeForestSakai/sakai-11/branches/11.x/login
 roster2 https://github.com/WakeForestSakai/sakai-11/branches/SAK-32513/roster2
+basiclti https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/basiclti
 
 #shell_command git clone git@github.com:WakeForestSakai/inotado.git
 
