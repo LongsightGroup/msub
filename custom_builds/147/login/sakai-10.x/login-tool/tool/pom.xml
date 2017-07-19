@@ -149,6 +149,10 @@
           <artifactId>spring-security-web</artifactId>
           <version>${sakai.spring.version}</version>
       </dependency>
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+	</dependency>
 
   </dependencies>
   <build>
