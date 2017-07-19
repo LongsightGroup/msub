@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
  * Performs a logout of Sakai invalidating the {@link Session}
  * if {@link #isInvalidateSakaiSession()} is {@code true} and the session is not {@code null}.
  */
-@Slf4j
 public class SakaiLogoutSamlFilter extends SecurityContextLogoutHandler {
 
     @Setter private UsageSessionService usageSessionService;
@@ -39,7 +38,7 @@ public class SakaiLogoutSamlFilter extends SecurityContextLogoutHandler {
             Session session = sessionManager.getCurrentSession();
 
             if (session != null) {
-                log.debug("SAML logout invalidating sakai session: {}", session.getId());
+                System.out.println("SAML logout invalidating sakai session: " + session.getId());
                 usageSessionService.logout();
             }
         }
