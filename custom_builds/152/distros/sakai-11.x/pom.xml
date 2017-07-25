@@ -126,6 +126,7 @@
                 <module>clog</module>
                 <module>vericite</module>
                 <module>bbb-tool</module>
+                <module>certification</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
