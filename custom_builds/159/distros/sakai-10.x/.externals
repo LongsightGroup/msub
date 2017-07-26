@@ -80,6 +80,7 @@ edu-services https://source.sakaiproject.org/svn/msub/longsight.com/custom_build
 etudes-util                      https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 melete -r 87662                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/10.4.x
 bbb-tool                         https://github.com/sakaicontrib/bbb-tool/branches/10.x
+gradebook-export                 https://github.com/LongsightGroup/sakai-gradebook-export/branches/sakai-10.x
 
 # Faster build
 #jforum                           https://source.sakaiproject.org/contrib/longsight/jforum/10.x
