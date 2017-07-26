@@ -52,7 +52,6 @@ portal https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/portal
 postem https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/postem
 presence https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/presence
 profile2 https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/profile2
-reference https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/reference
 reset-pass https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/reset-pass
 rights https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/rights
 roster2 https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/roster2
@@ -88,14 +87,12 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/sakai-11.x
 bbb-tool https://github.com/sakaicontrib/bbb-tool/trunk
+gradebookng https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/gradebookng
 
 # iRubric customizations ND-75
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-core/
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-tool/
 #gradebook2 https://github.com/ern/gradebook2/branches/GRBK-1459
-
-# From trunk July 25 2017 for 54948
-gradebookng https://github.com/sakaiproject/sakai/trunk/gradebookng
 
 # XAPI
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/11.x
