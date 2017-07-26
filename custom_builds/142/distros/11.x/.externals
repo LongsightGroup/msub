@@ -34,7 +34,6 @@ deploy https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/deploy
 edu-services https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/edu-services
 feedback https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/feedback
 gradebook https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/gradebook
-gradebookng https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/gradebookng
 help https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/help
 jobscheduler https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/jobscheduler
 kernel https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/kernel
@@ -94,6 +93,9 @@ bbb-tool https://github.com/sakaicontrib/bbb-tool/trunk
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-core/
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-tool/
 #gradebook2 https://github.com/ern/gradebook2/branches/GRBK-1459
+
+# From trunk July 25 2017 for 54948
+gradebookng https://github.com/sakaiproject/sakai/trunk/gradebookng
 
 # XAPI
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/11.x
