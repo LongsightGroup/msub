@@ -121,7 +121,7 @@
                 <module>melete</module>
                 <module>attendance</module>
                 <module>content-review/turnitin</module>
-                <module>sipx-private</module>
+                <module>sipx</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->

@@ -93,6 +93,7 @@ content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnit
 attendance https://github.com/sakaicontrib/attendance/trunk
 
 #shell_command git clone git@github.com:LongsightGroup/sipx-private.git
+#shell_command mv sipx-private/sipx ./
 
 #GIT Projects
 #git_project sipx-private
