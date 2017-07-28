@@ -96,7 +96,7 @@ attendance https://github.com/sakaicontrib/attendance/trunk
 #shell_command mv sipx-private/sipx ./
 
 #GIT Projects
-#git_project sipx-private
+#git_project sipx
 
 #shell_command cp sipx-private/kernel-mod/CourseContextFilter.java kernel/kernel-impl/src/main/java/org/sakaiproject/content/impl/
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
