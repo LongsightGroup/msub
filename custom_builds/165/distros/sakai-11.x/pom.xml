@@ -117,11 +117,13 @@
                 <module>webservices</module>
                 <module>clog</module>
                 <module>evaluation</module>
+                <module>blogwow</module>
 
+                <!--
                 <module>gradebook2</module>
                 <module>rsmart</module>
-                <module>blogwow</module>
                 <module>certification</module>
+                -->
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
