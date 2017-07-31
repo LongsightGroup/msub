@@ -54,7 +54,6 @@ portal https://github.com/sakaiproject/sakai/branches/11.x/portal
 postem https://github.com/sakaiproject/sakai/branches/11.x/postem
 presence https://github.com/sakaiproject/sakai/branches/11.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/11.x/profile2
-providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 reference https://github.com/sakaiproject/sakai/branches/11.x/reference
 reset-pass https://github.com/sakaiproject/sakai/branches/11.x/reset-pass
 rights https://github.com/sakaiproject/sakai/branches/11.x/rights
@@ -88,6 +87,7 @@ config https://github.com/LongsightGroup/sakai/branches/165-11.x/config
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 clog https://github.com/sakaicontrib/clog/branches/11.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
 
 # Commented out to speed builds up
 #gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
