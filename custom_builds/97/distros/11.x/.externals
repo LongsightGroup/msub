@@ -79,7 +79,7 @@ velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 web https://github.com/sakaiproject/sakai/branches/11.x/web
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
+#mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8 -Dsakai.skin.target=anselm
 
 #customizations
 attendance https://github.com/sakaicontrib/attendance/trunk
@@ -87,5 +87,6 @@ blogwow https://github.com/sakaicontrib/blogwow/trunk
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
+reference https://github.com/LongsightGroup/sakai/branches/97-11.x/reference
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
