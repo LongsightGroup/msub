@@ -117,8 +117,8 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>gradebook2</module>
                 <!--
+                <module>gradebook2</module>
                 <module>rsmart</module>
                 <module>attendance</module>
                 <module>clog</module>
