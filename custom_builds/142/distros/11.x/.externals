@@ -92,7 +92,7 @@ gradebookng https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/gradeb
 # iRubric customizations ND-75
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-core/
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-tool/
-gradebook2 https://github.com/ern/gradebook2/branches/GRBK-1459
+gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 
 # XAPI
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/11.x
