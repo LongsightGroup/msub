@@ -119,6 +119,7 @@
                 <module>blogwow</module>
                 <module>attendance</module>
                 <module>evaluation</module>
+                <module>da_evalprovider</module>
                 <module>bbb-tool</module>
             </modules>
         </profile>
