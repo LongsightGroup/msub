@@ -76,7 +76,6 @@ tool https://github.com/sakaiproject/sakai/branches/11.x/tool
 user https://github.com/sakaiproject/sakai/branches/11.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/11.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
-web https://github.com/sakaiproject/sakai/branches/11.x/web
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 
 #Patcher options: "mavenoptions: <options>"
@@ -93,6 +92,7 @@ etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching/
 kaltura https://github.com/kaltura/sakai-extension/trunk
+web https://github.com/LongsightGroup/sakai/branches/163-11.x/web
 
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
