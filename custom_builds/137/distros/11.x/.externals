@@ -83,9 +83,7 @@ velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 
 #customizations
 blogwow https://github.com/sakaicontrib/blogwow/trunk
-etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
-melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 
