@@ -59,6 +59,7 @@
                 <module>cloud-content</module>
                 <module>content</module>
                 <module>content-review</module>
+                <module>content-review/turnitin</module>
                 <module>content-review/contentreview-impl-vericite</module>
                 <module>courier</module>
                 <module>dav</module>
