@@ -81,6 +81,7 @@ web https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/web
 #customizations:
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 config https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/config
+content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 login https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/login
 kaltura https://github.com/kaltura/sakai-extension/trunk
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching/
