@@ -116,7 +116,6 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>blogwow</module>
-                <module>evaluation</module>
                 <module>bbb-tool</module>
             </modules>
         </profile>
