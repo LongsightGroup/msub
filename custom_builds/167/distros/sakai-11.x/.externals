@@ -88,7 +88,7 @@ rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 clog https://github.com/sakaicontrib/clog/branches/11.x
-attendance https://github.com/sakaicontrib/attendance/trunk
+attendance https://github.com/sakaicontrib/attendance/branches/11.x
 
 roster2 https://github.com/LongsightGroup/sakai/branches/167-11.x/roster2
 #reference https://github.com/LongsightGroup/sakai/branches/167-11.x/reference
