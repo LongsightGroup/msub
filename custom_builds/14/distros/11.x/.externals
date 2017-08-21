@@ -90,7 +90,7 @@ etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
 login  https://github.com/LongsightGroup/sakai/branches/14-11.x/login
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
-attendance https://github.com/sakaicontrib/attendance/trunk
+attendance https://github.com/sakaicontrib/attendance/branches/11.x
 
 #shell_command git clone git@github.com:LongsightGroup/sipx-private.git
 #shell_command mv sipx-private/sipx ./
