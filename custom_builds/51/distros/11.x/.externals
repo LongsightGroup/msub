@@ -83,7 +83,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Additional tools
 blogwow https://github.com/sakaicontrib/blogwow/trunk
-attendance https://github.com/UDayton/attendance/trunk
+attendance https://github.com/sakaicontrib/attendance/branches/11.x
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
