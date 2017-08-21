@@ -23,7 +23,6 @@ assignment https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/assignm
 authz https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/authz
 basiclti https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/basiclti
 calendar https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/calendar
-chat https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/chat
 citations https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/citations
 cloud-content https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/cloud-content
 cmprovider https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/cmprovider
@@ -95,6 +94,9 @@ gradebookng https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/gradeb
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-core/
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-tool/
 gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
+
+# jgroups-chat backport
+chat https://github.com/LongsightGroup/sakai/branches/142-nyu-jgroups-chat-11.x/chat
 
 # XAPI
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/11.x
