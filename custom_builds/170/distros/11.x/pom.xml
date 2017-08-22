@@ -121,9 +121,12 @@
                 <module>evaluation</module>
                 <module>clog</module>
                 <module>attendance</module>
+                <module>contentreview-impl-vericite</module>
                 <!--module>rsmart</module-->
+                <!-- speed up build
                 <module>certification</module>
                 <module>gradebook2</module>
+                --> 
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
