@@ -91,7 +91,7 @@ login https://github.com/WakeForestSakai/sakai-11/branches/11.x/login
 roster2 https://github.com/WakeForestSakai/sakai-11/branches/SAK-32513/roster2
 basiclti https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/basiclti
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/172-nyu-11.x/lessonbuilder
-attendance https://github.com/sakaicontrib/attendance/trunk
+attendance https://github.com/sakaicontrib/attendance/branches/11.x
 
 #shell_command git clone git@github.com:WakeForestSakai/inotado.git
 
