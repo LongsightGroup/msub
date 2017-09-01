@@ -33,7 +33,6 @@ deploy https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/deploy
 edu-services https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/edu-services
 feedback https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/feedback
 gradebook https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/gradebook
-help https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/help
 jobscheduler https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/jobscheduler
 kernel https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/kernel
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/lessonbuilder
@@ -90,6 +89,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/sakai-11.x
 bbb-tool https://github.com/sakaicontrib/bbb-tool/trunk
 gradebookng https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/gradebookng
+help https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/help
 
 # iRubric customizations ND-75
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-core/
