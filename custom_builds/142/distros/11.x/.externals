@@ -104,3 +104,4 @@ SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/Sakai
 
 #POM CHANGES
 #shell_command find ./ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/11-SNAPSHOT/g' {} \;
