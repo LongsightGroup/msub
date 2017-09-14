@@ -73,7 +73,7 @@ content-review https://source.sakaiproject.org/svn/content-review/branches/sakai
 content-review/contentreview-impl https://source.sakaiproject.org/contrib/turnitin/branches/sakai-10.x/contentreview-impl/
 kernel https://source.sakaiproject.org/svn/msub/longsight.com/kernel/sakai-10.x-aws-s3
 cloud-content https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/152/cloud-content/sakai10.x_custom
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-10.x
 etudes-util  https://source.sakaiproject.org/svn/msub/longsight.com/etudes-util/etudes-util-1.0.17_sak10x
 evaluation https://source.sakaiproject.org/contrib/evaluation/branches/sakai-10.x
 bigbluebutton-sakai/bbb-tool https://github.com/LongsightGroup/bigbluebutton-sakai/trunk/bbb-tool
