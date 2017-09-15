@@ -121,6 +121,8 @@
                 <module>evaluation</module>
                 <module>da_evalprovider</module>
                 <module>bbb-tool</module>
+                <module>irubric-core</module>
+                <module>irubric-tool</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
