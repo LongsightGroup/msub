@@ -18,6 +18,7 @@
     <module>util</module>
     <module>user-data-service</module>
     <module>providers</module>
+    <module>gradebook2-export</module>
   </modules>
     <dependencyManagement>
         <dependencies>
