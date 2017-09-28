@@ -31,7 +31,7 @@ import java.util.*;
 
 
 public class GradebookExportPublisher extends JmsTemplate implements InstitutionalAdvisor {
-    private static final Log log = LogFactory.getLog(PacificInstitutionalAdvisor.class);
+    private static final Log log = LogFactory.getLog(GradebookExportPublisher.class);
 
     protected ObjectMapper mapper = new ObjectMapper();
     private ServerConfigurationService serverConfigurationService;

@@ -31,7 +31,7 @@
         </repositories>
        -->
     <properties>
-        <sakai.gb2.version>1.9.1</sakai.gb2.version>
+        <sakai.gb2.version>1.9.0-SNAPSHOT</sakai.gb2.version>
     </properties>
 
     <dependencies>
