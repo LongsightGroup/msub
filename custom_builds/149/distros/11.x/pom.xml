@@ -119,7 +119,9 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>evaluation</module>
+                <!-- requires gb2 to build right now
                 <module>rsmart</module>
+                -->
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
