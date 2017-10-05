@@ -117,9 +117,11 @@
                 <module>webservices</module>
                 <module>blogwow</module>
                 <module>evaluation</module>
+                <!--
                 <module>rsmart</module>
                 <module>melete</module>
                 <module>etudes-util</module>
+                -->
                 <module>bbb-tool</module>
                 <module>content-review/turnitin</module>
                 <module>da_evalprovider</module>
