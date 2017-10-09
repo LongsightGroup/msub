@@ -35,6 +35,7 @@ feedback https://github.com/sakaiproject/sakai/branches/11.x/feedback
 gradebook https://github.com/sakaiproject/sakai/branches/11.x/gradebook
 gradebookng https://github.com/sakaiproject/sakai/branches/11.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/11.x/help
+jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
 login https://github.com/sakaiproject/sakai/branches/11.x/login
@@ -84,7 +85,6 @@ gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/164/rsmart/sakai-11.x
 content-review https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/170/content-review/sakai-11.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
-jobscheduler https://github.com/LongsightGroup/sakai/branches/164-11.x/jobscheduler
 web https://github.com/LongsightGroup/sakai/branches/164-11.x/web
 config https://github.com/LongsightGroup/sakai/branches/164-11.x/config
 clog https://github.com/sakaicontrib/clog/branches/11.x
