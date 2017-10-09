@@ -79,32 +79,31 @@ public class SectionMemberProcessor extends AbstractCMProcessor {
                 continue;
             }
 
-            Set existingMembers = cmService.getSectionMemberships(sectionEid);
+            Set<Membership> existingMembers = cmService.getSectionMemberships(sectionEid);
 
-            // Build a map of existing member userEids to Memberships
-            Map existingMemberMap = new HashMap(existingMembers.size());
-            for(Iterator iter = existingMembers.iterator(); iter.hasNext();) {
-                Membership member = (Membership)iter.next();
-                existingMemberMap.put(member.getUserId(), member);
+            Set<String> membersToRemove = new HashSet<String>(existingMembers.size());
+            for(Membership member : existingMembers) {
+                membersToRemove.add(member.getUserId());
             }
 
             List memberElements = (List) sectionMembers.get(sectionEid);
 
             // Keep track of the new members userEids, and add/update them
-            Set newMembers = new HashSet();
             for(Iterator iter = memberElements.iterator(); iter.hasNext();) {
                 String[] memberElement = (String[])iter.next();
                 String userEid = memberElement[1];
                 String role = memberElement[2];
                 String status = memberElement[3];
-                newMembers.add(cmAdmin.addOrUpdateSectionMembership(userEid, role, sectionEid, status));
+                cmAdmin.addOrUpdateSectionMembership(userEid, role, sectionEid, status);
+                log.debug("Adding new Membership for " + userEid + ":" + role + ":" + sectionEid + ":" + status);
+                // Dont remove this just-added/updated user!
+                membersToRemove.remove(userEid);
             }
 
-            // For everybody not in the newMembers set, remove their memberships
-            existingMembers.removeAll(newMembers);
-            for(Iterator iter = existingMembers.iterator(); iter.hasNext();) {
-                Membership member = (Membership)iter.next();
-                cmAdmin.removeSectionMembership(member.getUserId(), sectionEid);
+            // For everybody not updated above, remove their memberships
+            for(String userEid : membersToRemove) {
+                log.info("Removing Membership for " + userEid + ":" + sectionEid);
+                cmAdmin.removeSectionMembership(userEid, sectionEid);
             }
         }
 
