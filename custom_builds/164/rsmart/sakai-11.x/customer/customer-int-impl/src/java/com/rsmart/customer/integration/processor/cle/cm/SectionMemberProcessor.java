@@ -17,6 +17,7 @@
 package com.rsmart.customer.integration.processor.cle.cm;
 
 import com.rsmart.customer.integration.processor.ProcessorState;
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.sakaiproject.coursemanagement.api.Membership;
@@ -94,6 +95,10 @@ public class SectionMemberProcessor extends AbstractCMProcessor {
                 String userEid = memberElement[1];
                 String role = memberElement[2];
                 String status = memberElement[3];
+                if (StringUtils.isBlank(userEid) || StringUtils.isBlank(role) || StringUtils.isBlank(status)) {
+                    log.debug("Skipping row because of blank value");
+                    continue;
+                }
                 cmAdmin.addOrUpdateSectionMembership(userEid, role, sectionEid, status);
                 log.debug("Adding new Membership for " + userEid + ":" + role + ":" + sectionEid + ":" + status);
                 // Dont remove this just-added/updated user!
