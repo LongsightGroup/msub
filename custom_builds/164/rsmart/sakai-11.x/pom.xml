@@ -18,7 +18,6 @@
     <module>util</module>
     <module>user-data-service</module>
     <module>providers</module>
-    <module>integration</module>
   </modules>
     <dependencyManagement>
         <dependencies>
