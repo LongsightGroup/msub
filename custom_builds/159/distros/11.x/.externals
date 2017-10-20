@@ -86,6 +86,6 @@ edu-services https://github.com/LongsightGroup/sakai/branches/159-11.x/edu-servi
 providers https://github.com/LongsightGroup/sakai/branches/159-11.x/providers
 bbb-tool   https://github.com/sakaicontrib/bbb-tool/branches/11.x/
 attendance https://github.com/sakaicontrib/attendance/branches/11.x
-gradebook-export https://github.com/longsightgroup/sakai-gradebook-export/branches/sakai-11.x
+gradebook-export https://github.com/longsightgroup/sakai-gradebook-export/branches/released-only
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
