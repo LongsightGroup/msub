@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+   
+    <bean id="assignmentXmlRenderer" class="org.theospi.portfolio.shared.model.impl.GenericXmlRenderer">
+        <property name="artifactFinder">
+            <ref bean="org.sakaiproject.metaobj.shared.ArtifactFinder.fileArtifactAssignment"/>
+        </property>
+        <property name="objectStructure">
+            <value>/org/sakaiproject/assignment/assignment-structure.xml</value>
+        </property>
+        <property name="supportedType">
+            <value>com.rsmart.sakaiproject.osp.presentable.assignment.PresentableSubmittedAssignment</value>
+        </property>
+        <property name="rootName">
+            <value>submittedAssignment</value>
+        </property>
+    </bean>
+
+   <bean id="org.sakaiproject.metaobj.shared.mgt.PresentableObjectHome.assignmentSubmissions"
+      class="com.rsmart.sakaiproject.osp.presentable.assignment.PresentableAssignmentHome">
+      <property name="assignmentService" ref="org.sakaiproject.assignment.api.AssignmentService"/>
+      <property name="idManager" ref="idManager"/>
+      <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
+      <property name="taggingManager" ref="org.sakaiproject.taggable.api.TaggingManager"/>
+      <property name="userDirectoryService" ref="org.sakaiproject.user.api.UserDirectoryService"/>
+      <property name="xmlRenderer" ref="assignmentXmlRenderer"/>
+      <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService" />
+   </bean>
+      
+    <bean id="org.sakaiproject.metaobj.shared.ArtifactFinder.fileArtifactAssignment"
+          parent="org.sakaiproject.metaobj.shared.ArtifactFinder.fileArtifact"
+          class="org.sakaiproject.metaobj.shared.mgt.ContentWrappedArtifactFinder"/>
+
+    <bean id="org.theospi.portfolio.shared.mgt.AdditionalXmlHome.assignment"
+          class="org.theospi.portfolio.shared.mgt.AdditionalXmlHome"
+          init-method="init" scope="singleton">
+        <property name="xmlHomeFactory">
+            <ref bean="xmlHomeFactory"/>
+        </property>
+        <property name="additionalHomes">
+            <map>
+                <entry key="baseAssignment">
+                    <ref bean="org.sakaiproject.metaobj.shared.mgt.PresentableObjectHome.assignmentSubmissions"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="org.theospi.portfolio.shared.mgt.AdditionalFinder.baseAssignment"
+          class="org.theospi.portfolio.shared.mgt.AdditionalFinder"
+          init-method="init" scope="singleton">
+        <property name="artifactFinderManager">
+            <ref bean="artifactFinderManager"/>
+        </property>
+        <property name="additionalFinders">
+            <map>
+                <entry key="baseAssignment">
+                    <ref bean="org.sakaiproject.metaobj.shared.mgt.PresentableObjectHome.assignmentSubmissions"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="org.sakaiproject.metaobj.shared.ArtifactFinderManager.baseAssignment"
+          class="org.sakaiproject.metaobj.shared.mgt.WrappedArtifactFinderManager">
+        <property name="base">
+            <ref bean="artifactFinderManager"/>
+        </property>
+        <property name="substitutions">
+            <map>
+                <entry key="fileArtifact">
+                    <ref bean="org.sakaiproject.metaobj.shared.ArtifactFinder.fileArtifactAssignment"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+   
+   
+</beans>

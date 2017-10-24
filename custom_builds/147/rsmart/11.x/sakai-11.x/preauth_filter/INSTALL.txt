@@ -1,0 +1,30 @@
+Installation Instructions 
+11/11/2010 
+Earle Nietzel
+
+1) sakai properties
+container.login=true
+preauth.portalServerUrl=https://my.portal.edu
+preauth.portalPrivateKey=ee0e096155314d474c8a8ba0c941e9382bb107cc035c7a24838b79271e32d7b0
+
+2) Add the preauth spring configuration
+*** NOTE Pay close attention to the 2 bean properties portalServerUrl and portalPrivateKey as these need to be set accordingly (see the documentation for a description on what these properties are for).
+
+<SNIP>
+      <bean id="com.rsmart.preauth.client.authentication.AuthenticationFilter"
+            class="com.rsmart.preauth.client.authentication.AuthenticationFilter">
+        <property name="portalServerUrl" value="${preauth.portalServerUrl}"/>
+        <property name="portalPrivateKey" value="${preauth.portalPrivateKey}"/>
+      </bean>
+
+      <bean id="org.springframework.security.util.FilterChainProxy"
+            class="org.springframework.security.util.FilterChainProxy">
+        <sec:filter-chain-map path-type="ant">
+          <sec:filter-chain pattern="/container/**" filters="com.rsmart.preauth.client.authentication.AuthenticationFilter"/>
+        </sec:filter-chain-map>
+      </bean>
+</SNIP>
+
+When sakai starts it will now load the preauth filter in the same way that the CAS filter is loaded using the Spring Delegated Filter.
+
+

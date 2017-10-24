@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>rsmart-scorm</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>11-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>rsmart-scorm-helper</artifactId>
+  <groupId>com.rsmart</groupId>
+  <name>rsmart scorm helper</name>
+  <organization>
+    <name>Sakai Project</name>
+    <url>http://sakaiproject.org/</url>
+  </organization>
+  <inceptionYear>2004</inceptionYear>
+  <packaging>war</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-component-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.kernel</groupId>
+      <artifactId>sakai-kernel-util</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>rsmart-common-tool-lib</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.metaobj</groupId>
+      <artifactId>sakai-metaobj-tool-lib</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+<!--org.sakaiprojectsakai-util${sakai.version}-->
+<!--org.sakaiprojectsakai-component${sakai.version}-->
+<!--org.sakaiprojectsakai-site-api${sakai.version}-->
+<!--org.sakaiprojectsakai-tool-api${sakai.version}-->
+<!--org.sakaiprojectsakai-content-api${sakai.version}-->
+<!--org.sakaiprojectsakai-user-api${sakai.version}-->
+<!--org.sakaiprojectsakai-util-api${sakai.version}-->
+<!--org.sakaiprojectsakai-authz-api${sakai.version}-->
+<!--org.sakaiprojectsakai-entity-api${sakai.version}-->
+    <dependency>
+      <groupId>org.sakaiproject.assignment</groupId>
+      <artifactId>sakai-assignment-api</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.osp</groupId>
+      <artifactId>osp-common-tool-lib</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.osp</groupId>
+      <artifactId>osp-common-api</artifactId>
+      <version>${sakai.version}</version>
+    </dependency>
+<!--org.sakaiprojectsakai-util${sakai.version}-->
+<!--org.sakaiprojectsakai-component-api${sakai.version}-->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>${sakai.spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>${sakai.servletapi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>${sakai.spring.groupId}</groupId>
+      <artifactId>${sakai.spring.artifactId}</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>taglibs</groupId>
+      <artifactId>standard</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/bundle</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/java</directory>
+        <includes>
+          <include>**/*.hbm.xml</include>
+        </includes>
+      </resource>
+    </resources>
+<!-- java source -->
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+    <testResources>
+      <testResource>
+        <directory>src/webapp</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.xsd</include>
+          <include>**/*.properties</include>
+        </includes>
+      </testResource>
+<!--includes:  include: **/*Test.java -->
+    </testResources>
+  </build>
+</project>
