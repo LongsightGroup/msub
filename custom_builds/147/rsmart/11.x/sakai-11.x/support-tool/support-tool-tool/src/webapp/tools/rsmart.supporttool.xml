@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<registration>
-    <tool title="Support Tool" description="Query sakai-event db table to view events." id="rsmart.supporttool">
-        <category name="aw"/>
-        <category name="myworkspacetadmin"/>
-    </tool>
-</registration>

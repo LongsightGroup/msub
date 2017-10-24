@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<registration>
-	<tool title="Smarthinking" description="This will take you the the smarthinking site" id="rsmart.linktool.smarthinking">
-      <configuration name="urlProp" value="rsmart.linktool.smarthinking.url"/>
-      <configuration name="height" value="750px"/>
-		<keyword name="smarthinking"/>
-	</tool>
-</registration>
