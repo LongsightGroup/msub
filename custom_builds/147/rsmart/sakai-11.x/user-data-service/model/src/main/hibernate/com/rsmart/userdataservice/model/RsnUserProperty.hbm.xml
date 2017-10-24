@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-cascade="none" package="com.rsmart.userdataservice.persistence.model" default-lazy="false">
+
+	<class name="RsnUserProperty" table="RSN_USER_PROPERTY">
+        <cache usage="nonstrict-read-write" />
+
+        <composite-id  class="RsnUserPropertyId" name="rsnUserPropertyId">
+           <key-property name="eid" column="USER_EID" length="99"/>
+           <key-property name="name" column="NAME" length="99"/>
+        </composite-id>
+
+        <property name="propertyValue" column="PROPERTY_VALUE" type="text" not-null="false" length="255" index="SMB_BASENAME_IDX"/>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+   <bean id="com.gradebook2.export.institutional.advisor.SGUInstitutionalAdvisor"
+          class="com.gradebook2.export.institutional.advisor.SGUInstitutionalAdvisor"
+          scope="singleton">
+        <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager"/>
+      <!--  <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>   -->
+        <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
+        <property name="finalGradeSubmissionPath" value="gradebook_export"/>
+        <property name="serverConfigurationService"
+                  ref="org.sakaiproject.component.api.ServerConfigurationService"></property>
+        <property name="uds" ref="org.sakaiproject.user.api.UserDirectoryService"/>
+   <!--     <property name="chs" ref="org.sakaiproject.content.api.ContentHostingService" />  -->
+
+    </bean>
+    
+    <bean id="com.gradebook2.export.institutional.advisor.SantaCruzInstitutionalAdvisor"
+          class="com.gradebook2.export.institutional.advisor.SantaCruzInstitutionalAdvisor"
+          scope="singleton">
+        <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager"/>
+        <property name="sessionManager" ref="org.sakaiproject.tool.api.SessionManager"/>
+        <property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
+        <property name="finalGradeSubmissionPath" value="gradebook_export"/>
+        <property name="serverConfigurationService"
+                  ref="org.sakaiproject.component.api.ServerConfigurationService"></property>
+        <property name="uds" ref="org.sakaiproject.user.api.UserDirectoryService"/>
+        <property name="chs" ref="org.sakaiproject.content.api.ContentHostingService" />
+        
+    </bean>
+    <bean id="com.gradebook2.export.institutional.advisor.util.GradeBookExportSiteHelper"
+          class="com.gradebook2.export.institutional.advisor.util.GradeBookExportSiteHelper">
+        <property name="siteService">
+            <ref bean="org.sakaiproject.site.api.SiteService"/>
+        </property>
+    </bean>
+    <bean id="com.gradebook2.export.institutional.advisor.util.Gradebook2ExportUtil"
+          class="com.gradebook2.export.institutional.advisor.util.Gradebook2ExportUtil">
+    </bean>
+    <!--bean id="com.gradebook2.export.institutional.advisor.GradebookExportPublisher"
+    		class="com.gradebook2.export.institutional.advisor.GradebookExportPublisher"
+    		scope="singleton">
+    	<property name="siteService" ref="org.sakaiproject.site.api.SiteService"/>
+        <property name="serverConfigurationService"
+                  ref="org.sakaiproject.component.api.ServerConfigurationService"></property>
+    	<property name="userDirectoryService" ref="org.sakaiproject.user.api.UserDirectoryService"/>
+        <property name="connectionFactory" ref="org.sakaiproject.messageservice.JmsConnectionFactory" />
+        <property name="defaultDestinationName" value="gradebook2.exportQueue" />
+        <property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager"/>
+
+    </bean-->
+
+</beans>

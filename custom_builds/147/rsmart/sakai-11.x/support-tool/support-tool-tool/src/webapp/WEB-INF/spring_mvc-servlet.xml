@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean name="com.rsmart.supporttool.tool.SupportToolHomeController" class="com.rsmart.supporttool.tool.SupportToolHomeController">
+         <property name="listName" value="events"/>
+         <property name="successView" value="supportToolHome"/>
+         <property name="eventService"><ref bean="com.rsmart.supporttool.api.EventService"/></property>
+         <property name="applyFilter" value="false"/>
+         <property name="enableSorting"    value="true"/>
+         <property name="defaultSortCol"   value="id"/>
+         <property name="defaultSortOrder" value="ASC"/>
+    </bean>
+
+    <!-- see page 279                                                             -->
+     <!-- this url mapper tells spring mvc how to map controllers to url requests  -->
+     <bean id="spring_mvc_url_mapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+         <property name="mappings">
+             <props>
+                 <prop key="/support-tool.form">com.rsmart.supporttool.tool.SupportToolHomeController</prop>
+             </props>
+         </property>
+         <property name="interceptors">
+             <list>
+
+                <!-- puts 'sakai_skin' into request as an attribute -->
+                <bean id="org.springframework.web.servlet.HandlerInterceptor.SakaiStyleSheetInterceptor"
+                 class="org.sakaiproject.metaobj.shared.control.SakaiStyleSheetInterceptor">
+          <property name="worksiteManager"><ref bean="org.sakaiproject.metaobj.worksite.mgt.WorksiteManager"/></property>
+     </bean>
+             </list>
+         </property>
+     </bean>
+
+     <bean id="localeResolver" class="com.rsmart.sakai.common.web.springframework.SakaiLocaleResolver"/>
+
+     <!-- spring resource bundle.  see page 84 -->
+     <!-- this message bundle contains messages specific to the virtual classroom tool -->
+      <bean id="messageSource" class="org.sakaiproject.util.ResourceLoaderMessageSource">
+         <property name="basename" value="com.rsmart.supporttool.messages"/>
+      </bean>
+
+     <!-- see page 277                                                                                                           -->
+     <!-- this view resolver tells spring how to map view names returned from Controllers in ModelAndView objects to a jsp page. -->
+     <!-- the name of the jsp page will be given by:                                                                             -->
+     <!--    jsp = <prefix><ModelAndView.getView()><suffix>                                                                      -->
+     <!--                                                                                                                        -->
+     <!-- thus, if a Controller's handleRequest() method returns a ModelAndView object with a view of "success", then the        -->
+     <!-- response sent back to the user will be /WEB-INF/jsp/success.jsp                                                        -->
+     <bean id="viewResolver" class="com.rsmart.sakai.common.web.springframework.SakaiInternalResourceViewResolver">
+         <property name="viewClass"><value>org.springframework.web.servlet.view.JstlView</value></property>
+         <property name="prefix"><value>/WEB-INF/jsp/</value></property>
+         <property name="suffix"><value>.jsp</value></property>
+     </bean>
+</beans>

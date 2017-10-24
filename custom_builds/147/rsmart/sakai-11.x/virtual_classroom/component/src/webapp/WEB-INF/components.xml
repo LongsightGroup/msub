@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="com.rsmart.virtual_classroom.api.bundle.messages" class="com.rsmart.sakai.common.i18n.OrderableResourceBundleMessageSource">
+       <property name="order" value="1"/>
+       <property name="basename" value="com.rsmart.virtual_classroom.api.bundle.messages"/>
+    </bean>
+
+    <!-- Base Hibernate SessionFactory -->
+    <bean id="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl.virtual_classroom"
+       class="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl">
+
+       <property name="mappingResources">
+          <list>
+             <value>com/rsmart/virtual_classroom/hibernate/virtual_classroom.hbm.xml</value>
+          </list>
+       </property>
+    </bean>
+
+   <!-- global hibernate transaction proxy bean -->
+   <bean id="com.rsmart.virtual_classroom.intf.VirtualClassroomService"
+      class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+      scope="singleton">
+      <property name="transactionManager"><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/></property>
+      <property name="target"            ><ref bean="com.rsmart.virtual_classroom.intf.VirtualClassroomService.target"       /></property>
+      <property name="transactionAttributes">
+         <props>
+            <prop key="*">PROPAGATION_REQUIRED</prop>
+         </props>
+      </property>
+   </bean>
+
+   <!-- virtual classroom service bean -->
+   <bean id="com.rsmart.virtual_classroom.intf.VirtualClassroomService.target"
+      class="com.rsmart.virtual_classroom.service.elluminate.ElluminateVirtualClassroomServiceImpl"
+      init-method="init"
+      destroy-method="destroy"
+      scope="singleton">
+      <property name="sessionFactory"            ><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory" /></property>   <!-- global hibernate transaction manager       -->
+      <property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>   <!-- provides access to sakai.properties values -->
+      <property name="calendarService"           ><ref bean="org.sakaiproject.calendar.api.CalendarService"            /></property>   <!-- used to add events to the user's calendar  -->
+      <property name="functionManager"           ><ref bean="org.sakaiproject.authz.api.FunctionManager"                /></property>   <!-- used to register api permissions           -->
+      <property name="messageSource">
+         <bean class="org.springframework.context.support.ResourceBundleMessageSource">
+            <property name="basename" value="com.rsmart.virtual_classroom.api.bundle.messages"/>
+         </bean>
+      </property>      <property name="securityService"           ><ref bean="org.sakaiproject.authz.api.SecurityService"            /></property>   <!-- needed to check permissions                -->
+      <property name="siteService"               ><ref bean="org.sakaiproject.site.api.SiteService"                    /></property>
+      <property name="timeService"               ><ref bean="org.sakaiproject.time.api.TimeService"                    /></property>   <!-- used to add events to the user's calendar  -->
+      <property name="userDirectoryService"      ><ref bean="org.sakaiproject.user.api.UserDirectoryService"           /></property>
+   </bean>
+
+   <bean id="com.rsmart.virtual_classroom.util.ScheduleHelper" class="com.rsmart.virtual_classroom.util.ScheduleHelper">
+      <property name="messageSource">
+         <bean class="org.springframework.context.support.ResourceBundleMessageSource">
+            <property name="basename" value="com.rsmart.virtual_classroom.api.bundle.messages"/>
+         </bean>
+      </property>
+
+   </bean>
+
+   <bean id="virtualClassroomToolPermissionsMap"
+      class="org.theospi.portfolio.security.mgt.impl.AddPermissionTool"
+      init-method="init" lazy-init="false"  >
+      <property name="manager">
+         <ref bean="org.theospi.portfolio.security.mgt.PermissionManager"/>
+      </property>
+      <property name="additionalTools">
+         <map>
+            <entry key="virtualClassroom">
+               <bean id="org.theospi.portfolio.security.mgt.ToolPermissionManager.virtualClassroom"
+                  class="org.theospi.portfolio.security.model.SimpleSitePermissionManager"
+                   scope="singleton" init-method="init">
+
+                  <property name="idManager"><ref bean="idManager"/></property>
+                  <property name="permissionManager">
+                     <ref bean="org.theospi.portfolio.security.mgt.PermissionManager" />
+                  </property>
+                  <property name="agentManager"><ref bean="agentManager" /></property>
+                  <property name="permissionEditName"><value>virtualClassroom</value></property>
+                  <property name="functionPrefix"><value>virtual_classroom_session</value></property>
+                  <property name="defaultPermissions">
+                     <map>
+                        <entry>
+                           <key><ref bean="org.theospi.portfolio.security.model.CrossRealmRoleWrapper.maintain"/></key>
+                           <list>
+                              <value>virtual_classroom_session.create</value>
+                              <value>virtual_classroom_session.delete</value>
+                              <value>virtual_classroom_session.edit</value>
+                              <value>virtual_classroom_session.join</value>
+                              <value>virtual_classroom_session.view</value>
+                           </list>
+                        </entry>
+                        <entry>
+                           <key><ref bean="org.theospi.portfolio.security.model.CrossRealmRoleWrapper.access"/></key>
+                           <list>
+                              <value>virtual_classroom_session.join</value>
+                              <value>virtual_classroom_session.view</value>
+                           </list>
+                        </entry>
+                     </map>
+                  </property>
+                  <property name="functions">
+                     <list>
+                        <value>virtual_classroom_session.create</value>
+                        <value>virtual_classroom_session.delete</value>
+                        <value>virtual_classroom_session.edit</value>
+                        <value>virtual_classroom_session.join</value>
+                        <value>virtual_classroom_session.view</value>
+                     </list>
+                  </property>
+               </bean>
+            </entry>
+         </map>
+      </property>
+   </bean>
+</beans>
+

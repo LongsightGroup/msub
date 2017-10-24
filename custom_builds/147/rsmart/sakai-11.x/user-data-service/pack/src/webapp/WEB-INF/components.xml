@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="org.sakaiproject.userdataservice.hibernate.AdditionalHibernateMappings"
+       class="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl">
+       <property name="mappingResources">
+          <list>
+             <value>com/rsmart/userdataservice/model/RsnUser.hbm.xml</value>
+         </list>
+         </property>
+    </bean>
+    <bean id="com.rsmart.userdataservice.impl.UserDataServiceImpl.target"
+         class="com.rsmart.userdataservice.impl.UserDataServiceImpl"
+         scope="singleton" init-method="init" lazy-init="true">
+      <property name="sessionFactory"><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/></property>
+      <!-- <property name="userData" ref="com.rsmart.userdataservice.UserDataService"/> -->
+
+
+     </bean>
+    
+   <bean id="com.rsmart.userdataservice.UserDataService"
+         class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+         scope="singleton" lazy-init="true">
+         <property name="transactionManager">
+           <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/>
+         </property>
+        <property name="target">
+                   <ref bean="com.rsmart.userdataservice.impl.UserDataServiceImpl.target"/>
+                </property>
+         <property name="transactionAttributes">
+            <props>
+               <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+         </property>
+      </bean>
+</beans>

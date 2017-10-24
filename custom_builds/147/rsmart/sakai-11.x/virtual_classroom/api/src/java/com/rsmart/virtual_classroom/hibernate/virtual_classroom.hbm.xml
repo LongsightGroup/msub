@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.rsmart.virtual_classroom.model">
+   <class name="VirtualClassroomSessionGroup" table="rcm_virtual_classroom_group" lazy="false">
+      <id       name="id"                          column="id"                            type="java.lang.String"                       length="99"                                    ><generator class="org.sakaiproject.id.hbm.IdGenerator"/></id>
+      <property name="siteId"                      column="site_id"                       type="java.lang.String"                       length="99"    update="true"  not-null="true" />
+      <property name="name"                        column="name"                          type="java.lang.String"                       length="255"   update="true"  not-null="true" />
+      <property name="capacity"                    column="capacity"                      type="int"                                                   update="true"  not-null="true" />
+      <property name="instructorId"                column="instructor_id"                 type="java.lang.String"                       length="99"    update="true"  not-null="false"/>
+      <component name="schedule" class="com.rsmart.virtual_classroom.model.Schedule">
+         <property name="startDate"                column="start_date"                    type="java.util.Date"                                        update="true"  not-null="true" />
+         <property name="endDate"                  column="end_date"                      type="java.util.Date"                                        update="true"  not-null="true" />
+         <property name="duration"                 column="duration"                      type="long"                                                  update="true"  not-null="true" />
+         <property name="addEventToCalendar"       column="add_event_to_calendar"         type="boolean"                                               update="true"  not-null="true" />
+         <property name="recurring"                column="recurring"                     type="boolean"                                               update="true"  not-null="true" />
+         <property name="daysOfWeekString"         column="days_of_week"                  type="java.lang.String"                       length="7"     update="true"  not-null="true" />
+      </component >
+      <property name="addMeetingDateToSessionName" column="add_meeting_date_session_name" type="boolean"                                               update="true"  not-null="true" />
+      <property name="createdBy"                   column="created_by"                    type="java.lang.String"                       length="99"    update="false" not-null="true" />
+      <property name="createdOn"                   column="created_on"                    type="java.util.Date"                                        update="false" not-null="true" />
+      <property name="modifiedBy"                  column="modified_by"                   type="java.lang.String"                       length="99"    update="true"  not-null="false"/>
+      <property name="modifiedOn"                  column="modified_on"                   type="java.util.Date"                                        update="true"  not-null="false"/>
+      <property name="maxTalkers"                  column="max_talkers"                   type="int"                                                   update="true"  not-null="true" />
+      <property name="isPrivate"                   column="is_private"                    type="boolean"                                               update="true"  not-null="true" />
+   </class>
+
+   <class name="VirtualClassroomSession" table="rcm_virtual_classroom_session" lazy="false">
+      <id       name="id"                         column="id"                            type="java.lang.String"                       length="99"                                    ><generator class="org.sakaiproject.id.hbm.IdGenerator"/></id>
+      <property name="groupId"                    column="group_id"                      type="java.lang.String"                       length="99"    update="true"  not-null="true" />
+      <property name="siteId"                     column="site_id"                       type="java.lang.String"                       length="99"    update="true"  not-null="true" />
+      <property name="name"                       column="name"                          type="java.lang.String"                       length="99"    update="true"  not-null="true" />
+      <property name="startDate"                  column="start_date"                    type="java.util.Date"                                        update="true"  not-null="true" />
+      <property name="endDate"                    column="end_date"                      type="java.util.Date"                                        update="true"  not-null="true" />
+      <property name="calendarEventId"            column="calendar_event_id"             type="java.lang.String"                       length="36"    update="true"  not-null="false"/>
+      <property name="elluminateId"               column="elluminate_id"                 type="long"                                                  update="true"  not-null="true" />
+      <property name="elluminateModeratorId"      column="elluminate_moderator_id"       type="java.lang.String"                                        update="true"  not-null="false"/>
+      <property name="elluminateRecordingId"      column="elluminate_recording_id"       type="java.lang.String"                       length="30"    update="true"  not-null="false"/>
+   </class>
+
+</hibernate-mapping>
