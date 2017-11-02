@@ -60,6 +60,7 @@
                 <module>content</module>
                 <module>content-review</module>
                 <module>content-review/turnitin</module>
+                <module>vericite</module>
                 <module>courier</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
