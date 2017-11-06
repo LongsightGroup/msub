@@ -116,12 +116,12 @@
                 <module>web</module>
                 <module>webservices</module>
 
+<!--
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>kaltura</module>
                 <module>scorm</module>
                 <module>content-review/turnitin</module>
-<!--
                 <module>adobeconnect</module>
 -->
             </modules>
