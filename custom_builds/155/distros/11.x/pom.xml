@@ -116,10 +116,10 @@
                 <module>web</module>
                 <module>webservices</module>
 
-                <module>clog</module>
-                <module>rsmart</module>
                 <!--
                 <module>gradebook2</module>
+                <module>clog</module>
+                <module>rsmart</module>
                 -->
             </modules>
         </profile>
