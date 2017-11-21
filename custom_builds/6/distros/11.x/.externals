@@ -84,7 +84,7 @@ web https://github.com/sakaiproject/sakai/branches/11.x/web
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
-evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
+evaluation https://github.com/LongsightGroup/evaluation/branches/limerick-11.x
 da_evalprovider https://github.com/LongsightGroup/da_evalprovider/trunk
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
 #login https://source.sakaiproject.org/svn/msub/longsight.com/login/login-10.x_googleplus_and_saml
