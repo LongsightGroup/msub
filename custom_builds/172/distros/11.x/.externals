@@ -29,7 +29,6 @@ config https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/config
 content https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/content
 content-review https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/content-review
 courier https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/courier
-dav https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/dav
 deploy https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/deploy
 edu-services https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/edu-services
 feedback https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/feedback
@@ -92,6 +91,9 @@ roster2 https://github.com/WakeForestSakai/sakai-11/branches/SAK-32513/roster2
 basiclti https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/basiclti
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/172-nyu-11.x/lessonbuilder
 attendance https://github.com/sakaicontrib/attendance/branches/11.x
+
+# Custom DAV with LDAP auth
+dav https://github.com/WakeForestSakai/sakai-11/branches/nyu-skin-11.x/dav
 
 #shell_command git clone git@github.com:WakeForestSakai/inotado.git
 
