@@ -62,7 +62,6 @@ shortenedurl https://github.com/sakaiproject/sakai/branches/11.x/shortenedurl
 simple-rss-portlet https://github.com/sakaiproject/sakai/branches/11.x/simple-rss-portlet
 signup https://github.com/sakaiproject/sakai/branches/11.x/signup
 site https://github.com/sakaiproject/sakai/branches/11.x/site
-site-manage https://github.com/sakaiproject/sakai/branches/11.x/site-manage
 sitestats https://github.com/sakaiproject/sakai/branches/11.x/sitestats
 syllabus https://github.com/sakaiproject/sakai/branches/11.x/syllabus
 taggable https://github.com/sakaiproject/sakai/branches/11.x/taggable
@@ -85,6 +84,7 @@ attendance https://github.com/sakaicontrib/attendance/branches/11.x
 gradebook-export https://github.com/longsightgroup/sakai-gradebook-export/branches/released-only
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
+site-manage https://github.com/LongsightGroup/sakai/branches/159-11.x/site-manage
 
 # Custom SIS code
 edu-services https://github.com/LongsightGroup/sakai/branches/159-11.x/edu-services
