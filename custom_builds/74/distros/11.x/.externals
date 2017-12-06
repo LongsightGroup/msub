@@ -86,6 +86,6 @@ bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
 content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/11.x
 evaluation https://github.com/LongsightGroup/evaluation/branches/limerick-11.x
-kaltura https://github.com/kaltura/sakai-extension/trunk
+kaltura https://github.com/kaltura/sakai-extension/branches/11.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 user https://github.com/LongsightGroup/sakai/branches/74-11.x/user
