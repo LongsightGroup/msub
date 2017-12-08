@@ -35,7 +35,6 @@ edu-services https://github.com/sakaiproject/sakai/branches/11.x/edu-services
 feedback https://github.com/sakaiproject/sakai/branches/11.x/feedback
 gradebook https://github.com/sakaiproject/sakai/branches/11.x/gradebook
 gradebookng https://github.com/sakaiproject/sakai/branches/11.x/gradebookng
-help https://github.com/sakaiproject/sakai/branches/11.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
 login https://github.com/sakaiproject/sakai/branches/11.x/login
@@ -91,6 +90,7 @@ kaltura https://github.com/kaltura/sakai-extension/trunk
 scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/11.x
 content-review https://github.com/LongsightGroup/sakai/branches/67-11.x/content-review
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
+help https://github.com/LongsightGroup/sakai/branches/67-11.x/help
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
