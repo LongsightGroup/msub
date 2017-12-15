@@ -122,6 +122,7 @@
                 <module>melete</module>
                 <module>evaluation</module>
                 <module>gradebook-export</module>
+                <module>kaltura</module>
                 <module>bbb-tool</module>
                 <module>content-review/turnitin</module>
             </modules>
