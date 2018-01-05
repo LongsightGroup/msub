@@ -115,7 +115,7 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-
+                <module>attendance</module>
 <!--
                 <module>blogwow</module>
                 <module>evaluation</module>
