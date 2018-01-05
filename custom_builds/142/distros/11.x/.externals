@@ -80,7 +80,6 @@ web https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/web
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 config https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/config
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
-content-review/contentreview-impl-vericite https://github.com/vericite/contentreview-impl-vericite/branches/2.0
 # Customizations for login tool, includes re-order of xlogin options
 login https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/login
 kaltura https://github.com/kaltura/sakai-extension/trunk
