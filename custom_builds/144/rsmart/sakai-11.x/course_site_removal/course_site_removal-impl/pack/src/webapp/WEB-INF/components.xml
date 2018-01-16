@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+   <!-- course site removal service bean -->
+   <bean id="com.rsmart.course_site_removal.intf.CourseSiteRemovalService.target"
+      class="com.rsmart.course_site_removal.impl.CourseSiteRemovalServiceImpl"
+      destroy-method="destroy"
+      init-method="init"
+      scope="singleton">
+      <property name="authorizationFacade"    ><ref bean="org.sakaiproject.metaobj.security.AuthorizationFacade"              /></property>   <!-- used to check permissions                         -->
+      <property name="courseManagementService"><ref bean="org.sakaiproject.coursemanagement.api.CourseManagementService"      /></property>   <!-- used to get the start and end date of terms       -->
+      <property name="functionManager"        ><ref bean="org.sakaiproject.authz.api.FunctionManager"                         /></property>   <!-- used to register api permissions                  -->
+      <property name="idManager"              ><ref bean="idManager"                                                          /></property>   <!-- used by the AuthorizationFacade                   -->
+      <property name="securityService"        ><ref bean="org.sakaiproject.authz.api.SecurityService"                         /></property>   <!-- used to check for super user                      -->
+      <property name="sessionFactory"         ><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/></property>   <!-- global hibernate transaction manager              -->
+      <property name="siteService"            ><ref bean="org.sakaiproject.site.api.SiteService"                              /></property>   <!-- needed to retrieve course sites that have expired -->
+   </bean>
+
+   <!-- global hibernate transaction proxy bean -->
+   <bean id="com.rsmart.course_site_removal.intf.CourseSiteRemovalService"
+      class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+      scope="singleton">
+      <property name="transactionManager"><ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager"/></property>
+      <property name="target"            ><ref bean="com.rsmart.course_site_removal.intf.CourseSiteRemovalService.target"    /></property>
+      <property name="transactionAttributes">
+         <props>
+            <prop key="*">PROPAGATION_REQUIRED</prop>
+         </props>
+      </property>
+   </bean>
+
+   <!-- global quartz scheduler proxy bean -->
+   <bean id="org.sakaiproject.component.app.scheduler.jobs.rsmart.course_site_removal.SpringJobBeanWrapper"
+      class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
+      scope="singleton" init-method="init">
+      <property name="beanId"          ><value>com.rsmart.course_site_removal.impl.CourseSiteRemovalJob</value></property>
+      <property name="jobName"         ><value>Course Site Removal</value>                                     </property>
+      <property name="schedulerManager"><ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/>      </property>
+   </bean>
+
+   <!-- quartz job bean which removes published course sites -->
+   <bean id="com.rsmart.course_site_removal.impl.CourseSiteRemovalJob"
+      class="com.rsmart.course_site_removal.impl.CourseSiteRemovalJob"
+      scope="singleton" init-method="init">
+      <property name="courseSiteRemovalService"  ><ref bean="com.rsmart.course_site_removal.intf.CourseSiteRemovalService"/></property>
+      <property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"   /></property>
+      <property name="sessionManager"            ><ref bean="org.sakaiproject.tool.api.SessionManager"                    /></property>
+      <property name="userDirectoryService"      ><ref bean="org.sakaiproject.user.api.UserDirectoryService"              /></property>
+   </bean>
+</beans>

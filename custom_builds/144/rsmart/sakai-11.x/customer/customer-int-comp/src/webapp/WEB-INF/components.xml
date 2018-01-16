@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+
+   <import resource="cm-components.xml"/>
+
+   <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration"
+      class="org.sakaiproject.component.app.scheduler.jobs.SpringJobBeanWrapper"
+      scope="singleton" init-method="init">
+      <property name="beanId">
+         <value>customerIntegrationJob</value>
+      </property>
+      <property name="jobName">
+         <value>SIS Synchronization</value>
+      </property>
+      <property name="schedulerManager">
+         <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager" />
+      </property>
+   </bean>
+
+    <bean id="com.rsmart.sis.scheduler.job.CustomerIntegration.configurable"
+          class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobBeanWrapper"
+          scope="singleton" init-method="init">
+       <property name="beanId">
+          <value>customerIntegrationJob</value>
+       </property>
+       <property name="jobName">
+          <value>Configurable SIS Synchronization</value>
+       </property>
+       <property name="schedulerManager">
+          <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager"/>
+       </property>
+        <property name="resourceBundleBase" value="com.rsmart.customer.integration.job.Messages"/>
+        <property name="configurableJobProperties">
+            <set>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="path.base"/>
+                     <property name="descriptionResourceKey" value="path.base.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.CleUserProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.CleUserProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.CleCourseProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.CleCourseProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.CleMembershipProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.CleMembershipProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.CleCourseMemberProcesssor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.CleCourseMemberProcesssor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.CleSectionProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.CleSectionProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.CleSectionMembershipProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.CleSectionMembershipProcessor.description"/>
+                </bean>
+                <bean class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                     <property name="required" value="false"/>
+                     <property name="labelResourceKey" value="com.rsmart.customer.integration.processor.cle.CleRemoveUserProcessor.filename"/>
+                     <property name="descriptionResourceKey" value="com.rsmart.customer.integration.processor.cle.CleRemoveUserProcessor.description"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+   <bean id="customerIntegrationJob" class="com.rsmart.customer.integration.job.IntegrationJob" init-method="init">
+		<property name="adminUser" value="admin"/>
+		<property name="sessionManager"  ref="org.sakaiproject.tool.api.SessionManager"/>
+		<property name="securityService" ref="org.sakaiproject.authz.api.SecurityService"/>
+		<property name="dataProcessors">
+		   <list>
+		       <ref bean="com.rsmart.customer.integration.processor.cle.CleUserProcessor"/>
+		       <ref bean="com.rsmart.customer.integration.processor.cle.CleCourseProcessor"/>
+		       <ref bean="com.rsmart.customer.integration.processor.cle.CleMembershipProcessor"/>
+		       <ref bean="com.rsmart.customer.integration.processor.cle.CleCourseMemberProcesssor"/>
+             <ref bean="com.rsmart.customer.integration.processor.cle.CleSectionProcessor"/>
+             <ref bean="com.rsmart.customer.integration.processor.cle.CleSectionMembershipProcessor"/>
+             <ref bean="com.rsmart.customer.integration.processor.cle.CleRemoveUserProcessor"/>
+           </list>
+	   </property>
+	  <property name="emailService">
+		   <ref bean="org.sakaiproject.email.api.EmailService"></ref>
+	  </property>
+   </bean>
+
+   <bean id="rsmartCustomerHibernateMappings"
+      class="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl">
+      <property name="mappingResources">
+         <list>
+            <value>com/rsmart/customer/integration/model/CleMembership.hbm.xml</value>
+         </list>
+      </property>
+   </bean>
+
+   <bean id="rsmartCustomerMembershipDaoTarget" class="com.rsmart.customer.integration.dao.hibernate.CleMembershipDaoImpl">
+      <property name="sessionFactory">
+         <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory"/>
+      </property>
+   </bean>
+
+   <bean id="rsmartCustomerIntegrationMembershipDao"
+         class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+         >
+	  <property name="transactionManager">
+			<ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager" />
+		</property>
+      <property name="target">
+         <ref bean="rsmartCustomerMembershipDaoTarget"/>
+      </property>
+      <property name="transactionAttributes">
+         <props>
+            <prop key="*">PROPAGATION_REQUIRED</prop>
+         </props>
+      </property>
+   </bean>
+
+    <bean id="com.rsmart.customer.integration.processor.cle.CleUserProcessor" class="com.rsmart.customer.integration.processor.cle.CleUserProcessor">
+		<property name="filename">
+			<value>/tmp/cleuser.csv</value>
+		</property>
+		<property name="headerRowPresent">
+			<value>false</value>
+		</property>
+		<property name="columns">
+			<value>7</value>
+		</property>
+		<property name="userDirectoryService">
+			<ref bean="org.sakaiproject.user.api.UserDirectoryService"/>
+	    </property>
+	    <property name="updateAllowed">
+			<value>true</value>
+		</property>
+		<property name="archive">
+			<value>false</value>
+		</property>
+        <property name="externallyProvided"><value>false</value></property>
+		<property name="fileArchiveUtil">
+			<ref bean="com.rsmart.customer.integration.util.FileArchiveUtil"/>
+	   </property>
+      <property name="emailService" ref="org.sakaiproject.email.api.EmailService"/>
+      <property name="emailTemplateService" ref="org.sakaiproject.emailtemplateservice.service.EmailTemplateService"/>
+      <property name="userDataService" ref ="com.rsmart.userdataservice.UserDataService"/>
+	</bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.CleRemoveUserProcessor" class="com.rsmart.customer.integration.processor.cle.CleRemoveUserProcessor">
+     <property name="filename">
+        <value>/tmp/cleremoveuser.csv</value>
+     </property>
+     <property name="headerRowPresent">
+        <value>false</value>
+     </property>
+     <property name="columns">
+        <value>1</value>
+     </property>
+     <property name="userDirectoryService">
+        <ref bean="org.sakaiproject.user.api.UserDirectoryService"/>
+      </property>
+      <property name="lookupByUserId">
+        <value>false</value>
+     </property>
+     <property name="sessionManager"  ref="org.sakaiproject.tool.api.SessionManager"/>
+     <property name="archive">
+        <value>false</value>
+     </property>
+		<property name="siteService">
+			<ref bean="org.sakaiproject.site.api.SiteService"/>
+	   </property>      
+     <property name="fileArchiveUtil">
+        <ref bean="com.rsmart.customer.integration.util.FileArchiveUtil"/>
+     </property>
+  </bean>
+
+
+   <bean id="com.rsmart.customer.integration.processor.cle.CleCourseProcessor" class="com.rsmart.customer.integration.processor.cle.CleCourseProcessor">
+		<property name="filename">
+			<value>/tmp/clecourse.csv</value>
+		</property>
+		<property name="headerRowPresent">
+			<value>false</value>
+		</property>
+		<property name="masterSiteId">
+			<value>default</value>
+		</property>
+		<property name="columns">
+			<value>9</value>
+		</property>
+		<property name="userDirectoryService">
+			<ref bean="org.sakaiproject.user.api.UserDirectoryService"/>
+	    </property>
+		<property name="siteService">
+			<ref bean="org.sakaiproject.site.api.SiteService"/>
+	   </property>
+		<property name="archive">
+			<value>false</value>
+		</property>
+		<property name="fileArchiveUtil">
+			<ref bean="com.rsmart.customer.integration.util.FileArchiveUtil"/>
+	   </property>
+	   <property name="serverConfigurationService">
+	   		<ref bean="org.sakaiproject.component.api.ServerConfigurationService"/>
+	   </property>
+	   <property name="contentHostingService" ref="org.sakaiproject.content.api.ContentHostingService" />
+       <property name="siteHelper" >
+           <ref bean="com.rsmart.customer.integration.util.SiteHelper"/>
+       </property>
+       <property name="courseManagementService" ref="org.sakaiproject.coursemanagement.api.CourseManagementService"      />
+       <property name="aliasService"><ref bean="org.sakaiproject.alias.api.AliasService" /></property>
+	</bean>
+
+   <bean id="com.rsmart.customer.integration.processor.cle.CleMembershipProcessor" class="com.rsmart.customer.integration.processor.cle.CleMembershipProcessor">
+		<property name="filename">
+			<value>/tmp/clemembership.csv</value>
+		</property>
+		<property name="headerRowPresent">
+			<value>false</value>
+		</property>
+		<property name="columns">
+			<value>3</value>
+		</property>
+	   <property name="cleMembershipDao">
+			<ref bean="rsmartCustomerIntegrationMembershipDao"/>
+	   </property>
+		<property name="archive">
+			<value>false</value>
+		</property>
+		<property name="fileArchiveUtil">
+			<ref bean="com.rsmart.customer.integration.util.FileArchiveUtil"/>
+	   </property>
+    </bean>
+
+    <bean id="com.rsmart.customer.integration.processor.cle.CleSectionMembershipProcessor"
+        class="com.rsmart.customer.integration.processor.cle.CleSectionMembershipProcessor">
+        <property name="filename">
+            <value>/tmp/clesectionmembership.csv</value>
+        </property>
+        <property name="headerRowPresent">
+            <value>false</value>
+        </property>
+        <property name="columns">
+            <value>4</value>
+        </property>
+        <property name="archive">
+            <value>false</value>
+        </property>
+        <property name="fileArchiveUtil">
+            <ref bean="com.rsmart.customer.integration.util.FileArchiveUtil"/>
+       </property>
+        <property name="sectionManager">
+            <ref bean="org.sakaiproject.section.api.SectionManager"/>
+        </property>
+        <property name="siteHelper" >
+            <ref bean="com.rsmart.customer.integration.util.SiteHelper"/>
+        </property>
+        <property name="studentRole" >
+            <value>student</value>
+        </property>
+        <property name="taRole" >
+            <value>ta</value>
+        </property>
+        <property name="userDirectoryService">
+             <ref bean="org.sakaiproject.user.api.UserDirectoryService"/>
+        </property>
+        <property name="deleteStudents">
+            <value>true</value>
+        </property>
+        <property name="deleteTeachingAssistants">
+            <value>true</value>
+        </property>
+    </bean>
+
+    <bean id="com.rsmart.customer.integration.processor.cle.CleSectionProcessor"
+        class="com.rsmart.customer.integration.processor.cle.CleSectionProcessor">
+        <property name="filename">
+            <value>/tmp/clesection.csv</value>
+        </property>
+        <property name="headerRowPresent">
+            <value>false</value>
+        </property>
+        <property name="columns">
+            <value>5</value>
+        </property>
+        <property name="archive">
+            <value>false</value>
+        </property>
+        <property name="fileArchiveUtil">
+            <ref bean="com.rsmart.customer.integration.util.FileArchiveUtil"/>
+       </property>
+        <property name="siteService">
+            <ref bean="org.sakaiproject.site.api.SiteService"/>
+       </property>
+        <property name="sectionManager">
+            <ref bean="org.sakaiproject.section.api.SectionManager"/>
+        </property>
+        <property name="siteHelper" >
+            <ref bean="com.rsmart.customer.integration.util.SiteHelper"/>            
+        </property>
+        <property name="deleteSections">
+            <value>true</value>
+        </property>
+    </bean>
+
+    <bean id="com.rsmart.customer.integration.processor.cle.CleCourseMemberProcesssor" class="com.rsmart.customer.integration.processor.cle.CleCourseMemberProcesssor">
+	   <property name="cleMembershipDao">
+			<ref bean="rsmartCustomerIntegrationMembershipDao"/>
+	   </property>
+       <property name="siteService">
+			<ref bean="org.sakaiproject.site.api.SiteService"/>
+	   </property>
+	   <property name="userDirectoryService">
+			<ref bean="org.sakaiproject.user.api.UserDirectoryService"/>
+	   </property>
+        <property name="siteHelper" >
+            <ref bean="com.rsmart.customer.integration.util.SiteHelper"/>
+        </property>       
+	</bean>
+
+   <bean id="com.rsmart.customer.integration.util.SiteHelper" class="com.rsmart.customer.integration.util.SiteHelper" init-method="init">
+       <property name="siteService">
+           <ref bean="org.sakaiproject.site.api.SiteService"/>
+       </property>
+       <property name="externalSiteIdCache" ref="com.rsmart.customer.integration.util.externalSiteIdCache"/>
+       <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
+   </bean>
+
+    <bean id="com.rsmart.customer.integration.util.externalSiteIdCache"
+          class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+        <property name="cacheManager">
+            <ref bean="org.sakaiproject.memory.api.MemoryService.cacheManager"/>
+        </property>
+        <property name="cacheName">
+            <value>com.rsmart.customer.integration.util.externalSiteIdCache</value>
+        </property>
+        <property name="maxElementsInMemory">
+            <value>100000</value>
+        </property>
+        <property name="diskPersistent">
+            <value>false</value>
+        </property>
+        <property name="eternal">
+            <value>false</value>
+        </property>
+        <property name="timeToLive">
+            <value>3600</value>
+        </property>
+        <property name="timeToIdle">
+            <value>3600</value>
+        </property>
+    </bean>
+
+
+    <bean id="com.rsmart.customer.integration.util.FileArchiveUtil" class="com.rsmart.customer.integration.util.FileArchiveUtil">
+		<property name="directory">
+			<value>/tmp</value>
+		</property>	
+		<property name="dateFormat">
+			<value>yyyy-MM-dd</value>
+		</property>
+   </bean>
+
+    <bean id="quartzEventsPurgeJob" class="com.rsmart.customer.integration.job.QuartzEventsPurgeJob">
+        <property name="sqlService" ref="org.sakaiproject.db.api.SqlService"/>
+    </bean>
+
+    <bean id="quartzEventsPurgeJobWrapper" class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobBeanWrapper"
+        init-method="init">
+      <property name="beanId">
+         <value>quartzEventsPurgeJob</value>
+      </property>
+      <property name="jobName">
+         <value>Job Scheduler Event Purge</value>
+      </property>
+      <property name="resourceBundleBase" value="com.rsmart.customer.integration.job.Messages"/>
+      <property name="configurableJobProperties">
+          <set>
+              <bean id="number.hours" class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                   <property name="required" value="true"/>
+                   <property name="labelResourceKey" value="number.hours"/>
+                   <property name="descriptionResourceKey" value="number.hours"/>
+                   <property name="defaultValue" value="4"/>
+              </bean>
+              <bean id="jobName.filter" class="org.sakaiproject.component.app.scheduler.jobs.SpringConfigurableJobProperty">
+                   <property name="required" value="true"/>
+                   <property name="labelResourceKey" value="jobName.filter"/>
+                   <property name="descriptionResourceKey" value="jobName.filter.description"/>
+                   <property name="defaultValue" value="%"/>
+              </bean>
+
+          </set>
+      </property>
+      <property name="configurableJobPropertyValidator">
+          <bean class="com.rsmart.customer.integration.job.QuartzEventPurgeValidator"/>
+      </property>
+      <property name="schedulerManager">
+         <ref bean="org.sakaiproject.api.app.scheduler.SchedulerManager" />
+      </property>
+    </bean>
+</beans>
