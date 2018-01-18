@@ -115,6 +115,7 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>SakaiXAPI-Provider</module>
 
                 <!--
                 <module>gradebook2</module>
