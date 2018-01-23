@@ -38,7 +38,6 @@ help https://github.com/sakaiproject/sakai/branches/11.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
-login https://github.com/sakaiproject/sakai/branches/11.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/11.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/11.x/mailsender
 memory https://github.com/sakaiproject/sakai/branches/11.x/memory
@@ -97,6 +96,7 @@ irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irub
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-tool
 certification https://github.com/sakaicontrib/certification/branches/11.x
 kaltura https://github.com/kaltura/sakai-extension/trunk
+login https://github.com/LongsightGroup/sakai/branches/164-11.x/login
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching-no-wildcard
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
