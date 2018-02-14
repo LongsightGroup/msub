@@ -80,7 +80,6 @@ velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
-
 #customizations
 attendance https://github.com/sakaicontrib/attendance/branches/11.x
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
