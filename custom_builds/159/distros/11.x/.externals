@@ -69,7 +69,7 @@ tool https://github.com/sakaiproject/sakai/branches/11.x/tool
 user https://github.com/sakaiproject/sakai/branches/11.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/11.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/11.x/velocity
-web https://source.sakaiproject.org/svn/msub/longsight.com/web/sakai-11.x/
+web https://github.com/sakaiproject/sakai/branches/11.x/web
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 
 #Patcher options: "mavenoptions: <options>"
