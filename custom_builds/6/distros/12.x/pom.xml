@@ -1,11 +1,10 @@
-<?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>master</artifactId>
         <groupId>org.sakaiproject</groupId>
-        <version>11-SNAPSHOT</version>
+        <version>12-SNAPSHOT</version>
         <relativePath>master/pom.xml</relativePath>
     </parent>
 
@@ -34,7 +33,6 @@
         <url>http://issues.sakaiproject.org/jira/browse/SAK</url>
     </issueManagement>
 
-
     <profiles>
         <profile>
             <id>all</id>
@@ -43,23 +41,22 @@
             </activation>
             <modules>
                 <module>master</module>
+                <module>admin-tools</module>
                 <module>access</module>
-                <module>alias</module>
                 <module>announcement</module>
                 <module>archive</module>
                 <module>assignment</module>
-                <module>authz</module>
                 <module>basiclti</module>
                 <module>calendar</module>
                 <module>chat</module>
                 <module>citations</module>
                 <module>cmprovider</module>
                 <module>common</module>
+                <module>commons</module>
                 <module>config</module>
                 <module>cloud-content</module>
                 <module>content</module>
                 <module>content-review</module>
-                <module>content-review/contentreview-impl-vericite</module>
                 <module>courier</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
@@ -80,9 +77,10 @@
                 <module>login</module>
                 <module>mailarchive</module>
                 <module>mailsender</module>
-                <module>memory</module>
                 <module>message</module>
                 <module>msgcntr</module>
+                <module>mycalendar</module>
+                <module>myconnections</module>
                 <module>oauth</module>
                 <module>pasystem</module>
                 <module>podcasts</module>
@@ -93,10 +91,11 @@
                 <module>profile2</module>
                 <module>providers</module>
                 <module>reset-pass</module>
-                <module>rights</module>
                 <module>roster2</module>
                 <module>rsf</module>
+                <!--<module>rubrics</module>-->
                 <module>rwiki</module>
+                <module>tags</module>
                 <module>samigo</module>
                 <module>search</module>
                 <module>sections</module>
@@ -121,9 +120,9 @@
                 <module>da_evalprovider</module>
                 <module>attendance</module>
                 <module>bigbluebutton</module>
-                <module>iclicker</module>
             </modules>
         </profile>
+
         <!-- pack profiles for building release artifacts -->
         <profile>
             <id>pack</id>
@@ -139,6 +138,7 @@
                 <module>pack/pack-bin</module>
             </modules>
         </profile>
+        <!--
         <profile>
             <id>pack-demo</id>
             <modules>
@@ -146,6 +146,7 @@
                 <module>pack/pack-demo</module>
             </modules>
         </profile>
+        -->
         <profile>
             <id>pack-src</id>
             <modules>
@@ -153,7 +154,7 @@
                 <module>pack/pack-src</module>
             </modules>
         </profile>
-        
+
     </profiles>
     <reporting>
         <plugins>
