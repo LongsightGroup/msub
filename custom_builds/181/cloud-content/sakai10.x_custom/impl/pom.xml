@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.sakaiproject.content</groupId>
     <artifactId>cloud-content</artifactId>
-    <version>10.4</version>
+    <version>10.7</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
