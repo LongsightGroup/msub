@@ -12,7 +12,7 @@
     <name>Sakai base pom</name>
     <groupId>org.sakaiproject</groupId>
     <artifactId>base</artifactId>
-    <version>10.4</version>
+    <version>10.7</version>
     <packaging>pom</packaging>
 
     <organization>
@@ -87,7 +87,6 @@
                 <module>help</module>
                 <module>hierarchy</module>
                 <module>iclicker</module>
-                <module>itunesu-tool</module>
                 <module>jobscheduler</module>
                 <module>jsf</module>
                 <module>kaltura</module>
@@ -142,7 +141,6 @@
                 <module>reset-pass</module>
                 <module>taggable</module>
                 <module>turnitin/contentreview-impl</module>
-		        <module>irubric</module>
             </modules>
         </profile>
         <profile>
