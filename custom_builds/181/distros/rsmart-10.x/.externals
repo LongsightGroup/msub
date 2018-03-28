@@ -86,13 +86,13 @@ warehouse -r 323559               https://source.sakaiproject.org/svn/msub/rsmar
 web -r 323560                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/trunk
 webservices -r 323596             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/trunk
 
+#mavenoptions:-Psakai-10 -Psakai10.x -Detudes.util.version=1.0.17 -Dsakai.edu-services.version=10.7 -Dsakai.common.version=10.7 -Dsakai.jdk.version=1.7
+
 # Longsight mods
 kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/181/kernel/sakai10.x_custom
 cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/181/cloud-content/sakai10.x_custom
 lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/181/lessonbuilder/sakai-10.x
 
-#shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
-#shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
-#shell_command find gradebook2/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
-#shell_command find profile2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
-#shell_command find master/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
+#shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.7/g' {} \;
+#shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.7/g' {} \;
+#shell_command find gradebook2/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.7/g' {} \;
