@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.rsmart</groupId>
         <artifactId>support-tool</artifactId>
-        <version>10.4</version>
+        <version>10.7</version>
         <relativePath>../pom.xml</relativePath>        
     </parent>
     <name>rsmart-support-component</name>

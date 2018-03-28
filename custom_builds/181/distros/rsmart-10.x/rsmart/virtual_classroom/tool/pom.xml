@@ -8,7 +8,7 @@
       <artifactId>virtual-classroom-base</artifactId>
       <groupId>com.rsmart</groupId>
       <relativePath>../pom.xml</relativePath>
-      <version>10.4</version>
+      <version>10.7</version>
    </parent>
    <name>virtual-classroom-tool</name>
    <url>http://maven.apache.org</url>

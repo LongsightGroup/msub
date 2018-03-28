@@ -20,7 +20,7 @@
   <parent>
     <artifactId>google-content</artifactId>
     <groupId>com.rsmart</groupId>
-    <version>10.4</version>
+    <version>10.7</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <name>Google Content Mock Impl</name>

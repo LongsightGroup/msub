@@ -4,7 +4,7 @@
   <parent>
     <artifactId>rsmart-upgrade</artifactId>
     <groupId>com.rsmart</groupId>
-    <version>10.4</version>
+    <version>10.7</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>rsmart-upgrade-component</artifactId>

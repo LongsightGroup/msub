@@ -20,7 +20,7 @@
   <parent>
     <artifactId>rsmart-common</artifactId>
     <groupId>com.rsmart</groupId>
-    <version>10.4</version>
+    <version>10.7</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
   <name>Rsmart Common Tool Lib</name>

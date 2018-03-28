@@ -4,7 +4,7 @@
   <parent>
     <artifactId>base</artifactId>
     <groupId>org.sakaiproject</groupId>
-    <version>10.4</version>
+    <version>10.7</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
   <name>grade-exporter-job</name>

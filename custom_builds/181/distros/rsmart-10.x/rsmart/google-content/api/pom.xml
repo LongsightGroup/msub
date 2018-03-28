@@ -20,7 +20,7 @@
   <parent>
     <artifactId>google-content</artifactId>
     <groupId>com.rsmart</groupId>
-    <version>10.4</version>
+    <version>10.7</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <name>Google Content API</name>
@@ -34,7 +34,7 @@
     <dependency>
       <groupId>com.rsmart</groupId>
       <artifactId>google-content-shaded</artifactId>
-      <version>10.4</version>
+      <version>10.7</version>
     </dependency>
 
     <dependency>

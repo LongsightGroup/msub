@@ -7,7 +7,7 @@
     <name>rSmart Skin Synchronization Component</name>
     <groupId>com.rsmart</groupId>
     <artifactId>skinsyncjob-component</artifactId>
-    <version>10.4</version>
+    <version>10.7</version>
     <packaging>sakai-component</packaging>
 
     <properties>
@@ -17,7 +17,7 @@
     <parent>
         <artifactId>skinsyncjob</artifactId>
         <groupId>com.rsmart</groupId>
-        <version>10.4</version>
+        <version>10.7</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
