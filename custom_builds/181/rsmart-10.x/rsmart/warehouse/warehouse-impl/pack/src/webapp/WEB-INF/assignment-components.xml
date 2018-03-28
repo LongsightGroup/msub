@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false">
+
+   <bean id="org.sakaiproject.warehouse.service.PropertyAccess.assignmentsFromContent"
+      class="com.rsmart.warehouse.sakai.assignment.AssignmentFromContentPropAccess">
+      <property name="assignmentService">
+         <ref bean="org.sakaiproject.assignment.api.AssignmentService"></ref>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.service.PropertyAccess.submissionsFromAssignment"
+      class="com.rsmart.warehouse.sakai.assignment.SubmissionsFromAssignment">
+      <property name="assignmentService">
+         <ref bean="org.sakaiproject.assignment.api.AssignmentService"></ref>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.service.WarehouseTask.assignmentContent"
+      class="com.rsmart.warehouse.sakai.assignment.AssignmentWarehouseTask"
+      init-method="init" singleton="true">
+      <property name="dataSource">
+         <ref bean="org.sakaiproject.warehouse.service.DataWarehouseManager.dataSource" />
+      </property>
+      <property name="dataWarehouseManager">
+         <ref bean="org.sakaiproject.warehouse.service.DataWarehouseManager" />
+      </property>
+      <property name="tableDdlResource">
+         <value>/com/rsmart/warehouse/sakai/assignment.xml</value>
+      </property>
+      <property name="assignmentService">
+         <ref bean="org.sakaiproject.assignment.api.AssignmentService" />
+      </property>
+      <property name="sqlService">
+         <ref bean="org.sakaiproject.db.api.SqlService"/>
+      </property>
+      <property name="task">
+         <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentContent" />
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentContent"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>context</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>creator</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>title</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.NestedPropertyAccess">
+               <property name="propertyPath">
+                  <value>instructions</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>timeCreated</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>timeLastModified</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>authorLastModified</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>typeOfSubmission</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>typeOfGrade</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>maxGradePoint</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>groupProject</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.IntrospectedPropertyAccess">
+               <property name="propertyName">
+                  <value>individuallyGraded</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.IntrospectedPropertyAccess">
+               <property name="propertyName">
+                  <value>releaseGrades</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>allowAttachments</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>allowReviewService</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>allowStudentViewReport</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.IntrospectedPropertyAccess">
+               <property name="propertyName">
+                  <value>inUse</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>honorPledge</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="complexFields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <ref bean="org.sakaiproject.warehouse.service.PropertyAccess.assignmentsFromContent"/>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignment"/>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>attachments</value>
+                     </property>
+                  </bean>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentAttachments"/>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>insert into dw_asn_content
+            (CONTENT_ID,SITE_ID,CREATED_BY,TITLE,INSTRUCTION,CREATED_ON,MODIFIED_ON,MODIFIED_BY,SUBMISSION_TYPE,GRADE_TYPE,MAX_POINTS,GROUP_PROJECT,INDIVID_GRADED,RELEASE_GRADES,ALLOW_ATTACHMENTS,ALLOW_REVIEW,ALLOW_STUDENT_VIEW,IN_USE,HONOR_PLEDGE) values
+            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_asn_content</value>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignment"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.NestedPropertyAccess">
+               <property name="propertyPath">
+                  <value>content.id</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>openTime</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>dueTime</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>dropDeadTime</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>closeTime</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>context</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>section</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>draft</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>creator</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>timeCreated</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>timeLastModified</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>authorLastModified</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>title</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>status</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>position_order</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="complexFields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>authors</value>
+                     </property>
+                  </bean>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentAuthors"/>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <ref bean="org.sakaiproject.warehouse.service.PropertyAccess.submissionsFromAssignment"/>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentSubmission"/>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>insert into dw_asn_assignment
+            (ASSIGNMENT_ID, CONTENT_ID,OPEN_TIME,DUE_TIME,DROP_DEAD_TIME,CLOSE_TIME,CONTEXT_ID,SECTION_ID,DRAFT,CREATED_BY,CREATED_ON,MODIFIED_ON,MODIFIED_BY,TITLE,STATUS,POSITION_ORDER) values
+            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_asn_assignment</value>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentAttachments"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <ref bean="org.sakaiproject.warehouse.service.PropertyAccess.identity"/>
+            <bean class="org.sakaiproject.warehouse.impl.BaseParentPropertyAccess">
+               <property name="base">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>id</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>
+            insert into dw_asn_att (ATTACHMENT_ID, CONTENT_ID, RESOURCE_ID) values (?,?,?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_asn_att</value>
+      </property>
+   </bean>
+   
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentAuthors"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <ref bean="org.sakaiproject.warehouse.service.PropertyAccess.identity"/>
+            <bean class="org.sakaiproject.warehouse.impl.BaseParentPropertyAccess">
+               <property name="base">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>id</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>
+            insert into dw_asn_authors (AUTHOR_ID, ASSIGNMENT_ID, USER_ID) values (?,?,?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_asn_authors</value>
+      </property>
+   </bean>
+   
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentSubmission"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.NestedPropertyAccess">
+               <property name="propertyPath">
+                  <value>assignment.id</value>
+               </property>
+            </bean>
+
+
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>context</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>submitted</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>timeSubmitted</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>submittedText</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>feedbackComment</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>feedbackText</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>returned</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>graded</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>gradeReleased</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>grade</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>timeLastModified</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>timeReturned</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>honorPledgeFlag</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>status</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>resubmissionNum</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.TimeObjectPropertyAccess">
+               <property name="propertyName">
+                  <value>closeTime</value>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.ConditionalPropertyAccess">
+               <property name="condition">
+                  <bean class="org.sakaiproject.warehouse.impl.NestedPropertyAccess">
+                     <property name="propertyPath" value="assignment.content.allowReviewService"/>
+                  </bean>
+               </property>
+               <property name="trueProperty">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>reviewScore</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.ConditionalPropertyAccess">
+               <property name="condition">
+                  <bean class="org.sakaiproject.warehouse.impl.NestedPropertyAccess">
+                     <property name="propertyPath" value="assignment.content.allowReviewService"/>
+                  </bean>
+               </property>
+               <property name="trueProperty">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>reviewReport</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.ConditionalPropertyAccess">
+               <property name="condition">
+                  <bean class="org.sakaiproject.warehouse.impl.NestedPropertyAccess">
+                     <property name="propertyPath" value="assignment.content.allowReviewService"/>
+                  </bean>
+               </property>
+               <property name="trueProperty">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>reviewStatus</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="complexFields">
+         <list>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>submitterIds</value>
+                     </property>
+                  </bean>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentSubmitters"/>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>submittedAttachments</value>
+                     </property>
+                  </bean>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentSubmissionAttachments"/>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.ChildFieldWrapper">
+               <property name="propertyAccess">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>feedbackAttachments</value>
+                     </property>
+                  </bean>
+               </property>
+               <property name="task">
+                  <ref bean="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentFeedbackAttachments"/>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>insert into dw_asn_sub
+            (SUBMISSION_ID, ASSIGNMENT_ID, CONTEXT_ID, SUBMITTED, SUBMITTED_ON, SUBMITTED_TEXT, FEEDBACK_COMMENT, FEEDBACK_TEXT, RETURNED, GRADED, GRADE_RELEASED, GRADE, MODIFIED_ON, RETURNED_ON, HONOR_PLEDGE, STATUS, RESUBMISSION_NUM, CLOSED_ON, REVIEW_SCORE, REVIEW_REPORT, REVIEW_STATUS) values
+            (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_asn_sub</value>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentSubmitters"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <ref bean="org.sakaiproject.warehouse.service.PropertyAccess.identity"/>
+            <bean class="org.sakaiproject.warehouse.impl.BaseParentPropertyAccess">
+               <property name="base">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>id</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.SelfPropertyAccess"/>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>
+            insert into dw_asn_submitters (SUBMITTER_ID, SUBMISSION_ID, USER_ID) values (?,?,?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_asn_submitters</value>
+      </property>
+   </bean>
+
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentFeedbackAttachments"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <ref bean="org.sakaiproject.warehouse.service.PropertyAccess.identity"/>
+            <bean class="org.sakaiproject.warehouse.impl.BaseParentPropertyAccess">
+               <property name="base">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>id</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>
+            insert into dw_asn_sub_fba (ATTACHMENT_ID, SUBMISSION_ID, RESOURCE_ID) values (?,?,?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_asn_sub_fba</value>
+      </property>
+   </bean>
+   
+   <bean id="org.sakaiproject.warehouse.sakai.assignment.ChildWarehouseTask.rsnAssignmentSubmissionAttachments"
+      class="org.sakaiproject.warehouse.impl.BaseChildWarehouseTask">
+      <property name="fields">
+         <list>
+            <ref bean="org.sakaiproject.warehouse.service.PropertyAccess.identity"/>
+            <bean class="org.sakaiproject.warehouse.impl.BaseParentPropertyAccess">
+               <property name="base">
+                  <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+                     <property name="propertyName">
+                        <value>id</value>
+                     </property>
+                  </bean>
+               </property>
+            </bean>
+            <bean class="org.sakaiproject.warehouse.impl.BeanPropertyAccess">
+               <property name="propertyName">
+                  <value>id</value>
+               </property>
+            </bean>
+         </list>
+      </property>
+      <property name="insertStmt">
+         <value>
+            insert into dw_asn_sub_att (ATTACHMENT_ID, SUBMISSION_ID, RESOURCE_ID) values (?,?,?)
+         </value>
+      </property>
+      <property name="clearStmt">
+         <value>delete from dw_asn_sub_att</value>
+      </property>
+   </bean>
+   
+</beans>

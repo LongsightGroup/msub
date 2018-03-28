@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>rsmart-gateway-config</artifactId>
+    <groupId>com.rsmart</groupId>
+    <version>10.4</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>rsmart-gateway-component</artifactId>
+  <groupId>com.rsmart</groupId>
+  <name>Rsmart Gateway Component</name>
+  <organization>
+    <name>The rSmart Group</name>
+    <url>http://www.rsmart.com</url>
+  </organization>
+  <inceptionYear>2000</inceptionYear>
+  <packaging>sakai-component</packaging>
+  <properties>
+    <deploy.target>components</deploy.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>rsmart-common-impl</artifactId>
+      <version>${sakai.version}</version>
+<!--properties:  war.bundle: true -->
+    </dependency>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>rsmart-common-tool-lib</artifactId>
+      <version>${sakai.version}</version>
+<!--properties:  war.bundle: true -->
+    </dependency>
+    <dependency>
+      <groupId>com.rsmart</groupId>
+      <artifactId>rsmart-osp-integration-impl</artifactId>
+      <version>${sakai.version}</version>
+<!--properties:  war.bundle: true -->
+    </dependency>
+    <dependency>
+      <groupId>org.sakaiproject.osp</groupId>
+      <artifactId>osp-integration-impl</artifactId>
+      <version>${sakai.version}</version>
+<!--properties:  war.bundle: true -->
+    </dependency>
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>${basedir}/src/bundle</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+    </resources>
+    <sourceDirectory>src/java</sourceDirectory>
+<!-- other resources for the jar - the message bundles -->
+  </build>
+</project>
