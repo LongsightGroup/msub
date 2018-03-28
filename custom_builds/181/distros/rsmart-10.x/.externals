@@ -87,9 +87,9 @@ web -r 323560                     https://source.sakaiproject.org/svn/msub/rsmar
 webservices -r 323596             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/trunk
 
 # Longsight mods
-kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/kernel/sakai10.x_custom
-cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/cloud-content/sakai10.x_custom
-lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/lessonbuilder/sakai-10.x
+kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/181/kernel/sakai10.x_custom
+cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/181/cloud-content/sakai10.x_custom
+lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/181/lessonbuilder/sakai-10.x
 
 #shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
 #shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
