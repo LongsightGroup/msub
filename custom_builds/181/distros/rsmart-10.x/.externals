@@ -1,0 +1,98 @@
+access -r 323502                  https://source.sakaiproject.org/svn/msub/rsmart.com/access/trunk
+alias -r 323503                   https://source.sakaiproject.org/svn/msub/rsmart.com/alias/trunk
+ambrosia -r 88080                https://source.sakaiproject.org/contrib/rsmart/msub/ambrosia/trunk
+announcement -r 323504            https://source.sakaiproject.org/svn/msub/rsmart.com/announcement/trunk
+archive -r 323505                 https://source.sakaiproject.org/svn/msub/rsmart.com/archive/trunk
+assignment -r 323578              https://source.sakaiproject.org/svn/msub/rsmart.com/assignment/trunk
+authz -r 323506                   https://source.sakaiproject.org/svn/msub/rsmart.com/authz/trunk
+basiclti -r 323507                https://source.sakaiproject.org/svn/msub/rsmart.com/basiclti/trunk
+bigbluebutton -r 369           https://github.com/asahinet/bigbluebutton-sakai/branches/10.7.x/bbb-tool
+blogwow -r 88081                 https://source.sakaiproject.org/contrib/rsmart/msub/blogwow/trunk
+calendar -r 323508                https://source.sakaiproject.org/svn/msub/rsmart.com/calendar/trunk
+certification -r 32           https://github.com/asahinet/certification/branches/sakai10.7
+chat -r 323518                    https://source.sakaiproject.org/svn/msub/rsmart.com/chat/trunk
+clog -r 338                     https://github.com/asahinet/clog/branches/10.7.x
+citations -r 323519               https://source.sakaiproject.org/svn/msub/rsmart.com/citations/trunk
+common -r 323581                  https://source.sakaiproject.org/svn/msub/rsmart.com/common/trunk
+config -r 323521                  https://source.sakaiproject.org/svn/msub/rsmart.com/config/trunk
+content -r 323528                 https://source.sakaiproject.org/svn/msub/rsmart.com/content/trunk
+content-review -r 323582          https://source.sakaiproject.org/svn/msub/rsmart.com/content-review/trunk
+courier -r 323530                 https://source.sakaiproject.org/svn/msub/rsmart.com/courier/trunk
+dav -r 323531                     https://source.sakaiproject.org/svn/msub/rsmart.com/dav/trunk
+delegatedaccess -r 323509         https://source.sakaiproject.org/svn/msub/rsmart.com/delegatedaccess/trunk
+edia-sakai-utils -r 88082        https://source.sakaiproject.org/contrib/rsmart/msub/edia-sakai-utils/trunk
+edu-services -r 323571            https://source.sakaiproject.org/svn/msub/rsmart.com/edu-services/trunk
+emailtemplateservice -r 323510    https://source.sakaiproject.org/svn/msub/rsmart.com/emailtemplateservice/trunk
+entitybroker -r 323583            https://source.sakaiproject.org/svn/msub/rsmart.com/entitybroker/trunk
+etudes-util -r 88083             https://source.sakaiproject.org/contrib/rsmart/msub/etudes-util/trunk
+external-calendaring-service -r 323512 https://source.sakaiproject.org/svn/msub/rsmart.com/external-calendaring-service/trunk
+evaluation -r 88084              https://source.sakaiproject.org/contrib/rsmart/msub/evaluation/trunk
+gradebook -r 323584               https://source.sakaiproject.org/svn/msub/rsmart.com/gradebook/trunk
+gradebook2 -r 88085              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/trunk
+help -r 323513                    https://source.sakaiproject.org/svn/msub/rsmart.com/help/trunk
+hierarchy -r 323514               https://source.sakaiproject.org/svn/msub/rsmart.com/hierarchy/trunk
+itunesu-tool -r 88087            https://source.sakaiproject.org/contrib/rsmart/msub/itunesu-tool/trunk
+iclicker -r 88086                https://source.sakaiproject.org/contrib/rsmart/msub/iclicker/trunk
+jforum -r 88088                  https://source.sakaiproject.org/contrib/rsmart/msub/jforum/trunk
+jobscheduler -r 323586            https://source.sakaiproject.org/svn/msub/rsmart.com/jobscheduler/trunk
+jsf -r 323587                     https://source.sakaiproject.org/svn/msub/rsmart.com/jsf/trunk
+kaltura -r 323555                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/trunk
+login -r 323589                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/trunk
+mailarchive -r 323523             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/trunk
+mailsender -r 323524              https://source.sakaiproject.org/svn//msub/rsmart.com/mailsender/trunk
+master -r 323577                  https://source.sakaiproject.org/svn/msub/rsmart.com/master/trunk
+melete -r 88089                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/trunk
+memory -r 323525                  https://source.sakaiproject.org/svn/msub/rsmart.com/memory/trunk
+message -r 323534                 https://source.sakaiproject.org/svn/msub/rsmart.com/message/trunk
+messageservice -r 88090          https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/trunk
+metaobj -r 323590                 https://source.sakaiproject.org/svn/msub/rsmart.com/metaobj/trunk
+msgcntr -r 323591                 https://source.sakaiproject.org/svn/msub/rsmart.com/msgcntr/trunk
+osp -r 323537                     https://source.sakaiproject.org/svn/msub/rsmart.com/osp/trunk
+pack -r 323538                    https://source.sakaiproject.org/svn/msub/rsmart.com/pack/trunk 
+podcasts -r 323526                https://source.sakaiproject.org/svn/msub/rsmart.com/podcasts/trunk
+polls -r 323527                   https://source.sakaiproject.org/svn/msub/rsmart.com/polls/trunk
+portal -r 323576                  https://source.sakaiproject.org/svn/msub/rsmart.com/portal/trunk
+postem -r 323565                  https://source.sakaiproject.org/svn/msub/rsmart.com/postem/trunk
+presence -r 323566                https://source.sakaiproject.org/svn/msub/rsmart.com/presence/trunk
+profile2 -r 323539                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/trunk
+providers -r 323540               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/trunk
+reference -r 323541               https://source.sakaiproject.org/svn/msub/rsmart.com/reference/trunk
+reports -r 323592                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/trunk
+reset-pass -r 323542              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/trunk
+rights -r 323543                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/trunk
+roster2 -r 323567                 https://source.sakaiproject.org/svn/msub/rsmart.com/roster2/trunk
+rwiki -r 323572                   https://source.sakaiproject.org/svn/msub/rsmart.com/rwiki/trunk
+sakai-mock -r 323569              https://source.sakaiproject.org/svn/msub/rsmart.com/sakai-mock/trunk
+sakora -r 88091                  https://source.sakaiproject.org/contrib/rsmart/msub/sakora/trunk
+sam -r 323579                     https://source.sakaiproject.org/svn/msub/rsmart.com/sam/trunk
+search -r 323570                  https://source.sakaiproject.org/svn/msub/rsmart.com/search/trunk
+sections -r 323594                https://source.sakaiproject.org/svn/msub/rsmart.com/sections/trunk
+shortenedurl -r 323545            https://source.sakaiproject.org/svn/msub/rsmart.com/shortenedurl/trunk
+signup -r 323546                  https://source.sakaiproject.org/svn/msub/rsmart.com/signup/trunk 
+site -r 323634                    https://source.sakaiproject.org/svn/msub/rsmart.com/site/trunk
+site-manage -r 323550             https://source.sakaiproject.org/svn/msub/rsmart.com/site-manage/trunk
+sitestats -r 323551               https://source.sakaiproject.org/svn/msub/rsmart.com/sitestats/trunk
+skin-manager -r 88092            https://source.sakaiproject.org/contrib/rsmart/msub/skin-manager/trunk
+syllabus -r 323562                https://source.sakaiproject.org/svn/msub/rsmart.com/syllabus/trunk
+taggable -r 323563                https://source.sakaiproject.org/svn/msub/rsmart.com/taggable/trunk
+textarea -r 323564                https://source.sakaiproject.org/svn/msub/rsmart.com/textarea/trunk
+tool -r 323552                    https://source.sakaiproject.org/svn/msub/rsmart.com/tool/trunk
+turnitin -r 88093                https://source.sakaiproject.org/contrib/rsmart/msub/turnitin/trunk
+user -r 323554                    https://source.sakaiproject.org/svn/msub/rsmart.com/user/trunk
+userauditservice -r 323556        https://source.sakaiproject.org/svn/msub/rsmart.com/userauditservice/trunk
+usermembership -r 323557          https://source.sakaiproject.org/svn/msub/rsmart.com/usermembership/trunk
+velocity -r 323558                https://source.sakaiproject.org/svn/msub/rsmart.com/velocity/trunk
+warehouse -r 323559               https://source.sakaiproject.org/svn/msub/rsmart.com/warehouse/trunk
+web -r 323560                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/trunk
+webservices -r 323596             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/trunk
+
+# Longsight mods
+kernel                            https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/kernel/sakai10.x_custom
+cloud-content                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/cloud-content/sakai10.x_custom
+lessonbuilder                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/lessonbuilder/sakai-10.x
+
+#shell_command find content/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
+#shell_command find webservices/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
+#shell_command find gradebook2/ -name pom.xml -exec sed -i 's/10-SNAPSHOT/10.4/g' {} \;
+#shell_command find profile2/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
+#shell_command find master/ -name pom.xml -exec sed -i 's/10.6/10.4/g' {} \;
