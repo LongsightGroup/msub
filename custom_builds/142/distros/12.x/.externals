@@ -90,7 +90,7 @@ webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Additional tools
-bbb-tool https://github.com/sakaicontrib/bbb-tool/trunk
+#bbb-tool https://github.com/sakaicontrib/bbb-tool/trunk
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 #content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help

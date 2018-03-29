@@ -57,7 +57,6 @@
                 <module>cloud-content</module>
                 <module>content</module>
                 <module>content-review</module>
-                <!--module>content-review/turnitin</module-->
                 <module>courier</module>
                 <module>dav</module>
                 <module>delegatedaccess</module>
@@ -119,7 +118,7 @@
                 <module>web</module>
                 <module>webjars</module>
                 <module>webservices</module>
-                <module>bbb-tool</module>
+                <!--module>bbb-tool</module-->
                 <module>blogwow</module>
                 <!--module>kaltura</module-->
                 <module>SakaiXAPI-Provider</module>
