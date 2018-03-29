@@ -120,6 +120,8 @@
                 <module>webservices</module>
                 <!--module>bbb-tool</module-->
                 <module>blogwow</module>
+                <module>irubric-core</module>
+                <module>irubric-tool</module>
                 <!--module>kaltura</module-->
                 <module>SakaiXAPI-Provider</module>
             </modules>
