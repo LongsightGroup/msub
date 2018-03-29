@@ -115,9 +115,11 @@
                 <module>web</module>
                 <module>webservices</module>
                 <module>content-review/contentreview-impl-vericite</module>
+
+                <!--
                 <module>etudes-util</module>
                 <module>melete</module>
-                <!--module>gradebook2</module-->
+                <module>gradebook2</module>
                 <module>evaluation</module>
                 <module>metaobj</module>
                 <module>rsmart/common</module>
@@ -125,14 +127,16 @@
                 <module>rsmart/user</module>
                 <module>rsmart/user-data-service</module>
                 <module>rsmart/certification</module>
+                <module>clog</module>
+                <module>blogwow</module>
+                <module>kaltura</module>
+                -->
+
                 <!--
                 <module>rsmart/customer</module>
                 <module>rsmart/integration</module>
                 -->
                 <module>cloud-content</module>
-                <module>clog</module>
-                <module>blogwow</module>
-                <module>kaltura</module>
             </modules>
         </profile>
         <profile>
