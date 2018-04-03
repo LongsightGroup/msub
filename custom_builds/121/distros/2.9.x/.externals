@@ -11,6 +11,7 @@
 #git_project edtell
 #git_project entitybroker
 #git_project help
+#git_project jobscheduler
 #git_project msgcntr
 #git_project lessonbuilder
 #git_project login
