@@ -94,8 +94,8 @@ webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 #content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
-irubric-core https://source.sakaiproject.org/contrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
-irubric-tool https://source.sakaiproject.org/contrib/irubric/branches/sakai12-SNAPSHOT/irubric-tool/
+irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
+irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
 #kaltura https://github.com/kaltura/sakai-extension/trunk
 login https://github.com/LongsightGroup/sakai/branches/142-12.x/login
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/12.x
