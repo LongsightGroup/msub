@@ -100,3 +100,5 @@ irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/
 login https://github.com/LongsightGroup/sakai/branches/142-12.x/login
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x
+
+#shell_command find irubric-tool/ -name pom.xml -exec sed -i 's/\${sakai.kernel.version}/12-SNAPSHOT/g' {} \;
