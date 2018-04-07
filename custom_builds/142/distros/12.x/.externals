@@ -54,7 +54,6 @@ pack https://github.com/sakaiproject/sakai/branches/12.x/pack
 pasystem https://github.com/sakaiproject/sakai/branches/12.x/pasystem
 podcasts https://github.com/sakaiproject/sakai/branches/12.x/podcasts
 polls https://github.com/sakaiproject/sakai/branches/12.x/polls
-portal https://github.com/sakaiproject/sakai/branches/12.x/portal
 postem https://github.com/sakaiproject/sakai/branches/12.x/postem
 presence https://github.com/sakaiproject/sakai/branches/12.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/12.x/profile2
@@ -92,12 +91,13 @@ webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
 # Additional tools
 #bbb-tool https://github.com/sakaicontrib/bbb-tool/trunk
 blogwow https://github.com/sakaicontrib/blogwow/trunk
-#content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
 irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
 irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
 #kaltura https://github.com/kaltura/sakai-extension/trunk
 login https://github.com/LongsightGroup/sakai/branches/142-12.x/login
+portal https://github.com/LongsightGroup/sakai/branches/142-12.x/portal
+
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x
 
