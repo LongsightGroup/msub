@@ -102,3 +102,6 @@ SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/Sakai
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x
 
 #shell_command find irubric-tool/ -name pom.xml -exec sed -i 's/\${sakai.kernel.version}/12-SNAPSHOT/g' {} \;
+
+# This can be removed once SAK-34091 is resolved in 12.x
+#shell_command curl https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/5490.patch |patch -p1
