@@ -117,7 +117,7 @@
                 <module>webservices</module>
                 <module>blogwow</module>
                 <module>evaluation</module>
-                <module>da_evalprovider</module>
+                <!-- module>da_evalprovider</module -->
                 <module>attendance</module>
                 <!-- module>bigbluebutton</module -->
             </modules>
