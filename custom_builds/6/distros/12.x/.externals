@@ -91,7 +91,7 @@ evaluation https://github.com/LongsightGroup/evaluation/trunk
 #da_evalprovider https://github.com/LongsightGroup/da_evalprovider/trunk
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-12.x_jldap-auth-caching
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
-#bigbluebutton https://github.com/sakaicontrib/bbb-tool/branches/12.x
+bbb-tool https://github.com/ottenhoff/bbb-tool/branches/sakai13-update
 attendance https://github.com/ottenhoff/attendance/branches/hibernate4-update
 #iclicker https://github.com/sakaicontrib/iclicker/branches/12.x
 
