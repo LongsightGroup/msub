@@ -119,7 +119,7 @@
                 <module>evaluation</module>
                 <module>da_evalprovider</module>
                 <module>attendance</module>
-                <module>bigbluebutton</module>
+                <!-- module>bigbluebutton</module -->
             </modules>
         </profile>
 
