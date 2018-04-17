@@ -39,7 +39,6 @@ help https://github.com/sakaiproject/sakai/branches/11.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
-login https://github.com/sakaiproject/sakai/branches/11.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/11.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/11.x/mailsender
 memory https://github.com/sakaiproject/sakai/branches/11.x/memory
@@ -94,6 +93,7 @@ kaltura https://github.com/kaltura/sakai-extension/trunk
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/51-11.x/config
 site-manage https://github.com/LongsightGroup/sakai/branches/51-11.x/site-manage
+login https://github.com/LongsightGroup/sakai/branches/51-11.x/login
 
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
