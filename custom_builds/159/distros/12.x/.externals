@@ -101,3 +101,4 @@ edu-services https://github.com/LongsightGroup/sakai/branches/159-12.x/edu-servi
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/11-SNAPSHOT/12-SNAPSHOT/g' {} \;
