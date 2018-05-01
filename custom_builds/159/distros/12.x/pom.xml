@@ -115,7 +115,6 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>blogwow</module>
                 <module>attendance</module>
                 <module>bbb-tool</module>
                 <module>gradebook-export</module>
