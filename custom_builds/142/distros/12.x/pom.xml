@@ -118,7 +118,8 @@
                 <module>web</module>
                 <module>webjars</module>
                 <module>webservices</module>
-                <!--module>bbb-tool</module-->
+                <module>attendance</module>
+                <module>bbb-tool</module>
                 <module>blogwow</module>
                 <module>irubric-core</module>
                 <module>irubric-tool</module>

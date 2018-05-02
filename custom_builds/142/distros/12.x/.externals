@@ -89,7 +89,8 @@ webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Additional tools
-#bbb-tool https://github.com/sakaicontrib/bbb-tool/trunk
+attendance https://github.com/ottenhoff/attendance/branches/hibernate4-update
+bbb-tool https://github.com/ottenhoff/bbb-tool/branches/sakai13-update
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
 irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
@@ -105,3 +106,4 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # This can be removed once SAK-34091 is resolved in 12.x
 #shell_command curl https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/5490.patch |patch -p1
+#shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
