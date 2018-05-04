@@ -118,7 +118,7 @@
                 <module>blogwow</module>
                 <module>clog</module>
                 <module>evaluation</module>
-                <module>certification</module>
+                <module>gradebook-export</module>
                 <!--module>rsmart</module-->
             </modules>
         </profile>
