@@ -88,6 +88,7 @@ evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 clog https://github.com/sakaicontrib/clog/branches/11.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
+gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/get-all-current-terms
 
 # Commented out to speed builds up
 #gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
