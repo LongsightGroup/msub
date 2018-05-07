@@ -2,24 +2,26 @@
 #shell_command git clone git@github.com:edtell/founders.git && mv founders/* ./
 
 #GIT Projects
-#git_project kernel
-#git_project samigo
-#git_project rsmart
-#git_project gradebook2
+
 #git_project assignment
 #git_project assignment2
-#git_project edtell
-#git_project entitybroker
-#git_project help
-#git_project jobscheduler
-#git_project msgcntr
-#git_project lessonbuilder
-#git_project login
-#git_project portal
-#git_project usermembership
 #git_project cloud-content
 #git_project content
+#git_project edtell
 #git_project edu-services
+#git_project entitybroker
+#git_project gradebook2
+#git_project help
+#git_project kernel
+#git_project lessonbuilder
+#git_project login
+#git_project msgcntr
+#git_project portal
+#git_project roster
+#git_project rsmart
+#git_project samigo
+#git_project sections
 #git_project site-manage
 #git_project sitestats
+#git_project usermembership
 #git_project web
