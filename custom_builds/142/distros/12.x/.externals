@@ -32,7 +32,6 @@ content https://github.com/sakaiproject/sakai/branches/12.x/content
 courier https://github.com/sakaiproject/sakai/branches/12.x/courier
 dav https://github.com/sakaiproject/sakai/branches/12.x/dav
 deploy https://github.com/sakaiproject/sakai/branches/12.x/deploy
-edu-services https://github.com/sakaiproject/sakai/branches/12.x/edu-services
 endorsed https://github.com/sakaiproject/sakai/branches/12.x/endorsed
 feedback https://github.com/sakaiproject/sakai/branches/12.x/feedback
 gradebook https://github.com/sakaiproject/sakai/branches/12.x/gradebook
@@ -102,8 +101,8 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x
 
-#shell_command find irubric-tool/ -name pom.xml -exec sed -i 's/\${sakai.kernel.version}/12-SNAPSHOT/g' {} \;
+# Custom grade scale only
+edu-services https://github.com/LongsightGroup/sakai/branches/142-12.x/edu-services
 
-# This can be removed once SAK-34091 is resolved in 12.x
-#shell_command curl https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/5490.patch |patch -p1
+#shell_command find irubric-tool/ -name pom.xml -exec sed -i 's/\${sakai.kernel.version}/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
