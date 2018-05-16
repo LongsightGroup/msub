@@ -87,7 +87,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 
 # Contrib / 3rd Party tools
 attendance https://github.com/sakaicontrib/attendance/trunk
-bbb-tool https://github.com/ottenhoff/bbb-tool/branches/sakai13-update
+bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 
 # Customizations
