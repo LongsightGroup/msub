@@ -80,8 +80,7 @@
                 <module>emailtemplateservice</module>
                 <module>entitybroker</module>
                 <module>etudes-util</module>
-                <module>evaluation</module>
-		        <module>external-calendaring-service</module>
+		<module>external-calendaring-service</module>
                 <module>gradebook</module>
                 <module>gradebook2</module>
                 <module>help</module>
@@ -110,7 +109,6 @@
                 <module>metaobj</module>
                 <module>osp</module>
                 <module>providers</module>
-                <module>reference</module>
                 <module>mailarchive</module>
                 <module>warehouse</module>
                 <module>rsmart</module>

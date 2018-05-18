@@ -25,9 +25,7 @@ emailtemplateservice -r 323510    https://source.sakaiproject.org/svn/msub/rsmar
 entitybroker -r 323583            https://source.sakaiproject.org/svn/msub/rsmart.com/entitybroker/trunk
 etudes-util -r 88083             https://source.sakaiproject.org/contrib/rsmart/msub/etudes-util/trunk
 external-calendaring-service -r 323512 https://source.sakaiproject.org/svn/msub/rsmart.com/external-calendaring-service/trunk
-evaluation -r 88084              https://source.sakaiproject.org/contrib/rsmart/msub/evaluation/trunk
 gradebook -r 323584               https://source.sakaiproject.org/svn/msub/rsmart.com/gradebook/trunk
-gradebook2 -r 88085              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/trunk
 help -r 323513                    https://source.sakaiproject.org/svn/msub/rsmart.com/help/trunk
 hierarchy -r 323514               https://source.sakaiproject.org/svn/msub/rsmart.com/hierarchy/trunk
 itunesu-tool -r 88087            https://source.sakaiproject.org/contrib/rsmart/msub/itunesu-tool/trunk
@@ -55,7 +53,6 @@ postem -r 323565                  https://source.sakaiproject.org/svn/msub/rsmar
 presence -r 323566                https://source.sakaiproject.org/svn/msub/rsmart.com/presence/trunk
 profile2 -r 323539                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/trunk
 providers -r 323540               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/trunk
-reference -r 323541               https://source.sakaiproject.org/svn/msub/rsmart.com/reference/trunk
 reports -r 323592                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/trunk
 reset-pass -r 323542              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/trunk
 rights -r 323543                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/trunk
