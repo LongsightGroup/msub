@@ -103,6 +103,7 @@
                 <module>postem</module>
                 <module>presence</module>
                 <module>profile2</module>
+                <module>rsmart</module>
                 <!--
 	        <module>jforum</module>
                 <module>login</module>
