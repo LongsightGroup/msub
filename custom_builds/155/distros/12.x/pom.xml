@@ -115,7 +115,7 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>clog</module>
+                <module>blogwow</module>
                 <module>attendance</module>
                 <module>rsmart</module>
                 <module>SakaiXAPI-Provider</module>
