@@ -85,6 +85,7 @@ providers https://github.com/sakaiproject/sakai/branches/11.x/providers
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
+certification https://github.com/sakaicontrib/certification/branches/11.x
 content-review https://github.com/LongsightGroup/sakai/branches/104-11.x/content-review
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 

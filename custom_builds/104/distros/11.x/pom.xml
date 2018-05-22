@@ -202,7 +202,7 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>yaft</module>
+                <module>certification</module>
             </modules>
         </profile>
         
