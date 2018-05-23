@@ -120,6 +120,7 @@
                 <module>bbb-tool</module>
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
+                <module>rsmart</module>
             </modules>
         </profile>
 
