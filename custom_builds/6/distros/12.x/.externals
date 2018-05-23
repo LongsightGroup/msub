@@ -88,7 +88,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 # Contrib / 3rd Party tools
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 evaluation https://github.com/sakaicontrib/evaluation/branches/12.x
-#da_evalprovider https://github.com/LongsightGroup/da_evalprovider/trunk
+da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/12.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-12.x_jldap-auth-caching
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
