@@ -86,8 +86,8 @@ webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Additional tools
-attendance https://github.com/ottenhoff/attendance/branches/hibernate4-update
-bbb-tool https://github.com/ottenhoff/bbb-tool/branches/sakai13-update
+attendance https://github.com/sakaicontrib/attendance/trunk
+bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 gradebookng https://github.com/LongsightGroup/sakai/branches/142-12.x/gradebookng
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
