@@ -35,6 +35,7 @@ deploy https://github.com/sakaiproject/sakai/branches/12.x/deploy
 endorsed https://github.com/sakaiproject/sakai/branches/12.x/endorsed
 feedback https://github.com/sakaiproject/sakai/branches/12.x/feedback
 gradebook https://github.com/sakaiproject/sakai/branches/12.x/gradebook
+gradebookng https://github.com/sakaiproject/sakai/branches/12.x/gradebookng
 jobscheduler https://github.com/sakaiproject/sakai/branches/12.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/12.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/12.x/lessonbuilder
@@ -89,7 +90,6 @@ webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
 attendance https://github.com/sakaicontrib/attendance/trunk
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
-gradebookng https://github.com/LongsightGroup/sakai/branches/142-12.x/gradebookng
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
 irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
 irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
