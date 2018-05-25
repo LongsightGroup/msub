@@ -92,6 +92,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 attendance https://github.com/ottenhoff/attendance/branches/hibernate4-update
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
+certification https://github.com/sakaicontrib/certification/branches/12.x
 irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
 irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-12.x/
