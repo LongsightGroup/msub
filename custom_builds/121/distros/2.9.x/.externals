@@ -12,6 +12,7 @@
 #git_project entitybroker
 #git_project gradebook2
 #git_project help
+#git_project jsf
 #git_project kernel
 #git_project lessonbuilder
 #git_project login
