@@ -118,6 +118,7 @@
                 <module>blogwow</module>
                 <module>attendance</module>
                 <module>bbb-tool</module>
+                <module>evaluation</module>
             </modules>
         </profile>
 
