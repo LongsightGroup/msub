@@ -101,3 +101,4 @@ profile2 https://github.com/LongsightGroup/sakai/branches/152-12.x/profile2
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
+#shell_command git revert -n 94c767a20a07b2d34fc28f1220a189a02012bbbe
