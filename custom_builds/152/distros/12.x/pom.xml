@@ -119,9 +119,11 @@
                 <module>attendance</module>
                 <module>bbb-tool</module>
                 <module>certification</module>
+                <module>rsmart</module>
+                <!--
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
-                <module>rsmart</module>
+                -->
             </modules>
         </profile>
 
