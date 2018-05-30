@@ -21,7 +21,6 @@ admin-tools  https://github.com/sakaiproject/sakai/branches/12.x/admin-tools
 announcement https://github.com/sakaiproject/sakai/branches/12.x/announcement
 archive https://github.com/sakaiproject/sakai/branches/12.x/archive
 assignment https://github.com/sakaiproject/sakai/branches/12.x/assignment
-basiclti https://github.com/sakaiproject/sakai/branches/12.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/12.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/12.x/chat
 citations https://github.com/sakaiproject/sakai/branches/12.x/citations
@@ -98,7 +97,9 @@ rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-12.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 profile2 https://github.com/LongsightGroup/sakai/branches/152-12.x/profile2
 
+# Remove this if 12.x is building correctly
+basiclti -r49159 https://github.com/sakaiproject/sakai/branches/12.x/basiclti
+
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
-#shell_command git revert -n 94c767a20a07b2d34fc28f1220a189a02012bbbe
