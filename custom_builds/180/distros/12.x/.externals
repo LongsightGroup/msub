@@ -88,10 +88,10 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Contrib / 3rd Party tools
-attendance https://github.com/ottenhoff/attendance/branches/hibernate4-update
-bbb-tool https://github.com/ottenhoff/bbb-tool/branches/sakai13-update
-blogwow https://github.com/sakaicontrib/blogwow/trunk
-#da_evalprovider https://github.com/LongsightGroup/da_evalprovider/trunk
+attendance https://github.com/sakaicontrib/attendance/trunk
+bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
+blogwow https://github.com/sakaicontrib/blogwow/branches/12.x
+da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/12.x
 evaluation https://github.com/LongsightGroup/evaluation/trunk
 irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
 irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
