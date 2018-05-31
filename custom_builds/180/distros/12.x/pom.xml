@@ -120,8 +120,8 @@
                 <module>da_evalprovider</module>
                 <module>attendance</module>
                 <module>bbb-tool</module>
-                <module>irubric-core</module>
-                <module>irubric-tool</module>
+                <!--module>irubric-core</module>
+                <module>irubric-tool</module-->
             </modules>
         </profile>
 
