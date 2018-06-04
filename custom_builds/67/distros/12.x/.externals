@@ -39,6 +39,7 @@ gradebook https://github.com/sakaiproject/sakai/branches/12.x/gradebook
 gradebookng https://github.com/sakaiproject/sakai/branches/12.x/gradebookng
 jobscheduler https://github.com/sakaiproject/sakai/branches/12.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/12.x/kernel
+lessonbuilder https://github.com/sakaiproject/sakai/branches/12.x/lessonbuilder
 library https://github.com/sakaiproject/sakai/branches/12.x/library
 login https://github.com/sakaiproject/sakai/branches/12.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/12.x/mailarchive
@@ -93,7 +94,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 help https://github.com/LongsightGroup/sakai/branches/67-12.x/help
-lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-12.x/lessonbuilder
+#lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-12.x/lessonbuilder
 providers https://github.com/LongsightGroup/sakai/branches/67-12.x/providers
 site-manage https://github.com/LongsightGroup/sakai/branches/67-12.x/site-manage
 
