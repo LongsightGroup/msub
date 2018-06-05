@@ -67,7 +67,6 @@ shortenedurl https://github.com/sakaiproject/sakai/branches/12.x/shortenedurl
 simple-rss-portlet https://github.com/sakaiproject/sakai/branches/12.x/simple-rss-portlet
 signup https://github.com/sakaiproject/sakai/branches/12.x/signup
 site https://github.com/sakaiproject/sakai/branches/12.x/site
-site-manage https://github.com/sakaiproject/sakai/branches/12.x/site-manage
 sitedescription https://github.com/sakaiproject/sakai/branches/12.x/sitedescription
 sitemembers https://github.com/sakaiproject/sakai/branches/12.x/sitemembers
 sitestats https://github.com/sakaiproject/sakai/branches/12.x/sitestats
@@ -95,6 +94,7 @@ lessonbuilder https://github.com/LongsightGroup/sakai/branches/172-12.x/lessonbu
 login https://github.com/LongsightGroup/sakai/branches/172-12.x/login
 roster2 https://github.com/LongsightGroup/sakai/branches/172-12.x/roster2
 sakora-csv https://github.com/WakeForestSakai/sakora-csv/trunk
+site-manage https://github.com/LongsightGroup/sakai/branches/172-12.x/site-manage
 
 # Remove and uncomment above this if 12.x is building correctly
 basiclti -r49159 https://github.com/sakaiproject/sakai/branches/12.x/basiclti
