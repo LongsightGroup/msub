@@ -20,7 +20,7 @@ alias https://github.com/sakaiproject/sakai/branches/11.x/alias
 announcement https://github.com/sakaiproject/sakai/branches/11.x/announcement
 archive https://github.com/sakaiproject/sakai/branches/11.x/archive
 authz https://github.com/sakaiproject/sakai/branches/11.x/authz
-basiclti https://github.com/sakaiproject/sakai/branches/11.x/basiclti
+basiclti -r 49157 https://github.com/sakaiproject/sakai/branches/11.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/11.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/11.x/chat
 citations https://github.com/sakaiproject/sakai/branches/11.x/citations
