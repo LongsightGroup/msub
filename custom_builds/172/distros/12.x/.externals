@@ -85,7 +85,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 
 # Contrib / 3rd Party tools
 attendance https://github.com/sakaicontrib/attendance/trunk
-blogwow https://github.com/sakaicontrib/blogwow/branches/12.x
+blogwow https://github.com/WakeForestSakai/blogwow/branches/wfu-inotado
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x
 
 # Customizations
@@ -98,6 +98,11 @@ site-manage https://github.com/LongsightGroup/sakai/branches/172-12.x/site-manag
 
 # Remove and uncomment above this if 12.x is building correctly
 basiclti -r49159 https://github.com/sakaiproject/sakai/branches/12.x/basiclti
+
+#shell_command git clone -b 12.x git@github.com:WakeForestSakai/inotado.git
+
+#GIT Projects
+#git_project inotado
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
