@@ -115,6 +115,7 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
+                <module>inotado</module>
                 <module>blogwow</module>
                 <module>attendance</module>
                 <module>sakora-csv</module>
