@@ -21,7 +21,6 @@ admin-tools  https://github.com/sakaiproject/sakai/branches/12.x/admin-tools
 announcement https://github.com/sakaiproject/sakai/branches/12.x/announcement
 archive https://github.com/sakaiproject/sakai/branches/12.x/archive
 assignment https://github.com/sakaiproject/sakai/branches/12.x/assignment
-#basiclti https://github.com/sakaiproject/sakai/branches/12.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/12.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/12.x/chat
 citations https://github.com/sakaiproject/sakai/branches/12.x/citations
@@ -95,9 +94,7 @@ login https://github.com/LongsightGroup/sakai/branches/172-12.x/login
 roster2 https://github.com/LongsightGroup/sakai/branches/172-12.x/roster2
 sakora-csv https://github.com/WakeForestSakai/sakora-csv/trunk
 site-manage https://github.com/LongsightGroup/sakai/branches/172-12.x/site-manage
-
-# Remove and uncomment above this if 12.x is building correctly
-basiclti -r49159 https://github.com/sakaiproject/sakai/branches/12.x/basiclti
+basiclti https://github.com/LongsightGroup/sakai/branches/172-12.x/basiclti
 
 #shell_command git clone -b 12.x git@github.com:WakeForestSakai/inotado.git
 
