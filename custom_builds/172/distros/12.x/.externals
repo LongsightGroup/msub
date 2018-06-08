@@ -54,7 +54,6 @@ polls https://github.com/sakaiproject/sakai/branches/12.x/polls
 portal https://github.com/sakaiproject/sakai/branches/12.x/portal
 postem https://github.com/sakaiproject/sakai/branches/12.x/postem
 presence https://github.com/sakaiproject/sakai/branches/12.x/presence
-profile2 https://github.com/sakaiproject/sakai/branches/12.x/profile2
 providers https://github.com/sakaiproject/sakai/branches/12.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/12.x/reset-pass
 rsf https://github.com/sakaiproject/sakai/branches/12.x/rsf
@@ -91,10 +90,11 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 dav https://github.com/LongsightGroup/sakai/branches/172-12.x/dav
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/172-12.x/lessonbuilder
 login https://github.com/LongsightGroup/sakai/branches/172-12.x/login
-roster2 https://github.com/LongsightGroup/sakai/branches/172-12.x/roster2
 sakora-csv https://github.com/WakeForestSakai/sakora-csv/trunk
 site-manage https://github.com/LongsightGroup/sakai/branches/172-12.x/site-manage
 basiclti https://github.com/LongsightGroup/sakai/branches/172-12.x/basiclti
+profile2 https://github.com/LongsightGroup/sakai/branches/172-12.x/profile2
+roster2 https://github.com/LongsightGroup/sakai/branches/172-12.x/roster2
 
 #shell_command git clone -b 12.x git@github.com:WakeForestSakai/inotado.git
 
