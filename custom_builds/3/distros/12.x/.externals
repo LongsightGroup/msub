@@ -87,7 +87,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Contrib / 3rd Party tools
-bbb-tool https://github.com/ottenhoff/bbb-tool/branches/sakai13-update
+bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 #kaltura https://github.com/kaltura/sakai-extension/branches/12x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-12.x_jldap-auth-caching
