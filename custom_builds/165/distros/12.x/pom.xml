@@ -119,7 +119,7 @@
                 <module>clog</module>
                 <module>evaluation</module>
                 <module>gradebook-export</module>
-                <!--module>rsmart</module-->
+                <module>rsmart</module>
             </modules>
         </profile>
 
