@@ -1,0 +1,102 @@
+# Sakai CLE Externals
+# Updating: svn propset svn:externals -F .externals .
+# Corporate POM
+master https://github.com/sakaiproject/sakai/branches/12.x/master
+
+# Core services
+common https://github.com/sakaiproject/sakai/branches/12.x/common
+commons https://github.com/sakaiproject/sakai/branches/12.x/commons
+content-review https://github.com/sakaiproject/sakai/branches/12.x/content-review
+delegatedaccess https://github.com/sakaiproject/sakai/branches/12.x/delegatedaccess
+emailtemplateservice https://github.com/sakaiproject/sakai/branches/12.x/emailtemplateservice
+entitybroker https://github.com/sakaiproject/sakai/branches/12.x/entitybroker
+external-calendaring-service https://github.com/sakaiproject/sakai/branches/12.x/external-calendaring-service/
+hierarchy https://github.com/sakaiproject/sakai/branches/12.x/hierarchy
+jsf https://github.com/sakaiproject/sakai/branches/12.x/jsf
+userauditservice https://github.com/sakaiproject/sakai/branches/12.x/userauditservice
+
+# Core Sakai Tools
+access https://github.com/sakaiproject/sakai/branches/12.x/access
+admin-tools  https://github.com/sakaiproject/sakai/branches/12.x/admin-tools
+announcement https://github.com/sakaiproject/sakai/branches/12.x/announcement
+archive https://github.com/sakaiproject/sakai/branches/12.x/archive
+assignment https://github.com/sakaiproject/sakai/branches/12.x/assignment
+basiclti https://github.com/sakaiproject/sakai/branches/12.x/basiclti
+calendar https://github.com/sakaiproject/sakai/branches/12.x/calendar
+chat https://github.com/sakaiproject/sakai/branches/12.x/chat
+citations https://github.com/sakaiproject/sakai/branches/12.x/citations
+cloud-content https://github.com/sakaiproject/sakai/branches/12.x/cloud-content
+cmprovider https://github.com/sakaiproject/sakai/branches/12.x/cmprovider
+config https://github.com/sakaiproject/sakai/branches/12.x/config
+content https://github.com/sakaiproject/sakai/branches/12.x/content
+courier https://github.com/sakaiproject/sakai/branches/12.x/courier
+dav https://github.com/sakaiproject/sakai/branches/12.x/dav
+deploy https://github.com/sakaiproject/sakai/branches/12.x/deploy
+edu-services https://github.com/sakaiproject/sakai/branches/12.x/edu-services
+
+feedback https://github.com/sakaiproject/sakai/branches/12.x/feedback
+gradebook https://github.com/sakaiproject/sakai/branches/12.x/gradebook
+gradebookng https://github.com/sakaiproject/sakai/branches/12.x/gradebookng
+help https://github.com/sakaiproject/sakai/branches/12.x/help
+jobscheduler https://github.com/sakaiproject/sakai/branches/12.x/jobscheduler
+kernel https://github.com/sakaiproject/sakai/branches/12.x/kernel
+lessonbuilder https://github.com/sakaiproject/sakai/branches/12.x/lessonbuilder
+library https://github.com/sakaiproject/sakai/branches/12.x/library
+mailarchive https://github.com/sakaiproject/sakai/branches/12.x/mailarchive
+mailsender https://github.com/sakaiproject/sakai/branches/12.x/mailsender
+memory https://github.com/sakaiproject/sakai/branches/12.x/memory
+message https://github.com/sakaiproject/sakai/branches/12.x/message
+msgcntr https://github.com/sakaiproject/sakai/branches/12.x/msgcntr
+mycalendar https://github.com/sakaiproject/sakai/branches/12.x/mycalendar
+myconnections https://github.com/sakaiproject/sakai/branches/12.x/myconnections
+oauth https://github.com/sakaiproject/sakai/branches/12.x/oauth
+pack https://github.com/sakaiproject/sakai/branches/12.x/pack
+pasystem https://github.com/sakaiproject/sakai/branches/12.x/pasystem
+podcasts https://github.com/sakaiproject/sakai/branches/12.x/podcasts
+polls https://github.com/sakaiproject/sakai/branches/12.x/polls
+portal https://github.com/sakaiproject/sakai/branches/12.x/portal
+postem https://github.com/sakaiproject/sakai/branches/12.x/postem
+presence https://github.com/sakaiproject/sakai/branches/12.x/presence
+profile2 https://github.com/sakaiproject/sakai/branches/12.x/profile2
+reset-pass https://github.com/sakaiproject/sakai/branches/12.x/reset-pass
+roster2 https://github.com/sakaiproject/sakai/branches/12.x/roster2
+rsf https://github.com/sakaiproject/sakai/branches/12.x/rsf
+rwiki https://github.com/sakaiproject/sakai/branches/12.x/rwiki
+samigo https://github.com/sakaiproject/sakai/branches/12.x/samigo
+search https://github.com/sakaiproject/sakai/branches/12.x/search
+sections https://github.com/sakaiproject/sakai/branches/12.x/sections
+shortenedurl https://github.com/sakaiproject/sakai/branches/12.x/shortenedurl
+simple-rss-portlet https://github.com/sakaiproject/sakai/branches/12.x/simple-rss-portlet
+signup https://github.com/sakaiproject/sakai/branches/12.x/signup
+site https://github.com/sakaiproject/sakai/branches/12.x/site
+site-manage https://github.com/sakaiproject/sakai/branches/12.x/site-manage
+sitedescription https://github.com/sakaiproject/sakai/branches/12.x/sitedescription
+sitemembers https://github.com/sakaiproject/sakai/branches/12.x/sitemembers
+sitestats https://github.com/sakaiproject/sakai/branches/12.x/sitestats
+syllabus https://github.com/sakaiproject/sakai/branches/12.x/syllabus
+taggable https://github.com/sakaiproject/sakai/branches/12.x/taggable
+tags https://github.com/sakaiproject/sakai/branches/12.x/tags
+textarea https://github.com/sakaiproject/sakai/branches/12.x/textarea
+tool https://github.com/sakaiproject/sakai/branches/12.x/tool
+user https://github.com/sakaiproject/sakai/branches/12.x/user
+usermembership https://github.com/sakaiproject/sakai/branches/12.x/usermembership
+velocity https://github.com/sakaiproject/sakai/branches/12.x/velocity
+web https://github.com/sakaiproject/sakai/branches/12.x/web
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
+
+# Contrib / 3rd Party tools
+attendance https://github.com/ottenhoff/attendance/branches/hibernate4-update
+bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
+blogwow https://github.com/sakaicontrib/blogwow/trunk
+evaluation https://github.com/sakaicontrib/evaluation/branches/12.x
+iclicker https://github.com/sakaicontrib/iclicker/branches/12.x
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
+
+# Customizations
+login https://github.com/LongsightGroup/sakai/branches/68-12.x/login
+providers https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/68/providers/sakai-12.x_jldap-auth-caching-custom
+
+#POM Changes
+#shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
