@@ -125,7 +125,7 @@ public class SimpleLdapAttributeMapper implements LdapAttributeMapper {
 
 		String eidAttr = attributeMappings.get(AttributeMappingConstants.LOGIN_ATTR_MAPPING_KEY);
 		if (StringUtils.equalsIgnoreCase(eidAttr, "sAMAccountName")) {
-			return "(&(objectClass=user)(" + emailAttr + "=" + escapeSearchFilterTerm(emailAddr) + ")(!(objectClass=computer))(!(userAccountControl:1.2.840.113556.1.4.803:=2)))";
+			return "(&(objectClass=user)(" + emailAttr + "=" + escapeSearchFilterTerm(emailAddr) + ")(!(objectClass=computer)))";
 		}
 		else {
 			return "(&(" + emailAttr + "=" + escapeSearchFilterTerm(emailAddr) + ")(!(objectClass=computer)))";
@@ -141,7 +141,7 @@ public class SimpleLdapAttributeMapper implements LdapAttributeMapper {
 		String eidAttr = 
 			attributeMappings.get(AttributeMappingConstants.LOGIN_ATTR_MAPPING_KEY);
 		if (StringUtils.equalsIgnoreCase(eidAttr, "sAMAccountName")) {
-			return "(&(objectClass=user)(" + eidAttr + "=" + escapeSearchFilterTerm(eid) + ")(!(objectClass=computer))(!(userAccountControl:1.2.840.113556.1.4.803:=2)))";
+			return "(&(objectClass=user)(" + eidAttr + "=" + escapeSearchFilterTerm(eid) + ")(!(objectClass=computer)))";
 		}
 		else {
 			return "(&(" + eidAttr + "=" + escapeSearchFilterTerm(eid) + ")(!(objectClass=computer)))";
@@ -605,7 +605,7 @@ public class SimpleLdapAttributeMapper implements LdapAttributeMapper {
 
 		StringBuilder sb = new StringBuilder();
 		if (StringUtils.equalsIgnoreCase(eidAttr, "sAMAccountName")) {
-			sb.append("(&(objectClass=user)(!(objectClass=computer))(!(userAccountControl:1.2.840.113556.1.4.803:=2))(|");
+			sb.append("(&(objectClass=user)(!(objectClass=computer))(|");
 		}
 		else {
 			sb.append("(&(!(objectClass=computer))(|");
