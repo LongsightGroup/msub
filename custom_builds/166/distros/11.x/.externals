@@ -39,7 +39,7 @@ gradebookng https://github.com/sakaiproject/sakai/branches/11.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/11.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/11.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/11.x/kernel
-lessonbuilder https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
+lessonbuilder -r49158 https://github.com/sakaiproject/sakai/branches/11.x/lessonbuilder
 login https://github.com/sakaiproject/sakai/branches/11.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/11.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/11.x/mailsender
