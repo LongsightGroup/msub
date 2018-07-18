@@ -58,7 +58,6 @@ polls https://github.com/sakaiproject/sakai/branches/12.x/polls
 portal https://github.com/sakaiproject/sakai/branches/12.x/portal
 postem https://github.com/sakaiproject/sakai/branches/12.x/postem
 presence https://github.com/sakaiproject/sakai/branches/12.x/presence
-profile2 https://github.com/sakaiproject/sakai/branches/12.x/profile2
 providers https://github.com/sakaiproject/sakai/branches/12.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/12.x/reset-pass
 roster2 https://github.com/sakaiproject/sakai/branches/12.x/roster2
@@ -95,6 +94,8 @@ blogwow https://github.com/sakaicontrib/blogwow/trunk
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 
+# Customizations
+profile2 https://github.com/LongsightGroup/sakai/branches/155-12.x/profile2
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
