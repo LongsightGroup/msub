@@ -91,6 +91,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 attendance https://github.com/sakaicontrib/attendance/trunk
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 certification https://github.com/sakaicontrib/certification/branches/12.x
+clog https://github.com/sakaicontrib/clog/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 evaluation https://github.com/sakaicontrib/evaluation/branches/12.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-12.x_jldap-auth-caching-no-objectType/
