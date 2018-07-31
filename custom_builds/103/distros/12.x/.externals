@@ -82,7 +82,7 @@ velocity https://github.com/sakaiproject/sakai/branches/12.x/velocity
 web https://github.com/sakaiproject/sakai/branches/12.x/web
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
+#mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8 -Dsakai.skin.target=cmcc
 
 # Contrib / 3rd Party tools
 #certification https://github.com/sakaicontrib/certification/branches/12.x
