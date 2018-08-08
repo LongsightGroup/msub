@@ -117,12 +117,6 @@
                 <module>warehouse</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>blogwow</module>
-                <module>evaluation</module>
-                <module>da_evalprovider</module>
-                <module>etudes-util</module>
-                <module>melete</module>
-                <module>bigbluebutton-sakai/bbb-tool</module>
             </modules>
         </profile>
         <profile>
