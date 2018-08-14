@@ -118,6 +118,7 @@
                 <module>clog</module>
                 <module>evaluation</module>
 
+                <module>attendance</module>
                 <module>gradebook2</module>
                 <module>rsmart</module>
                 <module>blogwow</module>
