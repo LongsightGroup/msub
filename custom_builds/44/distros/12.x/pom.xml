@@ -63,7 +63,6 @@
                 <module>deploy</module>
                 <module>edu-services</module>
                 <module>emailtemplateservice</module>
-                <module>endorsed</module>
                 <module>entitybroker</module>
                 <module>external-calendaring-service</module>
                 <module>feedback</module>
@@ -75,7 +74,6 @@
                 <module>jsf</module>
                 <module>kernel</module>
                 <module>lessonbuilder</module>
-                <!--module>library</module-->
                 <module>login</module>
                 <module>mailarchive</module>
                 <module>mailsender</module>
@@ -116,7 +114,6 @@
                 <module>usermembership</module>
                 <module>velocity</module>
                 <module>web</module>
-                <module>webjars</module>
                 <module>webservices</module>
                 <module>blogwow</module>
                 <module>evaluation</module>
