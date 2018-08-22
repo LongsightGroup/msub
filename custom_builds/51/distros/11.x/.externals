@@ -97,3 +97,5 @@ login https://github.com/LongsightGroup/sakai/branches/51-11.x/login
 
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command wget https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/5898.patch;patch -p1 < 5898.patch
+
