@@ -89,6 +89,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 attendance https://github.com/sakaicontrib/attendance/trunk
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
+starfish-export https://github.com/sakaicontrib/starfish-export/trunk
 
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/159-12.x/config
