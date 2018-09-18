@@ -119,6 +119,7 @@
                 <module>blogwow</module>
                 <module>rsmart</module>
                 <module>melete</module>
+                <module>certification</module>
                 <module>etudes-util</module>
                 <module>content-review/turnitin</module>
                 <module>gradebook2</module>
