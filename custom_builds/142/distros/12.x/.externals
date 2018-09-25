@@ -89,6 +89,7 @@ webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
 attendance https://github.com/sakaicontrib/attendance/trunk
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
+certification https://github.com/sakaicontrib/certification/branches/12.x
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
 #kaltura https://github.com/kaltura/sakai-extension/trunk
 login https://github.com/LongsightGroup/sakai/branches/142-12.x/login
