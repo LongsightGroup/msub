@@ -102,4 +102,6 @@ basiclti -r49159 https://github.com/sakaiproject/sakai/branches/12.x/basiclti
 
 
 #POM Changes
+#shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/12-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/19-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
