@@ -105,5 +105,6 @@ login  https://github.com/LongsightGroup/sakai/branches/14-12.x/login
 #shell_command cp sipx-private/kernel-mod/CourseContextFilter.java kernel/kernel-impl/src/main/java/org/sakaiproject/content/impl/
 
 #POM Changes
+#shell_command find ./ -name pom.xml -exec sed -i 's/19-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./sipx -name pom.xml -exec sed -i 's/11-SNAPSHOT/12-SNAPSHOT/g' {} \;
