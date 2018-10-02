@@ -100,5 +100,6 @@ wicket-for-scorm https://source.sakaiproject.org/contrib/edia/sakai-wicket-for-s
 
 
 #POM Changes
+#shell_command find ./ -name pom.xml -exec sed -i 's/19-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./wicket-for-scorm -name pom.xml -exec sed -i 's/11-SNAPSHOT/12-SNAPSHOT/g' {} \;
