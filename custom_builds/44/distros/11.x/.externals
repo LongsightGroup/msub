@@ -86,5 +86,6 @@ blogwow https://github.com/sakaicontrib/blogwow/trunk
 evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-11.x/
+sakai-gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/sakai-11.x
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
