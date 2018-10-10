@@ -100,3 +100,5 @@ login https://github.com/LongsightGroup/sakai/branches/1-12.x/login
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/19-SNAPSHOT/12-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/12-SNAPSHOT/g' {} \;
+#shell_command curl https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/6125.patch|patch -p1
