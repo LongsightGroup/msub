@@ -97,7 +97,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 #shell_command git clone git@source.edf.global:longsight/sakai-wildapricot-integration.git
-# git_project sakai-wildapricot-integration
+#git_project sakai-wildapricot-integration
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
