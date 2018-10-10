@@ -118,6 +118,7 @@
                 <module>attendance</module>
                 <module>bbb-tool</module>
                 <module>certification</module>
+                <module>sakai-wildapricot-integration</module>
             </modules>
         </profile>
 
