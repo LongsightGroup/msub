@@ -126,7 +126,7 @@
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
                 -->
-                <!--module>kaltura</module-->
+                <module>kaltura</module>
                 <module>SakaiXAPI-Provider</module>
             </modules>
         </profile>

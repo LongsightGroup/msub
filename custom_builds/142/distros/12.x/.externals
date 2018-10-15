@@ -91,7 +91,7 @@ bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 certification https://github.com/sakaicontrib/certification/branches/12.x
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
-#kaltura https://github.com/kaltura/sakai-extension/trunk
+kaltura https://github.com/kaltura/sakai-extension/trunk
 login https://github.com/LongsightGroup/sakai/branches/142-12.x/login
 portal https://github.com/LongsightGroup/sakai/branches/142-12.x/portal
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-12.x_jldap-auth-caching-cadidate-detail
@@ -110,5 +110,7 @@ edu-services https://github.com/LongsightGroup/sakai/branches/142-12.x/edu-servi
 #irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
 
 #shell_command find irubric-tool/ -name pom.xml -exec sed -i 's/\${sakai.kernel.version}/12-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/11-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/19-SNAPSHOT/12-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/12-SNAPSHOT/g' {} \;
