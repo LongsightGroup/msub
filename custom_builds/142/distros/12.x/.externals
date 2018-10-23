@@ -27,7 +27,6 @@ chat https://github.com/sakaiproject/sakai/branches/12.x/chat
 citations https://github.com/sakaiproject/sakai/branches/12.x/citations
 cloud-content https://github.com/sakaiproject/sakai/branches/12.x/cloud-content
 cmprovider https://github.com/sakaiproject/sakai/branches/12.x/cmprovider
-config https://github.com/sakaiproject/sakai/branches/12.x/config
 content https://github.com/sakaiproject/sakai/branches/12.x/content
 courier https://github.com/sakaiproject/sakai/branches/12.x/courier
 deploy https://github.com/sakaiproject/sakai/branches/12.x/deploy
@@ -90,6 +89,7 @@ attendance https://github.com/sakaicontrib/attendance/trunk
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 certification https://github.com/sakaicontrib/certification/branches/12.x
+config https://github.com/LongsightGroup/sakai/branches/142-12.x/config
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
 #kaltura https://github.com/kaltura/sakai-extension/trunk
 login https://github.com/LongsightGroup/sakai/branches/142-12.x/login
