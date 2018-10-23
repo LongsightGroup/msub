@@ -106,8 +106,8 @@ dav https://github.com/LongsightGroup/sakai/branches/142-12.x/dav
 edu-services https://github.com/LongsightGroup/sakai/branches/142-12.x/edu-services
 
 # iRubric not currently compiling
-irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
-irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
+#irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
+#irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
 
 #shell_command find irubric-tool/ -name pom.xml -exec sed -i 's/\${sakai.kernel.version}/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/11-SNAPSHOT/12-SNAPSHOT/g' {} \;
