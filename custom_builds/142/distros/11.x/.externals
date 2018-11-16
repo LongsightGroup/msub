@@ -76,7 +76,7 @@ web https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/web
 #mavenoptions:-Psakai-11 -Psakai11.x -Dsakai.edu-services.version=11-SNAPSHOT -Dsakai.common.version=11-SNAPSHOT -Dsakai.jdk.version=1.8
 
 #customizations:
-blogwow https://github.com/sakaicontrib/blogwow/trunk
+blogwow https://github.com/sakaicontrib/blogwow/branches/11.x
 config https://github.com/LongsightGroup/sakai/branches/142-nyu-11.x/config
 content-review/turnitin https://source.sakaiproject.org/contrib/longsight/turnitin/durham-11.x
 # Customizations for login tool, includes re-order of xlogin options
@@ -106,3 +106,5 @@ SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/Sakai
 #POM CHANGES
 #shell_command find ./ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/19-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/11-SNAPSHOT/g' {} \;
