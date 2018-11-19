@@ -95,3 +95,7 @@ webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
 blogwow https://github.com/sakaicontrib/blogwow/trunk
 evaluation https://github.com/sakaicontrib/evaluation/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x
+
+
+#shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/12-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/19-SNAPSHOT/12-SNAPSHOT/g' {} \;
