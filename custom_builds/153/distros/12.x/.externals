@@ -89,7 +89,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Contrib / 3rd Party tools
-attendance https://github.com/sakaicontrib/attendance/branches/19.x
+attendance https://github.com/sakaicontrib/attendance/branches/12.x
 clog https://github.com/sakaicontrib/clog/branches/12.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/12.x
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-12.x/
