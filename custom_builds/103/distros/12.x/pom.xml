@@ -116,7 +116,7 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-                <!--module>certification</module-->
+                <module>certification</module>
                 <module>evaluation</module>
             </modules>
         </profile>

@@ -85,7 +85,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8 -Dsakai.skin.target=cmcc
 
 # Contrib / 3rd Party tools
-#certification https://github.com/sakaicontrib/certification/branches/12.x
+certification https://github.com/sakaicontrib/certification/branches/12.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 
