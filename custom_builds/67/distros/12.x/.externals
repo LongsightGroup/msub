@@ -85,7 +85,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Contrib / 3rd Party tools
-attendance https://github.com/sakaicontrib/attendance/trunk
+attendance https://github.com/sakaicontrib/attendance/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/12.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/12.x
 #kaltura https://github.com/kaltura/sakai-extension/trunk
