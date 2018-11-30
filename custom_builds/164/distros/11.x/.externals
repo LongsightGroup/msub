@@ -89,15 +89,17 @@ config https://github.com/LongsightGroup/sakai/branches/164-11.x/config
 clog https://github.com/sakaicontrib/clog/branches/11.x
 attendance https://github.com/sakaicontrib/attendance/branches/11.x
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/11.x
-blogwow https://github.com/sakaicontrib/blogwow/trunk
+blogwow https://github.com/sakaicontrib/blogwow/branches/11.x
 iclicker https://github.com/sakaicontrib/iclicker/branches/11.x
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-core
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-tool
 certification https://github.com/sakaicontrib/certification/branches/11.x
-kaltura https://github.com/kaltura/sakai-extension/trunk
+kaltura https://github.com/kaltura/sakai-extension/branches/11x
 login https://github.com/LongsightGroup/sakai/branches/164-11.x/login
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-11.x_jldap-auth-caching-no-wildcard
 
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find blogwow/ -name pom.xml -exec sed -i 's/19-SNAPSHOT/11-SNAPSHOT/g' {} \;
+#shell_command find blogwow/ -name pom.xml -exec sed -i 's/20-SNAPSHOT/11-SNAPSHOT/g' {} \;
