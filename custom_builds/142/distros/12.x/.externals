@@ -91,7 +91,7 @@ blogwow https://github.com/sakaicontrib/blogwow/branches/12.x
 certification https://github.com/sakaicontrib/certification/branches/12.x
 config https://github.com/LongsightGroup/sakai/branches/142-12.x/config
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
-#kaltura https://github.com/kaltura/sakai-extension/trunk
+kaltura https://github.com/kaltura/sakai-extension/branches/12.x
 login https://github.com/LongsightGroup/sakai/branches/142-12.x/login
 portal https://github.com/LongsightGroup/sakai/branches/142-12.x/portal
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-12.x_jldap-auth-caching-cadidate-detail
