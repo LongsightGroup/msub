@@ -93,7 +93,7 @@ config https://github.com/LongsightGroup/sakai/branches/142-12.x/config
 help https://github.com/LongsightGroup/sakai/branches/142-12.x/help
 irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
 irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
-kaltura https://github.com/kaltura/sakai-extension/branches/12.x
+kaltura https://github.com/kaltura/sakai-extension/trunk
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x
 
