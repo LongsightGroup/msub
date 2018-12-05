@@ -88,9 +88,9 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Contrib / 3rd Party tools
-attendance https://github.com/ottenhoff/attendance/branches/hibernate4-update
+attendance https://github.com/sakaicontrib/attendance/branches/12.x
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-12.x/
-blogwow https://github.com/sakaicontrib/blogwow/trunk
+blogwow https://github.com/sakaicontrib/blogwow/branches/12.x
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 
