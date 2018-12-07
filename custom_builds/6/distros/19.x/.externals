@@ -80,6 +80,7 @@ syllabus https://github.com/sakaiproject/sakai/branches/19.x/syllabus
 taggable https://github.com/sakaiproject/sakai/branches/19.x/taggable
 tags https://github.com/sakaiproject/sakai/branches/19.x/tags
 textarea https://github.com/sakaiproject/sakai/branches/19.x/textarea
+user https://github.com/sakaiproject/sakai/branches/19.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/19.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/19.x/velocity
 web https://github.com/sakaiproject/sakai/branches/19.x/web
@@ -101,6 +102,5 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/6-19.x/login
-user https://github.com/LongsightGroup/sakai/branches/6-19.x/user
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
