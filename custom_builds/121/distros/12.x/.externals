@@ -58,7 +58,6 @@
 #git_project reset-pass
 #git_project roster2
 #git_project rsf
-#git_project <!--rubrics-->
 #git_project rwiki
 #git_project tags
 #git_project samigo
@@ -81,7 +80,6 @@
 #git_project web
 #git_project webjars
 #git_project webservices
-#git_project 
 
 # Edtell Custom Tools
 #git_project edtell
