@@ -121,9 +121,10 @@
 		<!-- Additional Tools -->
                 <module>attendance</module>
                 <module>blogwow</module>
+                <module>certification</module>
                 <module>evaluation</module>
 		<!-- module>bbb-tool</module -->
-		<!-- module>da_evalprovider</module -->
+		<module>da_evalprovider</module>
 		<!-- module>iclicker</module -->
             </modules>
         </profile>

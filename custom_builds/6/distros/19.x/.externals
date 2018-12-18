@@ -94,7 +94,7 @@ attendance https://github.com/sakaicontrib/attendance/branches/19.x
 #bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/19.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 certification https://github.com/sakaicontrib/certification/branches/19.x
-#da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/19.x
+da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
 #iclicker https://github.com/sakaicontrib/iclicker/branches/19.x
 #providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-19.x_jldap-auth-caching
