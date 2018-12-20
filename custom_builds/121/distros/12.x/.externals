@@ -1,4 +1,4 @@
-#shell_command git clone --branch rc1 git@github.com:edtell/edtell-sakai12.git && mv edtell-sakai12/* ./
+#shell_command git clone --branch javaxFix git@github.com:edtell/edtell-sakai12.git && mv edtell-sakai12/* ./
 
 #GIT Projects
 
