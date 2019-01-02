@@ -1,4 +1,5 @@
 #shell_command git clone --branch javaxFix git@github.com:edtell/edtell-sakai12.git && mv edtell-sakai12/* ./
+#mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.jdk.version=1.8 -Dgwt.compiler.force=true
 
 #GIT Projects
 
