@@ -45,7 +45,6 @@ library https://github.com/sakaiproject/sakai/branches/12.x/library
 login https://github.com/sakaiproject/sakai/branches/12.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/12.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/12.x/mailsender
-memory https://github.com/sakaiproject/sakai/branches/12.x/memory
 message https://github.com/sakaiproject/sakai/branches/12.x/message
 msgcntr https://github.com/sakaiproject/sakai/branches/12.x/msgcntr
 mycalendar https://github.com/sakaiproject/sakai/branches/12.x/mycalendar
