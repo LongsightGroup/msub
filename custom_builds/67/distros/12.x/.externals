@@ -87,8 +87,8 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 attendance https://github.com/sakaicontrib/attendance/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/12.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/12.x
-#kaltura https://github.com/kaltura/sakai-extension/trunk
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
+scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/12.x
 
 # Customizations
 help https://github.com/LongsightGroup/sakai/branches/67-12.x/help
