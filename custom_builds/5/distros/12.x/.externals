@@ -42,7 +42,6 @@ jobscheduler https://github.com/sakaiproject/sakai/branches/12.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/12.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/12.x/lessonbuilder
 library https://github.com/sakaiproject/sakai/branches/12.x/library
-login https://github.com/sakaiproject/sakai/branches/12.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/12.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/12.x/mailsender
 message https://github.com/sakaiproject/sakai/branches/12.x/message
@@ -86,6 +85,9 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
+
+# SAML
+login https://github.com/LongsightGroup/sakai/branches/5-12.x/login
 
 # Contrib / 3rd Party tools
 attendance https://github.com/sakaicontrib/attendance/branches/12.x
