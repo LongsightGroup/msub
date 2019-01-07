@@ -122,10 +122,12 @@
                 <module>bbb-tool</module>
                 <module>blogwow</module>
                 <module>certification</module>
-                <module>irubric-core</module>
-                <module>irubric-tool</module>
                 <module>kaltura</module>
                 <module>SakaiXAPI-Provider</module>
+                <!--
+                <module>irubric-core</module>
+                <module>irubric-tool</module>
+                -->
             </modules>
         </profile>
 
