@@ -115,7 +115,7 @@
                 <module>velocity</module>
                 <module>web</module>
                 <module>webservices</module>
-                <module>attendance</module>
+                <!--module>attendance</module-->
                 <module>clog</module>
                 <module>rsmart</module>
             </modules>
