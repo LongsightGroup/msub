@@ -43,7 +43,6 @@ lessonbuilder https://github.com/sakaiproject/sakai/branches/12.x/lessonbuilder
 login https://github.com/sakaiproject/sakai/branches/12.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/12.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/12.x/mailsender
-memory https://github.com/sakaiproject/sakai/branches/12.x/memory
 message https://github.com/sakaiproject/sakai/branches/12.x/message
 msgcntr https://github.com/sakaiproject/sakai/branches/12.x/msgcntr
 mycalendar https://github.com/sakaiproject/sakai/branches/12.x/mycalendar
@@ -101,6 +100,7 @@ edu-services https://github.com/LongsightGroup/sakai/branches/159-12.x/edu-servi
 
 
 #POM Changes
+#shell_command find ./starfish-export/ -name pom.xml -exec sed -i 's/com.opencsv/net.sf.opencsv/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/19-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/11-SNAPSHOT/12-SNAPSHOT/g' {} \;
