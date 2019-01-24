@@ -124,10 +124,8 @@
                 <module>certification</module>
                 <module>kaltura</module>
                 <module>SakaiXAPI-Provider</module>
-                <!--
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
-                -->
             </modules>
         </profile>
 
