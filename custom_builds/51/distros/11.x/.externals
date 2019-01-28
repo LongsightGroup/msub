@@ -88,7 +88,7 @@ melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
 irubric-core https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-core
 irubric-tool https://source.sakaiproject.org/contrib/irubric/trunk/sakai-11/irubric-tool
-kaltura https://github.com/kaltura/sakai-extension/tags/v5.0.2
+kaltura https://github.com/kaltura/sakai-extension/tags/v5.1.0
 
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/51-11.x/config
