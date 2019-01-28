@@ -93,7 +93,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 # Not currently building.  Clients have open requests from vendors below
 # Uncomment and update url if needed when those have been resolved
 #
-#kaltura https://github.com/kaltura/sakai-extension/tags/v5.0.2
+kaltura https://github.com/kaltura/sakai-extension/trunk
 #irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
 #irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
 

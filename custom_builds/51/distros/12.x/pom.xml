@@ -117,10 +117,10 @@
                 <module>webservices</module>
                 <module>attendance</module>
                 <module>blogwow</module>
+                <module>kaltura</module>
 		<!--
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
-                <module>kaltura</module>
 		-->
             </modules>
         </profile>
