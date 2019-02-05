@@ -118,6 +118,7 @@
                 <module>inotado</module>
                 <module>blogwow</module>
                 <module>attendance</module>
+                <module>scorm</module>
                 <module>sakora-csv</module>
             </modules>
         </profile>
