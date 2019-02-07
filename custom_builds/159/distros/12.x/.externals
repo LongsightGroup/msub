@@ -40,7 +40,6 @@ jobscheduler https://github.com/sakaiproject/sakai/branches/12.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/12.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/12.x/lessonbuilder
 #library https://github.com/sakaiproject/sakai/branches/12.x/library
-login https://github.com/sakaiproject/sakai/branches/12.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/12.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/12.x/mailsender
 message https://github.com/sakaiproject/sakai/branches/12.x/message
@@ -94,6 +93,7 @@ starfish-export https://github.com/sakaicontrib/starfish-export/trunk
 config https://github.com/LongsightGroup/sakai/branches/159-12.x/config
 providers https://github.com/LongsightGroup/sakai/branches/159-12.x/providers
 gradebook-export https://github.com/longsightgroup/sakai-gradebook-export/branches/released-only
+login https://github.com/LongsightGroup/sakai/branches/159-12.x/login
 
 # Custom SIS code
 edu-services https://github.com/LongsightGroup/sakai/branches/159-12.x/edu-services
