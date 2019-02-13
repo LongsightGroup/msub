@@ -122,7 +122,7 @@
                 <module>certification</module>
                 <module>etudes-util</module>
                 <module>content-review/turnitin</module>
-                <module>gradebook2</module>
+                <!-- module>gradebook2</module -->
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
