@@ -93,6 +93,7 @@ webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
 attendance https://github.com/sakaicontrib/attendance/branches/19.x
 #bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/19.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
+clog https://github.com/sakaicontrib/clog/branches/19.x
 certification https://github.com/sakaicontrib/certification/branches/19.x
 da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
