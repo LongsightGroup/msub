@@ -123,6 +123,7 @@
                 <!--module>bbb-tool</module-->
                 <module>blogwow</module>
                 <module>certification</module>
+                <module>da_evalprovider</module>
                 <module>evaluation</module>
             </modules>
         </profile>
