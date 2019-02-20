@@ -121,6 +121,7 @@
                 <module>blogwow</module>
                 <module>etudes-util</module>
                 <module>melete</module>
+                <module>da_evalprovider</module>
                 <module>evaluation</module>
                 <module>gradebook-export</module>
                 <module>bbb-tool</module>
