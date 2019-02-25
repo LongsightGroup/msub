@@ -33,7 +33,6 @@ deploy https://github.com/sakaiproject/sakai/branches/12.x/deploy
 endorsed https://github.com/sakaiproject/sakai/branches/12.x/endorsed
 feedback https://github.com/sakaiproject/sakai/branches/12.x/feedback
 gradebook https://github.com/sakaiproject/sakai/branches/12.x/gradebook
-gradebookng https://github.com/sakaiproject/sakai/branches/12.x/gradebookng
 jobscheduler https://github.com/sakaiproject/sakai/branches/12.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/12.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/12.x/lessonbuilder
@@ -103,6 +102,7 @@ edu-services https://github.com/LongsightGroup/sakai/branches/142-12.x/edu-servi
 login https://github.com/LongsightGroup/sakai/branches/142-12.x/login
 portal https://github.com/LongsightGroup/sakai/branches/142-12.x/portal
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-12.x_jldap-auth-caching-cadidate-detail
+gradebookng https://github.com/LongsightGroup/sakai/branches/142-12.x/gradebookng
 
 #shell_command find irubric-tool/ -name pom.xml -exec sed -i 's/\${sakai.kernel.version}/12-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/11-SNAPSHOT/12-SNAPSHOT/g' {} \;
