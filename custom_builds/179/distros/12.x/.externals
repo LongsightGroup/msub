@@ -45,7 +45,6 @@ library https://github.com/sakaiproject/sakai/branches/12.x/library
 login https://github.com/sakaiproject/sakai/branches/12.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/12.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/12.x/mailsender
-memory https://github.com/sakaiproject/sakai/branches/12.x/memory
 message https://github.com/sakaiproject/sakai/branches/12.x/message
 msgcntr https://github.com/sakaiproject/sakai/branches/12.x/msgcntr
 mycalendar https://github.com/sakaiproject/sakai/branches/12.x/mycalendar
@@ -83,7 +82,6 @@ user https://github.com/sakaiproject/sakai/branches/12.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/12.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/12.x/velocity
 web https://github.com/sakaiproject/sakai/branches/12.x/web
-webservices https://github.com/sakaiproject/sakai/branches/12.x/webservices
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
@@ -93,6 +91,7 @@ attendance https://github.com/sakaicontrib/attendance/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/12.x
 certification https://github.com/sakaicontrib/certification/branches/12.x
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-12.x/
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 
 # Customizations
 providers https://github.com/LongsightGroup/sakai/branches/179-12.x/providers
