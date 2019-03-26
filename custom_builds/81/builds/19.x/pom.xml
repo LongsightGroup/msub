@@ -122,7 +122,6 @@
 		<!-- Additional Tools -->
                 <module>attendance</module>
                 <module>blogwow</module>
-                <module>gradebook1</module>
             </modules>
         </profile>
 
