@@ -116,11 +116,13 @@
                 <module>usermembership</module>
                 <module>velocity</module>
                 <module>web</module>
+                <module>webcomponents</module>
                 <module>webjars</module>
                 <module>webservices</module>
 		<!-- Additional Tools -->
                 <module>attendance</module>
                 <module>blogwow</module>
+                <module>gradebook1</module>
             </modules>
         </profile>
 
