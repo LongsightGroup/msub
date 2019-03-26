@@ -29,7 +29,6 @@ chat https://github.com/sakaiproject/sakai/branches/19.x/chat
 citations https://github.com/sakaiproject/sakai/branches/19.x/citations
 cloud-content https://github.com/sakaiproject/sakai/branches/19.x/cloud-content
 cmprovider https://github.com/sakaiproject/sakai/branches/19.x/cmprovider
-config https://github.com/sakaiproject/sakai/branches/19.x/config
 content https://github.com/sakaiproject/sakai/branches/19.x/content
 courier https://github.com/sakaiproject/sakai/branches/19.x/courier
 dav https://github.com/sakaiproject/sakai/branches/19.x/dav
@@ -84,8 +83,8 @@ user https://github.com/sakaiproject/sakai/branches/19.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/19.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/19.x/velocity
 web https://github.com/sakaiproject/sakai/branches/19.x/web
+webcomponents https://github.com/sakaiproject/sakai/branches/19.x/webcomponents
 webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
-webservices https://github.com/sakaiproject/sakai/branches/19.x/webservices
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-19 -Psakai19.x -Dsakai.edu-services.version=19-SNAPSHOT -Dsakai.common.version=19-SNAPSHOT -Dsakai.jdk.version=1.8
@@ -95,8 +94,9 @@ attendance https://github.com/sakaicontrib/attendance/branches/19.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-19.x_jldap-auth-caching/
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
-# UnComment when LS webservices is fixed
-# webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
+# Customizations
+config https://github.com/LongsightGroup/sakai/branches/7-19.x/config
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
