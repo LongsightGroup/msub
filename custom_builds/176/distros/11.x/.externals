@@ -89,6 +89,8 @@ evaluation https://github.com/sakaicontrib/evaluation/branches/11.x
 gradebook2 https://github.com/sakaicontrib/gradebook2/trunk
 melete https://source.sakaiproject.org/contrib/longsight/melete/11.x
 etudes-util https://source.sakaiproject.org/contrib/longsight/etudes-util/11.x
+scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/11.x
 
 #POM Changes
 #shell_command find blogwow/ -name pom.xml -exec sed -i 's/12-SNAPSHOT/11-SNAPSHOT/g' {} \;
+

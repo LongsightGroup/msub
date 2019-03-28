@@ -120,6 +120,7 @@
                 <module>etudes-util</module>
                 <module>melete</module>
                 <module>gradebook2</module>
+                <module>scorm</module>
             </modules>
         </profile>
         <!-- pack profiles for building release artifacts -->
