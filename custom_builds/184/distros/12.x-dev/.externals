@@ -1,4 +1,4 @@
-#shell_command git clone --single-branch --branch ace-phase2 git@source.edf.global:noodle-partners/noodle-portal.git && mv noodle-portal/* ./
+#shell_command git clone --single-branch --branch master git@source.edf.global:noodle-partners/noodle-portal.git && mv noodle-portal/* ./
 
 #GIT Projects
 
