@@ -120,7 +120,7 @@
                 <module>webservices</module>
 		<!-- Additional Tools -->
                 <module>attendance</module>
-                <module>bbb-tool</module>
+                <!-- module>bbb-tool</module -->
                 <module>evaluation</module>
                 <module>rsmart</module>
             </modules>
