@@ -43,6 +43,7 @@ jobscheduler https://github.com/sakaiproject/sakai/branches/19.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/19.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/19.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/19.x/licenses
+login https://github.com/sakaiproject/sakai/branches/19.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/19.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/19.x/mailsender
 message https://github.com/sakaiproject/sakai/branches/19.x/message
@@ -58,6 +59,7 @@ polls https://github.com/sakaiproject/sakai/branches/19.x/polls
 portal https://github.com/sakaiproject/sakai/branches/19.x/portal
 postem https://github.com/sakaiproject/sakai/branches/19.x/postem
 presence https://github.com/sakaiproject/sakai/branches/19.x/presence
+providers https://github.com/sakaiproject/sakai/branches/19.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/19.x/reset-pass
 roster2 https://github.com/sakaiproject/sakai/branches/19.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/19.x/rsf
