@@ -99,3 +99,4 @@ profile2 https://github.com/LongsightGroup/sakai/branches/152-19.x/profile2
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
+#shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/19-SNAPSHOT/g' {} \;
