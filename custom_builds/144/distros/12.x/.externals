@@ -87,7 +87,7 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
+#mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8 -Dsakai.skin.target=sgu
 
 # Additional tools
 attendance https://github.com/sakaicontrib/attendance/branches/12.x
