@@ -94,7 +94,7 @@ webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
 attendance https://github.com/sakaicontrib/attendance/branches/19.x
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/19.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
-rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-19.x/
+#rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-19.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 profile2 https://github.com/LongsightGroup/sakai/branches/152-19.x/profile2
 # Hold for iRubric
