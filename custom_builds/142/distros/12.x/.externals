@@ -23,7 +23,7 @@ archive https://github.com/sakaiproject/sakai/branches/12.x/archive
 assignment https://github.com/sakaiproject/sakai/branches/12.x/assignment
 basiclti https://github.com/sakaiproject/sakai/branches/12.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/12.x/calendar
-chat https://github.com/sakaiproject/sakai/branches/12.x/chat
+#chat https://github.com/sakaiproject/sakai/branches/12.x/chat
 citations https://github.com/sakaiproject/sakai/branches/12.x/citations
 cloud-content https://github.com/sakaiproject/sakai/branches/12.x/cloud-content
 cmprovider https://github.com/sakaiproject/sakai/branches/12.x/cmprovider
@@ -97,6 +97,7 @@ SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/Sakai
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x
 
 # Customizations
+chat https://github.com/LongsightGroup/sakai/branches/142-12.x/chat
 dav https://github.com/LongsightGroup/sakai/branches/142-12.x/dav
 edu-services https://github.com/LongsightGroup/sakai/branches/142-12.x/edu-services
 login https://github.com/LongsightGroup/sakai/branches/142-12.x/login
