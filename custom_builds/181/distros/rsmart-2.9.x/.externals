@@ -95,7 +95,7 @@ webservices -r 314592             https://source.sakaiproject.org/svn/msub/rsmar
 # rSmart tools
 kernel-deploy		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/kernel-deploy
 jstl-shared-deploy	https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/jstl-shared-deploy
-rsmart			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/rsmart
+rsmart			https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/2.9.x/
 scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/scoring-service
 irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/irubric
 
