@@ -34,6 +34,67 @@
     </organization>
     <profiles>
         <profile>
+            <id>pack</id>
+            <modules>
+		<module>master</module>
+                <module>pack/pack-src</module>
+                <module>pack/pack-bin</module>
+                <module>pack/pack-demo</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>pack-bin</id>
+            <modules>
+	        <module>master</module>
+                <module>pack/pack-bin</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>pack-demo</id>
+            <modules>
+                <module>master</module>
+                <module>pack/pack-demo</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>pack-src</id>
+            <modules>
+                <module>master</module>
+                <module>pack/pack-src</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>framework</id>
+            <modules>
+                <module>kernel-deploy</module>
+                <module>framework-shared-deploy</module>
+                <module>jstl-shared-deploy</module>
+                <module>access</module>
+                <module>alias</module>
+                <module>announcement/announcement-api/api</module>
+                <module>authz</module>
+                <module>config</module>
+                <module>content</module>
+                <module>cloud-content</module>
+                <module>courier</module>
+                <module>dav</module>
+                <module>login</module>
+                <module>master</module>
+                <module>memory</module>
+                <module>message/message-api/api</module>
+                <module>portal</module>
+                <module>presence/presence-api/api</module>
+                <!-- <module>jobscheduler/scheduler-api</module> -->
+                <!--module>reference/library</module-->
+                <module>site</module>
+                <module>site-manage</module>
+                <module>tool</module>
+                <module>user</module>
+                <module>velocity</module>
+                <module>web</module>
+            </modules>
+        </profile>
+        <profile>
             <id>rsmart</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -42,67 +103,94 @@
                 </file>
             </activation>
             <modules>
-                <module>master</module>
-                <!-- module>rsmart/rsmart-Decryption</module -->
-                <module>rsmart/antivirus</module>
                 <module>kernel</module>
                 <module>kernel-deploy</module>
-                <module>hybrid</module>
+                <module>master</module>
+                <!--module>core-deploy</module-->
                 <module>jstl-shared-deploy</module>
                 <module>access</module>
                 <module>alias</module>
+                <!--module>ambrosia</module-->
                 <module>announcement</module>
                 <module>archive</module>
                 <module>assignment</module>
                 <module>authz</module>
                 <module>basiclti</module>
+                <!--module>blog</module-->
+		<!--module>blogwow</module-->
+                <!--module>bigbluebutton</module-->
                 <module>calendar</module>
                 <module>chat</module>
                 <module>citations</module>
-                <module>clog</module>
-                <module>cloud-content</module>
+                <!--module>clog</module-->
                 <module>common</module>
                 <module>config</module>
+                <!--module>config-viewer</module-->
                 <module>content</module>
                 <module>content-review</module>
                 <module>courier</module>
+		<!-- <module>dashboard</module> -->
+                <!--module>datapoint</module-->
                 <module>dav</module>
+		<!-- <module>delegatedaccess</module> -->
                 <module>edia-sakai-utils</module>
                 <module>edu-services</module>
                 <module>emailtemplateservice</module>
                 <module>entitybroker</module>
+                <!--module>EntityBrowser</module-->
+                <!--module>etudes-util</module-->
                 <module>evaluation</module>
+                <!--module>formbuilder</module-->
+                <!--module>gmt</module-->
 		<module>external-calendaring-service</module>
                 <module>gradebook</module>
+                <!--module>gradebook2</module-->
                 <module>help</module>
                 <module>hierarchy</module>
+                <module>hybrid</module>
+                <module>iclicker</module>
+                <!--module>itunesu-tool</module-->
+		<!--module>jforum</module--> 
                 <module>jobscheduler</module>
                 <module>jsf</module>
+                <module>kaltura</module>
                 <module>lessonbuilder</module>
                 <module>linktool</module>
-                <module>rsmart/shibboleth_filter</module>
                 <module>login</module>
                 <module>mailarchive</module>
                 <module>mailsender</module>
+                <!--module>melete</module-->
                 <module>memory</module>
                 <module>message</module>
                 <module>messageservice</module>
                 <module>metaobj</module>
                 <module>msgcntr</module>
+
+                <!--module>mneme</module-->
+                <!--module>opensyllabus</module-->
+
+                <module>osp</module>
                 <module>podcasts</module>
                 <module>polls</module>
 
                 <module>portal</module>
                 <module>postem</module>
                 <module>presence</module>
+                <module>providers</module>
                 <module>profile</module>
                 <module>profile2</module>
+
+                <!--module>reference</module-->
+
                 <module>rights</module>
                 <module>roster</module>
+                <!--module>roster2</module-->
+                <module>rsmart</module>
                 <module>rwiki</module>
+                <module>sakora</module>
                 <module>sam</module>
 
-                <module>search</module>
+                <!--module>search</module-->
                 <module>sections</module>
                 <module>shortenedurl</module>
                 <module>skin-manager</module>
@@ -113,54 +201,21 @@
 
                 <module>syllabus</module>
                 <module>textarea</module>
+		<!-- <module>tbook</module> -->
                 <module>tool</module>
                 <module>user</module>
                 <module>velocity</module>
                 <module>web</module>
+                <!--module>webservices</module-->
                 <module>usermembership</module>
                 <module>sakai-wicket</module>
+                <module>warehouse</module>
+                <module>reports</module>
                 <module>reset-pass</module>
                 <module>taggable</module>
                 <module>turnitin/contentreview-impl</module>
                 <module>scoring-service</module>
-                <module>irubric</module>
-                <module>providers</module>
-                <module>rsmart/util</module>
-                <module>rsmart/user</module>
-                <module>rsmart/user-data-service</module>
-                <module>rsmart/common</module>
-                <module>rsmart/certification</module>
-                <!--
-                <module>osp</module>
-                <module>reports</module>
-                <module>warehouse</module>
-                <module>EntityBrowser</module>
-                <module>iclicker</module>
-                <module>kaltura</module>
-                <module>itunesu-tool</module>
-		<module>blogwow</module>
-                <module>reference</module>
-                <module>roster2</module>
-                <module>sakora</module>
-                <module>webservices</module>
-		<module>tbook</module>
-
-		<module>jforum</module> 
-                <module>gradebook2</module>
-                <module>etudes-util</module>
-                <module>formbuilder</module>
-                <module>gmt</module>
-		<<module>dashboard</module>
-                <module>datapoint</module>
-                <module>bigbluebutton</module>
-                <module>ambrosia</module>
-                <module>core-deploy</module>
-		<<module>delegatedaccess</module>
-                <module>melete</module>
-                <module>mneme</module>
-                <module>opensyllabus</module>
-                -->
-                <!--module>config-viewer</module-->
+		<!--module>irubric</module-->
             </modules>
         </profile>
         <profile>
@@ -377,4 +432,5 @@
             </plugin>
         </plugins>
     </reporting>
-</project>
+</project> 
+

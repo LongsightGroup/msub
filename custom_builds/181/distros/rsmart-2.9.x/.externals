@@ -1,105 +1,109 @@
-EntityBrowser -r 87135           https://source.sakaiproject.org/contrib/rsmart/msub/EntityBrowser/branches/2.9.x/
-access -r 314523                  https://source.sakaiproject.org/svn/msub/rsmart.com/access/branches/2.9.x
-alias -r 314524                   https://source.sakaiproject.org/svn/msub/rsmart.com/alias/branches/2.9.x
-ambrosia -r 87136                https://source.sakaiproject.org/contrib/rsmart/msub/ambrosia/branches/2.9.x
-announcement -r 314525            https://source.sakaiproject.org/svn/msub/rsmart.com/announcement/branches/2.9.x
-archive -r 314526                 https://source.sakaiproject.org/svn/msub/rsmart.com/archive/branches/2.9.x
-assignment -r 314527              https://source.sakaiproject.org/svn/msub/rsmart.com/assignment/branches/2.9.x
-authz -r 314528                   https://source.sakaiproject.org/svn/msub/rsmart.com/authz/branches/2.9.x
-basiclti -r 314529                https://source.sakaiproject.org/svn/msub/rsmart.com/basiclti/branches/2.9.x
-bigbluebutton 	        	  https://github.com/asahinet/bigbluebutton-sakai/branches/2.9.x/bbb-tool
-blogwow -r 87137                 https://source.sakaiproject.org/contrib/rsmart/msub/blogwow/branches/2.9.x
-calendar -r 314530                https://source.sakaiproject.org/svn/msub/rsmart.com/calendar/branches/2.9.x
-chat -r 314531                    https://source.sakaiproject.org/svn/msub/rsmart.com/chat/branches/2.9.x
-clog -r 87702                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/2.9.x
-citations -r 314532               https://source.sakaiproject.org/svn/msub/rsmart.com/citations/branches/2.9.x
-common -r 314533                  https://source.sakaiproject.org/svn/msub/rsmart.com/common/branches/2.9.x
-config -r 314534                  https://source.sakaiproject.org/svn/msub/rsmart.com/config/branches/2.9.x
-config-viewer -r 87139           https://source.sakaiproject.org/contrib/rsmart/msub/config-viewer/branches/2.9.x
-content -r 314535                 https://source.sakaiproject.org/svn/msub/rsmart.com/content/branches/2.9.x
-content-review -r 314536          https://source.sakaiproject.org/svn/msub/rsmart.com/content-review/branches/2.9.x
-courier -r 314537                 https://source.sakaiproject.org/svn/msub/rsmart.com/courier/branches/2.9.x
-edia-sakai-utils -r 87140        https://source.sakaiproject.org/contrib/rsmart/msub/edia-sakai-utils/branches/2.9.x
-edu-services -r 314539            https://source.sakaiproject.org/svn/msub/rsmart.com/edu-services/branches/2.9.x
-emailtemplateservice -r 314540    https://source.sakaiproject.org/svn/msub/rsmart.com/emailtemplateservice/branches/2.9.x
-entitybroker -r 320093            https://source.sakaiproject.org/svn/msub/rsmart.com/entitybroker/branches/2.9.x
-etudes-util -r 87141             https://source.sakaiproject.org/contrib/rsmart/msub/etudes-util/branches/2.9.x
-external-calendaring-service -r 87142  https://source.sakaiproject.org/contrib/rsmart/msub/external-calendaring-service/branches/2.9.x
-evaluation -r 87143              https://source.sakaiproject.org/contrib/rsmart/msub/evaluation/branches/2.9.x
-gradebook -r 320175               https://source.sakaiproject.org/svn/msub/rsmart.com/gradebook/branches/2.9.x
-#gradebook2 -r 87144              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/2.9.x
-help -r 314543                    https://source.sakaiproject.org/svn/msub/rsmart.com/help/branches/2.9.x
-hierarchy -r 87145               https://source.sakaiproject.org/contrib/rsmart/msub/hierarchy/branches/2.9.x
-hybrid -r 314544                  https://source.sakaiproject.org/svn/msub/rsmart.com/hybrid/branches/2.9.x
-itunesu-tool -r 87146            https://source.sakaiproject.org/contrib/rsmart/msub/itunesu-tool/branches/2.9.x
-iclicker -r 87147                https://source.sakaiproject.org/contrib/rsmart/msub/iclicker/branches/2.9.x
-jforum -r 87148                  https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/2.9.x
-jobscheduler -r 314545            https://source.sakaiproject.org/svn/msub/rsmart.com/jobscheduler/branches/2.9.x
-jsf -r 314546                     https://source.sakaiproject.org/svn/msub/rsmart.com/jsf/branches/2.9.x
-kaltura -r 314547                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/2.9.x
-linktool -r 314550                https://source.sakaiproject.org/svn/msub/rsmart.com/linktool/branches/2.9.x
-login -r 314551                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/2.9.x
-mailarchive -r 314552             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/2.9.x
-mailsender -r 87149              https://source.sakaiproject.org/contrib//rsmart/msub//mailsender/branches/2.9.x
-master -r 314553                  https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/2.9.x
-melete -r 87150                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/2.9.x
-memory -r 314554                  https://source.sakaiproject.org/svn/msub/rsmart.com/memory/branches/2.9.x
-message -r 314555                 https://source.sakaiproject.org/svn/msub/rsmart.com/message/branches/2.9.x
-messageservice -r 87151          https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/branches/2.9.x
-metaobj -r 318848                 https://source.sakaiproject.org/svn/msub/rsmart.com/metaobj/branches/2.9.x
-msgcntr -r 318194                 https://source.sakaiproject.org/svn/msub/rsmart.com/msgcntr/branches/2.9.x
-osp -r 314558                     https://source.sakaiproject.org/svn/msub/rsmart.com/osp/branches/2.9.x
-pack -r 314559                    https://source.sakaiproject.org/svn/msub/rsmart.com/pack/branches/2.9.x 
-podcasts -r 314560                https://source.sakaiproject.org/svn/msub/rsmart.com/podcasts/branches/2.9.x
-polls -r 314561                   https://source.sakaiproject.org/svn/msub/rsmart.com/polls/branches/2.9.x
-portal -r 318848                  https://source.sakaiproject.org/svn/msub/rsmart.com/portal/branches/2.9.x
-postem -r 314563                  https://source.sakaiproject.org/svn/msub/rsmart.com/postem/branches/2.9.x
-presence -r 314564                https://source.sakaiproject.org/svn/msub/rsmart.com/presence/branches/2.9.x
-profile -r 314565                 https://source.sakaiproject.org/svn/msub/rsmart.com/profile/branches/2.9.x
-profile2 -r 314566                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/branches/2.9.x
-providers -r 314567               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/branches/2.9.x
-reports -r 314569                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/branches/2.9.x
-reset-pass -r 314570              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/branches/2.9.x
-rights -r 314571                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/branches/2.9.x
-roster -r 314572                  https://source.sakaiproject.org/svn/msub/rsmart.com/roster/branches/2.9.x
-rwiki -r 314573                   https://source.sakaiproject.org/svn/msub/rsmart.com/rwiki/branches/2.9.x
-sakai-mock -r 314574              https://source.sakaiproject.org/svn/msub/rsmart.com/sakai-mock/branches/2.9.x
-sakai-wicket -r 87152            https://source.sakaiproject.org/contrib/rsmart/msub/sakai-wicket/branches/2.9.x
-sakora -r 87153                  https://source.sakaiproject.org/contrib/rsmart/msub/sakora/branches/2.9.x
-sam -r 320111                     https://source.sakaiproject.org/svn/msub/rsmart.com/sam/branches/2.9.x
-search -r 316138                  https://source.sakaiproject.org/svn/msub/rsmart.com/search/branches/2.9.x
-sections -r 314577                https://source.sakaiproject.org/svn/msub/rsmart.com/sections/branches/2.9.x
-shortenedurl -r 314578            https://source.sakaiproject.org/svn/msub/rsmart.com/shortenedurl/branches/2.9.x
-signup -r 87154                  https://source.sakaiproject.org/contrib/rsmart/msub/signup/branches/2.9.x 
-site -r 314579                    https://source.sakaiproject.org/svn/msub/rsmart.com/site/branches/2.9.x
-site-manage -r 318202             https://source.sakaiproject.org/svn/msub/rsmart.com/site-manage/branches/2.9.x
-sitestats -r 314581               https://source.sakaiproject.org/svn/msub/rsmart.com/sitestats/branches/2.9.x
-skin-manager -r 87155            https://source.sakaiproject.org/contrib/rsmart/msub/skin-manager/branches/2.9.x
-syllabus -r 322468                https://source.sakaiproject.org/svn/msub/rsmart.com/syllabus/branches/2.9.x
-taggable -r 314583                https://source.sakaiproject.org/svn/msub/rsmart.com/taggable/branches/2.9.x
-textarea -r 314584                https://source.sakaiproject.org/svn/msub/rsmart.com/textarea/branches/2.9.x
-tool -r 314585                    https://source.sakaiproject.org/svn/msub/rsmart.com/tool/branches/2.9.x
-turnitin -r 87156                https://source.sakaiproject.org/contrib/rsmart/msub/turnitin/branches/2.9.x
-user -r 314586                    https://source.sakaiproject.org/svn/msub/rsmart.com/user/branches/2.9.x
-usermembership -r 314587          https://source.sakaiproject.org/svn/msub/rsmart.com/usermembership/branches/2.9.x
-velocity -r 314588                https://source.sakaiproject.org/svn/msub/rsmart.com/velocity/branches/2.9.x
-warehouse -r 314589               https://source.sakaiproject.org/svn/msub/rsmart.com/warehouse/branches/2.9.x
-was -r 314590                     https://source.sakaiproject.org/svn/msub/rsmart.com/was/branches/2.9.x
-web -r 314591                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/2.9.x
-webservices -r 314592             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.x
+EntityBrowser -r 86163           https://source.sakaiproject.org/contrib/rsmart/msub/EntityBrowser/branches/2.9.4.x/
+access -r 308693                  https://source.sakaiproject.org/svn/msub/rsmart.com/access/branches/2.9.4.x
+alias -r 308694                   https://source.sakaiproject.org/svn/msub/rsmart.com/alias/branches/2.9.4.x
+ambrosia -r 86164                https://source.sakaiproject.org/contrib/rsmart/msub/ambrosia/branches/2.9.4.x
+announcement -r 310660            https://source.sakaiproject.org/svn/msub/rsmart.com/announcement/branches/2.9.4.x
+archive -r 308696                 https://source.sakaiproject.org/svn/msub/rsmart.com/archive/branches/2.9.4.x
+assignment -r 311070              https://source.sakaiproject.org/svn/msub/rsmart.com/assignment/branches/2.9.4.x
+authz -r 308698                   https://source.sakaiproject.org/svn/msub/rsmart.com/authz/branches/2.9.4.x
+basiclti -r 308849                https://source.sakaiproject.org/svn/msub/rsmart.com/basiclti/branches/2.9.4.x
+bigbluebutton -r 269           https://github.com/asahinet/bigbluebutton-sakai/branches/master/bbb-tool
+blogwow -r 86165                 https://source.sakaiproject.org/contrib/rsmart/msub/blogwow/branches/2.9.4.x
+calendar -r 308700                https://source.sakaiproject.org/svn/msub/rsmart.com/calendar/branches/2.9.4.x
+chat -r 308701                    https://source.sakaiproject.org/svn/msub/rsmart.com/chat/branches/2.9.4.x
+clog -r 86166                    https://source.sakaiproject.org/contrib/rsmart/msub/clog/branches/2.9.4.x
+citations -r 308702               https://source.sakaiproject.org/svn/msub/rsmart.com/citations/branches/2.9.4.x
+common -r 308703                  https://source.sakaiproject.org/svn/msub/rsmart.com/common/branches/2.9.4.x
+config -r 308704                  https://source.sakaiproject.org/svn/msub/rsmart.com/config/branches/2.9.4.x
+config-viewer -r 86167           https://source.sakaiproject.org/contrib/rsmart/msub/config-viewer/branches/2.9.4.x
+content -r 310661                 https://source.sakaiproject.org/svn/msub/rsmart.com/content/branches/2.9.4.x
+content-review -r 308706          https://source.sakaiproject.org/svn/msub/rsmart.com/content-review/branches/2.9.4.x
+courier -r 308707                 https://source.sakaiproject.org/svn/msub/rsmart.com/courier/branches/2.9.4.x
+#dav -r 308708                     https://source.sakaiproject.org/svn/msub/rsmart.com/dav/branches/2.9.4.x
+edia-sakai-utils -r 86168        https://source.sakaiproject.org/contrib/rsmart/msub/edia-sakai-utils/branches/2.9.4.x
+edu-services -r 308709            https://source.sakaiproject.org/svn/msub/rsmart.com/edu-services/branches/2.9.4.x
+emailtemplateservice -r 308710    https://source.sakaiproject.org/svn/msub/rsmart.com/emailtemplateservice/branches/2.9.4.x
+entitybroker -r 311081            https://source.sakaiproject.org/svn/msub/rsmart.com/entitybroker/branches/2.9.4.x
+etudes-util -r 86169             https://source.sakaiproject.org/contrib/rsmart/msub/etudes-util/branches/2.9.4.x
+external-calendaring-service -r 86170  https://source.sakaiproject.org/contrib/rsmart/msub/external-calendaring-service/branches/2.9.4.x
+evaluation -r 86797              https://source.sakaiproject.org/contrib/rsmart/msub/evaluation/branches/2.9.4.x
+gradebook -r 308712               https://source.sakaiproject.org/svn/msub/rsmart.com/gradebook/branches/2.9.4.x
+gradebook2 -r 86522              https://source.sakaiproject.org/contrib/rsmart/msub/gradebook2/branches/2.9.4.x
+help -r 308713                    https://source.sakaiproject.org/svn/msub/rsmart.com/help/branches/2.9.4.x
+hierarchy -r 86173               https://source.sakaiproject.org/contrib/rsmart/msub/hierarchy/branches/2.9.4.x
+hybrid -r 308714                  https://source.sakaiproject.org/svn/msub/rsmart.com/hybrid/branches/2.9.4.x
+itunesu-tool -r 86797            https://source.sakaiproject.org/contrib/rsmart/msub/itunesu-tool/branches/2.9.4.x
+iclicker -r 86175                https://source.sakaiproject.org/contrib/rsmart/msub/iclicker/branches/2.9.4.x
+jforum -r 86176                  https://source.sakaiproject.org/contrib/rsmart/msub/jforum/branches/2.9.4.x
+jobscheduler -r 308715            https://source.sakaiproject.org/svn/msub/rsmart.com/jobscheduler/branches/2.9.4.x
+jsf -r 308716                     https://source.sakaiproject.org/svn/msub/rsmart.com/jsf/branches/2.9.4.x
+kaltura -r 308717                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/2.9.4.x
+#kernel -r 308900                  https://source.sakaiproject.org/svn/msub/rsmart.com/kernel/branches/2.9.4.x
+#lessonbuilder -r 311073           https://source.sakaiproject.org/svn/msub/rsmart.com/lessonbuilder/branches/2.9.4.x
+linktool -r 308720                https://source.sakaiproject.org/svn/msub/rsmart.com/linktool/branches/2.9.4.x
+login                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/2.9.4.x
+mailarchive -r 308722             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/2.9.4.x
+mailsender -r 86177              https://source.sakaiproject.org/contrib//rsmart/msub//mailsender/branches/2.9.4.x
+master -r 308723                  https://source.sakaiproject.org/svn/msub/rsmart.com/master/branches/2.9.4.x
+melete -r 86793                  https://source.sakaiproject.org/contrib/rsmart/msub/melete/branches/2.9.4.x
+memory -r 308724                  https://source.sakaiproject.org/svn/msub/rsmart.com/memory/branches/2.9.4.x
+message -r 308725                 https://source.sakaiproject.org/svn/msub/rsmart.com/message/branches/2.9.4.x
+messageservice -r 86179          https://source.sakaiproject.org/contrib/rsmart/msub/messageservice/branches/2.9.4.x
+metaobj -r 308726                 https://source.sakaiproject.org/svn/msub/rsmart.com/metaobj/branches/2.9.4.x
+msgcntr -r 311074                 https://source.sakaiproject.org/svn/msub/rsmart.com/msgcntr/branches/2.9.4.x
+osp -r 308728                     https://source.sakaiproject.org/svn/msub/rsmart.com/osp/branches/2.9.4.x
+pack -r 308729                    https://source.sakaiproject.org/svn/msub/rsmart.com/pack/branches/2.9.4.x 
+podcasts -r 308730                https://source.sakaiproject.org/svn/msub/rsmart.com/podcasts/branches/2.9.4.x
+polls -r 308731                   https://source.sakaiproject.org/svn/msub/rsmart.com/polls/branches/2.9.4.x
+portal -r 309997                  https://source.sakaiproject.org/svn/msub/rsmart.com/portal/branches/2.9.4.x
+postem -r 308733                  https://source.sakaiproject.org/svn/msub/rsmart.com/postem/branches/2.9.4.x
+presence -r 308734                https://source.sakaiproject.org/svn/msub/rsmart.com/presence/branches/2.9.4.x
+profile -r 308735                 https://source.sakaiproject.org/svn/msub/rsmart.com/profile/branches/2.9.4.x
+profile2 -r 310006                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/branches/2.9.4.x
+providers -r 309991               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/branches/2.9.4.x
+reference -r 311069               https://source.sakaiproject.org/svn/msub/rsmart.com/reference/branches/2.9.4.x
+reports -r 308739                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/branches/2.9.4.x
+reset-pass -r 308740              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/branches/2.9.4.x
+rights -r 308741                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/branches/2.9.4.x
+roster -r 308742                  https://source.sakaiproject.org/svn/msub/rsmart.com/roster/branches/2.9.4.x
+rwiki -r 308743                   https://source.sakaiproject.org/svn/msub/rsmart.com/rwiki/branches/2.9.4.x
+sakai-mock -r 311081              https://source.sakaiproject.org/svn/msub/rsmart.com/sakai-mock/branches/2.9.4.x
+sakai-wicket -r 86180            https://source.sakaiproject.org/contrib/rsmart/msub/sakai-wicket/branches/2.9.4.x
+sakora -r 86797                  https://source.sakaiproject.org/contrib/rsmart/msub/sakora/branches/2.9.4.x
+sam -r 310664                     https://source.sakaiproject.org/svn/msub/rsmart.com/sam/branches/2.9.4.x
+search -r 308746                  https://source.sakaiproject.org/svn/msub/rsmart.com/search/branches/2.9.4.x
+sections -r 308747                https://source.sakaiproject.org/svn/msub/rsmart.com/sections/branches/2.9.4.x
+shortenedurl -r 308748            https://source.sakaiproject.org/svn/msub/rsmart.com/shortenedurl/branches/2.9.4.x
+signup -r 86711                  https://source.sakaiproject.org/contrib/rsmart/msub/signup/branches/2.9.4.x 
+site -r 308749                    https://source.sakaiproject.org/svn/msub/rsmart.com/site/branches/2.9.4.x
+site-manage -r 310532             https://source.sakaiproject.org/svn/msub/rsmart.com/site-manage/branches/2.9.4.x
+sitestats -r 311081               https://source.sakaiproject.org/svn/msub/rsmart.com/sitestats/branches/2.9.4.x
+skin-manager -r 86183            https://source.sakaiproject.org/contrib/rsmart/msub/skin-manager/branches/2.9.4.x
+syllabus -r 312294                https://source.sakaiproject.org/svn/msub/rsmart.com/syllabus/branches/2.9.4.x
+taggable -r 308753                https://source.sakaiproject.org/svn/msub/rsmart.com/taggable/branches/2.9.4.x
+textarea -r 310412                https://source.sakaiproject.org/svn/msub/rsmart.com/textarea/branches/2.9.4.x
+tool -r 308755                    https://source.sakaiproject.org/svn/msub/rsmart.com/tool/branches/2.9.4.x
+turnitin -r 86184                https://source.sakaiproject.org/contrib/rsmart/msub/turnitin/branches/2.9.4.x
+user -r 308756                    https://source.sakaiproject.org/svn/msub/rsmart.com/user/branches/2.9.4.x
+usermembership -r 308757          https://source.sakaiproject.org/svn/msub/rsmart.com/usermembership/branches/2.9.4.x
+velocity -r 308758                https://source.sakaiproject.org/svn/msub/rsmart.com/velocity/branches/2.9.4.x
+warehouse -r 308759               https://source.sakaiproject.org/svn/msub/rsmart.com/warehouse/branches/2.9.4.x
+was -r 308760                     https://source.sakaiproject.org/svn/msub/rsmart.com/was/branches/2.9.4.x
+web -r 308761                     https://source.sakaiproject.org/svn/msub/rsmart.com/web/branches/2.9.4.x
+webservices -r 311071             https://source.sakaiproject.org/svn/msub/rsmart.com/webservices/branches/2.9.4.x
 
 # rSmart tools
-kernel-deploy		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/kernel-deploy
-jstl-shared-deploy	https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/jstl-shared-deploy
-rsmart			https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/2.9.x/
-scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/scoring-service
-irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.5.5-M1/irubric
+kernel-deploy		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/kernel-deploy
+jstl-shared-deploy	https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/jstl-shared-deploy
+rsmart			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/rsmart
+scoring-service		https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/scoring-service
+irubric			https://source.sakaiproject.org/svn/msub/rsmart.com/sakai/tags/2.9.4.7-M2/irubric
 
-# Cloud content
-kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/176/kernel/2.9.x
-cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/176/cloud-content/2.9.x
-lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/176/lessonbuilder/2.9.x
-dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/176/dav/2.9.x
+# s3
+kernel			https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/kernel
+cloud-content		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/cloud-content
+lessonbuilder		https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/lessonbuilder
+dav                     https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/173/distros/eval-forks/dav
 
 #mavenoptions:-P2.9 -Psakai2.9 -Detudes.util.version=1.0.17 -Dsakai.jdk.version=1.7
 
@@ -115,6 +119,3 @@ dav                     https://source.sakaiproject.org/svn/msub/longsight.com/c
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/google-content/d' {} \;
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/gradebook2-export/d' {} \;
 #shell_command find ./rsmart/ -name pom.xml -exec sed -i '/grade-exporter/d' {} \;
-#shell_command cd ./rsmart/certification
-#shell_command svn merge -c 322463 https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/155/rsmart/sakai-10.x/certification
-#shell_command cd ../../
