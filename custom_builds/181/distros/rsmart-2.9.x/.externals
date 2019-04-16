@@ -19,7 +19,6 @@ config-viewer -r 87139           https://source.sakaiproject.org/contrib/rsmart/
 content -r 314535                 https://source.sakaiproject.org/svn/msub/rsmart.com/content/branches/2.9.x
 content-review -r 314536          https://source.sakaiproject.org/svn/msub/rsmart.com/content-review/branches/2.9.x
 courier -r 314537                 https://source.sakaiproject.org/svn/msub/rsmart.com/courier/branches/2.9.x
-#dav -r 314538                     https://source.sakaiproject.org/svn/msub/rsmart.com/dav/branches/2.9.x
 edia-sakai-utils -r 87140        https://source.sakaiproject.org/contrib/rsmart/msub/edia-sakai-utils/branches/2.9.x
 edu-services -r 314539            https://source.sakaiproject.org/svn/msub/rsmart.com/edu-services/branches/2.9.x
 emailtemplateservice -r 314540    https://source.sakaiproject.org/svn/msub/rsmart.com/emailtemplateservice/branches/2.9.x
@@ -38,8 +37,6 @@ jforum -r 87148                  https://source.sakaiproject.org/contrib/rsmart/
 jobscheduler -r 314545            https://source.sakaiproject.org/svn/msub/rsmart.com/jobscheduler/branches/2.9.x
 jsf -r 314546                     https://source.sakaiproject.org/svn/msub/rsmart.com/jsf/branches/2.9.x
 kaltura -r 314547                 https://source.sakaiproject.org/svn/msub/rsmart.com/kaltura/branches/2.9.x
-#kernel -r 318848                  https://source.sakaiproject.org/svn/msub/rsmart.com/kernel/branches/2.9.x
-#lessonbuilder -r 320093           https://source.sakaiproject.org/svn/msub/rsmart.com/lessonbuilder/branches/2.9.x
 linktool -r 314550                https://source.sakaiproject.org/svn/msub/rsmart.com/linktool/branches/2.9.x
 login -r 314551                   https://source.sakaiproject.org/svn/msub/rsmart.com/login/branches/2.9.x
 mailarchive -r 314552             https://source.sakaiproject.org/svn/msub/rsmart.com/mailarchive/branches/2.9.x
@@ -61,7 +58,6 @@ presence -r 314564                https://source.sakaiproject.org/svn/msub/rsmar
 profile -r 314565                 https://source.sakaiproject.org/svn/msub/rsmart.com/profile/branches/2.9.x
 profile2 -r 314566                https://source.sakaiproject.org/svn/msub/rsmart.com/profile2/branches/2.9.x
 providers -r 314567               https://source.sakaiproject.org/svn/msub/rsmart.com/providers/branches/2.9.x
-#reference -r 318848               https://source.sakaiproject.org/svn/msub/rsmart.com/reference/branches/2.9.x
 reports -r 314569                 https://source.sakaiproject.org/svn/msub/rsmart.com/reports/branches/2.9.x
 reset-pass -r 314570              https://source.sakaiproject.org/svn/msub/rsmart.com/reset-pass/branches/2.9.x
 rights -r 314571                  https://source.sakaiproject.org/svn/msub/rsmart.com/rights/branches/2.9.x
