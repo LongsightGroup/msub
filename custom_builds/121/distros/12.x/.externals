@@ -1,4 +1,4 @@
-#shell_command git clone --branch 12.6.e1 git@github.com:edtell/edtell-sakai12.git && mv edtell-sakai12/* ./
+#shell_command git clone git@github.com:edtell/edtell-sakai12.git && mv edtell-sakai12/* ./
 #mavenoptions:-Dsakai.jdk.version=1.8 -Dgwt.compiler.force=true -Dsakai.skin.target=founders -Dsakai.skin.customization.file=./src/morpheus-master/sass/_founders.scss 
 
 #GIT Projects
