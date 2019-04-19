@@ -57,7 +57,6 @@ polls https://github.com/sakaiproject/sakai/branches/12.x/polls
 portal https://github.com/sakaiproject/sakai/branches/12.x/portal
 postem https://github.com/sakaiproject/sakai/branches/12.x/postem
 presence https://github.com/sakaiproject/sakai/branches/12.x/presence
-profile2 https://github.com/sakaiproject/sakai/branches/12.x/profile2
 reset-pass https://github.com/sakaiproject/sakai/branches/12.x/reset-pass
 roster2 https://github.com/sakaiproject/sakai/branches/12.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/12.x/rsf
@@ -96,6 +95,8 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 login  https://github.com/LongsightGroup/sakai/branches/14-12.x/login
+# Custom default images
+profile2  https://github.com/LongsightGroup/sakai/branches/14-12.x/profile2
 
 #shell_command git clone git@github.com:LongsightGroup/sipx-private.git
 #shell_command mv sipx-private/sipx ./
