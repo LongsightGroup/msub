@@ -122,6 +122,8 @@
                 <module>attendance</module>
                 <module>bbb-tool</module>
                 <module>blogwow</module>
+                <module>irubric-core</module>
+                <module>irubric-tool</module>
                 <!-- module>rsmart</module -->
             </modules>
         </profile>
