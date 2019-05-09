@@ -87,6 +87,7 @@ usermembership https://github.com/sakaiproject/sakai/branches/12.x/usermembershi
 velocity https://github.com/sakaiproject/sakai/branches/12.x/velocity
 web https://github.com/sakaiproject/sakai/branches/12.x/web
 webjars https://github.com/sakaiproject/sakai/branches/12.x/webjars
+webservices https://github.com/sakaiproject/sakai/branches/12.x/webservices
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-12 -Psakai12.x -Dsakai.edu-services.version=12-SNAPSHOT -Dsakai.common.version=12-SNAPSHOT -Dsakai.jdk.version=1.8
