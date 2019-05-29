@@ -123,6 +123,7 @@
                 <module>blogwow</module>
                 <module>certification</module>
                 <module>evaluation</module>
+                <module>gradebook1</module>
                 <module>scorm</module>
             </modules>
         </profile>
