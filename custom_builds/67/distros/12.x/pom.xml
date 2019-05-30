@@ -118,7 +118,6 @@
                 <module>attendance</module>
                 <module>blogwow</module>
                 <module>evaluation</module>
-                <module>scorm</module>
             </modules>
         </profile>
 
