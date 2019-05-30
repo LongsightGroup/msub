@@ -86,6 +86,7 @@ velocity https://github.com/sakaiproject/sakai/branches/19.x/velocity
 web https://github.com/sakaiproject/sakai/branches/19.x/web
 webcomponents https://github.com/sakaiproject/sakai/branches/19.x/webcomponents
 webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
+samigo https://github.com/sakaiproject/sakai/branches/19.x/samigo
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-19 -Psakai19.x -Dsakai.edu-services.version=19-SNAPSHOT -Dsakai.common.version=19-SNAPSHOT -Dsakai.jdk.version=1.8
@@ -99,7 +100,5 @@ clog https://github.com/sakaicontrib/clog/branches/19.x
 gradebook1 https://github.com/sakaicontrib/gradebook1/branches/19.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
-# Rollback 62945
-samigo -r51264 https://github.com/sakaiproject/sakai/branches/19.x/samigo
-
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
+#shell_command curl https://github.com/sakaiproject/sakai/commit/7a6b00637f1ba9618eb08b081a87ea24fb75e0fb.patch | patch -p1 -R 
