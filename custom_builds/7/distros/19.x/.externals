@@ -55,7 +55,6 @@ pack https://github.com/sakaiproject/sakai/branches/19.x/pack
 pasystem https://github.com/sakaiproject/sakai/branches/19.x/pasystem
 podcasts https://github.com/sakaiproject/sakai/branches/19.x/podcasts
 polls https://github.com/sakaiproject/sakai/branches/19.x/polls
-portal https://github.com/sakaiproject/sakai/branches/19.x/portal
 postem https://github.com/sakaiproject/sakai/branches/19.x/postem
 presence https://github.com/sakaiproject/sakai/branches/19.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/19.x/profile2
@@ -99,5 +98,6 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/7-19.x/config
+poratl https://github.com/LongsightGroup/sakai/branches/7-19.x/portal
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
