@@ -101,4 +101,3 @@ gradebook1 https://github.com/sakaicontrib/gradebook1/branches/19.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
-#shell_command curl https://github.com/sakaiproject/sakai/commit/7a6b00637f1ba9618eb08b081a87ea24fb75e0fb.patch | patch -p1 -R 
