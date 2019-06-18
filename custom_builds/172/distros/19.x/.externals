@@ -102,7 +102,11 @@ dav https://github.com/LongsightGroup/sakai/branches/172-19.x/dav
 login https://github.com/LongsightGroup/sakai/branches/172-19.x/login
 profile2 https://github.com/LongsightGroup/sakai/branches/172-19.x/profile2
 roster2 https://github.com/LongsightGroup/sakai/branches/172-19.x/roster2
-#sakora-csv https://github.com/WakeForestSakai/sakora-csv/trunk
-# Hold for Inotado
+sakora-csv https://github.com/sakaicontrib/sakora-csv/branches/19.x
+
+#shell_command git clone -b 19.x git@github.com:WakeForestSakai/inotado.git
+
+#GIT Projects
+#git_project inotado
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;

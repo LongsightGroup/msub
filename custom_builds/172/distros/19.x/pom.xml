@@ -124,7 +124,9 @@
                 <module>certification</module>
                 <module>evaluation</module>
                 <module>gradebook1</module>
-                <module>scorm</module>
+                <module>inotado</module>
+                <module>sakora-csv</module>
+                <!-- module>scorm</module -->
             </modules>
         </profile>
 
