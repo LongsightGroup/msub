@@ -118,10 +118,8 @@
                 <module>attendance</module>
                 <module>blogwow</module>
                 <module>kaltura</module>
-		<!--
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
-		-->
             </modules>
         </profile>
 

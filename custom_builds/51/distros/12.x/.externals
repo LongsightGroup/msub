@@ -88,14 +88,10 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 # Contrib / 3rd Party tools
 attendance https://github.com/sakaicontrib/attendance/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/12.x
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
-
-# Not currently building.  Clients have open requests from vendors below
-# Uncomment and update url if needed when those have been resolved
-#
 kaltura https://github.com/kaltura/sakai-extension/trunk
-#irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
-#irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai12-SNAPSHOT/irubric-tool/
+irubric-core https://github.com/sakaicontrib/irubric/branches/12-edu-serv-fix/irubric-core/
+irubric-tool https://github.com/sakaicontrib/irubric//branches/12-edu-serv-fix/irubric-tool/
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 
 # Customizations 
 config https://github.com/LongsightGroup/sakai/branches/51-12.x/config
