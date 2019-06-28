@@ -127,7 +127,7 @@
                 <module>evaluation</module>
 		<module>bbb-tool</module>
 		<module>da_evalprovider</module>
-		<module>iclicker</module>
+		<!-- module>iclicker</module -->
             </modules>
         </profile>
 
