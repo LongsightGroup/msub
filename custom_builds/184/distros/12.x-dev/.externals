@@ -83,6 +83,11 @@
 #git_project yaft
 
 # ACE Specific Tools
+#git_project ace-assignment
+#git_project ace-calendar
+#git_project ace-config
+#git_project ace-group-overview
+#git_project ace-roster
 #git_project regions
 #git_project region-members
 #git_project mygroups
