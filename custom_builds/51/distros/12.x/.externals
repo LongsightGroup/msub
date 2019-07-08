@@ -89,8 +89,8 @@ web https://github.com/sakaiproject/sakai/branches/12.x/web
 attendance https://github.com/sakaicontrib/attendance/branches/12.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/12.x
 kaltura https://github.com/kaltura/sakai-extension/trunk
-irubric-core https://github.com/sakaicontrib/irubric/branches/12-edu-serv-fix/irubric-core/
-irubric-tool https://github.com/sakaicontrib/irubric//branches/12-edu-serv-fix/irubric-tool/
+irubric-core https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-core/
+irubric-tool https://github.com/sakaicontrib/irubric/branches/sakai12-SNAPSHOT/irubric-tool/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 
 # Customizations 
