@@ -127,7 +127,7 @@
                 <module>evaluation</module>
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
-                <module>scorm</module>
+                <!-- module>scorm</module -->
             </modules>
         </profile>
 
