@@ -120,7 +120,7 @@
                 <module>blogwow</module>
                 <module>certification</module>
                 <module>etudes-util</module>
-                <module>gradebook2</module>
+                <!-- module>gradebook2</module -->
                 <module>melete</module>
                 <module>scorm</module>
             </modules>
