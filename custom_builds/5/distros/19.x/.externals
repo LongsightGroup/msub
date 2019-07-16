@@ -59,7 +59,6 @@ portal https://github.com/sakaiproject/sakai/branches/19.x/portal
 postem https://github.com/sakaiproject/sakai/branches/19.x/postem
 presence https://github.com/sakaiproject/sakai/branches/19.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/19.x/profile2
-providers https://github.com/sakaiproject/sakai/branches/19.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/19.x/reset-pass
 roster2 https://github.com/sakaiproject/sakai/branches/19.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/19.x/rsf
@@ -99,3 +98,4 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/5-19.x/login
+providers https://github.com/LongsightGroup/sakai/branches/5-19.x/providers
