@@ -95,6 +95,7 @@ providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-12.x/
 sitestats https://github.com/LongsightGroup/sakai/branches/163-12.x/sitestats
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
+kaltura https://github.com/kaltura/sakai-extension/branches/12x
 
 # Customizations 
 web https://github.com/LongsightGroup/sakai/branches/163-12.x/web

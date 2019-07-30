@@ -120,7 +120,7 @@
                 <module>blogwow</module>
                 <module>da_evalprovider</module>
                 <module>evaluation</module>
-                <!--module>kaltura</module-->
+                <module>kaltura</module>
                 <module>rsmart</module>
             </modules>
         </profile>
