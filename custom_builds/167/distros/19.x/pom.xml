@@ -123,7 +123,7 @@
                 <module>clog</module>
                 <module>certification</module>
                 <module>evaluation</module>
-                <!-- module>rsmart</module -->
+                <module>rsmart</module>
             </modules>
         </profile>
 
