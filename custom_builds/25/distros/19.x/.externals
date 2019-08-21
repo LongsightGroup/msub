@@ -85,7 +85,6 @@ usermembership https://github.com/sakaiproject/sakai/branches/19.x/usermembershi
 velocity https://github.com/sakaiproject/sakai/branches/19.x/velocity
 webcomponents https://github.com/sakaiproject/sakai/branches/19.x/webcomponents
 webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
-webservices https://github.com/sakaiproject/sakai/branches/19.x/webservices
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-19 -Psakai19.x -Dsakai.edu-services.version=19-SNAPSHOT -Dsakai.common.version=19-SNAPSHOT -Dsakai.jdk.version=1.8
@@ -97,9 +96,7 @@ blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 certification https://github.com/sakaicontrib/certification/branches/19.x
 da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
-
-# UnComment when LS WS is working in 19.x
-#webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
 # CAS Login
 login https://github.com/LongsightGroup/sakai/branches/25-19.x/login
