@@ -55,7 +55,6 @@ pack https://github.com/sakaiproject/sakai/branches/19.x/pack
 pasystem https://github.com/sakaiproject/sakai/branches/19.x/pasystem
 podcasts https://github.com/sakaiproject/sakai/branches/19.x/podcasts
 polls https://github.com/sakaiproject/sakai/branches/19.x/polls
-portal https://github.com/sakaiproject/sakai/branches/19.x/portal
 postem https://github.com/sakaiproject/sakai/branches/19.x/postem
 presence https://github.com/sakaiproject/sakai/branches/19.x/presence
 reset-pass https://github.com/sakaiproject/sakai/branches/19.x/reset-pass
@@ -99,6 +98,9 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 # Customizations
 login  https://github.com/LongsightGroup/sakai/branches/14-19.x/login
 profile2  https://github.com/LongsightGroup/sakai/branches/14-19.x/profile2
+
+# Backports (SAK-42392)
+portal https://github.com/LongsightGroup/sakai/branches/14-19.x/portal
 
 #shell_command git clone git@github.com:LongsightGroup/sipx-private.git
 #shell_command mv sipx-private/sipx ./
