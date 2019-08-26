@@ -69,7 +69,6 @@ shortenedurl https://github.com/sakaiproject/sakai/branches/19.x/shortenedurl
 simple-rss-portlet https://github.com/sakaiproject/sakai/branches/19.x/simple-rss-portlet
 signup https://github.com/sakaiproject/sakai/branches/19.x/signup
 site https://github.com/sakaiproject/sakai/branches/19.x/site
-site-manage https://github.com/sakaiproject/sakai/branches/19.x/site-manage
 sitedescription https://github.com/sakaiproject/sakai/branches/19.x/sitedescription
 sitemembers https://github.com/sakaiproject/sakai/branches/19.x/sitemembers
 sitestats https://github.com/sakaiproject/sakai/branches/19.x/sitestats
@@ -99,8 +98,9 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 login  https://github.com/LongsightGroup/sakai/branches/14-19.x/login
 profile2  https://github.com/LongsightGroup/sakai/branches/14-19.x/profile2
 
-# Backports (SAK-42392)
+# Backports (SAK-42392, SAK-42370)
 portal https://github.com/LongsightGroup/sakai/branches/14-19.x/portal
+site-manage https://github.com/LongsightGroup/sakai/branches/14-19.x/site-manage
 
 #shell_command git clone git@github.com:LongsightGroup/sipx-private.git
 #shell_command mv sipx-private/sipx ./
