@@ -95,8 +95,15 @@ attendance https://github.com/sakaicontrib/attendance/branches/19.x
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/19.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
-iclicker https://github.com/sakaicontrib/iclicker/branches/19
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/68-19.x/login
+
+# iClicker wants the git commit rev for some reason
+#shell_command git clone -b 19 git@github.com:sakaicontrib/iclicker.git
+
+#GIT Projects
+#git_project iclicker
+
+
