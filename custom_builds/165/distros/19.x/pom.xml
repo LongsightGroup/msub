@@ -124,7 +124,7 @@
                 <module>certification</module>
                 <module>clog</module>
                 <module>evaluation</module>
-                <!-- module>gradebook-export</module -->
+                <module>gradebook-export</module>
                 <module>rsmart</module>
             </modules>
         </profile>

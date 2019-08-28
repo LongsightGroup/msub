@@ -96,10 +96,13 @@ blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 clog https://github.com/sakaicontrib/clog/branches/19.x
 certification https://github.com/sakaicontrib/certification/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
-#gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/get-all-current-terms
+gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/get-all-current-terms
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-19.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
 
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/165-19.x/config
+
+#POM Changes
+#shell_command find ./ -name pom.xml -exec sed -i 's/11-SNAPSHOT/19-SNAPSHOT/g' {} \;
