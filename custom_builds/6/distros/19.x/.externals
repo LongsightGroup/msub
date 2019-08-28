@@ -97,12 +97,16 @@ clog https://github.com/sakaicontrib/clog/branches/19.x
 certification https://github.com/sakaicontrib/certification/branches/19.x
 da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
-iclicker  https://github.com/sakaicontrib/iclicker/branches/19
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-19.x_jldap-auth-caching
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/6-19.x/login
+
+# iClicker wants the git commit rev for some reason
+#shell_command git clone -b 19 git@github.com:sakaicontrib/iclicker.git
+#GIT Projects
+#git_project iclicker
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/12-SNAPSHOT/19-SNAPSHOT/g' {} \;
