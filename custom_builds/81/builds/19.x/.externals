@@ -7,7 +7,6 @@ master https://github.com/sakaiproject/sakai/branches/19.x/master
 common https://github.com/sakaiproject/sakai/branches/19.x/common
 commons https://github.com/sakaiproject/sakai/branches/19.x/commons
 content-review https://github.com/sakaiproject/sakai/branches/19.x/content-review
-delegatedaccess https://github.com/sakaiproject/sakai/branches/19.x/delegatedaccess
 emailtemplateservice https://github.com/sakaiproject/sakai/branches/19.x/emailtemplateservice
 entitybroker https://github.com/sakaiproject/sakai/branches/19.x/entitybroker
 external-calendaring-service https://github.com/sakaiproject/sakai/branches/19.x/external-calendaring-service/
@@ -96,6 +95,7 @@ blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
 # Customizations
+delegatedaccess https://github.com/LongsightGroup/sakai/branches/81-19.x/delegatedaccess
 login https://github.com/LongsightGroup/sakai/branches/81-19.x/login
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
