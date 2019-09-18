@@ -56,7 +56,6 @@ postem https://github.com/sakaiproject/sakai/branches/12.x/postem
 presence https://github.com/sakaiproject/sakai/branches/12.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/12.x/profile2
 reset-pass https://github.com/sakaiproject/sakai/branches/12.x/reset-pass
-roster2 https://github.com/sakaiproject/sakai/branches/12.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/12.x/rsf
 rwiki https://github.com/sakaiproject/sakai/branches/12.x/rwiki
 samigo https://github.com/sakaiproject/sakai/branches/12.x/samigo
@@ -92,6 +91,7 @@ starfish-export https://github.com/sakaicontrib/starfish-export/trunk
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/159-12.x/config
 providers https://github.com/LongsightGroup/sakai/branches/159-12.x/providers
+roster2 https://github.com/LongsightGroup/sakai/branches/159-12.x/roster2
 gradebook-export https://github.com/longsightgroup/sakai-gradebook-export/branches/released-only
 login https://github.com/LongsightGroup/sakai/branches/159-12.x/login
 
