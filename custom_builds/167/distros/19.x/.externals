@@ -37,7 +37,6 @@ deploy https://github.com/sakaiproject/sakai/branches/19.x/deploy
 edu-services https://github.com/sakaiproject/sakai/branches/19.x/edu-services
 endorsed https://github.com/sakaiproject/sakai/branches/19.x/endorsed
 feedback https://github.com/sakaiproject/sakai/branches/19.x/feedback
-gradebookng https://github.com/sakaiproject/sakai/branches/19.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/19.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/19.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/19.x/kernel
@@ -95,6 +94,7 @@ attendance https://github.com/sakaicontrib/attendance/branches/19.x
 clog https://github.com/sakaicontrib/clog/branches/19.x
 certification https://github.com/sakaicontrib/certification/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
+gradebookng https://github.com/LongsightGroup/sakai/branches/167-19.x/gradebookng
 roster2 https://github.com/LongsightGroup/sakai/branches/167-19.x/roster2
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-19.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
