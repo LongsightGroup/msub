@@ -123,6 +123,7 @@
                 <module>clog</module>
                 <module>certification</module>
                 <module>evaluation</module>
+                <module>gradebook1</module>
                 <module>rsmart</module>
             </modules>
         </profile>
