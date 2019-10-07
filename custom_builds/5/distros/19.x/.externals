@@ -91,6 +91,7 @@ webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
 
 # Additional tools
 attendance https://github.com/sakaicontrib/attendance/branches/19.x
+bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/19.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
 gradebook1 https://github.com/sakaicontrib/gradebook1/branches/19.x
