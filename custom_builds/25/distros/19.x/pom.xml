@@ -125,6 +125,7 @@
                 <module>certification</module>
                 <module>da_evalprovider</module>
                 <module>evaluation</module>
+                <module>gradebook_export</module>
             </modules>
         </profile>
 
