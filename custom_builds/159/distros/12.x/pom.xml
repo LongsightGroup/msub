@@ -118,10 +118,8 @@
                 <module>attendance</module>
                 <module>bbb-tool</module>
                 <module>gradebook-export</module>
-                <!--
                 <module>site-archiver</module>
                 <module>starfish-export</module>
-                -->
             </modules>
         </profile>
 
