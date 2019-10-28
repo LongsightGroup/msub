@@ -55,7 +55,6 @@ pack https://github.com/sakaiproject/sakai/branches/12.x/pack
 pasystem https://github.com/sakaiproject/sakai/branches/12.x/pasystem
 podcasts https://github.com/sakaiproject/sakai/branches/12.x/podcasts
 polls https://github.com/sakaiproject/sakai/branches/12.x/polls
-portal https://github.com/sakaiproject/sakai/branches/12.x/portal
 postem https://github.com/sakaiproject/sakai/branches/12.x/postem
 presence https://github.com/sakaiproject/sakai/branches/12.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/12.x/profile2
@@ -99,6 +98,7 @@ kaltura https://github.com/kaltura/sakai-extension/branches/12x
 
 # Customizations 
 web https://github.com/LongsightGroup/sakai/branches/163-12.x/web
+portal https://github.com/LongsightGroup/sakai/branches/163-12.x/portal
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/12-SNAPSHOT/g' {} \;
