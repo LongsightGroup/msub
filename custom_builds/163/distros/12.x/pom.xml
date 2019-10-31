@@ -122,6 +122,7 @@
                 <module>evaluation</module>
                 <module>kaltura</module>
                 <module>rsmart</module>
+                <module>library</module>
             </modules>
         </profile>
 
