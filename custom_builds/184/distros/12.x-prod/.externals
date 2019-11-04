@@ -29,8 +29,10 @@
 #git_project entitybroker
 #git_project evaluation
 #git_project external-calendaring-service
+#git_project feedback
 #git_project formbuilder
 #git_project gradebook
+#git_project gradebookng
 #git_project help
 #git_project hierarchy
 #git_project jobscheduler
