@@ -123,6 +123,7 @@
                 <module>kaltura</module>
                 <module>rsmart</module>
                 <module>library</module>
+                <module>certification</module>
             </modules>
         </profile>
 
