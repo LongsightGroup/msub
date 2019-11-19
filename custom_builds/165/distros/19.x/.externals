@@ -62,6 +62,7 @@ profile2 https://github.com/sakaiproject/sakai/branches/19.x/profile2
 providers https://github.com/sakaiproject/sakai/branches/19.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/19.x/reset-pass
 rsf https://github.com/sakaiproject/sakai/branches/19.x/rsf
+roster2 https://github.com/sakaiproject/sakai/branches/19.x/roster2
 rubrics https://github.com/sakaiproject/sakai/branches/19.x/rubrics
 rwiki https://github.com/sakaiproject/sakai/branches/19.x/rwiki
 samigo https://github.com/sakaiproject/sakai/branches/19.x/samigo
@@ -101,7 +102,6 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/165-19.x/config
-roster2 https://github.com/LongsightGroup/sakai/branches/165-19.x/roster2
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/11-SNAPSHOT/19-SNAPSHOT/g' {} \;
