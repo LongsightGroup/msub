@@ -23,7 +23,6 @@ admin-su  https://github.com/sakaiproject/sakai/branches/19.x/admin-su
 announcement https://github.com/sakaiproject/sakai/branches/19.x/announcement
 archive https://github.com/sakaiproject/sakai/branches/19.x/archive
 assignment https://github.com/sakaiproject/sakai/branches/19.x/assignment
-basiclti https://github.com/sakaiproject/sakai/branches/19.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/19.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/19.x/chat
 citations https://github.com/sakaiproject/sakai/branches/19.x/citations
@@ -102,6 +101,9 @@ irubric-tool https://github.com/sakaicontrib/irubric//branches/sakai19-SNAPSHOT/
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-19.x_jldap-auth-caching
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 #scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/19.x
+
+# Customizations
+basiclti  https://github.com/LongsightGroup/sakai/branches/180-19.x/basiclti
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
