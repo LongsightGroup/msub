@@ -37,7 +37,6 @@ deploy https://github.com/sakaiproject/sakai/branches/19.x/deploy
 edu-services https://github.com/sakaiproject/sakai/branches/19.x/edu-services
 endorsed https://github.com/sakaiproject/sakai/branches/19.x/endorsed
 feedback https://github.com/sakaiproject/sakai/branches/19.x/feedback
-gradebookng https://github.com/sakaiproject/sakai/branches/19.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/19.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/19.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/19.x/kernel
@@ -100,3 +99,4 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 # Customizations
 library https://github.com/LongsightGroup/sakai/branches/144-19.x/library
 login https://github.com/LongsightGroup/sakai/branches/144-19.x/login
+gradebookng https://github.com/LongsightGroup/sakai/branches/144-19.x/gradebookng
