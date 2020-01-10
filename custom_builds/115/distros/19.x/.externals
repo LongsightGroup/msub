@@ -98,3 +98,5 @@ evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
 gradebook1 https://github.com/sakaicontrib/gradebook1/branches/19.x
 gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/trunk
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
+
+#shell_command find ./ -name pom.xml -exec sed -i 's/11-SNAPSHOT/19-SNAPSHOT/g' {} \;
