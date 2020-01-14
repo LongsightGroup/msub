@@ -23,7 +23,6 @@ admin-su  https://github.com/sakaiproject/sakai/branches/19.x/admin-su
 announcement https://github.com/sakaiproject/sakai/branches/19.x/announcement
 archive https://github.com/sakaiproject/sakai/branches/19.x/archive
 assignment https://github.com/sakaiproject/sakai/branches/19.x/assignment
-basiclti https://github.com/sakaiproject/sakai/branches/19.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/19.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/19.x/chat
 citations https://github.com/sakaiproject/sakai/branches/19.x/citations
@@ -91,6 +90,7 @@ webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
 
 # Additional tools
 attendance https://github.com/sakaicontrib/attendance/branches/19.x
+basiclti https://github.com/LongsightGroup/sakai/branches/167-19.x/basiclti
 clog https://github.com/sakaicontrib/clog/branches/19.x
 certification https://github.com/sakaicontrib/certification/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
