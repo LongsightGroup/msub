@@ -58,7 +58,6 @@ polls https://github.com/sakaiproject/sakai/branches/19.x/polls
 postem https://github.com/sakaiproject/sakai/branches/19.x/postem
 presence https://github.com/sakaiproject/sakai/branches/19.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/19.x/profile2
-providers https://github.com/sakaiproject/sakai/branches/19.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/19.x/reset-pass
 roster2 https://github.com/sakaiproject/sakai/branches/19.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/19.x/rsf
@@ -93,6 +92,7 @@ attendance https://github.com/sakaicontrib/attendance/branches/19.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
 gradebook1 https://github.com/sakaicontrib/gradebook1/branches/19.x
+providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-19.x_jldap-auth-caching/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
 # Customizations
@@ -101,3 +101,4 @@ portal https://github.com/LongsightGroup/sakai/branches/7-19.x/portal
 site-manage https://github.com/LongsightGroup/sakai/branches/7-19.x/site-manage
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
+#shell_command curl https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/7843.patch|patch -p1
