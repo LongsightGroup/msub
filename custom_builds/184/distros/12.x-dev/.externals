@@ -1,5 +1,4 @@
 #shell_command git clone --single-branch --branch master git@source.edf.global:noodle-partners/noodle-portal.git 
-#shell_command git reset --hard 72f7af48f8012d90237366276f8e49001f191e21
 #shell_command mv noodle-portal/* ./
 
 #GIT Projects
