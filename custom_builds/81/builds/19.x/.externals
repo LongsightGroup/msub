@@ -64,7 +64,6 @@ roster2 https://github.com/sakaiproject/sakai/branches/19.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/19.x/rsf
 rubrics https://github.com/sakaiproject/sakai/branches/19.x/rubrics
 rwiki https://github.com/sakaiproject/sakai/branches/19.x/rwiki
-samigo https://github.com/sakaiproject/sakai/branches/19.x/samigo
 search https://github.com/sakaiproject/sakai/branches/19.x/search
 sections https://github.com/sakaiproject/sakai/branches/19.x/sections
 shortenedurl https://github.com/sakaiproject/sakai/branches/19.x/shortenedurl
@@ -97,5 +96,6 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 # Customizations
 delegatedaccess https://github.com/LongsightGroup/sakai/branches/81-19.x/delegatedaccess
 login https://github.com/LongsightGroup/sakai/branches/81-19.x/login
+samigo https://github.com/LongsightGroup/sakai/branches/81-19.x/samigo
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
