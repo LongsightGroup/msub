@@ -95,5 +95,5 @@ webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
 attendance https://github.com/sakaicontrib/attendance/branches/19.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/19.x
-kaltura https://github.com/kaltura/sakai-extension/branches/19.x
+kaltura https://github.com/kaltura/sakai-extension/branches/19x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
