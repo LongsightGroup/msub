@@ -124,6 +124,7 @@
                 <module>certification</module>
                 <module>clog</module>
                 <module>evaluation</module>
+                <module>scorm</module>
             </modules>
         </profile>
 
