@@ -125,6 +125,7 @@
                 <module>certification</module>
                 <module>clog</module>
                 <module>evaluation</module>
+                <module>rsmart</module>
 		<module>bbb-tool</module>
 		<module>da_evalprovider</module>
 		<module>iclicker</module>
