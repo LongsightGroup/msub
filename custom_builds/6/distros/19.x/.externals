@@ -108,7 +108,6 @@ login https://github.com/LongsightGroup/sakai/branches/6-19.x/login
 #shell_command git clone https://github.com/sakaicontrib/legacy-language-packs
 #shell_command cp -R legacy-language-packs/ru/* .
 
-
 # iClicker wants the git commit rev for some reason
 #shell_command git clone -b 19 git@github.com:sakaicontrib/iclicker.git
 #GIT Projects
