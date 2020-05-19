@@ -35,7 +35,6 @@ deploy https://github.com/sakaiproject/sakai/branches/19.x/deploy
 edu-services https://github.com/sakaiproject/sakai/branches/19.x/edu-services
 endorsed https://github.com/sakaiproject/sakai/branches/19.x/endorsed
 feedback https://github.com/sakaiproject/sakai/branches/19.x/feedback
-gradebookng https://github.com/sakaiproject/sakai/branches/19.x/gradebookng
 jobscheduler https://github.com/sakaiproject/sakai/branches/19.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/19.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/19.x/lessonbuilder
@@ -102,6 +101,9 @@ dav https://github.com/LongsightGroup/sakai/branches/142-19.x/dav
 help https://github.com/LongsightGroup/sakai/branches/142-19.x/help
 login https://github.com/LongsightGroup/sakai/branches/142-19.x/login
 portal https://github.com/LongsightGroup/sakai/branches/142-19.x/portal
+
+# Backports
+gradebookng https://github.com/LongsightGroup/sakai/branches/142-19.x/gradebookng
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
