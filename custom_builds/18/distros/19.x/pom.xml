@@ -122,6 +122,7 @@
                 <module>attendance</module>
                 <module>blogwow</module>
                 <module>evaluation</module>
+                <module>gradebook1</module>
                 <module>kaltura</module>
             </modules>
         </profile>
