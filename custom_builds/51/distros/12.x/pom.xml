@@ -117,6 +117,7 @@
                 <module>webservices</module>
                 <module>attendance</module>
                 <module>blogwow</module>
+                <module>clog</module>
                 <module>kaltura</module>
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
