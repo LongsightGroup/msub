@@ -21,7 +21,6 @@ admin-tools  https://github.com/sakaiproject/sakai/branches/12.x/admin-tools
 announcement https://github.com/sakaiproject/sakai/branches/12.x/announcement
 archive https://github.com/sakaiproject/sakai/branches/12.x/archive
 assignment https://github.com/sakaiproject/sakai/branches/12.x/assignment
-basiclti https://github.com/sakaiproject/sakai/branches/12.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/12.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/12.x/chat
 citations https://github.com/sakaiproject/sakai/branches/12.x/citations
@@ -90,6 +89,7 @@ evaluation https://github.com/sakaicontrib/evaluation/branches/12.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-12.x/
 
 # Customizations
+basiclti https://github.com/LongsightGroup/sakai/branches/67-12.x/basiclti
 help https://github.com/LongsightGroup/sakai/branches/67-12.x/help
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-12.x/lessonbuilder
 providers https://github.com/LongsightGroup/sakai/branches/67-12.x/providers
