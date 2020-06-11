@@ -95,6 +95,8 @@ attendance https://github.com/sakaicontrib/attendance/branches/20.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/20.x
 clog https://github.com/sakaicontrib/clog/branches/20.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x
+irubric-core https://github.com/sakaicontrib/irubric/branches/sakai20-SNAPSHOT/irubric-core/
+irubric-tool https://github.com/sakaicontrib/irubric/branches/sakai20-SNAPSHOT/irubric-tool/
 
 # Customizations 
 config https://github.com/LongsightGroup/sakai/branches/51-20.x/config
