@@ -125,8 +125,8 @@
                 <module>blogwow</module>
                 <module>clog</module>
                 <module>certification</module>
-                <module>da_evalprovider</module>
                 <module>evaluation</module>
+                <module>da_evalprovider</module>
                 <module>rsmart</module>
             </modules>
         </profile>
