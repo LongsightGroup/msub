@@ -87,7 +87,7 @@ webcomponents https://github.com/sakaiproject/sakai/branches/19.x/webcomponents
 webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-19 -Psakai19.x -Dsakai.edu-services.version=19-SNAPSHOT -Dsakai.common.version=19-SNAPSHOT -Dsakai.jdk.version=1.8 -Pckeditor-extras
+#mavenoptions:-Psakai-19 -Psakai19.x -Dsakai.edu-services.version=19-SNAPSHOT -Dsakai.common.version=19-SNAPSHOT -Dsakai.jdk.version=1.8 -Pckeditor-extras -Dsakai.skin.target=sgu
 
 # Additional tools
 attendance https://github.com/sakaicontrib/attendance/branches/19.x
