@@ -40,7 +40,6 @@ gradebookng https://github.com/sakaiproject/sakai/branches/19.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/19.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/19.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/19.x/kernel
-lessonbuilder https://github.com/sakaiproject/sakai/branches/19.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/19.x/licenses
 login https://github.com/sakaiproject/sakai/branches/19.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/19.x/mailarchive
@@ -104,6 +103,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 basiclti  https://github.com/LongsightGroup/sakai/branches/180-19.x/basiclti
+lessonbuilder  https://github.com/LongsightGroup/sakai/branches/180-19.x/lessonbuilder
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
