@@ -23,6 +23,7 @@ admin-su  https://github.com/sakaiproject/sakai/branches/20.x/admin-su
 announcement https://github.com/sakaiproject/sakai/branches/20.x/announcement
 archive https://github.com/sakaiproject/sakai/branches/20.x/archive
 assignment https://github.com/sakaiproject/sakai/branches/20.x/assignment
+basiclti https://github.com/sakaiproject/sakai/branches/20.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/20.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/20.x/chat
 citations https://github.com/sakaiproject/sakai/branches/20.x/citations
@@ -38,6 +39,7 @@ docker https://github.com/sakaiproject/sakai/branches/20.x/docker
 edu-services https://github.com/sakaiproject/sakai/branches/20.x/edu-services
 endorsed https://github.com/sakaiproject/sakai/branches/20.x/endorsed
 feedback https://github.com/sakaiproject/sakai/branches/20.x/feedback
+gradebookng https://github.com/sakaiproject/sakai/branches/20.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/20.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/20.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/20.x/kernel
@@ -61,6 +63,7 @@ presence https://github.com/sakaiproject/sakai/branches/20.x/presence
 profile2 https://github.com/sakaiproject/sakai/branches/20.x/profile2
 providers https://github.com/sakaiproject/sakai/branches/20.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/20.x/reset-pass
+roster2 https://github.com/sakaiproject/sakai/branches/20.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/20.x/rsf
 rubrics https://github.com/sakaiproject/sakai/branches/20.x/rubrics
 rwiki https://github.com/sakaiproject/sakai/branches/20.x/rwiki
@@ -99,7 +102,4 @@ rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-20.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x
 
 # Customizations
-basiclti https://github.com/LongsightGroup/sakai/branches/167-20.x/basiclti
-gradebookng https://github.com/LongsightGroup/sakai/branches/167-20.x/gradebookng
 login https://github.com/LongsightGroup/sakai/branches/167-20.x/login
-roster2 https://github.com/LongsightGroup/sakai/branches/167-20.x/roster2
