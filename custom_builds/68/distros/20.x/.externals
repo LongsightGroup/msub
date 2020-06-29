@@ -102,3 +102,9 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/68-20.x/login
+
+# iClicker wants the git commit rev for some reason
+#shell_command git clone -b 20.x git@github.com:sakaicontrib/iclicker.git
+
+#GIT Projects
+#git_project iclicker
