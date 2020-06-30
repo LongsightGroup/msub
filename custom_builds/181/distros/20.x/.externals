@@ -100,3 +100,6 @@ certification https://github.com/sakaicontrib/certification/branches/20.x
 clog https://github.com/sakaicontrib/clog/branches/20.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/20.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x
+
+# Please include the skin
+library https://github.com/LongsightGroup/sakai/branches/181-20.x/library

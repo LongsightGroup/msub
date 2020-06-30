@@ -125,6 +125,7 @@
                 <module>clog</module>
                 <module>certification</module>
                 <module>evaluation</module>
+                <module>library</module>
             </modules>
         </profile>
 
