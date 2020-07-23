@@ -70,6 +70,7 @@ site https://github.com/sakaiproject/sakai/branches/19.x/site
 site-manage https://github.com/sakaiproject/sakai/branches/19.x/site-manage
 sitedescription https://github.com/sakaiproject/sakai/branches/19.x/sitedescription
 sitemembers https://github.com/sakaiproject/sakai/branches/19.x/sitemembers
+sitestats https://github.com/sakaiproject/sakai/branches/19.x/sitestats
 syllabus https://github.com/sakaiproject/sakai/branches/19.x/syllabus
 taggable https://github.com/sakaiproject/sakai/branches/19.x/taggable
 tags https://github.com/sakaiproject/sakai/branches/19.x/tags
@@ -101,7 +102,6 @@ dav https://github.com/LongsightGroup/sakai/branches/142-19.x/dav
 help https://github.com/LongsightGroup/sakai/branches/142-19.x/help
 login https://github.com/LongsightGroup/sakai/branches/142-19.x/login
 portal https://github.com/LongsightGroup/sakai/branches/142-19.x/portal
-sitestats https://github.com/LongsightGroup/sakai/branches/142-19.x/sitestats
 
 # Backports
 gradebookng https://github.com/LongsightGroup/sakai/branches/142-19.x/gradebookng
