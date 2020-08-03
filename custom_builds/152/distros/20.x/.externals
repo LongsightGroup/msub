@@ -61,7 +61,6 @@ polls https://github.com/sakaiproject/sakai/branches/20.x/polls
 portal https://github.com/sakaiproject/sakai/branches/20.x/portal
 postem https://github.com/sakaiproject/sakai/branches/20.x/postem
 presence https://github.com/sakaiproject/sakai/branches/20.x/presence
-profile2 https://github.com/sakaiproject/sakai/branches/20.x/profile2
 providers https://github.com/sakaiproject/sakai/branches/20.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/20.x/reset-pass
 roster2 https://github.com/sakaiproject/sakai/branches/20.x/roster2
@@ -100,6 +99,9 @@ blogwow https://github.com/sakaicontrib/blogwow/branches/20.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/20.x
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-20.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x
+
+# Customizations below
+profile2 https://github.com/LongsightGroup/sakai/branches/152-20.x/profile2
 
 #shell_command find ./config/ -name tools.properties -exec sed -i 's/Drop Box/File Drop/g' {} \;
 #shell_command find ./help/ -name \*.html -exec sed -i 's/Drop Box/File Drop/g' {} \;
