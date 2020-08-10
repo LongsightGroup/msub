@@ -103,3 +103,5 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/167-20.x/login
+
+#shell_command sed -i 's/login.microsoftonline.com\/common/login.microsoftonline.com\/friarsprovidence.onmicrosoft.com/g' cloud-storage/onedrive/api/src/java/org/sakaiproject/onedrive/service/OneDriveService.java
