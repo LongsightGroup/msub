@@ -112,3 +112,4 @@ gradebookng https://github.com/LongsightGroup/sakai/branches/142-19.x/gradebookn
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/19-SNAPSHOT/g' {} \;
 #shell_command find attendance/ -name \*.java -exec sed -i 's/official/thumb/g' {} \;
 #shell_command curl https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/8299.patch|patch -p1
+#shell_command sed -i 's/if (role.equals(targetRole))/if (StringUtils.contains(targetRole, role) || StringUtils.contains(role, targetRole))/g' kernel/kernel-impl/src/main/java/org/sakaiproject/authz/impl/DbAuthzGroupService.java
