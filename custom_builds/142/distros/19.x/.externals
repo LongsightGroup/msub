@@ -111,4 +111,3 @@ gradebookng https://github.com/LongsightGroup/sakai/branches/142-19.x/gradebookn
 #shell_command find irubric-tool/ -name pom.xml -exec sed -i 's/\${sakai.kernel.version}/19-SNAPSHOT/g' {} \;
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/19-SNAPSHOT/g' {} \;
 #shell_command find attendance/ -name \*.java -exec sed -i 's/official/thumb/g' {} \;
-#shell_command curl https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/8299.patch|patch -p1
