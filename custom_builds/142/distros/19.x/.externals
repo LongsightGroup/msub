@@ -36,7 +36,6 @@ edu-services https://github.com/sakaiproject/sakai/branches/19.x/edu-services
 endorsed https://github.com/sakaiproject/sakai/branches/19.x/endorsed
 feedback https://github.com/sakaiproject/sakai/branches/19.x/feedback
 jobscheduler https://github.com/sakaiproject/sakai/branches/19.x/jobscheduler
-kernel https://github.com/sakaiproject/sakai/branches/19.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/19.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/19.x/licenses
 mailarchive https://github.com/sakaiproject/sakai/branches/19.x/mailarchive
@@ -102,6 +101,7 @@ dav https://github.com/LongsightGroup/sakai/branches/142-19.x/dav
 help https://github.com/LongsightGroup/sakai/branches/142-19.x/help
 login https://github.com/LongsightGroup/sakai/branches/142-19.x/login
 portal https://github.com/LongsightGroup/sakai/branches/142-19.x/portal
+kernel https://github.com/LongsightGroup/sakai/branches/142-19.x/kernel
 
 # Backports
 gradebookng https://github.com/LongsightGroup/sakai/branches/142-19.x/gradebookng
@@ -112,5 +112,3 @@ gradebookng https://github.com/LongsightGroup/sakai/branches/142-19.x/gradebookn
 #shell_command find ./ -name pom.xml -exec sed -i 's/13-SNAPSHOT/19-SNAPSHOT/g' {} \;
 #shell_command find attendance/ -name \*.java -exec sed -i 's/official/thumb/g' {} \;
 #shell_command curl https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/8299.patch|patch -p1
-#shell_command sed -i 's/if (role.equals(targetRole))/if (StringUtils.contains(targetRole, role) || StringUtils.contains(role, targetRole))/g' kernel/kernel-impl/src/main/java/org/sakaiproject/authz/impl/DbAuthzGroupService.java
-#shell_command sed -i 's/userId, role, active, true/userId, targetRole, active, true/g' kernel/kernel-impl/src/main/java/org/sakaiproject/authz/impl/DbAuthzGroupService.java
