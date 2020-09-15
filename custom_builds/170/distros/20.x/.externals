@@ -1,4 +1,5 @@
 #shell_command git clone git@github.com:jd3538/Marist-Sakai-20.x.git && mv Marist-Sakai-20.x/* ./
+#shell_command git clone --single-branch --branch 19.x git@github.com:sakaicontrib/SCORM.2004.3ED.RTE.git scorm
 
 #GIT Projects
 
@@ -91,3 +92,4 @@
 #git_project webcomponents
 #git_project webjars
 #git_project webservices
+#git_project scorm
