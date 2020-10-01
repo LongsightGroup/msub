@@ -68,7 +68,6 @@ roster2 https://github.com/sakaiproject/sakai/branches/20.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/20.x/rsf
 rubrics https://github.com/sakaiproject/sakai/branches/20.x/rubrics
 rwiki https://github.com/sakaiproject/sakai/branches/20.x/rwiki
-samigo https://github.com/sakaiproject/sakai/branches/20.x/samigo
 search https://github.com/sakaiproject/sakai/branches/20.x/search
 sections https://github.com/sakaiproject/sakai/branches/20.x/sections
 shortenedurl https://github.com/sakaiproject/sakai/branches/20.x/shortenedurl
@@ -98,3 +97,6 @@ attendance https://github.com/sakaicontrib/attendance/branches/20.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/20.x
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-20.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x
+
+# This is for the October build. Samigo from Sept 8 + a couple of fixes
+samigo https://github.com/LongsightGroup/sakai/branches/155-68794-20.x/samigo
