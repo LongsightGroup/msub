@@ -41,7 +41,6 @@ jobscheduler https://github.com/sakaiproject/sakai/branches/19.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/19.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/19.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/19.x/licenses
-login https://github.com/sakaiproject/sakai/branches/19.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/19.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/19.x/mailsender
 message https://github.com/sakaiproject/sakai/branches/19.x/message
@@ -98,3 +97,4 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 assignment https://github.com/LongsightGroup/sakai/branches/166-19.x/assignment
 config https://github.com/LongsightGroup/sakai/branches/166-19.x/config
 site-manage https://github.com/LongsightGroup/sakai/branches/166-19.x/site-manage
+login https://github.com/LongsightGroup/sakai/branches/166-19.x/login
