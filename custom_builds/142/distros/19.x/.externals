@@ -85,7 +85,7 @@ webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
 #mavenoptions:-Psakai-19 -Psakai19.x -Dsakai.edu-services.version=19-SNAPSHOT -Dsakai.common.version=19-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Additional tools
-attendance https://github.com/sakaicontrib/attendance/branches/19.x
+attendance https://github.com/LongsightGroup/attendance/branches/nd-19.x
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/19.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/19.x
 certification https://github.com/sakaicontrib/certification/branches/19.x
