@@ -28,7 +28,6 @@ calendar https://github.com/sakaiproject/sakai/branches/20.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/20.x/chat
 citations https://github.com/sakaiproject/sakai/branches/20.x/citations
 cloud-content https://github.com/sakaiproject/sakai/branches/20.x/cloud-content
-cloud-storage https://github.com/sakaiproject/sakai/branches/20.x/cloud-storage
 cmprovider https://github.com/sakaiproject/sakai/branches/20.x/cmprovider
 config https://github.com/sakaiproject/sakai/branches/20.x/config
 content https://github.com/sakaiproject/sakai/branches/20.x/content
@@ -100,4 +99,4 @@ rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-20.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x
 
 # 68794 single-tenant onedrive patch
-#shell_command curl https://github.com/sakaiproject/sakai/commit/9e09cd8f3faa3ce6fa1ef49ccfa654eefbe6437c.patch | patch -p1
+cloud-storage https://github.com/LongsightGroup/sakai/branches/155-20.x/cloud-storage
