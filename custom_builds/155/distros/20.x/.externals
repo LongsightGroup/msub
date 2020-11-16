@@ -42,7 +42,6 @@ gradebookng https://github.com/sakaiproject/sakai/branches/20.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/20.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/20.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/20.x/kernel
-lessonbuilder https://github.com/sakaiproject/sakai/branches/20.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/20.x/licenses
 login https://github.com/sakaiproject/sakai/branches/20.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/20.x/mailarchive
@@ -100,3 +99,6 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # 68794 single-tenant onedrive patch
 cloud-storage https://github.com/LongsightGroup/sakai/branches/155-20.x/cloud-storage
+
+#68686 Lessons Add Dates to Assignment Links
+lessonbuilder https://github.com/LongsightGroup/sakai/branches/155-20.x/lessonbuilder
