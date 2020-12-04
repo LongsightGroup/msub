@@ -124,9 +124,11 @@
                 <module>blogwow</module>
                 <module>certification</module>
                 <module>SakaiXAPI-Provider</module>
+                <module>gradebook1</module>
+                <!--
                 <module>irubric-core</module>
                 <module>irubric-tool</module>
-                <module>gradebook1</module>
+                -->
             </modules>
         </profile>
 
