@@ -42,7 +42,7 @@ gradebookng https://github.com/sakaiproject/sakai/branches/20.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/20.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/20.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/20.x/kernel
-lessonbuilder https://github.com/sakaiproject/sakai/branches/20.x/lessonbuilder
+#lessonbuilder https://github.com/sakaiproject/sakai/branches/20.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/20.x/licenses
 login https://github.com/sakaiproject/sakai/branches/20.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/20.x/mailarchive
@@ -106,4 +106,4 @@ cloud-storage https://github.com/LongsightGroup/sakai/branches/155-20.x/cloud-st
 samigo https://github.com/LongsightGroup/sakai/branches/155-69673-20.x/samigo
 
 #68686 Lessons Add Dates to Assignment Links
-# lessonbuilder https://github.com/LongsightGroup/sakai/branches/155-20.x/lessonbuilder
+lessonbuilder https://github.com/LongsightGroup/sakai/branches/155-20.x/lessonbuilder
