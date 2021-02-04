@@ -32,7 +32,6 @@ cmprovider https://github.com/sakaiproject/sakai/branches/19.x/cmprovider
 content https://github.com/sakaiproject/sakai/branches/19.x/content
 courier https://github.com/sakaiproject/sakai/branches/19.x/courier
 deploy https://github.com/sakaiproject/sakai/branches/19.x/deploy
-edu-services https://github.com/sakaiproject/sakai/branches/19.x/edu-services
 endorsed https://github.com/sakaiproject/sakai/branches/19.x/endorsed
 feedback https://github.com/sakaiproject/sakai/branches/19.x/feedback
 jobscheduler https://github.com/sakaiproject/sakai/branches/19.x/jobscheduler
@@ -105,6 +104,7 @@ kernel https://github.com/LongsightGroup/sakai/branches/142-19.x/kernel
 
 # Backports
 gradebookng https://github.com/LongsightGroup/sakai/branches/142-19.x/gradebookng
+edu-services https://github.com/LongsightGroup/sakai/branches/142-19.x/edu-services
 
 #POM Changes
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
