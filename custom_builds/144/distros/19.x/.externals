@@ -100,5 +100,5 @@ scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/19.x
 # Customizations
 library https://github.com/LongsightGroup/sakai/branches/144-19.x/library
 login https://github.com/LongsightGroup/sakai/branches/144-19.x/login
-msgcntr //github.com/LongsightGroup/sakai/branches/144-19.x/msgcntr
+msgcntr https://github.com/LongsightGroup/sakai/branches/144-19.x/msgcntr
 gradebookng https://github.com/LongsightGroup/sakai/branches/144-19.x/gradebookng
