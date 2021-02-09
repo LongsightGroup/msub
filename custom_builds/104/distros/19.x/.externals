@@ -86,7 +86,6 @@ velocity https://github.com/sakaiproject/sakai/branches/19.x/velocity
 web https://github.com/sakaiproject/sakai/branches/19.x/web
 webcomponents https://github.com/sakaiproject/sakai/branches/19.x/webcomponents
 webjars https://github.com/sakaiproject/sakai/branches/19.x/webjars
-samigo https://github.com/sakaiproject/sakai/branches/19.x/samigo
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-19 -Psakai19.x -Dsakai.edu-services.version=19-SNAPSHOT -Dsakai.common.version=19-SNAPSHOT -Dsakai.jdk.version=1.8
@@ -99,5 +98,8 @@ certification https://github.com/sakaicontrib/certification/branches/19.x
 clog https://github.com/sakaicontrib/clog/branches/19.x
 gradebook1 https://github.com/sakaicontrib/gradebook1/branches/19.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
+
+# Custom Sam
+samigo https://github.com/LongsightGroup/sakai/branches/19.x-samigo-timer-submit/samigo
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
