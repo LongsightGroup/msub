@@ -96,6 +96,6 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 # Customizations
 delegatedaccess https://github.com/LongsightGroup/sakai/branches/81-19.x/delegatedaccess
 login https://github.com/LongsightGroup/sakai/branches/81-19.x/login
-samigo https://github.com/LongsightGroup/sakai/branches/81-19.x/samigo
+samigo https://github.com/LongsightGroup/sakai/branches/81-19.x-proctorio/samigo
 
 #shell_command find ./ -name pom.xml -exec sed -i 's/20-SNAPSHOT/19-SNAPSHOT/g' {} \;
