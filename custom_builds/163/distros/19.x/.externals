@@ -96,7 +96,7 @@ rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-19.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
 # Backports: can be moved back to normal branch after next upgrade
-attendance https://github.com/LongsightGroup/attendance/branches/nd-19.x
+attendance https://github.com/LongsightGroup/attendance/branches/i18n-19.x
 
 # Customizations 
 evaluation https://github.com/LongsightGroup/evaluation/branches/limerick-19.x
