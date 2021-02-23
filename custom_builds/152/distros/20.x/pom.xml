@@ -125,6 +125,7 @@
                 <module>blogwow</module>
                 <module>certification</module>
                 <module>rsmart</module>
+                <module>scorm</module>
             </modules>
         </profile>
 
