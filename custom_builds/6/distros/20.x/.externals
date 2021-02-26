@@ -93,7 +93,7 @@ webjars https://github.com/sakaiproject/sakai/branches/20.x/webjars
 
 # Additional tools  - Uncomment after 20.x branch is completed
 attendance https://github.com/sakaicontrib/attendance/branches/20.x
-bbb-tool https://github.com/adrianfish/bbb-tool/branches/BBB-160
+bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/20.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/20.x
 clog https://github.com/sakaicontrib/clog/branches/20.x
 certification https://github.com/sakaicontrib/certification/branches/20.x
