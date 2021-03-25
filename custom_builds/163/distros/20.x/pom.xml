@@ -120,6 +120,7 @@
                 <module>webjars</module>
                 <module>webservices</module>
 		<!-- Additional Tools -->
+                <module>attendance</module>
                 <module>bbb-tool</module>
                 <module>blogwow</module>
                 <module>da_evalprovider</module>
