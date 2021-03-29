@@ -122,16 +122,14 @@
                 <module>webservices</module>
                 <module>wicket</module>
 		<!-- Contrib Tools -->
-<!--
                 <module>attendance</module>
                 <module>bbb-tool</module>
                 <module>blogwow</module>
                 <module>clog</module>
                 <module>certification</module>
                 <module>evaluation</module>
-                <module>gradebook-export</module>
+                <!-- module>gradebook-export</module -->
                 <module>rsmart</module>
--->
             </modules>
         </profile>
 
