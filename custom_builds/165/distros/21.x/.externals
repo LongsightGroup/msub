@@ -91,7 +91,6 @@ webcomponents https://github.com/sakaiproject/sakai/branches/21.x/webcomponents
 webjars https://github.com/sakaiproject/sakai/branches/21.x/webjars
 wicket https://github.com/sakaiproject/sakai/branches/21.x/wicket
 
-
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8
 
