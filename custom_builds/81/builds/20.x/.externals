@@ -7,7 +7,6 @@ master https://github.com/sakaiproject/sakai/branches/20.x/master
 common https://github.com/sakaiproject/sakai/branches/20.x/common
 commons https://github.com/sakaiproject/sakai/branches/20.x/commons
 content-review https://github.com/sakaiproject/sakai/branches/20.x/content-review
-delegatedaccess https://github.com/sakaiproject/sakai/branches/20.x/delegatedaccess
 emailtemplateservice https://github.com/sakaiproject/sakai/branches/20.x/emailtemplateservice
 entitybroker https://github.com/sakaiproject/sakai/branches/20.x/entitybroker
 external-calendaring-service https://github.com/sakaiproject/sakai/branches/20.x/external-calendaring-service/
@@ -99,3 +98,4 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/81-20.x/login
+delegatedaccess https://github.com/LongsightGroup/sakai/branches/81-20.x/delegatedaccess
