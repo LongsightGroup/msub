@@ -126,8 +126,8 @@
                 <module>bbb-tool</module>
                 <module>blogwow</module>
                 <module>certification</module>
-                <!-- module>irubric-core</module>
-                <module>irubric-tool</module -->
+                <module>irubric-core</module>
+                <module>irubric-tool</module>
                 <module>SakaiXAPI-Provider</module>
                 <module>gradebook1</module>
             </modules>
