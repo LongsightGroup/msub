@@ -43,7 +43,6 @@ help https://github.com/sakaiproject/sakai/branches/20.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/20.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/20.x/kernel
 licenses https://github.com/sakaiproject/sakai/branches/20.x/licenses
-login https://github.com/sakaiproject/sakai/branches/20.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/20.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/20.x/mailsender
 message https://github.com/sakaiproject/sakai/branches/20.x/message
@@ -100,3 +99,4 @@ basiclti https://github.com/LongsightGroup/sakai/branches/67-20.x/basiclti
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-20.x/lessonbuilder
 providers https://github.com/LongsightGroup/sakai/branches/67-20.x/providers
 site-manage https://github.com/LongsightGroup/sakai/branches/67-20.x/site-manage
+login https://github.com/LongsightGroup/sakai/branches/67-20.x/login
