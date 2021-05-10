@@ -65,7 +65,7 @@ providers https://github.com/sakaiproject/sakai/branches/20.x/providers
 reset-pass https://github.com/sakaiproject/sakai/branches/20.x/reset-pass
 roster2 https://github.com/sakaiproject/sakai/branches/20.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/20.x/rsf
-rubrics https://github.com/sakaiproject/sakai/branches/20.x/rubrics
+#rubrics https://github.com/sakaiproject/sakai/branches/20.x/rubrics
 rwiki https://github.com/sakaiproject/sakai/branches/20.x/rwiki
 #samigo https://github.com/sakaiproject/sakai/branches/20.x/samigo
 search https://github.com/sakaiproject/sakai/branches/20.x/search
@@ -107,3 +107,6 @@ samigo https://github.com/LongsightGroup/sakai/branches/155-69673-20.x/samigo
 
 #68686 Lessons Add Dates to Assignment Links
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/155-20.x/lessonbuilder
+
+#Rubrics SAK-44879 Prevent switching rubric if evaluations exist
+rubrics https://github.com/LongsightGroup/sakai/branches/155-20.x/rubrics
