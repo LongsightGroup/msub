@@ -125,7 +125,6 @@
                 <module>attendance</module>
                 <module>blogwow</module>
                 <module>certification</module>
-                <module>evaluation</module>
                 <module>rsmart</module>
                 <module>scorm</module>
             </modules>
