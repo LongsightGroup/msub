@@ -123,9 +123,7 @@
                 <module>wicket</module>
 		<!-- Contrib Tools -->
                 <module>attendance</module>
-                <module>bbb-tool</module>
                 <module>blogwow</module>
-                <module>certification</module>
                 <module>evaluation</module>
             </modules>
         </profile>
