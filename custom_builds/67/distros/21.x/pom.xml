@@ -124,6 +124,7 @@
 		<!-- Contrib Tools -->
                 <module>attendance</module>
                 <module>blogwow</module>
+                <module>certification</module>
                 <module>evaluation</module>
             </modules>
         </profile>
