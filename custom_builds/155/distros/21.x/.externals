@@ -102,3 +102,5 @@ blogwow https://github.com/sakaicontrib/blogwow/branches/21.x
 certification https://github.com/sakaicontrib/certification/branches/21.x
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-21.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-21.x
+
+#shell_command sed -i  '/portal.include.extrahead/d' kernel/kernel-impl/src/main/java/org/sakaiproject/content/impl/HtmlPageFilter.java
