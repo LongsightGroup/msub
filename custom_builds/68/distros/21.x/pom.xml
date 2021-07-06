@@ -127,7 +127,7 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>gradebook1</module>
-                <!-- module>iclicker</module -->
+                <module>iclicker</module>
             </modules>
         </profile>
 
