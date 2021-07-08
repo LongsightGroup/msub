@@ -1,5 +1,5 @@
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8 -Dsakai.skin.target=marist -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_marist.scss
+#mavenoptions: -Dsakai.skin.target=marist -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_marist.scss
 
 #shell_command git clone git@github.com:jd3538/Marist-Sakai-21.x.git && mv Marist-Sakai-21.x/* ./
 #shell_command git clone --single-branch --branch 21.x git@github.com:sakaicontrib/SCORM.2004.3ED.RTE.git scorm
