@@ -1,6 +1,3 @@
-#Patcher options: "mavenoptions: <options>"
-#mavenoptions: -Dsakai.skin.target=marist -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_marist.scss
-
 #shell_command git clone git@github.com:jd3538/Marist-Sakai-21.x.git && mv Marist-Sakai-21.x/* ./
 
 #GIT Projects
