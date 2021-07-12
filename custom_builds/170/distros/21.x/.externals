@@ -2,7 +2,6 @@
 #mavenoptions: -Dsakai.skin.target=morpheus-marist -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_marist.scss
 
 #shell_command git clone git@github.com:jd3538/Marist-Sakai-21.x.git && mv Marist-Sakai-21.x/* ./
-#shell_command cp library/src/morpheus-master/themes/_marist.scss library/src/morpheus-master/sass/themes/
 #shell_command touch library/src/morpheus-master/sass/_customization.scss
 
 #GIT Projects
