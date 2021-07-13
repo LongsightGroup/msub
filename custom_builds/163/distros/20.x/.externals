@@ -33,7 +33,6 @@ cmprovider https://github.com/sakaiproject/sakai/branches/20.x/cmprovider
 config https://github.com/sakaiproject/sakai/branches/20.x/config
 content https://github.com/sakaiproject/sakai/branches/20.x/content
 courier https://github.com/sakaiproject/sakai/branches/20.x/courier
-dav https://github.com/sakaiproject/sakai/branches/20.x/dav
 deploy https://github.com/sakaiproject/sakai/branches/20.x/deploy
 docker https://github.com/sakaiproject/sakai/branches/20.x/docker
 edu-services https://github.com/sakaiproject/sakai/branches/20.x/edu-services
@@ -98,6 +97,7 @@ rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-20.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x
 
 # Customizations 
+dav https://github.com/LongsightGroup/sakai/branches/163-20.x/dav
 evaluation https://github.com/LongsightGroup/evaluation/branches/limerick-20.x
 portal https://github.com/LongsightGroup/sakai/branches/163-20.x/portal
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-20.x_jldap-auth-caching-negative-cache
