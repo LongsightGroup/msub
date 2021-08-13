@@ -42,7 +42,6 @@ feedback https://github.com/sakaiproject/sakai/branches/21.x/feedback
 gradebookng https://github.com/sakaiproject/sakai/branches/21.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/21.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/21.x/jobscheduler
-kernel https://github.com/sakaiproject/sakai/branches/21.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/21.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/21.x/licenses
 login https://github.com/sakaiproject/sakai/branches/21.x/login
@@ -102,5 +101,8 @@ blogwow https://github.com/sakaicontrib/blogwow/branches/21.x
 certification https://github.com/sakaicontrib/certification/branches/21.x
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-21.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-21.x
+
+# EHCache
+kernel https://github.com/LongsightGroup/sakai/branches/21.x-ehcache/kernel
 
 #shell_command sed -i  '/portal.include.extrahead/d' kernel/kernel-impl/src/main/java/org/sakaiproject/content/impl/HtmlPageFilter.java
