@@ -91,7 +91,7 @@ wicket https://github.com/sakaiproject/sakai/branches/21.x/wicket
 
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8
+#mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8 -Dsakai.ignite.version=2.9.1
 
 # Additional tools  - Uncomment after 21.x branch is completed
 attendance https://github.com/sakaicontrib/attendance/branches/21.x
