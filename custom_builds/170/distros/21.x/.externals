@@ -4,6 +4,11 @@
 #shell_command git clone git@github.com:jd3538/Marist-Sakai-21.x.git && mv Marist-Sakai-21.x/* ./
 #shell_command touch library/src/morpheus-master/sass/_customization.scss
 
+## Contrib Tools
+#shell_command git clone --single-branch --branch 21.x git@github.com:sakaicontrib/SCORM.2004.3ED.RTE.git scorm
+#shell_command git clone --single-branch --branch 21.x git@github.com:sakaicontrib/attendance.git attendance
+#shell_command git clone --single-branch --branch 21.x git@github.com:sakaicontrib/certification.git certification
+
 #GIT Projects
 
 #git_project access
@@ -12,10 +17,8 @@
 #git_project announcement
 #git_project archive
 #git_project assignment
-#git_project attendance-master
 #git_project basiclti
 #git_project calendar
-#git_project certification
 #git_project chat
 #git_project citations
 #git_project cloud-content
@@ -73,7 +76,6 @@
 #git_project rubrics
 #git_project rwiki
 #git_project samigo
-#git_project scorm
 #git_project search
 #git_project sections
 #git_project shortenedurl
@@ -98,3 +100,8 @@
 #git_project webjars
 #git_project webservices
 #git_project wicket
+
+#Contrib Tools
+#git_project attendance
+#git_project certification
+#git_project scorm
