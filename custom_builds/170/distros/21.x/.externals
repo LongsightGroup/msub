@@ -96,12 +96,13 @@ webservices https://github.com/jd3538/Marist-Sakai-21.x/trunk/webservices
 wicket https://github.com/jd3538/Marist-Sakai-21.x/trunk/wicket
 
 #Contrib Tools
-attendance https://github.com/sakaicontrib/attendance/trunk
-certification https://github.com/sakaicontrib/certification/trunk
-scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/trunk
+# Additional tools  - Uncomment after 21.x branch is completed
+attendance https://github.com/sakaicontrib/attendance/branches/21.x
+certification https://github.com/sakaicontrib/certification/branches/21.x
+scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/21.x
 
 # EHCache
-kernel https://github.com/LongsightGroup/sakai/trunk-ehcache/kernel
-deploy https://github.com/LongsightGroup/sakai/trunk-ehcache/deploy
+kernel https://github.com/LongsightGroup/sakai/branches/21.x-ehcache/kernel
+deploy https://github.com/LongsightGroup/sakai/branches/21.x-ehcache/deploy
 
 #shell_command touch library/src/morpheus-master/sass/_customization.scss
