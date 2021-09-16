@@ -104,3 +104,5 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/1-21.x/config
 login https://github.com/LongsightGroup/sakai/branches/1-21.x/login
+
+#shell_command find ./help -exec sed -i  's/Discussions/Forums/g' {} \;
