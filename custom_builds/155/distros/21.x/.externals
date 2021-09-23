@@ -1,7 +1,7 @@
 # Sakai CLE Externals
 # Updating: svn propset svn:externals -F .externals .
 # Corporate POM
-master https://github.com/sakaiproject/sakai/branches/21.x/master
+master https://github.com/sakaiproject/sakai/branches/21.x-ehcache/master
 
 # Core services
 common https://github.com/sakaiproject/sakai/branches/21.x/common
