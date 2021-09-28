@@ -96,6 +96,7 @@ wicket https://github.com/sakaiproject/sakai/branches/21.x/wicket
 #mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Additional tools  
+# Uses Examity - 3rd Party Binary
 attendance https://github.com/sakaicontrib/attendance/branches/21.x
 bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/21.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/21.x
