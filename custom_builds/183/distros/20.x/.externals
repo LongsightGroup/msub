@@ -95,6 +95,7 @@ webjars https://github.com/sakaiproject/sakai/branches/20.x/webjars
 # Additional tools  - Uncomment after 20.x branch is completed
 attendance https://github.com/sakaicontrib/attendance/branches/20.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/20.x
+gradebook1 https://github.com/sakaicontrib/gradebook1/branches/20.x
 kaltura https://github.com/kaltura/sakai-extension/trunk
 linktool https://github.com/sakaicontrib/linktool/branches/20.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x

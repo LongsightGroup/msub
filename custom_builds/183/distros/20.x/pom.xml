@@ -123,6 +123,7 @@
                 <module>attendance</module>
                 <module>blogwow</module>
                 <module>kaltura</module>
+                <module>gradebook1</module>
                 <module>linktool</module>
             </modules>
         </profile>
