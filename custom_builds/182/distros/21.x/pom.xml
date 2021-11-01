@@ -125,6 +125,7 @@
                 <module>bbb-tool</module>
                 <module>blogwow</module>
                 <module>certification</module>
+                <module>scorm</module>
 		<module>sakai-wildapricot-integration</module>
             </modules>
         </profile>
