@@ -32,7 +32,6 @@ cmprovider https://github.com/sakaiproject/sakai/branches/19.x/cmprovider
 config https://github.com/sakaiproject/sakai/branches/19.x/config
 content https://github.com/sakaiproject/sakai/branches/19.x/content
 courier https://github.com/sakaiproject/sakai/branches/19.x/courier
-dav https://github.com/sakaiproject/sakai/branches/19.x/dav
 deploy https://github.com/sakaiproject/sakai/branches/19.x/deploy
 edu-services https://github.com/sakaiproject/sakai/branches/19.x/edu-services
 endorsed https://github.com/sakaiproject/sakai/branches/19.x/endorsed
@@ -97,5 +96,6 @@ rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-19.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-19.x
 
 # Customizations
+dav https://github.com/LongsightGroup/sakai/branches/179-19.x/dav
 providers https://github.com/LongsightGroup/sakai/branches/179-19.x/providers
 login https://github.com/LongsightGroup/sakai/branches/179-19.x/login
