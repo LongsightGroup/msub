@@ -32,6 +32,7 @@ cloud-storage https://github.com/LongsightGroup/sakai/branches/57-21.x/cloud-sto
 config https://github.com/LongsightGroup/sakai/branches/57-21.x/config
 content https://github.com/LongsightGroup/sakai/branches/57-21.x/content
 dashboard https://github.com/LongsightGroup/sakai/branches/57-21.x/dashboard
+dav https://github.com/LongsightGroup/sakai/branches/57-21.x/dav
 deploy https://github.com/LongsightGroup/sakai/branches/57-21.x/deploy
 docker https://github.com/LongsightGroup/sakai/branches/57-21.x/docker
 edu-services https://github.com/LongsightGroup/sakai/branches/57-21.x/edu-services
@@ -92,7 +93,6 @@ wicket https://github.com/LongsightGroup/sakai/branches/57-21.x/wicket
 #mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Duke-specific customizations
-dav https://github.com/LongsightGroup/sakai/branches/57-21.x/dav
 login https://github.com/LongsightGroup/sakai/branches/57-21.x/login
 providers https://github.com/LongsightGroup/sakai/branches/57-21.x/providers
 site-manage https://github.com/LongsightGroup/sakai/branches/57-21.x/site-manage
