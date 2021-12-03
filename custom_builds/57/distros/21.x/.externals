@@ -43,7 +43,6 @@ help https://github.com/LongsightGroup/sakai/branches/57-21.x/help
 jobscheduler https://github.com/LongsightGroup/sakai/branches/57-21.x/jobscheduler
 kernel https://github.com/LongsightGroup/sakai/branches/57-21.x/kernel
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/57-21.x/lessonbuilder
-library https://github.com/LongsightGroup/sakai/branches/57-21.x/library
 licenses https://github.com/LongsightGroup/sakai/branches/57-21.x/licenses
 mailarchive https://github.com/LongsightGroup/sakai/branches/57-21.x/mailarchive
 mailsender https://github.com/LongsightGroup/sakai/branches/57-21.x/mailsender
@@ -94,6 +93,7 @@ wicket https://github.com/LongsightGroup/sakai/branches/57-21.x/wicket
 #mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Duke-specific customizations
+library https://github.com/DukeLearningInnovation/duke-sakai-skins/branches/21.x/library
 login https://github.com/LongsightGroup/sakai/branches/57-21.x/login
 providers https://github.com/LongsightGroup/sakai/branches/57-21.x/providers
 site-manage https://github.com/LongsightGroup/sakai/branches/57-21.x/site-manage
