@@ -125,7 +125,7 @@
 		<!-- Contrib Tools -->
                 <module>attendance</module>
                 <module>blogwow</module>
-                <module>gradebook</module>
+                <!--module>gradebook</module -->
                 <module>sakora-csv</module>
             </modules>
         </profile>
