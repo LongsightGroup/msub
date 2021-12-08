@@ -83,7 +83,6 @@ user https://github.com/LongsightGroup/sakai/branches/57-21.x/user
 usermembership https://github.com/LongsightGroup/sakai/branches/57-21.x/usermembership
 velocity https://github.com/LongsightGroup/sakai/branches/57-21.x/velocity
 web https://github.com/LongsightGroup/sakai/branches/57-21.x/web
-webapi https://github.com/LongsightGroup/sakai/branches/57-21.x/webapi
 webcomponents https://github.com/LongsightGroup/sakai/branches/57-21.x/webcomponents
 webjars https://github.com/LongsightGroup/sakai/branches/57-21.x/webjars
 wicket https://github.com/LongsightGroup/sakai/branches/57-21.x/wicket
@@ -97,6 +96,10 @@ library https://github.com/DukeLearningInnovation/duke-sakai-skins/branches/21.x
 login https://github.com/LongsightGroup/sakai/branches/57-21.x/login
 providers https://github.com/LongsightGroup/sakai/branches/57-21.x/providers
 site-manage https://github.com/LongsightGroup/sakai/branches/57-21.x/site-manage
+
+#Conversations
+conversations https://github.com/LongsightGroup/sakai/branches/57-21.x/conversations
+webapi https://github.com/LongsightGroup/sakai/branches/57-21.x/webapi
 
 # Additional tools 
 attendance https://github.com/sakaicontrib/attendance/branches/21.x
