@@ -126,6 +126,7 @@
                 <module>blogwow</module>
                 <module>certification</module>
                 <module>clog</module>
+                <module>conversations</module>
                 <module>da_evalprovider</module>
                 <module>evaluation</module>
             </modules>
