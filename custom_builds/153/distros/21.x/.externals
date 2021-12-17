@@ -29,7 +29,7 @@ chat https://github.com/sakaiproject/sakai/branches/21.x/chat
 citations https://github.com/sakaiproject/sakai/branches/21.x/citations
 cloud-content https://github.com/sakaiproject/sakai/branches/21.x/cloud-content
 cloud-storage https://github.com/sakaiproject/sakai/branches/21.x/cloud-storage
-config https://github.com/sakaiproject/sakai/branches/21.x/config
+#config https://github.com/sakaiproject/sakai/branches/21.x/config
 content https://github.com/sakaiproject/sakai/branches/21.x/content
 dashboard https://github.com/sakaiproject/sakai/branches/21.x/dashboard
 dav https://github.com/sakaiproject/sakai/branches/21.x/dav
@@ -94,6 +94,9 @@ wicket https://github.com/sakaiproject/sakai/branches/21.x/wicket
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8
+
+# Customizations
+config https://github.com/LongsightGroup/sakai/branches/153-21.x/config
 
 # Additional tools  - Uncomment after 21.x branch is completed
 attendance https://github.com/sakaicontrib/attendance/branches/21.x
