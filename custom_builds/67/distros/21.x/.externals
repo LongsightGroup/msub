@@ -41,7 +41,7 @@ feedback https://github.com/sakaiproject/sakai/branches/21.x/feedback
 gradebookng https://github.com/sakaiproject/sakai/branches/21.x/gradebookng
 help https://github.com/sakaiproject/sakai/branches/21.x/help
 jobscheduler https://github.com/sakaiproject/sakai/branches/21.x/jobscheduler
-kernel https://github.com/sakaiproject/sakai/branches/21.x/kernel
+#kernel https://github.com/sakaiproject/sakai/branches/21.x/kernel
 #lessonbuilder https://github.com/sakaiproject/sakai/branches/21.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/21.x/licenses
 #login https://github.com/sakaiproject/sakai/branches/21.x/login
@@ -105,6 +105,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 # Customizations
 basiclti https://github.com/LongsightGroup/sakai/branches/67-21.x/basiclti
 dav https://github.com/LongsightGroup/sakai/branches/67-21.x/dav
+kernel https://github.com/LongsightGroup/sakai/branches/67-21.x/kernel
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-21.x/lessonbuilder
 providers https://github.com/LongsightGroup/sakai/branches/67-21.x/providers
 site-manage https://github.com/LongsightGroup/sakai/branches/67-21.x/site-manage
