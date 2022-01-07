@@ -105,3 +105,4 @@ kernel https://github.com/LongsightGroup/sakai/branches/21.x-ehcache/kernel
 deploy https://github.com/LongsightGroup/sakai/branches/21.x-ehcache/deploy
 
 #shell_command sed -i  '/portal.include.extrahead/d' kernel/kernel-impl/src/main/java/org/sakaiproject/content/impl/HtmlPageFilter.java
+#shell_command curl https://github.com/sakaiproject/sakai/commit/f463689e2cd38150fd2f17c18052f38a56e05042.patch | patch -p1
