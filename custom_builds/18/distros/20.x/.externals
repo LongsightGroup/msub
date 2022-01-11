@@ -45,7 +45,6 @@ jobscheduler https://github.com/sakaiproject/sakai/branches/20.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/20.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/20.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/20.x/licenses
-login https://github.com/sakaiproject/sakai/branches/20.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/20.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/20.x/mailsender
 message https://github.com/sakaiproject/sakai/branches/20.x/message
@@ -92,6 +91,8 @@ webjars https://github.com/sakaiproject/sakai/branches/20.x/webjars
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-20 -Psakai20.x -Dsakai.edu-services.version=20-SNAPSHOT -Dsakai.common.version=20-SNAPSHOT -Dsakai.jdk.version=1.8
+
+login https://github.com/LongsightGroup/sakai/branches/18-20.x/login
 
 # Additional tools  - Uncomment after 20.x branch is completed
 attendance https://github.com/sakaicontrib/attendance/branches/20.x
