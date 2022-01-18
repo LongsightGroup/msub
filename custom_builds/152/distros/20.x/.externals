@@ -83,7 +83,6 @@ taggable https://github.com/sakaiproject/sakai/branches/20.x/taggable
 tags https://github.com/sakaiproject/sakai/branches/20.x/tags
 textarea https://github.com/sakaiproject/sakai/branches/20.x/textarea
 user https://github.com/sakaiproject/sakai/branches/20.x/user
-usermembership https://github.com/sakaiproject/sakai/branches/20.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/20.x/velocity
 web https://github.com/sakaiproject/sakai/branches/20.x/web
 webcomponents https://github.com/sakaiproject/sakai/branches/20.x/webcomponents
@@ -104,6 +103,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations below
 profile2 https://github.com/LongsightGroup/sakai/branches/152-20.x/profile2
+usermembership https://github.com/LongsightGroup/sakai/branches/152-20.x/usermembership
 
 #shell_command find ./config/ -name tools.properties -exec sed -i 's/Drop Box/File Drop/g' {} \;
 #shell_command find ./help/ -name \*.html -exec sed -i 's/Drop Box/File Drop/g' {} \;
