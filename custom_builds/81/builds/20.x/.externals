@@ -102,5 +102,5 @@ login https://github.com/LongsightGroup/sakai/branches/81-20.x/login
 delegatedaccess https://github.com/LongsightGroup/sakai/branches/81-20.x/delegatedaccess
 
 # ProctorIO
-config https://github.com/LongsightGroup/sakai/branches/proctorio-20.x/config
-samigo https://github.com/LongsightGroup/sakai/branches/proctorio-20.x/samigo
+config https://github.com/LongsightGroup/sakai/branches/81-20.x/config
+samigo https://github.com/LongsightGroup/sakai/branches/81-20.x/samigo
