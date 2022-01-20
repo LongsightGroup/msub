@@ -124,7 +124,7 @@ webcomponents https://github.com/LongsightGroup/sakai/branches/6-21.x/webcompone
 
 # Old Language Pack
 #shell_command git clone https://github.com/sakaicontrib/legacy-language-packs
-#shell_command cp -R legacy-language-packs/ru/*
+#shell_command cp -R legacy-language-packs/ru/* .
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/6-21.x/login
