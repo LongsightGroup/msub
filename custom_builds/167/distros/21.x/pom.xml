@@ -124,6 +124,7 @@
                 <module>attendance</module>
                 <module>certification</module>
                 <module>clog</module>
+                <module>da_evalprovider</module>
                 <module>evaluation</module>
                 <module>gradebook1</module>
                 <module>rsmart</module>
