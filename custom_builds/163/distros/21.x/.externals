@@ -107,6 +107,6 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 dav https://github.com/LongsightGroup/sakai/branches/163-21.x/dav
 evaluation https://github.com/LongsightGroup/evaluation/branches/limerick-21.x
 portal https://github.com/LongsightGroup/sakai/branches/163-21.x/portal
-providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-21.x_jldap-auth-caching-negative-cache
+providers https://github.com/LongsightGroup/sakai/branches/163-21.x/providers
 web https://github.com/LongsightGroup/sakai/branches/163-21.x/web
 login https://github.com/LongsightGroup/sakai/branches/163-21.x/login
