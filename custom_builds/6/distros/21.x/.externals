@@ -28,9 +28,9 @@ calendar https://github.com/sakaiproject/sakai/branches/21.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/21.x/chat
 citations https://github.com/sakaiproject/sakai/branches/21.x/citations
 cloud-content https://github.com/sakaiproject/sakai/branches/21.x/cloud-content
-cloud-storage https://github.com/sakaiproject/sakai/branches/21.x/cloud-storage
-config https://github.com/sakaiproject/sakai/branches/21.x/config
-content https://github.com/sakaiproject/sakai/branches/21.x/content
+#cloud-storage https://github.com/sakaiproject/sakai/branches/21.x/cloud-storage
+#config https://github.com/sakaiproject/sakai/branches/21.x/config
+#content https://github.com/sakaiproject/sakai/branches/21.x/content
 dashboard https://github.com/sakaiproject/sakai/branches/21.x/dashboard
 dav https://github.com/sakaiproject/sakai/branches/21.x/dav
 deploy https://github.com/sakaiproject/sakai/branches/21.x/deploy
@@ -130,3 +130,8 @@ webcomponents https://github.com/LongsightGroup/sakai/branches/6-21.x/webcompone
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/6-21.x/login
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-21.x_jldap-auth-caching
+
+# Sak-47020 Backport
+cloud-storage https://github.com/LongsightGroup/sakai/branches/6-21.x/cloud-storage
+config https://github.com/LongsightGroup/sakai/branches/6-21.x/config
+content https://github.com/LongsightGroup/sakai/branches/6-21.x/content
