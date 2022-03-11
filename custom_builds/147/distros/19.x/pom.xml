@@ -124,7 +124,7 @@
                 <module>blogwow</module>
                 <module>evaluation</module>
                 <module>rsmart</module>
-                <!-- module>scorm</module -->
+                <module>scorm</module>
             </modules>
         </profile>
 
