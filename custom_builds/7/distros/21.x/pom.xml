@@ -124,6 +124,7 @@
                 <module>attendance</module>
                 <module>blogwow</module>
                 <module>certification</module>
+                <module>conversations</module>
                 <module>evaluation</module>
             </modules>
         </profile>
