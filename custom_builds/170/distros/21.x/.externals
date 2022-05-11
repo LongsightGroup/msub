@@ -37,6 +37,7 @@ config https://github.com/jd3538/Marist-Sakai-21.x/trunk/config
 content https://github.com/jd3538/Marist-Sakai-21.x/trunk/content
 dashboard https://github.com/jd3538/Marist-Sakai-21.x/trunk/dashboard
 dav https://github.com/jd3538/Marist-Sakai-21.x/trunk/dav
+deploy https://github.com/jd3538/Marist-Sakai-21.x/trunk/deploy
 docker https://github.com/jd3538/Marist-Sakai-21.x/trunk/docker
 edu-services https://github.com/jd3538/Marist-Sakai-21.x/trunk/edu-services
 endorsed https://github.com/jd3538/Marist-Sakai-21.x/trunk/endorsed
