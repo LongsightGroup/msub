@@ -127,6 +127,7 @@
                 <module>certification</module>
                 <module>clog</module>
                 <module>da_evalprovider</module>
+                <module>meetings</module>
                 <module>evaluation</module>
             </modules>
         </profile>
