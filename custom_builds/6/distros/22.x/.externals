@@ -1,7 +1,7 @@
 # Sakai CLE Externals
 # Updating: svn propset svn:externals -F .externals .
 # Corporate POM
-#master https://github.com/sakaiproject/sakai/branches/22.x/master
+master https://github.com/sakaiproject/sakai/branches/22.x/master
 
 # Core services
 common https://github.com/sakaiproject/sakai/branches/22.x/common
@@ -68,7 +68,7 @@ rsf https://github.com/sakaiproject/sakai/branches/22.x/rsf
 rubrics https://github.com/sakaiproject/sakai/branches/22.x/rubrics
 rwiki https://github.com/sakaiproject/sakai/branches/22.x/rwiki
 samigo https://github.com/sakaiproject/sakai/branches/22.x/samigo
-#search https://github.com/sakaiproject/sakai/branches/22.x/search
+search https://github.com/sakaiproject/sakai/branches/22.x/search
 sections https://github.com/sakaiproject/sakai/branches/22.x/sections
 shortenedurl https://github.com/sakaiproject/sakai/branches/22.x/shortenedurl
 simple-rss-portlet https://github.com/sakaiproject/sakai/branches/22.x/simple-rss-portlet
@@ -108,8 +108,8 @@ meetings https://github.com/sakaicontrib/meetings/branches/22.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-22.x
 
 # ES 7.17.4
-master https://github.com/LongsightGroup/sakai/branches/6-22.x/master
-search https://github.com/LongsightGroup/sakai/branches/6-22.x/search
+#master https://github.com/LongsightGroup/sakai/branches/6-22.x/master
+#search https://github.com/LongsightGroup/sakai/branches/6-22.x/search
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/6-22.x/login
