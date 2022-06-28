@@ -86,8 +86,8 @@ user https://github.com/sakaiproject/sakai/branches/22.x/user
 usermembership https://github.com/sakaiproject/sakai/branches/22.x/usermembership
 velocity https://github.com/sakaiproject/sakai/branches/22.x/velocity
 web https://github.com/sakaiproject/sakai/branches/22.x/web
-#webapi https://github.com/sakaiproject/sakai/branches/22.x/webapi
-#webcomponents https://github.com/sakaiproject/sakai/branches/22.x/webcomponents
+webapi https://github.com/sakaiproject/sakai/branches/22.x/webapi
+webcomponents https://github.com/sakaiproject/sakai/branches/22.x/webcomponents
 webjars https://github.com/sakaiproject/sakai/branches/22.x/webjars
 #webservices https://github.com/sakaiproject/sakai/branches/22.x/webservices
 wicket https://github.com/sakaiproject/sakai/branches/22.x/wicket
@@ -108,8 +108,8 @@ meetings https://github.com/sakaicontrib/meetings/branches/22.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-22.x
 
 # Rubics without traverson changes
-webcomponents https://github.com/LongsightGroup/sakai/branches/6-22.x/webcomponents
-webapi https://github.com/LongsightGroup/sakai/branches/6-22.x/webapi
+#webcomponents https://github.com/LongsightGroup/sakai/branches/6-22.x/webcomponents
+#webapi https://github.com/LongsightGroup/sakai/branches/6-22.x/webapi
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/6-22.x/login
