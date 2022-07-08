@@ -124,7 +124,7 @@
 		<module>attendance</module>
                 <module>blogwow</module>
                 <module>certification</module>
-                <!-- module>clog</module -->
+                <module>clog</module>
                 <module>evaluation</module>
             </modules>
         </profile>
