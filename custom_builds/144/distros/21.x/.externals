@@ -107,3 +107,5 @@ gradebookng https://github.com/LongsightGroup/sakai/branches/144-21.x/gradebookn
 
 # Backport
 edu-services https://github.com/LongsightGroup/sakai/branches/144-21.x/edu-services
+
+#shell_command rm -f webcomponents/bundle/src/main/bundle/grader_es.properties
