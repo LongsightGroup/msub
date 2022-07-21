@@ -22,7 +22,7 @@ admin-tools  https://github.com/sakaiproject/sakai/branches/21.x/admin-tools
 admin-su  https://github.com/sakaiproject/sakai/branches/21.x/admin-su
 announcement https://github.com/sakaiproject/sakai/branches/21.x/announcement
 archive https://github.com/sakaiproject/sakai/branches/21.x/archive
-assignment https://github.com/sakaiproject/sakai/branches/21.x/assignment
+#assignment https://github.com/sakaiproject/sakai/branches/21.x/assignment
 basiclti https://github.com/sakaiproject/sakai/branches/21.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/21.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/21.x/chat
@@ -106,6 +106,7 @@ scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/21.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-21.x
 
 # Customizations below
+assignment https://github.com/LongsightGroup/sakai/branches/152-21.x/assignment
 kernel https://github.com/LongsightGroup/sakai/branches/152-21.x/kernel
 profile2 https://github.com/LongsightGroup/sakai/branches/152-21.x/profile2
 usermembership https://github.com/LongsightGroup/sakai/branches/152-21.x/usermembership
