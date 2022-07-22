@@ -1,0 +1,137 @@
+# Sakai CLE Externals
+# Updating: svn propset svn:externals -F .externals .
+# Corporate POM
+master https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/master
+
+# Core services
+common https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/common
+commons https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/commons
+content-review https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/content-review
+delegatedaccess https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/delegatedaccess
+emailtemplateservice https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/emailtemplateservice
+entitybroker https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/entitybroker
+external-calendaring-service https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/external-calendaring-service/
+hierarchy https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/hierarchy
+jsf https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/jsf
+jsf2 https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/jsf2
+userauditservice https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/userauditservice
+
+# Core Sakai Tools
+access https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/access
+admin-tools  https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/admin-tools
+admin-su  https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/admin-su
+announcement https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/announcement
+archive https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/archive
+assignment https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/assignment
+basiclti https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/basiclti
+calendar https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/calendar
+chat https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/chat
+citations https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/citations
+cloud-content https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/cloud-content
+cloud-storage https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/cloud-storage
+config https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/config
+content https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/content
+dashboard https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/dashboard
+dav https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/dav
+deploy https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/deploy
+docker https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/docker
+edu-services https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/edu-services
+endorsed https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/endorsed
+feedback https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/feedback
+gradebookng https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/gradebookng
+help https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/help
+jobscheduler https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/jobscheduler
+kernel https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/kernel
+lessonbuilder https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/lessonbuilder
+licenses https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/licenses
+mailarchive https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/mailarchive
+mailsender https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/mailsender
+message https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/message
+msgcntr https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/msgcntr
+mycalendar https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/mycalendar
+myconnections https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/myconnections
+oauth https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/oauth
+oss-parent https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/oss-parent
+pack https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/pack
+pasystem https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/pasystem
+podcasts https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/podcasts
+polls https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/polls
+portal https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/portal
+postem https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/postem
+presence https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/presence
+profile2 https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/profile2
+reset-pass https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/reset-pass
+roster2 https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/roster2
+rsf https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/rsf
+rubrics https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/rubrics
+rwiki https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/rwiki
+samigo https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/samigo
+search https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/search
+sections https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/sections
+shortenedurl https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/shortenedurl
+simple-rss-portlet https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/simple-rss-portlet
+signup https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/signup
+site https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/site
+sitedescription https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/sitedescription
+sitemembers https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/sitemembers
+sitestats https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/sitestats
+syllabus https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/syllabus
+taggable https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/taggable
+tags https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/tags
+textarea https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/textarea
+user https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/user
+usermembership https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/usermembership
+velocity https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/velocity
+web https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/web
+webcomponents https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/webcomponents
+webjars https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/webjars
+wicket https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/wicket
+
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8
+
+# Duke-specific customizations
+library https://github.com/DukeLearningInnovation/duke-sakai-skins/branches/21.x/library
+login https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/login
+providers https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/providers
+site-manage https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/site-manage
+
+#Conversations
+conversations https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/conversations
+webapi https://github.com/LongsightGroup/sakai/branches/57-21.x-conversations/webapi
+
+# Additional tools 
+attendance https://github.com/sakaicontrib/attendance/branches/21.x
+blogwow https://github.com/sakaicontrib/blogwow/branches/21.x
+#gradebook https://github.com/sakaicontrib/gradebook1/branches/21.x
+sakora-csv https://github.com/ottenhoff/sakora-csv/branches/duke-sakai-21.x
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-21.x
+
+# Build Duke Skins
+#shell_command cd library
+#shell_command mkdir /tmp/duke-skins
+#shell_command printf "Building duke-extend......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-extend.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-extend-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-extend.js -Dsakai.skin.target=duke-extend -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-extend /tmp/duke-skins/
+#shell_command printf "Building duke-alumni......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-alumni.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-alumni-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-alumni.js -Dsakai.skin.target=duke-alumni -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-alumni /tmp/duke-skins/
+#shell_command printf "Building duke-crtp......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-crtp.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-crtp-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-crtp.js -Dsakai.skin.target=duke-crtp -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-crtp /tmp/duke-skins/
+#shell_command printf "Building duke-dghi......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-dghi.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-dghi-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-dghi.js -Dsakai.skin.target=duke-dghi -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-dghi /tmp/duke-skins/
+#shell_command printf "Building duke-divinity......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-divinity.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-divinity-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-divinity.js -Dsakai.skin.target=duke-divinity -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-divinity /tmp/duke-skins/
+#shell_command printf "Building duke-dku......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-dku.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-dku-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-dku.js -Dsakai.skin.target=duke-dku -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-dku /tmp/duke-skins/
+#shell_command printf "Building duke-law......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-law.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-law-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-law.js -Dsakai.skin.target=duke-law -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-law /tmp/duke-skins/
+#shell_command printf "Building duke-nursing......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-nursing.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-nursing-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-nursing.js -Dsakai.skin.target=duke-nursing -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-nursing /tmp/duke-skins/
+#shell_command printf "Building duke-pratt......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-pratt.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-pratt-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-pratt.js -Dsakai.skin.target=duke-pratt -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-pratt /tmp/duke-skins/
+#shell_command printf "Building duke-samsi......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-samsi.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-samsi-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-samsi.js -Dsakai.skin.target=duke-samsi -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-samsi /tmp/duke-skins/
+#shell_command printf "Building duke-default......\n\n"
+#shell_command mvn install sakai:deploy-exploded -Dsakai.skin.customization.file=./src/morpheus-master/sass/_duke-default.scss -Dsakai.skin.overrides.file=./src/morpheus-master/sass/_duke-default-overrides.scss -Dsakai.skin.customization.js.lib=duke-lib.js -Dsakai.skin.customization.js.main=duke-default.js -Dsakai.skin.target=duke-default -Dmaven.tomcat.home=/tmp/duke/ && cp -r /tmp/duke/webapps/library/skin/duke-default /tmp/duke-skins/
+#shell_command printf "Skin Build Complete\n"
+#shell_command cp -r /tmp/duke-skins/* src/webapp/skin/ ; cd ../
