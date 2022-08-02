@@ -44,7 +44,6 @@ jobscheduler https://github.com/sakaiproject/sakai/branches/22.x/jobscheduler
 kernel https://github.com/sakaiproject/sakai/branches/22.x/kernel
 lessonbuilder https://github.com/sakaiproject/sakai/branches/22.x/lessonbuilder
 licenses https://github.com/sakaiproject/sakai/branches/22.x/licenses
-login https://github.com/sakaiproject/sakai/branches/22.x/login
 mailarchive https://github.com/sakaiproject/sakai/branches/22.x/mailarchive
 mailsender https://github.com/sakaiproject/sakai/branches/22.x/mailsender
 message https://github.com/sakaiproject/sakai/branches/22.x/message
@@ -102,3 +101,6 @@ blogwow https://github.com/sakaicontrib/blogwow/branches/22.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/22.x
 gradebook1 https://github.com/sakaicontrib/gradebook1/branches/22.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-22.x
+
+# Customizations
+login https://github.com/LongsightGroup/sakai/branches/22.x/login
