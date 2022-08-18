@@ -28,7 +28,7 @@ chat https://github.com/sakaiproject/sakai/branches/21.x/chat
 citations https://github.com/sakaiproject/sakai/branches/21.x/citations
 cloud-content https://github.com/sakaiproject/sakai/branches/21.x/cloud-content
 cloud-storage https://github.com/sakaiproject/sakai/branches/21.x/cloud-storage
-config https://github.com/sakaiproject/sakai/branches/21.x/config
+#config https://github.com/sakaiproject/sakai/branches/21.x/config
 content https://github.com/sakaiproject/sakai/branches/21.x/content
 dashboard https://github.com/sakaiproject/sakai/branches/21.x/dashboard
 dav https://github.com/sakaiproject/sakai/branches/21.x/dav
@@ -65,7 +65,7 @@ roster2 https://github.com/sakaiproject/sakai/branches/21.x/roster2
 rsf https://github.com/sakaiproject/sakai/branches/21.x/rsf
 rubrics https://github.com/sakaiproject/sakai/branches/21.x/rubrics
 rwiki https://github.com/sakaiproject/sakai/branches/21.x/rwiki
-samigo https://github.com/sakaiproject/sakai/branches/21.x/samigo
+#samigo https://github.com/sakaiproject/sakai/branches/21.x/samigo
 search https://github.com/sakaiproject/sakai/branches/21.x/search
 sections https://github.com/sakaiproject/sakai/branches/21.x/sections
 shortenedurl https://github.com/sakaiproject/sakai/branches/21.x/shortenedurl
@@ -102,3 +102,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/81-21.x/login
 delegatedaccess https://github.com/LongsightGroup/sakai/branches/81-21.x/delegatedaccess
+
+# ProctorIO
+config https://github.com/LongsightGroup/sakai/branches/81-21.x/config
+samigo https://github.com/LongsightGroup/sakai/branches/81-21.x/samigo
