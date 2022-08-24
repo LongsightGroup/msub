@@ -22,7 +22,7 @@ admin-tools  https://github.com/sakaiproject/sakai/branches/21.x/admin-tools
 admin-su  https://github.com/sakaiproject/sakai/branches/21.x/admin-su
 announcement https://github.com/sakaiproject/sakai/branches/21.x/announcement
 archive https://github.com/sakaiproject/sakai/branches/21.x/archive
-assignment https://github.com/sakaiproject/sakai/branches/21.x/assignment
+#assignment https://github.com/sakaiproject/sakai/branches/21.x/assignment
 #basiclti https://github.com/sakaiproject/sakai/branches/21.x/basiclti
 calendar https://github.com/sakaiproject/sakai/branches/21.x/calendar
 chat https://github.com/sakaiproject/sakai/branches/21.x/chat
@@ -110,3 +110,4 @@ lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-21.x/lessonbui
 providers https://github.com/LongsightGroup/sakai/branches/67-21.x/providers
 site-manage https://github.com/LongsightGroup/sakai/branches/67-21.x/site-manage
 login https://github.com/LongsightGroup/sakai/branches/67-21.x/login
+assignment https://github.com/LongsightGroup/sakai/branches/67-21.x/assignment
