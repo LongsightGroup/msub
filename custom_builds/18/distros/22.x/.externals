@@ -103,4 +103,4 @@ gradebook1 https://github.com/sakaicontrib/gradebook1/branches/22.x
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-22.x
 
 # Customizations
-login https://github.com/LongsightGroup/sakai/branches/22.x/login
+login https://github.com/LongsightGroup/sakai/branches/18-22.x/login
