@@ -102,3 +102,7 @@ blogwow https://github.com/sakaicontrib/blogwow/branches/22.x
 clog https://github.com/sakaicontrib/clog/branches/22.x
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-22.x/
 webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-22.x
+
+#Customizations
+# login - SAML
+# config - Custom tool name
