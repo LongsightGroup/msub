@@ -106,8 +106,7 @@ login https://github.com/LongsightGroup/sakai/branches/144-21.x/login
 gradebookng https://github.com/LongsightGroup/sakai/branches/144-21.x/gradebookng
 
 #lessons working on new question types in DEV only
-#lessonbuilder https://github.com/LongsightGroup/sakai/branches/144-21.x/lessonbuilder
-lessonbuilder https://github.com/sakaiproject/sakai/branches/21.x/lessonbuilder
+lessonbuilder https://github.com/LongsightGroup/sakai/branches/144-21.x/lessonbuilder
 
 # Backport
 edu-services https://github.com/LongsightGroup/sakai/branches/144-21.x/edu-services
