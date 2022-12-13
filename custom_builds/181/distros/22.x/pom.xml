@@ -126,6 +126,7 @@
                 <module>certification</module>
                 <module>clog</module>
                 <module>evaluation</module>
+                <module>meetings</module>
             </modules>
         </profile>
 
