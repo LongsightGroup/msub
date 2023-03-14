@@ -92,7 +92,6 @@ webjars https://github.com/sakaiproject/sakai/branches/22.x/webjars
 #webservices https://github.com/sakaiproject/sakai/branches/22.x/webservices
 wicket https://github.com/sakaiproject/sakai/branches/22.x/wicket
 
-
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-22 -Psakai22.x -Dsakai.edu-services.version=22-SNAPSHOT -Dsakai.common.version=22-SNAPSHOT
 
