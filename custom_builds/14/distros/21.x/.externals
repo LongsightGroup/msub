@@ -94,7 +94,7 @@ wicket https://github.com/LongsightGroup/sakai/branches/14-21.x/wicket
 #mavenoptions:-Psakai-21 -Psakai21.x -Dsakai.edu-services.version=21-SNAPSHOT -Dsakai.common.version=21-SNAPSHOT -Dsakai.jdk.version=1.8
 
 # Additional tools  - Uncomment after 21.x branch is completed
-attendance https://github.com/sakaicontrib/attendance/branches/21.x
+attendance https://github.com/LongsightGroup/attendance/branches/21.x-pepperdine
 blogwow https://github.com/sakaicontrib/blogwow/branches/21.x
 certification https://github.com/sakaicontrib/certification/branches/21.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/21.x
