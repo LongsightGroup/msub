@@ -1,0 +1,111 @@
+# Sakai CLE Externals
+# Updating: svn propset svn:externals -F .externals .
+# Corporate POM
+master https://github.com/LongsightGroup/sakai/branches/7-23.x/master
+
+# Core services
+common https://github.com/LongsightGroup/sakai/branches/7-23.x/common
+commons https://github.com/LongsightGroup/sakai/branches/7-23.x/commons
+content-review https://github.com/LongsightGroup/sakai/branches/7-23.x/content-review
+delegatedaccess https://github.com/LongsightGroup/sakai/branches/7-23.x/delegatedaccess
+emailtemplateservice https://github.com/LongsightGroup/sakai/branches/7-23.x/emailtemplateservice
+entitybroker https://github.com/LongsightGroup/sakai/branches/7-23.x/entitybroker
+external-calendaring-service https://github.com/LongsightGroup/sakai/branches/7-23.x/external-calendaring-service/
+hierarchy https://github.com/LongsightGroup/sakai/branches/7-23.x/hierarchy
+jsf https://github.com/LongsightGroup/sakai/branches/7-23.x/jsf
+jsf2 https://github.com/LongsightGroup/sakai/branches/7-23.x/jsf2
+userauditservice https://github.com/LongsightGroup/sakai/branches/7-23.x/userauditservice
+
+# Core Sakai Tools
+access https://github.com/LongsightGroup/sakai/branches/7-23.x/access
+admin-tools  https://github.com/LongsightGroup/sakai/branches/7-23.x/admin-tools
+admin-su  https://github.com/LongsightGroup/sakai/branches/7-23.x/admin-su
+announcement https://github.com/LongsightGroup/sakai/branches/7-23.x/announcement
+archive https://github.com/LongsightGroup/sakai/branches/7-23.x/archive
+assignment https://github.com/LongsightGroup/sakai/branches/7-23.x/assignment
+basiclti https://github.com/LongsightGroup/sakai/branches/7-23.x/basiclti
+calendar https://github.com/LongsightGroup/sakai/branches/7-23.x/calendar
+chat https://github.com/LongsightGroup/sakai/branches/7-23.x/chat
+citations https://github.com/LongsightGroup/sakai/branches/7-23.x/citations
+cloud-content https://github.com/LongsightGroup/sakai/branches/7-23.x/cloud-content
+cloud-storage https://github.com/LongsightGroup/sakai/branches/7-23.x/cloud-storage
+config https://github.com/LongsightGroup/sakai/branches/7-23.x/config
+content https://github.com/LongsightGroup/sakai/branches/7-23.x/content
+conversations https://github.com/LongsightGroup/sakai/branches/7-23.x/conversations
+dashboard https://github.com/LongsightGroup/sakai/branches/7-23.x/dashboard
+dav https://github.com/LongsightGroup/sakai/branches/7-23.x/dav
+deploy https://github.com/LongsightGroup/sakai/branches/7-23.x/deploy
+docker https://github.com/LongsightGroup/sakai/branches/7-23.x/docker
+edu-services https://github.com/LongsightGroup/sakai/branches/7-23.x/edu-services
+feedback https://github.com/LongsightGroup/sakai/branches/7-23.x/feedback
+gradebookng https://github.com/LongsightGroup/sakai/branches/7-23.x/gradebookng
+help https://github.com/LongsightGroup/sakai/branches/7-23.x/help
+jobscheduler https://github.com/LongsightGroup/sakai/branches/7-23.x/jobscheduler
+kernel https://github.com/LongsightGroup/sakai/branches/7-23.x/kernel
+lessonbuilder https://github.com/LongsightGroup/sakai/branches/7-23.x/lessonbuilder
+licenses https://github.com/LongsightGroup/sakai/branches/7-23.x/licenses
+login https://github.com/LongsightGroup/sakai/branches/7-23.x/login
+mailarchive https://github.com/LongsightGroup/sakai/branches/7-23.x/mailarchive
+mailsender https://github.com/LongsightGroup/sakai/branches/7-23.x/mailsender
+message https://github.com/LongsightGroup/sakai/branches/7-23.x/message
+msgcntr https://github.com/LongsightGroup/sakai/branches/7-23.x/msgcntr
+mycalendar https://github.com/LongsightGroup/sakai/branches/7-23.x/mycalendar
+myconnections https://github.com/LongsightGroup/sakai/branches/7-23.x/myconnections
+oauth https://github.com/LongsightGroup/sakai/branches/7-23.x/oauth
+oss-parent https://github.com/LongsightGroup/sakai/branches/7-23.x/oss-parent
+pack https://github.com/LongsightGroup/sakai/branches/7-23.x/pack
+pasystem https://github.com/LongsightGroup/sakai/branches/7-23.x/pasystem
+plus https://github.com/LongsightGroup/sakai/branches/7-23.x/plus
+podcasts https://github.com/LongsightGroup/sakai/branches/7-23.x/podcasts
+polls https://github.com/LongsightGroup/sakai/branches/7-23.x/polls
+portal https://github.com/LongsightGroup/sakai/branches/7-23.x/portal
+postem https://github.com/LongsightGroup/sakai/branches/7-23.x/postem
+presence https://github.com/LongsightGroup/sakai/branches/7-23.x/presence
+profile2 https://github.com/LongsightGroup/sakai/branches/7-23.x/profile2
+providers https://github.com/LongsightGroup/sakai/branches/7-23.x/providers
+reset-pass https://github.com/LongsightGroup/sakai/branches/7-23.x/reset-pass
+roster2 https://github.com/LongsightGroup/sakai/branches/7-23.x/roster2
+rsf https://github.com/LongsightGroup/sakai/branches/7-23.x/rsf
+rubrics https://github.com/LongsightGroup/sakai/branches/7-23.x/rubrics
+rwiki https://github.com/LongsightGroup/sakai/branches/7-23.x/rwiki
+samigo https://github.com/LongsightGroup/sakai/branches/7-23.x/samigo
+search https://github.com/LongsightGroup/sakai/branches/7-23.x/search
+sections https://github.com/LongsightGroup/sakai/branches/7-23.x/sections
+shortenedurl https://github.com/LongsightGroup/sakai/branches/7-23.x/shortenedurl
+simple-rss-portlet https://github.com/LongsightGroup/sakai/branches/7-23.x/simple-rss-portlet
+signup https://github.com/LongsightGroup/sakai/branches/7-23.x/signup
+site https://github.com/LongsightGroup/sakai/branches/7-23.x/site
+site-manage https://github.com/LongsightGroup/sakai/branches/7-23.x/site-manage
+sitedescription https://github.com/LongsightGroup/sakai/branches/7-23.x/sitedescription
+sitemembers https://github.com/LongsightGroup/sakai/branches/7-23.x/sitemembers
+sitestats https://github.com/LongsightGroup/sakai/branches/7-23.x/sitestats
+syllabus https://github.com/LongsightGroup/sakai/branches/7-23.x/syllabus
+taggable https://github.com/LongsightGroup/sakai/branches/7-23.x/taggable
+tags https://github.com/LongsightGroup/sakai/branches/7-23.x/tags
+textarea https://github.com/LongsightGroup/sakai/branches/7-23.x/textarea
+user https://github.com/LongsightGroup/sakai/branches/7-23.x/user
+usermembership https://github.com/LongsightGroup/sakai/branches/7-23.x/usermembership
+velocity https://github.com/LongsightGroup/sakai/branches/7-23.x/velocity
+web https://github.com/LongsightGroup/sakai/branches/7-23.x/web
+webapi https://github.com/LongsightGroup/sakai/branches/7-23.x/webapi
+webcomponents https://github.com/LongsightGroup/sakai/branches/7-23.x/webcomponents
+webjars https://github.com/LongsightGroup/sakai/branches/7-23.x/webjars
+#webservices https://github.com/LongsightGroup/sakai/branches/7-23.x/webservices
+wicket https://github.com/LongsightGroup/sakai/branches/7-23.x/wicket
+
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-22 -Psakai23.x -Dsakai.edu-services.version=22-SNAPSHOT -Dsakai.common.version=22-SNAPSHOT
+
+# Additional tools  - Uncomment after 23.x branch is completed
+attendance https://github.com/sakaicontrib/attendance/branches/23.x
+blogwow https://github.com/sakaicontrib/blogwow/branches/23.x
+certification https://github.com/sakaicontrib/certification/branches/23.x
+evaluation https://github.com/sakaicontrib/evaluation/branches/23.x
+webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-23.x
+
+#Customization
+#config 
+#login 
+#portal
+#site-manage
