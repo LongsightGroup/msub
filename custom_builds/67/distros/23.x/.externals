@@ -42,7 +42,6 @@ gradebookng https://github.com/LongsightGroup/sakai/branches/67-23.x/gradebookng
 help https://github.com/LongsightGroup/sakai/branches/67-23.x/help
 jobscheduler https://github.com/LongsightGroup/sakai/branches/67-23.x/jobscheduler
 kernel https://github.com/LongsightGroup/sakai/branches/67-23.x/kernel
-lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-23.x/lessonbuilder
 licenses https://github.com/LongsightGroup/sakai/branches/67-23.x/licenses
 login https://github.com/LongsightGroup/sakai/branches/67-23.x/login
 mailarchive https://github.com/LongsightGroup/sakai/branches/67-23.x/mailarchive
@@ -93,6 +92,8 @@ webjars https://github.com/LongsightGroup/sakai/branches/67-23.x/webjars
 #webservices https://github.com/LongsightGroup/sakai/branches/67-23.x/webservices
 wicket https://github.com/LongsightGroup/sakai/branches/67-23.x/wicket
 
+# Using standard lessonbuilder until they accept estimate to bring their activity alert mod over
+lessonbuilder https://github.com/sakaiproject/sakai/branches/23.x/lessonbuilder
 
 # Customization List
 #basiclti
@@ -105,7 +106,7 @@ wicket https://github.com/LongsightGroup/sakai/branches/67-23.x/wicket
 
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-22 -Psakai23.x -Dsakai.edu-services.version=22-SNAPSHOT -Dsakai.common.version=22-SNAPSHOT
+#mavenoptions:-Psakai-23 -Psakai23.x -Dsakai.edu-services.version=23-SNAPSHOT -Dsakai.common.version=23-SNAPSHOT
 
 # Additional tools  - Uncomment after 23.x branch is completed
 attendance https://github.com/sakaicontrib/attendance/branches/23.x
