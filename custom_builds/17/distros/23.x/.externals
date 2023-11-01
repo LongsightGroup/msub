@@ -93,9 +93,10 @@ webjars https://github.com/LongsightGroup/sakai/branches/17-23.x/webjars
 #webservices https://github.com/LongsightGroup/sakai/branches/17-23.x/webservices
 wicket https://github.com/LongsightGroup/sakai/branches/17-23.x/wicket
 
+# customizations: login/saml
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-22 -Psakai23.x -Dsakai.edu-services.version=22-SNAPSHOT -Dsakai.common.version=22-SNAPSHOT
+#mavenoptions:-Psakai-23 -Psakai23.x -Dsakai.edu-services.version=23-SNAPSHOT -Dsakai.common.version=23-SNAPSHOT
 
 # Additional tools  - Uncomment after 23.x branch is completed
 attendance https://github.com/sakaicontrib/attendance/branches/23.x
