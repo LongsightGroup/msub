@@ -108,6 +108,3 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/165-22.x/config
-
-#shell_command curl https://github.com/sakaiproject/sakai/compare/22.x...ottenhoff:sakai:ES-7.10.2.patch | patch -p1
-#shell_command curl https://patch-diff.githubusercontent.com/raw/sakaiproject/sakai/pull/10842.patch | patch -p1
