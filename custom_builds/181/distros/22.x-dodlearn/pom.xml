@@ -75,6 +75,7 @@
                 <module>jsf</module>
                 <module>jsf2</module>
                 <module>kernel</module>
+                <module>library</module>
                 <module>lessonbuilder</module>
                 <module>login</module>
                 <module>mailarchive</module>
