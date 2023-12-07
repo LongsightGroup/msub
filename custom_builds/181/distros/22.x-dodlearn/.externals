@@ -94,7 +94,7 @@ webjars https://github.com/LongsightGroup/sakai/branches/181-22.x-dodlearn/webja
 wicket https://github.com/LongsightGroup/sakai/branches/181-22.x-dodlearn/wicket
 
 #Patcher options: "mavenoptions: <options>"
-#mavenoptions:-Psakai-22 -Psakai22.x -Dsakai.skin.target=dodlearn -Dsakai.skin.customization.file=./library/src/morpheus-master/sass/themes/_dodlearn.scss
+#mavenoptions:-Psakai-22 -Psakai22.x -Dsakai.skin.target=dodlearn -Dsakai.skin.customization.file=/mnt/builder/svn/sakai_patcher/181_distros_22.x-dodlearn_/library/src/morpheus-master/sass/themes/_dodlearn.scss
 
 # Additional tools  - Uncomment after 22.x branch is completed
 attendance https://github.com/sakaicontrib/attendance/branches/22.x
