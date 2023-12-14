@@ -111,43 +111,43 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 #end_command mkdir /tmp/nps-skins
 
 #end_command printf "Building nps......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=nps -Dsakai.skin.target=nps -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_nps.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/nps /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=nps -Dsakai.skin.target=nps -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_nps.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/nps /tmp/nps-skins/
 
 #end_command printf "Building hrcoe......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=hrcoe -Dsakai.skin.target=hrcoe -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_hrcoe.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/hrcoe /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=hrcoe -Dsakai.skin.target=hrcoe -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_hrcoe.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/hrcoe /tmp/nps-skins/
 
 #end_command printf "Building hsi......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=hsi -Dsakai.skin.target=hsi -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_hsi.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/hsi /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=hsi -Dsakai.skin.target=hsi -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_hsi.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/hsi /tmp/nps-skins/
 
 #end_command printf "Building hss......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=hss -Dsakai.skin.target=hss -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_hss.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/hss /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=hss -Dsakai.skin.target=hss -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_hss.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/hss /tmp/nps-skins/
 
 #end_command printf "Building mfr......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=mfr -Dsakai.skin.target=mfr -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_mfr.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/mfr /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=mfr -Dsakai.skin.target=mfr -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_mfr.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/mfr /tmp/nps-skins/
 
 #end_command printf "Building moves......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=moves -Dsakai.skin.target=moves -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_moves.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/moves /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=moves -Dsakai.skin.target=moves -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_moves.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/moves /tmp/nps-skins/
 
 #end_command printf "Building ridac......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=ridac -Dsakai.skin.target=ridac -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_ridac.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/ridac /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=ridac -Dsakai.skin.target=ridac -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_ridac.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/ridac /tmp/nps-skins/
 
 #end_command printf "Building syseng......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=syseng -Dsakai.skin.target=syseng -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_syseng.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/syseng /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=syseng -Dsakai.skin.target=syseng -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_syseng.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/syseng /tmp/nps-skins/
 
 #end_command printf "Building syseng-pd21......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=syseng-pd21 -Dsakai.skin.target=syseng-pd21 -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_syseng-pd21.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/syseng-pd21 /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=syseng-pd21 -Dsakai.skin.target=syseng-pd21 -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_syseng-pd21.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/syseng-pd21 /tmp/nps-skins/
 
 #end_command printf "Building nps-whcm......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=nps-whcm -Dsakai.skin.target=nps-whcm -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_nps-whcm.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/nps-whcm /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=nps-whcm -Dsakai.skin.target=nps-whcm -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_nps-whcm.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/nps-whcm /tmp/nps-skins/
 
 #end_command printf "Building mfr_full......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=mfr_full -Dsakai.skin.target=mfr_full -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_mfr_full.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/mfr_full /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=mfr_full -Dsakai.skin.target=mfr_full -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_mfr_full.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/mfr_full /tmp/nps-skins/
 
 #end_command printf "Building mfr_standard......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=mfr_standard -Dsakai.skin.target=mfr_standard -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_mfr_standard.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/mfr_standard /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=mfr_standard -Dsakai.skin.target=mfr_standard -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_mfr_standard.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/mfr_standard /tmp/nps-skins/
 
 #end_command printf "Building npsonline......\n\n"
-#end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=npsonline -Dsakai.skin.target=npsonline -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_npsonline.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/npsonline /tmp/nps-skins/
+#end_command mvn install sakai:deploy-exploded -Dsakai.skin.target=npsonline -Dsakai.skin.target=npsonline -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_npsonline.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/npsonline /tmp/nps-skins/
 
 #end_command printf "Skin Build Complete\n"
 #end_command printf "Rebuild library and copy war file\n"
