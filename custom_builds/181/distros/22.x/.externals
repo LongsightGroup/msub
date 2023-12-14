@@ -150,4 +150,7 @@ webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/s
 #end_command mvn install sakai:deploy-exploded -Dsakai.skin.source=npsonline -Dsakai.skin.target=npsonline -Dsakai.skin.customization.file=src/morpheus-master/sass/themes/_npsonline.scss -Dmaven.tomcat.home=/tmp/nps/ && cp -r /tmp/nps/webapps/library/skin/npsonline /tmp/nps-skins/
 
 #end_command printf "Skin Build Complete\n"
-#end_command cp -r /tmp/nps-skins/* src/webapp/skin/ ; cd ../
+#end_command printf "Rebuild library and copy war file\n"
+#end_command cp -r /tmp/nps-skins/* src/webapp/skin/
+#end_command mvn install sakai:deploy -Dmaven.tomcat.home=/mnt/builder/tmp/181_distros_22.x_/
+#end_command printf "Skin build complete\n\n" ; cd ../
