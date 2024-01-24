@@ -42,6 +42,7 @@ gradebookng https://github.com/LongsightGroup/sakai/branches/67-23.x/gradebookng
 help https://github.com/LongsightGroup/sakai/branches/67-23.x/help
 jobscheduler https://github.com/LongsightGroup/sakai/branches/67-23.x/jobscheduler
 kernel https://github.com/LongsightGroup/sakai/branches/67-23.x/kernel
+lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-23.x/lessonbuilder
 licenses https://github.com/LongsightGroup/sakai/branches/67-23.x/licenses
 login https://github.com/LongsightGroup/sakai/branches/67-23.x/login
 mailarchive https://github.com/LongsightGroup/sakai/branches/67-23.x/mailarchive
@@ -91,9 +92,6 @@ webcomponents https://github.com/LongsightGroup/sakai/branches/67-23.x/webcompon
 webjars https://github.com/LongsightGroup/sakai/branches/67-23.x/webjars
 #webservices https://github.com/LongsightGroup/sakai/branches/67-23.x/webservices
 wicket https://github.com/LongsightGroup/sakai/branches/67-23.x/wicket
-
-# Using standard lessonbuilder until they accept estimate to bring their activity alert mod over
-lessonbuilder https://github.com/sakaiproject/sakai/branches/23.x/lessonbuilder
 
 # Customization List
 #basiclti
