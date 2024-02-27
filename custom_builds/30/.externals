@@ -71,5 +71,5 @@ taggable https://source.sakaiproject.org/svn/taggable/branches/taggable-2.9.x
 velocity https://source.sakaiproject.org/svn/velocity/branches/velocity-2.9.x
 
 # Longsight
-samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.9.x_features-backport
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/webservices-1.0.x/
+samigo https://raw.githubusercontent.com/LongsightGroup/msub/master/samigo/samigo-2.9.x_features-backport
+webservices https://raw.githubusercontent.com/LongsightGroup/msub/master/webservices/webservices-1.0.x/

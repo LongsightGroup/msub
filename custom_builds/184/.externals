@@ -1,3 +1,3 @@
-12.x-dev https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/184/distros/12.x-dev
-12.x-experimental https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/184/distros/12.x-experimental
-12.x-prod https://source.sakaiproject.org/svn/msub/longsight.com/custom_builds/184/distros/12.x-prod
+12.x-dev https://raw.githubusercontent.com/LongsightGroup/msub/master/custom_builds/184/distros/12.x-dev
+12.x-experimental https://raw.githubusercontent.com/LongsightGroup/msub/master/custom_builds/184/distros/12.x-experimental
+12.x-prod https://raw.githubusercontent.com/LongsightGroup/msub/master/custom_builds/184/distros/12.x-prod
