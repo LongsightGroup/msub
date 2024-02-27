@@ -100,7 +100,7 @@ wicket https://github.com/LongsightGroup/sakai/branches/153-22.x/wicket
 attendance https://github.com/sakaicontrib/attendance/branches/22.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/22.x
 clog https://github.com/sakaicontrib/clog/branches/22.x
-rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-22.x/
+rsmart https://github.com/LongsightGroup/rsmart/branches/22.x/
 webservices https://github.com/LongsightGroup/webservices/branches/22.x
 
 #Customizations

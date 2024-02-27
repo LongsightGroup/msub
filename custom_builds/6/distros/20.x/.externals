@@ -100,7 +100,7 @@ certification https://github.com/sakaicontrib/certification/branches/20.x
 da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/20.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/20.x
 providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-20.x_jldap-auth-caching
-rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-20.x/
+rsmart https://github.com/LongsightGroup/rsmart/branches/20.x/
 webservices https://github.com/LongsightGroup/webservices/branches/20.x
 
 # Old Language Pack

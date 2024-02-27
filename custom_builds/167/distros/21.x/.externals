@@ -101,7 +101,7 @@ clog https://github.com/sakaicontrib/clog/branches/21.x
 da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/21.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/21.x
 gradebook1 https://github.com/sakaicontrib/gradebook1/branches/21.x
-rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-21.x
+rsmart https://github.com/LongsightGroup/rsmart/branches/21.x
 webservices https://github.com/LongsightGroup/webservices/branches/21.x
 
 # Customizations

@@ -99,7 +99,7 @@ clog https://github.com/sakaicontrib/clog/branches/20.x
 certification https://github.com/sakaicontrib/certification/branches/20.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/20.x
 gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/20.x
-rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-20.x/
+rsmart https://github.com/LongsightGroup/rsmart/branches/20.x/
 webservices https://github.com/LongsightGroup/webservices/branches/20.x
 
 # Customizations

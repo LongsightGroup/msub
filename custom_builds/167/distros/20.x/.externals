@@ -98,7 +98,7 @@ certification https://github.com/sakaicontrib/certification/branches/20.x
 clog https://github.com/LongsightGroup/clog/branches/20.x-no-noti
 evaluation https://github.com/sakaicontrib/evaluation/branches/20.x
 gradebook1 https://github.com/sakaicontrib/gradebook1/branches/20.x
-rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-20.x/
+rsmart https://github.com/LongsightGroup/rsmart/branches/20.x/
 webservices https://github.com/LongsightGroup/webservices/branches/20.x
 
 # Customizations

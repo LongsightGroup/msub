@@ -96,7 +96,7 @@ webjars https://github.com/sakaiproject/sakai/branches/20.x/webjars
 attendance https://github.com/sakaicontrib/attendance/branches/20.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/20.x
 certification https://github.com/sakaicontrib/certification/branches/20.x
-rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-20.x
+rsmart https://github.com/LongsightGroup/rsmart/branches/20.x
 webservices https://github.com/LongsightGroup/webservices/branches/20.x
 
 # 68794 single-tenant onedrive patch
