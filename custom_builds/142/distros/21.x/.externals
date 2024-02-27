@@ -99,7 +99,7 @@ irubric-core https://github.com/sakaicontrib/irubric/branches/sakai21-SNAPSHOT/i
 irubric-tool https://github.com/sakaicontrib/irubric/branches/sakai21-SNAPSHOT/irubric-tool/
 SakaiXAPI-Provider https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider/branches/21.x
 gradebook1 https://github.com/sakaicontrib/gradebook1/branches/21.x
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-21.x
+webservices https://github.com/LongsightGroup/webservices/branches/21.x
 
 # Customizations
 config https://github.com/LongsightGroup/sakai/branches/142-21.x/config

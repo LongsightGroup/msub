@@ -65,7 +65,7 @@ qna https://source.sakaiproject.org/contrib/qna/trunk
 sakora-csv https://source.sakaiproject.org/contrib/unicon/sakora-csv/trunk
 samigo https://source.sakaiproject.org/svn/msub/longsight.com/samigo/samigo-2.7.x-tabbed-interface/
 signup https://source.sakaiproject.org/contrib/signup/branches/2-7-x
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-2.7.x/
+webservices https://github.com/LongsightGroup/webservices/branches/2.7.x/
 
 #Duke msub modules
 login https://source.sakaiproject.org/svn/msub/duke.edu/login/trunk/

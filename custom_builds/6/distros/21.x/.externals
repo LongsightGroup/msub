@@ -101,7 +101,7 @@ clog https://github.com/sakaicontrib/clog/branches/21.x
 certification https://github.com/sakaicontrib/certification/branches/21.x
 da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/21.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/21.x
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-21.x
+webservices https://github.com/LongsightGroup/webservices/branches/21.x
 
 ##### Conversations Backport #######
 conversations https://github.com/LongsightGroup/sakai/branches/6-21.x/conversations

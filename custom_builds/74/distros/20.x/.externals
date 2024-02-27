@@ -98,7 +98,7 @@ bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/20.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/20.x
 da_evalprovider https://github.com/sakaicontrib/da_evalprovider/branches/20.x
 kaltura https://github.com/kaltura/sakai-extension/trunk
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x
+webservices https://github.com/LongsightGroup/webservices/branches/20.x
 
 # Customizations
 user https://github.com/LongsightGroup/sakai/branches/74-20.x/user

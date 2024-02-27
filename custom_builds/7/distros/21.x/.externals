@@ -100,7 +100,7 @@ attendance https://github.com/sakaicontrib/attendance/branches/21.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/21.x
 certification https://github.com/sakaicontrib/certification/branches/21.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/21.x
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-21.x
+webservices https://github.com/LongsightGroup/webservices/branches/21.x
 
 # Customizations
 #config 

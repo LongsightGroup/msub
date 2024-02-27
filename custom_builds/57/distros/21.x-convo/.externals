@@ -106,7 +106,7 @@ attendance https://github.com/sakaicontrib/attendance/branches/21.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/21.x
 #gradebook https://github.com/sakaicontrib/gradebook1/branches/21.x
 sakora-csv https://github.com/ottenhoff/sakora-csv/branches/duke-sakai-21.x
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-21.x
+webservices https://github.com/LongsightGroup/webservices/branches/21.x
 
 # Build Duke Skins
 #shell_command cd library

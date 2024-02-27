@@ -97,7 +97,7 @@ clog https://github.com/sakaicontrib/clog/branches/20.x
 irubric-core https://github.com/sakaicontrib/irubric/branches/sakai20-SNAPSHOT/irubric-core/
 irubric-tool https://github.com/sakaicontrib/irubric/branches/sakai20-SNAPSHOT/irubric-tool/
 kaltura https://github.com/kaltura/sakai-extension/branches/20.x
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-20.x
+webservices https://github.com/LongsightGroup/webservices/branches/20.x
 
 # Customizations 
 config https://github.com/LongsightGroup/sakai/branches/51-20.x/config

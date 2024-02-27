@@ -103,7 +103,7 @@ certification https://github.com/sakaicontrib/certification/branches/22.x
 clog https://github.com/sakaicontrib/clog/branches/22.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/22.x
 meetings https://github.com/sakaicontrib/meetings/branches/22.x
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-22.x
+webservices https://github.com/LongsightGroup/webservices/branches/22.x
 
 
 # Build NPS Skins

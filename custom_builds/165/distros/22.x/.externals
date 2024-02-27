@@ -104,6 +104,6 @@ certification https://github.com/sakaicontrib/certification/branches/22.x
 evaluation https://github.com/sakaicontrib/evaluation/branches/22.x
 gradebook-export https://github.com/LongsightGroup/sakai-gradebook-export/branches/22.x
 rsmart https://source.sakaiproject.org/svn/msub/longsight.com/rsmart/sakai-22.x/
-webservices https://source.sakaiproject.org/svn/msub/longsight.com/webservices/sakai-22.x
+webservices https://github.com/LongsightGroup/webservices/branches/22.x
 
 # Customizations: config
