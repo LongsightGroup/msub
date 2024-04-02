@@ -8,12 +8,8 @@ master https://github.com/LongsightGroup/sakai/branches/152-23.x/master
 
 # Additional tools  - Uncomment after 23.x branch is completed
 attendance https://github.com/sakaicontrib/attendance/branches/23.x
-bbb-tool https://github.com/sakaicontrib/bbb-tool/branches/23.x
 blogwow https://github.com/sakaicontrib/blogwow/branches/23.x
-certification https://github.com/sakaicontrib/certification/branches/23.x
-evaluation https://github.com/sakaicontrib/evaluation/branches/23.x
 rsmart https://github.com/LongsightGroup/rsmart/branches/23.x/
-scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/23.x
 webservices https://github.com/LongsightGroup/webservices/branches/23.x
 
 # Customizations
