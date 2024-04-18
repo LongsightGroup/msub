@@ -1,0 +1,106 @@
+# Sakai CLE Externals
+# Updating: svn propset svn:externals -F .externals .
+# Corporate POM
+master https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/master
+
+# Core services
+common https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/common
+commons https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/commons
+content-review https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/content-review
+delegatedaccess https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/delegatedaccess
+emailtemplateservice https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/emailtemplateservice
+entitybroker https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/entitybroker
+external-calendaring-service https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/external-calendaring-service/
+hierarchy https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/hierarchy
+jsf https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/jsf
+jsf2 https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/jsf2
+userauditservice https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/userauditservice
+
+# Core Sakai Tools
+access https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/access
+admin-tools  https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/admin-tools
+admin-su  https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/admin-su
+announcement https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/announcement
+archive https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/archive
+assignment https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/assignment
+basiclti https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/basiclti
+calendar https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/calendar
+chat https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/chat
+citations https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/citations
+cloud-content https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/cloud-content
+cloud-storage https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/cloud-storage
+config https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/config
+content https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/content
+conversations https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/conversations
+dashboard https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/dashboard
+dav https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/dav
+deploy https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/deploy
+docker https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/docker
+edu-services https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/edu-services
+feedback https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/feedback
+gradebookng https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/gradebookng
+help https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/help
+jobscheduler https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/jobscheduler
+kernel https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/kernel
+lessonbuilder https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/lessonbuilder
+library https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/library
+licenses https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/licenses
+login https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/login
+mailarchive https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/mailarchive
+mailsender https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/mailsender
+message https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/message
+msgcntr https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/msgcntr
+mycalendar https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/mycalendar
+myconnections https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/myconnections
+oauth https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/oauth
+oss-parent https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/oss-parent
+pack https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/pack
+pasystem https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/pasystem
+podcasts https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/podcasts
+polls https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/polls
+portal https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/portal
+postem https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/postem
+presence https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/presence
+profile2 https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/profile2
+providers https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/providers
+reset-pass https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/reset-pass
+roster2 https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/roster2
+rsf https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/rsf
+rubrics https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/rubrics
+rwiki https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/rwiki
+samigo https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/samigo
+search https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/search
+sections https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/sections
+shortenedurl https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/shortenedurl
+simple-rss-portlet https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/simple-rss-portlet
+signup https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/signup
+site https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/site
+site-manage https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/site-manage
+sitedescription https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/sitedescription
+sitemembers https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/sitemembers
+sitestats https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/sitestats
+syllabus https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/syllabus
+taggable https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/taggable
+tags https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/tags
+textarea https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/textarea
+user https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/user
+usermembership https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/usermembership
+velocity https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/velocity
+web https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/web
+webapi https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/webapi
+webcomponents https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/webcomponents
+webjars https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/webjars
+#webservices https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/webservices
+wicket https://github.com/LongsightGroup/sakai/branches/181-23.x-dodlearn/wicket
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-23 -Psakai23.x -Dsakai.skin.target=dodlearn -Dsakai.skin.customization.file=./src/skins/default/src/sass/themes/_dodlearn.scss
+
+# Additional tools  - Uncomment after 23.x branch is completed
+attendance https://github.com/sakaicontrib/attendance/branches/23.x
+blogwow https://github.com/sakaicontrib/blogwow/branches/23.x
+certification https://github.com/sakaicontrib/certification/branches/23.x
+clog https://github.com/sakaicontrib/clog/branches/23.x
+evaluation https://github.com/sakaicontrib/evaluation/branches/23.x
+scorm https://github.com/sakaicontrib/SCORM.2004.3ED.RTE/branches/23.x
+webservices https://github.com/LongsightGroup/webservices/branches/23.x
