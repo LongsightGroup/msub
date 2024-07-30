@@ -2,6 +2,8 @@
 # Updating: svn propset svn:externals -F .externals .
 # Corporate POM
 master https://github.com/LongsightGroup/sakai/branches/152-23.x/master
+jobscheduler https://github.com/LongsightGroup/sakai/branches/152-23.x/jobscheduler
+login https://github.com/LongsightGroup/sakai/branches/152-23.x/login
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-23 
