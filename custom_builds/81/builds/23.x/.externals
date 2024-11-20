@@ -1,0 +1,20 @@
+# Sakai CLE Externals
+# Updating: svn propset svn:externals -F .externals .
+# Corporate POM
+master https://github.com/LongsightGroup/sakai/branches/81-23.x/master
+login https://github.com/LongsightGroup/sakai/branches/81-23.x/login
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-23 
+
+# Additional tools 
+attendance https://github.com/sakaicontrib/attendance/branches/23.x
+blogwow https://github.com/sakaicontrib/blogwow/branches/23.x
+certification https://github.com/sakaicontrib/certification/branches/23.x
+webservices https://github.com/LongsightGroup/webservices/branches/23.x
+
+# Customizations
+# config
+# delegatedaccess
+# login/saml
+# samigo
