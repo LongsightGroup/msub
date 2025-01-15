@@ -4,6 +4,7 @@
 master https://github.com/LongsightGroup/sakai/branches/81-23.x/master
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/81-23.x/lessonbuilder
 login https://github.com/LongsightGroup/sakai/branches/81-23.x/login
+portal https://github.com/LongsightGroup/sakai/branches/81-23.x/portal
 
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-23 
