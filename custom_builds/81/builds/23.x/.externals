@@ -2,6 +2,7 @@
 # Updating: svn propset svn:externals -F .externals .
 # Corporate POM
 master https://github.com/LongsightGroup/sakai/branches/81-23.x/master
+lessonbuilder https://github.com/LongsightGroup/sakai/branches/81-23.x/lessonbuilder
 login https://github.com/LongsightGroup/sakai/branches/81-23.x/login
 
 #Patcher options: "mavenoptions: <options>"
