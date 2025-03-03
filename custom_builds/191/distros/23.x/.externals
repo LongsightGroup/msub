@@ -92,9 +92,6 @@ webcomponents https://github.com/LongsightGroup/sakai/branches/191-23.x/webcompo
 webjars https://github.com/LongsightGroup/sakai/branches/191-23.x/webjars
 wicket https://github.com/LongsightGroup/sakai/branches/191-23.x/wicket
 
-# MAJOR CUSTOMIZATIONS
-LOGIN saml
-
 #Patcher options: "mavenoptions: <options>"
 #mavenoptions:-Psakai-23 -Psakai23.x 
 
