@@ -107,4 +107,4 @@ webservices https://github.com/LongsightGroup/webservices/branches/22.x
 
 # Customizations
 login https://github.com/LongsightGroup/sakai/branches/6-22.x/login
-providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-22.x_jldap-auth-caching
+#providers https://source.sakaiproject.org/svn/msub/longsight.com/providers/sakai-22.x_jldap-auth-caching
