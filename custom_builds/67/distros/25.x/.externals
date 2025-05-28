@@ -1,0 +1,113 @@
+# Sakai CLE Externals
+# Updating: svn propset svn:externals -F .externals .
+# Corporate POM
+master https://github.com/LongsightGroup/sakai/branches/67-25.x/master
+
+# Core services
+common https://github.com/LongsightGroup/sakai/branches/67-25.x/common
+commons https://github.com/LongsightGroup/sakai/branches/67-25.x/commons
+content-review https://github.com/LongsightGroup/sakai/branches/67-25.x/content-review
+delegatedaccess https://github.com/LongsightGroup/sakai/branches/67-25.x/delegatedaccess
+emailtemplateservice https://github.com/LongsightGroup/sakai/branches/67-25.x/emailtemplateservice
+entitybroker https://github.com/LongsightGroup/sakai/branches/67-25.x/entitybroker
+external-calendaring-service https://github.com/LongsightGroup/sakai/branches/67-25.x/external-calendaring-service/
+hierarchy https://github.com/LongsightGroup/sakai/branches/67-25.x/hierarchy
+jsf https://github.com/LongsightGroup/sakai/branches/67-25.x/jsf
+jsf2 https://github.com/LongsightGroup/sakai/branches/67-25.x/jsf2
+userauditservice https://github.com/LongsightGroup/sakai/branches/67-25.x/userauditservice
+
+# Core Sakai Tools
+access https://github.com/LongsightGroup/sakai/branches/67-25.x/access
+admin-tools  https://github.com/LongsightGroup/sakai/branches/67-25.x/admin-tools
+admin-su  https://github.com/LongsightGroup/sakai/branches/67-25.x/admin-su
+announcement https://github.com/LongsightGroup/sakai/branches/67-25.x/announcement
+archive https://github.com/LongsightGroup/sakai/branches/67-25.x/archive
+assignment https://github.com/LongsightGroup/sakai/branches/67-25.x/assignment
+basiclti https://github.com/LongsightGroup/sakai/branches/67-25.x/basiclti
+calendar https://github.com/LongsightGroup/sakai/branches/67-25.x/calendar
+chat https://github.com/LongsightGroup/sakai/branches/67-25.x/chat
+citations https://github.com/LongsightGroup/sakai/branches/67-25.x/citations
+cloud-content https://github.com/LongsightGroup/sakai/branches/67-25.x/cloud-content
+cloud-storage https://github.com/LongsightGroup/sakai/branches/67-25.x/cloud-storage
+config https://github.com/LongsightGroup/sakai/branches/67-25.x/config
+content https://github.com/LongsightGroup/sakai/branches/67-25.x/content
+conversations https://github.com/LongsightGroup/sakai/branches/67-25.x/conversations
+dashboard https://github.com/LongsightGroup/sakai/branches/67-25.x/dashboard
+dav https://github.com/LongsightGroup/sakai/branches/67-25.x/dav
+deploy https://github.com/LongsightGroup/sakai/branches/67-25.x/deploy
+docker https://github.com/LongsightGroup/sakai/branches/67-25.x/docker
+edu-services https://github.com/LongsightGroup/sakai/branches/67-25.x/edu-services
+feedback https://github.com/LongsightGroup/sakai/branches/67-25.x/feedback
+gradebookng https://github.com/LongsightGroup/sakai/branches/67-25.x/gradebookng
+help https://github.com/LongsightGroup/sakai/branches/67-25.x/help
+jobscheduler https://github.com/LongsightGroup/sakai/branches/67-25.x/jobscheduler
+kernel https://github.com/LongsightGroup/sakai/branches/67-25.x/kernel
+lessonbuilder https://github.com/LongsightGroup/sakai/branches/67-25.x/lessonbuilder
+licenses https://github.com/LongsightGroup/sakai/branches/67-25.x/licenses
+login https://github.com/LongsightGroup/sakai/branches/67-25.x/login
+mailarchive https://github.com/LongsightGroup/sakai/branches/67-25.x/mailarchive
+mailsender https://github.com/LongsightGroup/sakai/branches/67-25.x/mailsender
+message https://github.com/LongsightGroup/sakai/branches/67-25.x/message
+msgcntr https://github.com/LongsightGroup/sakai/branches/67-25.x/msgcntr
+mycalendar https://github.com/LongsightGroup/sakai/branches/67-25.x/mycalendar
+myconnections https://github.com/LongsightGroup/sakai/branches/67-25.x/myconnections
+oauth https://github.com/LongsightGroup/sakai/branches/67-25.x/oauth
+oss-parent https://github.com/LongsightGroup/sakai/branches/67-25.x/oss-parent
+pack https://github.com/LongsightGroup/sakai/branches/67-25.x/pack
+pasystem https://github.com/LongsightGroup/sakai/branches/67-25.x/pasystem
+plus https://github.com/LongsightGroup/sakai/branches/67-25.x/plus
+podcasts https://github.com/LongsightGroup/sakai/branches/67-25.x/podcasts
+polls https://github.com/LongsightGroup/sakai/branches/67-25.x/polls
+portal https://github.com/LongsightGroup/sakai/branches/67-25.x/portal
+postem https://github.com/LongsightGroup/sakai/branches/67-25.x/postem
+presence https://github.com/LongsightGroup/sakai/branches/67-25.x/presence
+profile2 https://github.com/LongsightGroup/sakai/branches/67-25.x/profile2
+providers https://github.com/LongsightGroup/sakai/branches/67-25.x/providers
+reset-pass https://github.com/LongsightGroup/sakai/branches/67-25.x/reset-pass
+roster2 https://github.com/LongsightGroup/sakai/branches/67-25.x/roster2
+rsf https://github.com/LongsightGroup/sakai/branches/67-25.x/rsf
+rubrics https://github.com/LongsightGroup/sakai/branches/67-25.x/rubrics
+rwiki https://github.com/LongsightGroup/sakai/branches/67-25.x/rwiki
+samigo https://github.com/LongsightGroup/sakai/branches/67-25.x/samigo
+search https://github.com/LongsightGroup/sakai/branches/67-25.x/search
+sections https://github.com/LongsightGroup/sakai/branches/67-25.x/sections
+shortenedurl https://github.com/LongsightGroup/sakai/branches/67-25.x/shortenedurl
+simple-rss-portlet https://github.com/LongsightGroup/sakai/branches/67-25.x/simple-rss-portlet
+signup https://github.com/LongsightGroup/sakai/branches/67-25.x/signup
+site https://github.com/LongsightGroup/sakai/branches/67-25.x/site
+site-manage https://github.com/LongsightGroup/sakai/branches/67-25.x/site-manage
+sitedescription https://github.com/LongsightGroup/sakai/branches/67-25.x/sitedescription
+sitemembers https://github.com/LongsightGroup/sakai/branches/67-25.x/sitemembers
+sitestats https://github.com/LongsightGroup/sakai/branches/67-25.x/sitestats
+syllabus https://github.com/LongsightGroup/sakai/branches/67-25.x/syllabus
+taggable https://github.com/LongsightGroup/sakai/branches/67-25.x/taggable
+tags https://github.com/LongsightGroup/sakai/branches/67-25.x/tags
+textarea https://github.com/LongsightGroup/sakai/branches/67-25.x/textarea
+user https://github.com/LongsightGroup/sakai/branches/67-25.x/user
+usermembership https://github.com/LongsightGroup/sakai/branches/67-25.x/usermembership
+velocity https://github.com/LongsightGroup/sakai/branches/67-25.x/velocity
+web https://github.com/LongsightGroup/sakai/branches/67-25.x/web
+webapi https://github.com/LongsightGroup/sakai/branches/67-25.x/webapi
+webcomponents https://github.com/LongsightGroup/sakai/branches/67-25.x/webcomponents
+webjars https://github.com/LongsightGroup/sakai/branches/67-25.x/webjars
+wicket https://github.com/LongsightGroup/sakai/branches/67-25.x/wicket
+
+# Customization List
+#basiclti
+#dav
+#kernel
+#lessonbuilder
+#providers
+#site-manage
+#login
+
+
+#Patcher options: "mavenoptions: <options>"
+#mavenoptions:-Psakai-25 -Psakai25.x
+
+# Additional tools  - Uncomment after 25.x branch is completed
+attendance https://github.com/sakaicontrib/attendance/branches/25.x
+blogwow https://github.com/sakaicontrib/blogwow/branches/25.x
+certification https://github.com/sakaicontrib/certification/branches/25.x
+evaluation https://github.com/sakaicontrib/evaluation/branches/25.x
+webservices https://github.com/LongsightGroup/webservices/branches/25.x
