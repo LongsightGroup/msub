@@ -122,13 +122,6 @@
                 <module>webservices</module>
                 <module>wicket</module>
 		<!-- Contrib Tools -->
-		<module>attendance</module>
-                <module>blogwow</module>
-                <module>certification</module>
-                <module>da_evalprovider</module>
-                <module>evaluation</module>
-                <module>scorm</module>
-                <module>bbb-tool</module>
             </modules>
         </profile>
 
