@@ -133,7 +133,6 @@
                 <module>blogwow</module>
                 <module>certification</module>
                 <module>evaluation</module>
-                <module>scorm</module>
             </modules>
         </profile>
         <profile>
