@@ -93,7 +93,7 @@ webjars https://github.com/LongsightGroup/sakai/branches/191-25.x/webjars
 wicket https://github.com/LongsightGroup/sakai/branches/191-25.x/wicket
 
 # Customization List
-#basiclti
+#lti
 #dav
 #kernel
 #lessonbuilder

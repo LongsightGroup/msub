@@ -23,7 +23,7 @@ admin-su  https://github.com/LongsightGroup/sakai/branches/67-25.x/admin-su
 announcement https://github.com/LongsightGroup/sakai/branches/67-25.x/announcement
 archive https://github.com/LongsightGroup/sakai/branches/67-25.x/archive
 assignment https://github.com/LongsightGroup/sakai/branches/67-25.x/assignment
-basiclti https://github.com/LongsightGroup/sakai/branches/67-25.x/basiclti
+lti https://github.com/LongsightGroup/sakai/branches/67-25.x/lti
 calendar https://github.com/LongsightGroup/sakai/branches/67-25.x/calendar
 chat https://github.com/LongsightGroup/sakai/branches/67-25.x/chat
 citations https://github.com/LongsightGroup/sakai/branches/67-25.x/citations
@@ -93,7 +93,7 @@ webjars https://github.com/LongsightGroup/sakai/branches/67-25.x/webjars
 wicket https://github.com/LongsightGroup/sakai/branches/67-25.x/wicket
 
 # Customization List
-#basiclti
+#lti
 #dav
 #kernel
 #lessonbuilder
