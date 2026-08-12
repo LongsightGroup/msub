@@ -23,7 +23,6 @@ admin-su  https://github.com/LongsightGroup/sakai/branches/191-25.x/admin-su
 announcement https://github.com/LongsightGroup/sakai/branches/191-25.x/announcement
 archive https://github.com/LongsightGroup/sakai/branches/191-25.x/archive
 assignment https://github.com/LongsightGroup/sakai/branches/191-25.x/assignment
-basiclti https://github.com/LongsightGroup/sakai/branches/191-25.x/basiclti
 calendar https://github.com/LongsightGroup/sakai/branches/191-25.x/calendar
 chat https://github.com/LongsightGroup/sakai/branches/191-25.x/chat
 citations https://github.com/LongsightGroup/sakai/branches/191-25.x/citations
@@ -45,6 +44,7 @@ kernel https://github.com/LongsightGroup/sakai/branches/191-25.x/kernel
 lessonbuilder https://github.com/LongsightGroup/sakai/branches/191-25.x/lessonbuilder
 licenses https://github.com/LongsightGroup/sakai/branches/191-25.x/licenses
 login https://github.com/LongsightGroup/sakai/branches/191-25.x/login
+lti https://github.com/LongsightGroup/sakai/branches/191-25.x/lti
 mailarchive https://github.com/LongsightGroup/sakai/branches/191-25.x/mailarchive
 mailsender https://github.com/LongsightGroup/sakai/branches/191-25.x/mailsender
 message https://github.com/LongsightGroup/sakai/branches/191-25.x/message
