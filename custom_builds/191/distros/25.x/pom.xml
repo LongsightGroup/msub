@@ -131,6 +131,7 @@
                 <module>certification</module>
                 <module>da_evalprovider</module>
                 <module>evaluation</module>
+                <module>warpwire</module>
                 <module>bbb-tool</module>
             </modules>
         </profile>
